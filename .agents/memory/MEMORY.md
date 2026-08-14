@@ -1,0 +1,1 @@
+- [IBGE PSS conversion](ibge-pss-conversion.md) — brand/color/cargo conversion rules used when turning Petrobras-themed recruitment pages into IBGE Censo Agropecuário 2027 pages.

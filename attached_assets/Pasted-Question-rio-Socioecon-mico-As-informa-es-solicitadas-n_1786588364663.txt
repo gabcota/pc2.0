@@ -1,0 +1,290 @@
+Questionário Socioeconômico
+As informações solicitadas neste questionário serão tratadas de modo confidencial pela Fundação VUNESP e serão por ela transferidas somente para a instituição vinculada a este certame.
+001. Em qual setor de atividade você trabalha atualmente?
+ (A) Estudante
+ (B) Empresa privada
+ (C) Serviço público
+ (D) Sou militar das Forças Armadas
+ (E) Sou militar de outros Estados
+ (F) Não exerço nenhuma atividade
+001.1. Você serve a qual força armada?
+ (A) Exército
+ (B) Força Aérea
+ (C) Marinha
+001.2. Você é militar em qual Unidade Federativa?
+ (A) Acre 
+ (B) Alagoas 
+ (C) Amazonas
+ (D) Amapá 
+ (E) Bahia 
+ (F) Ceará 
+ (G) Distrito Federal
+ (H) Espírito Santo 
+ (I) Goiás 
+ (J) Maranhão 
+ (K) Minas Gerais
+ (L) Mato Grosso do Sul
+ (M) Mato Grosso 
+ (N) Pará
+ (O) Paraíba 
+ (P) Paraná
+ (Q) Pernambuco 
+ (R) Piauí 
+ (S) Rio de Janeiro
+ (T) Rio Grande do Norte
+ (U)  Rondônia
+ (V) Roraima
+ (W)  Rio Grande do Sul 
+ (X) Santa Catarina
+ (Y) Sergipe
+ (Z) Tocantins 
+002. Atualmente, em que região você mora?
+ (A) Capital
+ (B) Grande São Paulo
+ (C) Litoral
+ (D) Interior
+ (E) Outro Estado
+002.1. Em qual outra Unidade Federativa você mora?
+ (A) Acre 
+ (B) Alagoas 
+ (C) Amazonas
+ (D) Amapá 
+ (E) Bahia 
+ (F) Ceará 
+ (G) Distrito Federal
+ (H) Espírito Santo 
+ (I) Goiás 
+ (J) Maranhão 
+ (K) Minas Gerais
+ (L) Mato Grosso do Sul
+ (M) Mato Grosso 
+ (N) Pará
+ (O) Paraíba 
+ (P) Paraná
+ (Q) Pernambuco 
+ (R) Piauí 
+ (S) Rio de Janeiro
+ (T) Rio Grande do Norte
+ (U)  Rondônia
+ (V) Roraima
+ (W)  Rio Grande do Sul 
+ (X) Santa Catarina
+ (Y) Sergipe
+ (Z) Tocantins
+003. Qual a sua orientação religiosa?
+ (A) Católica
+ (B) Evangélica
+ (C) Espírita
+ (D) Outras
+ (E) Não tenho religião
+004. Qual é seu estado civil?
+ (A) Solteiro(a)
+ (B) Casado(a)
+ (C) Separado ou divorciado(a)
+ (D) Viúvo(a)
+ (E) União estável
+005. Você tem filhos?
+ (A) Um
+ (B) Dois
+ (C) Três
+ (D) Quatro ou mais
+ (E) Não tenho filhos
+006. Como cursou o Ensino Médio (2º grau)?
+ (A) Todo em escola pública
+ (B) Todo em escola particular
+ (C) Parte em escola pública e parte em escola particular
+ (D) Em escola pública e/ou particular, porém com ensino profissionalizante
+ (E) Supletivo ou equivalente
+006.1. A escola era de caráter cívico-militar ou militar?
+ (A) Sim
+ (B) Não
+007. Qual é o seu nível de escolaridade?
+ (A) Médio
+ (B) Iniciei curso superior, mas abandonei
+ (C) Cursando ensino superior
+ (D) Superior completo
+ (E) Especialização "latu sensu"
+ (F) Mestrado (cursando/concluído)
+ (G) Doutorado (cursando/concluído)
+007.1. Informe qual seu curso superior em nível de graduação (bacharelado ou licenciatura):
+ (A) Administração
+ (B) Agronomia
+ (C) Arquitetura
+ (D) Assistência social
+ (E) Biologia
+ (F) Biomedicina
+ (G) Contabilidade
+ (H) Comercio Exterior
+ (I) Direito
+ (J) Economia
+ (K) Educação Física
+ (L) Enfermagem
+ (M) Engenharia
+ (N) Farmácia
+ (O) Fisioterapia
+ (P) Geografia
+ (Q) História
+ (R) Letras
+ (S) Matemática
+ (T) Medicina
+ (U) Medicina Veterinária
+ (V) Moda
+ (W)Nutrição
+ (X) Odontologia
+ (Y) Pedagogia
+ (Z) Psicologia
+ (AA) Publicidade e propaganda
+ (AB) Sistema de Informação
+ (AC)Turismo
+ (AD) Outros
+007.2. Informe qual tipo de engenharia:
+ (A) Aeroespacial
+ (B) Aeronáutica
+ (C) Alimentos
+ (D) Ambiental
+ (E) Agrícola
+ (F) Computação
+ (G) Civil
+ (H) Elétrica
+ (I) Florestal
+ (J) Industrial
+ (K) Materiais
+ (L) Mecânica
+ (M) Mecatrônica
+ (N) Metalúrgica
+ (O) Naval
+ (P) Nuclear
+ (Q) Pesca
+ (R) Produção
+ (S) Redes de Comunicações
+ (T) Química
+ (U) Segurança do Trabalho
+ (V) Software
+ (W) Telecomunicações
+ (X) Têxtil
+ (Y) Transportes
+ (Z) Outros
+007.3. Informe qual seu curso superior em nível de graduação (bacharelado ou licenciatura) não listado na questão acima:
+007.3. Informe qual seu curso superior em nível de graduação (bacharelado ou licenciatura) não listado na questão acima:
+008. Qual nível de escolaridade de seu pai?
+ (A) Não estudou
+ (B) Da 1ª à 4ª série do ensino fundamental (antigo primário)
+ (C) Da 5ª à 8ª série do ensino fundamental (antigo ginásio)
+ (D) Ensino médio (antigo 2º grau) incompleto
+ (E) Ensino médio completo
+ (F) Ensino superior incompleto
+ (G) Ensino superior completo
+ (H) Pós-graduação
+ (I) Não sei
+009. Qual nível de escolaridade de sua mãe?
+ (A) Não estudou
+ (B) Da 1ª à 4ª série do ensino fundamental (antigo primário)
+ (C) Da 5ª à 8ª série do ensino fundamental (antigo ginásio)
+ (D) Ensino médio (antigo 2º grau) incompleto
+ (E) Ensino médio completo
+ (F) Ensino superior incompleto
+ (G) Ensino superior completo
+ (H) Pós-graduação
+ (I) Não sei
+010. Qual a sua renda ou salário mensal?
+ (A) Não tenho renda própria
+ (B) Até 01 salário mínimo
+ (C) Entre 01 e 03 salários mínimos
+ (D) Entre 04 e 06 salários mínimos
+ (E) Mais de 06 salários mínimos
+010.1. Sua renda está mais aproxima de:
+ (A) 1 salário mínimo
+ (B) 2 salários mínimos
+ (C) 3 salários mínimos
+ (D) 4 salários mínimos
+ (E) 5 salários mínimos
+ (F) 6 salários mínimos
+011. Você frequenta ou frequentou algum curso preparatório para este concurso?
+ (A) Não
+ (B) Sim, menos de um semestre
+ (C) Sim, um semestre
+ (D) Sim, um ano
+ (E) Sim, mais de um ano
+011.1. Informe qual o nome do cursinho ou escola preparatória, e a cidade e estado em que se localiza.
+011.1. Informe qual o nome do cursinho ou escola preparatória, e a cidade e estado em que se localiza.
+012. Qual é a sua faixa de renda familiar mensal?
+ (A) Até 01 salário mínimo
+ (B) Entre 01 e 03 salários mínimos
+ (C) Entre 04 e 06 salários mínimos
+ (D) Entre 07 e 09 salários mínimos
+ (E) Entre 10 e 14 salários mínimos
+ (F) Acima de 14 salários mínimos
+013. Quantas pessoas contribuem para a obtenção da renda familiar?
+ (A) Uma
+ (B) Duas
+ (C) Três
+ (D) Quatro
+ (E) Cinco ou mais
+014. Qual a sua situação quanto à moradia?
+ (A) Moro com meus pais
+ (B) Moro com minha família (esposa, companheira, filhos, etc.), em casa própria
+ (C) Moro com minha família (esposa, companheira, filhos, etc.), em casa alugada
+ (D) Moro na casa de parentes ou amigos
+ (E) Moro sozinho
+015. Quantas pessoas, incluindo você, moram em sua casa?
+ (A) Moro sozinho
+ (B) Duas
+ (C) Três
+ (D) Quatro
+ (E) Cinco ou mais
+016. Qual das atividades abaixo ocupa a maior parte do seu tempo livre?
+ (A) Atividades culturais, como teatro, cinema
+ (B) Atividades esportivas, como corrida, academia de ginástica
+ (C) Estudos e leitura de livros
+ (D) Atividades como assistir televisão, jogar videogame
+ (E) Atividades noturnas, como bares, boates
+ (F) Atividades ao ar livre, como parques, caminhada, trilhas
+017. Qual é o seu conhecimento em informática?
+ (A) Nenhum
+ (B) Não fiz curso, porém tenho conhecimentos para digitação, acesso à internet, e-mail, etc
+ (C) Básico (uso das ferramentas do Office)
+ (D) Intermediário (programação, banco de dados etc)
+ (E) Avançado (análise de sistemas, webdesign etc)
+018. Você domina algum idioma estrangeiro?
+ (A) Não
+ (B) Inglês
+ (C) Espanhol
+ (D) Francês
+ (E) Outro
+019. Idioma estrangeiro que domina
+019. Idioma estrangeiro que domina
+020. Como você ficou sabendo do concurso da Polícia Militar?
+ (A) Pela imprensa (jornal, rádio ou televisão)
+ (B) Por intermédio de amigos / parentes policiais militares
+ (C) Pelo site da Polícia Militar
+ (D) Pelo site da Fundação Vunesp
+ (E) Outros
+020.1. Em quais outros meios de comunicação você teve conhecimento do concurso?
+ (A) Redes Sociais da PMESP (Instagram, TikTok, Facebook, Youtube, Twitter-X)
+ (B) Anúncios em ambientes de circulação pública (ônibus, trem, metrô, outdoor, etc)
+ (C) Publicidade através de relógios ou termômetros digitais da cidade
+ (D) Palestra ou eventos da Polícia Militar
+ (E) Outros
+020.2. Em qual outro meio de comunicação não listado acima, você teve conhecimento do concurso?
+020.2. Em qual outro meio de comunicação não listado acima, você teve conhecimento do concurso?
+021. Quantas vezes, além desta, você já participou de concurso para ingresso na Polícia Militar do Estado de São Paulo?
+ (A) É a primeira vez
+ (B) Duas
+ (C) Três
+ (D) Quatro
+ (E) Cinco ou mais
+021.1. Na última tentativa, para qual carreira você prestou o concurso?
+ (A) Aluno-Soldado PM
+ (B) Cadete PM
+ (C) 1º Ten PM Estágiário Médico
+ (D) 1º Ten PM Estágiário Dentista
+ (E) 1º Ten PM Estágiário Veterinário
+ (F) 1º Ten PM Estagiário Farmacêutico
+022. Qual é o principal motivo pelo qual você deseja ingressar na Polícia Militar?
+ (A) Estabilidade do serviço público (segurança)
+ (B) Boa remuneração (inclusive na aposentadoria) e crescimento na carreira
+ (C) Falta de opção de emprego no mercado de trabalho
+ (D) Indicação de familiares, amigos e conhecidos
+ (E) Benefícios como assistência médica, odontológica e psicossocial
+ (F) Possibilidade de incrementar a renda salarial, através de outras atividades remuneradas existentes na PMESP, além do salário PM padrão
+ (G) Possibilidade de atuar na sua área de formação superior (Educação Física, Direito, Psicologia, Fisioterapia, etc), quando ingressar na PMESP

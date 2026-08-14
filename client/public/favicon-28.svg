@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#0f2744"/>
+  <!-- Road / route lines converging to horizon -->
+  <polygon points="5,28 13,14 19,14 27,28" fill="none" stroke="#60a5fa" stroke-width="1.3" stroke-linejoin="round"/>
+  <!-- Center dashes on road -->
+  <line x1="16" y1="26" x2="16" y2="23" stroke="#facc15" stroke-width="1.1" stroke-linecap="round"/>
+  <line x1="16" y1="21" x2="16" y2="18.5" stroke="#facc15" stroke-width="1.1" stroke-linecap="round" opacity="0.7"/>
+  <!-- Horizon line -->
+  <line x1="9" y1="14" x2="23" y2="14" stroke="#60a5fa" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  <!-- Sun / destination star at top -->
+  <circle cx="16" cy="9" r="3.5" fill="#facc15"/>
+  <!-- Sun rays -->
+  <line x1="16" y1="4.5" x2="16" y2="3"   stroke="#facc15" stroke-width="1" stroke-linecap="round"/>
+  <line x1="20" y1="6"   x2="21" y2="4.8" stroke="#facc15" stroke-width="1" stroke-linecap="round"/>
+  <line x1="12" y1="6"   x2="11" y2="4.8" stroke="#facc15" stroke-width="1" stroke-linecap="round"/>
+  <line x1="21" y1="9"   x2="23" y2="9"   stroke="#facc15" stroke-width="1" stroke-linecap="round"/>
+  <line x1="11" y1="9"   x2="9"  y2="9"   stroke="#facc15" stroke-width="1" stroke-linecap="round"/>
+</svg>

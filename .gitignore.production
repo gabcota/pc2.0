@@ -1,0 +1,29 @@
+# Arquivos que NÃO devem ir para produção
+class-mapping.json
+BUILD-PRODUCTION.md
+scripts/
+*.config.production.ts
+postcss.config.production.js
+vite.config.production.ts
+tailwind.config.production.ts
+
+# Source maps
+*.map
+
+# Arquivos de desenvolvimento
+.env.local
+.env.development
+*.log
+
+# Arquivos temporários de build
+.cache/
+temp/
+build-temp/
+
+# Mapeamentos de debug
+debug-mappings.json
+obfuscation-report.json
+
+# Configurações sensíveis
+build-secrets.json
+protection-config.json

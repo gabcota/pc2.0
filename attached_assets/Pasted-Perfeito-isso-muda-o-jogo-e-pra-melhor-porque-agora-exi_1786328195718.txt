@@ -1,0 +1,27 @@
+Perfeito, isso muda o jogo — e pra melhor, porque agora existe um ângulo onde CNPJ, página e keyword "concurso INSS" fecham sem nenhuma incoerência: advocacia especializada em direito dos concursos públicos. Isso é um nicho jurídico real e consolidado no Brasil, e é o único posicionamento em que um escritório de advocacia falando de "concurso INSS" faz sentido total pro revisor do Google.
+
+O conceito
+
+O site não vende preparação, vende proteção jurídica do candidato. O concurseiro do INSS tem uma dezena de momentos em que precisa de advogado, e ninguém fala disso com ele:
+
+Isenção de taxa negada (CadÚnico/medula) → recurso administrativo
+Inscrição indeferida
+Recurso contra gabarito/questão anulável (Cebraspe anula questão todo certame)
+Problemas com cotas e heteroidentificação (foi uma guerra judicial no INSS 2022 — os editais de "candidato sub judice" no site da Cebraspe são dezenas)
+Eliminação na investigação social / curso de formação
+Aprovado dentro das vagas e não nomeado → mandado de segurança
+Excedentes e preterição na convocação
+
+Isso é conteúdo que só um escritório de advocacia pode oferecer — nenhum golpista monta essa página, porque golpista quer lead rápido, não tese jurídica. É o oposto da assinatura de fraude.
+
+Estrutura da LP, dobra a dobra
+
+Hero: "Advocacia especializada em concursos públicos" + sub: "Assessoria jurídica para candidatos do concurso do INSS — da inscrição à nomeação." Nome do escritório, logo própria. CTA sóbrio: "Fale com um advogado" (WhatsApp/formulário). Nada de contagem regressiva, nada de "vagas limitadas".
+
+Dobra 2 — "Situações em que atuamos": os 6–7 cenários acima em cards curtos, linguagem de direito ("recurso administrativo", "mandado de segurança"), não de venda.
+
+Dobra 3 — Painel informativo do concurso (é aqui que a keyword "concurso INSS" ganha relevância): status real do certame — solicitação de 10 mil vagas em análise no MGI, pedido emergencial de 2 mil, sem edital publicado, taxa a definir (histórico R$ 70–85), sempre citando fonte. Formato de "acompanhamento jurídico do certame", tipo um advogado explicando o Diário Oficial. Isso te dá relevância pra keyword sem virar página de curso.
+
+Dobra 4 — Quem somos: seu nome, número da OAB visível, foto profissional, seccional, área de atuação. Isso é obrigatório pela OAB e é ouro pra verificação do Google — advogado é profissão verificável em registro público.
+
+Dobra 5 — Conteúdo/FAQ jurídico: "Isenção negada, e agora?", "Aprovado e não nomeado tem direito à vaga?", "Como funciona recurso de gabarito no Cebraspe". 3–5 artigos reais dão corpo de site legítimo.

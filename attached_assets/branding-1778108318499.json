@@ -1,0 +1,121 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "Manrope",
+      "role": "body"
+    },
+    {
+      "family": "Fraunces",
+      "role": "heading"
+    }
+  ],
+  "colors": {
+    "primary": "#0F2A23",
+    "accent": "#C9A14A",
+    "background": "#F6F1E6",
+    "textPrimary": "#0B1F1A",
+    "link": "#0B1F1A"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Manrope",
+      "heading": "Fraunces"
+    },
+    "fontStacks": {
+      "heading": [
+        "Fraunces",
+        "Georgia",
+        "serif"
+      ],
+      "body": [
+        "Manrope",
+        "system-ui",
+        "sans-serif"
+      ],
+      "paragraph": [
+        "Fraunces",
+        "Georgia",
+        "serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "72px",
+      "h2": "60px",
+      "body": "20px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "8px"
+  },
+  "components": {
+    "buttonPrimary": {
+      "background": "#C9A14A",
+      "textColor": "#0B1F1A",
+      "borderRadius": "9999px",
+      "borderRadiusCorners": {
+        "topLeft": "9999px",
+        "topRight": "9999px",
+        "bottomRight": "9999px",
+        "bottomLeft": "9999px"
+      },
+      "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(201, 161, 74, 0.35) 0px 0px 0px 1px, rgba(201, 161, 74, 0.45) 0px 12px 40px -10px"
+    },
+    "buttonSecondary": {
+      "background": "#0B1F1A",
+      "textColor": "#F6F1E6",
+      "borderRadius": "9999px",
+      "borderRadiusCorners": {
+        "topLeft": "9999px",
+        "topRight": "9999px",
+        "bottomRight": "9999px",
+        "bottomLeft": "9999px"
+      },
+      "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(11, 31, 26, 0.25) 0px 10px 40px -12px"
+    }
+  },
+  "images": {
+    "logo": null,
+    "favicon": null,
+    "ogImage": null
+  },
+  "__llm_button_reasoning": {
+    "primary": {
+      "index": 1,
+      "text": "Conversar no WhatsApp",
+      "reasoning": "Button #1 has a vibrant background color (#C9A14A) which is often used for primary CTAs. The text 'Conversar no WhatsApp' is action-oriented, making it a strong candidate for the primary button."
+    },
+    "secondary": {
+      "index": 0,
+      "text": "Quero iniciar minha CNH Social",
+      "reasoning": "Button #0 has a different background color (#0B1F1A) from the primary button and offers another action-oriented option, 'Quero iniciar minha CNH Social', making it suitable as a secondary button."
+    },
+    "confidence": 0.95
+  },
+  "personality": {
+    "tone": "professional",
+    "energy": "medium",
+    "targetAudience": "Individuals seeking legal assistance for obtaining a driver's license"
+  },
+  "designSystem": {
+    "framework": "tailwind",
+    "componentLibrary": ""
+  },
+  "confidence": {
+    "buttons": 0.95,
+    "colors": 0.9,
+    "overall": 0.925
+  },
+  "__llm_metadata": {
+    "logoSelection": {
+      "llmCalled": false,
+      "llmSucceeded": false,
+      "finalSource": "none"
+    },
+    "buttonClassification": {
+      "llmCalled": true,
+      "llmSucceeded": true
+    }
+  }
+}

@@ -1,0 +1,43 @@
+app = "gostodeoleo"
+primary_region = "gru"
+
+[build]        
+[build.args]
+VITE_PRODUCT_NAME="ROTEIRO"
+
+[env]
+  NODE_ENV = "production"
+  PORT = "8080"
+  VITE_PRODUCT_NAME="ROTEIRO"
+[http_service]
+  auto_start_machines = true
+  auto_stop_machines = false
+  force_https = true
+  internal_port = 8080
+  min_machines_running = 1
+  processes = ["app"]
+
+  [http_service.concurrency]
+    type = "requests"
+    soft_limit = 25
+    hard_limit = 50
+
+  [[http_service.checks]]
+    grace_period = "5s"
+    interval = "10s"
+    method = "GET"
+    path = "/healthz"
+    timeout = "5s"
+
+[processes]
+  app = "node dist/index.js"
+
+[[statics]]
+  guest_path = "/app/dist/public"
+  url_prefix = "/assets/"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 1024
+  processes = ["app"]

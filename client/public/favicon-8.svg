@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#0f2744"/>
+  <rect x="2" y="2" width="28" height="28" rx="6" fill="none" stroke="#FF9900" stroke-width="1.5"/>
+  <text x="16" y="14" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="9" fill="#FF9900">PF</text>
+  <text x="16" y="23" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="6" fill="#aab4c0" letter-spacing="0.5">BRASIL</text>
+</svg>

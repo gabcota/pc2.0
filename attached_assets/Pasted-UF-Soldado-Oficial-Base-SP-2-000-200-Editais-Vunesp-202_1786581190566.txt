@@ -1,0 +1,28 @@
+UF	Soldado	Oficial	Base
+SP	2.000 ✅	200 ✅	Editais Vunesp 2026 publicados (soldado inscrições até 21/08)
+ES	1.000 ✅	~100 📊	Soldado real (Idecan); oficial autorizado p/ 2026, estimativa
+PI	1.000 ✅	1 ✅ (capelão)	Edital FCC publicado, provas em dez/2026
+MA	1.000 ✅	40 ✅	Soldado (Cebraspe) + CFO via PAES 2027
+AL	1.000 ✅	60 ✅	Edital Cebraspe, provas 30/08
+DF	~2.300 📊	147 ✅	Oficial real (edital 2025/26); soldado: último foi 2.100 (2023), novo em 2027
+BA	2.500 🔶	200 🔶	Autorizado, banca em contratação
+PE	1.250 🔶	70 🔶	Autorizado, banca em definição
+RJ	2.000 🔶	100 🔶	Soldado anunciado p/ 2º sem/2026; oficial autorizado
+SC	500 🔶	~35 📊	Soldado com banca definida (AOCP), edital iminente; oficial estimado
+RR	600 🔶	120 🔶	Soldado banca em definição; oficial 20 + 100 CR (UERR)
+AC	262 🔶	~30 📊	Soldado autorizado; oficial sem info, estimativa
+GO	~1.700 📊	180 🔶	Último: 1.520 soldado (2022); 180 oficiais solicitadas
+MG	~2.350 📊	~150 📊	2.500 vagas anunciadas no total p/ 2026–27, split estimado
+MT	~900 📊	~90 📊	991 vagas previstas na LOA 2026 (soldado + oficial, divisão não divulgada)
+CE	~1.100 📊	~120 📊	Último: 1.000 sd (2025) e 96 QOC (2026)
+PA	~4.400 📊	~450 📊	Último: 4.000 + 400 (2023, homologado)
+AM	~1.100 📊	~350 📊	Último: 1.000 + 320 + 30 saúde (2021)
+RS	~1.300 📊	~150 📊	Último: 1.200 + 120 + 30 saúde (2025)
+PR	~2.200 📊	~100 📊	Último: 2.000 + 90 (2025, resultado final divulgado)
+PB	~1.150 📊	~40 📊	Último: 1.064 sd (2023/24) + 30 CFO (2024)
+SE	~330 📊	~40 📊	Último: 300 + 30 + 5 saúde (2024/25)
+TO	~660 📊	~70 📊	Último: 580+20 músico + 60 (FGV 2025)
+RO	~400 📊	~50 📊	Soldado defasado (240 em 2014; há ~2.900 cargos vagos de praça); oficial 40 (2022)
+AP	~2.700 📊	~260 📊	Último: 2.500 CR soldado (2022) + 240 CR oficial (2025)
+RN	~1.000 📊⚠️	125 ✅ (saúde)	Oficial saúde real (edital suspenso, aguarda nova data) + 3 capelão; soldado sem edital recente confirmado — número de baixa confiança
+MS	~650 📊	~120 📊	Último: 595 sd + 108 of + 12 saúde (2018, ampliado) — bem defasado

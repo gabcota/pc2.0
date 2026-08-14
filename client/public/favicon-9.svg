@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#1a1a2e"/>
+  <rect x="6" y="8" width="16" height="13" rx="2" fill="none" stroke="#e0c97f" stroke-width="1.5"/>
+  <line x1="9" y1="13" x2="19" y2="13" stroke="#e0c97f" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="9" y1="16" x2="16" y2="16" stroke="#e0c97f" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="23" cy="10" r="4" fill="#e53e3e"/>
+  <text x="23" y="13" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="6" fill="white">N</text>
+  <text x="14" y="27" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="5" fill="#e0c97f" letter-spacing="0.3">NOTÍCIAS PF</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#0a1a10"/>
+  <!-- Map of Brazil simplified / flag colors -->
+  <polygon points="16,5 27,12 16,27 5,12" fill="none" stroke="#27ae60" stroke-width="1.3"/>
+  <!-- Star inside -->
+  <polygon points="16,10 17.5,14.5 22,14.5 18.5,17.2 19.8,22 16,19.5 12.2,22 13.5,17.2 10,14.5 14.5,14.5" fill="#f0c040"/>
+</svg>

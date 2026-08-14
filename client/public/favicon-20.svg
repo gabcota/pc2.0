@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#0f2744"/>
+  <!-- Shield body -->
+  <path d="M16 4 L26 8 L26 17 Q26 24 16 28 Q6 24 6 17 L6 8 Z" fill="#1a3a6b" stroke="#3b82f6" stroke-width="1.2"/>
+  <!-- PF letters -->
+  <text x="16" y="20" font-family="Arial,sans-serif" font-weight="900" font-size="10" fill="#ffffff" text-anchor="middle" letter-spacing="1">PF</text>
+  <!-- Star on top of shield -->
+  <polygon points="16,5.5 16.9,8.2 19.7,8.2 17.5,9.9 18.3,12.6 16,11 13.7,12.6 14.5,9.9 12.3,8.2 15.1,8.2" fill="#facc15"/>
+</svg>

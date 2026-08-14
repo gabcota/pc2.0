@@ -1,0 +1,148 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "Georgia",
+      "role": "body"
+    },
+    {
+      "family": "FolhaGrafico",
+      "role": "heading"
+    },
+    {
+      "family": "UOLText",
+      "role": "body"
+    },
+    {
+      "family": "Helvetica",
+      "role": "body"
+    },
+    {
+      "family": "FolhaTexto",
+      "role": "body"
+    }
+  ],
+  "colors": {
+    "primary": "#0078A4",
+    "secondary": "#043654",
+    "accent": "#FEDE33",
+    "background": "#FFFFFF",
+    "textPrimary": "#000000",
+    "link": "#FEDE33"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Georgia",
+      "heading": "FolhaGrafico"
+    },
+    "fontStacks": {
+      "heading": [
+        "FolhaGrafico",
+        "Georgia",
+        "serif"
+      ],
+      "body": [
+        "FolhaGrafico",
+        "Georgia",
+        "serif"
+      ],
+      "paragraph": [
+        "FolhaGrafico",
+        "Georgia",
+        "serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "18px",
+      "h2": "39.996px",
+      "body": "15.984px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "0px"
+  },
+  "components": {
+    "buttonPrimary": {
+      "background": "#FEDE33",
+      "textColor": "#000000",
+      "borderRadius": "3px",
+      "borderRadiusCorners": {
+        "topLeft": "3px",
+        "topRight": "3px",
+        "bottomRight": "3px",
+        "bottomLeft": "3px"
+      },
+      "shadow": "none"
+    },
+    "buttonSecondary": {
+      "background": "transparent",
+      "textColor": "#333333",
+      "borderColor": "#333333",
+      "borderRadius": "3px",
+      "borderRadiusCorners": {
+        "topLeft": "3px",
+        "topRight": "3px",
+        "bottomRight": "3px",
+        "bottomLeft": "3px"
+      },
+      "shadow": "none"
+    }
+  },
+  "images": {
+    "logo": "File saved at: attached_assets/logo.svg",
+    "favicon": "https://f.i.uol.com.br/hunting/folha/1/common/icons/apple-touch-icon.png",
+    "ogImage": "https://f.i.uol.com.br/hunting/folha/1/common/logo-folha-facebook.jpg",
+    "logoHref": "https://www.folha.uol.com.br/",
+    "logoAlt": "Folha de São Paulo - marca do jornal na navegação principal"
+  },
+  "__llm_logo_reasoning": {
+    "selectedIndex": 0,
+    "reasoning": "Selected #0 because it is visible, located in the header, links to the homepage, and matches the brand 'Folha de S.Paulo'.",
+    "confidence": 0.95,
+    "source": "llm"
+  },
+  "__llm_button_reasoning": {
+    "primary": {
+      "index": 0,
+      "text": "Assine a Folha",
+      "reasoning": "Button #0 with text 'Assine a Folha' uses the vibrant accent color #FEDE33, making it the most prominent call-to-action on the page."
+    },
+    "secondary": {
+      "index": 2,
+      "text": "Ver tudo",
+      "reasoning": "Button #2 with text 'Ver tudo' is transparent with a border, making it a suitable secondary action distinct from the primary button's vibrant color."
+    },
+    "confidence": 0.95
+  },
+  "personality": {
+    "tone": "professional",
+    "energy": "medium",
+    "targetAudience": "general public interested in news"
+  },
+  "designSystem": {
+    "framework": "custom",
+    "componentLibrary": ""
+  },
+  "confidence": {
+    "buttons": 0.95,
+    "colors": 0.9,
+    "overall": 0.925
+  },
+  "__llm_metadata": {
+    "logoSelection": {
+      "llmCalled": true,
+      "llmSucceeded": true,
+      "finalSource": "llm",
+      "rawLogoSelection": {
+        "selectedLogoIndex": 0,
+        "selectedLogoReasoning": "Selected #0 because it is visible, located in the header, links to the homepage, and matches the brand 'Folha de S.Paulo'.",
+        "confidence": 0.95
+      }
+    },
+    "buttonClassification": {
+      "llmCalled": true,
+      "llmSucceeded": true
+    }
+  }
+}

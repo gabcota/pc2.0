@@ -1,0 +1,211 @@
+uploads = []
+
+[[generated]]
+id = "uoVaWpXL4QV3IkgH3XwW0"
+uri = "file://client/public/logo-concursopf.png"
+type = "image"
+title = "concursopf shield logo"
+
+[[generated]]
+id = "KCqiCYkIDF0EHE3NK8zTX"
+uri = "file://client/public/logo-brasilpf.png"
+type = "image"
+title = "brasil pf shield logo"
+
+[[generated]]
+id = "obLkJyQieozes3by383HJ"
+uri = "file://client/public/logo-diretopf.png"
+type = "image"
+title = "direto pf arrow emblem logo"
+
+[[generated]]
+id = "tT7ZAqt_U6zEmLbg_LS4R"
+uri = "file://client/public/logo-queroserpf.png"
+type = "image"
+title = "quero ser pf logo navy gold star"
+
+[[generated]]
+id = "-uzPX5ro4K-2LM2hblDbz"
+uri = "file://client/public/logo-pfconcurso.png"
+type = "image"
+title = "pf concurso logo green shield"
+
+[[generated]]
+id = "AfPXeQCk9xIm88SktN-lr"
+uri = "file://client/public/logo-estudepf.png"
+type = "image"
+title = "estude pf logo charcoal amber book"
+
+[[generated]]
+id = "JwRPxREBFlTr_Mv_Ur-AE"
+uri = "file://client/public/favicon-queroserpf.png"
+type = "image"
+title = "queroserpf favicon navy gold star"
+
+[[generated]]
+id = "kK1NWs5gvr67kwNj35SZu"
+uri = "file://client/public/favicon-pfconcurso.png"
+type = "image"
+title = "pfconcurso favicon green shield"
+
+[[outputs]]
+id = "wBcVZUarbUzH0ZJj1ee3W"
+uri = "file://client/public/logo-concursopf.png"
+type = "image"
+title = "Logo Concurso PF — escudo federal"
+
+[[outputs]]
+id = "TWj2ajbvKY_9jU9DXjdmG"
+uri = "file://exports/favicon-colegiopf.png"
+type = "image"
+title = "favicon-colegiopf.site — 130×130px"
+
+[[outputs]]
+id = "-IwOG4nGK6OU_l0ty30MT"
+uri = "file://exports/favicon-processoaberto.png"
+type = "image"
+title = "favicon-processoaberto.online — 130×130px"
+
+[[outputs]]
+id = "RREzNavAvB0Ew6xg6ivmd"
+uri = "file://exports/favicon-19.png"
+type = "image"
+title = "favicon-19.png — estudecolegio.online (130×130)"
+
+[[outputs]]
+id = "IyCFjou17AxhAKYAkKM52"
+uri = "file://exports/favicon-20.png"
+type = "image"
+title = "favicon-20.png — guiapf.click (130×130)"
+
+[[outputs]]
+id = "_Z4NV5TP67M8B3PZLubOp"
+uri = "file://exports/favicon-21.png"
+type = "image"
+title = "favicon-21.png — guiaedital.click (130×130)"
+
+[[outputs]]
+id = "-paL8Gesvg2bpuv3aonG5"
+uri = "file://exports/favicon-22.png"
+type = "image"
+title = "favicon-22.png — carreirapublica.click (130×130)"
+
+[[outputs]]
+id = "jTWpvxKeuZZeIsTLVT4KY"
+uri = "file://exports/favicon-23.png"
+type = "image"
+title = "favicon-23.png — academiapublicos.site (130×130)"
+
+[[outputs]]
+id = "j3WCHShcKXCglmKSvJIx5"
+uri = "file://exports/favicon-24.png"
+type = "image"
+title = "favicon-24.png — planoconcursos.site (130×130)"
+
+[[outputs]]
+id = "bWByLBjLAT92IDgZV5s97"
+uri = "file://exports/favicon-25.png"
+type = "image"
+title = "favicon-25.png — trilhadeaprovacao.online (130×130)"
+
+[[outputs]]
+id = "3F-vWqGfnSHuyj3jQp-74"
+uri = "file://exports/favicon-26.png"
+type = "image"
+title = "favicon-26.png — portaldoconcurseiro.click (130×130)"
+
+[[outputs]]
+id = "OoXP8hPL1dgjhvM39XLSV"
+uri = "file://exports/favicon-27.png"
+type = "image"
+title = "favicon-27.png — foconoconcurso.click (130×130)"
+
+[[outputs]]
+id = "X-XxZssOHipNTv9RI8_s8"
+uri = "file://exports/favicon-28.png"
+type = "image"
+title = "favicon-28.png — rotadeaprovacao.com (130×130)"
+
+[[outputs]]
+id = "IJkEEAXBs9QdzEi2pd9zV"
+uri = "file://exports/favicon-29.png"
+type = "image"
+title = "favicon-29.png — guiaconcurseiro.click (130×130)"
+
+[[outputs]]
+id = "vgksguCEoWEcqSDIWYMdW"
+uri = "file://exports/favicon-30.png"
+type = "image"
+title = "favicon-30.png — preparaconcurso.com (130×130)"
+
+[[outputs]]
+id = "Gr3XUmwtNs6H4h2I_c68i"
+uri = "file://attached_assets/generated_images/logo-desafioibge.png"
+type = "image"
+title = "1 · desafioibge.click"
+
+[[outputs]]
+id = "HTOkGB06AFeISW-vsfNGw"
+uri = "file://attached_assets/generated_images/logo-missaoibge.png"
+type = "image"
+title = "2 · missaoibge.click"
+
+[[outputs]]
+id = "9djiYfII6_E2pZFMNAxUf"
+uri = "file://attached_assets/generated_images/logo-projetoibge.png"
+type = "image"
+title = "3 · projetoibge.click"
+
+[[outputs]]
+id = "XC-SuvDwTZVVir05cIvMG"
+uri = "file://attached_assets/generated_images/logo-sonhoibge.png"
+type = "image"
+title = "4 · sonhoibge.click"
+
+[[outputs]]
+id = "t5_v_ZBcgTjdN_vDJeiuc"
+uri = "file://attached_assets/generated_images/logo-selecaotemporaria.png"
+type = "image"
+title = "5 · selecaotemporaria.click"
+
+[[outputs]]
+id = "hpq9rJsRLQlz2H5x2jkbJ"
+uri = "file://attached_assets/generated_images/logo-seletivotemporario.png"
+type = "image"
+title = "6 · seletivotemporario.click"
+
+[[outputs]]
+id = "GA9NdzPDCuNla8xTkE2fO"
+uri = "file://attached_assets/generated_images/logo-recrutamentotemporario.png"
+type = "image"
+title = "7 · recrutamentotemporario.click"
+
+[[outputs]]
+id = "n6tLfHAVlmN85kj3_BLqr"
+uri = "file://attached_assets/generated_images/logo-vagastemporarias.png"
+type = "image"
+title = "8 · vagastemporarias.click"
+
+[[outputs]]
+id = "9FzqbnPq5eYsAa54LvkAE"
+uri = "file://attached_assets/generated_images/logo-rumoaibge.png"
+type = "image"
+title = "9 · rumoaibge.click"
+
+[[outputs]]
+id = "8R2ZOINdB_9wx7IwIn7AU"
+uri = "file://attached_assets/generated_images/logo-jornadaibge.png"
+type = "image"
+title = "10 · jornadaibge.click"
+
+[[outputs]]
+id = "xwqKjA1gYcW1hMahH4fHL"
+uri = "file://attached_assets/generated_images/logo-fococenso.png"
+type = "image"
+title = "11 · fococenso.click"
+
+[[outputs]]
+id = "N-9b5wnMUag5kk4cYja65"
+uri = "file://attached_assets/generated_images/logo-estudarparaocenso.png"
+type = "image"
+title = "12 · estudarparaocenso.click"

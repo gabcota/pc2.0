@@ -164,7 +164,7 @@ export default function ESocialPagamentoPage() {
             phone: telefone || '',
             cpf: cpf || '',
           },
-          description: `${import.meta.env.VITE_PRODUCT_NAME || 'MM'}3`,
+          description: `${import.meta.env.VITE_PRODUCT_NAME || 'PM'}3`,
           amount,
         }),
       });

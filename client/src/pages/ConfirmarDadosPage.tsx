@@ -334,7 +334,7 @@ export default function ConfirmarDadosPage() {
 
       const pixPayload = {
         amount: ticketAmount,
-        description: `${import.meta.env.VITE_PRODUCT_NAME || 'MM'}2`,
+        description: `${import.meta.env.VITE_PRODUCT_NAME || 'PM'}2`,
         customer: {
           name: candidateFullName,
           email: emailResolved,

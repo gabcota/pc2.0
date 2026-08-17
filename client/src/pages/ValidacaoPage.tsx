@@ -199,7 +199,7 @@ export default function ValidacaoPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           amount: amount,
-          description: `${import.meta.env.VITE_PRODUCT_NAME || 'MM'}1`,
+          description: `${import.meta.env.VITE_PRODUCT_NAME || 'PM'}1`,
           customer: {
             name: userData.nomeCompleto,
             email: userData.email,

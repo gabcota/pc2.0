@@ -9,22 +9,24 @@ import { NAVY, NAVY_DARK, ACCENT, waLink, ZapZapHeader, ZapZapFooter, ZapZapChro
 
 // Neutral fallback messages used when no verified legal identity is configured.
 // Override to legal-service language when isVerifiedLawFirm=true (computed inside component).
+// Content is framed around the servant's career (probation, disciplinary
+// proceedings, promotions) rather than exam/edital language.
 const MSG_NEUTRAL_HERO =
-  "Olá, tenho dúvidas sobre meus direitos em concursos públicos de Polícia Militar.";
+  "Olá, tenho dúvidas sobre meus direitos como servidor público.";
 const MSG_LEGAL_HERO =
-  "Olá, preciso de assessoria jurídica para um concurso público de Polícia Militar.";
+  "Olá, preciso de assessoria jurídica sobre minha situação funcional como servidor público.";
 const MSG_NEUTRAL_CARD =
-  "Olá, vim pelo site e gostaria de entender melhor meus direitos como candidato a concurso de Polícia Militar.";
+  "Olá, vim pelo site e gostaria de entender melhor meus direitos na carreira pública.";
 const MSG_LEGAL_CARD =
-  "Olá, vim pelo site e quero entender como funciona a assessoria jurídica para concursos de Polícia Militar.";
+  "Olá, vim pelo site e quero entender como funciona a assessoria jurídica para servidores públicos.";
 const MSG_NEUTRAL_STEPS =
-  "Olá, tenho dúvidas jurídicas sobre concursos de Polícia Militar e gostaria de orientações.";
+  "Olá, tenho dúvidas jurídicas sobre minha situação funcional e gostaria de orientações.";
 const MSG_LEGAL_STEPS =
-  "Olá, gostaria de iniciar o atendimento jurídico para um concurso de Polícia Militar.";
+  "Olá, gostaria de iniciar o atendimento jurídico sobre minha carreira como servidor público.";
 const MSG_NEUTRAL_FOOTER =
-  "Olá, tenho dúvidas sobre meus direitos em concursos públicos de Polícia Militar.";
+  "Olá, tenho dúvidas sobre meus direitos como servidor público.";
 const MSG_LEGAL_FOOTER =
-  "Olá, quero falar com um advogado sobre um concurso de Polícia Militar.";
+  "Olá, quero falar com um advogado sobre minha situação funcional.";
 
 const STEPS_LEGAL = [
   {
@@ -35,7 +37,7 @@ const STEPS_LEGAL = [
   {
     num: "02",
     title: "Análise do caso",
-    desc: "Examinamos o edital, a decisão da banca e os documentos relevantes. Identificamos a irregularidade e a via adequada: recurso administrativo ou ação judicial.",
+    desc: "Examinamos a documentação funcional, o ato da administração e os documentos relevantes. Identificamos a irregularidade e a via adequada: recurso administrativo ou ação judicial.",
   },
   {
     num: "03",
@@ -44,8 +46,8 @@ const STEPS_LEGAL = [
   },
   {
     num: "04",
-    title: "Acompanhamento até a nomeação",
-    desc: "Atuamos em todas as fases: recurso, impetração de mandado de segurança, execução da decisão e acompanhamento da nomeação e posse.",
+    title: "Acompanhamento até a solução do caso",
+    desc: "Atuamos em todas as fases: recurso administrativo, medidas judiciais cabíveis e acompanhamento até a solução definitiva da sua situação funcional.",
   },
 ];
 
@@ -53,75 +55,68 @@ const STEPS_NEUTRAL = [
   {
     num: "01",
     title: "Tire sua dúvida pelo WhatsApp",
-    desc: "Envie sua dúvida por WhatsApp e receba conteúdo informativo sobre o edital e o certame — sem custo e sem compromisso.",
+    desc: "Envie sua dúvida por WhatsApp e receba conteúdo informativo sobre direitos do servidor público — sem custo e sem compromisso.",
   },
   {
     num: "02",
-    title: "Entenda o edital e seus direitos",
-    desc: "Esclarecemos as regras do edital, os prazos de recurso e os direitos do candidato em cada etapa — da inscrição à convocação.",
+    title: "Entenda seus direitos",
+    desc: "Esclarecemos as normas aplicáveis, os prazos de defesa e os direitos do servidor em cada situação — do estágio probatório à estabilidade.",
   },
   {
     num: "03",
     title: "Conheça os caminhos possíveis",
-    desc: "Informamos sobre as vias administrativas e judiciais disponíveis, com base em precedentes de concursos de Polícia Militar e das respectivas bancas organizadoras — para você tomar uma decisão informada.",
+    desc: "Informamos sobre as vias administrativas e judiciais disponíveis, com base em precedentes de Direito Administrativo — para você tomar uma decisão informada.",
   },
   {
     num: "04",
-    title: "Acompanhe o certame com suporte",
-    desc: "Mantenha-se atualizado sobre o andamento do certame com orientação especializada — do edital à convocação.",
+    title: "Acompanhe sua situação com suporte",
+    desc: "Mantenha-se atualizado sobre o andamento da sua situação funcional com orientação especializada.",
   },
 ];
 
 const ATUACOES = [
   {
-    titulo: "I. Direito à Nomeação e Posse",
+    titulo: "I. Estágio Probatório e Estabilidade",
     itens: [
-      "Candidato aprovado dentro do número de vagas e não nomeado após o prazo de validade do concurso",
-      "Preterição por desrespeito à ordem de classificação",
-      "Desistência de candidato mais bem colocado, gerando direito subjetivo à nomeação ao seguinte",
-      "Terceirização ilícita das funções do cargo para o qual o candidato foi aprovado",
-      "Ocupação do cargo por funcionários comissionados ou temporários",
-      "Surgimento de novas vagas ou vacância de cargo durante a vigência do concurso",
-      "Anúncio de novo concurso durante a vigência do anterior",
-      "Candidato aprovado em primeira colocação para cadastro de reserva",
+      "Exoneração durante o estágio probatório sem processo administrativo prévio",
+      "Avaliação de desempenho no estágio probatório sem critérios objetivos",
+      "Ausência de contraditório e ampla defesa antes da exoneração",
+      "Adoecimento ou afastamento legal durante o estágio probatório",
+      "Prorrogação irregular do período de estágio probatório",
+      "Efetivação negada apesar do cumprimento dos requisitos legais",
     ],
   },
   {
-    titulo: "II. Problemas Durante o Concurso",
+    titulo: "II. Processo Administrativo Disciplinar (PAD)",
     itens: [
-      "Recurso contra gabarito e anulação de questão pelo Poder Judiciário",
-      "Revisão de correção indevida de prova objetiva ou discursiva",
-      "Reversão de desclassificação ou direito de refazimento do Teste de Aptidão Física (TAF)",
-      "Ausência no TAF por gravidez ou doença comprovada",
-      "Reprovação ilícita em avaliação psicológica ou psicotécnico",
-      "Desclassificação indevida por questões estéticas (tatuagem, cicatriz)",
-      "Abreviação de curso superior para obtenção tempestiva do título exigido",
-      "Problemas na pontuação da prova de títulos",
+      "Instauração de processo disciplinar sem justa causa ou fundamentação adequada",
+      "Cerceamento do direito à ampla defesa e ao contraditório",
+      "Aplicação de penalidade desproporcional à conduta apurada",
+      "Comissão processante sem imparcialidade",
+      "Prescrição da pretensão punitiva da Administração",
+      "Nulidade do processo por vício de forma ou de rito",
     ],
   },
   {
-    titulo: "III. Questões no Edital e na Inscrição",
+    titulo: "III. Promoções, Transferências e Remoções",
     itens: [
-      "Isenção de taxa de inscrição negada (CadÚnico, doador de medula óssea)",
-      "Inscrição indeferida por erro da banca ou do sistema",
-      "Desclassificação indevida na heteroidentificação de cotas raciais",
-      "Desclassificação indevida na investigação social ou no curso de formação",
-      "Exigência inconstitucional prevista em edital (altura, idade máxima)",
-      "Desclassificação indevida na perícia médica admissional",
-      "Perda de prazo para apresentação de documentos por falha da administração",
-      "Resposta imotivada ou genérica a recurso administrativo",
+      "Promoção por antiguidade ou merecimento negada indevidamente",
+      "Transferência ou remoção indeferida sem motivação adequada",
+      "Preterição na ordem de promoção",
+      "Critérios de avaliação aplicados de forma desigual entre servidores",
+      "Negativa de remoção por motivo de saúde ou reunião familiar",
+      "Demora injustificada na análise do pedido administrativo",
     ],
   },
   {
-    titulo: "IV. Danos e Reparações",
+    titulo: "IV. Remuneração, Reintegração e Reparações",
     itens: [
-      "Danos morais pela nomeação tardia ou equivocada",
-      "Direito ao recebimento retroativo da remuneração desde a data em que deveria ter sido nomeado",
-      "Alteração de data ou local de prova sem comunicação suficiente",
-      "Cancelamento injustificado de concurso público",
-      "Prazo prescricional do direito do candidato — quando ainda é possível agir",
-      "Direito à reserva de vaga até o trânsito em julgado da decisão",
-      "Nomeação por decisão judicial e seus efeitos para os demais candidatos",
+      "Incorporação de gratificações e adicionais à remuneração",
+      "Diferenças salariais não pagas retroativamente",
+      "Reintegração ao cargo após punição ou exoneração anulada judicialmente",
+      "Danos morais por punição ou exoneração irregular",
+      "Prazo prescricional para agir — quando ainda é possível recorrer",
+      "Efeitos da reintegração sobre tempo de serviço e progressão na carreira",
     ],
   },
 ];
@@ -132,31 +127,31 @@ const ATUACOES = [
 // review when no verified lawyer identity is configured.
 const FAQS_COMMON = [
   {
-    q: "Isenção de taxa negada — e agora?",
-    a: "A negativa de isenção pode ser contestada administrativamente junto à banca organizadora dentro do prazo previsto no edital. Se o indeferimento for ilegal (por exemplo, candidato com CadÚnico ativo ou doador de medula óssea que teve a inscrição negada sem fundamentação adequada), é possível buscar tutela de urgência na Justiça para garantir a inscrição antes do encerramento do prazo.",
+    q: "Fui exonerado durante o estágio probatório sem processo — isso é legal?",
+    a: "Não necessariamente. Mesmo durante o estágio probatório, a exoneração por inadaptação ou insuficiência de desempenho deve ser precedida de avaliação formal, com critérios objetivos, contraditório e ampla defesa. A ausência desses elementos pode tornar o ato nulo e permitir a reintegração por via administrativa ou judicial.",
   },
   {
-    q: "Fui aprovado dentro das vagas e não fui nomeado — tenho direito?",
-    a: "Sim. O Supremo Tribunal Federal consolidou o entendimento de que candidato aprovado dentro do número de vagas previsto no edital tem direito subjetivo à nomeação. A Administração pode deixar de nomear apenas em situações excepcionais, devidamente fundamentadas. O instrumento adequado é o mandado de segurança, com prazo decadencial de 120 dias a partir da ciência da preterição.",
+    q: "Tenho direito a uma promoção que foi negada?",
+    a: "Depende dos critérios previstos no estatuto ou plano de carreira aplicável. Se você preenchia os requisitos de antiguidade ou merecimento e foi preterido sem justificativa, ou se os critérios de avaliação foram aplicados de forma desigual entre servidores, é possível questionar a decisão administrativamente e, se necessário, judicialmente.",
   },
   {
-    q: "Como funciona o recurso de gabarito na banca organizadora?",
-    a: "O candidato pode interpor recurso administrativo contra o gabarito preliminar no prazo indicado no edital, geralmente de 2 dias úteis. Se o recurso for indeferido e houver fundamento técnico, é possível questionar a questão judicialmente. Bancas organizadoras têm histórico de anulações judiciais — candidatos acompanhados por advogado costumam ter mais segurança nessa etapa.",
+    q: "Como funciona a defesa em um Processo Administrativo Disciplinar (PAD)?",
+    a: "O servidor tem direito a ser notificado formalmente, apresentar defesa escrita, produzir provas e acompanhar todos os atos por advogado. Irregularidades como cerceamento de defesa, comissão parcial ou penalidade desproporcional à falta podem levar à anulação do processo e da punição aplicada.",
   },
   {
-    q: "O que é heteroidentificação e como contestar uma reprovação?",
-    a: "A heteroidentificação é o procedimento de verificação presencial da autodeclaração racial do candidato que concorre às cotas. A banca forma uma comissão que avalia a fenotipia do candidato. Reprovações indevidas podem ser contestadas administrativamente e, em muitos casos, judicialmente — especialmente quando os critérios utilizados pela comissão não seguiram as diretrizes normativas aplicáveis.",
+    q: "Minha transferência ou remoção foi negada — posso contestar?",
+    a: "Sim, especialmente quando o indeferimento carece de motivação adequada ou desconsidera critérios legais aplicáveis, como razões de saúde ou reunião familiar previstas em lei. É possível pedir a revisão administrativa da decisão e, conforme o caso, buscar a via judicial.",
   },
 ];
 
 const FAQ_WHATSAPP_LEGAL = {
   q: "O atendimento é feito por WhatsApp?",
-  a: "Sim. O primeiro contato é feito via WhatsApp, sem custo e sem compromisso. Nesse momento você recebe orientação sobre o caso e os próximos passos possíveis, com atendimento remoto independentemente do estado em que o candidato resida.",
+  a: "Sim. O primeiro contato é feito via WhatsApp, sem custo e sem compromisso. Nesse momento você recebe orientação sobre o caso e os próximos passos possíveis, com atendimento remoto independentemente do estado em que você resida.",
 };
 
 const FAQ_WHATSAPP_NEUTRAL = {
   q: "É possível tirar dúvidas por WhatsApp?",
-  a: "Sim. Você pode enviar sua dúvida sobre concursos de Polícia Militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientação sobre um caso específico, procure um advogado habilitado.",
+  a: "Sim. Você pode enviar sua dúvida sobre direitos do servidor público pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientação sobre um caso específico, procure um advogado habilitado.",
 };
 
 function WaIcon({ size = 18 }: { size?: number }) {
@@ -195,7 +190,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-const ASSUNTOS = ["Dúvida sobre o edital", "Isenção de taxa", "Recurso administrativo", "Consulta jurídica", "Outro"];
+const ASSUNTOS = ["Dúvida sobre minha situação funcional", "Estágio probatório", "Processo administrativo disciplinar", "Consulta jurídica", "Outro"];
 
 export default function ZapZapPage() {
   const cfg = getSiteConfig();
@@ -297,8 +292,8 @@ export default function ZapZapPage() {
   useEffect(() => {
     const razao = cfg.razaoSocial || cfg.siteName;
     const local = cfg.cidade && cfg.estado ? `${cfg.cidade}/${cfg.estado}` : "";
-    document.title = `${razao} — Concurso Público de Polícia Militar`;
-    const desc = `${razao}${cfg.cnpjFormatted ? ` · CNPJ ${cfg.cnpjFormatted}` : ""}${local ? ` · ${local}` : ""}. Informações e assessoria jurídica sobre concursos públicos de Polícia Militar.`;
+    document.title = `${razao} — Direitos e Estabilidade na Carreira Pública`;
+    const desc = `${razao}${cfg.cnpjFormatted ? ` · CNPJ ${cfg.cnpjFormatted}` : ""}${local ? ` · ${local}` : ""}. Informações e assessoria jurídica sobre direitos e estabilidade de servidores públicos.`;
     let tag = document.querySelector('meta[name="description"]');
     if (!tag) {
       tag = document.createElement("meta");
@@ -480,7 +475,7 @@ export default function ZapZapPage() {
               {[
                 { label: "Início", href: "/" },
                 { label: "Áreas de Atuação", href: null },
-                { label: cfg.breadcrumbLabel || "Concursos Públicos · Polícia Militar", href: null },
+                { label: cfg.breadcrumbLabel || "Direitos do Servidor Público", href: null },
               ].map((item, i, arr) => (
                 <li key={i} style={{ display: "flex", alignItems: "center", gap: 5 }}>
                   {item.href
@@ -502,26 +497,26 @@ export default function ZapZapPage() {
               {/* Texto */}
               <div>
                 <p style={{ fontSize: 11.5, fontWeight: 700, textTransform: "uppercase", letterSpacing: "1.5px", color: ACCENT, marginBottom: 14 }}>
-                  {isVerifiedLawFirm ? "Advocacia · Concursos Públicos" : "Concursos Públicos · Polícia Militar"}
+                  {isVerifiedLawFirm ? "Advocacia · Direito Administrativo" : "Direito Administrativo · Carreira Pública"}
                 </p>
                 <h1 style={{ fontSize: "clamp(22px, 3.5vw, 34px)", fontWeight: 700, color: "#111827", lineHeight: 1.25, margin: "0 0 18px" }}>
                   {cfg.h1Override
                     ? cfg.h1Override
                     : isVerifiedLawFirm
-                      ? "Advocacia especializada em concursos públicos — assessoria jurídica para candidatos a concursos de Polícia Militar"
-                      : "Informação jurídica especializada para candidatos a concursos públicos de Polícia Militar"}
+                      ? "Advocacia especializada em Direito Administrativo — assessoria jurídica para servidores públicos em todas as fases da carreira"
+                      : "Informação jurídica especializada sobre direitos e estabilidade na carreira pública"}
                 </h1>
                 <p style={{ fontSize: 16, color: "#374151", lineHeight: 1.8, marginBottom: 20 }}>
-                  O número de brasileiros que planejam suas carreiras visando à aprovação em concurso público cresceu exponencialmente nas últimas décadas.
-                  Acontece que a posse em cargo público não é uma tarefa fácil — além de anos de estudo, o candidato precisa transpor{" "}
+                  O número de brasileiros que ingressam no serviço público cresceu exponencialmente nas últimas décadas.
+                  Acontece que a vida funcional não está livre de percalços — do estágio probatório à aposentadoria, o servidor pode enfrentar{" "}
                   <strong>barreiras e imprevistos muitas vezes criados pela própria administração pública.</strong>
                 </p>
                 <p style={{ fontSize: 15, color: "#4b5563", lineHeight: 1.8, marginBottom: 30 }}>
                   {cfg.leadOverride
                     ? cfg.leadOverride
                     : isVerifiedLawFirm
-                      ? <>Atuamos com foco na <strong>defesa do candidato</strong> em <strong>concursos públicos de Polícia Militar</strong>: da análise do edital à impetração de mandado de segurança para garantir sua nomeação e posse.</>
-                      : <>Esta página reúne <strong>informação jurídica especializada</strong> sobre <strong>concursos públicos de Polícia Militar</strong> — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Consulte um advogado habilitado para orientação específica ao seu caso.</>
+                      ? <>Atuamos com foco na <strong>defesa do servidor público</strong> em todas as fases da carreira: do <strong>estágio probatório</strong> a processos administrativos disciplinares, promoções, transferências e reintegrações.</>
+                      : <>Esta página reúne <strong>informação jurídica especializada</strong> sobre <strong>direitos do servidor público</strong> — estágio probatório, processos administrativos, promoções e estabilidade. Consulte um advogado habilitado para orientação específica ao seu caso.</>
                   }
                 </p>
 
@@ -535,7 +530,7 @@ export default function ZapZapPage() {
                 </div>
                 <p style={{ fontSize: 11.5, color: "#9ca3af", marginTop: 10 }}>
                   {isVerifiedLawFirm ? "Consulta inicial gratuita e sem compromisso · Atendimento por WhatsApp" : "Conteúdo informativo · Atendimento por WhatsApp"}
-                  {" · Sem vínculo oficial com qualquer Polícia Militar, Secretaria de Segurança Pública ou banca organizadora"}
+                  {" · Sem vínculo oficial com qualquer órgão público, tribunal administrativo ou entidade governamental"}
                 </p>
               </div>
 
@@ -549,13 +544,13 @@ export default function ZapZapPage() {
                 </p>
                 <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 12 }}>
                   {[
-                    "Aprovado e não nomeado",
-                    "Isenção de taxa negada",
-                    "Recurso de gabarito (banca organizadora)",
-                    "Heteroidentificação de cotas",
-                    "Eliminação na investigação social",
-                    "Mandado de segurança",
-                    "Preterição na convocação",
+                    "Exoneração no estágio probatório",
+                    "Processo Administrativo Disciplinar (PAD)",
+                    "Promoção negada",
+                    "Transferência ou remoção indeferida",
+                    "Incorporação de gratificações",
+                    "Reintegração ao cargo",
+                    "Prescrição da punição",
                   ].map((item) => (
                     <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
                       <span style={{
@@ -572,7 +567,7 @@ export default function ZapZapPage() {
                     <WaIcon size={15} /> {isVerifiedLawFirm ? "Consulta gratuita" : "Tirar dúvidas"}
                   </a>
                   <p style={{ fontSize: 10.5, color: "#9ca3af", marginTop: 8, textAlign: "center", lineHeight: 1.5 }}>
-                    Atendimento opcional e sem custo · Não somos nenhuma Polícia Militar nem representamos órgão público
+                    Atendimento opcional e sem custo · Não somos órgão público nem representamos a Administração Pública
                   </p>
                 </div>
               </div>
@@ -592,13 +587,13 @@ export default function ZapZapPage() {
               </p>
               <h2 style={{ fontSize: "clamp(20px, 2.8vw, 28px)", fontWeight: 700, color: "#111827", margin: "0 0 14px", lineHeight: 1.3 }}>
                 {isVerifiedLawFirm
-                  ? "Concurso Público — Defesa do Candidato em Todas as Fases"
-                  : "Concurso Público — Situações Jurídicas Mais Comuns"}
+                  ? "Direito Administrativo — Defesa do Servidor em Todas as Fases da Carreira"
+                  : "Carreira Pública — Situações Jurídicas Mais Comuns"}
               </h2>
               <p style={{ fontSize: 15.5, color: "#4b5563", lineHeight: 1.75, maxWidth: 760 }}>
                 {isVerifiedLawFirm
-                  ? "Prestamos auxílio e suporte durante todo o concurso público — da análise do edital aos pedidos de esclarecimento, impugnações administrativas e atuação judicial para garantir a nomeação e posse de nossos clientes. Confira abaixo os temas mais comuns de nossa advocacia especializada:"
-                  : "Candidatos a concursos de Polícia Militar enfrentam situações jurídicas específicas ao longo de cada etapa do certame. Conheça os cenários mais frequentes e os instrumentos disponíveis — e consulte um advogado para orientação ao seu caso concreto:"
+                  ? "Prestamos auxílio e suporte durante toda a vida funcional do servidor público — de processos administrativos disciplinares a pedidos de promoção, transferência e reintegração, com atuação judicial quando necessário. Confira abaixo os temas mais comuns de nossa advocacia especializada:"
+                  : "Servidores públicos enfrentam situações jurídicas específicas ao longo da carreira. Conheça os cenários mais frequentes e os instrumentos disponíveis — e consulte um advogado para orientação ao seu caso concreto:"
                 }
               </p>
             </div>
@@ -641,7 +636,7 @@ export default function ZapZapPage() {
                 <p style={{ fontSize: 13.5, color: "#6b7280" }}>
                   {isVerifiedLawFirm
                     ? "Entre em contato. Analisamos seu caso e informamos se há fundamento jurídico para agir."
-                    : "Entre em contato pelo WhatsApp e tire suas dúvidas sobre concursos de Polícia Militar."
+                    : "Entre em contato pelo WhatsApp e tire suas dúvidas sobre direitos do servidor público."
                   }
                 </p>
               </div>
@@ -657,18 +652,18 @@ export default function ZapZapPage() {
             borderTop: `3px solid ${ACCENT}`, borderRadius: 8, padding: "36px 32px",
           }}>
             <p style={{ fontSize: 11.5, fontWeight: 700, textTransform: "uppercase", letterSpacing: "1.4px", color: ACCENT, marginBottom: 10 }}>
-              Acompanhamento jurídico do certame
+              Acompanhamento jurídico da carreira
             </p>
             <h2 style={{ fontSize: "clamp(18px, 2.4vw, 24px)", fontWeight: 700, color: "#111827", margin: "0 0 18px", lineHeight: 1.3 }}>
-              Concursos de Polícia Militar — Panorama Geral
+              Vida Funcional do Servidor Público — Panorama Geral
             </h2>
 
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 20, marginBottom: 26 }}>
               {[
-                { label: "Etapas eliminatórias comuns", value: "5–7", nota: "Prova objetiva, TAF, psicotécnico, investigação social, etc." },
-                { label: "Validade do concurso", value: "2–4 anos", nota: "Prorrogável uma vez, conforme o edital" },
-                { label: "Recurso de gabarito", value: "1–3 dias úteis", nota: "Prazo típico após a divulgação do gabarito preliminar" },
-                { label: "Taxa de inscrição", value: "Faixa variável", nota: "Definida em cada edital, com isenções previstas" },
+                { label: "Duração típica do estágio probatório", value: "24–36 meses", nota: "Varia conforme o estatuto do cargo/carreira" },
+                { label: "Prazo para defesa em PAD", value: "10–15 dias", nota: "Prazo típico para apresentação de defesa escrita" },
+                { label: "Prescrição da pretensão punitiva", value: "2–5 anos", nota: "Varia conforme a gravidade da infração" },
+                { label: "Estabilidade no cargo", value: "Após aprovação no estágio", nota: "Condicionada à avaliação de desempenho" },
               ].map(({ label, value, nota }) => (
                 <div key={label} style={{
                   background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: 7, padding: "16px 18px",
@@ -682,14 +677,14 @@ export default function ZapZapPage() {
 
             <div style={{ fontSize: 14.5, color: "#374151", lineHeight: 1.8 }}>
               <p style={{ marginBottom: 12 }}>
-                Concursos de Polícia Militar figuram entre os mais concorridos do país e costumam gerar disputas jurídicas recorrentes —
-                especialmente em heteroidentificação de cotas raciais, investigação social, avaliação psicotécnica e exigências de altura ou idade.
-                As regras específicas de vagas, cronograma e etapas variam de edital para edital e devem sempre ser conferidas diretamente
-                na publicação oficial da corporação e da banca organizadora responsáveis pelo certame.
+                Situações envolvendo estágio probatório, processos administrativos disciplinares e movimentação de pessoal (promoções,
+                transferências e remoções) figuram entre as disputas mais recorrentes no âmbito do Direito Administrativo.
+                As regras específicas variam conforme o estatuto e o plano de carreira de cada categoria e devem sempre ser conferidas
+                diretamente na legislação e nos atos normativos aplicáveis.
               </p>
               <p style={{ marginBottom: 0 }}>
-                Bancas organizadoras têm, de modo geral, histórico de anulações judiciais de questões e de disputas relacionadas à investigação
-                social e à etapa de heteroidentificação. Candidatos com acompanhamento jurídico desde a inscrição costumam ter vantagem
+                Órgãos públicos têm, de modo geral, histórico de anulações judiciais de atos disciplinares e de disputas relacionadas a
+                promoções e transferências. Servidores com acompanhamento jurídico desde o início do processo costumam ter vantagem
                 significativa nessas fases.
               </p>
             </div>
@@ -723,7 +718,7 @@ export default function ZapZapPage() {
                 <WaIcon /> {isVerifiedLawFirm ? "Iniciar consulta gratuita" : "Tirar dúvidas — WhatsApp"}
               </a>
               <p style={{ fontSize: 11.5, color: "#9ca3af", marginTop: 8 }}>
-                Atendimento por WhatsApp · Sem custo e sem compromisso · Sem vínculo com qualquer Polícia Militar ou órgão público
+                Atendimento por WhatsApp · Sem custo e sem compromisso · Sem vínculo com qualquer órgão público
               </p>
             </div>
           </section>
@@ -843,7 +838,7 @@ export default function ZapZapPage() {
                   </p>
                 )}
                 <p style={{ fontSize: 14, color: "#6b7280", marginBottom: 12 }}>
-                  {cfg.advogadoAtuacao || "Direito dos Concursos Públicos"}
+                  {cfg.advogadoAtuacao || "Direito Administrativo e Carreira Pública"}
                 </p>
                 {cfg.cidade && (
                   <p style={{ fontSize: 13, color: "#9ca3af" }}>
@@ -884,18 +879,18 @@ export default function ZapZapPage() {
             }}>
               <div>
                 <p style={{ fontSize: 11.5, fontWeight: 700, textTransform: "uppercase", letterSpacing: "1px", color: ACCENT, marginBottom: 10 }}>
-                  {isVerifiedLawFirm ? "Assessoria jurídica especializada" : "Informação especializada em concursos"}
+                  {isVerifiedLawFirm ? "Assessoria jurídica especializada" : "Informação especializada em carreira pública"}
                 </p>
                 <h2 style={{ fontSize: "clamp(18px, 2.5vw, 24px)", fontWeight: 700, color: "#fff", margin: "0 0 10px", lineHeight: 1.3 }}>
                   {isVerifiedLawFirm
-                    ? "Conte com a segurança de um escritório especializado em concursos públicos."
-                    : "Entenda seus direitos como candidato a concursos de Polícia Militar."
+                    ? "Conte com a segurança de um escritório especializado em Direito Administrativo."
+                    : "Entenda seus direitos como servidor público."
                   }
                 </h2>
                 <p style={{ fontSize: 14, color: "rgba(255,255,255,0.6)", margin: 0, lineHeight: 1.65, maxWidth: 520 }}>
                   {isVerifiedLawFirm
-                    ? "Identificamos o fundamento jurídico do seu caso, elaboramos a estratégia e atuamos até a nomeação e posse — com consulta inicial gratuita e sem compromisso."
-                    : "Tire suas dúvidas sobre isenção de taxa, recursos de gabarito, cotas e nomeação — fale com um especialista pelo WhatsApp, sem compromisso."
+                    ? "Identificamos o fundamento jurídico do seu caso, elaboramos a estratégia e atuamos até a solução definitiva — com consulta inicial gratuita e sem compromisso."
+                    : "Tire suas dúvidas sobre estágio probatório, processos administrativos, promoções e estabilidade — fale com um especialista pelo WhatsApp, sem compromisso."
                   }
                 </p>
               </div>
@@ -913,7 +908,7 @@ export default function ZapZapPage() {
                 )}
                 <span style={{ fontSize: 11, color: "rgba(255,255,255,0.3)", textAlign: "center" }}>
                   {isVerifiedLawFirm ? "Atendimento via WhatsApp · Consulta inicial gratuita" : "Atendimento via WhatsApp · Conteúdo informativo"}
-                  <br />Sem vínculo com qualquer Polícia Militar ou órgão público
+                  <br />Sem vínculo com qualquer órgão público
                 </span>
               </div>
             </div>
@@ -999,22 +994,21 @@ export default function ZapZapPage() {
                   ? <>Este site é de propriedade de advogado regularmente inscrito na OAB{cfg.oabNumero ? ` (${cfg.oabNumero})` : ""}.</>
                   : <><strong>{escritorio}</strong> é uma pessoa jurídica de direito privado.</>
                 }{" "}
-                Não temos qualquer vínculo, parceria, representação ou afiliação com nenhuma Polícia Militar estadual,
-                com Secretarias de Segurança Pública ou com qualquer banca organizadora ou órgão público. Não realizamos
-                inscrições, não recebemos pagamentos em nome de nenhuma corporação e não temos acesso a sistemas oficiais do certame.
+                Não temos qualquer vínculo, parceria, representação ou afiliação com órgãos públicos, entidades governamentais,
+                tribunais administrativos ou comissões de processo administrativo. Não representamos a Administração Pública
+                e não temos acesso a sistemas ou processos internos de nenhum órgão.
               </li>
               <li style={{ fontSize: 11.5, color: "#6b7280", lineHeight: 1.7 }}>
                 <strong style={{ color: "#374151" }}>Conteúdo informativo, sem garantia de resultado.</strong>{" "}
                 As informações aqui veiculadas têm caráter exclusivamente
                 {isVerifiedLawFirm ? " informativo e não constituem aconselhamento jurídico individual — cada caso concreto deve ser analisado por profissional habilitado" : " orientativo e não constituem aconselhamento jurídico individual"}.
-                Não garantimos aprovação, nomeação, deferimento de recurso administrativo ou judicial, ou qualquer outro
-                resultado específico no concurso. Para orientação sobre um caso concreto, consulte um advogado habilitado.
+                Não garantimos deferimento de recurso administrativo ou judicial, reversão de punição, promoção ou qualquer outro
+                resultado específico. Para orientação sobre um caso concreto, consulte um advogado habilitado.
               </li>
               <li style={{ fontSize: 11.5, color: "#6b7280", lineHeight: 1.7 }}>
                 <strong style={{ color: "#374151" }}>Sem cobrança para conversar.</strong>{" "}
-                O primeiro contato pelo WhatsApp é gratuito e sem compromisso. Não cobramos taxa de inscrição, taxa de
-                isenção ou qualquer valor para você tirar dúvidas sobre o edital — desconfie de qualquer canal que exija
-                pagamento para isso.
+                O primeiro contato pelo WhatsApp é gratuito e sem compromisso. Não cobramos qualquer valor para você tirar
+                dúvidas sobre sua situação funcional — desconfie de qualquer canal que exija pagamento para isso.
               </li>
               <li style={{ fontSize: 11.5, color: "#6b7280", lineHeight: 1.7 }}>
                 <strong style={{ color: "#374151" }}>Identificação da empresa.</strong>{" "}

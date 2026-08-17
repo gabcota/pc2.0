@@ -44,11 +44,14 @@ type RawConfig = Omit<SiteConfig, 'siteName'>;
 
 // NOTE: This project serves a single production domain today — concursopm.click
 // (Siqueira e Magalhaes Sociedade de Advogados — informação jurídica/advocacia
-// para concursos de Polícia Militar, powered by ZapZapPage.tsx).
-const CONCURSO_PM: RawConfig = {
+// sobre direitos e estabilidade na carreira pública, powered by ZapZapPage.tsx).
+// Content is intentionally framed around the servant's post-approval career
+// (probation, disciplinary proceedings, promotions) rather than exam/edital
+// language, to avoid repetitive "concurso"/"taxa" wording across the page.
+const VIDA_FUNCIONAL: RawConfig = {
   hostname: 'concursopm.click',
-  brand: 'Concurso PM',
-  siteSubtitle: 'Informação Jurídica para Candidatos a Concursos de Polícia Militar',
+  brand: 'Direito de Carreira',
+  siteSubtitle: 'Orientação Jurídica sobre Direitos e Estabilidade na Carreira Pública',
   razaoSocial: 'Siqueira e Magalhaes Sociedade de Advogados',
   cnpj: '63851818000138',
   cnpjFormatted: '63.851.818/0001-38',
@@ -59,7 +62,7 @@ const CONCURSO_PM: RawConfig = {
   cep: '22770-104',
   enderecoCompleto: 'Rua Retiro dos Artistas, 01931, Apt 104 Blc 3 · Pechincha · Rio de Janeiro/RJ · CEP 22770-104',
   canonicalUrl: 'https://www.concursopm.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre concursos públicos de Polícia Militar e não constituem aconselhamento jurídico individual. Este site é independente e não possui vínculo com qualquer corporação, banca organizadora ou órgão público.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre direitos de servidores públicos e não constituem aconselhamento jurídico individual. Este site é independente e não possui vínculo com qualquer órgão, entidade ou instituição pública.',
   email: 'contabil@siqueiramagalhaesadvogados.com.br',
   telefone: '(21) 2435-8134',
   cnae: '69.11-7-01 - Serviços advocatícios',
@@ -67,10 +70,10 @@ const CONCURSO_PM: RawConfig = {
   capitalSocial: 'R$ 10.000,00',
   horarioAtendimento: 'Segunda a Sexta, 08h às 17h',
   advogadoNome: 'Siqueira e Magalhaes Sociedade de Advogados',
-  advogadoAtuacao: 'Direito Administrativo e Concursos Públicos',
-  breadcrumbLabel: 'Concurso de Polícia Militar',
-  h1Override: 'Informação jurídica para o candidato do concurso de Polícia Militar',
-  leadOverride: 'Reunimos orientação jurídica para o candidato do concurso de Polícia Militar em cada etapa: isenção de taxa, recursos de gabarito, cotas e investigação social. Consulte um advogado habilitado para orientação específica ao seu caso.',
+  advogadoAtuacao: 'Direito Administrativo e Carreira do Servidor Público',
+  breadcrumbLabel: 'Direitos do Servidor Público',
+  h1Override: 'Orientação jurídica sobre direitos e estabilidade na carreira pública',
+  leadOverride: 'Reunimos orientação jurídica sobre os principais momentos da vida funcional do servidor público — estágio probatório, processos administrativos, promoções e estabilidade. Consulte um advogado habilitado para orientação específica ao seu caso.',
   ctaHeroText: 'Falar com um advogado',
   // dataAbertura: intentionally left unset — not provided in the CNPJ data supplied
   // for this domain; do not fabricate.
@@ -83,8 +86,8 @@ const CONCURSO_PM: RawConfig = {
 };
 
 const CONFIGS: Record<string, RawConfig> = {
-  'concursopm.click': CONCURSO_PM,
-  'www.concursopm.click': CONCURSO_PM,
+  'concursopm.click': VIDA_FUNCIONAL,
+  'www.concursopm.click': VIDA_FUNCIONAL,
 };
 
 function resolveHostname(): string {
@@ -92,7 +95,7 @@ function resolveHostname(): string {
   return window.location.hostname.replace(/^www\./, '');
 }
 
-const DEFAULT_CONFIG: RawConfig = CONCURSO_PM;
+const DEFAULT_CONFIG: RawConfig = VIDA_FUNCIONAL;
 
 export function getSiteConfig(): SiteConfig {
   const host = resolveHostname();

@@ -58,13 +58,13 @@ export function useZapZapChrome() {
 
   const CTA_HERO = waLink(
     isVerifiedLawFirm
-      ? "Olá, preciso de assessoria jurídica para um concurso de Polícia Militar."
-      : "Olá, tenho dúvidas sobre meus direitos em um concurso de Polícia Militar."
+      ? "Olá, preciso de assessoria jurídica sobre minha situação funcional como servidor público."
+      : "Olá, tenho dúvidas sobre meus direitos como servidor público."
   );
   const CTA_FOOTER = waLink(
     isVerifiedLawFirm
-      ? "Olá, quero falar com um advogado sobre um concurso de Polícia Militar."
-      : "Olá, tenho dúvidas sobre meus direitos em um concurso de Polícia Militar."
+      ? "Olá, quero falar com um advogado sobre minha situação funcional."
+      : "Olá, tenho dúvidas sobre meus direitos como servidor público."
   );
 
   return { cfg, phoneDisplay, escritorio, isVerifiedLawFirm, CTA_HERO, CTA_FOOTER };
@@ -114,8 +114,8 @@ export function ZapZapHeader() {
           <span aria-hidden="true">⚠️</span>{" "}
           <strong>Aviso:</strong>{" "}
           {isVerifiedLawFirm
-            ? <>site de propriedade de advogado regularmente inscrito na OAB, sem vínculo com nenhuma Polícia Militar, Secretaria de Segurança Pública ou banca organizadora. Nenhuma informação aqui constitui aconselhamento jurídico individual nem garante resultado. Consulte um profissional habilitado.</>
-            : <>canal independente de informação, sem vínculo com nenhuma Polícia Militar, Secretaria de Segurança Pública, banca organizadora ou qualquer órgão público. Não realizamos inscrições, não garantimos aprovação e não cobramos taxas para conversar. Para orientação específica ao seu caso, consulte um profissional habilitado.</>
+            ? <>site de propriedade de advogado regularmente inscrito na OAB, sem vínculo com órgãos públicos, entidades governamentais ou comissões de processo administrativo. Nenhuma informação aqui constitui aconselhamento jurídico individual nem garante resultado. Consulte um profissional habilitado.</>
+            : <>canal independente de informação, sem vínculo com órgãos públicos, entidades governamentais ou comissões de processo administrativo. Não representamos a Administração Pública e não cobramos qualquer valor para conversar. Para orientação específica ao seu caso, consulte um profissional habilitado.</>
           }
         </p>
       </div>
@@ -146,7 +146,7 @@ export function ZapZapHeader() {
             <div>
               <div style={{ fontWeight: 700, fontSize: 15, color: "#fff", lineHeight: 1.15 }}>{escritorio}</div>
               <div style={{ fontSize: 10, color: "rgba(255,255,255,0.5)", letterSpacing: "0.08em", fontWeight: 500, textTransform: "uppercase" }}>
-                {isVerifiedLawFirm ? "Advocacia · Concursos Públicos" : "Concursos Públicos · Polícia Militar"}
+                {isVerifiedLawFirm ? "Advocacia · Direito Administrativo" : "Direito Administrativo · Carreira Pública"}
               </div>
             </div>
           </a>
@@ -183,8 +183,8 @@ export function ZapZapFooter() {
             <div style={{ fontWeight: 700, fontSize: 15, color: "#111827", marginBottom: 6 }}>{escritorio}</div>
             <p style={{ fontSize: 13, color: "#6b7280", lineHeight: 1.65, marginBottom: 10 }}>
               {isVerifiedLawFirm
-                ? "Advocacia especializada em concursos públicos. Defesa do candidato da inscrição à nomeação."
-                : "Informação jurídica especializada em concursos públicos para candidatos a concursos de Polícia Militar."
+                ? "Advocacia especializada em Direito Administrativo. Defesa do servidor público em todas as fases da carreira."
+                : "Informação jurídica especializada sobre direitos e estabilidade na carreira pública."
               }
             </p>
             {cfg.cnpjFormatted && (
@@ -267,8 +267,8 @@ export function ZapZapFooter() {
           <p style={{ fontSize: 11, color: "#9ca3af", margin: 0, textAlign: "center", lineHeight: 1.7 }}>
             <strong style={{ color: "#6b7280" }}>{escritorio}</strong>
             {isVerifiedLawFirm
-              ? " — Advocacia especializada em concursos públicos. Nenhuma informação neste site constitui aconselhamento jurídico individual. Consulte um profissional habilitado."
-              : " — Informações orientativas sobre concursos públicos. Não constituem aconselhamento jurídico individual."
+              ? " — Advocacia especializada em Direito Administrativo. Nenhuma informação neste site constitui aconselhamento jurídico individual. Consulte um profissional habilitado."
+              : " — Informações orientativas sobre direitos do servidor público. Não constituem aconselhamento jurídico individual."
             }
             {cfg.cnpjFormatted && <> · CNPJ {cfg.cnpjFormatted}</>}
             {cfg.oabNumero && <> · {cfg.oabNumero}</>}

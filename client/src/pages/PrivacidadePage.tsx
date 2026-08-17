@@ -11,8 +11,8 @@ const SECTIONS: { id: string; title: string; content: Content }[] = [
       `${razaoSocial}${cnpjFormatted ? ` (CNPJ ${cnpjFormatted})` : ""}, doravante denominada "Controladora", é a responsável pelo tratamento dos dados pessoais coletados neste portal, na qualidade de controladora de dados nos termos da Lei nº 13.709/2018 (LGPD).
 
 O que fazemos: ${isVerifiedLawFirm
-  ? "somos uma sociedade de advocacia especializada em Direito Previdenciário e concursos públicos, prestando conteúdo informativo e assessoria jurídica a candidatos do concurso público do INSS 2026."
-  : "mantemos este portal com conteúdo informativo sobre o concurso público do INSS 2026, incluindo editais, prazos, cargos e orientações gerais aos candidatos."} Não temos qualquer vínculo com o INSS, o Cebraspe/Cespe ou qualquer outro órgão governamental, banca organizadora ou entidade pública.
+  ? "somos uma sociedade de advocacia especializada em Direito Administrativo e Carreira do Servidor Público, prestando conteúdo informativo e assessoria jurídica a servidores públicos."
+  : "mantemos este portal com conteúdo informativo sobre direitos e estabilidade na carreira pública, incluindo estágio probatório, processos administrativos e orientações gerais a servidores."} Não temos qualquer vínculo com órgãos públicos, entidades governamentais ou comissões de processo administrativo.
 
 Endereço: ${enderecoCompleto || "Conforme registro nos órgãos competentes."}
 E-mail de contato: ${email || "Disponível neste portal."}

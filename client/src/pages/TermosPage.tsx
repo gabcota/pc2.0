@@ -11,8 +11,8 @@ const SECTIONS: { id: string; title: string; content: Content }[] = [
       `Estes Termos de Uso regem o acesso e a utilização deste portal, mantido por ${razaoSocial}${cnpjFormatted ? ` (CNPJ ${cnpjFormatted})` : ""}.
 
 ${isVerifiedLawFirm
-  ? "Somos uma sociedade de advocacia especializada em Direito Previdenciário e concursos públicos, devidamente inscrita na OAB. Este portal presta conteúdo informativo sobre o concurso público do INSS 2026 e viabiliza o contato de candidatos interessados em assessoria jurídica."
-  : "Este portal presta conteúdo informativo sobre o concurso público do INSS 2026, incluindo editais, prazos, cargos e orientações gerais aos candidatos. Não somos um órgão governamental, banca organizadora ou entidade pública."}
+  ? "Somos uma sociedade de advocacia especializada em Direito Administrativo e Carreira do Servidor Público, devidamente inscrita na OAB. Este portal presta conteúdo informativo sobre direitos e estabilidade na carreira pública e viabiliza o contato de servidores interessados em assessoria jurídica."
+  : "Este portal presta conteúdo informativo sobre direitos e estabilidade na carreira pública, incluindo estágio probatório, processos administrativos e orientações gerais a servidores. Não somos um órgão governamental ou entidade pública."}
 
 Ao acessar este portal ou iniciar contato via WhatsApp, o Usuário declara ter lido, compreendido e aceito integralmente estes Termos de Uso. Caso não concorde, o Usuário deve abster-se de utilizar os serviços.
 
@@ -25,22 +25,22 @@ Reservamo-nos o direito de alterar estes Termos a qualquer momento, comunicando 
 
 "Portal": este website e seus recursos digitais associados.
 "Usuário" ou "Candidato": pessoa física que acessa o portal ou utiliza os canais de contato disponibilizados.
-"Conteúdo": textos, materiais informativos e orientações sobre o concurso público do INSS 2026 disponibilizados neste portal.
+"Conteúdo": textos, materiais informativos e orientações sobre direitos e estabilidade na carreira pública disponibilizados neste portal.
 "Atendimento": comunicação via WhatsApp, e-mail ou telefone disponibilizados neste portal.`,
   },
   {
     id: "servicos",
     title: "3. Descrição dos Serviços",
     content: (_razaoSocial, _cnpj, _email, _endereco, _advogado, isVerifiedLawFirm) =>
-      `Este portal disponibiliza aos candidatos ao concurso público do INSS 2026:
+      `Este portal disponibiliza a servidores públicos:
 
-3.1. Conteúdo informativo — notícias, prazos, cargos, requisitos e demais dados públicos sobre o certame, com base em fontes oficiais.
+3.1. Conteúdo informativo — orientações gerais sobre estágio probatório, processos administrativos, promoções e estabilidade, com base em fontes oficiais.
 
-3.2. Canal de contato — formulário e WhatsApp para que o candidato esclareça dúvidas ou solicite atendimento.
+3.2. Canal de contato — formulário e WhatsApp para que o servidor esclareça dúvidas ou solicite atendimento.
 
 ${isVerifiedLawFirm
-  ? "3.3. Assessoria jurídica — mediante contratação específica, prestamos serviços advocatícios relacionados a direitos do candidato no certame, tais como questionamento de editais, recursos administrativos e defesa em processos correlatos, sempre nos termos do contrato de honorários firmado com o cliente.\n\nImportante: o conteúdo informativo deste portal não constitui, por si só, prestação de serviço advocatício nem substitui consulta jurídica individual."
-  : "3.3. Nenhum conteúdo deste portal constitui aconselhamento jurídico individual, garantia de aprovação ou informação privilegiada sobre o concurso. Para orientação específica ao seu caso, procure um advogado devidamente inscrito na OAB."}`,
+  ? "3.3. Assessoria jurídica — mediante contratação específica, prestamos serviços advocatícios relacionados a direitos do servidor público, tais como defesa em processos administrativos disciplinares, recursos administrativos e ações judiciais correlatas, sempre nos termos do contrato de honorários firmado com o cliente.\n\nImportante: o conteúdo informativo deste portal não constitui, por si só, prestação de serviço advocatício nem substitui consulta jurídica individual."
+  : "3.3. Nenhum conteúdo deste portal constitui aconselhamento jurídico individual, garantia de resultado ou informação privilegiada sobre processos administrativos. Para orientação específica ao seu caso, procure um advogado devidamente inscrito na OAB."}`,
   },
   {
     id: "responsabilidades",
@@ -52,8 +52,8 @@ ${isVerifiedLawFirm
 
 4.2. Responsabilidades do Usuário
 • Fornecer informações verdadeiras e completas ao entrar em contato.
-• Consultar sempre o edital oficial e os canais oficiais do concurso antes de tomar decisões definitivas.
-• Compreender que a aprovação em concurso público depende do esforço próprio, da concorrência e de fatores externos a este portal.`,
+• Consultar sempre as normas oficiais e os canais institucionais competentes antes de tomar decisões definitivas.
+• Compreender que o desfecho de qualquer processo administrativo ou pedido depende de fatores próprios do caso e de decisões de terceiros externos a este portal.`,
   },
   {
     id: "honorarios",
@@ -82,11 +82,11 @@ O uso indevido de conteúdo protegido sujeita o infrator às sanções civis e c
   {
     id: "limitacao",
     title: "7. Limitação de Responsabilidade",
-    content: `7.1. Este portal não garante aprovação em qualquer concurso público. A aprovação depende do esforço do candidato, da concorrência, da banca organizadora e de outros fatores externos ao escopo deste portal.
+    content: `7.1. Este portal não garante o deferimento de qualquer recurso, promoção, transferência ou outro pleito administrativo. O desfecho depende de fatores próprios do caso, da análise do órgão competente e de outros elementos externos ao escopo deste portal.
 
-7.2. Não temos acesso a informações privilegiadas sobre bancas, gabaritos, resultados ou editais antes de sua publicação oficial no Diário Oficial da União.
+7.2. Não temos acesso a informações privilegiadas sobre processos, decisões ou atos administrativos antes de sua publicação oficial.
 
-7.3. Não nos responsabilizamos por decisões administrativas de órgãos públicos, alterações em editais, cancelamentos ou adiamentos de concursos — fatores inteiramente externos ao nosso escopo de atuação.
+7.3. Não nos responsabilizamos por decisões administrativas de órgãos públicos, alterações em normas internas ou atrasos em processos — fatores inteiramente externos ao nosso escopo de atuação.
 
 7.4. Em nenhuma hipótese nossa responsabilidade excederá o valor efetivamente pago pelo Usuário por serviços eventualmente contratados.`,
   },
@@ -158,8 +158,8 @@ export default function TermosPage() {
 
           <div style={{ background: "rgba(26,46,74,0.05)", border: `1px solid rgba(26,46,74,0.15)`, borderRadius: 10, padding: "16px 20px", marginBottom: 36 }}>
             <p style={{ fontSize: 13.5, color: NAVY, lineHeight: 1.7, margin: 0 }}>
-              <strong>Em resumo:</strong> este portal traz conteúdo informativo sobre o concurso público do INSS 2026
-              {isVerifiedLawFirm ? " e viabiliza contato com assessoria jurídica especializada." : "."} Não garantimos aprovação em concursos — isso depende de você.
+              <strong>Em resumo:</strong> este portal traz conteúdo informativo sobre direitos e estabilidade na carreira pública
+              {isVerifiedLawFirm ? " e viabiliza contato com assessoria jurídica especializada." : "."} Não garantimos resultado em processos administrativos ou judiciais — cada caso depende de sua análise específica.
               Prezamos pela transparência total: eventuais honorários são apresentados antes de qualquer pagamento, não há cobranças ocultas e você tem direito de arrependimento de 7 dias conforme o CDC.
             </p>
           </div>

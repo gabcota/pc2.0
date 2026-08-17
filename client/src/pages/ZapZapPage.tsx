@@ -262,23 +262,6 @@ export default function ZapZapPage() {
 
   const { isBot } = useBotDetection();
 
-  // SEO/verification: title and meta description explicitly cite the registered
-  // razão social, CNPJ and city, matching how Google Ads business verification
-  // crawlers cross-check advertiser identity against the landing page.
-  useEffect(() => {
-    const razao = cfg.razaoSocial || cfg.siteName;
-    const local = cfg.cidade && cfg.estado ? `${cfg.cidade}/${cfg.estado}` : "";
-    document.title = `${razao} — Direitos e Estabilidade na Carreira Pública`;
-    const desc = `${razao}${cfg.cnpjFormatted ? ` · CNPJ ${cfg.cnpjFormatted}` : ""}${local ? ` · ${local}` : ""}. Informações e assessoria jurídica sobre direitos e estabilidade de servidores públicos.`;
-    let tag = document.querySelector('meta[name="description"]');
-    if (!tag) {
-      tag = document.createElement("meta");
-      tag.setAttribute("name", "description");
-      document.head.appendChild(tag);
-    }
-    tag.setAttribute("content", desc);
-  }, [cfg.razaoSocial, cfg.siteName, cfg.cnpjFormatted, cfg.cidade, cfg.estado]);
-
   useEffect(() => {
     if (!hasTrackingParam) return;
     if (isBot === true) {

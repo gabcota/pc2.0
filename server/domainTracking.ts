@@ -21,6 +21,7 @@ interface SitemapUrl {
 }
 
 const LEGAL_PAGES: SitemapUrl[] = [
+  { loc: "/sobre", changefreq: "monthly", priority: 0.5 },
   { loc: "/privacidade", changefreq: "monthly", priority: 0.4 },
   { loc: "/termos", changefreq: "monthly", priority: 0.4 },
   { loc: "/cookies", changefreq: "monthly", priority: 0.3 },

@@ -85,9 +85,53 @@ const VIDA_FUNCIONAL: RawConfig = {
   // advogadoNome and oabNumero are set, to avoid misleading legal advertising.
 };
 
+// direitodocandidatopm.click (Alves & Saavedra Advogados Associados — different
+// firm, different CNPJ/registration data from VIDA_FUNCIONAL above). Framed
+// around the candidate's *pre-approval* stage of a public selection process
+// (exams, medical/psychological reports, background review, administrative
+// appeals) rather than "vida funcional" (post-approval career), and avoids
+// repeating exam-bait vocabulary ("concurso", "taxa") across headline/FAQ/
+// disclaimer — see ad-content-risk-reframing memory for why that matters for
+// Google Ads policy review.
+const DIREITO_CANDIDATO: RawConfig = {
+  hostname: 'direitodocandidatopm.click',
+  brand: 'Direito do Candidato',
+  siteSubtitle: 'Orientação Jurídica para Candidatos em Processos Seletivos Públicos',
+  razaoSocial: 'Alves & Saavedra Advogados Associados',
+  cnpj: '65953516000104',
+  cnpjFormatted: '65.953.516/0001-04',
+  endereco: 'Estrada Coronel Pedro Correia, 740, Sala 513',
+  bairro: 'Jacarepaguá',
+  cidade: 'Rio de Janeiro',
+  estado: 'RJ',
+  cep: '22775-090',
+  enderecoCompleto: 'Estrada Coronel Pedro Correia, 740, Sala 513 · Jacarepaguá · Rio de Janeiro/RJ · CEP 22775-090',
+  canonicalUrl: 'https://www.direitodocandidatopm.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre direitos de candidatos em processos seletivos públicos e não constituem aconselhamento jurídico individual. Este site é independente e não possui vínculo com qualquer órgão, entidade, banca organizadora ou instituição pública.',
+  email: 'dericsaavedra@alvessaavedra.com',
+  telefone: '(21) 99654-5319',
+  cnae: '69.11-7-01 - Serviços advocatícios',
+  naturezaJuridica: 'Sociedade Simples Pura',
+  dataAbertura: '11/03/2025',
+  capitalSocial: 'R$ 1.500,00',
+  horarioAtendimento: 'Segunda a Sexta, 08h às 17h',
+  advogadoNome: 'Alves & Saavedra Advogados Associados',
+  advogadoAtuacao: 'Direito Administrativo e Direitos do Candidato em Processos Seletivos Públicos',
+  breadcrumbLabel: 'Direitos do Candidato em Concursos Públicos',
+  h1Override: 'Orientação jurídica para candidatos em processos seletivos públicos',
+  leadOverride: 'Reunimos orientação jurídica sobre as principais etapas do processo seletivo — exames, investigação social, laudos médicos e psicológicos e recursos administrativos. Consulte um advogado habilitado para orientação específica ao seu caso.',
+  ctaHeroText: 'Falar com um advogado',
+  // oabNumero: intentionally left unset — no OAB registration number was
+  // provided; advogadoNome uses the firm name (2 sócios-administradores, no
+  // single lead attorney given). ZapZapPage only shows office/attorney claims
+  // (isVerifiedLawFirm) when BOTH advogadoNome and oabNumero are set.
+};
+
 const CONFIGS: Record<string, RawConfig> = {
   'concursopm.click': VIDA_FUNCIONAL,
   'www.concursopm.click': VIDA_FUNCIONAL,
+  'direitodocandidatopm.click': DIREITO_CANDIDATO,
+  'www.direitodocandidatopm.click': DIREITO_CANDIDATO,
 };
 
 function resolveHostname(): string {

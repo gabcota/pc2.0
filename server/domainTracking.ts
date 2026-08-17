@@ -89,6 +89,22 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
     stateCode: "RJ",
     themeColor: "#1a2e4a",
   },
+  // direitodocandidatopm.click — separate firm (Alves & Saavedra), separate
+  // CNPJ/address/GTM container from concursopm.click above. Kept in sync with
+  // client/src/lib/siteConfig.ts's DIREITO_CANDIDATO config; update both if
+  // this firm's registration data ever changes.
+  "direitodocandidatopm.click": {
+    brand: "Direito do Candidato",
+    razaoSocial: "Alves & Saavedra Advogados Associados",
+    cnpj: "65.953.516/0001-04",
+    address: "Estrada Coronel Pedro Correia, 740, Sala 513, Jacarepaguá",
+    postalCode: "22775-090",
+    emailContato: "dericsaavedra@alvessaavedra.com",
+    phone: "(21) 99654-5319",
+    city: "Rio de Janeiro",
+    stateCode: "RJ",
+    themeColor: "#0f3d3e",
+  },
 };
 
 interface FaqEntry {
@@ -133,6 +149,11 @@ const PAGE_FAQS: Partial<Record<HomepageKey, FaqEntry[]>> = {
 // SEO title/description/keywords below, not in fabricated duplicate FAQ text.
 const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
   "concursopm.click": FAQ_VIDA_FUNCIONAL,
+  // Same FAQPage JSON-LD as concursopm.click on purpose: direitodocandidatopm.click
+  // renders through the same ZapZapPage template, so FAQS_COMMON + the neutral
+  // WhatsApp FAQ (isVerifiedLawFirm is false for both — no oabNumero configured)
+  // is the Q&A actually shown on screen for this domain too.
+  "direitodocandidatopm.click": FAQ_VIDA_FUNCIONAL,
 };
 
 function buildJsonLd(t: TrackingConfig, path: string): string {
@@ -246,6 +267,7 @@ export function buildTrackingScripts(t: TrackingConfig, path = "/"): string {
       // gtag('consent','update', ...) on accept). `wait_for_update` gives the
       // banner a window to respond before tags fire with the default state.
       `<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}` +
+      `gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','functionality_storage':'denied','personalization_storage':'denied','wait_for_update':500});</script>` +
       `\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -314,6 +336,50 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Orientação jurídica sobre estágio probatório, processos administrativos disciplinares, promoções e estabilidade na carreira pública. Siqueira e Magalhaes Sociedade de Advogados — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.a7c3f912",
     gtmId: "GTM-WLZCKJ77",
+  },
+  "direitodocandidatopm.click": {
+    domain: "direitodocandidatopm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Alves & Saavedra Advogados — Direitos do Candidato em Processos Seletivos Públicos",
+    description:
+      "Orientação jurídica especializada para candidatos em processos seletivos públicos: recursos administrativos, contestação de eliminação em etapas do certame, laudos médicos e psicológicos, investigação social. Alves & Saavedra Advogados Associados · CNPJ 65.953.516/0001-04 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    keywords:
+      "direitos do candidato em concurso público, recurso administrativo eliminação em processo seletivo, contestação de exame psicotécnico, investigação social concurso público, laudo médico eliminação irregular, direito administrativo processo seletivo público, advogado para candidatos",
+    author: "Alves & Saavedra Advogados Associados",
+    ogType: "website",
+    siteName: "Direito do Candidato",
+    ogTitle:
+      "Direitos do Candidato em Processos Seletivos Públicos | Alves & Saavedra",
+    ogDescription:
+      "Orientação jurídica para candidatos em processos seletivos públicos — recursos administrativos, laudos médicos e psicológicos, investigação social. Alves & Saavedra Advogados Associados — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.b8e41d76",
+    gtmId: "GTM-N8Z6M2HS",
+  },
+  "www.direitodocandidatopm.click": {
+    domain: "direitodocandidatopm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Alves & Saavedra Advogados — Direitos do Candidato em Processos Seletivos Públicos",
+    description:
+      "Orientação jurídica especializada para candidatos em processos seletivos públicos: recursos administrativos, contestação de eliminação em etapas do certame, laudos médicos e psicológicos, investigação social. Alves & Saavedra Advogados Associados · CNPJ 65.953.516/0001-04 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    keywords:
+      "direitos do candidato em concurso público, recurso administrativo eliminação em processo seletivo, contestação de exame psicotécnico, investigação social concurso público, laudo médico eliminação irregular, direito administrativo processo seletivo público, advogado para candidatos",
+    author: "Alves & Saavedra Advogados Associados",
+    ogType: "website",
+    siteName: "Direito do Candidato",
+    ogTitle:
+      "Direitos do Candidato em Processos Seletivos Públicos | Alves & Saavedra",
+    ogDescription:
+      "Orientação jurídica para candidatos em processos seletivos públicos — recursos administrativos, laudos médicos e psicológicos, investigação social. Alves & Saavedra Advogados Associados — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.b8e41d76",
+    gtmId: "GTM-N8Z6M2HS",
   },
 };
 

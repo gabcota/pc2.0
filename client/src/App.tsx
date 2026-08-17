@@ -52,6 +52,7 @@ import AvisoIsencaoPage from "@/pages/AvisoIsencaoPage";
 import CookiesPoliticaPage from "@/pages/CookiesPoliticaPage";
 import PrivacidadePage from "@/pages/PrivacidadePage";
 import TermosPage from "@/pages/TermosPage";
+import SobrePage from "@/pages/SobrePage";
 import ZapZapPage from "@/pages/ZapZapPage";
 import { VARIATION } from "@/lib/variationConfig";
 import { isFunnelValidated } from "./lib/funnelGate";
@@ -225,6 +226,7 @@ function Router() {
         <Route path="/cookies" component={CookiesPoliticaPage} />
         <Route path="/privacidade" component={PrivacidadePage} />
         <Route path="/termos" component={TermosPage} />
+        <Route path="/sobre" component={SobrePage} />
         <Route component={HOMEPAGE_MAP[VARIATION.homepage] ?? ZapZapPage} />
 
       </Switch>

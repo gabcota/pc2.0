@@ -217,6 +217,7 @@ export function ZapZapFooter() {
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
               {[
+                { href: "/sobre", label: "Sobre" },
                 { href: "/#verificacao", label: "Verificação Comercial" },
                 { href: "/#duvidas", label: "Dúvidas Frequentes" },
                 { href: "/#contato", label: "Fale Conosco" },

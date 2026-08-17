@@ -5,7 +5,7 @@ import { useBotDetection } from "@/hooks/useBotDetection";
 import { markFunnelValidated } from "@/lib/funnelGate";
 import { preloadEditalPage } from "@/lib/pageAssets";
 import { SecurityLoader } from "@/components/SecurityLoader";
-import { NAVY, NAVY_DARK, ACCENT, waLink, ZapZapHeader, ZapZapFooter, ZapZapChromeStyles } from "@/components/zapzap/ZapZapChrome";
+import { NAVY, NAVY_DARK, ACCENT, waLink, ZapZapHeader, ZapZapFooter, ZapZapChromeStyles, grantGtagConsent } from "@/components/zapzap/ZapZapChrome";
 
 // Neutral fallback messages used when no verified legal identity is configured.
 // Override to legal-service language when isVerifiedLawFirm=true (computed inside component).
@@ -194,7 +194,6 @@ const ASSUNTOS = ["Dúvida sobre minha situação funcional", "Estágio probató
 
 export default function ZapZapPage() {
   const cfg = getSiteConfig();
-  const [showCookieBanner, setShowCookieBanner] = useState(false);
   const [, navigate] = useLocation();
   const [contactForm, setContactForm] = useState({ nome: "", email: "", telefone: "", assunto: ASSUNTOS[0], mensagem: "" });
   const [contactSent, setContactSent] = useState(false);
@@ -261,30 +260,7 @@ export default function ZapZapPage() {
     return isRealMobileDevice()
   }, []);
 
-  function grantGtagConsent() {
-    const w = window as Window & { dataLayer?: unknown[] };
-    w.dataLayer = w.dataLayer || [];
-    function gtag(..._args: unknown[]) {
-      // eslint-disable-next-line prefer-rest-params
-      w.dataLayer!.push(arguments);
-    }
-    gtag("consent", "update", {
-      ad_storage: "granted",
-      ad_user_data: "granted",
-      ad_personalization: "granted",
-      analytics_storage: "granted",
-      functionality_storage: "granted",
-      personalization_storage: "granted",
-    });
-  }
-
   const { isBot } = useBotDetection();
-
-  useEffect(() => {
-    const saved = localStorage.getItem("zz_cookie_consent");
-    if (!saved) setShowCookieBanner(true);
-    else if (saved === "granted") grantGtagConsent();
-  }, []);
 
   // SEO/verification: title and meta description explicitly cite the registered
   // razão social, CNPJ and city, matching how Google Ads business verification
@@ -326,16 +302,6 @@ export default function ZapZapPage() {
       })();
     }
   }, [hasTrackingParam, isBot]);
-
-  function acceptCookies() {
-    localStorage.setItem("zz_cookie_consent", "granted");
-    grantGtagConsent();
-    setShowCookieBanner(false);
-  }
-  function declineCookies() {
-    localStorage.setItem("zz_cookie_consent", "denied");
-    setShowCookieBanner(false);
-  }
 
   const phoneDisplay = (() => {
     const d = (cfg.telefone ?? "").replace(/\D/g, "");
@@ -379,34 +345,7 @@ export default function ZapZapPage() {
   return (
     <>
       {hasTrackingParam && !isBot && <SecurityLoader />}
-
-      {/* ── COOKIE BANNER ── */}
-      {showCookieBanner && (
-        <div style={{
-          position: "fixed", bottom: 0, left: 0, right: 0, zIndex: 9999,
-          background: "rgba(10,18,32,0.97)", borderTop: "1px solid rgba(255,255,255,0.07)",
-          padding: "14px 20px", backdropFilter: "blur(8px)",
-        }}>
-          <div style={{ maxWidth: 860, margin: "0 auto", display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-            <p style={{ margin: 0, fontSize: 13, color: "#cbd5e1", lineHeight: 1.55, flex: 1, minWidth: 240 }}>
-              <strong style={{ color: "#fff" }}>Cookies & privacidade.</strong>{" "}
-              Usamos cookies para melhorar sua navegação. Consulte nossa{" "}
-              <a href="/privacidade" style={{ color: "#93c5fd", textDecoration: "underline" }}>Política de Privacidade</a> e{" "}
-              <a href="/cookies" style={{ color: "#93c5fd", textDecoration: "underline" }}>Política de Cookies</a>.
-            </p>
-            <div style={{ display: "flex", gap: 8, flexShrink: 0 }}>
-              <button onClick={declineCookies} style={{
-                background: "transparent", color: "#94a3b8", border: "1px solid rgba(148,163,184,0.3)",
-                borderRadius: 6, padding: "8px 16px", fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: "inherit",
-              }}>Só essenciais</button>
-              <button onClick={acceptCookies} style={{
-                background: NAVY, color: "#fff", border: "none",
-                borderRadius: 6, padding: "8px 20px", fontSize: 13, fontWeight: 700, cursor: "pointer", fontFamily: "inherit",
-              }}>Aceitar</button>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Cookie/consent banner is rendered sitewide inside ZapZapHeader (see ZapZapChrome.tsx) */}
 
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');

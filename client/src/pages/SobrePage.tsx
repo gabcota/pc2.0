@@ -73,6 +73,9 @@ export default function SobrePage() {
             <p>
               {escritorio} atua no acompanhamento jurídico de servidores públicos em momentos decisivos da carreira, com foco em Direito Administrativo. Não temos qualquer vínculo com órgãos públicos, entidades governamentais ou comissões de processo administrativo — nossa atuação é independente e voltada exclusivamente à defesa dos direitos do servidor.
             </p>
+            <p style={{ marginTop: 14 }}>
+              Este site é mantido para divulgação de conteúdo jurídico informativo sobre direitos do servidor público e para viabilizar o primeiro contato com nossa equipe, feito diretamente pelo WhatsApp indicado neste portal — sem custo e sem compromisso.
+            </p>
           </div>
 
           <div className="sb-section">

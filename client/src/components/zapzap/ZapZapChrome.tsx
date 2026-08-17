@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { getSiteConfig } from "@/lib/siteConfig";
 
 // Shared header/footer used across ZapZapPage and its legal pages (/privacidade,
@@ -36,6 +37,89 @@ export function WaIcon({ size = 18 }: { size?: number }) {
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
       <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.845L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.034-1.388l-.36-.215-3.76.98 1.008-3.657-.235-.376A9.818 9.818 0 1112 21.818z" />
     </svg>
+  );
+}
+
+const COOKIE_CONSENT_KEY = "zz_cookie_consent";
+
+/**
+ * Pushes a Consent Mode v2 "update" to grant storage/ads consent. Complements
+ * the "default" (denied) signal set server-side in domainTracking.ts before
+ * gtm.js loads — this only ever moves consent from denied to granted, never
+ * the reverse, matching Google's Consent Mode v2 contract.
+ */
+export function grantGtagConsent(): void {
+  const w = window as Window & { dataLayer?: unknown[] };
+  w.dataLayer = w.dataLayer || [];
+  function gtag(..._args: unknown[]) {
+    // eslint-disable-next-line prefer-rest-params
+    w.dataLayer!.push(arguments);
+  }
+  gtag("consent", "update", {
+    ad_storage: "granted",
+    ad_user_data: "granted",
+    ad_personalization: "granted",
+    analytics_storage: "granted",
+    functionality_storage: "granted",
+    personalization_storage: "granted",
+  });
+}
+
+export function hasCookieConsentDecision(): boolean {
+  return !!localStorage.getItem(COOKIE_CONSENT_KEY);
+}
+
+/**
+ * Sitewide cookie/consent banner — rendered once via ZapZapHeader so every
+ * page sharing the chrome (home + /privacidade, /termos, /sobre, /cookies)
+ * shows the same consent choice, instead of only the homepage having one.
+ */
+export function CookieConsentBanner() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const saved = localStorage.getItem(COOKIE_CONSENT_KEY);
+    if (!saved) setVisible(true);
+    else if (saved === "granted") grantGtagConsent();
+  }, []);
+
+  function accept() {
+    localStorage.setItem(COOKIE_CONSENT_KEY, "granted");
+    grantGtagConsent();
+    setVisible(false);
+  }
+  function declineNonEssential() {
+    localStorage.setItem(COOKIE_CONSENT_KEY, "denied");
+    setVisible(false);
+  }
+
+  if (!visible) return null;
+
+  return (
+    <div style={{
+      position: "fixed", bottom: 0, left: 0, right: 0, zIndex: 9999,
+      background: "rgba(10,18,32,0.97)", borderTop: "1px solid rgba(255,255,255,0.07)",
+      padding: "14px 20px", backdropFilter: "blur(8px)", fontFamily: "Inter, system-ui, sans-serif",
+    }}>
+      <div style={{ maxWidth: 860, margin: "0 auto", display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
+        <p style={{ margin: 0, fontSize: 13, color: "#cbd5e1", lineHeight: 1.55, flex: 1, minWidth: 240 }}>
+          <strong style={{ color: "#fff" }}>Cookies & privacidade.</strong>{" "}
+          Usamos cookies para melhorar sua navegação e medir a eficácia de nossas campanhas. Consulte nossa{" "}
+          <a href="/privacidade" style={{ color: "#93c5fd", textDecoration: "underline" }}>Política de Privacidade</a> e{" "}
+          <a href="/cookies" style={{ color: "#93c5fd", textDecoration: "underline" }}>Política de Cookies</a>.
+        </p>
+        <div style={{ display: "flex", gap: 8, flexShrink: 0 }}>
+          <button onClick={declineNonEssential} style={{
+            background: "transparent", color: "#94a3b8", border: "1px solid rgba(148,163,184,0.3)",
+            borderRadius: 6, padding: "8px 16px", fontSize: 13, fontWeight: 600, cursor: "pointer", fontFamily: "inherit",
+          }}>Só essenciais</button>
+          <button onClick={accept} style={{
+            background: NAVY, color: "#fff", border: "none",
+            borderRadius: 6, padding: "8px 20px", fontSize: 13, fontWeight: 700, cursor: "pointer", fontFamily: "inherit",
+          }}>Aceitar</button>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -108,6 +192,8 @@ export function ZapZapHeader() {
 
   return (
     <>
+      <CookieConsentBanner />
+
       {/* ── DISCLAIMER BAR ── */}
       <div style={{ background: "#fffbeb", borderBottom: "1px solid #fde68a", padding: "7px 20px" }}>
         <p style={{ maxWidth: 1100, margin: "0 auto", fontSize: 11.5, color: "#78350f", lineHeight: 1.5, textAlign: "center", fontFamily: "Inter, system-ui, sans-serif" }}>

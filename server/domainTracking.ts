@@ -67,22 +67,22 @@ interface CompanyData {
 }
 
 // NOTE: This project serves a single production domain today —
-// editalprevidenciario.click (Helinton Antunes Sociedade Individual de
-// Advocacia — informação jurídica/advocacia para o Concurso Público INSS
-// 2026, powered by ZapZapPage.tsx + client/src/lib/siteConfig.ts).
+// concursopm.click (Siqueira e Magalhaes Sociedade de Advogados —
+// informação jurídica/advocacia para concursos de Polícia Militar,
+// powered by ZapZapPage.tsx + client/src/lib/siteConfig.ts).
 // COMPANY_DATA / DOMAIN_TRACKING stay keyed by hostname (Record<string, ...>)
 // so additional domains can be added here later without restructuring.
 export const COMPANY_DATA: Record<string, CompanyData> = {
-  "editalprevidenciario.click": {
-    brand: "Edital Previdenciário",
-    razaoSocial: "Helinton Antunes Sociedade Individual de Advocacia",
-    cnpj: "61.683.490/0001-62",
-    address: "Rua Fernando Silva, 190, Andar 3 Sala 302, Jardim Astro",
-    postalCode: "18017-158",
-    emailContato: "contato@editalprevidenciario.click",
-    phone: "(15) 3232-0000",
-    city: "Sorocaba",
-    stateCode: "SP",
+  "concursopm.click": {
+    brand: "Concurso PM",
+    razaoSocial: "Siqueira e Magalhaes Sociedade de Advogados",
+    cnpj: "63.851.818/0001-38",
+    address: "Rua Retiro dos Artistas, 01931, Apt 104 Blc 3, Pechincha",
+    postalCode: "22770-104",
+    emailContato: "contabil@siqueiramagalhaesadvogados.com.br",
+    phone: "(21) 2435-8134",
+    city: "Rio de Janeiro",
+    stateCode: "RJ",
     themeColor: "#1a2e4a",
   },
 };
@@ -95,55 +95,40 @@ interface FaqEntry {
 // Mirrors the FAQ actually rendered on ZapZapPage.tsx in neutral mode
 // (FAQS_COMMON + FAQ_WHATSAPP_NEUTRAL) — keep these two in sync if the
 // page copy changes, since this feeds the FAQPage JSON-LD seen by crawlers.
-const FAQ_EDITAL_PREVIDENCIARIO: FaqEntry[] = [
+const FAQ_CONCURSO_PM: FaqEntry[] = [
   {
     q: "Isenção de taxa negada — e agora?",
-    a: "A negativa de isenção pode ser contestada administrativamente junto à banca organizadora dentro do prazo previsto no edital. Se o indeferimento for ilegal (por exemplo, candidato com CadÚnico ativo que teve a inscrição negada sem fundamentação adequada), é possível buscar tutela de urgência na Justiça Federal para garantir a inscrição antes do encerramento do prazo.",
+    a: "A negativa de isenção pode ser contestada administrativamente junto à banca organizadora dentro do prazo previsto no edital. Se o indeferimento for ilegal (por exemplo, candidato com CadÚnico ativo ou doador de medula óssea que teve a inscrição negada sem fundamentação adequada), é possível buscar tutela de urgência na Justiça para garantir a inscrição antes do encerramento do prazo.",
   },
   {
     q: "Fui aprovado dentro das vagas e não fui nomeado — tenho direito?",
     a: "Sim. O Supremo Tribunal Federal consolidou o entendimento de que candidato aprovado dentro do número de vagas previsto no edital tem direito subjetivo à nomeação. A Administração pode deixar de nomear apenas em situações excepcionais, devidamente fundamentadas. O instrumento adequado é o mandado de segurança, com prazo decadencial de 120 dias a partir da ciência da preterição.",
   },
   {
-    q: "Como funciona o recurso de gabarito no Cebraspe?",
-    a: "O candidato pode interpor recurso administrativo contra o gabarito preliminar no prazo indicado no edital, geralmente de 2 dias úteis. Se o recurso for indeferido e houver fundamento técnico, é possível questionar a questão judicialmente. O Cebraspe (antigo Cespe/UnB) tem histórico de anulações judiciais — candidatos acompanhados por advogado costumam ter mais segurança nessa etapa.",
+    q: "Como funciona o recurso de gabarito na banca organizadora?",
+    a: "O candidato pode interpor recurso administrativo contra o gabarito preliminar no prazo indicado no edital, geralmente de 2 dias úteis. Se o recurso for indeferido e houver fundamento técnico, é possível questionar a questão judicialmente. Bancas organizadoras têm histórico de anulações judiciais — candidatos acompanhados por advogado costumam ter mais segurança nessa etapa.",
   },
   {
     q: "O que é heteroidentificação e como contestar uma reprovação?",
-    a: "A heteroidentificação é o procedimento de verificação presencial da autodeclaração racial do candidato que concorre às cotas. A banca forma uma comissão que avalia a fenotipia do candidato. Reprovações indevidas podem ser contestadas administrativamente e, em muitos casos, judicialmente — especialmente quando os critérios utilizados pela comissão não seguiram as diretrizes do Decreto Federal nº 9.427/2018.",
+    a: "A heteroidentificação é o procedimento de verificação presencial da autodeclaração racial do candidato que concorre às cotas. A banca forma uma comissão que avalia a fenotipia do candidato. Reprovações indevidas podem ser contestadas administrativamente e, em muitos casos, judicialmente — especialmente quando os critérios utilizados pela comissão não seguiram as diretrizes normativas aplicáveis.",
   },
   {
     q: "É possível tirar dúvidas por WhatsApp?",
-    a: "Sim. Você pode enviar sua dúvida sobre o concurso do INSS 2026 pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientação sobre um caso específico, procure um advogado habilitado.",
+    a: "Sim. Você pode enviar sua dúvida sobre concursos de Polícia Militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientação sobre um caso específico, procure um advogado habilitado.",
   },
 ];
 
 const PAGE_FAQS: Partial<Record<HomepageKey, FaqEntry[]>> = {
-  zapzap: FAQ_EDITAL_PREVIDENCIARIO,
+  zapzap: FAQ_CONCURSO_PM,
 };
 
-// trilhaprevidenciaria.click reuses the same underlying Q&A actually rendered
-// on ZapZapPage.tsx (FAQS_COMMON + FAQ_WHATSAPP_NEUTRAL) — kept identical to
-// FAQ_EDITAL_PREVIDENCIARIO on purpose so the FAQPage JSON-LD matches the
+// Kept identical to the Q&A actually rendered on ZapZapPage.tsx
+// (FAQS_COMMON + FAQ_WHATSAPP_NEUTRAL) so the FAQPage JSON-LD matches the
 // visible page content exactly. Domain differentiation lives in the hero
 // copy (h1Override/leadOverride/breadcrumbLabel in siteConfig.ts) and in the
 // SEO title/description/keywords below, not in fabricated duplicate FAQ text.
 const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
-  "editalprevidenciario.click": FAQ_EDITAL_PREVIDENCIARIO,
-  "trilhaprevidenciaria.click": FAQ_EDITAL_PREVIDENCIARIO,
-  "assesoriaprevidencia.click": FAQ_EDITAL_PREVIDENCIARIO,
-  "carreiraprevidenciaria.click": FAQ_EDITAL_PREVIDENCIARIO,
-  "cursoprevidenciario.click": FAQ_EDITAL_PREVIDENCIARIO,
-  "candidatoinformado.click": FAQ_EDITAL_PREVIDENCIARIO,
-  "direitosdocandidato.click": FAQ_EDITAL_PREVIDENCIARIO,
-  "meudireitonoconcurso.click": FAQ_EDITAL_PREVIDENCIARIO,
-  "guiadocandidato.click": FAQ_EDITAL_PREVIDENCIARIO,
-  "assessoriaconcursos.click": FAQ_EDITAL_PREVIDENCIARIO,
-  "juridicoconcursos.click": FAQ_EDITAL_PREVIDENCIARIO,
-  "consultoriaeditais.click": FAQ_EDITAL_PREVIDENCIARIO,
-  "certameinfo.click": FAQ_EDITAL_PREVIDENCIARIO,
-  "trilhadocandidato.click": FAQ_EDITAL_PREVIDENCIARIO,
-  "bussolaconcursos.click": FAQ_EDITAL_PREVIDENCIARIO,
+  "concursopm.click": FAQ_CONCURSO_PM,
 };
 
 function buildJsonLd(t: TrackingConfig, path: string): string {
@@ -276,665 +261,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 // keyed by hostname (bare domain + "www." variant) so new domains can be appended
 // without touching the surrounding functions.
 export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
-  "editalprevidenciario.click": {
-    domain: "editalprevidenciario.click",
+  "concursopm.click": {
+    domain: "concursopm.click",
     faviconPath: "/favicon.svg",
     ogImage: "/favicon.svg",
     clarityId: null,
     homepageKey: "zapzap",
     title:
-      "Helinton Antunes Advocacia — Concurso Público INSS 2026 | Informação Jurídica Especializada",
+      "Siqueira e Magalhaes Advogados — Concurso de Polícia Militar | Informação Jurídica ao Candidato",
     description:
-      "Informação jurídica especializada para candidatos ao Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Helinton Antunes Sociedade Individual de Advocacia · CNPJ 61.683.490/0001-62 · Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Informação jurídica especializada para candidatos a concursos de Polícia Militar — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Siqueira e Magalhaes Sociedade de Advogados · CNPJ 63.851.818/0001-38 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
     keywords:
-      "concurso INSS 2026 edital, candidato INSS 2026, aprovado e não nomeado INSS, isenção de taxa negada INSS, recurso gabarito Cebraspe INSS, heteroidentificação cotas raciais INSS, mandado de segurança nomeação candidato, direito subjetivo à nomeação concurso público, preterição na convocação INSS, eliminação investigação social concurso",
-    author: "Helinton Antunes Sociedade Individual de Advocacia",
+      "concurso polícia militar, candidato PM, aprovado e não nomeado PM, isenção de taxa negada concurso PM, recurso gabarito banca PM, heteroidentificação cotas raciais concurso PM, mandado de segurança nomeação candidato, direito subjetivo à nomeação concurso público, preterição na convocação PM, eliminação investigação social concurso PM",
+    author: "Siqueira e Magalhaes Sociedade de Advogados",
     ogType: "website",
-    siteName: "Edital Previdenciário",
+    siteName: "Concurso PM",
     ogTitle:
-      "Concurso Público INSS 2026 — Informação Jurídica para Candidatos | Edital Previdenciário",
+      "Concurso de Polícia Militar — Informação Jurídica para Candidatos | Concurso PM",
     ogDescription:
-      "Informação jurídica especializada sobre o Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Helinton Antunes Sociedade Individual de Advocacia — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "polyfill.f3a2c1d8",
-    gtmId: "GTM-ML5TBTDD",
+      "Informação jurídica especializada sobre concursos de Polícia Militar: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Siqueira e Magalhaes Sociedade de Advogados — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.a7c3f912",
+    gtmId: "GTM-WLZCKJ77",
   },
-  "www.editalprevidenciario.click": {
-    domain: "editalprevidenciario.click",
+  "www.concursopm.click": {
+    domain: "concursopm.click",
     faviconPath: "/favicon.svg",
     ogImage: "/favicon.svg",
     clarityId: null,
     homepageKey: "zapzap",
     title:
-      "Helinton Antunes Advocacia — Concurso Público INSS 2026 | Informação Jurídica Especializada",
+      "Siqueira e Magalhaes Advogados — Concurso de Polícia Militar | Informação Jurídica ao Candidato",
     description:
-      "Informação jurídica especializada para candidatos ao Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Helinton Antunes Sociedade Individual de Advocacia · CNPJ 61.683.490/0001-62 · Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Informação jurídica especializada para candidatos a concursos de Polícia Militar — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Siqueira e Magalhaes Sociedade de Advogados · CNPJ 63.851.818/0001-38 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
     keywords:
-      "concurso INSS 2026 edital, candidato INSS 2026, aprovado e não nomeado INSS, isenção de taxa negada INSS, recurso gabarito Cebraspe INSS, heteroidentificação cotas raciais INSS, mandado de segurança nomeação candidato, direito subjetivo à nomeação concurso público, preterição na convocação INSS, eliminação investigação social concurso",
-    author: "Helinton Antunes Sociedade Individual de Advocacia",
+      "concurso polícia militar, candidato PM, aprovado e não nomeado PM, isenção de taxa negada concurso PM, recurso gabarito banca PM, heteroidentificação cotas raciais concurso PM, mandado de segurança nomeação candidato, direito subjetivo à nomeação concurso público, preterição na convocação PM, eliminação investigação social concurso PM",
+    author: "Siqueira e Magalhaes Sociedade de Advogados",
     ogType: "website",
-    siteName: "Edital Previdenciário",
+    siteName: "Concurso PM",
     ogTitle:
-      "Concurso Público INSS 2026 — Informação Jurídica para Candidatos | Edital Previdenciário",
+      "Concurso de Polícia Militar — Informação Jurídica para Candidatos | Concurso PM",
     ogDescription:
-      "Informação jurídica especializada sobre o Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Helinton Antunes Sociedade Individual de Advocacia — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "polyfill.f3a2c1d8",
-    gtmId: "GTM-ML5TBTDD",
-  },
-  "trilhaprevidenciaria.click": {
-    domain: "trilhaprevidenciaria.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Ingrid Baptista Advocacia — Concurso INSS 2026 | Orientação Jurídica ao Candidato",
-    description:
-      "Orientação jurídica passo a passo para candidatos ao Concurso Público INSS 2026 — isenção de taxa, recurso de gabarito, cotas, investigação social e direito à nomeação. Ingrid Baptista Sociedade Individual de Advocacia · CNPJ 61.635.715/0001-05 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "orientação concurso INSS 2026, direitos do candidato INSS, isenção de taxa de inscrição INSS, recurso de gabarito Cebraspe, cotas raciais heteroidentificação INSS, direito à nomeação concurso público, mandado de segurança candidato preterido, investigação social concurso INSS, etapas do concurso INSS 2026",
-    author: "Ingrid Baptista Sociedade Individual de Advocacia",
-    ogType: "website",
-    siteName: "Trilha Previdenciária",
-    ogTitle:
-      "Concurso INSS 2026 — Orientação Jurídica ao Candidato | Trilha Previdenciária",
-    ogDescription:
-      "Orientação jurídica sobre as etapas do Concurso Público INSS 2026: isenção de taxa, recurso de gabarito, cotas e direito à nomeação. Ingrid Baptista Sociedade Individual de Advocacia — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "vendor.b9e4d7f2",
-    gtmId: "GTM-K83BFQPW",
-  },
-  "www.trilhaprevidenciaria.click": {
-    domain: "trilhaprevidenciaria.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Ingrid Baptista Advocacia — Concurso INSS 2026 | Orientação Jurídica ao Candidato",
-    description:
-      "Orientação jurídica passo a passo para candidatos ao Concurso Público INSS 2026 — isenção de taxa, recurso de gabarito, cotas, investigação social e direito à nomeação. Ingrid Baptista Sociedade Individual de Advocacia · CNPJ 61.635.715/0001-05 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "orientação concurso INSS 2026, direitos do candidato INSS, isenção de taxa de inscrição INSS, recurso de gabarito Cebraspe, cotas raciais heteroidentificação INSS, direito à nomeação concurso público, mandado de segurança candidato preterido, investigação social concurso INSS, etapas do concurso INSS 2026",
-    author: "Ingrid Baptista Sociedade Individual de Advocacia",
-    ogType: "website",
-    siteName: "Trilha Previdenciária",
-    ogTitle:
-      "Concurso INSS 2026 — Orientação Jurídica ao Candidato | Trilha Previdenciária",
-    ogDescription:
-      "Orientação jurídica sobre as etapas do Concurso Público INSS 2026: isenção de taxa, recurso de gabarito, cotas e direito à nomeação. Ingrid Baptista Sociedade Individual de Advocacia — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "vendor.b9e4d7f2",
-    gtmId: "GTM-K83BFQPW",
-  },
-  "bussolaconcursos.click": {
-    domain: "bussolaconcursos.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Tatiana Junqueira Ruiz Advogados — Concurso INSS 2026 | Orientação sobre Prazos e Próximos Passos",
-    description:
-      "Orientação jurídica sobre prazos e próximos passos do candidato ao Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Tatiana Junqueira Ruiz Advogados · CNPJ 62.089.408/0001-39 · São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "prazos concurso INSS 2026, próximos passos candidato INSS, orientação jurídica concurso público, cronograma concurso INSS 2026, isenção de taxa de inscrição INSS, recurso de gabarito Cebraspe INSS, heteroidentificação cotas raciais INSS, direito à nomeação concurso público, mandado de segurança candidato preterido, investigação social concurso INSS",
-    author: "Tatiana Junqueira Ruiz Advogados",
-    ogType: "website",
-    siteName: "Bússola Concursos",
-    ogTitle:
-      "Concurso INSS 2026 — Orientação sobre Prazos e Próximos Passos | Bússola Concursos",
-    ogDescription:
-      "Orientação jurídica sobre prazos e próximos passos no Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Tatiana Junqueira Ruiz Advogados — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "guide.7d3f9c21",
-    gtmId: "GTM-N4SG83W9",
-  },
-  "www.bussolaconcursos.click": {
-    domain: "bussolaconcursos.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Tatiana Junqueira Ruiz Advogados — Concurso INSS 2026 | Orientação sobre Prazos e Próximos Passos",
-    description:
-      "Orientação jurídica sobre prazos e próximos passos do candidato ao Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Tatiana Junqueira Ruiz Advogados · CNPJ 62.089.408/0001-39 · São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "prazos concurso INSS 2026, próximos passos candidato INSS, orientação jurídica concurso público, cronograma concurso INSS 2026, isenção de taxa de inscrição INSS, recurso de gabarito Cebraspe INSS, heteroidentificação cotas raciais INSS, direito à nomeação concurso público, mandado de segurança candidato preterido, investigação social concurso INSS",
-    author: "Tatiana Junqueira Ruiz Advogados",
-    ogType: "website",
-    siteName: "Bússola Concursos",
-    ogTitle:
-      "Concurso INSS 2026 — Orientação sobre Prazos e Próximos Passos | Bússola Concursos",
-    ogDescription:
-      "Orientação jurídica sobre prazos e próximos passos no Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Tatiana Junqueira Ruiz Advogados — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "guide.7d3f9c21",
-    gtmId: "GTM-N4SG83W9",
-  },
-  "assesoriaprevidencia.click": {
-    domain: "assesoriaprevidencia.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "W. Salha Advogados — Concurso INSS 2026 | Assessoria Jurídica ao Candidato",
-    description:
-      "Assessoria jurídica a candidatos do Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. W. Salha Sociedade de Advogados · CNPJ 61.635.763/0001-01 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "assessoria concurso INSS 2026, advogado concurso INSS, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "W. Salha Sociedade de Advogados",
-    ogType: "website",
-    siteName: "Assessoria Previdenciária",
-    ogTitle:
-      "Concurso INSS 2026 — Assessoria Jurídica ao Candidato | Assessoria Previdenciária",
-    ogDescription:
-      "Assessoria jurídica completa a candidatos do Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. W. Salha Sociedade de Advogados — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "app.2c8a5e1f",
-    gtmId: "GTM-MFNPGSTG",
-  },
-  "www.assesoriaprevidencia.click": {
-    domain: "assesoriaprevidencia.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "W. Salha Advogados — Concurso INSS 2026 | Assessoria Jurídica ao Candidato",
-    description:
-      "Assessoria jurídica a candidatos do Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. W. Salha Sociedade de Advogados · CNPJ 61.635.763/0001-01 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "assessoria concurso INSS 2026, advogado concurso INSS, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "W. Salha Sociedade de Advogados",
-    ogType: "website",
-    siteName: "Assessoria Previdenciária",
-    ogTitle:
-      "Concurso INSS 2026 — Assessoria Jurídica ao Candidato | Assessoria Previdenciária",
-    ogDescription:
-      "Assessoria jurídica completa a candidatos do Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. W. Salha Sociedade de Advogados — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "app.2c8a5e1f",
-    gtmId: "GTM-MFNPGSTG",
-  },
-  "carreiraprevidenciaria.click": {
-    domain: "carreiraprevidenciaria.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Vinicius Zavarezzi Advocacia — Concurso INSS 2026 | Apoio Jurídico à Carreira do Candidato",
-    description:
-      "Apoio jurídico à carreira do candidato ao Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Vinicius Caruso Zavarezzi - Sociedade Individual de Advocacia · CNPJ 61.711.771/0001-81 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "carreira concurso INSS 2026, candidato INSS trajetória, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Vinicius Caruso Zavarezzi - Sociedade Individual de Advocacia",
-    ogType: "website",
-    siteName: "Carreira Previdenciária",
-    ogTitle:
-      "Concurso INSS 2026 — Apoio Jurídico à Carreira do Candidato | Carreira Previdenciária",
-    ogDescription:
-      "Apoio jurídico ao candidato do Concurso Público INSS 2026 em cada etapa da carreira: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Vinicius Caruso Zavarezzi - Sociedade Individual de Advocacia — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "bundle.7d3b6f4a",
-    gtmId: "GTM-N2BWHFHB",
-  },
-  "www.carreiraprevidenciaria.click": {
-    domain: "carreiraprevidenciaria.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Vinicius Zavarezzi Advocacia — Concurso INSS 2026 | Apoio Jurídico à Carreira do Candidato",
-    description:
-      "Apoio jurídico à carreira do candidato ao Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Vinicius Caruso Zavarezzi - Sociedade Individual de Advocacia · CNPJ 61.711.771/0001-81 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "carreira concurso INSS 2026, candidato INSS trajetória, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Vinicius Caruso Zavarezzi - Sociedade Individual de Advocacia",
-    ogType: "website",
-    siteName: "Carreira Previdenciária",
-    ogTitle:
-      "Concurso INSS 2026 — Apoio Jurídico à Carreira do Candidato | Carreira Previdenciária",
-    ogDescription:
-      "Apoio jurídico ao candidato do Concurso Público INSS 2026 em cada etapa da carreira: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Vinicius Caruso Zavarezzi - Sociedade Individual de Advocacia — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "bundle.7d3b6f4a",
-    gtmId: "GTM-N2BWHFHB",
-  },
-  "cursoprevidenciario.click": {
-    domain: "cursoprevidenciario.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Marcelo Zanchetta Advocacia — Concurso INSS 2026 | Preparação Jurídica do Candidato",
-    description:
-      "Preparação jurídica do candidato ao Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Marcelo Zanchetta Sociedade Individual de Advocacia · CNPJ 62.089.359/0001-34 · São Paulo/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "preparação concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Marcelo Zanchetta Sociedade Individual de Advocacia",
-    ogType: "website",
-    siteName: "Curso Previdenciário",
-    ogTitle:
-      "Concurso INSS 2026 — Preparação Jurídica do Candidato | Curso Previdenciário",
-    ogDescription:
-      "Preparação jurídica do candidato ao Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Marcelo Zanchetta Sociedade Individual de Advocacia — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "main.e1c9a4b2",
-    gtmId: "GTM-PQR5K2MN",
-  },
-  "www.cursoprevidenciario.click": {
-    domain: "cursoprevidenciario.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Marcelo Zanchetta Advocacia — Concurso INSS 2026 | Preparação Jurídica do Candidato",
-    description:
-      "Preparação jurídica do candidato ao Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Marcelo Zanchetta Sociedade Individual de Advocacia · CNPJ 62.089.359/0001-34 · São Paulo/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "preparação concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Marcelo Zanchetta Sociedade Individual de Advocacia",
-    ogType: "website",
-    siteName: "Curso Previdenciário",
-    ogTitle:
-      "Concurso INSS 2026 — Preparação Jurídica do Candidato | Curso Previdenciário",
-    ogDescription:
-      "Preparação jurídica do candidato ao Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Marcelo Zanchetta Sociedade Individual de Advocacia — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "main.e1c9a4b2",
-    gtmId: "GTM-PQR5K2MN",
-  },
-  "candidatoinformado.click": {
-    domain: "candidatoinformado.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Fabio Biancalana Advocacia — Concurso INSS 2026 | Informações Jurídicas ao Candidato",
-    description:
-      "Informações jurídicas claras para o candidato ao Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Fabio Biancalana Sociedade Individual de Advocacia · CNPJ 61.818.101/0001-69 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "informações concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Fabio Biancalana Sociedade Individual de Advocacia",
-    ogType: "website",
-    siteName: "Candidato Informado",
-    ogTitle:
-      "Concurso INSS 2026 — Informações Jurídicas ao Candidato | Candidato Informado",
-    ogDescription:
-      "Informações jurídicas claras para o candidato ao Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Fabio Biancalana Sociedade Individual de Advocacia — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "index.4f7d2a8e",
-    gtmId: "GTM-WZVNS45B",
-  },
-  "www.candidatoinformado.click": {
-    domain: "candidatoinformado.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Fabio Biancalana Advocacia — Concurso INSS 2026 | Informações Jurídicas ao Candidato",
-    description:
-      "Informações jurídicas claras para o candidato ao Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Fabio Biancalana Sociedade Individual de Advocacia · CNPJ 61.818.101/0001-69 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "informações concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Fabio Biancalana Sociedade Individual de Advocacia",
-    ogType: "website",
-    siteName: "Candidato Informado",
-    ogTitle:
-      "Concurso INSS 2026 — Informações Jurídicas ao Candidato | Candidato Informado",
-    ogDescription:
-      "Informações jurídicas claras para o candidato ao Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Fabio Biancalana Sociedade Individual de Advocacia — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "index.4f7d2a8e",
-    gtmId: "GTM-WZVNS45B",
-  },
-  "direitosdocandidato.click": {
-    domain: "direitosdocandidato.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Rezani e Vitorino Advogados — Concurso INSS 2026 | Direitos do Candidato",
-    description:
-      "Conheça os seus direitos como candidato ao Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Rezani e Vitorino Advogados Associados · CNPJ 61.818.172/0001-61 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "direitos do candidato concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Rezani e Vitorino Advogados Associados",
-    ogType: "website",
-    siteName: "Direitos do Candidato",
-    ogTitle:
-      "Concurso INSS 2026 — Direitos do Candidato | Direitos do Candidato",
-    ogDescription:
-      "Conheça os seus direitos como candidato ao Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Rezani e Vitorino Advogados Associados — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "utils.9b3e1c6d",
-    gtmId: "GTM-5ZB7GSHH",
-  },
-  "www.direitosdocandidato.click": {
-    domain: "direitosdocandidato.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Rezani e Vitorino Advogados — Concurso INSS 2026 | Direitos do Candidato",
-    description:
-      "Conheça os seus direitos como candidato ao Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Rezani e Vitorino Advogados Associados · CNPJ 61.818.172/0001-61 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "direitos do candidato concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Rezani e Vitorino Advogados Associados",
-    ogType: "website",
-    siteName: "Direitos do Candidato",
-    ogTitle:
-      "Concurso INSS 2026 — Direitos do Candidato | Direitos do Candidato",
-    ogDescription:
-      "Conheça os seus direitos como candidato ao Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Rezani e Vitorino Advogados Associados — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "utils.9b3e1c6d",
-    gtmId: "GTM-5ZB7GSHH",
-  },
-  "meudireitonoconcurso.click": {
-    domain: "meudireitonoconcurso.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Kizzy Mendes Advocacia — Concurso INSS 2026 | Meu Direito no Concurso",
-    description:
-      "Entenda qual é o seu direito individual no Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Kizzy Mendes Sociedade Individual de Advocacia · CNPJ 61.922.942/0001-11 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "meu direito no concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Kizzy Mendes Sociedade Individual de Advocacia",
-    ogType: "website",
-    siteName: "Meu Direito no Concurso",
-    ogTitle:
-      "Concurso INSS 2026 — Meu Direito no Concurso | Meu Direito no Concurso",
-    ogDescription:
-      "Entenda qual é o seu direito individual no Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Kizzy Mendes Sociedade Individual de Advocacia — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "common.6a4f8d2b",
-    gtmId: "GTM-NDXH63DJ",
-  },
-  "www.meudireitonoconcurso.click": {
-    domain: "meudireitonoconcurso.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Kizzy Mendes Advocacia — Concurso INSS 2026 | Meu Direito no Concurso",
-    description:
-      "Entenda qual é o seu direito individual no Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Kizzy Mendes Sociedade Individual de Advocacia · CNPJ 61.922.942/0001-11 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "meu direito no concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Kizzy Mendes Sociedade Individual de Advocacia",
-    ogType: "website",
-    siteName: "Meu Direito no Concurso",
-    ogTitle:
-      "Concurso INSS 2026 — Meu Direito no Concurso | Meu Direito no Concurso",
-    ogDescription:
-      "Entenda qual é o seu direito individual no Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Kizzy Mendes Sociedade Individual de Advocacia — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "common.6a4f8d2b",
-    gtmId: "GTM-NDXH63DJ",
-  },
-  "guiadocandidato.click": {
-    domain: "guiadocandidato.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Alexandre Rodrigues Advocacia — Concurso INSS 2026 | Guia do Candidato",
-    description:
-      "Guia jurídico completo do candidato ao Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Alexandre Rodrigues Sociedade Individual de Advocacia · CNPJ 62.089.364/0001-47 · São Paulo/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "guia do candidato concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Alexandre Rodrigues Sociedade Individual de Advocacia",
-    ogType: "website",
-    siteName: "Guia do Candidato",
-    ogTitle:
-      "Concurso INSS 2026 — Guia do Candidato | Guia do Candidato",
-    ogDescription:
-      "Guia jurídico completo do candidato ao Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Alexandre Rodrigues Sociedade Individual de Advocacia — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "shared.d2e5c9b7",
-    gtmId: "GTM-PRJMWVLT",
-  },
-  "www.guiadocandidato.click": {
-    domain: "guiadocandidato.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Alexandre Rodrigues Advocacia — Concurso INSS 2026 | Guia do Candidato",
-    description:
-      "Guia jurídico completo do candidato ao Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Alexandre Rodrigues Sociedade Individual de Advocacia · CNPJ 62.089.364/0001-47 · São Paulo/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "guia do candidato concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Alexandre Rodrigues Sociedade Individual de Advocacia",
-    ogType: "website",
-    siteName: "Guia do Candidato",
-    ogTitle:
-      "Concurso INSS 2026 — Guia do Candidato | Guia do Candidato",
-    ogDescription:
-      "Guia jurídico completo do candidato ao Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Alexandre Rodrigues Sociedade Individual de Advocacia — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "shared.d2e5c9b7",
-    gtmId: "GTM-PRJMWVLT",
-  },
-  "assessoriaconcursos.click": {
-    domain: "assessoriaconcursos.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Campos e Neves Advogados — Concurso INSS 2026 | Assessoria Jurídica em Concursos",
-    description:
-      "Assessoria jurídica especializada em concursos públicos para o Concurso INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Campos e Neves Sociedade de Advogados · CNPJ 62.089.378/0001-60 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "assessoria jurídica concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Campos e Neves Sociedade de Advogados",
-    ogType: "website",
-    siteName: "Assessoria Concursos",
-    ogTitle:
-      "Concurso INSS 2026 — Assessoria Jurídica em Concursos | Assessoria Concursos",
-    ogDescription:
-      "Assessoria jurídica especializada em concursos públicos para o Concurso INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Campos e Neves Sociedade de Advogados — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "lib.8c1f4a3e",
-    gtmId: "GTM-M5H3Q8RJ",
-  },
-  "www.assessoriaconcursos.click": {
-    domain: "assessoriaconcursos.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Campos e Neves Advogados — Concurso INSS 2026 | Assessoria Jurídica em Concursos",
-    description:
-      "Assessoria jurídica especializada em concursos públicos para o Concurso INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Campos e Neves Sociedade de Advogados · CNPJ 62.089.378/0001-60 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "assessoria jurídica concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Campos e Neves Sociedade de Advogados",
-    ogType: "website",
-    siteName: "Assessoria Concursos",
-    ogTitle:
-      "Concurso INSS 2026 — Assessoria Jurídica em Concursos | Assessoria Concursos",
-    ogDescription:
-      "Assessoria jurídica especializada em concursos públicos para o Concurso INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Campos e Neves Sociedade de Advogados — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "lib.8c1f4a3e",
-    gtmId: "GTM-M5H3Q8RJ",
-  },
-  "juridicoconcursos.click": {
-    domain: "juridicoconcursos.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Marcon & Guilherme Advocacia — Concurso INSS 2026 | Suporte Jurídico em Concursos",
-    description:
-      "Suporte jurídico especializado em concursos públicos para o Concurso INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Marcon & Guilherme Advocacia · CNPJ 62.089.341/0001-32 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "suporte jurídico concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Marcon & Guilherme Advocacia",
-    ogType: "website",
-    siteName: "Jurídico Concursos",
-    ogTitle:
-      "Concurso INSS 2026 — Suporte Jurídico em Concursos | Jurídico Concursos",
-    ogDescription:
-      "Suporte jurídico especializado em concursos públicos para o Concurso INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Marcon & Guilherme Advocacia — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "core.3e7b9d1a",
-    gtmId: "GTM-WZFR9LB7",
-  },
-  "www.juridicoconcursos.click": {
-    domain: "juridicoconcursos.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Marcon & Guilherme Advocacia — Concurso INSS 2026 | Suporte Jurídico em Concursos",
-    description:
-      "Suporte jurídico especializado em concursos públicos para o Concurso INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Marcon & Guilherme Advocacia · CNPJ 62.089.341/0001-32 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "suporte jurídico concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Marcon & Guilherme Advocacia",
-    ogType: "website",
-    siteName: "Jurídico Concursos",
-    ogTitle:
-      "Concurso INSS 2026 — Suporte Jurídico em Concursos | Jurídico Concursos",
-    ogDescription:
-      "Suporte jurídico especializado em concursos públicos para o Concurso INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Marcon & Guilherme Advocacia — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "core.3e7b9d1a",
-    gtmId: "GTM-WZFR9LB7",
-  },
-  "consultoriaeditais.click": {
-    domain: "consultoriaeditais.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Paulo Roberto Amaral Advocacia — Concurso INSS 2026 | Consultoria sobre o Edital",
-    description:
-      "Consultoria jurídica sobre o edital do Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Paulo Roberto Garcia do Amaral Sociedade Individual de Advocacia · CNPJ 62.129.490/0001-88 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "consultoria edital concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Paulo Roberto Garcia do Amaral Sociedade Individual de Advocacia",
-    ogType: "website",
-    siteName: "Consultoria Editais",
-    ogTitle:
-      "Concurso INSS 2026 — Consultoria sobre o Edital | Consultoria Editais",
-    ogDescription:
-      "Consultoria jurídica sobre o edital do Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Paulo Roberto Garcia do Amaral Sociedade Individual de Advocacia — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "init.a5d2f8c4",
-    gtmId: "GTM-MGBPWZ8W",
-  },
-  "www.consultoriaeditais.click": {
-    domain: "consultoriaeditais.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Paulo Roberto Amaral Advocacia — Concurso INSS 2026 | Consultoria sobre o Edital",
-    description:
-      "Consultoria jurídica sobre o edital do Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Paulo Roberto Garcia do Amaral Sociedade Individual de Advocacia · CNPJ 62.129.490/0001-88 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "consultoria edital concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Paulo Roberto Garcia do Amaral Sociedade Individual de Advocacia",
-    ogType: "website",
-    siteName: "Consultoria Editais",
-    ogTitle:
-      "Concurso INSS 2026 — Consultoria sobre o Edital | Consultoria Editais",
-    ogDescription:
-      "Consultoria jurídica sobre o edital do Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Paulo Roberto Garcia do Amaral Sociedade Individual de Advocacia — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "init.a5d2f8c4",
-    gtmId: "GTM-MGBPWZ8W",
-  },
-  "certameinfo.click": {
-    domain: "certameinfo.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Queiroz Faria Advogados — Concurso INSS 2026 | Informações sobre o Certame",
-    description:
-      "Informações jurídicas sobre o certame do Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Queiroz Faria Sociedade de Advogados · CNPJ 66.085.545/0001-56 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "certame concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Queiroz Faria Sociedade de Advogados",
-    ogType: "website",
-    siteName: "Certame Info",
-    ogTitle:
-      "Concurso INSS 2026 — Informações sobre o Certame | Certame Info",
-    ogDescription:
-      "Informações jurídicas sobre o certame do Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Queiroz Faria Sociedade de Advogados — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "async.1b6c4e9f",
-    gtmId: "GTM-TR4TH28F",
-  },
-  "www.certameinfo.click": {
-    domain: "certameinfo.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Queiroz Faria Advogados — Concurso INSS 2026 | Informações sobre o Certame",
-    description:
-      "Informações jurídicas sobre o certame do Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Queiroz Faria Sociedade de Advogados · CNPJ 66.085.545/0001-56 · Sorocaba/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "certame concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Queiroz Faria Sociedade de Advogados",
-    ogType: "website",
-    siteName: "Certame Info",
-    ogTitle:
-      "Concurso INSS 2026 — Informações sobre o Certame | Certame Info",
-    ogDescription:
-      "Informações jurídicas sobre o certame do Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Queiroz Faria Sociedade de Advogados — Sorocaba/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "async.1b6c4e9f",
-    gtmId: "GTM-TR4TH28F",
-  },
-  "trilhadocandidato.click": {
-    domain: "trilhadocandidato.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Macruz, Brandao & Carvalho Advocacia — Concurso INSS 2026 | Trilha do Candidato",
-    description:
-      "A trilha jurídica passo a passo do candidato ao Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Macruz, Brandao & Carvalho Advocacia · CNPJ 62.089.356/0001-09 · São Paulo/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "trilha do candidato concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Macruz, Brandao & Carvalho Advocacia",
-    ogType: "website",
-    siteName: "Trilha do Candidato",
-    ogTitle:
-      "Concurso INSS 2026 — Trilha do Candidato | Trilha do Candidato",
-    ogDescription:
-      "A trilha jurídica passo a passo do candidato ao Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Macruz, Brandao & Carvalho Advocacia — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "worker.c4a8f3d7",
-    gtmId: "GTM-KBMLFB78",
-  },
-  "www.trilhadocandidato.click": {
-    domain: "trilhadocandidato.click",
-    faviconPath: "/favicon.svg",
-    ogImage: "/favicon.svg",
-    clarityId: null,
-    homepageKey: "zapzap",
-    title:
-      "Macruz, Brandao & Carvalho Advocacia — Concurso INSS 2026 | Trilha do Candidato",
-    description:
-      "A trilha jurídica passo a passo do candidato ao Concurso Público INSS 2026 — isenção de taxa, recursos de gabarito, cotas, investigação social e direito à nomeação. Macruz, Brandao & Carvalho Advocacia · CNPJ 62.089.356/0001-09 · São Paulo/SP. Conteúdo informativo — consulte um advogado habilitado para o seu caso.",
-    keywords:
-      "trilha do candidato concurso INSS 2026, candidato INSS conteúdo jurídico, isenção de taxa concurso público, recurso administrativo gabarito Cebraspe, cotas raciais heteroidentificação concurso, direito à nomeação candidato aprovado, mandado de segurança nomeação, investigação social concurso público INSS",
-    author: "Macruz, Brandao & Carvalho Advocacia",
-    ogType: "website",
-    siteName: "Trilha do Candidato",
-    ogTitle:
-      "Concurso INSS 2026 — Trilha do Candidato | Trilha do Candidato",
-    ogDescription:
-      "A trilha jurídica passo a passo do candidato ao Concurso Público INSS 2026: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Macruz, Brandao & Carvalho Advocacia — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    analyticsCore: "worker.c4a8f3d7",
-    gtmId: "GTM-KBMLFB78",
+      "Informação jurídica especializada sobre concursos de Polícia Militar: isenção de taxa, recursos de gabarito, cotas e direito à nomeação. Siqueira e Magalhaes Sociedade de Advogados — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.a7c3f912",
+    gtmId: "GTM-WLZCKJ77",
   },
 };
 

@@ -1,1 +1,2 @@
 - [IBGE PSS conversion](ibge-pss-conversion.md) — brand/color/cargo conversion rules used when turning Petrobras-themed recruitment pages into IBGE Censo Agropecuário 2027 pages.
+- [Ad content-risk reframing](ad-content-risk-reframing.md) — reframe funnel copy around an adjacent audience pain point (not find-replace) to reduce Google Ads policy-flag risk; touch chrome + legal pages + SEO metadata too.

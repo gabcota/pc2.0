@@ -105,6 +105,101 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
     stateCode: "RJ",
     themeColor: "#0f3d3e",
   },
+  // editalpm.click — third firm (L.f.a. Oliveira, sole practitioner), separate
+  // CNPJ/address/GTM container. Kept in sync with client/src/lib/siteConfig.ts's
+  // DIREITO_EDITAL config; update both if this firm's registration data changes.
+  "editalpm.click": {
+    brand: "Direito no Edital",
+    razaoSocial: "L.f.a. Oliveira Sociedade Individual de Advocacia",
+    cnpj: "67.877.690/0001-32",
+    address: "Avenida Rio Branco, 156, Sala 2321, Centro",
+    postalCode: "20040-003",
+    emailContato: "contato@lfaoliveira.adv.br",
+    phone: "(21) 97629-5329",
+    city: "Rio de Janeiro",
+    stateCode: "RJ",
+    themeColor: "#5c3d0e",
+  },
+  // carreiramilitarpm.click — fourth firm (Nichelle Alves, sole practitioner),
+  // separate CNPJ/address/GTM container. Kept in sync with
+  // client/src/lib/siteConfig.ts's CARREIRA_MILITAR config; update both if
+  // this firm's registration data changes.
+  "carreiramilitarpm.click": {
+    brand: "Direito Militar de Carreira",
+    razaoSocial: "Nichelle Alves Sociedade Individual de Advocacia",
+    cnpj: "63.814.373/0001-16",
+    address: "Avenida Rio Branco, 45, Sala 2102, Centro",
+    postalCode: "20090-908",
+    emailContato: "nichellealves@carraroeguimaraes.com.br",
+    phone: "(21) 98054-5461",
+    city: "Rio de Janeiro",
+    stateCode: "RJ",
+    themeColor: "#3b2f5e",
+  },
+  // vagaspm.click — fifth firm (Derick Guerra, sole practitioner), separate
+  // CNPJ/address/GTM container. Kept in sync with
+  // client/src/lib/siteConfig.ts's DIREITO_VAGAS config; update both if this
+  // firm's registration data changes.
+  "vagaspm.click": {
+    brand: "Direito à Vaga",
+    razaoSocial: "Derick Guerra Sociedade Individual de Advocacia",
+    cnpj: "63.835.741/0001-02",
+    address: "Avenida Treze de Maio, 47, Sala 2309, Centro",
+    postalCode: "20031-921",
+    emailContato: "advderickguerra@gmail.com",
+    phone: "(21) 96963-9874",
+    city: "Rio de Janeiro",
+    stateCode: "RJ",
+    themeColor: "#7a1f2b",
+  },
+  // direitosconcursopm.click — sixth firm (Carlos Oliveira, sole
+  // practitioner), separate CNPJ/address/GTM container. Kept in sync with
+  // client/src/lib/siteConfig.ts's DIREITOS_PROVA config; update both if this
+  // firm's registration data changes.
+  "direitosconcursopm.click": {
+    brand: "Direitos no Concurso",
+    razaoSocial: "Carlos Oliveira Sociedade Individual de Advocacia",
+    cnpj: "63.910.297/0001-42",
+    address: "Rua Da Quitanda, 19, Sala 206, Centro",
+    postalCode: "20011-030",
+    emailContato: "digicontassessoriacontabil@gmail.com",
+    phone: "(21) 99696-3935",
+    city: "Rio de Janeiro",
+    stateCode: "RJ",
+    themeColor: "#1f4d3a",
+  },
+  // assessoriapm.click — seventh firm (Lilian Gama, sole practitioner),
+  // separate CNPJ/address/GTM container. Kept in sync with
+  // client/src/lib/siteConfig.ts's DIREITO_COTAS config; update both if this
+  // firm's registration data changes.
+  "assessoriapm.click": {
+    brand: "Direito às Cotas e Isenções",
+    razaoSocial: "Lilian Gama Sociedade Individual de Advocacia",
+    cnpj: "63.924.938/0001-18",
+    address: "Avenida Treze de Maio, 47, Apt 1813, Centro",
+    postalCode: "20031-921",
+    emailContato: "contabilidadeprb@gmail.com",
+    phone: "(21) 99984-1663",
+    city: "Rio de Janeiro",
+    stateCode: "RJ",
+    themeColor: "#8a5a12",
+  },
+  // militarconcursos.click — eighth firm (Amanda Ciodaro, sole practitioner),
+  // separate CNPJ/address/GTM container. Kept in sync with
+  // client/src/lib/siteConfig.ts's MILITAR_FORMACAO config; update both if
+  // this firm's registration data changes.
+  "militarconcursos.click": {
+    brand: "Direito Militar em Formação",
+    razaoSocial: "Amanda C Ciodaro de Quadros Sociedade Individual de Advocacia",
+    cnpj: "63.952.036/0001-95",
+    address: "Avenida Das Américas, 4200, Bloco 1, Sala 305, Barra da Tijuca",
+    postalCode: "22640-907",
+    emailContato: "amandacq.adv@gmail.com",
+    phone: "(21) 99402-1596",
+    city: "Rio de Janeiro",
+    stateCode: "RJ",
+    themeColor: "#2b4d6b",
+  },
 };
 
 interface FaqEntry {
@@ -154,6 +249,12 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
   // WhatsApp FAQ (isVerifiedLawFirm is false for both — no oabNumero configured)
   // is the Q&A actually shown on screen for this domain too.
   "direitodocandidatopm.click": FAQ_VIDA_FUNCIONAL,
+  "editalpm.click": FAQ_VIDA_FUNCIONAL,
+  "carreiramilitarpm.click": FAQ_VIDA_FUNCIONAL,
+  "vagaspm.click": FAQ_VIDA_FUNCIONAL,
+  "direitosconcursopm.click": FAQ_VIDA_FUNCIONAL,
+  "assessoriapm.click": FAQ_VIDA_FUNCIONAL,
+  "militarconcursos.click": FAQ_VIDA_FUNCIONAL,
 };
 
 function buildJsonLd(t: TrackingConfig, path: string): string {
@@ -376,6 +477,266 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Orientação jurídica para candidatos em processos seletivos públicos — recursos administrativos, laudos médicos e psicológicos, investigação social. Alves & Saavedra Advogados Associados — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.b8e41d76",
     gtmId: "GTM-N8Z6M2HS",
+  },
+  "editalpm.click": {
+    domain: "editalpm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "L.f.a. Oliveira Advocacia — Irregularidades em Editais de Processos Seletivos Públicos",
+    description:
+      "Orientação jurídica especializada sobre irregularidades em editais de processos seletivos públicos: impugnação de edital, retificação, isonomia entre candidatos e prazos de inscrição. L.f.a. Oliveira Sociedade Individual de Advocacia · CNPJ 67.877.690/0001-32 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    keywords:
+      "impugnação de edital concurso público, retificação de edital, irregularidades em edital de concurso, isonomia entre candidatos, prazo de inscrição concurso público, direito administrativo edital, advogado para editais públicos",
+    author: "L.f.a. Oliveira Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direito no Edital",
+    ogTitle:
+      "Irregularidades em Editais de Processos Seletivos Públicos | L.f.a. Oliveira",
+    ogDescription:
+      "Orientação jurídica sobre irregularidades em editais de processos seletivos públicos — impugnação, retificação e isonomia entre candidatos. L.f.a. Oliveira Sociedade Individual de Advocacia — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.c19f2a83",
+    gtmId: "GTM-TS6X56QP",
+  },
+  "www.editalpm.click": {
+    domain: "editalpm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "L.f.a. Oliveira Advocacia — Irregularidades em Editais de Processos Seletivos Públicos",
+    description:
+      "Orientação jurídica especializada sobre irregularidades em editais de processos seletivos públicos: impugnação de edital, retificação, isonomia entre candidatos e prazos de inscrição. L.f.a. Oliveira Sociedade Individual de Advocacia · CNPJ 67.877.690/0001-32 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    keywords:
+      "impugnação de edital concurso público, retificação de edital, irregularidades em edital de concurso, isonomia entre candidatos, prazo de inscrição concurso público, direito administrativo edital, advogado para editais públicos",
+    author: "L.f.a. Oliveira Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direito no Edital",
+    ogTitle:
+      "Irregularidades em Editais de Processos Seletivos Públicos | L.f.a. Oliveira",
+    ogDescription:
+      "Orientação jurídica sobre irregularidades em editais de processos seletivos públicos — impugnação, retificação e isonomia entre candidatos. L.f.a. Oliveira Sociedade Individual de Advocacia — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.c19f2a83",
+    gtmId: "GTM-TS6X56QP",
+  },
+  "carreiramilitarpm.click": {
+    domain: "carreiramilitarpm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Nichelle Alves Advocacia — Direitos na Carreira Militar",
+    description:
+      "Orientação jurídica especializada sobre promoções, transferências, processos disciplinares e conselhos de disciplina na carreira militar. Nichelle Alves Sociedade Individual de Advocacia · CNPJ 63.814.373/0001-16 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    keywords:
+      "direitos na carreira militar, promoção militar antiguidade merecimento, conselho de disciplina militar, transferência ex officio, processo administrativo disciplinar militar, reintegração ao posto graduação, advogado militar carreira",
+    author: "Nichelle Alves Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direito Militar de Carreira",
+    ogTitle: "Direitos na Carreira Militar | Nichelle Alves Advocacia",
+    ogDescription:
+      "Orientação jurídica sobre promoções, transferências, processos disciplinares e conselhos de disciplina na carreira militar. Nichelle Alves Sociedade Individual de Advocacia — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.d24b6e91",
+    gtmId: "GTM-NT8C3HHG",
+  },
+  "www.carreiramilitarpm.click": {
+    domain: "carreiramilitarpm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Nichelle Alves Advocacia — Direitos na Carreira Militar",
+    description:
+      "Orientação jurídica especializada sobre promoções, transferências, processos disciplinares e conselhos de disciplina na carreira militar. Nichelle Alves Sociedade Individual de Advocacia · CNPJ 63.814.373/0001-16 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    keywords:
+      "direitos na carreira militar, promoção militar antiguidade merecimento, conselho de disciplina militar, transferência ex officio, processo administrativo disciplinar militar, reintegração ao posto graduação, advogado militar carreira",
+    author: "Nichelle Alves Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direito Militar de Carreira",
+    ogTitle: "Direitos na Carreira Militar | Nichelle Alves Advocacia",
+    ogDescription:
+      "Orientação jurídica sobre promoções, transferências, processos disciplinares e conselhos de disciplina na carreira militar. Nichelle Alves Sociedade Individual de Advocacia — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.d24b6e91",
+    gtmId: "GTM-NT8C3HHG",
+  },
+  "vagaspm.click": {
+    domain: "vagaspm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Derick Guerra Advocacia — Convocação e Nomeação em Processos Seletivos Públicos",
+    description:
+      "Orientação jurídica especializada sobre preterição na ordem de convocação, ampliação de vagas, cadastro de reserva e validade do certame em processos seletivos públicos. Derick Guerra Sociedade Individual de Advocacia · CNPJ 63.835.741/0001-02 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    keywords:
+      "preterição na ordem de convocação concurso, nomeação fora da ordem concurso público, cadastro de reserva concurso, ampliação de vagas concurso público, prazo de validade do concurso, direito administrativo convocação, advogado para convocação concurso",
+    author: "Derick Guerra Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direito à Vaga",
+    ogTitle:
+      "Convocação e Nomeação em Processos Seletivos Públicos | Derick Guerra Advocacia",
+    ogDescription:
+      "Orientação jurídica sobre preterição na ordem de convocação, cadastro de reserva e validade do certame. Derick Guerra Sociedade Individual de Advocacia — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.e35c7f04",
+    gtmId: "GTM-5CFBH7TV",
+  },
+  "www.vagaspm.click": {
+    domain: "vagaspm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Derick Guerra Advocacia — Convocação e Nomeação em Processos Seletivos Públicos",
+    description:
+      "Orientação jurídica especializada sobre preterição na ordem de convocação, ampliação de vagas, cadastro de reserva e validade do certame em processos seletivos públicos. Derick Guerra Sociedade Individual de Advocacia · CNPJ 63.835.741/0001-02 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    keywords:
+      "preterição na ordem de convocação concurso, nomeação fora da ordem concurso público, cadastro de reserva concurso, ampliação de vagas concurso público, prazo de validade do concurso, direito administrativo convocação, advogado para convocação concurso",
+    author: "Derick Guerra Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direito à Vaga",
+    ogTitle:
+      "Convocação e Nomeação em Processos Seletivos Públicos | Derick Guerra Advocacia",
+    ogDescription:
+      "Orientação jurídica sobre preterição na ordem de convocação, cadastro de reserva e validade do certame. Derick Guerra Sociedade Individual de Advocacia — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.e35c7f04",
+    gtmId: "GTM-5CFBH7TV",
+  },
+  "direitosconcursopm.click": {
+    domain: "direitosconcursopm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Carlos Oliveira Advocacia — Recursos contra Gabarito e Resultado de Provas",
+    description:
+      "Orientação jurídica especializada sobre contestação de questões, anulação de gabarito, revisão de nota e prazos recursais em provas de processos seletivos públicos. Carlos Oliveira Sociedade Individual de Advocacia · CNPJ 63.910.297/0001-42 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    keywords:
+      "recurso contra gabarito concurso público, anulação de questão de prova, revisão de nota concurso, contestação de resultado de prova, prazo recursal concurso público, direito administrativo recurso de prova, advogado para recurso de concurso",
+    author: "Carlos Oliveira Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direitos no Concurso",
+    ogTitle:
+      "Recursos contra Gabarito e Resultado de Provas | Carlos Oliveira Advocacia",
+    ogDescription:
+      "Orientação jurídica sobre contestação de questões, anulação de gabarito e revisão de nota em provas de processos seletivos públicos. Carlos Oliveira Sociedade Individual de Advocacia — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.f46d8a15",
+    gtmId: "GTM-NHHLQFT3",
+  },
+  "www.direitosconcursopm.click": {
+    domain: "direitosconcursopm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Carlos Oliveira Advocacia — Recursos contra Gabarito e Resultado de Provas",
+    description:
+      "Orientação jurídica especializada sobre contestação de questões, anulação de gabarito, revisão de nota e prazos recursais em provas de processos seletivos públicos. Carlos Oliveira Sociedade Individual de Advocacia · CNPJ 63.910.297/0001-42 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    keywords:
+      "recurso contra gabarito concurso público, anulação de questão de prova, revisão de nota concurso, contestação de resultado de prova, prazo recursal concurso público, direito administrativo recurso de prova, advogado para recurso de concurso",
+    author: "Carlos Oliveira Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direitos no Concurso",
+    ogTitle:
+      "Recursos contra Gabarito e Resultado de Provas | Carlos Oliveira Advocacia",
+    ogDescription:
+      "Orientação jurídica sobre contestação de questões, anulação de gabarito e revisão de nota em provas de processos seletivos públicos. Carlos Oliveira Sociedade Individual de Advocacia — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.f46d8a15",
+    gtmId: "GTM-NHHLQFT3",
+  },
+  "assessoriapm.click": {
+    domain: "assessoriapm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Lilian Gama Advocacia — Isenção de Taxa e Reserva de Vagas em Concursos Públicos",
+    description:
+      "Orientação jurídica especializada sobre indeferimento de isenção de taxa de inscrição, reserva de vagas para pessoas com deficiência e cotas raciais em processos seletivos públicos. Lilian Gama Sociedade Individual de Advocacia · CNPJ 63.924.938/0001-18 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    keywords:
+      "isenção de taxa de inscrição concurso público, indeferimento de isenção de taxa, reserva de vagas pessoas com deficiência concurso, cotas raciais concurso público, direito administrativo cotas e isenções, advogado para isenção de taxa concurso",
+    author: "Lilian Gama Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direito às Cotas e Isenções",
+    ogTitle:
+      "Isenção de Taxa e Reserva de Vagas em Concursos Públicos | Lilian Gama Advocacia",
+    ogDescription:
+      "Orientação jurídica sobre indeferimento de isenção de taxa, reserva de vagas PCD e cotas raciais em processos seletivos públicos. Lilian Gama Sociedade Individual de Advocacia — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.a91e5c37",
+    gtmId: "GTM-PPD28W45",
+  },
+  "www.assessoriapm.click": {
+    domain: "assessoriapm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Lilian Gama Advocacia — Isenção de Taxa e Reserva de Vagas em Concursos Públicos",
+    description:
+      "Orientação jurídica especializada sobre indeferimento de isenção de taxa de inscrição, reserva de vagas para pessoas com deficiência e cotas raciais em processos seletivos públicos. Lilian Gama Sociedade Individual de Advocacia · CNPJ 63.924.938/0001-18 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    keywords:
+      "isenção de taxa de inscrição concurso público, indeferimento de isenção de taxa, reserva de vagas pessoas com deficiência concurso, cotas raciais concurso público, direito administrativo cotas e isenções, advogado para isenção de taxa concurso",
+    author: "Lilian Gama Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direito às Cotas e Isenções",
+    ogTitle:
+      "Isenção de Taxa e Reserva de Vagas em Concursos Públicos | Lilian Gama Advocacia",
+    ogDescription:
+      "Orientação jurídica sobre indeferimento de isenção de taxa, reserva de vagas PCD e cotas raciais em processos seletivos públicos. Lilian Gama Sociedade Individual de Advocacia — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.a91e5c37",
+    gtmId: "GTM-PPD28W45",
+  },
+  "militarconcursos.click": {
+    domain: "militarconcursos.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Amanda Ciodaro Advocacia — Eliminação e Desligamento em Cursos de Formação Militar",
+    description:
+      "Orientação jurídica especializada sobre eliminação em teste de aptidão física (TAF), exame psicotécnico e desligamento de cursos de formação em corporações militares. Amanda C Ciodaro de Quadros Sociedade Individual de Advocacia · CNPJ 63.952.036/0001-95 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    keywords:
+      "eliminação teste de aptidão física militar, desligamento curso de formação militar, exame psicotécnico militar, TAF concurso militar, curso de formação de oficiais soldados, direito administrativo militar formação, advogado curso de formação militar",
+    author: "Amanda C Ciodaro de Quadros Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direito Militar em Formação",
+    ogTitle:
+      "Eliminação e Desligamento em Cursos de Formação Militar | Amanda Ciodaro Advocacia",
+    ogDescription:
+      "Orientação jurídica sobre eliminação em TAF, exame psicotécnico e desligamento de cursos de formação militar. Amanda C Ciodaro de Quadros Sociedade Individual de Advocacia — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.b02f9d64",
+    gtmId: "GTM-NDCG42NJ",
+  },
+  "www.militarconcursos.click": {
+    domain: "militarconcursos.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Amanda Ciodaro Advocacia — Eliminação e Desligamento em Cursos de Formação Militar",
+    description:
+      "Orientação jurídica especializada sobre eliminação em teste de aptidão física (TAF), exame psicotécnico e desligamento de cursos de formação em corporações militares. Amanda C Ciodaro de Quadros Sociedade Individual de Advocacia · CNPJ 63.952.036/0001-95 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    keywords:
+      "eliminação teste de aptidão física militar, desligamento curso de formação militar, exame psicotécnico militar, TAF concurso militar, curso de formação de oficiais soldados, direito administrativo militar formação, advogado curso de formação militar",
+    author: "Amanda C Ciodaro de Quadros Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direito Militar em Formação",
+    ogTitle:
+      "Eliminação e Desligamento em Cursos de Formação Militar | Amanda Ciodaro Advocacia",
+    ogDescription:
+      "Orientação jurídica sobre eliminação em TAF, exame psicotécnico e desligamento de cursos de formação militar. Amanda C Ciodaro de Quadros Sociedade Individual de Advocacia — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.b02f9d64",
+    gtmId: "GTM-NDCG42NJ",
   },
 };
 

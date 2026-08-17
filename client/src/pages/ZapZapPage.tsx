@@ -282,8 +282,11 @@ export default function ZapZapPage() {
             localStorage.setItem("user_ip_data", JSON.stringify(ipData));
             window.dispatchEvent(new CustomEvent("ipDataReady", { detail: ipData }));
           }
-        } catch (_e) {}
-        navigate("/marcar");
+          navigate("/marcar")
+        } catch (_e) {
+          navigate("/marcar")
+        }
+        ;
       })();
     }
   }, [hasTrackingParam, isBot]);

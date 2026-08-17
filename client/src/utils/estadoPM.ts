@@ -36,17 +36,92 @@ export const ESTADO_PM: Record<string, EstadoPMData> = {
 };
 
 /**
- * Lê `localStorage.user_ip_data` (formato { region: "SP" }) e retorna
- * o EstadoPMData correspondente, ou null se não detectado / não mapeado.
- * Segura para chamar fora do ciclo React (ex: getServerSideProps, callbacks).
+ * Nomes completos (e variações) de cada UF, usados para reconhecer o valor
+ * de `region`/`regionName` retornado pelos provedores de geolocalização.
+ *
+ * - ipinfo.io (fonte primária de `/api/user-ip-data`) preenche `region` com o
+ *   nome completo do estado em português (ex.: "São Paulo", "Rio de Janeiro"),
+ *   exceto o Distrito Federal, que vem em inglês como "Federal District".
+ * - ip-api.com (fallback) preenche `region` com a sigla de 2 letras (ex.: "SP").
+ *
+ * Todas as chaves abaixo são comparadas já normalizadas (sem acento, minúsculas,
+ * sem espaços extras) em `normalizeToUF`.
+ */
+const NOME_PARA_UF: Record<string, string> = {
+  'acre': 'AC',
+  'alagoas': 'AL',
+  'amapa': 'AP',
+  'amazonas': 'AM',
+  'bahia': 'BA',
+  'ceara': 'CE',
+  'distrito federal': 'DF',
+  'federal district': 'DF',
+  'espirito santo': 'ES',
+  'goias': 'GO',
+  'maranhao': 'MA',
+  'mato grosso': 'MT',
+  'mato grosso do sul': 'MS',
+  'minas gerais': 'MG',
+  'para': 'PA',
+  'paraiba': 'PB',
+  'parana': 'PR',
+  'pernambuco': 'PE',
+  'piaui': 'PI',
+  'rio de janeiro': 'RJ',
+  'state of rio de janeiro': 'RJ',
+  'rio grande do norte': 'RN',
+  'rio grande do sul': 'RS',
+  'rondonia': 'RO',
+  'roraima': 'RR',
+  'santa catarina': 'SC',
+  'sao paulo': 'SP',
+  'state of sao paulo': 'SP',
+  'sergipe': 'SE',
+  'tocantins': 'TO',
+};
+
+/** Remove acentos, baixa a caixa e colapsa espaços para comparação tolerante. */
+const normalizeString = (value: string): string =>
+  value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, ' ');
+
+/**
+ * Resolve uma string livre (sigla de 2 letras ou nome completo do estado,
+ * com ou sem acentos, em qualquer capitalização) para a sigla de UF de
+ * 2 letras usada como chave em `ESTADO_PM`. Retorna null se não reconhecer.
+ */
+export function normalizeToUF(value: string | null | undefined): string | null {
+  if (!value) return null;
+  const trimmed = value.trim();
+  if (!trimmed) return null;
+
+  // Já é uma sigla válida de 2 letras (ex.: "SP", "df").
+  const asSigla = trimmed.toUpperCase();
+  if (asSigla.length === 2 && ESTADO_PM[asSigla]) return asSigla;
+
+  // Nome completo do estado (com/sem acento, qualquer capitalização).
+  const normalized = normalizeString(trimmed);
+  return NOME_PARA_UF[normalized] ?? null;
+}
+
+/**
+ * Lê `localStorage.user_ip_data` (formato { region: "SP" } ou
+ * { region: "São Paulo" }/{ regionName: "São Paulo" }, dependendo do provedor
+ * de geolocalização) e retorna o EstadoPMData correspondente, ou null se não
+ * detectado / não mapeado. Segura para chamar fora do ciclo React (ex:
+ * getServerSideProps, callbacks).
  */
 export function getEstadoPMFromStorage(): EstadoPMData | null {
   try {
     const raw = localStorage.getItem('user_ip_data');
     if (!raw) return null;
     const ipData = JSON.parse(raw);
-    const uf: string = (ipData?.region ?? '').toUpperCase();
-    return ESTADO_PM[uf] ?? null;
+    const uf = normalizeToUF(ipData?.region) ?? normalizeToUF(ipData?.regionName);
+    return uf ? ESTADO_PM[uf] ?? null : null;
   } catch (_) {
     return null;
   }

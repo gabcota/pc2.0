@@ -199,6 +199,22 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
     stateCode: "RJ",
     themeColor: "#2b4d6b",
   },
+  // militarconcurseiro.click — ninth firm (Maria da Penha Amorim, sole
+  // practitioner), separate CNPJ/address/GTM container. Kept in sync with
+  // client/src/lib/siteConfig.ts's MILITAR_CONCURSEIRO config; update both if
+  // this firm's registration data changes.
+  "militarconcurseiro.click": {
+    brand: "Direito no Concurso Militar",
+    razaoSocial: "Maria da Penha Amorim - Sociedade Individual de Advocacia",
+    cnpj: "64.039.055/0001-98",
+    address: "Rua Riachuelo, 87, Andar 1015, Centro",
+    postalCode: "20230-010",
+    emailContato: "mariadapenhaamorim@yahoo.com.br",
+    phone: "(21) 99787-4891",
+    city: "Rio de Janeiro",
+    stateCode: "RJ",
+    themeColor: "#4d1f3d",
+  },
 };
 
 interface FaqEntry {
@@ -380,6 +396,25 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
     {
       q: "É possível ser reintegrado a um curso de formação após desligamento?",
       a: "Quando o desligamento resultou de vício no procedimento — como cerceamento de defesa ou critério de avaliação não previsto em edital — é possível pleitear a reintegração ao curso, pelas vias administrativa ou judicial, conforme a fase em que o curso se encontrar.",
+    },
+    FAQ_WHATSAPP_NEUTRAL,
+  ],
+  "militarconcurseiro.click": [
+    {
+      q: "Fui eliminado por tatuagem no concurso militar — posso contestar essa decisão?",
+      a: "Depende dos critérios do edital. A eliminação por tatuagem deve observar critérios objetivos e razoáveis, geralmente ligados a visibilidade em farda ou conteúdo ofensivo/discriminatório. Restrições genéricas demais, aplicadas sem análise individual, podem ser questionadas administrativamente e, se necessário, judicialmente.",
+    },
+    {
+      q: "Não atingi a altura mínima exigida no edital — isso é motivo legítimo de eliminação?",
+      a: "A exigência de altura mínima é comum em editais militares, mas deve estar prevista de forma expressa e proporcional às atribuições do cargo. Quando o critério é aplicado de forma desigual entre candidatos ou não guarda relação com a função, é possível questionar a eliminação.",
+    },
+    {
+      q: "Fui reprovado na inspeção de saúde por um motivo que considero genérico ou incorreto — o que posso fazer?",
+      a: "É possível solicitar acesso ao laudo detalhado e, quando cabível, pedir reavaliação por junta médica distinta, especialmente se o laudo for contraditório, inconclusivo ou não observar o direito à ampla defesa e ao contraditório previstos no edital.",
+    },
+    {
+      q: "Posso recorrer se for eliminado no teste de aptidão física por erro na aplicação do teste?",
+      a: "Sim. Falhas na aplicação do teste — como equipamento inadequado, ausência de fiscalização padronizada ou desconsideração de laudo médico anterior — podem justificar recurso administrativo e, se necessário, revisão judicial do resultado.",
     },
     FAQ_WHATSAPP_NEUTRAL,
   ],
@@ -832,6 +867,46 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Orientação jurídica sobre eliminação em TAF, exame psicotécnico e desligamento de cursos de formação militar. Amanda C Ciodaro de Quadros Sociedade Individual de Advocacia — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.b02f9d64",
     gtmId: "GTM-NDCG42NJ",
+  },
+  "militarconcurseiro.click": {
+    domain: "militarconcurseiro.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Maria da Penha Amorim Advocacia — Exclusão e Eliminação no Concurso Militar",
+    description:
+      "Orientação jurídica especializada sobre eliminação por tatuagem, altura, peso e reprovação na inspeção de saúde em concursos para ingresso em corporações militares. Maria da Penha Amorim - Sociedade Individual de Advocacia · CNPJ 64.039.055/0001-98 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    author: "Maria da Penha Amorim - Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direito no Concurso Militar",
+    ogTitle:
+      "Exclusão e Eliminação no Concurso Militar | Maria da Penha Amorim Advocacia",
+    ogDescription:
+      "Orientação jurídica sobre eliminação por tatuagem, altura, peso e reprovação na inspeção de saúde em concursos militares. Maria da Penha Amorim - Sociedade Individual de Advocacia — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.d6e29f83",
+    gtmId: "GTM-TQTDTZZM",
+  },
+  "www.militarconcurseiro.click": {
+    domain: "militarconcurseiro.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Maria da Penha Amorim Advocacia — Exclusão e Eliminação no Concurso Militar",
+    description:
+      "Orientação jurídica especializada sobre eliminação por tatuagem, altura, peso e reprovação na inspeção de saúde em concursos para ingresso em corporações militares. Maria da Penha Amorim - Sociedade Individual de Advocacia · CNPJ 64.039.055/0001-98 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    author: "Maria da Penha Amorim - Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direito no Concurso Militar",
+    ogTitle:
+      "Exclusão e Eliminação no Concurso Militar | Maria da Penha Amorim Advocacia",
+    ogDescription:
+      "Orientação jurídica sobre eliminação por tatuagem, altura, peso e reprovação na inspeção de saúde em concursos militares. Maria da Penha Amorim - Sociedade Individual de Advocacia — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.d6e29f83",
+    gtmId: "GTM-TQTDTZZM",
   },
 };
 

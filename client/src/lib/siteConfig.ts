@@ -511,6 +511,65 @@ const MILITAR_FORMACAO: RawConfig = {
   // (isVerifiedLawFirm) when BOTH advogadoNome and oabNumero are set.
 };
 
+// militarconcurseiro.click (Maria da Penha Amorim - Sociedade Individual de
+// Advocacia — sole practitioner, ninth distinct firm/CNPJ). Framed around
+// exclusion/elimination during the military recruitment exam itself
+// (tattoo, minimum height/weight, health-inspection reprovação, TAF da
+// prova) — distinct from MILITAR_FORMACAO (already admitted to a formation
+// course), CARREIRA_MILITAR (already a career member facing PAD/promotion)
+// and DIREITO_CANDIDATO (generic civil selection-process candidate rights).
+const MILITAR_CONCURSEIRO: RawConfig = {
+  hostname: 'militarconcurseiro.click',
+  brand: 'Direito no Concurso Militar',
+  siteSubtitle: 'Orientação Jurídica sobre Exclusão e Eliminação no Concurso Militar',
+  razaoSocial: 'Maria da Penha Amorim - Sociedade Individual de Advocacia',
+  cnpj: '64039055000198',
+  cnpjFormatted: '64.039.055/0001-98',
+  endereco: 'Rua Riachuelo, 87, Andar 1015',
+  bairro: 'Centro',
+  cidade: 'Rio de Janeiro',
+  estado: 'RJ',
+  cep: '20230-010',
+  enderecoCompleto: 'Rua Riachuelo, 87, Andar 1015 · Centro · Rio de Janeiro/RJ · CEP 20230-010',
+  canonicalUrl: 'https://www.militarconcurseiro.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre direitos de candidatos em concursos militares e não constituem aconselhamento jurídico individual. Este site é independente e não possui vínculo com qualquer corporação, órgão ou instituição militar.',
+  email: 'mariadapenhaamorim@yahoo.com.br',
+  telefone: '(21) 99787-4891',
+  cnae: '69.11-7-01 - Serviços advocatícios',
+  naturezaJuridica: 'Sociedade Unipessoal de Advocacia',
+  dataAbertura: '13/06/2025',
+  capitalSocial: 'R$ 5.000,00',
+  horarioAtendimento: 'Segunda a Sexta, 08h às 17h',
+  advogadoNome: 'Maria da Penha Amorim',
+  advogadoAtuacao: 'Direito Administrativo Militar e Concursos Públicos',
+  breadcrumbLabel: 'Exclusão no Concurso Militar',
+  h1Override: 'Orientação jurídica sobre exclusão e eliminação no concurso para carreira militar',
+  leadOverride: 'Reunimos orientação jurídica sobre eliminação por tatuagem, altura, peso e reprovação na inspeção de saúde em concursos para ingresso em corporações militares. Consulte um advogado habilitado para orientação específica ao seu caso.',
+  ctaHeroText: 'Falar com um advogado',
+  faq: [
+    {
+      q: 'Fui eliminado por tatuagem no concurso militar — posso contestar essa decisão?',
+      a: 'Depende dos critérios do edital. A eliminação por tatuagem deve observar critérios objetivos e razoáveis, geralmente ligados a visibilidade em farda ou conteúdo ofensivo/discriminatório. Restrições genéricas demais, aplicadas sem análise individual, podem ser questionadas administrativamente e, se necessário, judicialmente.',
+    },
+    {
+      q: 'Não atingi a altura mínima exigida no edital — isso é motivo legítimo de eliminação?',
+      a: 'A exigência de altura mínima é comum em editais militares, mas deve estar prevista de forma expressa e proporcional às atribuições do cargo. Quando o critério é aplicado de forma desigual entre candidatos ou não guarda relação com a função, é possível questionar a eliminação.',
+    },
+    {
+      q: 'Fui reprovado na inspeção de saúde por um motivo que considero genérico ou incorreto — o que posso fazer?',
+      a: 'É possível solicitar acesso ao laudo detalhado e, quando cabível, pedir reavaliação por junta médica distinta, especialmente se o laudo for contraditório, inconclusivo ou não observar o direito à ampla defesa e ao contraditório previstos no edital.',
+    },
+    {
+      q: 'Posso recorrer se for eliminado no teste de aptidão física por erro na aplicação do teste?',
+      a: 'Sim. Falhas na aplicação do teste — como equipamento inadequado, ausência de fiscalização padronizada ou desconsideração de laudo médico anterior — podem justificar recurso administrativo e, se necessário, revisão judicial do resultado.',
+    },
+  ],
+  // oabNumero: intentionally left unset — no OAB registration number was
+  // provided, even though this firm is a single named practitioner (Titular
+  // Pessoa Física). ZapZapPage only shows office/attorney claims
+  // (isVerifiedLawFirm) when BOTH advogadoNome and oabNumero are set.
+};
+
 const CONFIGS: Record<string, RawConfig> = {
   'concursopm.click': VIDA_FUNCIONAL,
   'www.concursopm.click': VIDA_FUNCIONAL,
@@ -528,6 +587,8 @@ const CONFIGS: Record<string, RawConfig> = {
   'www.assessoriapm.click': DIREITO_COTAS,
   'militarconcursos.click': MILITAR_FORMACAO,
   'www.militarconcursos.click': MILITAR_FORMACAO,
+  'militarconcurseiro.click': MILITAR_CONCURSEIRO,
+  'www.militarconcurseiro.click': MILITAR_CONCURSEIRO,
 };
 
 function resolveHostname(): string {

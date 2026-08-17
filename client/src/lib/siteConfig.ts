@@ -38,6 +38,12 @@ export interface SiteConfig {
   oabSeccional?: string;
   advogadoNome?: string;
   advogadoAtuacao?: string;
+  // Domain-specific FAQ shown on ZapZapPage.tsx (and mirrored in
+  // server/domainTracking.ts's DOMAIN_FAQS for the FAQPage JSON-LD — keep
+  // both in sync). Falls back to a generic default when omitted. The
+  // WhatsApp Q&A item is appended separately by ZapZapPage based on
+  // isVerifiedLawFirm and is not part of this array.
+  faq?: { q: string; a: string }[];
 }
 
 type RawConfig = Omit<SiteConfig, 'siteName'>;
@@ -75,6 +81,24 @@ const VIDA_FUNCIONAL: RawConfig = {
   h1Override: 'Orientação jurídica sobre direitos e estabilidade na carreira pública',
   leadOverride: 'Reunimos orientação jurídica sobre os principais momentos da vida funcional do servidor público — estágio probatório, processos administrativos, promoções e estabilidade. Consulte um advogado habilitado para orientação específica ao seu caso.',
   ctaHeroText: 'Falar com um advogado',
+  faq: [
+    {
+      q: 'Fui exonerado durante o estágio probatório sem processo — isso é legal?',
+      a: 'Não necessariamente. Mesmo durante o estágio probatório, a exoneração por inadaptação ou insuficiência de desempenho deve ser precedida de avaliação formal, com critérios objetivos, contraditório e ampla defesa. A ausência desses elementos pode tornar o ato nulo e permitir a reintegração por via administrativa ou judicial.',
+    },
+    {
+      q: 'Tenho direito a uma promoção que foi negada?',
+      a: 'Depende dos critérios previstos no estatuto ou plano de carreira aplicável. Se você preenchia os requisitos de antiguidade ou merecimento e foi preterido sem justificativa, ou se os critérios de avaliação foram aplicados de forma desigual entre servidores, é possível questionar a decisão administrativamente e, se necessário, judicialmente.',
+    },
+    {
+      q: 'Como funciona a defesa em um Processo Administrativo Disciplinar (PAD)?',
+      a: 'O servidor tem direito a ser notificado formalmente, apresentar defesa escrita, produzir provas e acompanhar todos os atos por advogado. Irregularidades como cerceamento de defesa, comissão parcial ou penalidade desproporcional à falta podem levar à anulação do processo e da punição aplicada.',
+    },
+    {
+      q: 'Minha transferência ou remoção foi negada — posso contestar?',
+      a: 'Sim, especialmente quando o indeferimento carece de motivação adequada ou desconsidera critérios legais aplicáveis, como razões de saúde ou reunião familiar previstas em lei. É possível pedir a revisão administrativa da decisão e, conforme o caso, buscar a via judicial.',
+    },
+  ],
   // dataAbertura: intentionally left unset — not provided in the CNPJ data supplied
   // for this domain; do not fabricate.
   // naturezaJuridica kept as plain text (no code) — "Sociedade Simples Pura" has
@@ -121,6 +145,24 @@ const DIREITO_CANDIDATO: RawConfig = {
   h1Override: 'Orientação jurídica para candidatos em processos seletivos públicos',
   leadOverride: 'Reunimos orientação jurídica sobre as principais etapas do processo seletivo — exames, investigação social, laudos médicos e psicológicos e recursos administrativos. Consulte um advogado habilitado para orientação específica ao seu caso.',
   ctaHeroText: 'Falar com um advogado',
+  faq: [
+    {
+      q: 'Fui eliminado no exame médico ou psicológico — posso contestar?',
+      a: 'Sim, é possível questionar a eliminação quando o laudo carece de fundamentação técnica, contraria exames anteriores ou não observa o direito à ciência prévia dos critérios de avaliação e à interposição de recurso. Irregularidades no procedimento podem levar à revisão administrativa ou judicial do resultado.',
+    },
+    {
+      q: 'A investigação social ou sindicância de vida pregressa pode me eliminar por qualquer motivo?',
+      a: 'Não. A avaliação deve se limitar aos critérios objetivos previstos no edital, com direito ao contraditório e à apresentação de esclarecimentos antes da decisão final. Eliminações baseadas em fatos genéricos, não comprovados ou incompatíveis com os critérios fixados podem ser contestadas.',
+    },
+    {
+      q: 'Tenho direito a recurso contra minha eliminação em qualquer etapa do processo seletivo?',
+      a: 'Em regra, sim — o edital deve prever prazo e forma para apresentação de recurso administrativo em cada fase eliminatória. A ausência de resposta fundamentada da banca ou o descumprimento do prazo legal de análise também pode ser questionado.',
+    },
+    {
+      q: 'Posso pedir para refazer um exame se discordar do resultado?',
+      a: 'Depende das regras do edital e da natureza do exame. Em alguns casos é possível solicitar reavaliação por junta ou nova perícia quando há dúvida técnica fundamentada sobre o resultado, especialmente diante de laudos contraditórios ou vícios no procedimento adotado.',
+    },
+  ],
   // oabNumero: intentionally left unset — no OAB registration number was
   // provided; advogadoNome uses the firm name (2 sócios-administradores, no
   // single lead attorney given). ZapZapPage only shows office/attorney claims
@@ -160,6 +202,24 @@ const DIREITO_EDITAL: RawConfig = {
   h1Override: 'Orientação jurídica sobre irregularidades em editais de processos seletivos públicos',
   leadOverride: 'Reunimos orientação jurídica sobre prazos, requisitos e possíveis irregularidades em editais de processos seletivos — impugnação, retificação e isonomia entre candidatos. Consulte um advogado habilitado para orientação específica ao seu caso.',
   ctaHeroText: 'Falar com um advogado',
+  faq: [
+    {
+      q: 'Posso impugnar um edital antes mesmo de me inscrever?',
+      a: 'Sim. A impugnação de edital é um recurso administrativo que pode ser apresentado por qualquer interessado, mesmo antes da inscrição, dentro do prazo fixado no próprio instrumento convocatório, para questionar cláusulas consideradas ilegais ou contraditórias.',
+    },
+    {
+      q: 'O que fazer se o edital tiver exigências que considero discriminatórias?',
+      a: 'Requisitos sem relação direta com as atribuições do cargo ou que restrinjam a participação de forma desproporcional podem violar o princípio da isonomia entre candidatos e ser impugnados administrativamente, com possibilidade de revisão judicial caso o pedido seja indeferido sem fundamentação adequada.',
+    },
+    {
+      q: 'A retificação do edital pode prejudicar quem já se inscreveu?',
+      a: 'Alterações relevantes — como mudança de requisitos, datas ou etapas — após o início das inscrições devem, em regra, reabrir prazo ou assegurar tratamento igualitário aos já inscritos, sob pena de violar direitos adquiridos no âmbito do certame.',
+    },
+    {
+      q: 'Existe prazo para questionar irregularidades no edital?',
+      a: 'Sim, o próprio edital costuma fixar prazos específicos para impugnação e para recursos em cada fase. Perder esse prazo administrativo não impede necessariamente a análise judicial, mas reduz as chances de solução rápida do problema.',
+    },
+  ],
   // oabNumero: intentionally left unset — no OAB registration number was
   // provided, even though this firm is a single named practitioner (Titular
   // Pessoa Física). ZapZapPage only shows office/attorney claims
@@ -199,6 +259,24 @@ const CARREIRA_MILITAR: RawConfig = {
   h1Override: 'Orientação jurídica sobre direitos na carreira militar',
   leadOverride: 'Reunimos orientação jurídica sobre os principais momentos da carreira militar — promoções, transferências, processos disciplinares e conselhos de disciplina, licenciamento e reintegração. Consulte um advogado habilitado para orientação específica ao seu caso.',
   ctaHeroText: 'Falar com um advogado',
+  faq: [
+    {
+      q: 'Fui preterido em uma promoção por antiguidade ou merecimento — posso contestar?',
+      a: 'Sim, quando o militar preenchia os requisitos previstos no regulamento de promoções e foi preterido sem justificativa compatível com os critérios legais, ou quando a avaliação de merecimento foi aplicada de forma desigual entre pares, a decisão pode ser questionada administrativamente e, se necessário, judicialmente.',
+    },
+    {
+      q: 'Como funciona a defesa em um Conselho de Disciplina?',
+      a: 'O militar tem direito a ser notificado formalmente, apresentar defesa escrita, produzir provas e ser assistido por advogado durante todo o procedimento. Cerceamento de defesa, composição irregular do conselho ou penalidade desproporcional à falta podem levar à anulação do processo.',
+    },
+    {
+      q: 'A transferência ex officio pode ser negada ou revertida?',
+      a: 'A transferência de interesse da corporação deve observar motivação adequada e, quando cabível, os critérios legais de proteção à saúde ou à unidade familiar. Decisões sem fundamentação suficiente ou que desconsiderem tais critérios podem ser objeto de revisão administrativa ou judicial.',
+    },
+    {
+      q: 'É possível pedir reintegração ao posto ou graduação após exclusão da corporação?',
+      a: 'Sim, quando a exclusão resultou de processo administrativo com vícios formais — como cerceamento de defesa ou ausência de contraditório — é possível pleitear a reintegração ao posto ou graduação, com efeitos retroativos, pelas vias administrativa ou judicial.',
+    },
+  ],
   // oabNumero: intentionally left unset — no OAB registration number was
   // provided, even though this firm is a single named practitioner (Titular
   // Pessoa Física). ZapZapPage only shows office/attorney claims
@@ -237,6 +315,24 @@ const DIREITO_VAGAS: RawConfig = {
   h1Override: 'Orientação jurídica sobre convocação e nomeação em processos seletivos públicos',
   leadOverride: 'Reunimos orientação jurídica sobre preterição na ordem de convocação, ampliação de vagas, cadastro de reserva e prazo de validade do certame. Consulte um advogado habilitado para orientação específica ao seu caso.',
   ctaHeroText: 'Falar com um advogado',
+  faq: [
+    {
+      q: 'Fui preterido na ordem de convocação — o que posso fazer?',
+      a: 'A nomeação deve seguir rigorosamente a ordem de classificação prevista no edital. Quando outro candidato pior classificado é convocado antes de você sem justificativa legal, é possível pleitear administrativamente a sua nomeação imediata e, se necessário, buscar a via judicial.',
+    },
+    {
+      q: 'O que é o cadastro de reserva e quando ele pode ser convocado?',
+      a: 'É a lista de candidatos aprovados além do número de vagas do edital, que pode ser convocada em caso de surgimento de novas vagas dentro do prazo de validade do concurso. A administração tem discricionariedade limitada e, havendo vaga e necessidade comprovada, a convocação pode se tornar um direito subjetivo do candidato.',
+    },
+    {
+      q: 'A administração pode ampliar o número de vagas durante a validade do concurso?',
+      a: 'Sim, e quando isso ocorre — por abertura de novo edital para o mesmo cargo ou por vagas surgidas por aposentadoria, exoneração ou criação de cargos — os candidatos aprovados em cadastro de reserva podem ter direito à convocação antes de um novo certame.',
+    },
+    {
+      q: 'O que acontece se o prazo de validade do concurso expirar sem minha convocação?',
+      a: 'Em regra, o direito à nomeação se extingue com o fim da validade do concurso. No entanto, se ficar comprovado que a administração deixou de convocar candidatos aprovados dentro das vagas por conveniência, sem justificativa idônea, é possível questionar a omissão judicialmente.',
+    },
+  ],
   // oabNumero: intentionally left unset — no OAB registration number was
   // provided, even though this firm is a single named practitioner (Titular
   // Pessoa Física). ZapZapPage only shows office/attorney claims
@@ -276,6 +372,24 @@ const DIREITOS_PROVA: RawConfig = {
   h1Override: 'Orientação jurídica sobre recursos contra gabarito e resultado de provas',
   leadOverride: 'Reunimos orientação jurídica sobre contestação de questões, anulação de gabarito, revisão de nota e prazos recursais em provas de processos seletivos públicos. Consulte um advogado habilitado para orientação específica ao seu caso.',
   ctaHeroText: 'Falar com um advogado',
+  faq: [
+    {
+      q: 'Posso recorrer se discordar do gabarito preliminar?',
+      a: 'Sim, o edital costuma prever prazo específico para apresentação de recurso contra o gabarito preliminar, com fundamentação técnica sobre a questão contestada. A banca é obrigada a analisar e responder de forma motivada cada recurso apresentado.',
+    },
+    {
+      q: 'Uma questão pode ser anulada por erro na formulação?',
+      a: 'Sim. Questões com enunciado ambíguo, mais de uma alternativa correta, conteúdo fora do programa do edital ou desatualizado podem ser anuladas, hipótese em que a pontuação costuma ser atribuída a todos os candidatos.',
+    },
+    {
+      q: 'Como pedir revisão de nota em prova discursiva ou redação?',
+      a: 'É possível solicitar revisão quando os critérios de correção não foram aplicados de forma objetiva e uniforme, ou quando há divergência relevante entre a nota atribuída e o conteúdo efetivamente apresentado, sempre dentro do prazo recursal fixado no edital.',
+    },
+    {
+      q: 'Existe prazo para apresentar recurso contra o resultado da prova?',
+      a: 'Sim, os prazos recursais são fixados no edital e costumam ser curtos — em geral, poucos dias após a divulgação do resultado ou gabarito. Perder esse prazo administrativo pode limitar as opções de questionamento posterior.',
+    },
+  ],
   // oabNumero: intentionally left unset — no OAB registration number was
   // provided, even though this firm is a single named practitioner (Titular
   // Pessoa Física). ZapZapPage only shows office/attorney claims
@@ -315,6 +429,24 @@ const DIREITO_COTAS: RawConfig = {
   h1Override: 'Orientação jurídica sobre isenção de taxa e reserva de vagas em concursos públicos',
   leadOverride: 'Reunimos orientação jurídica sobre indeferimento de isenção de taxa, reserva de vagas para pessoas com deficiência e cotas raciais em processos seletivos públicos. Consulte um advogado habilitado para orientação específica ao seu caso.',
   ctaHeroText: 'Falar com um advogado',
+  faq: [
+    {
+      q: 'Meu pedido de isenção da taxa de inscrição foi indeferido — posso contestar?',
+      a: 'Sim. O indeferimento deve ser motivado e observar os critérios objetivos previstos no edital, como renda familiar ou doação de sangue/medula. Decisões genéricas, sem análise da documentação apresentada, podem ser questionadas administrativamente e, se necessário, judicialmente, inclusive com pedido de reabertura de prazo de inscrição.',
+    },
+    {
+      q: 'Como funciona a reserva de vagas para pessoas com deficiência?',
+      a: 'O edital deve reservar percentual de vagas para candidatos com deficiência, com direito a condições especiais durante a prova e avaliação por equipe multiprofissional após a aprovação. Indeferimentos sem perícia adequada ou critérios incompatíveis com a lei podem ser contestados.',
+    },
+    {
+      q: 'Posso recorrer se for eliminado na avaliação da comissão de heteroidentificação (cotas raciais)?',
+      a: 'Sim, o edital deve prever direito a recurso contra a decisão da comissão, com possibilidade de nova avaliação por comissão distinta em caso de vício procedimental, ausência de gravação da entrevista ou de fundamentação da decisão.',
+    },
+    {
+      q: 'A perda da condição de cotista pode ser contestada?',
+      a: 'Sim, especialmente quando a exclusão da lista de cotistas se baseia em critérios não previstos no edital ou em procedimento que não assegurou contraditório e ampla defesa ao candidato antes da decisão final.',
+    },
+  ],
   // oabNumero: intentionally left unset — no OAB registration number was
   // provided, even though this firm is a single named practitioner (Titular
   // Pessoa Física). ZapZapPage only shows office/attorney claims
@@ -355,6 +487,24 @@ const MILITAR_FORMACAO: RawConfig = {
   h1Override: 'Orientação jurídica sobre eliminação e desligamento em cursos de formação militar',
   leadOverride: 'Reunimos orientação jurídica sobre eliminação em teste de aptidão física, exame psicotécnico e desligamento de cursos de formação em corporações militares. Consulte um advogado habilitado para orientação específica ao seu caso.',
   ctaHeroText: 'Falar com um advogado',
+  faq: [
+    {
+      q: 'Fui eliminado no teste de aptidão física (TAF) — isso é definitivo?',
+      a: 'Não necessariamente. O TAF deve seguir critérios objetivos e uniformes previstos no edital do curso de formação, com direito a nova tentativa quando prevista em regulamento. Falhas no procedimento — como aplicação irregular do teste ou ausência de avaliação médica prévia — podem justificar a revisão do resultado.',
+    },
+    {
+      q: 'Posso contestar o resultado do exame psicotécnico militar?',
+      a: 'Sim, especialmente quando o laudo é inconclusivo, contraria avaliações anteriores compatíveis, ou não observa o direito a conhecer os critérios de avaliação e a interpor recurso com acesso aos parâmetros utilizados pela banca examinadora.',
+    },
+    {
+      q: 'O desligamento de um curso de formação precisa seguir algum processo formal?',
+      a: 'Sim. O desligamento por insuficiência de rendimento ou disciplinar deve ser precedido de procedimento formal, com notificação, oportunidade de defesa e critérios objetivos de avaliação. A ausência desses elementos pode tornar o ato passível de anulação.',
+    },
+    {
+      q: 'É possível ser reintegrado a um curso de formação após desligamento?',
+      a: 'Quando o desligamento resultou de vício no procedimento — como cerceamento de defesa ou critério de avaliação não previsto em edital — é possível pleitear a reintegração ao curso, pelas vias administrativa ou judicial, conforme a fase em que o curso se encontrar.',
+    },
+  ],
   // oabNumero: intentionally left unset — no OAB registration number was
   // provided, even though this firm is a single named practitioner (Titular
   // Pessoa Física). ZapZapPage only shows office/attorney claims

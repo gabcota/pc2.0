@@ -121,11 +121,13 @@ const ATUACOES = [
   },
 ];
 
-// FAQ items 1-4 are general legal/procedural information (not individualized case service
-// claims) and are shown identically regardless of verified legal identity. Item 5 changes
-// wording based on isVerifiedLawFirm to avoid implying individualized legal service/case
-// review when no verified lawyer identity is configured.
-const FAQS_COMMON = [
+// Default FAQ items (general legal/procedural information, not individualized case
+// service claims) used as a fallback when a domain's siteConfig does not define its
+// own `faq` array. Each domain normally overrides this via cfg.faq (see siteConfig.ts)
+// so the content matches its specific angle. The WhatsApp Q&A item is added separately
+// below and changes wording based on isVerifiedLawFirm to avoid implying individualized
+// legal service/case review when no verified lawyer identity is configured.
+const DEFAULT_FAQS = [
   {
     q: "Fui exonerado durante o estágio probatório sem processo — isso é legal?",
     a: "Não necessariamente. Mesmo durante o estágio probatório, a exoneração por inadaptação ou insuficiência de desempenho deve ser precedida de avaliação formal, com critérios objetivos, contraditório e ampla defesa. A ausência desses elementos pode tornar o ato nulo e permitir a reintegração por via administrativa ou judicial.",
@@ -786,7 +788,7 @@ export default function ZapZapPage() {
                 </a>
               </div>
               <div style={{ flex: 1, minWidth: 0 }}>
-                {[...FAQS_COMMON, isVerifiedLawFirm ? FAQ_WHATSAPP_LEGAL : FAQ_WHATSAPP_NEUTRAL].map(({ q, a }) => (
+                {[...(cfg.faq ?? DEFAULT_FAQS), isVerifiedLawFirm ? FAQ_WHATSAPP_LEGAL : FAQ_WHATSAPP_NEUTRAL].map(({ q, a }) => (
                   <FaqItem key={q} q={q} a={a} />
                 ))}
               </div>

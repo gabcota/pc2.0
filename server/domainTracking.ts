@@ -44,7 +44,6 @@ export interface TrackingConfig {
   // SEO / meta
   title: string;
   description: string;
-  keywords: string;
   author: string;
   ogType: "website" | "article";
   ogTitle: string;
@@ -207,9 +206,9 @@ interface FaqEntry {
   a: string;
 }
 
-// Mirrors the FAQ actually rendered on ZapZapPage.tsx in neutral mode
-// (FAQS_COMMON + FAQ_WHATSAPP_NEUTRAL) — keep these two in sync if the
-// page copy changes, since this feeds the FAQPage JSON-LD seen by crawlers.
+// Fallback FAQ used only when a domain has no dedicated entry in DOMAIN_FAQS
+// below. Mirrors the default FAQ (DEFAULT_FAQS + FAQ_WHATSAPP_NEUTRAL) in
+// ZapZapPage.tsx — keep in sync if that default copy changes.
 const FAQ_VIDA_FUNCIONAL: FaqEntry[] = [
   {
     q: "Fui exonerado durante o estágio probatório sem processo — isso é legal?",
@@ -237,20 +236,153 @@ const PAGE_FAQS: Partial<Record<HomepageKey, FaqEntry[]>> = {
   zapzap: FAQ_VIDA_FUNCIONAL,
 };
 
-// Kept identical to the Q&A actually rendered on ZapZapPage.tsx
-// (FAQS_COMMON + FAQ_WHATSAPP_NEUTRAL) so the FAQPage JSON-LD matches the
-// visible page content exactly. Domain differentiation lives in the hero
-// copy (h1Override/leadOverride/breadcrumbLabel in siteConfig.ts) and in the
-// SEO title/description/keywords below, not in fabricated duplicate FAQ text.
+// Common WhatsApp Q&A item appended to every domain's FAQ below (neutral
+// wording, since no domain currently has isVerifiedLawFirm=true — see
+// siteConfig.ts). Mirrors FAQ_WHATSAPP_NEUTRAL in ZapZapPage.tsx.
+const FAQ_WHATSAPP_NEUTRAL: FaqEntry = {
+  q: "É possível tirar dúvidas por WhatsApp?",
+  a: "Sim. Você pode enviar sua dúvida sobre direitos do servidor público pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientação sobre um caso específico, procure um advogado habilitado.",
+};
+
+// Each entry below is kept identical to that domain's `faq` array in
+// client/src/lib/siteConfig.ts (plus the shared WhatsApp item) so the
+// FAQPage JSON-LD matches the content actually rendered on the page. Update
+// both files together when FAQ copy changes for a domain.
 const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
   "concursopm.click": FAQ_VIDA_FUNCIONAL,
-  "direitodocandidatopm.click": FAQ_VIDA_FUNCIONAL,
-  "editalpm.click": FAQ_VIDA_FUNCIONAL,
-  "carreiramilitarpm.click": FAQ_VIDA_FUNCIONAL,
-  "vagaspm.click": FAQ_VIDA_FUNCIONAL,
-  "direitosconcursopm.click": FAQ_VIDA_FUNCIONAL,
-  "assessoriapm.click": FAQ_VIDA_FUNCIONAL,
-  "militarconcursos.click": FAQ_VIDA_FUNCIONAL,
+  "direitodocandidatopm.click": [
+    {
+      q: "Fui eliminado no exame médico ou psicológico — posso contestar?",
+      a: "Sim, é possível questionar a eliminação quando o laudo carece de fundamentação técnica, contraria exames anteriores ou não observa o direito à ciência prévia dos critérios de avaliação e à interposição de recurso. Irregularidades no procedimento podem levar à revisão administrativa ou judicial do resultado.",
+    },
+    {
+      q: "A investigação social ou sindicância de vida pregressa pode me eliminar por qualquer motivo?",
+      a: "Não. A avaliação deve se limitar aos critérios objetivos previstos no edital, com direito ao contraditório e à apresentação de esclarecimentos antes da decisão final. Eliminações baseadas em fatos genéricos, não comprovados ou incompatíveis com os critérios fixados podem ser contestadas.",
+    },
+    {
+      q: "Tenho direito a recurso contra minha eliminação em qualquer etapa do processo seletivo?",
+      a: "Em regra, sim — o edital deve prever prazo e forma para apresentação de recurso administrativo em cada fase eliminatória. A ausência de resposta fundamentada da banca ou o descumprimento do prazo legal de análise também pode ser questionado.",
+    },
+    {
+      q: "Posso pedir para refazer um exame se discordar do resultado?",
+      a: "Depende das regras do edital e da natureza do exame. Em alguns casos é possível solicitar reavaliação por junta ou nova perícia quando há dúvida técnica fundamentada sobre o resultado, especialmente diante de laudos contraditórios ou vícios no procedimento adotado.",
+    },
+    FAQ_WHATSAPP_NEUTRAL,
+  ],
+  "editalpm.click": [
+    {
+      q: "Posso impugnar um edital antes mesmo de me inscrever?",
+      a: "Sim. A impugnação de edital é um recurso administrativo que pode ser apresentado por qualquer interessado, mesmo antes da inscrição, dentro do prazo fixado no próprio instrumento convocatório, para questionar cláusulas consideradas ilegais ou contraditórias.",
+    },
+    {
+      q: "O que fazer se o edital tiver exigências que considero discriminatórias?",
+      a: "Requisitos sem relação direta com as atribuições do cargo ou que restrinjam a participação de forma desproporcional podem violar o princípio da isonomia entre candidatos e ser impugnados administrativamente, com possibilidade de revisão judicial caso o pedido seja indeferido sem fundamentação adequada.",
+    },
+    {
+      q: "A retificação do edital pode prejudicar quem já se inscreveu?",
+      a: "Alterações relevantes — como mudança de requisitos, datas ou etapas — após o início das inscrições devem, em regra, reabrir prazo ou assegurar tratamento igualitário aos já inscritos, sob pena de violar direitos adquiridos no âmbito do certame.",
+    },
+    {
+      q: "Existe prazo para questionar irregularidades no edital?",
+      a: "Sim, o próprio edital costuma fixar prazos específicos para impugnação e para recursos em cada fase. Perder esse prazo administrativo não impede necessariamente a análise judicial, mas reduz as chances de solução rápida do problema.",
+    },
+    FAQ_WHATSAPP_NEUTRAL,
+  ],
+  "carreiramilitarpm.click": [
+    {
+      q: "Fui preterido em uma promoção por antiguidade ou merecimento — posso contestar?",
+      a: "Sim, quando o militar preenchia os requisitos previstos no regulamento de promoções e foi preterido sem justificativa compatível com os critérios legais, ou quando a avaliação de merecimento foi aplicada de forma desigual entre pares, a decisão pode ser questionada administrativamente e, se necessário, judicialmente.",
+    },
+    {
+      q: "Como funciona a defesa em um Conselho de Disciplina?",
+      a: "O militar tem direito a ser notificado formalmente, apresentar defesa escrita, produzir provas e ser assistido por advogado durante todo o procedimento. Cerceamento de defesa, composição irregular do conselho ou penalidade desproporcional à falta podem levar à anulação do processo.",
+    },
+    {
+      q: "A transferência ex officio pode ser negada ou revertida?",
+      a: "A transferência de interesse da corporação deve observar motivação adequada e, quando cabível, os critérios legais de proteção à saúde ou à unidade familiar. Decisões sem fundamentação suficiente ou que desconsiderem tais critérios podem ser objeto de revisão administrativa ou judicial.",
+    },
+    {
+      q: "É possível pedir reintegração ao posto ou graduação após exclusão da corporação?",
+      a: "Sim, quando a exclusão resultou de processo administrativo com vícios formais — como cerceamento de defesa ou ausência de contraditório — é possível pleitear a reintegração ao posto ou graduação, com efeitos retroativos, pelas vias administrativa ou judicial.",
+    },
+    FAQ_WHATSAPP_NEUTRAL,
+  ],
+  "vagaspm.click": [
+    {
+      q: "Fui preterido na ordem de convocação — o que posso fazer?",
+      a: "A nomeação deve seguir rigorosamente a ordem de classificação prevista no edital. Quando outro candidato pior classificado é convocado antes de você sem justificativa legal, é possível pleitear administrativamente a sua nomeação imediata e, se necessário, buscar a via judicial.",
+    },
+    {
+      q: "O que é o cadastro de reserva e quando ele pode ser convocado?",
+      a: "É a lista de candidatos aprovados além do número de vagas do edital, que pode ser convocada em caso de surgimento de novas vagas dentro do prazo de validade do concurso. A administração tem discricionariedade limitada e, havendo vaga e necessidade comprovada, a convocação pode se tornar um direito subjetivo do candidato.",
+    },
+    {
+      q: "A administração pode ampliar o número de vagas durante a validade do concurso?",
+      a: "Sim, e quando isso ocorre — por abertura de novo edital para o mesmo cargo ou por vagas surgidas por aposentadoria, exoneração ou criação de cargos — os candidatos aprovados em cadastro de reserva podem ter direito à convocação antes de um novo certame.",
+    },
+    {
+      q: "O que acontece se o prazo de validade do concurso expirar sem minha convocação?",
+      a: "Em regra, o direito à nomeação se extingue com o fim da validade do concurso. No entanto, se ficar comprovado que a administração deixou de convocar candidatos aprovados dentro das vagas por conveniência, sem justificativa idônea, é possível questionar a omissão judicialmente.",
+    },
+    FAQ_WHATSAPP_NEUTRAL,
+  ],
+  "direitosconcursopm.click": [
+    {
+      q: "Posso recorrer se discordar do gabarito preliminar?",
+      a: "Sim, o edital costuma prever prazo específico para apresentação de recurso contra o gabarito preliminar, com fundamentação técnica sobre a questão contestada. A banca é obrigada a analisar e responder de forma motivada cada recurso apresentado.",
+    },
+    {
+      q: "Uma questão pode ser anulada por erro na formulação?",
+      a: "Sim. Questões com enunciado ambíguo, mais de uma alternativa correta, conteúdo fora do programa do edital ou desatualizado podem ser anuladas, hipótese em que a pontuação costuma ser atribuída a todos os candidatos.",
+    },
+    {
+      q: "Como pedir revisão de nota em prova discursiva ou redação?",
+      a: "É possível solicitar revisão quando os critérios de correção não foram aplicados de forma objetiva e uniforme, ou quando há divergência relevante entre a nota atribuída e o conteúdo efetivamente apresentado, sempre dentro do prazo recursal fixado no edital.",
+    },
+    {
+      q: "Existe prazo para apresentar recurso contra o resultado da prova?",
+      a: "Sim, os prazos recursais são fixados no edital e costumam ser curtos — em geral, poucos dias após a divulgação do resultado ou gabarito. Perder esse prazo administrativo pode limitar as opções de questionamento posterior.",
+    },
+    FAQ_WHATSAPP_NEUTRAL,
+  ],
+  "assessoriapm.click": [
+    {
+      q: "Meu pedido de isenção da taxa de inscrição foi indeferido — posso contestar?",
+      a: "Sim. O indeferimento deve ser motivado e observar os critérios objetivos previstos no edital, como renda familiar ou doação de sangue/medula. Decisões genéricas, sem análise da documentação apresentada, podem ser questionadas administrativamente e, se necessário, judicialmente, inclusive com pedido de reabertura de prazo de inscrição.",
+    },
+    {
+      q: "Como funciona a reserva de vagas para pessoas com deficiência?",
+      a: "O edital deve reservar percentual de vagas para candidatos com deficiência, com direito a condições especiais durante a prova e avaliação por equipe multiprofissional após a aprovação. Indeferimentos sem perícia adequada ou critérios incompatíveis com a lei podem ser contestados.",
+    },
+    {
+      q: "Posso recorrer se for eliminado na avaliação da comissão de heteroidentificação (cotas raciais)?",
+      a: "Sim, o edital deve prever direito a recurso contra a decisão da comissão, com possibilidade de nova avaliação por comissão distinta em caso de vício procedimental, ausência de gravação da entrevista ou de fundamentação da decisão.",
+    },
+    {
+      q: "A perda da condição de cotista pode ser contestada?",
+      a: "Sim, especialmente quando a exclusão da lista de cotistas se baseia em critérios não previstos no edital ou em procedimento que não assegurou contraditório e ampla defesa ao candidato antes da decisão final.",
+    },
+    FAQ_WHATSAPP_NEUTRAL,
+  ],
+  "militarconcursos.click": [
+    {
+      q: "Fui eliminado no teste de aptidão física (TAF) — isso é definitivo?",
+      a: "Não necessariamente. O TAF deve seguir critérios objetivos e uniformes previstos no edital do curso de formação, com direito a nova tentativa quando prevista em regulamento. Falhas no procedimento — como aplicação irregular do teste ou ausência de avaliação médica prévia — podem justificar a revisão do resultado.",
+    },
+    {
+      q: "Posso contestar o resultado do exame psicotécnico militar?",
+      a: "Sim, especialmente quando o laudo é inconclusivo, contraria avaliações anteriores compatíveis, ou não observa o direito a conhecer os critérios de avaliação e a interpor recurso com acesso aos parâmetros utilizados pela banca examinadora.",
+    },
+    {
+      q: "O desligamento de um curso de formação precisa seguir algum processo formal?",
+      a: "Sim. O desligamento por insuficiência de rendimento ou disciplinar deve ser precedido de procedimento formal, com notificação, oportunidade de defesa e critérios objetivos de avaliação. A ausência desses elementos pode tornar o ato passível de anulação.",
+    },
+    {
+      q: "É possível ser reintegrado a um curso de formação após desligamento?",
+      a: "Quando o desligamento resultou de vício no procedimento — como cerceamento de defesa ou critério de avaliação não previsto em edital — é possível pleitear a reintegração ao curso, pelas vias administrativa ou judicial, conforme a fase em que o curso se encontrar.",
+    },
+    FAQ_WHATSAPP_NEUTRAL,
+  ],
 };
 
 function buildJsonLd(t: TrackingConfig, path: string): string {
@@ -324,7 +456,6 @@ export function buildTrackingScripts(t: TrackingConfig, path = "/"): string {
   parts.push(
     `<title>${t.title}</title>` +
       `\n<meta name="description" content="${t.description}" />` +
-      `\n<meta name="keywords" content="${t.keywords}" />` +
       `\n<meta name="author" content="${author}" />` +
       `\n<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />`,
   );
@@ -396,8 +527,6 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Siqueira e Magalhaes Advogados — Direitos e Estabilidade na Carreira Pública",
     description:
       "Orientação jurídica especializada sobre estágio probatório, processos administrativos disciplinares, promoções e estabilidade na carreira pública. Siqueira e Magalhaes Sociedade de Advogados · CNPJ 63.851.818/0001-38 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "direitos do servidor público, estágio probatório exoneração, processo administrativo disciplinar PAD, promoção negada servidor público, transferência indeferida servidor público, reintegração ao cargo público, direito administrativo carreira pública, estabilidade servidor público",
     author: "Siqueira e Magalhaes Sociedade de Advogados",
     ogType: "website",
     siteName: "Direito de Carreira",
@@ -418,8 +547,6 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Siqueira e Magalhaes Advogados — Direitos e Estabilidade na Carreira Pública",
     description:
       "Orientação jurídica especializada sobre estágio probatório, processos administrativos disciplinares, promoções e estabilidade na carreira pública. Siqueira e Magalhaes Sociedade de Advogados · CNPJ 63.851.818/0001-38 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "direitos do servidor público, estágio probatório exoneração, processo administrativo disciplinar PAD, promoção negada servidor público, transferência indeferida servidor público, reintegração ao cargo público, direito administrativo carreira pública, estabilidade servidor público",
     author: "Siqueira e Magalhaes Sociedade de Advogados",
     ogType: "website",
     siteName: "Direito de Carreira",
@@ -440,8 +567,6 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Alves & Saavedra Advogados — Direitos do Candidato em Processos Seletivos Públicos",
     description:
       "Orientação jurídica especializada para candidatos em processos seletivos públicos: recursos administrativos, contestação de eliminação em etapas do certame, laudos médicos e psicológicos, investigação social. Alves & Saavedra Advogados Associados · CNPJ 65.953.516/0001-04 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "direitos do candidato em concurso público, recurso administrativo eliminação em processo seletivo, contestação de exame psicotécnico, investigação social concurso público, laudo médico eliminação irregular, direito administrativo processo seletivo público, advogado para candidatos",
     author: "Alves & Saavedra Advogados Associados",
     ogType: "website",
     siteName: "Direito do Candidato",
@@ -462,8 +587,6 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Alves & Saavedra Advogados — Direitos do Candidato em Processos Seletivos Públicos",
     description:
       "Orientação jurídica especializada para candidatos em processos seletivos públicos: recursos administrativos, contestação de eliminação em etapas do certame, laudos médicos e psicológicos, investigação social. Alves & Saavedra Advogados Associados · CNPJ 65.953.516/0001-04 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "direitos do candidato em concurso público, recurso administrativo eliminação em processo seletivo, contestação de exame psicotécnico, investigação social concurso público, laudo médico eliminação irregular, direito administrativo processo seletivo público, advogado para candidatos",
     author: "Alves & Saavedra Advogados Associados",
     ogType: "website",
     siteName: "Direito do Candidato",
@@ -484,8 +607,6 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "L.f.a. Oliveira Advocacia — Irregularidades em Editais de Processos Seletivos Públicos",
     description:
       "Orientação jurídica especializada sobre irregularidades em editais de processos seletivos públicos: impugnação de edital, retificação, isonomia entre candidatos e prazos de inscrição. L.f.a. Oliveira Sociedade Individual de Advocacia · CNPJ 67.877.690/0001-32 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "impugnação de edital concurso público, retificação de edital, irregularidades em edital de concurso, isonomia entre candidatos, prazo de inscrição concurso público, direito administrativo edital, advogado para editais públicos",
     author: "L.f.a. Oliveira Sociedade Individual de Advocacia",
     ogType: "website",
     siteName: "Direito no Edital",
@@ -506,8 +627,6 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "L.f.a. Oliveira Advocacia — Irregularidades em Editais de Processos Seletivos Públicos",
     description:
       "Orientação jurídica especializada sobre irregularidades em editais de processos seletivos públicos: impugnação de edital, retificação, isonomia entre candidatos e prazos de inscrição. L.f.a. Oliveira Sociedade Individual de Advocacia · CNPJ 67.877.690/0001-32 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "impugnação de edital concurso público, retificação de edital, irregularidades em edital de concurso, isonomia entre candidatos, prazo de inscrição concurso público, direito administrativo edital, advogado para editais públicos",
     author: "L.f.a. Oliveira Sociedade Individual de Advocacia",
     ogType: "website",
     siteName: "Direito no Edital",
@@ -527,8 +646,6 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     title: "Nichelle Alves Advocacia — Direitos na Carreira Militar",
     description:
       "Orientação jurídica especializada sobre promoções, transferências, processos disciplinares e conselhos de disciplina na carreira militar. Nichelle Alves Sociedade Individual de Advocacia · CNPJ 63.814.373/0001-16 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "direitos na carreira militar, promoção militar antiguidade merecimento, conselho de disciplina militar, transferência ex officio, processo administrativo disciplinar militar, reintegração ao posto graduação, advogado militar carreira",
     author: "Nichelle Alves Sociedade Individual de Advocacia",
     ogType: "website",
     siteName: "Direito Militar de Carreira",
@@ -547,8 +664,6 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     title: "Nichelle Alves Advocacia — Direitos na Carreira Militar",
     description:
       "Orientação jurídica especializada sobre promoções, transferências, processos disciplinares e conselhos de disciplina na carreira militar. Nichelle Alves Sociedade Individual de Advocacia · CNPJ 63.814.373/0001-16 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "direitos na carreira militar, promoção militar antiguidade merecimento, conselho de disciplina militar, transferência ex officio, processo administrativo disciplinar militar, reintegração ao posto graduação, advogado militar carreira",
     author: "Nichelle Alves Sociedade Individual de Advocacia",
     ogType: "website",
     siteName: "Direito Militar de Carreira",
@@ -568,8 +683,6 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Derick Guerra Advocacia — Convocação e Nomeação em Processos Seletivos Públicos",
     description:
       "Orientação jurídica especializada sobre preterição na ordem de convocação, ampliação de vagas, cadastro de reserva e validade do certame em processos seletivos públicos. Derick Guerra Sociedade Individual de Advocacia · CNPJ 63.835.741/0001-02 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "preterição na ordem de convocação concurso, nomeação fora da ordem concurso público, cadastro de reserva concurso, ampliação de vagas concurso público, prazo de validade do concurso, direito administrativo convocação, advogado para convocação concurso",
     author: "Derick Guerra Sociedade Individual de Advocacia",
     ogType: "website",
     siteName: "Direito à Vaga",
@@ -590,8 +703,6 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Derick Guerra Advocacia — Convocação e Nomeação em Processos Seletivos Públicos",
     description:
       "Orientação jurídica especializada sobre preterição na ordem de convocação, ampliação de vagas, cadastro de reserva e validade do certame em processos seletivos públicos. Derick Guerra Sociedade Individual de Advocacia · CNPJ 63.835.741/0001-02 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "preterição na ordem de convocação concurso, nomeação fora da ordem concurso público, cadastro de reserva concurso, ampliação de vagas concurso público, prazo de validade do concurso, direito administrativo convocação, advogado para convocação concurso",
     author: "Derick Guerra Sociedade Individual de Advocacia",
     ogType: "website",
     siteName: "Direito à Vaga",
@@ -612,8 +723,6 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Carlos Oliveira Advocacia — Recursos contra Gabarito e Resultado de Provas",
     description:
       "Orientação jurídica especializada sobre contestação de questões, anulação de gabarito, revisão de nota e prazos recursais em provas de processos seletivos públicos. Carlos Oliveira Sociedade Individual de Advocacia · CNPJ 63.910.297/0001-42 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "recurso contra gabarito concurso público, anulação de questão de prova, revisão de nota concurso, contestação de resultado de prova, prazo recursal concurso público, direito administrativo recurso de prova, advogado para recurso de concurso",
     author: "Carlos Oliveira Sociedade Individual de Advocacia",
     ogType: "website",
     siteName: "Direitos no Concurso",
@@ -634,8 +743,6 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Carlos Oliveira Advocacia — Recursos contra Gabarito e Resultado de Provas",
     description:
       "Orientação jurídica especializada sobre contestação de questões, anulação de gabarito, revisão de nota e prazos recursais em provas de processos seletivos públicos. Carlos Oliveira Sociedade Individual de Advocacia · CNPJ 63.910.297/0001-42 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "recurso contra gabarito concurso público, anulação de questão de prova, revisão de nota concurso, contestação de resultado de prova, prazo recursal concurso público, direito administrativo recurso de prova, advogado para recurso de concurso",
     author: "Carlos Oliveira Sociedade Individual de Advocacia",
     ogType: "website",
     siteName: "Direitos no Concurso",
@@ -656,8 +763,6 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Lilian Gama Advocacia — Isenção de Taxa e Reserva de Vagas em Concursos Públicos",
     description:
       "Orientação jurídica especializada sobre indeferimento de isenção de taxa de inscrição, reserva de vagas para pessoas com deficiência e cotas raciais em processos seletivos públicos. Lilian Gama Sociedade Individual de Advocacia · CNPJ 63.924.938/0001-18 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "isenção de taxa de inscrição concurso público, indeferimento de isenção de taxa, reserva de vagas pessoas com deficiência concurso, cotas raciais concurso público, direito administrativo cotas e isenções, advogado para isenção de taxa concurso",
     author: "Lilian Gama Sociedade Individual de Advocacia",
     ogType: "website",
     siteName: "Direito às Cotas e Isenções",
@@ -678,8 +783,6 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Lilian Gama Advocacia — Isenção de Taxa e Reserva de Vagas em Concursos Públicos",
     description:
       "Orientação jurídica especializada sobre indeferimento de isenção de taxa de inscrição, reserva de vagas para pessoas com deficiência e cotas raciais em processos seletivos públicos. Lilian Gama Sociedade Individual de Advocacia · CNPJ 63.924.938/0001-18 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "isenção de taxa de inscrição concurso público, indeferimento de isenção de taxa, reserva de vagas pessoas com deficiência concurso, cotas raciais concurso público, direito administrativo cotas e isenções, advogado para isenção de taxa concurso",
     author: "Lilian Gama Sociedade Individual de Advocacia",
     ogType: "website",
     siteName: "Direito às Cotas e Isenções",
@@ -700,8 +803,6 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Amanda Ciodaro Advocacia — Eliminação e Desligamento em Cursos de Formação Militar",
     description:
       "Orientação jurídica especializada sobre eliminação em teste de aptidão física (TAF), exame psicotécnico e desligamento de cursos de formação em corporações militares. Amanda C Ciodaro de Quadros Sociedade Individual de Advocacia · CNPJ 63.952.036/0001-95 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "eliminação teste de aptidão física militar, desligamento curso de formação militar, exame psicotécnico militar, TAF concurso militar, curso de formação de oficiais soldados, direito administrativo militar formação, advogado curso de formação militar",
     author: "Amanda C Ciodaro de Quadros Sociedade Individual de Advocacia",
     ogType: "website",
     siteName: "Direito Militar em Formação",
@@ -722,8 +823,6 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Amanda Ciodaro Advocacia — Eliminação e Desligamento em Cursos de Formação Militar",
     description:
       "Orientação jurídica especializada sobre eliminação em teste de aptidão física (TAF), exame psicotécnico e desligamento de cursos de formação em corporações militares. Amanda C Ciodaro de Quadros Sociedade Individual de Advocacia · CNPJ 63.952.036/0001-95 · Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
-    keywords:
-      "eliminação teste de aptidão física militar, desligamento curso de formação militar, exame psicotécnico militar, TAF concurso militar, curso de formação de oficiais soldados, direito administrativo militar formação, advogado curso de formação militar",
     author: "Amanda C Ciodaro de Quadros Sociedade Individual de Advocacia",
     ogType: "website",
     siteName: "Direito Militar em Formação",
@@ -793,7 +892,6 @@ export function injectTrackingIntoHtml(
   html = html
     .replace(/<title>[^<]*<\/title>/gi, "")
     .replace(/<meta\s+name="description"[^>]*\/?>/gi, "")
-    .replace(/<meta\s+name="keywords"[^>]*\/?>/gi, "")
     .replace(/<meta\s+name="author"[^>]*\/?>/gi, "")
     .replace(/<meta\s+property="og:type"[^>]*\/?>/gi, "")
     .replace(/<meta\s+property="og:title"[^>]*\/?>/gi, "")
@@ -836,7 +934,6 @@ export function trackingMiddleware(
     body = body
       .replace(/<title>[^<]*<\/title>/gi, "")
       .replace(/<meta\s+name="description"[^>]*\/?>/gi, "")
-      .replace(/<meta\s+name="keywords"[^>]*\/?>/gi, "")
       .replace(/<meta\s+name="author"[^>]*\/?>/gi, "")
       .replace(/<meta\s+property="og:type"[^>]*\/?>/gi, "")
       .replace(/<meta\s+property="og:title"[^>]*\/?>/gi, "")

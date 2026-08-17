@@ -261,14 +261,10 @@ export function buildTrackingScripts(t: TrackingConfig, path = "/"): string {
   // Google Tag Manager (head snippet + noscript via DOM)
   if (t.gtmId) {
     parts.push(
-      // Consent Mode v2 default — MUST run before gtm.js loads, so every tag
-      // (Ads, GA4, remarketing) starts out denied until the visitor accepts the
-      // cookie banner (see ZapZapChrome's CookieConsentBanner, which calls
-      // gtag('consent','update', ...) on accept). `wait_for_update` gives the
-      // banner a window to respond before tags fire with the default state.
-      `<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}` +
-      `gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','functionality_storage':'denied','personalization_storage':'denied','wait_for_update':500});</script>` +
-      `\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      // Consent default is configured directly in Google Tag Manager/Ads
+      // (per-account), not injected here — see CookieConsentBanner in
+      // ZapZapChrome.tsx for the "update" call fired on accept.
+      `<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);

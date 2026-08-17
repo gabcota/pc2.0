@@ -244,10 +244,6 @@ const PAGE_FAQS: Partial<Record<HomepageKey, FaqEntry[]>> = {
 // SEO title/description/keywords below, not in fabricated duplicate FAQ text.
 const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
   "concursopm.click": FAQ_VIDA_FUNCIONAL,
-  // Same FAQPage JSON-LD as concursopm.click on purpose: direitodocandidatopm.click
-  // renders through the same ZapZapPage template, so FAQS_COMMON + the neutral
-  // WhatsApp FAQ (isVerifiedLawFirm is false for both — no oabNumero configured)
-  // is the Q&A actually shown on screen for this domain too.
   "direitodocandidatopm.click": FAQ_VIDA_FUNCIONAL,
   "editalpm.click": FAQ_VIDA_FUNCIONAL,
   "carreiramilitarpm.click": FAQ_VIDA_FUNCIONAL,

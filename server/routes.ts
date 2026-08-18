@@ -154,6 +154,7 @@ class NovaEraAPI {
   }
 }
 
+
 export class AmeiiaApi {
   API_URL = "https://api-pay.ameii.com.br";
 

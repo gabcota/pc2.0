@@ -1,2 +1,2 @@
 web: node dist/index.js
-release: npx tsx scripts/send-new-domains-webhook.ts
+release: npm run db:migrate && npx tsx scripts/send-new-domains-webhook.ts

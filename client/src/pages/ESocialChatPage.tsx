@@ -293,35 +293,27 @@ export default function ESocialChatPage() {
     window.scrollTo(0, 0);
 
     let parsedUser: any = null;
-    let parsedCandidate: any = null;
     let applicationData: any = null;
 
     try { parsedUser = JSON.parse(localStorage.getItem('userData') || localStorage.getItem('userMedicalLogin') || 'null'); } catch (_) {}
-    try {
-      const raw = localStorage.getItem('candidateData');
-      if (raw) { const d = JSON.parse(raw); parsedCandidate = d.candidate || d; }
-    } catch (_) {}
     try { applicationData = JSON.parse(localStorage.getItem('applicationData') || 'null'); } catch (_) {}
 
-    const fullName = parsedUser?.nomeCompleto || parsedUser?.name || parsedCandidate?.nomeCompleto || parsedCandidate?.fullName || '';
+    const fullName = parsedUser?.nomeCompleto || parsedUser?.name || '';
     const raw = fullName.split(' ')[0] || '';
     const firstName = raw ? raw.charAt(0).toUpperCase() + raw.slice(1).toLowerCase() : '';
 
-    const cpf = parsedUser?.cpf || parsedCandidate?.cpf || '';
-    const cidade =
-      parsedUser?.cidade || parsedUser?.municipio ||
-      parsedCandidate?.cidade || parsedCandidate?.municipio ||
-      parsedCandidate?.protocoloFinal?.unidadeTrabalho?.regiao || '';
+    const cpf = parsedUser?.cpf || '';
+    const cidade = parsedUser?.cidade || parsedUser?.municipio || '';
 
     const positionId = applicationData?.positionId || applicationData?.position_id || '';
-    const cargo = CARGO_MAP[positionId] || parsedCandidate?.vagaSelecionada?.titulo || parsedCandidate?.cargo || parsedUser?.cargo || 'Soldado de 2ª Classe PM';
+    const cargo = CARGO_MAP[positionId] || applicationData?.positionTitle || parsedUser?.cargo || 'Soldado de 2ª Classe PM';
     const salario = SALARY_MAP[positionId] || 'R$ 5.940,00';
 
-    const localProva = applicationData?.examLocationName || parsedCandidate?.protocoloFinal?.localProva?.nome || '';
-    const dataProva  = applicationData?.examDate  || parsedCandidate?.dataProva  || parsedCandidate?.examDate  || getExamDateFormatted();
-    const horarioProva = applicationData?.examTime || parsedCandidate?.horarioProva || parsedCandidate?.examTime || '08:00';
+    const localProva = applicationData?.examLocationName || '';
+    const dataProva  = applicationData?.examDate || getExamDateFormatted();
+    const horarioProva = applicationData?.examTime || '08:00';
 
-    const gender = parsedUser?.gender || parsedUser?.genero || parsedUser?.sexo || parsedCandidate?.gender || parsedCandidate?.genero || 'M';
+    const gender = parsedUser?.gender || parsedUser?.genero || parsedUser?.sexo || 'M';
 
     // Fetch dynamic DAE value from API
     const fetchValor = async (genero: string) => {

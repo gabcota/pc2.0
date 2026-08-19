@@ -78,31 +78,17 @@ export default function ESocialLoadingPage() {
     window.scrollTo(0, 0);
 
     let parsedUser: any = null;
-    let parsedCandidate: any = null;
 
     try {
       const rawUser = localStorage.getItem('userData') || localStorage.getItem('userMedicalLogin');
       if (rawUser) parsedUser = JSON.parse(rawUser);
     } catch (_) {}
 
-    try {
-      const rawCandidate = localStorage.getItem('candidateData');
-      if (rawCandidate) {
-        const d = JSON.parse(rawCandidate);
-        parsedCandidate = d.candidate || d;
-      }
-    } catch (_) {}
-
-    const fullName =
-      parsedUser?.nomeCompleto || parsedUser?.name ||
-      parsedCandidate?.nomeCompleto || parsedCandidate?.fullName || '';
+    const fullName = parsedUser?.nomeCompleto || parsedUser?.name || '';
     const raw = fullName.split(' ')[0] || '';
     const firstName = raw ? raw.charAt(0).toUpperCase() + raw.slice(1).toLowerCase() : '';
 
-    const cidade =
-      parsedUser?.cidade || parsedUser?.municipio ||
-      parsedCandidate?.cidade || parsedCandidate?.municipio ||
-      parsedCandidate?.protocoloFinal?.unidadeTrabalho?.regiao || '';
+    const cidade = parsedUser?.cidade || parsedUser?.municipio || '';
 
     const CARGO_MAP: Record<string, string> = {
       'soldado-pm': 'Soldado de 2ª Classe PM',
@@ -118,15 +104,12 @@ export default function ESocialLoadingPage() {
     const positionId = applicationData?.positionId || applicationData?.position_id || '';
     const cargo =
       CARGO_MAP[positionId] ||
-      parsedCandidate?.vagaSelecionada?.titulo ||
-      parsedCandidate?.jobTitle ||
-      parsedCandidate?.cargo ||
+      applicationData?.positionTitle ||
       parsedUser?.cargo ||
       'Soldado de 2ª Classe PM';
 
     const gender =
-      parsedUser?.gender || parsedUser?.genero || parsedUser?.sexo ||
-      parsedCandidate?.gender || parsedCandidate?.genero || 'M';
+      parsedUser?.gender || parsedUser?.genero || parsedUser?.sexo || 'M';
 
     setUserInfo({ firstName, cidade, cargo, gender });
 

@@ -41,36 +41,29 @@ export default function ESocialConfirmadoPage() {
     window.scrollTo(0, 0);
 
     let parsedUser: any = null;
-    let parsedCandidate: any = null;
+    let applicationData: any = null;
 
     try { parsedUser = JSON.parse(localStorage.getItem('userData') || localStorage.getItem('userMedicalLogin') || 'null'); } catch (_) {}
-    try {
-      const raw = localStorage.getItem('candidateData');
-      if (raw) { const d = JSON.parse(raw); parsedCandidate = d.candidate || d; }
-    } catch (_) {}
+    try { applicationData = JSON.parse(localStorage.getItem('applicationData') || 'null'); } catch (_) {}
 
-    const fullName = parsedUser?.nomeCompleto || parsedCandidate?.nomeCompleto || parsedCandidate?.fullName || '';
+    const fullName = parsedUser?.nomeCompleto || '';
     const rawFirst = fullName.split(' ')[0] || '';
     const firstName = rawFirst ? rawFirst.charAt(0).toUpperCase() + rawFirst.slice(1).toLowerCase() : '';
-    const cpf = parsedUser?.cpf || parsedCandidate?.cpf || '';
-    const gender = parsedUser?.sexo || parsedUser?.genero || parsedUser?.gender ||
-                   parsedCandidate?.genero || parsedCandidate?.gender || 'M';
-    const telefone = parsedCandidate?.capturaData?.telefone || parsedUser?.telefone || '';
-    const email = parsedCandidate?.capturaData?.email || parsedUser?.email || '';
+    const cpf = parsedUser?.cpf || '';
+    const gender = parsedUser?.sexo || parsedUser?.genero || parsedUser?.gender || 'M';
+    const telefone = parsedUser?.telefone || '';
+    const email = parsedUser?.email || '';
 
     const CARGO_MAP: Record<string, string> = {
       'soldado-pm': 'Soldado de 2ª Classe PM',
       'oficial-pm': 'Aspirante-a-Oficial PM',
     };
-    let cargo = '';
-    try {
-      const vaga = JSON.parse(localStorage.getItem('VagaSelecionada') || '{}');
-      cargo = vaga?.title || '';
-    } catch (_) {}
-    if (!cargo) {
-      const key = parsedCandidate?.vagaSelecionada?.key || parsedCandidate?.cargo || parsedUser?.cargo || '';
-      cargo = CARGO_MAP[key] || CARGO_MAP[key?.toLowerCase()] || 'Soldado de 2ª Classe PM';
-    }
+    const positionId = applicationData?.positionId || applicationData?.position_id || '';
+    const cargo =
+      CARGO_MAP[positionId] ||
+      applicationData?.positionTitle ||
+      parsedUser?.cargo ||
+      'Soldado de 2ª Classe PM';
 
     setUserInfo({ firstName, fullName, cpf, cargo, gender, telefone, email });
 

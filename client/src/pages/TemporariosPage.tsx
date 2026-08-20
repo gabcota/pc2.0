@@ -1278,15 +1278,15 @@ export default function TemporariosPage() {
 
       {/* Exam Location Selection Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="max-w-md max-h-[85vh] overflow-y-auto p-0 gap-0 overflow-hidden">
-          <div className="h-1" style={{ backgroundColor: '#1351b4' }} />
+        <DialogContent className="w-[calc(100%-2rem)] sm:w-full max-w-md max-h-[90vh] sm:max-h-[85vh] flex flex-col overflow-hidden p-0 gap-0 rounded-lg">
+          <div className="h-1 shrink-0" style={{ backgroundColor: '#1351b4' }} />
 
-          <div className="px-6 pt-5 pb-4">
+          <div className="px-4 sm:px-6 pt-4 sm:pt-5 pb-4 shrink-0">
             <DialogHeader className="space-y-2 text-left">
-              <p className="text-[11px] font-semibold tracking-wider uppercase" style={{ color: '#1351b4' }}>
+              <p className="text-[11px] font-semibold tracking-wider uppercase break-words" style={{ color: '#1351b4' }}>
                 Convocação para prova objetiva
               </p>
-              <DialogTitle className="text-lg font-semibold text-gray-900 leading-snug">
+              <DialogTitle className="text-base sm:text-lg font-semibold text-gray-900 leading-snug">
                 Escolha o local de realização da prova
               </DialogTitle>
               <DialogDescription asChild>
@@ -1305,18 +1305,18 @@ export default function TemporariosPage() {
           </div>
 
           {isLoadingLocations ? (
-            <div className="flex flex-col items-center justify-center py-12 px-6">
-              <Loader2 className="w-6 h-6 animate-spin mb-3 text-gray-400" />
-              <span className="text-sm text-gray-500">Buscando locais de prova próximos a você...</span>
+            <div className="flex flex-col items-center justify-center py-12 px-4 sm:px-6">
+              <Loader2 className="w-6 h-6 animate-spin mb-3 text-gray-400 shrink-0" />
+              <span className="text-sm text-gray-500 text-center">Buscando locais de prova próximos a você...</span>
             </div>
           ) : (
-            <div className="px-6 pb-6 space-y-5">
-              <div>
-                <p className="text-[11px] font-semibold tracking-wider uppercase text-gray-400 mb-2">
+            <div className="flex flex-col min-h-0 flex-1">
+              <div className="px-4 sm:px-6 pt-1 overflow-y-auto flex-1 min-h-0">
+                <p className="text-[11px] font-semibold tracking-wider uppercase text-gray-400 mb-2 sticky top-0 bg-white pt-1">
                   Unidades disponíveis
                 </p>
                 <RadioGroup value={selectedLocation} onValueChange={setSelectedLocation}>
-                  <div className="space-y-2">
+                  <div className="space-y-2 pb-3">
                     {examLocations.map((location) => {
                       const isSelected = selectedLocation === location.place_id;
                       return (
@@ -1329,24 +1329,24 @@ export default function TemporariosPage() {
                             backgroundColor: isSelected ? '#f5f8fd' : 'white',
                           }}
                         >
-                          <RadioGroupItem value={location.place_id} id={location.place_id} className="mt-0.5" />
+                          <RadioGroupItem value={location.place_id} id={location.place_id} className="mt-0.5 shrink-0" />
                           <div className="flex-1 min-w-0">
-                            <p className="font-medium text-gray-900 text-sm">{location.name}</p>
-                            <p className="text-xs text-gray-500 mt-0.5">{location.address}</p>
+                            <p className="font-medium text-gray-900 text-sm break-words">{location.name}</p>
+                            <p className="text-xs text-gray-500 mt-0.5 break-words">{location.address}</p>
                           </div>
                         </label>
                       );
                     })}
                   </div>
                 </RadioGroup>
+
+                <p className="text-xs text-gray-400 leading-relaxed border-t border-gray-100 pt-3 pb-4">
+                  Após a confirmação, a unidade e o horário informados passam a valer como local oficial de apresentação do candidato.
+                </p>
               </div>
 
-              <p className="text-xs text-gray-400 leading-relaxed border-t border-gray-100 pt-3">
-                Após a confirmação, a unidade e o horário informados passam a valer como local oficial de apresentação do candidato.
-              </p>
-
               {/* Action Buttons */}
-              <div className="space-y-2">
+              <div className="space-y-2 px-4 sm:px-6 pt-3 pb-4 sm:pb-6 border-t border-gray-100 shrink-0">
                 <Button
                   onClick={handleConfirmApplication}
                   disabled={!selectedLocation}

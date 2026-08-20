@@ -215,6 +215,88 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
     stateCode: "RJ",
     themeColor: "#4d1f3d",
   },
+  // vocacaopolicial.click — tenth firm (Dutra, Schiessl & Gracher, three
+  // sócios-administradores), separate CNPJ/address/GTM container. Kept in
+  // sync with client/src/lib/siteConfig.ts's VOCACAO_POLICIAL config; update
+  // both if this firm's registration data changes.
+  "vocacaopolicial.click": {
+    brand: "Direito no Exame Psicológico Policial",
+    razaoSocial: "Dutra, Schiessl & Gracher Advogados Associados",
+    cnpj: "60.888.465/0001-52",
+    address: "Rua Uruguai, 1348, Andar 4, Fazenda",
+    postalCode: "88302-202",
+    emailContato: "contato@dsgadvogados.adv.br",
+    phone: "(47) 3346-7770",
+    city: "Itajaí",
+    stateCode: "SC",
+    themeColor: "#2f4858",
+  },
+  // pmpelobrasil.click — eleventh firm (Julia Coelho Peres, sole
+  // practitioner), separate CNPJ/address/GTM container. Kept in sync with
+  // client/src/lib/siteConfig.ts's CONCURSO_SUSPENSO config; update both if
+  // this firm's registration data changes.
+  "pmpelobrasil.click": {
+    brand: "Direito em Concursos Suspensos ou Anulados",
+    razaoSocial: "J. C. Peres Sociedade Individual de Advocacia",
+    cnpj: "62.197.683/0001-76",
+    address: "Avenida Jurema, 416, Apt 24, Indianópolis",
+    postalCode: "04079-908",
+    emailContato: "jcoelhoperes@gmail.com",
+    phone: "(11) 98707-0800",
+    city: "São Paulo",
+    stateCode: "SP",
+    themeColor: "#0e5c73",
+  },
+  // guiadafarda.click — twelfth firm (Caroline Antunes Geraldi, sole
+  // practitioner), separate CNPJ/address/GTM container. Kept in sync with
+  // client/src/lib/siteConfig.ts's APRESENTACAO_FARDA config; update both if
+  // this firm's registration data changes.
+  "guiadafarda.click": {
+    brand: "Direito à Apresentação Pessoal na Farda",
+    razaoSocial: "Caroline Antunes Geraldi Sociedade Individual de Advocacia",
+    cnpj: "62.197.679/0001-08",
+    address: "Rua Dr Angelo Vita, 125, Apt 132, Vila Zilda (Tatuapé)",
+    postalCode: "03069-000",
+    emailContato: "adv.cantunes@gmail.com",
+    phone: "(47) 99171-7782",
+    city: "São Paulo",
+    stateCode: "SP",
+    themeColor: "#4a5e2f",
+  },
+  // pmemfoco.click — thirteenth firm (Carlos Leme & Juliana Leme, two
+  // sócios-administradores), separate CNPJ/address/GTM container. Kept in
+  // sync with client/src/lib/siteConfig.ts's TRANSPARENCIA_CONCURSO config;
+  // update both if this firm's registration data changes.
+  "pmemfoco.click": {
+    brand: "Direito à Transparência no Concurso da PM",
+    razaoSocial: "Carlos Leme & Juliana Leme Advogados",
+    cnpj: "43.542.532/0001-63",
+    address: "Avenida Adolfo Pinheiro, 2054, Conj 408, Santo Amaro",
+    postalCode: "04734-003",
+    emailContato: "ablancorocha@uol.com.br",
+    phone: "(11) 99844-3933",
+    city: "São Paulo",
+    stateCode: "SP",
+    themeColor: "#6b1f4d",
+  },
+  // guiadapm.click — fourteenth firm (Gobbette Marques & Barreto, two
+  // sócios-administradores), separate CNPJ/address/GTM container. No e-mail
+  // was provided in this firm's registration data (only phone numbers), so
+  // emailContato is intentionally left empty — do not fabricate one. Kept in
+  // sync with client/src/lib/siteConfig.ts's EXAME_TOXICOLOGICO config;
+  // update both if this firm's registration data changes.
+  "guiadapm.click": {
+    brand: "Direito no Exame Toxicológico do Concurso da PM",
+    razaoSocial: "Gobbette Marques & Barreto Advogados Associados",
+    cnpj: "20.300.477/0001-08",
+    address: "Avenida Getulio Vargas, 128, Edif. Gal. Dr. Naly da E. Mir, Sala 09/11",
+    postalCode: "29176-090",
+    emailContato: "",
+    phone: "(27) 99244-3959",
+    city: "Serra",
+    stateCode: "ES",
+    themeColor: "#3d5e6b",
+  },
 };
 
 interface FaqEntry {
@@ -415,6 +497,101 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
     {
       q: "Posso recorrer se for eliminado no teste de aptidão física por erro na aplicação do teste?",
       a: "Sim. Falhas na aplicação do teste — como equipamento inadequado, ausência de fiscalização padronizada ou desconsideração de laudo médico anterior — podem justificar recurso administrativo e, se necessário, revisão judicial do resultado.",
+    },
+    FAQ_WHATSAPP_NEUTRAL,
+  ],
+  "vocacaopolicial.click": [
+    {
+      q: "Fui eliminado no exame psicológico de um concurso policial — posso contestar?",
+      a: "Sim, especialmente quando o laudo é inconclusivo, contraria avaliações compatíveis anteriores ou não observa o direito de conhecer os critérios do perfil profissiográfico exigido e de interpor recurso com acesso aos parâmetros utilizados pela banca examinadora.",
+    },
+    {
+      q: "O que é o perfil profissiográfico e como ele pode eliminar um candidato?",
+      a: "É o conjunto de características psicológicas definidas no edital como compatíveis com a função policial. A eliminação só é válida quando fundamentada em critérios técnicos objetivos e previamente divulgados — avaliações genéricas ou sem fundamentação podem ser questionadas administrativamente.",
+    },
+    {
+      q: "Fui desligado durante o curso de formação por reprovação em avaliação psicológica — o que posso fazer?",
+      a: "O desligamento deve ser precedido de procedimento formal, com direito a conhecer os critérios de avaliação, apresentar contestação e ter acesso ao laudo técnico. Vícios nesse procedimento podem justificar a revisão administrativa ou judicial do desligamento.",
+    },
+    {
+      q: "É possível pedir uma nova avaliação psicológica se eu discordar do resultado?",
+      a: "Depende das regras do edital. Em diversos casos é possível solicitar reavaliação por junta distinta quando há fundamentada dúvida técnica sobre o laudo, especialmente diante de avaliações contraditórias ou ausência de justificativa individualizada para a eliminação.",
+    },
+    FAQ_WHATSAPP_NEUTRAL,
+  ],
+  "pmpelobrasil.click": [
+    {
+      q: "O concurso da Polícia Militar em que me inscrevi foi suspenso por decisão judicial — o que acontece com a minha inscrição?",
+      a: "Em regra, a suspensão paralisa temporariamente as etapas do certame até a decisão final, preservando os direitos já adquiridos pelos inscritos. Após o restabelecimento do concurso, os candidatos devem ser reintegrados à mesma fase em que o processo foi interrompido, sem prejuízo de sua classificação.",
+    },
+    {
+      q: "É possível pedir a prorrogação do prazo de validade de um concurso paralisado?",
+      a: "Sim, quando a paralisação decorreu de decisão judicial ou de fato alheio à vontade da administração, é possível pleitear a prorrogação do prazo de validade do certame, de modo a assegurar que o tempo de suspensão não prejudique a expectativa de nomeação dos aprovados.",
+    },
+    {
+      q: "Um concurso pode ser anulado por suspeita de fraude ou vazamento de provas — o que acontece com quem foi aprovado regularmente?",
+      a: "A anulação total só se justifica quando a fraude compromete a lisura de todo o certame. Quando é possível identificar e isolar os candidatos beneficiados de forma irregular, a administração deve, sempre que viável, preservar a validade do concurso para os demais aprovados sem qualquer participação na fraude.",
+    },
+    {
+      q: "Posso contestar o adiamento de uma prova sem aviso prévio suficiente?",
+      a: "Sim. Alterações de data, horário ou local de prova devem ser comunicadas com antecedência razoável e por meio de divulgação oficial acessível a todos os inscritos. A ausência de comunicação adequada pode justificar a remarcação da prova ou a anulação da etapa realizada de forma irregular.",
+    },
+    FAQ_WHATSAPP_NEUTRAL,
+  ],
+  "guiadafarda.click": [
+    {
+      q: "Recebi uma sanção disciplinar por corte de cabelo ou barba fora do padrão — posso contestar?",
+      a: "Sim, especialmente quando o padrão exigido não está claramente previsto em regulamento ou quando a sanção foi aplicada sem oportunidade de correção prévia ou de apresentação de defesa. Critérios genéricos ou aplicados de forma desigual entre militares/policiais podem ser questionados administrativamente.",
+    },
+    {
+      q: "O regulamento pode proibir qualquer tatuagem visível, mesmo já autorizada anteriormente?",
+      a: "Alterações no regulamento de apresentação pessoal não podem, em regra, retroagir para punir situações já consolidadas e previamente autorizadas. A aplicação retroativa de uma nova exigência sem período de adequação pode ser objeto de revisão administrativa ou judicial.",
+    },
+    {
+      q: "Fui punido por uso incorreto do uniforme — a sanção precisa seguir algum processo formal?",
+      a: "Sim. Mesmo infrações consideradas leves exigem notificação do fato, oportunidade de manifestação e proporcionalidade entre a conduta e a penalidade aplicada. A ausência desses elementos pode tornar a sanção passível de anulação.",
+    },
+    {
+      q: "É possível recorrer de uma detenção disciplinar aplicada sem direito de defesa prévia?",
+      a: "Sim. Toda sanção disciplinar, inclusive as de menor gravidade, deve observar o contraditório e a ampla defesa. A aplicação de detenção ou punição semelhante sem esse procedimento mínimo pode ser contestada pelas vias administrativa e judicial.",
+    },
+    FAQ_WHATSAPP_NEUTRAL,
+  ],
+  "pmemfoco.click": [
+    {
+      q: "Posso pedir cópia da minha folha de respostas e do espelho de correção da prova?",
+      a: "Sim. O candidato tem direito de acesso aos seus próprios dados e ao resultado de sua avaliação, incluindo folha de respostas e espelho de correção, especialmente quando necessários para fundamentar um recurso administrativo dentro do prazo previsto no edital.",
+    },
+    {
+      q: "A banca é obrigada a divulgar os critérios de correção da prova discursiva?",
+      a: "Sim, os critérios objetivos de avaliação devem ser divulgados previamente ou, no mínimo, disponibilizados após o resultado, para permitir que o candidato verifique se a nota atribuída corresponde aos parâmetros anunciados no edital.",
+    },
+    {
+      q: "Tenho direito de acessar a ata da sessão que decidiu minha eliminação?",
+      a: "Em regra, sim. Atas de sessões que resultam em decisões que afetam diretamente um candidato são consideradas informações de interesse pessoal e seu acesso pode ser requerido administrativamente, com base no direito à ampla defesa e ao contraditório.",
+    },
+    {
+      q: "O que fazer se a administração se recusar a fornecer informações sobre meu processo seletivo?",
+      a: "A recusa injustificada de acesso a informações relacionadas ao próprio processo seletivo pode ser contestada administrativamente e, se necessário, por meio de mandado de segurança ou outra medida judicial cabível, especialmente quando o prazo recursal está em curso.",
+    },
+    FAQ_WHATSAPP_NEUTRAL,
+  ],
+  "guiadapm.click": [
+    {
+      q: "Fui eliminado por resultado positivo no exame toxicológico — posso contestar?",
+      a: "Sim, especialmente quando o laudo não observa os padrões técnicos exigidos, apresenta divergência entre a primeira e a segunda análise, ou quando o procedimento de coleta e análise não seguiu as normas técnicas aplicáveis. Vícios no exame podem justificar a revisão administrativa ou judicial da eliminação.",
+    },
+    {
+      q: "Tenho direito a uma contraprova ou segunda coleta antes da eliminação?",
+      a: "Em regra, sim — o edital costuma prever o direito à contraprova em laboratório distinto antes da eliminação definitiva. A ausência dessa oportunidade, quando prevista em regulamento, pode tornar o ato eliminatório passível de anulação.",
+    },
+    {
+      q: "A cadeia de custódia da amostra pode ser questionada?",
+      a: "Sim. Falhas na cadeia de custódia — como ausência de lacração adequada, identificação incorreta da amostra ou intervalo de tempo incompatível com os prazos técnicos — podem comprometer a confiabilidade do resultado e fundamentar um recurso administrativo.",
+    },
+    {
+      q: "O resultado de um exame toxicológico anterior pode ser usado indevidamente contra o candidato?",
+      a: "Não. A avaliação deve considerar apenas o exame realizado dentro do próprio certame, nos termos e prazos previstos no edital. O uso de resultados de exames anteriores, sem relação com o processo seletivo em curso, pode ser contestado administrativamente.",
     },
     FAQ_WHATSAPP_NEUTRAL,
   ],
@@ -907,6 +1084,206 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Orientação jurídica sobre eliminação por tatuagem, altura, peso e reprovação na inspeção de saúde em concursos militares. Maria da Penha Amorim - Sociedade Individual de Advocacia — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.d6e29f83",
     gtmId: "GTM-TQTDTZZM",
+  },
+  "vocacaopolicial.click": {
+    domain: "vocacaopolicial.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Dutra, Schiessl & Gracher Advogados — Avaliação Psicológica em Concursos para Carreira Policial",
+    description:
+      "Orientação jurídica especializada sobre eliminação no exame psicológico, perfil profissiográfico e desligamento em cursos de formação para carreiras policiais. Dutra, Schiessl & Gracher Advogados Associados · CNPJ 60.888.465/0001-52 · Itajaí/SC. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    author: "Dutra, Schiessl & Gracher Advogados Associados",
+    ogType: "website",
+    siteName: "Direito no Exame Psicológico Policial",
+    ogTitle:
+      "Avaliação Psicológica em Concursos para Carreira Policial | Dutra, Schiessl & Gracher",
+    ogDescription:
+      "Orientação jurídica sobre eliminação no exame psicológico e desligamento em cursos de formação policial. Dutra, Schiessl & Gracher Advogados Associados — Itajaí/SC. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.c73a5f19",
+    gtmId: "GTM-NKR5WHC9",
+  },
+  "www.vocacaopolicial.click": {
+    domain: "vocacaopolicial.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Dutra, Schiessl & Gracher Advogados — Avaliação Psicológica em Concursos para Carreira Policial",
+    description:
+      "Orientação jurídica especializada sobre eliminação no exame psicológico, perfil profissiográfico e desligamento em cursos de formação para carreiras policiais. Dutra, Schiessl & Gracher Advogados Associados · CNPJ 60.888.465/0001-52 · Itajaí/SC. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    author: "Dutra, Schiessl & Gracher Advogados Associados",
+    ogType: "website",
+    siteName: "Direito no Exame Psicológico Policial",
+    ogTitle:
+      "Avaliação Psicológica em Concursos para Carreira Policial | Dutra, Schiessl & Gracher",
+    ogDescription:
+      "Orientação jurídica sobre eliminação no exame psicológico e desligamento em cursos de formação policial. Dutra, Schiessl & Gracher Advogados Associados — Itajaí/SC. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.c73a5f19",
+    gtmId: "GTM-NKR5WHC9",
+  },
+  "pmpelobrasil.click": {
+    domain: "pmpelobrasil.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "J. C. Peres Advocacia — Suspensão, Anulação e Prorrogação de Concursos para a Polícia Militar",
+    description:
+      "Orientação jurídica especializada sobre suspensão judicial, anulação por fraude e prorrogação de prazo de validade em concursos para ingresso na Polícia Militar em todo o Brasil. J. C. Peres Sociedade Individual de Advocacia · CNPJ 62.197.683/0001-76 · São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    author: "J. C. Peres Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direito em Concursos Suspensos ou Anulados",
+    ogTitle:
+      "Suspensão, Anulação e Prorrogação de Concursos para a Polícia Militar | J. C. Peres Advocacia",
+    ogDescription:
+      "Orientação jurídica sobre suspensão judicial, anulação por fraude e prorrogação de prazo em concursos para a Polícia Militar. J. C. Peres Sociedade Individual de Advocacia — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.e8b3f6d2",
+    gtmId: "GTM-M35R4H5N",
+  },
+  "www.pmpelobrasil.click": {
+    domain: "pmpelobrasil.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "J. C. Peres Advocacia — Suspensão, Anulação e Prorrogação de Concursos para a Polícia Militar",
+    description:
+      "Orientação jurídica especializada sobre suspensão judicial, anulação por fraude e prorrogação de prazo de validade em concursos para ingresso na Polícia Militar em todo o Brasil. J. C. Peres Sociedade Individual de Advocacia · CNPJ 62.197.683/0001-76 · São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    author: "J. C. Peres Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direito em Concursos Suspensos ou Anulados",
+    ogTitle:
+      "Suspensão, Anulação e Prorrogação de Concursos para a Polícia Militar | J. C. Peres Advocacia",
+    ogDescription:
+      "Orientação jurídica sobre suspensão judicial, anulação por fraude e prorrogação de prazo em concursos para a Polícia Militar. J. C. Peres Sociedade Individual de Advocacia — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.e8b3f6d2",
+    gtmId: "GTM-M35R4H5N",
+  },
+  "guiadafarda.click": {
+    domain: "guiadafarda.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Caroline Antunes Geraldi Advocacia — Sanções Disciplinares por Apresentação Pessoal e Uso de Farda",
+    description:
+      "Orientação jurídica especializada sobre sanções disciplinares por apresentação pessoal, tatuagem, corte de cabelo e uso irregular do uniforme aplicadas a militares e policiais em atividade. Caroline Antunes Geraldi Sociedade Individual de Advocacia · CNPJ 62.197.679/0001-08 · São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    author: "Caroline Antunes Geraldi Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direito à Apresentação Pessoal na Farda",
+    ogTitle:
+      "Sanções Disciplinares por Apresentação Pessoal e Uso de Farda | Caroline Antunes Geraldi Advocacia",
+    ogDescription:
+      "Orientação jurídica sobre sanções disciplinares por apresentação pessoal, tatuagem e uso irregular do uniforme em corporações militares e policiais. Caroline Antunes Geraldi Sociedade Individual de Advocacia — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.f1a4c8e3",
+    gtmId: "GTM-MMVJ5VMV",
+  },
+  "www.guiadafarda.click": {
+    domain: "guiadafarda.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Caroline Antunes Geraldi Advocacia — Sanções Disciplinares por Apresentação Pessoal e Uso de Farda",
+    description:
+      "Orientação jurídica especializada sobre sanções disciplinares por apresentação pessoal, tatuagem, corte de cabelo e uso irregular do uniforme aplicadas a militares e policiais em atividade. Caroline Antunes Geraldi Sociedade Individual de Advocacia · CNPJ 62.197.679/0001-08 · São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    author: "Caroline Antunes Geraldi Sociedade Individual de Advocacia",
+    ogType: "website",
+    siteName: "Direito à Apresentação Pessoal na Farda",
+    ogTitle:
+      "Sanções Disciplinares por Apresentação Pessoal e Uso de Farda | Caroline Antunes Geraldi Advocacia",
+    ogDescription:
+      "Orientação jurídica sobre sanções disciplinares por apresentação pessoal, tatuagem e uso irregular do uniforme em corporações militares e policiais. Caroline Antunes Geraldi Sociedade Individual de Advocacia — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.f1a4c8e3",
+    gtmId: "GTM-MMVJ5VMV",
+  },
+  "pmemfoco.click": {
+    domain: "pmemfoco.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Carlos Leme & Juliana Leme Advogados — Transparência e Acesso a Documentos em Concursos da Polícia Militar",
+    description:
+      "Orientação jurídica especializada sobre direito de acesso a atas, gabaritos, folhas de resposta e critérios de correção em concursos para ingresso na Polícia Militar. Carlos Leme & Juliana Leme Advogados · CNPJ 43.542.532/0001-63 · São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    author: "Carlos Leme & Juliana Leme Advogados",
+    ogType: "website",
+    siteName: "Direito à Transparência no Concurso da PM",
+    ogTitle:
+      "Transparência e Acesso a Documentos em Concursos da Polícia Militar | Carlos Leme & Juliana Leme Advogados",
+    ogDescription:
+      "Orientação jurídica sobre acesso a atas, gabaritos e critérios de correção em concursos da Polícia Militar. Carlos Leme & Juliana Leme Advogados — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.a3d7e219",
+    gtmId: "GTM-PKS39LJP",
+  },
+  "www.pmemfoco.click": {
+    domain: "pmemfoco.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Carlos Leme & Juliana Leme Advogados — Transparência e Acesso a Documentos em Concursos da Polícia Militar",
+    description:
+      "Orientação jurídica especializada sobre direito de acesso a atas, gabaritos, folhas de resposta e critérios de correção em concursos para ingresso na Polícia Militar. Carlos Leme & Juliana Leme Advogados · CNPJ 43.542.532/0001-63 · São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    author: "Carlos Leme & Juliana Leme Advogados",
+    ogType: "website",
+    siteName: "Direito à Transparência no Concurso da PM",
+    ogTitle:
+      "Transparência e Acesso a Documentos em Concursos da Polícia Militar | Carlos Leme & Juliana Leme Advogados",
+    ogDescription:
+      "Orientação jurídica sobre acesso a atas, gabaritos e critérios de correção em concursos da Polícia Militar. Carlos Leme & Juliana Leme Advogados — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.a3d7e219",
+    gtmId: "GTM-PKS39LJP",
+  },
+  "guiadapm.click": {
+    domain: "guiadapm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Gobbette Marques & Barreto Advogados — Exame Toxicológico em Concursos da Polícia Militar",
+    description:
+      "Orientação jurídica especializada sobre eliminação por resultado positivo em exame toxicológico, direito à contraprova e cadeia de custódia da amostra em concursos para ingresso na Polícia Militar. Gobbette Marques & Barreto Advogados Associados · CNPJ 20.300.477/0001-08 · Serra/ES. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    author: "Gobbette Marques & Barreto Advogados Associados",
+    ogType: "website",
+    siteName: "Direito no Exame Toxicológico do Concurso da PM",
+    ogTitle:
+      "Exame Toxicológico em Concursos da Polícia Militar | Gobbette Marques & Barreto Advogados",
+    ogDescription:
+      "Orientação jurídica sobre eliminação por exame toxicológico, contraprova e cadeia de custódia da amostra em concursos da Polícia Militar. Gobbette Marques & Barreto Advogados Associados — Serra/ES. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.b6f2a874",
+    gtmId: "GTM-5SKD2W93",
+  },
+  "www.guiadapm.click": {
+    domain: "guiadapm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title:
+      "Gobbette Marques & Barreto Advogados — Exame Toxicológico em Concursos da Polícia Militar",
+    description:
+      "Orientação jurídica especializada sobre eliminação por resultado positivo em exame toxicológico, direito à contraprova e cadeia de custódia da amostra em concursos para ingresso na Polícia Militar. Gobbette Marques & Barreto Advogados Associados · CNPJ 20.300.477/0001-08 · Serra/ES. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    author: "Gobbette Marques & Barreto Advogados Associados",
+    ogType: "website",
+    siteName: "Direito no Exame Toxicológico do Concurso da PM",
+    ogTitle:
+      "Exame Toxicológico em Concursos da Polícia Militar | Gobbette Marques & Barreto Advogados",
+    ogDescription:
+      "Orientação jurídica sobre eliminação por exame toxicológico, contraprova e cadeia de custódia da amostra em concursos da Polícia Militar. Gobbette Marques & Barreto Advogados Associados — Serra/ES. Consulte um advogado habilitado para orientação específica ao seu caso.",
+    analyticsCore: "signal.b6f2a874",
+    gtmId: "GTM-5SKD2W93",
   },
 };
 

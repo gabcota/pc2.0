@@ -1,0 +1,51 @@
+Adicione um novo domínio ao projeto junto com sua variante www, seguindo o mesmo padrão já usado para os outros dominios em server/domainTracking.ts e client/src/lib/siteConfig.ts. Garanta que os dados fiquem idênticos e consistentes entre domainTracking.ts (COMPANY_DATA + DOMAIN_TRACKING) e siteConfig.ts (CONFIGSos 1:1 dos outros dominios. Crie um ângulo diferente (ex: outro foco dentro do tema, outro tom, outro título/keywords), tanto no domainTracking.ts (title, description, keywords, ogTitle, ogDescription, siteName, author) quanto no siteConfig.ts (todos os textos exibidos na página — headline, subheadline, seções, FAQ, etc.), para não parecer conteúdo duplicado entre os domínios. Ao escrever títulos, descrições e keywords, siga as políticas de conteúdo do Google Ads (nada de promessas de resultado/aprovação garantida, nada de linguagem que sugira vínculo oficial com o X orgão governamental, sem alegações enganosas ou sensacionalistas, sem uso indevido de símbolos/marcas oficiais). Dados da empresa/domínio: CNPJ: 60.888.465/0001-52 - 60888465000152
+
+Razão Social: Dutra, Schiessl & Gracher Advogados Associados
+
+Data da Abertura: 19/05/2025 1 ano, 3 meses e 1 dia
+
+Porte: Sem Enquadramento
+
+Natureza Jurídica: Sociedade Simples Pura
+
+Opção pelo MEI: Não
+
+Opção pelo Simples: Sim
+
+Data opção Simples: 19/05/2025
+
+Capital Social: R$ 25.000,00
+
+Tipo: Matriz
+
+Situação: Ativa
+
+Data Situação Cadastral: 19/05/2025
+
+Contatos E-mail: contato@dsgadvogados.adv.br(Enviar E-mail)
+
+Telefone(s): (47) 3346-7770(Ligar)
+
+Localização Logradouro: Rua Uruguai, 1348
+
+Complemento: Andar 4
+
+Bairro: Fazenda
+
+CEP: 88302-202
+
+Município: Itajaí
+
+Estado: Santa Catarina
+
+Para correspondência: Dutra, Schiessl & Gracher Advogados Associados Rua Uruguai 1348 Andar 4 Fazenda Itajaí SC 88302-202
+
+Procurar no Google Maps Atividades - CNAES Principal: 69.11-7-01 - Serviços advocatícios⇩
+
+Quadro de Sócios e Administradores Elaine Sayonara Gracher Marques - Sócio-Administrador Marcelo Jose Schiessl - Sócio-Administrador Pedro Francisco Dutra da Silva - Sócio-Administrador
+
+Qualificação do responsável pela empresa: Sócio-Administrador
+
+Sobre A empresa Dutra, Schiessl & Gracher Advogados Associados de CNPJ 60.888.465/0001-52, foi fundada em 19/05/2025 na cidade Itajaí no estado Santa Catarina. Sua atividade principal, conforme a Receita Federal, é 69.11-7-01 - Serviços advocatícios. Sua situação cadastral até o momento é Ativa.
+
+vocacaopolicial.click GTM-NKR5WHC9 Tracking/Ads: GTM Container ID: Garanta que os dados fiquem idênticos e consistentes entre domainTracking.ts (COMPANY_DATA + DOMAIN_TRACKING) e siteConfig.ts (CONFIGS) para esse domínio — mesmo CNPJ, razão social, endereço, e-mail e telefone nos dois arquivos, sem reaproveitar dados de outros domínios já cadastrados.

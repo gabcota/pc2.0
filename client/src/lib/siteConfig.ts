@@ -570,6 +570,302 @@ const MILITAR_CONCURSEIRO: RawConfig = {
   // (isVerifiedLawFirm) when BOTH advogadoNome and oabNumero are set.
 };
 
+// vocacaopolicial.click (Dutra, Schiessl & Gracher Advogados Associados —
+// three sócios-administradores, tenth distinct firm/CNPJ). Framed around the
+// psychological-evaluation stage of police selection processes (exame
+// psicológico, perfil profissiográfico, desligamento em academia de
+// formação) — a tenth angle distinct from the generic candidate/medical
+// framing in DIREITO_CANDIDATO and from the broader military-recruitment
+// framing (tattoo/height/health) in MILITAR_CONCURSEIRO and MILITAR_FORMACAO.
+const VOCACAO_POLICIAL: RawConfig = {
+  hostname: 'vocacaopolicial.click',
+  brand: 'Direito no Exame Psicológico Policial',
+  siteSubtitle: 'Orientação Jurídica sobre Avaliação Psicológica em Concursos para Carreira Policial',
+  razaoSocial: 'Dutra, Schiessl & Gracher Advogados Associados',
+  cnpj: '60888465000152',
+  cnpjFormatted: '60.888.465/0001-52',
+  endereco: 'Rua Uruguai, 1348, Andar 4',
+  bairro: 'Fazenda',
+  cidade: 'Itajaí',
+  estado: 'SC',
+  cep: '88302-202',
+  enderecoCompleto: 'Rua Uruguai, 1348, Andar 4 · Fazenda · Itajaí/SC · CEP 88302-202',
+  canonicalUrl: 'https://www.vocacaopolicial.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre avaliação psicológica em concursos para carreira policial e não constituem aconselhamento jurídico individual. Este site é independente e não possui vínculo com qualquer corporação, órgão, banca organizadora ou instituição policial.',
+  email: 'contato@dsgadvogados.adv.br',
+  telefone: '(47) 3346-7770',
+  cnae: '69.11-7-01 - Serviços advocatícios',
+  naturezaJuridica: 'Sociedade Simples Pura',
+  dataAbertura: '19/05/2025',
+  capitalSocial: 'R$ 25.000,00',
+  horarioAtendimento: 'Segunda a Sexta, 08h às 17h',
+  advogadoNome: 'Dutra, Schiessl & Gracher Advogados Associados',
+  advogadoAtuacao: 'Direito Administrativo e Avaliação Psicológica em Concursos para Carreira Policial',
+  breadcrumbLabel: 'Direitos na Avaliação Psicológica Policial',
+  h1Override: 'Orientação jurídica sobre avaliação psicológica em concursos para carreira policial',
+  leadOverride: 'Reunimos orientação jurídica sobre eliminação no exame psicológico, perfil profissiográfico e desligamento em cursos de formação de carreiras policiais. Consulte um advogado habilitado para orientação específica ao seu caso.',
+  ctaHeroText: 'Falar com um advogado',
+  faq: [
+    {
+      q: 'Fui eliminado no exame psicológico de um concurso policial — posso contestar?',
+      a: 'Sim, especialmente quando o laudo é inconclusivo, contraria avaliações compatíveis anteriores ou não observa o direito de conhecer os critérios do perfil profissiográfico exigido e de interpor recurso com acesso aos parâmetros utilizados pela banca examinadora.',
+    },
+    {
+      q: 'O que é o perfil profissiográfico e como ele pode eliminar um candidato?',
+      a: 'É o conjunto de características psicológicas definidas no edital como compatíveis com a função policial. A eliminação só é válida quando fundamentada em critérios técnicos objetivos e previamente divulgados — avaliações genéricas ou sem fundamentação podem ser questionadas administrativamente.',
+    },
+    {
+      q: 'Fui desligado durante o curso de formação por reprovação em avaliação psicológica — o que posso fazer?',
+      a: 'O desligamento deve ser precedido de procedimento formal, com direito a conhecer os critérios de avaliação, apresentar contestação e ter acesso ao laudo técnico. Vícios nesse procedimento podem justificar a revisão administrativa ou judicial do desligamento.',
+    },
+    {
+      q: 'É possível pedir uma nova avaliação psicológica se eu discordar do resultado?',
+      a: 'Depende das regras do edital. Em diversos casos é possível solicitar reavaliação por junta distinta quando há fundamentada dúvida técnica sobre o laudo, especialmente diante de avaliações contraditórias ou ausência de justificativa individualizada para a eliminação.',
+    },
+  ],
+  // oabNumero: intentionally left unset — no OAB registration number was
+  // provided; advogadoNome uses the firm name (três sócios-administradores,
+  // no single lead attorney given). ZapZapPage only shows office/attorney
+  // claims (isVerifiedLawFirm) when BOTH advogadoNome and oabNumero are set.
+};
+
+// pmpelobrasil.click (J. C. Peres Sociedade Individual de Advocacia — sole
+// practitioner, eleventh distinct firm/CNPJ). Framed around mid-process
+// disruption of a Polícia Militar selection process (judicial suspension,
+// anulação por fraude, adiamento de prova, prorrogação de validade) — an
+// eleventh angle distinct from pre-inscription edital disputes
+// (DIREITO_EDITAL), exam-content disputes (DIREITOS_PROVA) and
+// convocation/nomination order (DIREITO_VAGAS).
+const CONCURSO_SUSPENSO: RawConfig = {
+  hostname: 'pmpelobrasil.click',
+  brand: 'Direito em Concursos Suspensos ou Anulados',
+  siteSubtitle: 'Orientação Jurídica sobre Suspensão, Anulação e Prorrogação de Concursos para a Polícia Militar',
+  razaoSocial: 'J. C. Peres Sociedade Individual de Advocacia',
+  cnpj: '62197683000176',
+  cnpjFormatted: '62.197.683/0001-76',
+  endereco: 'Avenida Jurema, 416, Apt 24',
+  bairro: 'Indianópolis',
+  cidade: 'São Paulo',
+  estado: 'SP',
+  cep: '04079-908',
+  enderecoCompleto: 'Avenida Jurema, 416, Apt 24 · Indianópolis · São Paulo/SP · CEP 04079-908',
+  canonicalUrl: 'https://www.pmpelobrasil.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre suspensão, anulação e prorrogação de concursos públicos para a Polícia Militar e não constituem aconselhamento jurídico individual. Este site é independente e não possui vínculo com qualquer corporação, órgão, banca organizadora ou instituição pública.',
+  email: 'jcoelhoperes@gmail.com',
+  telefone: '(11) 98707-0800',
+  cnae: '69.11-7-01 - Serviços advocatícios',
+  naturezaJuridica: 'Sociedade Unipessoal de Advocacia',
+  dataAbertura: '12/08/2025',
+  capitalSocial: 'R$ 1.000,00',
+  horarioAtendimento: 'Segunda a Sexta, 08h às 17h',
+  advogadoNome: 'Julia Coelho Peres',
+  advogadoAtuacao: 'Direito Administrativo e Suspensão/Anulação de Concursos para a Polícia Militar',
+  breadcrumbLabel: 'Suspensão e Anulação de Concursos PM',
+  h1Override: 'Orientação jurídica sobre suspensão, anulação e prorrogação de concursos para a Polícia Militar',
+  leadOverride: 'Reunimos orientação jurídica sobre suspensão judicial, anulação por fraude, adiamento de provas e prorrogação do prazo de validade em concursos para ingresso na Polícia Militar. Consulte um advogado habilitado para orientação específica ao seu caso.',
+  ctaHeroText: 'Falar com um advogado',
+  faq: [
+    {
+      q: 'O concurso da Polícia Militar em que me inscrevi foi suspenso por decisão judicial — o que acontece com a minha inscrição?',
+      a: 'Em regra, a suspensão paralisa temporariamente as etapas do certame até a decisão final, preservando os direitos já adquiridos pelos inscritos. Após o restabelecimento do concurso, os candidatos devem ser reintegrados à mesma fase em que o processo foi interrompido, sem prejuízo de sua classificação.',
+    },
+    {
+      q: 'É possível pedir a prorrogação do prazo de validade de um concurso paralisado?',
+      a: 'Sim, quando a paralisação decorreu de decisão judicial ou de fato alheio à vontade da administração, é possível pleitear a prorrogação do prazo de validade do certame, de modo a assegurar que o tempo de suspensão não prejudique a expectativa de nomeação dos aprovados.',
+    },
+    {
+      q: 'Um concurso pode ser anulado por suspeita de fraude ou vazamento de provas — o que acontece com quem foi aprovado regularmente?',
+      a: 'A anulação total só se justifica quando a fraude compromete a lisura de todo o certame. Quando é possível identificar e isolar os candidatos beneficiados de forma irregular, a administração deve, sempre que viável, preservar a validade do concurso para os demais aprovados sem qualquer participação na fraude.',
+    },
+    {
+      q: 'Posso contestar o adiamento de uma prova sem aviso prévio suficiente?',
+      a: 'Sim. Alterações de data, horário ou local de prova devem ser comunicadas com antecedência razoável e por meio de divulgação oficial acessível a todos os inscritos. A ausência de comunicação adequada pode justificar a remarcação da prova ou a anulação da etapa realizada de forma irregular.',
+    },
+  ],
+  // oabNumero: intentionally left unset — no OAB registration number was
+  // provided, even though this firm is a single named practitioner (Titular
+  // Pessoa Física). ZapZapPage only shows office/attorney claims
+  // (isVerifiedLawFirm) when BOTH advogadoNome and oabNumero are set.
+};
+
+// guiadafarda.click (Caroline Antunes Geraldi Sociedade Individual de
+// Advocacia — sole practitioner, twelfth distinct firm/CNPJ). Framed around
+// disciplinary sanctions applied to already-serving militares/policiais for
+// personal-presentation and uniform-use standards (corte de cabelo, barba,
+// tatuagem, uso do uniforme) — a twelfth angle distinct from CARREIRA_MILITAR
+// (broader promoções/transferências/conselho de disciplina) and from
+// MILITAR_CONCURSEIRO (recruitment-stage tattoo/height/health exclusion).
+const APRESENTACAO_FARDA: RawConfig = {
+  hostname: 'guiadafarda.click',
+  brand: 'Direito à Apresentação Pessoal na Farda',
+  siteSubtitle: 'Orientação Jurídica sobre Sanções Disciplinares por Apresentação Pessoal e Uso de Farda',
+  razaoSocial: 'Caroline Antunes Geraldi Sociedade Individual de Advocacia',
+  cnpj: '62197679000108',
+  cnpjFormatted: '62.197.679/0001-08',
+  endereco: 'Rua Dr Angelo Vita, 125, Apt 132',
+  bairro: 'Vila Zilda (Tatuapé)',
+  cidade: 'São Paulo',
+  estado: 'SP',
+  cep: '03069-000',
+  enderecoCompleto: 'Rua Dr Angelo Vita, 125, Apt 132 · Vila Zilda (Tatuapé) · São Paulo/SP · CEP 03069-000',
+  canonicalUrl: 'https://www.guiadafarda.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre sanções disciplinares por apresentação pessoal e uso de farda em corporações militares e policiais e não constituem aconselhamento jurídico individual. Este site é independente e não possui vínculo com qualquer corporação, órgão ou instituição militar ou policial.',
+  email: 'adv.cantunes@gmail.com',
+  telefone: '(47) 99171-7782',
+  cnae: '69.11-7-01 - Serviços advocatícios',
+  naturezaJuridica: 'Sociedade Unipessoal de Advocacia',
+  dataAbertura: '12/08/2025',
+  capitalSocial: 'R$ 5.000,00',
+  horarioAtendimento: 'Segunda a Sexta, 08h às 17h',
+  advogadoNome: 'Caroline Antunes Geraldi',
+  advogadoAtuacao: 'Direito Administrativo Disciplinar e Apresentação Pessoal em Corporações Militares e Policiais',
+  breadcrumbLabel: 'Sanções por Apresentação Pessoal na Farda',
+  h1Override: 'Orientação jurídica sobre sanções disciplinares por apresentação pessoal e uso de farda',
+  leadOverride: 'Reunimos orientação jurídica sobre sanções disciplinares por corte de cabelo, barba, tatuagem e uso irregular do uniforme aplicadas a militares e policiais em atividade. Consulte um advogado habilitado para orientação específica ao seu caso.',
+  ctaHeroText: 'Falar com um advogado',
+  faq: [
+    {
+      q: 'Recebi uma sanção disciplinar por corte de cabelo ou barba fora do padrão — posso contestar?',
+      a: 'Sim, especialmente quando o padrão exigido não está claramente previsto em regulamento ou quando a sanção foi aplicada sem oportunidade de correção prévia ou de apresentação de defesa. Critérios genéricos ou aplicados de forma desigual entre militares/policiais podem ser questionados administrativamente.',
+    },
+    {
+      q: 'O regulamento pode proibir qualquer tatuagem visível, mesmo já autorizada anteriormente?',
+      a: 'Alterações no regulamento de apresentação pessoal não podem, em regra, retroagir para punir situações já consolidadas e previamente autorizadas. A aplicação retroativa de uma nova exigência sem período de adequação pode ser objeto de revisão administrativa ou judicial.',
+    },
+    {
+      q: 'Fui punido por uso incorreto do uniforme — a sanção precisa seguir algum processo formal?',
+      a: 'Sim. Mesmo infrações consideradas leves exigem notificação do fato, oportunidade de manifestação e proporcionalidade entre a conduta e a penalidade aplicada. A ausência desses elementos pode tornar a sanção passível de anulação.',
+    },
+    {
+      q: 'É possível recorrer de uma detenção disciplinar aplicada sem direito de defesa prévia?',
+      a: 'Sim. Toda sanção disciplinar, inclusive as de menor gravidade, deve observar o contraditório e a ampla defesa. A aplicação de detenção ou punição semelhante sem esse procedimento mínimo pode ser contestada pelas vias administrativa e judicial.',
+    },
+  ],
+  // oabNumero: intentionally left unset — no OAB registration number was
+  // provided, even though this firm is a single named practitioner (Titular
+  // Pessoa Física). ZapZapPage only shows office/attorney claims
+  // (isVerifiedLawFirm) when BOTH advogadoNome and oabNumero are set.
+};
+
+// pmemfoco.click (Carlos Leme & Juliana Leme Advogados — two sócios-
+// administradores, thirteenth distinct firm/CNPJ). Framed around the
+// candidate's right of access to selection-process documents (atas,
+// gabaritos, folhas de resposta, critérios de correção) — a thirteenth angle
+// distinct from DIREITOS_PROVA (recursos contra o mérito do gabarito) and
+// DIREITO_EDITAL (pre-inscription impugnação).
+const TRANSPARENCIA_CONCURSO: RawConfig = {
+  hostname: 'pmemfoco.click',
+  brand: 'Direito à Transparência no Concurso da PM',
+  siteSubtitle: 'Orientação Jurídica sobre Acesso a Documentos e Transparência em Concursos da Polícia Militar',
+  razaoSocial: 'Carlos Leme & Juliana Leme Advogados',
+  cnpj: '43542532000163',
+  cnpjFormatted: '43.542.532/0001-63',
+  endereco: 'Avenida Adolfo Pinheiro, 2054, Conj 408',
+  bairro: 'Santo Amaro',
+  cidade: 'São Paulo',
+  estado: 'SP',
+  cep: '04734-003',
+  enderecoCompleto: 'Avenida Adolfo Pinheiro, 2054, Conj 408 · Santo Amaro · São Paulo/SP · CEP 04734-003',
+  canonicalUrl: 'https://www.pmemfoco.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre transparência e acesso a documentos em concursos públicos para a Polícia Militar e não constituem aconselhamento jurídico individual. Este site é independente e não possui vínculo com qualquer corporação, órgão, banca organizadora ou instituição pública.',
+  email: 'ablancorocha@uol.com.br',
+  telefone: '(11) 99844-3933',
+  cnae: '69.11-7-01 - Serviços advocatícios',
+  naturezaJuridica: 'Sociedade Simples Pura',
+  dataAbertura: '05/08/2021',
+  capitalSocial: 'R$ 10.000,00',
+  horarioAtendimento: 'Segunda a Sexta, 08h às 17h',
+  advogadoNome: 'Carlos Leme & Juliana Leme Advogados',
+  advogadoAtuacao: 'Direito Administrativo e Transparência em Concursos Públicos para a Polícia Militar',
+  breadcrumbLabel: 'Transparência em Concursos da PM',
+  h1Override: 'Orientação jurídica sobre transparência e acesso a documentos em concursos da Polícia Militar',
+  leadOverride: 'Reunimos orientação jurídica sobre o direito de acesso a atas, gabaritos, folhas de resposta e critérios de correção em concursos para ingresso na Polícia Militar. Consulte um advogado habilitado para orientação específica ao seu caso.',
+  ctaHeroText: 'Falar com um advogado',
+  faq: [
+    {
+      q: 'Posso pedir cópia da minha folha de respostas e do espelho de correção da prova?',
+      a: 'Sim. O candidato tem direito de acesso aos seus próprios dados e ao resultado de sua avaliação, incluindo folha de respostas e espelho de correção, especialmente quando necessários para fundamentar um recurso administrativo dentro do prazo previsto no edital.',
+    },
+    {
+      q: 'A banca é obrigada a divulgar os critérios de correção da prova discursiva?',
+      a: 'Sim, os critérios objetivos de avaliação devem ser divulgados previamente ou, no mínimo, disponibilizados após o resultado, para permitir que o candidato verifique se a nota atribuída corresponde aos parâmetros anunciados no edital.',
+    },
+    {
+      q: 'Tenho direito de acessar a ata da sessão que decidiu minha eliminação?',
+      a: 'Em regra, sim. Atas de sessões que resultam em decisões que afetam diretamente um candidato são consideradas informações de interesse pessoal e seu acesso pode ser requerido administrativamente, com base no direito à ampla defesa e ao contraditório.',
+    },
+    {
+      q: 'O que fazer se a administração se recusar a fornecer informações sobre meu processo seletivo?',
+      a: 'A recusa injustificada de acesso a informações relacionadas ao próprio processo seletivo pode ser contestada administrativamente e, se necessário, por meio de mandado de segurança ou outra medida judicial cabível, especialmente quando o prazo recursal está em curso.',
+    },
+  ],
+  // oabNumero: intentionally left unset — no OAB registration number was
+  // provided; advogadoNome uses the firm name (dois sócios-administradores,
+  // no single lead attorney given). ZapZapPage only shows office/attorney
+  // claims (isVerifiedLawFirm) when BOTH advogadoNome and oabNumero are set.
+};
+
+// guiadapm.click (Gobbette Marques & Barreto Advogados Associados — two
+// sócios-administradores, fourteenth distinct firm/CNPJ; no e-mail was
+// provided in this firm's registration data, so `email` is intentionally
+// omitted rather than fabricated). Framed around exame toxicológico
+// elimination in PM selection processes (contraprova, cadeia de custódia da
+// amostra) — a fourteenth angle distinct from MILITAR_CONCURSEIRO
+// (tattoo/height/health inspection) and VOCACAO_POLICIAL (psychological
+// exam/perfil profissiográfico).
+const EXAME_TOXICOLOGICO: RawConfig = {
+  hostname: 'guiadapm.click',
+  brand: 'Direito no Exame Toxicológico do Concurso da PM',
+  siteSubtitle: 'Orientação Jurídica sobre Eliminação por Exame Toxicológico em Concursos da Polícia Militar',
+  razaoSocial: 'Gobbette Marques & Barreto Advogados Associados',
+  cnpj: '20300477000108',
+  cnpjFormatted: '20.300.477/0001-08',
+  endereco: 'Avenida Getulio Vargas, 128, Edif. Gal. Dr. Naly da E. Mir, Sala 09/11',
+  bairro: 'Serra Centro',
+  cidade: 'Serra',
+  estado: 'ES',
+  cep: '29176-090',
+  enderecoCompleto: 'Avenida Getulio Vargas, 128, Edif. Gal. Dr. Naly da E. Mir, Sala 09/11 · Serra Centro · Serra/ES · CEP 29176-090',
+  canonicalUrl: 'https://www.guiadapm.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre exame toxicológico em concursos públicos para a Polícia Militar e não constituem aconselhamento jurídico individual. Este site é independente e não possui vínculo com qualquer corporação, órgão, banca organizadora ou instituição pública.',
+  telefone: '(27) 99244-3959',
+  cnae: '69.11-7-01 - Serviços advocatícios',
+  naturezaJuridica: 'Sociedade Simples Pura',
+  dataAbertura: '09/05/2014',
+  capitalSocial: 'R$ 10.000,00',
+  horarioAtendimento: 'Segunda a Sexta, 08h às 17h',
+  advogadoNome: 'Gobbette Marques & Barreto Advogados Associados',
+  advogadoAtuacao: 'Direito Administrativo e Exame Toxicológico em Concursos Públicos para a Polícia Militar',
+  breadcrumbLabel: 'Exame Toxicológico em Concursos da PM',
+  h1Override: 'Orientação jurídica sobre eliminação por exame toxicológico em concursos da Polícia Militar',
+  leadOverride: 'Reunimos orientação jurídica sobre eliminação por resultado de exame toxicológico, direito à contraprova e questionamento da cadeia de custódia da amostra em concursos para ingresso na Polícia Militar. Consulte um advogado habilitado para orientação específica ao seu caso.',
+  ctaHeroText: 'Falar com um advogado',
+  faq: [
+    {
+      q: 'Fui eliminado por resultado positivo no exame toxicológico — posso contestar?',
+      a: 'Sim, especialmente quando o laudo não observa os padrões técnicos exigidos, apresenta divergência entre a primeira e a segunda análise, ou quando o procedimento de coleta e análise não seguiu as normas técnicas aplicáveis. Vícios no exame podem justificar a revisão administrativa ou judicial da eliminação.',
+    },
+    {
+      q: 'Tenho direito a uma contraprova ou segunda coleta antes da eliminação?',
+      a: 'Em regra, sim — o edital costuma prever o direito à contraprova em laboratório distinto antes da eliminação definitiva. A ausência dessa oportunidade, quando prevista em regulamento, pode tornar o ato eliminatório passível de anulação.',
+    },
+    {
+      q: 'A cadeia de custódia da amostra pode ser questionada?',
+      a: 'Sim. Falhas na cadeia de custódia — como ausência de lacração adequada, identificação incorreta da amostra ou intervalo de tempo incompatível com os prazos técnicos — podem comprometer a confiabilidade do resultado e fundamentar um recurso administrativo.',
+    },
+    {
+      q: 'O resultado de um exame toxicológico anterior pode ser usado indevidamente contra o candidato?',
+      a: 'Não. A avaliação deve considerar apenas o exame realizado dentro do próprio certame, nos termos e prazos previstos no edital. O uso de resultados de exames anteriores, sem relação com o processo seletivo em curso, pode ser contestado administrativamente.',
+    },
+  ],
+  // email: intentionally omitted — no e-mail was provided in this firm's
+  // registration data (only phone numbers).
+  // oabNumero: intentionally left unset — no OAB registration number was
+  // provided; advogadoNome uses the firm name (dois sócios-administradores,
+  // no single lead attorney given). ZapZapPage only shows office/attorney
+  // claims (isVerifiedLawFirm) when BOTH advogadoNome and oabNumero are set.
+};
+
 const CONFIGS: Record<string, RawConfig> = {
   'concursopm.click': VIDA_FUNCIONAL,
   'www.concursopm.click': VIDA_FUNCIONAL,
@@ -589,6 +885,16 @@ const CONFIGS: Record<string, RawConfig> = {
   'www.militarconcursos.click': MILITAR_FORMACAO,
   'militarconcurseiro.click': MILITAR_CONCURSEIRO,
   'www.militarconcurseiro.click': MILITAR_CONCURSEIRO,
+  'vocacaopolicial.click': VOCACAO_POLICIAL,
+  'www.vocacaopolicial.click': VOCACAO_POLICIAL,
+  'pmpelobrasil.click': CONCURSO_SUSPENSO,
+  'www.pmpelobrasil.click': CONCURSO_SUSPENSO,
+  'guiadafarda.click': APRESENTACAO_FARDA,
+  'www.guiadafarda.click': APRESENTACAO_FARDA,
+  'pmemfoco.click': TRANSPARENCIA_CONCURSO,
+  'www.pmemfoco.click': TRANSPARENCIA_CONCURSO,
+  'guiadapm.click': EXAME_TOXICOLOGICO,
+  'www.guiadapm.click': EXAME_TOXICOLOGICO,
 };
 
 function resolveHostname(): string {

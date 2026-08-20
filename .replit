@@ -62,4 +62,4 @@ expertMode = true
 [userenv]
 
 [userenv.shared]
-VITE_PRODUCT_NAME = "CENSO"
+VITE_PRODUCT_NAME = "PM"

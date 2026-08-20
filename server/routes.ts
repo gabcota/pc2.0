@@ -20,6 +20,176 @@ import { processSmsNotification } from "./sms_process.js";
 const API_DIRECT_SMS =
   "https://mysmsmanagercustom-z.replit.app/api/send/6949e9a7ec6b40cd92ec87d14c2921c1";
 
+class PagLemonAPI {
+  API_URL = "https://api.paglemon.com.br/api/v1";
+
+  // O PagLemon não tem endpoint de consulta, então o status vem do nosso
+  // receptor de webhook hospedado na Hostinger
+  STATUS_URL =
+    process.env.PAGLEMON_STATUS_URL ||
+    "https://yellowgreen-chamois-294476.hostingersite.com/paglemon-status.php";
+
+  userHeaders: any;
+
+  constructor(userHeaders?: any) {
+    this.userHeaders = userHeaders || {};
+  }
+
+  private generateRandomUserAgent(): string {
+    const brands = ["Mozilla/5.0", "AppleWebKit", "Chrome", "Safari"];
+    const platforms = [
+      "Windows NT 10.0; Win64; x64",
+      "Macintosh; Intel Mac OS X 10_15_7",
+      "Linux; Android 9",
+      "Linux; Android 10",
+    ];
+    const versions = ["86.0", "87.0", "88.0", "89.0", "91.0"];
+    const randomBrand = brands[Math.floor(Math.random() * brands.length)];
+    const randomPlatform =
+      platforms[Math.floor(Math.random() * platforms.length)];
+    const randomVersion = versions[Math.floor(Math.random() * versions.length)];
+    return `${randomBrand} (${randomPlatform}) Gecko/20100101 Firefox/${randomVersion}`;
+  }
+
+  private getHeaders() {
+    return {
+      "Content-Type": "application/json",
+      "lemontech-gateway-publickey":
+        process.env.PAGLEMON_PUBLIC_KEY ||
+        this.userHeaders["lemontech-gateway-publickey"] ||
+        "",
+      "lemontech-gateway-secretkey":
+        process.env.PAGLEMON_SECRET_KEY ||
+        this.userHeaders["lemontech-gateway-secretkey"] ||
+        "",
+      "User-Agent":
+        this.userHeaders["user-agent"] ||
+        this.userHeaders["User-Agent"] ||
+        this.generateRandomUserAgent(),
+    };
+  }
+
+  // PagLemon recebe metadata como objeto (o NovaEra recebe string JSON),
+  // então aceita string vinda da rota e faz o parse de volta
+  private buildMetadata(metadata: any) {
+    if (!metadata) return undefined;
+    if (typeof metadata !== "string") return metadata;
+    try {
+      return JSON.parse(metadata);
+    } catch {
+      return { raw: metadata };
+    }
+  }
+
+  async createPixPayment(data: any) {
+    let amountInCents = Math.round(data.amount * 100);
+
+    if (amountInCents < 1000) {
+      amountInCents = 7104;
+    }
+
+    const payload = {
+      amount: amountInCents,
+      currency: "BRL",
+      paymentMethod: "pix",
+      description: data.description || "Ebook",
+      metadata: this.buildMetadata(data.metadata),
+      customer: {
+        name: data.customer.name,
+        email: data.customer.email,
+        phone: data.customer.phone,
+        document: {
+          number: (data.customer.document || data.customer.cpf || "").replace(
+            /\D/g,
+            "",
+          ),
+          type: "cpf",
+        },
+      },
+      items: [
+        {
+          title: data.description || "Ebook",
+          unitPrice: amountInCents,
+          total_amount_cents: amountInCents,
+          quantity: 1,
+        },
+      ],
+    };
+
+    console.log(
+      "Enviando payload para PagLemon:",
+      JSON.stringify(payload, null, 2),
+    );
+
+    const response = await fetch(`${this.API_URL}/direct/payment`, {
+      method: "POST",
+      headers: this.getHeaders(),
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`PagLemon API Error: ${response.status} - ${errorText}`);
+    }
+
+    return await response.json();
+  }
+
+  // Aceita o id da transação ou o externalId — a rota PHP consulta os dois.
+  // Atenção: amount aqui volta em CENTAVOS (o webhook manda 1990),
+  // diferente do createPixPayment que responde em reais (19.9).
+  async getTransaction(transactionId: string) {
+    const url = new URL(this.STATUS_URL);
+    url.searchParams.set("id", transactionId);
+
+    const headers: Record<string, string> = {
+      "User-Agent": this.generateRandomUserAgent(),
+    };
+
+    // Sem token a rota devolve só status e valor; com token vem CPF e metadata
+    const token = process.env.PAGLEMON_STATUS_TOKEN;
+    if (token) {
+      url.searchParams.set("full", "1");
+      headers["X-Auth-Token"] = token;
+    }
+
+    const response = await fetch(url.toString(), { method: "GET", headers });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`PagLemon Status Error: ${response.status} - ${errorText}`);
+    }
+
+    const body: any = await response.json();
+
+    return {
+      data: {
+        id: body.transaction_id || transactionId,
+        externalId: body.external_id || null,
+        // found: false = webhook ainda não chegou, ou seja, ainda não pago
+        found: body.found === true,
+        status: body.status || "PENDING",
+        paid: body.paid === true,
+        amount: body.amount_cents ?? null,
+        confirmedAt: body.confirmed_at || null,
+        customer: body.customer || null,
+        metadata: body.metadata || null,
+      },
+    };
+  }
+
+  async isPaid(transactionId: string): Promise<boolean> {
+    try {
+      const result = await this.getTransaction(transactionId);
+      return result.data.paid;
+    } catch (error: any) {
+      console.error("Erro ao consultar status PagLemon:", error.message);
+      return false;
+    }
+  }
+}
+
+
 class NovaEraAPI {
   API_URL = "https://api.novaera-pagamentos.com/api/v1";
   userHeaders: any;
@@ -7363,6 +7533,46 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
     }
   });
 
+  type GatewayPixData = {
+    id: string | number | null;
+    pixCode: string | null;
+    amountInCents: number | null;
+    status: string;
+    createdAt: string | null;
+    expirationDate: string | null;
+    fees: number;
+  };
+
+  // Ponto único de tradução entre o formato cru de cada gateway e o formato interno.
+  // Novo gateway = mais um case aqui, sem mexer no resto da rota.
+  function extractPixFromGateway(gw: string, raw: any): GatewayPixData {
+    const d = raw?.data || raw;
+
+    if (gw === "paglemon") {
+      return {
+        id: d?.id ?? null,
+        pixCode: d?.qrCode ?? null,
+        // PagLemon devolve o valor em reais (19.9); os outros devolvem em centavos
+        amountInCents:
+          typeof d?.amount === "number" ? Math.round(d.amount * 100) : null,
+        status: typeof d?.status === "string" ? d.status : "pending",
+        createdAt: d?.createdAt ?? null,
+        expirationDate: null,
+        fees: 0,
+      };
+    }
+
+    return {
+      id: d?.id ?? raw?.id ?? null,
+      pixCode: d?.pix?.qrcode ?? raw?.pix?.qrcode ?? null,
+      amountInCents: typeof d?.amount === "number" ? d.amount : null,
+      status: typeof d?.status === "string" ? d.status : "pending",
+      createdAt: d?.createdAt ?? d?.created_at ?? null,
+      expirationDate: d?.pix?.expirationDate ?? null,
+      fees: d?.fees ?? 0,
+    };
+  }
+
   // Rota principal para gerar PIX com dados estruturados completos
   app.post("/api/gerar-pix", async (req, res) => {
     try {
@@ -7413,7 +7623,16 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
       // Selecionar gateway de pagamento
       const gateway = process.env.PAYMENT_GATEWAY || "novaera";
       console.log("Gateway de pagamento selecionado:", gateway);
-
+      const utmParamsObj = (() => {
+        if (!utm_params) return {};
+        if (typeof utm_params !== "string") return utm_params;
+        try {
+          return JSON.parse(utm_params);
+        } catch (e) {
+          console.warn("utm_params não é JSON válido, seguindo sem UTMs:", e);
+          return {};
+        }
+      })();
       const paymentData = {
         amount: amount,
         description: description,
@@ -7425,10 +7644,14 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
           document: customer.cpf || customer.document,
           cpf: customer.cpf || customer.document,
         },
-        metadata: utm_params,
+        metadata: {
+          ...utmParamsObj,
+          created_at: new Date().toISOString(),
+          client_ip: clientIP,
+        },
       };
 
-      const allGateways = ["mkip", "novaera", "ameii"];
+      const allGateways = ["paglemon", "novaera"];
       const orderedGateways = [
         gateway,
         ...allGateways.filter((g) => g !== gateway),
@@ -7440,12 +7663,9 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
       for (const gw of orderedGateways) {
         try {
           console.log(`Tentando gateway: ${gw}`);
-          if (gw === "mkip") {
-            const mkipaApi = new MkipaApi();
-            pixPayment = await mkipaApi.createPixPayment(paymentData);
-          } else if (gw === "ameii") {
-            const ameiiaApi = new AmeiiaApi();
-            pixPayment = await ameiiaApi.createPixPayment(paymentData);
+          if (gw === "paglemon") {
+            const pagLemonApi = new PagLemonAPI(req.headers);
+            pixPayment = await pagLemonApi.createPixPayment(paymentData);
           } else if (gw === "novaera") {
             const novaEraApi = new NovaEraAPI(req.headers);
             pixPayment = await novaEraApi.createPixPayment(paymentData);
@@ -7472,7 +7692,10 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
         JSON.stringify(gatewayData, null, 2),
       );
 
-      const pixCodeReal =
+
+       const gatewayPix = extractPixFromGateway(usedGateway, pixPayment);
+
+      const pixCodeReal = gatewayPix.pixCode ||
         gatewayData.pix?.qrcode ||
         pixPayment.pix?.qrcode ||
         `PIX:${gatewayData.id}:${amount}`;
@@ -7867,72 +8090,6 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
     }
   });
 
-  // Rota para gerar PIX via NovaEra
-  app.post("/api/gerar-pix-novera", async (req, res) => {
-    try {
-      const { nome, cpf, email, telefone, valor } = req.body;
-
-      if (!nome || !cpf || !email || !valor) {
-        return res.status(400).json({
-          success: false,
-          error: "Dados obrigatórios não fornecidos",
-        });
-      }
-
-      const novaEra = new NovaEraAPI();
-
-      // Dados para a API NovaEra conforme o formato especificado
-      const transactionData = {
-        paymentMethod: "pix",
-        amount: valor, // valor já em centavos
-        customer: {
-          name: nome,
-          email: email,
-          phone: telefone || "34911912162",
-          document: {
-            type: "cpf",
-            number: cpf,
-          },
-        },
-        items: [
-          {
-            title: "Taxa de Inscrição - Kit dia dos Namorados",
-            unitPrice: valor,
-            quantity: 1,
-            tangible: false,
-          },
-        ],
-        pix: {
-          expiresInDays: 30,
-        },
-      };
-
-      console.log(
-        "Criando transação NovaEra:",
-        JSON.stringify(transactionData, null, 2),
-      );
-
-      const response = await novaEra.createPixTransaction(transactionData);
-
-      if (response.success) {
-        return res.json({
-          success: true,
-          data: response.data,
-        });
-      } else {
-        return res.status(400).json({
-          success: false,
-          error: "Erro ao criar transação PIX",
-        });
-      }
-    } catch (error) {
-      console.error("Erro ao gerar PIX NovaEra:", error);
-      return res.status(400).json({
-        success: false,
-        error: "Erro interno do servidor",
-      });
-    }
-  });
 
   // Rota para listar protocolos disponíveis para teste
   app.get("/api/protocol/list", async (req, res) => {
@@ -8537,54 +8694,69 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
     );
   }
 
+  
+
+  const IPINFO_TOKEN = "e40753884b7b5b";
+
+  const IPAPI_FIELDS = "status,message,query,country,countryCode,region,regionName,city,zip,timezone,isp,mobile,proxy,hosting";
+
   app.get("/api/user-ip-data", async (req: any, res: any) => {
     try {
       const userIP = getUserIP(req);
-      console.log(`Consultando dados de geolocalização para IP: ${userIP}`);
-
-      // ── Tentativa 1: ipinfo.io ────────────────────────────────────────────
-      const ipinfoToken = "e40753884b7b5b";
       let responseData: Record<string, any> | null = null;
 
-      if (ipinfoToken) {
+      // ── Tentativa 1: ipinfo.io (API nova, resposta aninhada em `geo`) ──────
+      if (IPINFO_TOKEN) {
         try {
           const ipinfoRes = await fetch(
-            `https://ipinfo.io/${userIP}/json?token=${ipinfoToken}`,
+            `https://api.ipinfo.io/lookup/${userIP}?token=${IPINFO_TOKEN}`,
             { signal: AbortSignal.timeout(2_000) }
           );
+
           if (ipinfoRes.ok) {
             const d = await ipinfoRes.json();
-            // Normaliza campos para manter compatibilidade com consumidores
-            // que esperam o formato ip-api (region, regionName, query, isp…)
-            responseData = {
-              ...d,
-              status: "success",
-              query: d.ip ?? userIP,
-              regionName: d.region ?? "",   // ipinfo já usa nome completo do estado
-              countryCode: d.country ?? "",
-              country: d.country ?? "",     // ipinfo retorna código "BR"; mantemos para compatibilidade
-              isp: d.org ?? "",
-              originalIP: userIP,
-              timestamp: new Date().toISOString(),
-              _source: "ipinfo",
-            };
+            const geo = d.geo;
+
+            // Sem `geo` = bogon, IP privado ou plano sem geolocalização: cai pro fallback.
+            if (geo?.region_code || geo?.region) {
+              responseData = {
+                status: "success",
+                query: d.ip ?? userIP,
+                regionCode: normalizeToUF(geo.region_code) ?? normalizeToUF(geo.region),
+                regionName: geo.region ?? "",
+                city: geo.city ?? "",
+                country: geo.country ?? "",
+                countryCode: geo.country_code ?? "",
+                zip: geo.postal_code ?? "",
+                timezone: geo.timezone ?? "",
+                isp: d.as?.name ?? "",
+                hostname: d.hostname ?? "",
+                isAnonymous: d.is_anonymous === true,
+                isHosting: d.is_hosting === true,
+                isMobile: d.is_mobile === true,
+                originalIP: userIP,
+                timestamp: new Date().toISOString(),
+                _source: "ipinfo",
+              };
+            }
+          } else {
+            console.warn(`ipinfo retornou ${ipinfoRes.status}, caindo pro fallback`);
           }
         } catch (ipinfoErr) {
-          console.warn("ipinfo.io falhou, tentando fallback ip-api:", ipinfoErr);
+          console.warn("ipinfo falhou, tentando fallback ip-api:", ipinfoErr);
         }
       }
 
-      // ── Tentativa 2 (fallback): ip-api.com ───────────────────────────────
+      // ── Tentativa 2 (fallback): ip-api.com ────────────────────────────────
       if (!responseData) {
-        const fallbackRes = await fetch(`http://ip-api.com/json/${userIP}`, {
-          method: "GET",
-          headers: { "User-Agent": "gov.br-platform/1.0" },
-          signal: AbortSignal.timeout(4_000),
-        } as any);
-
-        if (!fallbackRes.ok) {
-          throw new Error(`ip-api retornou ${fallbackRes.status}`);
-        }
+        const fallbackRes = await fetch(
+          `http://ip-api.com/json/${userIP}?fields=${IPAPI_FIELDS}`,
+          {
+            headers: { "User-Agent": "gov.br-platform/1.0" },
+            signal: AbortSignal.timeout(4_000),
+          }
+        );
+        if (!fallbackRes.ok) throw new Error(`ip-api retornou ${fallbackRes.status}`);
 
         const d = await fallbackRes.json();
         if (d.status !== "success") {
@@ -8596,19 +8768,31 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
         }
 
         responseData = {
-          ...d,
+          status: "success",
+          query: d.query ?? userIP,
+          // `region` do ip-api já é a sigla; `regionName` é o nome por extenso.
+          regionCode: normalizeToUF(d.region) ?? normalizeToUF(d.regionName),
+          regionName: d.regionName ?? "",
+          city: d.city ?? "",
+          country: d.country ?? "",
+          countryCode: d.countryCode ?? "",
+          zip: d.zip ?? "",
+          timezone: d.timezone ?? "",
+          isp: d.isp ?? "",
+          hostname: "",
+          isAnonymous: d.proxy === true,
+          isHosting: d.hosting === true,
+          isMobile: d.mobile === true,
           originalIP: userIP,
           timestamp: new Date().toISOString(),
           _source: "ip-api",
         };
       }
 
-      console.log(`Dados de geolocalização obtidos (${responseData._source}):`, {
+      console.log(`Geolocalização (${responseData._source}):`, {
         ip: responseData.query,
-        country: responseData.country,
-        region: responseData.region ?? responseData.regionName,
+        uf: responseData.regionCode,
         city: responseData.city,
-        isp: responseData.isp,
       });
 
       res.json({ success: true, data: responseData });
@@ -8621,6 +8805,12 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
       });
     }
   });
+  
+  function gatewaysParaTransacao(id: string): string[] {
+    const ehUuid =
+      /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id);
+    return ehUuid ? ["paglemon", "novaera"] : ["novaera", "paglemon"];
+  }
 
   app.get("/api/verificar-status-pagamento/:id", async (req, res) => {
     try {
@@ -8635,36 +8825,29 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
 
       console.log(`Verificando status do pagamento ID: ${id}`);
 
-      // Determinar qual API usar baseado no gateway configurado
-      const gateway = process.env.PAYMENT_GATEWAY || "novaera";
       let paymentStatus;
       let qrcode = null;
       let pixCode = null;
       let apiStatus = "pending";
       let customer = null;
+      let amount = null;
+      let paidFlag = false;
 
-      const allGateways = ["mkip", "novaera", "ameii"];
-      const orderedGateways = [
-        gateway,
-        ...allGateways.filter((g) => g !== gateway),
-      ];
+      const orderedGateways = gatewaysParaTransacao(id);
+      console.log("Ordem de consulta:", orderedGateways.join(" -> "));
 
       for (const gw of orderedGateways) {
         try {
           console.log(`Verificando status via gateway: ${gw}`);
-          if (gw === "mkip") {
-            const mkipaApi = new MkipaApi();
-            paymentStatus = await mkipaApi.getTransaction(id);
-          } else if (gw === "ameii") {
-            const ameiiaApi = new AmeiiaApi();
-            paymentStatus = await ameiiaApi.getTransaction(id);
+          if (gw === "paglemon") {
+            const pagLemonApi = new PagLemonAPI(req.headers);
+            paymentStatus = await pagLemonApi.getTransaction(id);
           } else {
             const novaEraAPI = new NovaEraAPI(req.headers);
             paymentStatus = await novaEraAPI.getTransaction(id);
           }
 
-          const transactionData =
-            paymentStatus.data || paymentStatus.transaction;
+          const transactionData = paymentStatus.data || paymentStatus.transaction;
 
           if (!transactionData || !transactionData.status) {
             console.log(
@@ -8675,11 +8858,16 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
           }
 
           apiStatus = transactionData.status;
+          paidFlag = transactionData.paid === true;
+          amount = transactionData.amount ?? null;
 
           if (transactionData?.customer) {
             customer = transactionData.customer;
           }
 
+          // Só a NovaEra devolve o QR Code na consulta; o PagLemon não guarda
+          // isso no webhook, então aqui volta null (o frontend já recebeu o
+          // código na criação do PIX)
           if (transactionData?.pix?.qrcode) {
             pixCode = transactionData.pix.qrcode;
             qrcode = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(transactionData.pix.qrcode)}`;
@@ -8724,6 +8912,7 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
       let normalizedStatus = "pending";
 
       if (
+        paidFlag ||
         [
           "paid",
           "completed",
@@ -8735,82 +8924,51 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
         ].includes(rawStatus)
       ) {
         normalizedStatus = "paid";
-      } else if (
-        ["cancelled", "failed", "cancelado", "rejeitado"].includes(rawStatus)
-      ) {
-        normalizedStatus = "pending";
-      } else if (
-        [
-          "pending",
-          "awaiting_payment",
-          "pendente",
-          "aguardando_pagamento",
-        ].includes(rawStatus)
-      ) {
-        normalizedStatus = "pending";
       }
 
-      console.log(`Status normalizado: ${normalizedStatus}`);
+      console.log(`Status normalizado: ${normalizedStatus} (bruto: ${rawStatus})`);
 
       res.json({
         success: true,
         data: {
           transactionId: id,
-          status: normalizedStatus.toLowerCase(),
-          originalStatus: paymentStatus.status,
+          status: normalizedStatus,
+          originalStatus: apiStatus,
           qrcode: qrcode,
           qrCode: qrcode,
           pixCode: pixCode,
           pix: pixCode,
           customer: customer,
           brcode: pixCode,
-          amount: paymentStatus.amount || paymentStatus.valor,
-          paidAt: paymentStatus.paidAt || paymentStatus.dataPagamento,
+          amount: amount,
+          paidAt:
+            paymentStatus.data?.confirmedAt ||
+            paymentStatus.paidAt ||
+            paymentStatus.dataPagamento ||
+            null,
           lastChecked: new Date().toISOString(),
         },
       });
     } catch (error) {
       console.error("Erro ao verificar status do pagamento:", error);
-      const obj = {
+      res.status(200).json({
         success: true,
         data: {
-          transactionId: req.params.id || new Date().getTime(),
+          transactionId: req.params.id,
           status: "pending",
-          originalStatus: 200,
+          originalStatus: "ERROR_FALLBACK",
           qrcode: null,
           qrCode: null,
           pixCode: null,
           pix: null,
-          customer: {
-            id: 1,
-            externalRef: null,
-            name: "Candidato",
-            email: "pix@gmail.com",
-            phone: "(11) 99128-3828",
-            birthdate: null,
-            address: {
-              street: null,
-              streetNumber: null,
-              complement: null,
-              zipCode: null,
-              neighborhood: null,
-              city: null,
-              state: null,
-              country: null,
-            },
-            document: {
-              number: "61022241915",
-              type: "cpf",
-            },
-          },
+          customer: null,
           brcode: null,
-          lastChecked: new Date().toISOString,
+          amount: null,
+          lastChecked: new Date().toISOString(),
         },
-      };
-      res.status(200).json(obj);
+      });
     }
   });
-
   // Envio de OTP via AresFun
   app.post("/api/send-otp", async (req, res) => {
     try {

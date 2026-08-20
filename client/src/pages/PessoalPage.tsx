@@ -404,7 +404,7 @@ export default function PessoalPage() {
       <main style={{ maxWidth: 680, margin: '0 auto', padding: '0 16px 48px' }}>
 
         {/* Cabeçalho da seção */}
-        <div style={{ paddingTop: 34, paddingBottom: 24 }}>
+        <div style={{ paddingTop: 24, paddingBottom: 24 }}>
           <h1 style={{ fontSize: 22, fontWeight: 700, color: '#0c326f', margin: '0 0 8px', lineHeight: 1.3 }}>
             {firstName ? `${firstName}, ` : ''}Questionário Socioeconômico
           </h1>

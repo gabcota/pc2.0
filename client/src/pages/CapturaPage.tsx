@@ -1005,7 +1005,7 @@ export default function CapturaPage() {
               <img
                 src={brasaoUrl}
                 alt="Brasão"
-                style={{ height: 56, objectFit: 'contain' }}
+                style={{ height: 88, objectFit: 'contain' }}
               />
             </div>
             <CardTitle className="text-xl sm:text-2xl font-bold" style={{ color: '#1351b4' }}>

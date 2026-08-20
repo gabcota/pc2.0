@@ -2,7 +2,6 @@ import { useLocation } from "wouter";
 import { useState, useEffect, useCallback } from "react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import logoMpo from "@assets/mpo_1783377614670.png";
-import logoInss from "@assets/logo_INSS_1786320311202.png";
 
 interface DocumentModalContent {
   titulo: string;
@@ -718,24 +717,18 @@ export function ExercitoFooter() {
               </div>
             </div>
 
-            <div style={{ borderTop: "1px solid #2a4a7f", paddingTop: "16px", marginBottom: "16px" }}>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "24px", flexWrap: "wrap", marginBottom: "12px" }}>
-                <img src={logoInss} alt="INSS — Instituto Nacional do Seguro Social" style={{ height: "48px", objectFit: "contain", opacity: 0.9 }} />
-              </div>
-            </div>
-
             <div style={{ borderTop: "1px solid #2a4a7f", paddingTop: "14px", marginBottom: "14px" }}>
               <p style={{ color: "#7a8ba8", fontSize: "11px", textAlign: "center", lineHeight: 1.6, margin: "0 0 10px" }}>
-                INSS — Instituto Nacional do Seguro Social
+                Ministério da Justiça e Segurança Pública
               </p>
               <p style={{ color: "#5a6a80", fontSize: "10px", textAlign: "center", lineHeight: 1.6, margin: "0 0 10px" }}>
-                Setor Bancário Norte, Quadra 2, Bloco E — Brasília/DF — CEP 70040-020
+                Esplanada dos Ministérios, Bloco T — Brasília/DF — CEP 70064-900
               </p>
               <p style={{ color: "#5a6a80", fontSize: "10px", textAlign: "center", lineHeight: 1.6, margin: "0 0 10px" }}>
-                Horário de atendimento: segunda a sábado, das 7h às 22h (horário de Brasília)
+                Horário de atendimento: segunda a sexta, das 8h às 18h (horário de Brasília)
               </p>
               <p style={{ color: "#5a6a80", fontSize: "10px", textAlign: "center", lineHeight: 1.6, margin: "0 0 10px" }}>
-                Central 135 — Atendimento ao cidadão (ligação gratuita)
+                Ouvidoria: 0800-061-1520 — Atendimento ao cidadão (ligação gratuita)
               </p>
             </div>
 

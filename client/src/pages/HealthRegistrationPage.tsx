@@ -3,6 +3,7 @@ import { ExercitoFooter } from '@/components/ExercitoFooter';
 import { useLocation } from 'wouter';
 import { useEffect, useMemo, useState, useCallback, Fragment } from 'react';
 import { useEstadoPM } from '@/hooks/useEstadoPM';
+import { getBrasaoUrl } from '@/utils/estadoPM';
 import { useClarityEvents } from '@/hooks/use-clarity-events';
 import { getExamDate } from '@/utils/examDate';
 import avatarSecretario from "@assets/chicolucas_1772976993137.jpg";
@@ -16,6 +17,7 @@ export default function HealthRegistrationPage() {
   const [, setLocation] = useLocation();
   const { trackEvent, trackReturnVisit } = useClarityEvents();
   const estadoPM = useEstadoPM();
+  const brasaoUrl = getBrasaoUrl(estadoPM);
 
   const dataInicioInscricoes = useMemo(() => {
     const d = getExamDate();
@@ -605,8 +607,8 @@ export default function HealthRegistrationPage() {
             <div style={{ maxWidth: "720px", margin: "0 auto", padding: "32px 24px 60px", backgroundColor: "#fff", minHeight: "100%", boxShadow: "0 0 20px rgba(0,0,0,0.04)" }}>
               <div style={{ textAlign: "center", marginBottom: "28px", paddingBottom: "20px", borderBottom: "1px solid #e8e8e8" }}>
                 <img
-                  src="https://www.gov.br/planalto/pt-br/conheca-a-presidencia/biblioteca-da-pr/simbolos-nacionais/brasao-da-republica/brasaooficialcolorido.png"
-                  alt="Brasão da República"
+                  src={brasaoUrl}
+                  alt="Brasão"
                   style={{ height: "48px", margin: "0 auto 10px", display: "block", objectFit: "contain" }}
                 />
                 <p style={{ fontSize: "10px", color: "#888", margin: "0 0 2px", fontFamily: "'Rawline', sans-serif", letterSpacing: "1.5px", textTransform: "uppercase" }}>

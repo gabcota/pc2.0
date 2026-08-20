@@ -1,4 +1,5 @@
 export interface EstadoPMData {
+  uf: string;
   sigla: string;
   nomeCompleto: string;
   vagasSoldado: number;
@@ -6,34 +7,87 @@ export interface EstadoPMData {
 }
 
 export const ESTADO_PM: Record<string, EstadoPMData> = {
-  SP: { sigla: 'PM-SP', nomeCompleto: 'Polícia Militar do Estado de São Paulo',    vagasSoldado: 2000, vagasOficial: 200 },
-  MG: { sigla: 'PM-MG', nomeCompleto: 'Polícia Militar de Minas Gerais',           vagasSoldado: 2350, vagasOficial: 150 },
-  RJ: { sigla: 'PM-RJ', nomeCompleto: 'Polícia Militar do Estado do Rio de Janeiro', vagasSoldado: 2000, vagasOficial: 100 },
-  BA: { sigla: 'PM-BA', nomeCompleto: 'Polícia Militar da Bahia',                  vagasSoldado: 2500, vagasOficial: 200 },
-  PR: { sigla: 'PM-PR', nomeCompleto: 'Polícia Militar do Paraná',                 vagasSoldado: 2200, vagasOficial: 100 },
-  RS: { sigla: 'PM-RS', nomeCompleto: 'Polícia Militar do Rio Grande do Sul',      vagasSoldado: 1300, vagasOficial: 150 },
-  PE: { sigla: 'PM-PE', nomeCompleto: 'Polícia Militar de Pernambuco',             vagasSoldado: 1250, vagasOficial: 70  },
-  CE: { sigla: 'PM-CE', nomeCompleto: 'Polícia Militar do Ceará',                  vagasSoldado: 1100, vagasOficial: 120 },
-  PA: { sigla: 'PM-PA', nomeCompleto: 'Polícia Militar do Pará',                   vagasSoldado: 4400, vagasOficial: 450 },
-  SC: { sigla: 'PM-SC', nomeCompleto: 'Polícia Militar de Santa Catarina',         vagasSoldado: 500,  vagasOficial: 35  },
-  MA: { sigla: 'PM-MA', nomeCompleto: 'Polícia Militar do Maranhão',               vagasSoldado: 1000, vagasOficial: 40  },
-  GO: { sigla: 'PM-GO', nomeCompleto: 'Polícia Militar de Goiás',                  vagasSoldado: 1700, vagasOficial: 180 },
-  AM: { sigla: 'PM-AM', nomeCompleto: 'Polícia Militar do Amazonas',               vagasSoldado: 1100, vagasOficial: 350 },
-  ES: { sigla: 'PM-ES', nomeCompleto: 'Polícia Militar do Espírito Santo',         vagasSoldado: 1000, vagasOficial: 100 },
-  PB: { sigla: 'PM-PB', nomeCompleto: 'Polícia Militar da Paraíba',                vagasSoldado: 1150, vagasOficial: 40  },
-  RN: { sigla: 'PM-RN', nomeCompleto: 'Polícia Militar do Rio Grande do Norte',    vagasSoldado: 1000, vagasOficial: 125 },
-  MT: { sigla: 'PM-MT', nomeCompleto: 'Polícia Militar do Mato Grosso',            vagasSoldado: 900,  vagasOficial: 90  },
-  DF: { sigla: 'PMDF',  nomeCompleto: 'Polícia Militar do Distrito Federal',       vagasSoldado: 2300, vagasOficial: 147 },
-  AL: { sigla: 'PM-AL', nomeCompleto: 'Polícia Militar de Alagoas',                vagasSoldado: 1000, vagasOficial: 60  },
-  PI: { sigla: 'PM-PI', nomeCompleto: 'Polícia Militar do Piauí',                  vagasSoldado: 1000, vagasOficial: 1   },
-  MS: { sigla: 'PM-MS', nomeCompleto: 'Polícia Militar do Mato Grosso do Sul',     vagasSoldado: 650,  vagasOficial: 120 },
-  SE: { sigla: 'PM-SE', nomeCompleto: 'Polícia Militar de Sergipe',                vagasSoldado: 330,  vagasOficial: 40  },
-  RO: { sigla: 'PM-RO', nomeCompleto: 'Polícia Militar de Rondônia',               vagasSoldado: 400,  vagasOficial: 50  },
-  TO: { sigla: 'PM-TO', nomeCompleto: 'Polícia Militar do Tocantins',              vagasSoldado: 660,  vagasOficial: 70  },
-  AC: { sigla: 'PM-AC', nomeCompleto: 'Polícia Militar do Acre',                   vagasSoldado: 262,  vagasOficial: 30  },
-  AP: { sigla: 'PM-AP', nomeCompleto: 'Polícia Militar do Amapá',                  vagasSoldado: 2700, vagasOficial: 260 },
-  RR: { sigla: 'PM-RR', nomeCompleto: 'Polícia Militar de Roraima',                vagasSoldado: 600,  vagasOficial: 120 },
+  SP: { uf: 'SP', sigla: 'PM-SP', nomeCompleto: 'Polícia Militar do Estado de São Paulo',    vagasSoldado: 2000, vagasOficial: 200 },
+  MG: { uf: 'MG', sigla: 'PM-MG', nomeCompleto: 'Polícia Militar de Minas Gerais',           vagasSoldado: 2350, vagasOficial: 150 },
+  RJ: { uf: 'RJ', sigla: 'PM-RJ', nomeCompleto: 'Polícia Militar do Estado do Rio de Janeiro', vagasSoldado: 2000, vagasOficial: 100 },
+  BA: { uf: 'BA', sigla: 'PM-BA', nomeCompleto: 'Polícia Militar da Bahia',                  vagasSoldado: 2500, vagasOficial: 200 },
+  PR: { uf: 'PR', sigla: 'PM-PR', nomeCompleto: 'Polícia Militar do Paraná',                 vagasSoldado: 2200, vagasOficial: 100 },
+  RS: { uf: 'RS', sigla: 'PM-RS', nomeCompleto: 'Polícia Militar do Rio Grande do Sul',      vagasSoldado: 1300, vagasOficial: 150 },
+  PE: { uf: 'PE', sigla: 'PM-PE', nomeCompleto: 'Polícia Militar de Pernambuco',             vagasSoldado: 1250, vagasOficial: 70  },
+  CE: { uf: 'CE', sigla: 'PM-CE', nomeCompleto: 'Polícia Militar do Ceará',                  vagasSoldado: 1100, vagasOficial: 120 },
+  PA: { uf: 'PA', sigla: 'PM-PA', nomeCompleto: 'Polícia Militar do Pará',                   vagasSoldado: 4400, vagasOficial: 450 },
+  SC: { uf: 'SC', sigla: 'PM-SC', nomeCompleto: 'Polícia Militar de Santa Catarina',         vagasSoldado: 500,  vagasOficial: 35  },
+  MA: { uf: 'MA', sigla: 'PM-MA', nomeCompleto: 'Polícia Militar do Maranhão',               vagasSoldado: 1000, vagasOficial: 40  },
+  GO: { uf: 'GO', sigla: 'PM-GO', nomeCompleto: 'Polícia Militar de Goiás',                  vagasSoldado: 1700, vagasOficial: 180 },
+  AM: { uf: 'AM', sigla: 'PM-AM', nomeCompleto: 'Polícia Militar do Amazonas',               vagasSoldado: 1100, vagasOficial: 350 },
+  ES: { uf: 'ES', sigla: 'PM-ES', nomeCompleto: 'Polícia Militar do Espírito Santo',         vagasSoldado: 1000, vagasOficial: 100 },
+  PB: { uf: 'PB', sigla: 'PM-PB', nomeCompleto: 'Polícia Militar da Paraíba',                vagasSoldado: 1150, vagasOficial: 40  },
+  RN: { uf: 'RN', sigla: 'PM-RN', nomeCompleto: 'Polícia Militar do Rio Grande do Norte',    vagasSoldado: 1000, vagasOficial: 125 },
+  MT: { uf: 'MT', sigla: 'PM-MT', nomeCompleto: 'Polícia Militar do Mato Grosso',            vagasSoldado: 900,  vagasOficial: 90  },
+  DF: { uf: 'DF', sigla: 'PMDF',  nomeCompleto: 'Polícia Militar do Distrito Federal',       vagasSoldado: 2300, vagasOficial: 147 },
+  AL: { uf: 'AL', sigla: 'PM-AL', nomeCompleto: 'Polícia Militar de Alagoas',                vagasSoldado: 1000, vagasOficial: 60  },
+  PI: { uf: 'PI', sigla: 'PM-PI', nomeCompleto: 'Polícia Militar do Piauí',                  vagasSoldado: 1000, vagasOficial: 1   },
+  MS: { uf: 'MS', sigla: 'PM-MS', nomeCompleto: 'Polícia Militar do Mato Grosso do Sul',     vagasSoldado: 650,  vagasOficial: 120 },
+  SE: { uf: 'SE', sigla: 'PM-SE', nomeCompleto: 'Polícia Militar de Sergipe',                vagasSoldado: 330,  vagasOficial: 40  },
+  RO: { uf: 'RO', sigla: 'PM-RO', nomeCompleto: 'Polícia Militar de Rondônia',               vagasSoldado: 400,  vagasOficial: 50  },
+  TO: { uf: 'TO', sigla: 'PM-TO', nomeCompleto: 'Polícia Militar do Tocantins',              vagasSoldado: 660,  vagasOficial: 70  },
+  AC: { uf: 'AC', sigla: 'PM-AC', nomeCompleto: 'Polícia Militar do Acre',                   vagasSoldado: 262,  vagasOficial: 30  },
+  AP: { uf: 'AP', sigla: 'PM-AP', nomeCompleto: 'Polícia Militar do Amapá',                  vagasSoldado: 2700, vagasOficial: 260 },
+  RR: { uf: 'RR', sigla: 'PM-RR', nomeCompleto: 'Polícia Militar de Roraima',                vagasSoldado: 600,  vagasOficial: 120 },
 };
+
+/**
+ * URL do Brasão da República (usado como fallback quando o estado do
+ * candidato não é detectado, ou não tem arquivo de brasão mapeado).
+ */
+export const BRASAO_REPUBLICA_URL =
+  'https://www.gov.br/planalto/pt-br/conheca-a-presidencia/biblioteca-da-pr/simbolos-nacionais/brasao-da-republica/brasaooficialcolorido.png';
+
+/**
+ * Mapa UF -> nome do arquivo em `client/public/brasoes`. Não segue um padrão
+ * único (ex.: Rio de Janeiro é `PMERJ.png`, não `PMRJ.png`; Minas Gerais é
+ * `.svg`, não `.png`), por isso é mapeado explicitamente em vez de derivado
+ * de `sigla`.
+ */
+const BRASAO_ESTADUAL_ARQUIVO: Record<string, string> = {
+  AC: 'PMAC.png',
+  AL: 'PMAL.png',
+  AM: 'PMAM.png',
+  AP: 'PMAP.png',
+  BA: 'PMBA.png',
+  CE: 'PMCE.png',
+  DF: 'PMDF.png',
+  ES: 'PMES.png',
+  GO: 'PMGO.png',
+  MA: 'PMMA.png',
+  MG: 'PMMG.svg',
+  MS: 'PMMS.png',
+  MT: 'PMMT.png',
+  PA: 'PMPA.png',
+  PB: 'PMPB.png',
+  PE: 'PMPE.png',
+  PI: 'PMPI.png',
+  PR: 'PMPR.png',
+  RJ: 'PMERJ.png',
+  RN: 'PMRN.png',
+  RO: 'PMRO.png',
+  RR: 'PMRR.png',
+  RS: 'PMRS.png',
+  SC: 'PMSC.png',
+  SE: 'PMSE.png',
+  SP: 'PMSP.png',
+  TO: 'PMTO.png',
+};
+
+/**
+ * Resolve o brasão a exibir para um dado `EstadoPMData`: o brasão da PM do
+ * estado, se detectado e mapeado; caso contrário, o Brasão da República
+ * (comportamento anterior, usado como fallback).
+ */
+export function getBrasaoUrl(estadoPM: EstadoPMData | null | undefined): string {
+  const arquivo = estadoPM?.uf ? BRASAO_ESTADUAL_ARQUIVO[estadoPM.uf] : undefined;
+  return arquivo ? `/brasoes/${arquivo}` : BRASAO_REPUBLICA_URL;
+}
 
 /**
  * Nomes completos (e variações) de cada UF, usados para reconhecer o valor

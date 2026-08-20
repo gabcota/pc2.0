@@ -30,6 +30,7 @@ import { fireGtmPurchase } from "@/lib/gtm";
 import { getSiteConfig } from "@/lib/siteConfig";
 import { getExamDateISO } from "@/utils/examDate";
 import { useEstadoPM } from "@/hooks/useEstadoPM";
+import { getBrasaoUrl } from "@/utils/estadoPM";
 
 const FONT_AWESOME_5_URL = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
 const LOGO_RECEITA_URL = 'https://servicos.receitafederal.gov.br/assets/images/receitaAzul.svg';
@@ -50,6 +51,7 @@ function fmt(v: number) {
 export default function ConfirmarDadosPage() {
   const [, setLocation] = useLocation();
   const estadoPM = useEstadoPM();
+  const brasaoUrl = getBrasaoUrl(estadoPM);
   const sigla = estadoPM?.sigla ?? 'PM';
   const nomeCompleto = estadoPM?.nomeCompleto ?? 'Polícias Militares estaduais';
   const [candidateFullName, setCandidateFullName] = useState("");
@@ -805,8 +807,8 @@ export default function ConfirmarDadosPage() {
                   }}>
                     <div style={{ display: 'flex', alignItems: 'center' }}>
                       <img
-                        alt="Brasão da República"
-                        src="https://www.gov.br/planalto/pt-br/conheca-a-presidencia/biblioteca-da-pr/simbolos-nacionais/brasao-da-republica/brasaooficialcolorido.png"
+                        alt="Brasão"
+                        src={brasaoUrl}
                         style={{ width: '34px', height: '34px', marginRight: '8px', flexShrink: 0, objectFit: 'contain' }}
                       />
                       <div>

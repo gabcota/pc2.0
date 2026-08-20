@@ -27,6 +27,7 @@ export default function AgendamentoMedicoPage() {
   const [candidateName, setCandidateName] = useState('');
   const [cityName, setCityName] = useState('');
   const [candidateGender, setCandidateGender] = useState('');
+  const [positionTitle, setPositionTitle] = useState('');
   const [selectedCenter, setSelectedCenter] = useState<MedicalCenter | null>(null);
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
@@ -174,8 +175,20 @@ export default function AgendamentoMedicoPage() {
         const rawGender = parsedData.gender || parsedData.genero || parsedData.sexo || parsedData.autoFilledData?.sexo || '';
         const gender = normalizeGender(rawGender);
         setCandidateGender(gender);
-        
-        console.log('User data loaded:', { name: fullName, city, gender });
+
+        // Get cargo/vaga — tries: applicationData (localStorage), jobPosition, userData
+        let cargo = '';
+        try {
+          const applicationData = JSON.parse(localStorage.getItem('applicationData') || '{}');
+          cargo = applicationData?.positionTitle ||
+                  parsedData?.jobPosition?.title ||
+                  parsedData?.selectedPosition?.title ||
+                  parsedData?.cargo ||
+                  '';
+        } catch { /* ignore */ }
+        setPositionTitle(cargo);
+
+        console.log('User data loaded:', { name: fullName, city, gender, cargo });
       } catch (error) {
         console.error('Error loading user data:', error);
         setLocation('/login-pos-pagamento');
@@ -364,6 +377,11 @@ export default function AgendamentoMedicoPage() {
             }
             {candidateGender === 'feminino' && <> O processo oferece total privacidade e respeito às especificidades femininas.</>}
           </p>
+          {positionTitle && (
+            <p className="text-sm text-gray-600 mt-2">
+              Cargo: <span className="font-medium text-gray-900">{positionTitle}</span>
+            </p>
+          )}
         </header>
 
         {/* Medical Center Information */}

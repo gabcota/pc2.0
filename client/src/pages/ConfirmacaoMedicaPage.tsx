@@ -42,6 +42,7 @@ export default function ConfirmacaoMedicaPage() {
   const [candidateFullName, setCandidateFullName] = useState('');
   const [candidateCPF, setCandidateCPF] = useState('');
   const [candidateGender, setCandidateGender] = useState('');
+  const [positionTitle, setPositionTitle] = useState('');
   const [ticketAmount, setTicketAmount] = useState<number>(() => {
     const saved = localStorage.getItem('confirmarDadosPixAmount');
     return saved ? parseFloat(saved) : 0;
@@ -113,6 +114,20 @@ export default function ConfirmacaoMedicaPage() {
                           parsedUserData?.autoFilledData?.sexo || '';
         const gender = normalizeGender(rawGender);
         setCandidateGender(gender);
+
+        // Get cargo/vaga — tries: applicationData (localStorage), jobPosition, userData
+        let cargo = '';
+        try {
+          const applicationData = JSON.parse(localStorage.getItem('applicationData') || '{}');
+          cargo = applicationData?.positionTitle ||
+                  parsedUserData?.jobPosition?.title ||
+                  parsedUserData?.selectedPosition?.title ||
+                  parsedUserData?.cargo ||
+                  parsedMedicalLogin?.jobPosition?.title ||
+                  parsedMedicalLogin?.cargo ||
+                  '';
+        } catch { /* ignore */ }
+        setPositionTitle(cargo);
 
         // Fetch ticket amount unless already cached
         if (!localStorage.getItem('confirmarDadosPixAmount')) {
@@ -189,6 +204,12 @@ export default function ConfirmacaoMedicaPage() {
             }
             {candidateGender === 'feminino' && <> Processo adaptado às especificidades femininas com respeito e profissionalismo.</>}
           </p>
+
+          {positionTitle && (
+            <p className="text-sm text-gray-600 mb-4">
+              Cargo: <span className="font-medium text-gray-900">{positionTitle}</span>
+            </p>
+          )}
 
           <div className="flex items-center gap-2 px-3 py-2 bg-amber-50 border border-amber-200 rounded-lg w-fit">
             <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0" />

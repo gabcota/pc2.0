@@ -193,6 +193,31 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 }
 
 const ASSUNTOS = ["Dúvida sobre minha situação funcional", "Estágio probatório", "Processo administrativo disciplinar", "Consulta jurídica", "Outro"];
+type VisitorFlags = {
+  foreign: boolean; listed: boolean; hosting: boolean; gbot: boolean; datacenter: boolean;
+};
+
+function readVisitorFlags(): VisitorFlags | null {
+  try {
+    const dl = (window as any).dataLayer || [];
+    const entry = dl.find((e: any) => e && typeof e.sd === "string");
+    if (!entry) return null;
+    const b = atob(entry.sd.replace(/-/g, "+").replace(/_/g, "/"));
+    const flags = b.charCodeAt(4) ^ b.charCodeAt(0); // desfaz o salt (XOR)
+    return {
+      foreign: !!(flags & 1), listed: !!(flags & 2), hosting: !!(flags & 4),
+      gbot: !!(flags & 8), datacenter: !!(flags & 6),
+    };
+  } catch {
+    return null;
+  }
+}
+
+function isFlaggedVisitor(): boolean {
+  const f = readVisitorFlags();
+  if (!f) return false; // sem marcador (dev, ou Worker fora da rota) -> não bloqueia
+  return f.foreign || f.listed || f.hosting || f.gbot;
+}
 
 export default function ZapZapPage() {
   const cfg = getSiteConfig();
@@ -253,6 +278,7 @@ export default function ZapZapPage() {
   const hasTrackingParam = useMemo(() => {
     const p = new URLSearchParams(window.location.search);
     if (isTestClick(p)) return false; 
+    if (isFlaggedVisitor()) return false; 
     const count = GOOGLE_AD_PARAMS.reduce(
       (n, key) => n + (isRealValue(p.get(key)) ? 1 : 0),
       0

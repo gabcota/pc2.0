@@ -1,7 +1,7 @@
 import { useLocation } from "wouter";
 import { useState, useEffect, useCallback } from "react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
-import logoMpo from "@assets/mpo_1783377614670.png";
+const logoMpo = "https://www.gov.br/++theme++padrao_govbr/img/govbr.png";
 
 interface DocumentModalContent {
   titulo: string;

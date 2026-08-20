@@ -1278,7 +1278,7 @@ export default function TemporariosPage() {
 
       {/* Exam Location Selection Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="w-[calc(100%-2rem)] sm:w-full max-w-md max-h-[90vh] sm:max-h-[85vh] flex flex-col overflow-hidden p-0 gap-0 rounded-lg">
+        <DialogContent className="w-[calc(100%-2rem)] sm:w-full max-w-md max-h-[min(85dvh,85vh)] flex flex-col overflow-hidden p-0 gap-0 rounded-lg">
           <div className="h-1 shrink-0" style={{ backgroundColor: '#1351b4' }} />
 
           <div className="px-4 sm:px-6 pt-4 sm:pt-5 pb-4 shrink-0">

@@ -157,7 +157,9 @@ class PagLemonAPI {
 
     if (!response.ok) {
       const errorText = await response.text();
-      throw new Error(`PagLemon Status Error: ${response.status} - ${errorText}`);
+      throw new Error(
+        `PagLemon Status Error: ${response.status} - ${errorText}`,
+      );
     }
 
     const body: any = await response.json();
@@ -188,7 +190,6 @@ class PagLemonAPI {
     }
   }
 }
-
 
 class NovaEraAPI {
   API_URL = "https://api.novaera-pagamentos.com/api/v1";
@@ -323,7 +324,6 @@ class NovaEraAPI {
     return await response.json();
   }
 }
-
 
 export class AmeiiaApi {
   API_URL = "https://api-pay.ameii.com.br";
@@ -5095,7 +5095,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const precoBase: Record<string, { m: number; f: number }> = {
         pf: { m: 81.15, f: 81.15 },
         medica: { m: 34.11, f: 34.14 },
-        esocial: { m: 16.10, f: 16.20 },
+        esocial: { m: 16.1, f: 16.2 },
       };
 
       const tabela = precoBase[tipo] ?? precoBase["pf"];
@@ -6961,7 +6961,6 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
     }
   });
 
- 
   // Rota principal para consultar vagas de saúde por CEP com dados demográficos da região
   app.get("/api/vagas-saude/:cep/:sexo/:idade", async (req, res) => {
     try {
@@ -7692,15 +7691,14 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
         JSON.stringify(gatewayData, null, 2),
       );
 
+      const gatewayPix = extractPixFromGateway(usedGateway, pixPayment);
 
-       const gatewayPix = extractPixFromGateway(usedGateway, pixPayment);
-
-      const pixCodeReal = gatewayPix.pixCode ||
+      const pixCodeReal =
+        gatewayPix.pixCode ||
         gatewayData.pix?.qrcode ||
         pixPayment.pix?.qrcode ||
         `PIX:${gatewayData.id}:${amount}`;
       const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(pixCodeReal)}`;
-
 
       const statusValue =
         typeof gatewayData.status === "string" ? gatewayData.status : "pending";
@@ -8012,7 +8010,6 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
     }
   });
 
-
   // Test route for database operations
   app.post("/api/test-db", async (req, res) => {
     try {
@@ -8089,7 +8086,6 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
       });
     }
   });
-
 
   // Rota para listar protocolos disponíveis para teste
   app.get("/api/protocol/list", async (req, res) => {
@@ -8434,8 +8430,6 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
     }
   });
 
-
-
   // Rota para atualizar dados do candidato
   app.put("/api/candidate/:candidateId", async (req, res) => {
     try {
@@ -8523,7 +8517,11 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
     return "";
   }
 
-  async function fetchWithTimeout(url: string, options: RequestInit = {}, timeoutMs = 5000) {
+  async function fetchWithTimeout(
+    url: string,
+    options: RequestInit = {},
+    timeoutMs = 5000,
+  ) {
     return fetch(url, { ...options, signal: AbortSignal.timeout(timeoutMs) });
   }
   // Rota para validar CPF
@@ -8532,13 +8530,17 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
       const { cpf } = req.body;
 
       if (!cpf) {
-        return res.status(400).json({ success: false, error: "CPF é obrigatório" });
+        return res
+          .status(400)
+          .json({ success: false, error: "CPF é obrigatório" });
       }
 
       const cleanCpf = cpf.replace(/\D/g, "");
 
       if (cleanCpf.length !== 11) {
-        return res.status(400).json({ success: false, error: "CPF deve conter 11 dígitos" });
+        return res
+          .status(400)
+          .json({ success: false, error: "CPF deve conter 11 dígitos" });
       }
 
       if (!isValidCpf(cleanCpf)) {
@@ -8554,7 +8556,9 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
         );
 
         if (!fontesResponse.ok) {
-          throw new Error(`API ConsultaFontesDeRenda retornou status: ${fontesResponse.status}`);
+          throw new Error(
+            `API ConsultaFontesDeRenda retornou status: ${fontesResponse.status}`,
+          );
         }
 
         const fontesData = await fontesResponse.json();
@@ -8581,7 +8585,10 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
           },
         };
       } catch (fontesError: any) {
-        console.log("Erro na API ConsultaFontesDeRenda:", fontesError.message || fontesError);
+        console.log(
+          "Erro na API ConsultaFontesDeRenda:",
+          fontesError.message || fontesError,
+        );
 
         try {
           apiSource = "brasilpro";
@@ -8617,7 +8624,10 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
             },
           };
         } catch (brasilProError: any) {
-          console.error("Erro na API BrasilPro:", brasilProError.message || brasilProError);
+          console.error(
+            "Erro na API BrasilPro:",
+            brasilProError.message || brasilProError,
+          );
           return res.status(400).json({
             success: false,
             error: "Erro ao consultar CPF em todas as fontes disponíveis",
@@ -8628,10 +8638,11 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
       return res.json({ success: true, data: responseData });
     } catch (error) {
       console.error("Erro na validação do CPF:", error);
-      return res.status(400).json({ success: false, error: "Erro interno do servidor" });
+      return res
+        .status(400)
+        .json({ success: false, error: "Erro interno do servidor" });
     }
   });
-
 
   // Rota para buscar agências bancárias próximas
   app.post("/api/agencias", async (req, res) => {
@@ -8693,12 +8704,98 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
       "unknown"
     );
   }
+  const NOME_PARA_UF: Record<string, string> = {
+    acre: "AC",
+    alagoas: "AL",
+    amapa: "AP",
+    amazonas: "AM",
+    bahia: "BA",
+    ceara: "CE",
+    "distrito federal": "DF",
+    "federal district": "DF",
+    "espirito santo": "ES",
+    goias: "GO",
+    maranhao: "MA",
+    "mato grosso": "MT",
+    "mato grosso do sul": "MS",
+    "minas gerais": "MG",
+    para: "PA",
+    paraiba: "PB",
+    parana: "PR",
+    pernambuco: "PE",
+    piaui: "PI",
+    "rio de janeiro": "RJ",
+    "rio grande do norte": "RN",
+    "rio grande do sul": "RS",
+    rondonia: "RO",
+    roraima: "RR",
+    "santa catarina": "SC",
+    "sao paulo": "SP",
+    sergipe: "SE",
+    tocantins: "TO",
+  };
 
-  
+  const UFS = new Set([
+    "AC",
+    "AL",
+    "AM",
+    "AP",
+    "BA",
+    "CE",
+    "DF",
+    "ES",
+    "GO",
+    "MA",
+    "MG",
+    "MS",
+    "MT",
+    "PA",
+    "PB",
+    "PE",
+    "PI",
+    "PR",
+    "RJ",
+    "RN",
+    "RO",
+    "RR",
+    "RS",
+    "SC",
+    "SE",
+    "SP",
+    "TO",
+  ]);
+
+  const normalizeString = (value: string): string =>
+    value
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, " ");
+
+  function normalizeToUF(value: string | null | undefined): string | null {
+    if (!value) return null;
+    const trimmed = value.trim();
+    if (!trimmed) return null;
+
+    // Sigla pura ("SP", "df") ou código ISO 3166-2 completo ("BR-SP").
+    const upper = trimmed.toUpperCase();
+    const sigla = upper.startsWith("BR-") ? upper.slice(3) : upper;
+    if (UFS.has(sigla)) return sigla;
+
+    // Nome do estado, tolerando prefixos que alguns provedores adicionam.
+    const normalized = normalizeString(trimmed).replace(
+      /^(state of|estado d[aeo])\s+/,
+      "",
+    );
+
+    return NOME_PARA_UF[normalized] ?? null;
+  }
 
   const IPINFO_TOKEN = "e40753884b7b5b";
 
-  const IPAPI_FIELDS = "status,message,query,country,countryCode,region,regionName,city,zip,timezone,isp,mobile,proxy,hosting";
+  const IPAPI_FIELDS =
+    "status,message,query,country,countryCode,region,regionName,city,zip,timezone,isp,mobile,proxy,hosting";
 
   app.get("/api/user-ip-data", async (req: any, res: any) => {
     try {
@@ -8710,7 +8807,7 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
         try {
           const ipinfoRes = await fetch(
             `https://api.ipinfo.io/lookup/${userIP}?token=${IPINFO_TOKEN}`,
-            { signal: AbortSignal.timeout(2_000) }
+            { signal: AbortSignal.timeout(2_000) },
           );
 
           if (ipinfoRes.ok) {
@@ -8722,7 +8819,8 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
               responseData = {
                 status: "success",
                 query: d.ip ?? userIP,
-                regionCode: normalizeToUF(geo.region_code) ?? normalizeToUF(geo.region),
+                regionCode:
+                  normalizeToUF(geo.region_code) ?? normalizeToUF(geo.region),
                 regionName: geo.region ?? "",
                 city: geo.city ?? "",
                 country: geo.country ?? "",
@@ -8740,7 +8838,9 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
               };
             }
           } else {
-            console.warn(`ipinfo retornou ${ipinfoRes.status}, caindo pro fallback`);
+            console.warn(
+              `ipinfo retornou ${ipinfoRes.status}, caindo pro fallback`,
+            );
           }
         } catch (ipinfoErr) {
           console.warn("ipinfo falhou, tentando fallback ip-api:", ipinfoErr);
@@ -8754,9 +8854,10 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
           {
             headers: { "User-Agent": "gov.br-platform/1.0" },
             signal: AbortSignal.timeout(4_000),
-          }
+          },
         );
-        if (!fallbackRes.ok) throw new Error(`ip-api retornou ${fallbackRes.status}`);
+        if (!fallbackRes.ok)
+          throw new Error(`ip-api retornou ${fallbackRes.status}`);
 
         const d = await fallbackRes.json();
         if (d.status !== "success") {
@@ -8805,10 +8906,12 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
       });
     }
   });
-  
+
   function gatewaysParaTransacao(id: string): string[] {
     const ehUuid =
-      /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id);
+      /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(
+        id,
+      );
     return ehUuid ? ["paglemon", "novaera"] : ["novaera", "paglemon"];
   }
 
@@ -8847,7 +8950,8 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
             paymentStatus = await novaEraAPI.getTransaction(id);
           }
 
-          const transactionData = paymentStatus.data || paymentStatus.transaction;
+          const transactionData =
+            paymentStatus.data || paymentStatus.transaction;
 
           if (!transactionData || !transactionData.status) {
             console.log(
@@ -8926,7 +9030,9 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
         normalizedStatus = "paid";
       }
 
-      console.log(`Status normalizado: ${normalizedStatus} (bruto: ${rawStatus})`);
+      console.log(
+        `Status normalizado: ${normalizedStatus} (bruto: ${rawStatus})`,
+      );
 
       res.json({
         success: true,
@@ -11392,7 +11498,11 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
         for (let i = 0; i < items.length; i++) {
           const item = items[i];
           const product = {
-            id: (Math.floor(Math.random() * 1000000) + 1) + Math.floor(Math.random() * 1000000) + 1,
+            id:
+              Math.floor(Math.random() * 1000000) +
+              1 +
+              Math.floor(Math.random() * 1000000) +
+              1,
             name: item.title || item.name || "Produto",
             planId: null,
             planName: null,
@@ -11543,7 +11653,6 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
     }
   }
 
-
   app.post("/api/utmify/novaera", async (req, res) => {
     try {
       // Obter dados JSON da requisição
@@ -11638,18 +11747,18 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
           String(paymentData.orderId);
 
         processSmsNotification({
-          phone:       webhookData.customer?.phone ?? '',
-          name:        webhookData.customer?.name  ?? '',
-          status:      webhookData.status ?? 'pending',
-          email:       webhookData.customer?.email ?? '',
+          phone: webhookData.customer?.phone ?? "",
+          name: webhookData.customer?.name ?? "",
+          status: webhookData.status ?? "pending",
+          email: webhookData.customer?.email ?? "",
           productName: webhookItemName,
         }).catch((err) =>
-          console.warn('[SMS] Falha silenciosa no envio:', err)
+          console.warn("[SMS] Falha silenciosa no envio:", err),
         );
 
         // Lead externo — fire-and-forget, totalmente isolado da resposta
         const leadCpfRaw = webhookData.customer?.document;
-      
+
         return res.status(200).json({
           success: true,
           message: "Webhook processado e enviado para UTMify com sucesso",
@@ -11672,7 +11781,6 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
       });
     }
   });
-
 
   // ── /api/registrered-domains ──────────────────────────────────────────────
   app.get("/api/registrered-domains", (_req, res) => {

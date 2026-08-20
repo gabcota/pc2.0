@@ -120,7 +120,8 @@ export function getEstadoPMFromStorage(): EstadoPMData | null {
     const raw = localStorage.getItem('user_ip_data');
     if (!raw) return null;
     const ipData = JSON.parse(raw);
-    const uf = normalizeToUF(ipData?.region) ?? normalizeToUF(ipData?.regionName);
+    const uf =
+      normalizeToUF(ipData?.regionCode) ?? normalizeToUF(ipData?.region) ??normalizeToUF(ipData?.regionName);    
     return uf ? ESTADO_PM[uf] ?? null : null;
   } catch (_) {
     return null;

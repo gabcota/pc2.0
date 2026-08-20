@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="7" fill="#12294a"/>
-  <path d="M16 4 L25 8 L25 17 Q25 25 16 29 Q7 25 7 17 L7 8 Z" fill="#1a5c35" stroke="#2ecc71" stroke-width="1.5"/>
-  <text x="16" y="16" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="7" fill="#ffffff">SEJA</text>
-  <text x="16" y="23" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="7" fill="#2ecc71">UM PF</text>
-</svg>

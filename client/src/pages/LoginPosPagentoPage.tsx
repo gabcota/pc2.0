@@ -222,7 +222,7 @@ export default function LoginPosPagamentoPage() {
     setIsValidating(true);
 
     if (!validateEmail(email)) {
-      setError('Por favor, insira um email válido.');
+      setError('Por favor, insira um e-mail válido.');
       setIsValidating(false);
       return;
     }
@@ -291,7 +291,7 @@ export default function LoginPosPagamentoPage() {
         
         // Verificar se email e CPF conferem
         if (candidateData.email.toLowerCase() !== email.toLowerCase()) {
-          setError('Email não confere com os dados do protocolo.');
+          setError('O e-mail não confere com os dados do protocolo.');
           setIsLoading(false);
           setIsValidating(false);
           return;
@@ -322,7 +322,7 @@ export default function LoginPosPagamentoPage() {
           const userCpf = parsedUserData.autoFilledData?.cpf || parsedUserData.cpf;
 
           if (userEmail && userEmail.toLowerCase() !== email.toLowerCase()) {
-            setError('Email não confere com os dados da inscrição.');
+            setError('O e-mail não confere com os dados da inscrição.');
             setIsLoading(false);
             setIsValidating(false);
             return;
@@ -634,7 +634,7 @@ export default function LoginPosPagamentoPage() {
                 <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs font-medium text-green-800">Dados carregados do protocolo</p>
-                  <p className="text-xs text-green-700 mt-0.5">Email e CPF preenchidos automaticamente. Confirme se estão corretos.</p>
+                  <p className="text-xs text-green-700 mt-0.5">E-mail e CPF preenchidos automaticamente. Confirme se estão corretos.</p>
                 </div>
               </div>
             )}
@@ -651,7 +651,7 @@ export default function LoginPosPagamentoPage() {
                   {/* Email com ícone */}
                   <div className="relative email-autocomplete">
                     <Label htmlFor="email" className="text-xs font-medium text-gray-500 mb-1.5 block uppercase tracking-wide">
-                      Email do Protocolo
+                      E-mail do protocolo
                     </Label>
                     <div className="relative">
                       <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
@@ -915,7 +915,7 @@ export default function LoginPosPagamentoPage() {
                     A <strong>Perícia Médica Admissional</strong> é procedimento obrigatório previsto no edital do Concurso {sigla} 2026, e verifica as condições de saúde necessárias ao exercício das funções do cargo.
                   </p>
                   <p>
-                    A perícia atesta que o candidato atende aos requisitos de aptidão exigidos para posse no cargo, sendo etapa indispensável para prosseguimento no processo seletivo da {sigla}.
+                    A perícia atesta que o candidato atende aos requisitos de aptidão exigidos para posse no cargo, sendo etapa indispensável para o prosseguimento no processo seletivo da {sigla}.
                   </p>
                 </div>
 

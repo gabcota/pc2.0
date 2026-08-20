@@ -311,7 +311,7 @@ export default function ESocialPagamentoPage() {
       <div className="bg-green-50 border-b border-green-200 py-2 px-4">
         <div className="max-w-xl mx-auto flex items-center justify-center gap-2">
           <Shield className="w-3.5 h-3.5 text-green-600 flex-shrink-0" />
-          <span className="text-green-800 text-xs font-semibold tracking-wide">Pagamento 100% Seguro</span>
+          <span className="text-green-800 text-xs font-semibold tracking-wide">Pagamento 100% seguro</span>
           <span className="text-green-600 text-[10px]">•</span>
           <span className="text-green-700 text-[10px]">Ambiente criptografado</span>
         </div>
@@ -381,7 +381,7 @@ export default function ESocialPagamentoPage() {
                 <div className="mb-4">
                   <img
                     src={getColoredQrCode(pixData.qrCode || FALLBACK_QR_CODE)}
-                    alt="QR Code PIX"
+                    alt="Código QR do Pix"
                     className="w-36 h-36"
                   />
                 </div>
@@ -412,7 +412,7 @@ export default function ESocialPagamentoPage() {
                     ) : (
                       <>
                         <Copy className="w-4 h-4" />
-                        Copiar código PIX
+                        Copiar código Pix
                       </>
                     )}
                   </button>
@@ -420,7 +420,7 @@ export default function ESocialPagamentoPage() {
                   {apiError && (
                     <div className="mt-3 flex items-start gap-2 text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
                       <AlertCircle className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" />
-                      <span>Use o código acima para realizar o pagamento via PIX em qualquer banco.</span>
+                      <span>Use o código acima para realizar o pagamento via Pix em qualquer banco.</span>
                     </div>
                   )}
                 </div>

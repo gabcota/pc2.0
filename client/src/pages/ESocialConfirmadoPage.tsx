@@ -125,13 +125,13 @@ export default function ESocialConfirmadoPage() {
             </p>
 
             <p>
-              Isso significa que, caso você seja {aprov}{ela} na avaliação para o cargo de <strong>{userInfo.cargo}</strong>, o registro do vínculo funcional poderá ocorrer de forma imediata, sem necessidade de aguardar os trâmites burocráticos convencionais que normalmente levam de 30 a 90 dias úteis. A pré-integração realizada nesta etapa elimina as principais barreiras operacionais que retardam a posse e o exercício do cargo.
+              Isso significa que, caso você seja {aprov} na avaliação para o cargo de <strong>{userInfo.cargo}</strong>, o registro do vínculo funcional poderá ocorrer de forma imediata, sem necessidade de aguardar os trâmites burocráticos convencionais que normalmente levam de 30 a 90 dias úteis. A pré-integração realizada nesta etapa elimina as principais barreiras operacionais que retardam a posse e o exercício do cargo.
             </p>
 
             <div className="bg-gray-50 border-l-4 border-[#0063AF] p-4 rounded-r-lg">
               <p className="font-semibold text-[#004D8C] mb-2">O que acontece agora</p>
               <p>
-                Nos próximos <strong>2 a 3 dias úteis</strong>, a equipe de coordenação da {sigla} irá processar sua inscrição e verificar a conformidade dos dados integrados. Após essa etapa de validação interna, você receberá uma mensagem de confirmação com todos os detalhes necessários para comparecer ao dia da avaliação.
+                Nos próximos <strong>2 a 3 dias úteis</strong>, a equipe de coordenação da {sigla} irá processar sua inscrição e verificar a conformidade dos dados integrados. Após essa etapa de validação interna, você receberá uma mensagem de confirmação com todos os detalhes necessários para comparecer no dia da avaliação.
               </p>
             </div>
 
@@ -143,7 +143,7 @@ export default function ESocialConfirmadoPage() {
             </p>
 
             <p>
-              A mensagem de confirmação conterá: data e horário da avaliação, endereço completo do local de prova, número do protocolo oficial de inscrição, o cargo para o qual você está concorrendo, orientações sobre o que levar no dia, e o código de verificação de autenticidade do seu cadastro integrado.
+              A mensagem de confirmação conterá: data e horário da avaliação, endereço completo do local de prova, número do protocolo oficial de inscrição, o cargo para o qual você está concorrendo, orientações sobre o que levar no dia e o código de verificação de autenticidade do seu cadastro integrado.
             </p>
 
             <div className="bg-gray-50 border-l-4 border-amber-400 p-4 rounded-r-lg">

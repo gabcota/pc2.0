@@ -176,11 +176,11 @@ export default function RegistrationPage() {
             <div className="w-16 h-16 border-4 border-gray-200 rounded-full animate-spin mx-auto mb-8" style={{ borderTopColor: '#1351b4' }}></div>
             
             <h1 className="text-2xl font-semibold text-gray-900 mb-4">
-              Registrando inscricao
+              Registrando inscrição
             </h1>
             
             <p className="text-gray-600 mb-8">
-              Estamos registrando seu nome na {getLocationTypeName()} de {getCityName()}.
+              Estamos registrando seu nome no {getLocationTypeName()} de {getCityName()}.
             </p>
 
             <div className="bg-gray-50 rounded-lg p-6 text-left max-w-md mx-auto">
@@ -212,7 +212,7 @@ export default function RegistrationPage() {
             </h1>
             
             <p className="text-gray-600 mb-4">
-              Sua inscricao foi registrada. Agora, sera necessario validar seus dados e emitir o protocolo de participacao para realizar a prova objetiva.
+              Sua inscrição foi registrada. Agora, será necessário validar seus dados e emitir o protocolo de participação para realizar a prova objetiva.
             </p>
             
             <p className="text-gray-600 mb-12">
@@ -253,7 +253,7 @@ export default function RegistrationPage() {
             <div className="bg-gray-50 border border-gray-200 rounded p-4 mb-8">
               <div className="text-sm text-gray-700">
                 <p className="mb-2">
-                  Dados enviados para o {getLocationTypeName()} em {getCityName()} as {new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}.
+                  Dados enviados para o {getLocationTypeName()} em {getCityName()} às {new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}.
                 </p>
                 <p className="text-gray-600">
                   Protocolo: <span className="font-mono text-gray-800">{sigla.replace(/[^A-Z0-9]/g, '')}{Date.now().toString().slice(-6)}</span>
@@ -265,7 +265,7 @@ export default function RegistrationPage() {
             <div className="bg-gray-50 border border-gray-200 rounded p-4 mb-8">
               <div className="text-sm text-gray-700 text-center">
                 <p>
-                  O comprovante de inscrição será enviado via email para: <strong>{(() => {
+                  O comprovante de inscrição será enviado via e-mail para: <strong>{(() => {
                     try {
                       const userData = JSON.parse(localStorage.getItem('userData') || '{}');
                       return userData.email || 'email não informado';

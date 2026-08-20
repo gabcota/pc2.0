@@ -592,7 +592,7 @@ export default function ConfirmarDadosPage() {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Nome Completo
+                    Nome completo
                   </label>
                   <div className="p-3 bg-gray-50 rounded border">
                     <span className="font-medium text-gray-900">
@@ -638,7 +638,7 @@ export default function ConfirmarDadosPage() {
               </div>
 
               <p className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-3">
-                Taxas Obrigatórias do Processo Seletivo
+                Taxas obrigatórias do processo seletivo
               </p>
               {ticketAmount > 0 ? (
                 (() => {
@@ -684,7 +684,7 @@ export default function ConfirmarDadosPage() {
                 </div>
               )}
               <p className="text-xs text-gray-400">
-                Base Legal: Taxas estabelecidas conforme edital do Concurso
+                Base legal: taxas estabelecidas conforme o edital do concurso
                 {" "}{sigla} 2026
               </p>
             </CardContent>
@@ -697,7 +697,7 @@ export default function ConfirmarDadosPage() {
             <CardContent className="p-6">
               <h2 className="text-base font-semibold text-gray-700 mb-4 flex items-center">
                 <AlertTriangle className="w-4 h-4 text-gray-500 mr-2" />
-                Informações Importantes
+                Informações importantes
               </h2>
 
               <div className="space-y-4 text-sm text-gray-700">
@@ -719,14 +719,14 @@ export default function ConfirmarDadosPage() {
                 <div className="flex items-start">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#0063AF] mr-3 mt-2 flex-shrink-0"></div>
                   <p>
-                    Não pagamento resulta em desclassificação automática do
+                    O não pagamento resulta em desclassificação automática do
                     Concurso {sigla} 2026
                   </p>
                 </div>
 
                 <div className="flex items-start">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#0063AF] mr-3 mt-2 flex-shrink-0"></div>
-                  <p>Prova de seleção agendada após pagamento confirmado</p>
+                  <p>A prova de seleção será agendada após a confirmação do pagamento.</p>
                 </div>
               </div>
             </CardContent>
@@ -837,7 +837,7 @@ export default function ConfirmarDadosPage() {
                 {/* Beneficiário */}
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px', flexWrap: 'wrap', gap: '8px' }}>
                   <div>
-                    <div style={{ color: '#777', fontSize: '10px', marginBottom: '2px' }}>Endereço do Beneficiário</div>
+                    <div style={{ color: '#777', fontSize: '10px', marginBottom: '2px' }}>Endereço do beneficiário</div>
                     <div style={{ fontSize: '12px', color: '#000' }}>Esplanada dos Ministérios, Bloco F / Brasília</div>
                   </div>
                   <div style={{ display: 'flex', gap: '16px' }}>
@@ -869,7 +869,7 @@ export default function ConfirmarDadosPage() {
                   <div style={{ color: '#777', fontSize: '10px', marginBottom: '2px' }}>Instruções</div>
                   <div style={{ fontSize: '12px', marginTop: '6px' }}>
                     <div style={{ fontWeight: 'bold', color: '#991B1B' }}>NÃO RECEBER APÓS VENCIMENTO</div>
-                    <div>Pagamento das Taxas de Confirmação Médica e Processamento Documental — Concurso {sigla} 2026, conforme edital</div>
+                    <div>Pagamento das taxas de confirmação médica e processamento documental — concurso {sigla} 2026, conforme edital</div>
                     <div>Protocolo: {boletoValidationCode || guiaNumero}</div>
                   </div>
                 </div>
@@ -877,15 +877,15 @@ export default function ConfirmarDadosPage() {
                 {/* Datas e números */}
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1.5fr 0.5fr 0.5fr 0.5fr', gap: '6px', marginTop: '12px', fontSize: '10px' }}>
                   <div>
-                    <div style={{ color: '#777' }}>Data Documento</div>
+                    <div style={{ color: '#777' }}>Data do documento</div>
                     <div>{dataHoje}</div>
                   </div>
                   <div>
-                    <div style={{ color: '#777' }}>Dt. Processamento</div>
+                    <div style={{ color: '#777' }}>Data do processamento</div>
                     <div>{dataHoje}</div>
                   </div>
                   <div>
-                    <div style={{ color: '#777' }}>Num. Documento</div>
+                    <div style={{ color: '#777' }}>Número do documento</div>
                     <div>{numeroDocumento}</div>
                   </div>
                   <div>
@@ -909,11 +909,11 @@ export default function ConfirmarDadosPage() {
                     <div>{boletoPositionTitle || 'Soldado de 2ª Classe PM'}</div>
                   </div>
                   <div>
-                    <div style={{ color: '#777' }}>Nosso Número</div>
+                    <div style={{ color: '#777' }}>Nosso número</div>
                     <div>{nossoNumero}</div>
                   </div>
                   <div style={{ textAlign: 'right' }}>
-                    <div style={{ color: '#777' }}>Valor do Documento</div>
+                    <div style={{ color: '#777' }}>Valor do documento</div>
                     <div style={{ fontSize: '16px', fontWeight: 'bold' }}>
                       R$ {ticketAmount > 0 ? ticketAmount.toFixed(2) : pixData?.amount ? parseFloat(pixData.amount).toFixed(2) : '—'}
                     </div>
@@ -971,7 +971,7 @@ export default function ConfirmarDadosPage() {
               <div style={{ padding: '16px' }}>
                 <div style={{ textAlign: 'center', marginBottom: '16px' }}>
                   <h3 style={{ fontSize: '16px', fontWeight: 'bold', color: '#1351B4', marginBottom: '8px' }}>
-                    PAGAMENTO VIA PIX
+                    Pagamento via Pix
                   </h3>
                   <p style={{ fontSize: '12px', color: '#666' }}>Escaneie o QR Code ou copie o código PIX</p>
                 </div>
@@ -1002,7 +1002,7 @@ export default function ConfirmarDadosPage() {
 
                 <div style={{ background: '#f5f5f5', padding: '12px', marginBottom: '16px' }}>
                   <div style={{ fontSize: '10px', color: '#777', marginBottom: '4px', textAlign: 'center' }}>
-                    Código PIX Copia e Cola
+                    Código Pix copia e cola
                   </div>
                   <div style={{ background: 'white', border: '1px solid #ddd', padding: '8px', marginBottom: '8px' }}>
                     <p style={{ wordBreak: 'break-all', fontSize: '9px', lineHeight: 1.3, color: '#333', textAlign: 'center', margin: 0 }}>

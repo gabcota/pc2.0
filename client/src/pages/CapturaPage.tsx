@@ -1364,7 +1364,7 @@ export default function CapturaPage() {
                       
                       <div className="bg-blue-600 text-white p-3 rounded">
                         <p className="text-xs font-medium">
-                          <strong>PRIORIDADE NO PROCESSO SELETIVO:</strong> Isso te dá prioridade no processo seletivo pois demonstra experiência anterior e facilita o seu alocamento para uma função devida.
+                          <strong>PRIORIDADE NO PROCESSO SELETIVO:</strong> Isso lhe dá prioridade no processo seletivo, pois demonstra experiência anterior e facilita sua alocação em uma função adequada.
                         </p>
                       </div>
                     </div>

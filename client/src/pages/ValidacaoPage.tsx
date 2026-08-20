@@ -440,7 +440,7 @@ export default function ValidacaoPage() {
                   local da prova.
                 </p>
                 <p className="text-xs text-gray-600">
-                  Documento protegido contra fraudes - comprova sua participação
+                  Documento protegido contra fraudes — comprova sua participação
                   oficial no Concurso Público {sigla} 2026.
                 </p>
               </div>
@@ -728,7 +728,7 @@ export default function ValidacaoPage() {
                           Gerar Protocolo Oficial de Seleção
                         </Button>
                         <p className="text-xs text-gray-500 mt-3">
-                          Processamento seguro • Confirmação por email
+                          Processamento seguro • Confirmação por e-mail
                         </p>
                       </div>
                     </div>

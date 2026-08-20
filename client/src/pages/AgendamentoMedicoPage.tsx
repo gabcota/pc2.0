@@ -359,16 +359,16 @@ export default function AgendamentoMedicoPage() {
           </h1>
           <p className="text-sm text-gray-500 leading-relaxed mb-0">
             {candidateName
-              ? `${candidateName}, selecione data e local para sua perícia médica admissional — Concurso ${sigla} 2026.`
-              : `Selecione data e local para sua perícia médica admissional — Concurso ${sigla} 2026.`
+              ? `${candidateName}, selecione a data e o local para sua perícia médica admissional — Concurso ${sigla} 2026.`
+              : `Selecione a data e o local para sua perícia médica admissional — Concurso ${sigla} 2026.`
             }
-            {candidateGender === 'feminino' && <> Processo com total privacidade e respeito às especificidades femininas.</>}
+            {candidateGender === 'feminino' && <> O processo oferece total privacidade e respeito às especificidades femininas.</>}
           </p>
         </header>
 
         {/* Medical Center Information */}
         <article className="mb-8">
-          <h2 className="text-base font-semibold text-gray-700 mb-4">Informações sobre a Perícia Médica Admissional</h2>
+          <h2 className="text-base font-semibold text-gray-700 mb-4">Informações sobre a perícia médica admissional</h2>
           <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-700">
             <div>
               <h3 className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-2">Procedimentos realizados</h3>
@@ -455,7 +455,7 @@ export default function AgendamentoMedicoPage() {
             <article>
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-base font-semibold text-gray-700">Centro Selecionado</h2>
+                  <h2 className="text-base font-semibold text-gray-700">Centro selecionado</h2>
                   <button 
                     onClick={() => setShowTimeSlots(false)}
                     className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50"
@@ -581,7 +581,7 @@ export default function AgendamentoMedicoPage() {
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#004D8C'}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0063AF'}
             >
-              Confirmar Agendamento
+              Confirmar agendamento
             </button>
           </div>
         )}

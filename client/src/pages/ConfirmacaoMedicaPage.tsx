@@ -180,7 +180,7 @@ export default function ConfirmacaoMedicaPage() {
         {/* Header */}
         <header className="mb-8">
           <h1 className="text-xl font-semibold text-gray-900 mb-2 leading-tight">
-            Agendamento Recebido — Regularização Obrigatória Pendente
+            Agendamento recebido — regularização obrigatória pendente
           </h1>
           <p className="text-sm text-gray-500 leading-relaxed mb-4">
             {candidateGender === 'feminino'
@@ -193,14 +193,14 @@ export default function ConfirmacaoMedicaPage() {
           <div className="flex items-center gap-2 px-3 py-2 bg-amber-50 border border-amber-200 rounded-lg w-fit">
             <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0" />
             <p className="text-xs font-medium text-gray-700">
-              Código de Confirmação: <span className="font-mono font-semibold text-gray-900">{confirmationCode}</span>
+              Código de confirmação: <span className="font-mono font-semibold text-gray-900">{confirmationCode}</span>
             </p>
           </div>
         </header>
 
         {/* Appointment Details */}
         <article className="mb-8">
-          <h2 className="text-base font-semibold text-gray-700 mb-4">Detalhes do Agendamento</h2>
+          <h2 className="text-base font-semibold text-gray-700 mb-4">Detalhes do agendamento</h2>
           <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-700">
             <div>
               <h3 className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-2">Informações do exame</h3>
@@ -269,7 +269,7 @@ export default function ConfirmacaoMedicaPage() {
               <Shield className="w-4 h-4 text-gray-500 flex-shrink-0 mt-0.5" />
               <div className="text-xs text-gray-600 space-y-0.5">
                 <p><strong className="text-gray-700">Privacidade total</strong> — exame em ambiente reservado com profissionais especializadas.</p>
-                <p><strong className="text-gray-700">Reagendamento</strong> — facilidade para reagendar em casos especiais sem penalização.</p>
+                <p><strong className="text-gray-700">Reagendamento</strong> — possibilidade de remarcar em casos especiais sem penalização.</p>
               </div>
             </div>
           )}
@@ -284,7 +284,7 @@ export default function ConfirmacaoMedicaPage() {
                 <AlertTriangle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <h3 className="text-base font-semibold text-gray-900 mb-3">
-                    Agendamento Confirmado — Regularização Pendente
+                    Agendamento confirmado — regularização pendente
                   </h3>
 
                   <p className="text-sm text-gray-600 mb-1">
@@ -299,7 +299,7 @@ export default function ConfirmacaoMedicaPage() {
                   </p>
 
                   <div className="mb-4">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-2">Taxas de Finalização da Inscrição</p>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-2">Taxas de finalização da inscrição</p>
                     {ticketAmount > 0 ? (() => {
                       const bd = getBreakdown(ticketAmount);
                       return (

@@ -49,7 +49,7 @@ const LOADING_STEPS: Record<string, string[]> = {
   esocial: [
     'Conectando ao servidor do eSocial...',
     'Autenticando via Gov.br...',
-    'Consultando qualificação cadastral...',
+    'Consultando a qualificação cadastral...',
     'Validando CPF na base da Receita Federal...',
     'Verificando sincronização com a corporação...',
     'Finalizando consulta...',
@@ -58,7 +58,7 @@ const LOADING_STEPS: Record<string, string[]> = {
     'Acessando FGTS Digital...',
     'Verificando vínculo PIS/PASEP...',
     'Consultando histórico de depósitos...',
-    'Validando habilitação para empregador...',
+    'Validando a habilitação para o empregador...',
     'Finalizando verificação...',
   ],
   cnis: [
@@ -71,7 +71,7 @@ const LOADING_STEPS: Record<string, string[]> = {
   ctps: [
     'Acessando CTPS Digital...',
     'Verificando dados cadastrais...',
-    'Consultando registros de vínculos...',
+    'Consultando registros de vínculo...',
     'Verificando liberação para novo registro...',
     'Finalizando verificação...',
   ],
@@ -134,7 +134,7 @@ const generateChatFlow = (info: UserInfo, sigla: string) => {
         {
           id: 'p0-3',
           type: 'bot' as const,
-          content: 'Este canal irá orientá-lo sobre o procedimento de Integração Trabalhista, etapa obrigatória para nomeação e posse no serviço público federal. Deseja prosseguir?',
+          content: 'Este canal irá orientá-lo sobre o procedimento de integração trabalhista, etapa obrigatória para nomeação e posse no serviço público federal. Deseja prosseguir?',
           action: { type: 'confirm' as const, options: ['Sim, prosseguir', 'Mais informações'] },
         },
       ],
@@ -177,7 +177,7 @@ const generateChatFlow = (info: UserInfo, sigla: string) => {
         {
           id: 'p3-1',
           type: 'bot' as const,
-          content: 'Agora vou verificar sua situação no FGTS Digital, sistema que controla os depósitos do seu futuro salário.',
+          content: 'Agora vou verificar sua situação no FGTS Digital, sistema que controla os depósitos do FGTS referentes ao seu futuro vínculo empregatício.',
           action: { type: 'button' as const, label: 'Verificar FGTS Digital', systemCheck: 'fgts' },
         },
       ],
@@ -225,7 +225,7 @@ const generateChatFlow = (info: UserInfo, sigla: string) => {
         {
           id: 'p6-4',
           type: 'bot' as const,
-          content: `A ${sigla} disponibiliza o DAE (Documento de Arrecadação do eSocial) para custear o processamento técnico da regularização. Essa contribuição cobre o trabalho da equipe do Núcleo de Integração eSocial.`,
+          content: `A ${sigla} disponibiliza o DAE (Documento de Arrecadação do eSocial) para custear os custos do processamento técnico da regularização. Essa contribuição cobre o trabalho da equipe do Núcleo de Integração eSocial.`,
           action: { type: 'button' as const, label: 'Prosseguir para emissão' },
         },
       ],

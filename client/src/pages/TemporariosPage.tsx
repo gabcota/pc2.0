@@ -1189,7 +1189,7 @@ export default function TemporariosPage() {
                       }
                       return null;
                     })()}
-                    <p className="text-xs">Disciplinas da Prova <strong>(Nivel Fácil):</strong> {' '}{position.examInfo.subjects.join(', ')}</p>
+                    <p className="text-xs">Disciplinas da prova <strong>(nível fácil):</strong> {' '}{position.examInfo.subjects.join(', ')}</p>
                   </div>
                 </div>
 

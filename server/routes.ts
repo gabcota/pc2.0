@@ -6683,94 +6683,81 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
   }
 
   // Função auxiliar para fallback usando CSV
+  // Fallback CSV de /api/juntas — segue a mesma lógica usada em /api/locais-prova:
+  // quando o Google Places falha, devolve escolas reais do CSV (com seus dados
+  // verdadeiros) em vez de fabricar nomes fictícios de delegacia/PM/PC.
   async function handleCSVFallback(cep: string, cepData: ViaCEPData, res: any) {
-    console.log("Usando fallback CSV para gerar unidades militares");
+    console.log(
+      "[juntas] Usando fallback CSV (mesma lógica do /api/locais-prova) para localizar pontos de referência",
+    );
 
     // Carregar dados das escolas do CSV
     const todasEscolas = await lerEscolasCsv();
 
     // Filtrar escolas do mesmo município
-    const escolasMunicipio = todasEscolas.filter(
+    let escolasEncontradas = todasEscolas.filter(
       (escola: EscolaCSV) =>
         escola.municipio.toLowerCase() === cepData.localidade.toLowerCase() &&
         escola.uf.toLowerCase() === cepData.uf.toLowerCase(),
     );
 
-    // Se não encontrar escolas no município, buscar no estado
-    let escolasEncontradas = escolasMunicipio;
+    // Se não encontrar o suficiente no município, complementar com o estado
     if (escolasEncontradas.length < 3) {
-      const escolasEstado = todasEscolas.filter(
+      const doEstado = todasEscolas.filter(
         (escola: EscolaCSV) =>
           escola.uf.toLowerCase() === cepData.uf.toLowerCase(),
       );
-      escolasEncontradas = [...escolasMunicipio, ...escolasEstado].slice(0, 6); // Pegar mais para ter opções
+      escolasEncontradas = [...escolasEncontradas, ...doEstado].slice(0, 5);
     }
 
     if (escolasEncontradas.length === 0) {
-      return res.status(500).json({
+      return res.status(404).json({
         success: false,
         error:
-          "Sistema temporariamente indisponível. Não foi possível localizar unidades na região.",
+          "Não foram encontrados locais de referência para a região informada.",
       });
     }
 
-    // Tipos de unidades militares/policiais comuns no Brasil
-    const tiposUnidades = [
-      "Polícia Militar",
-      "Polícia Civil",
-      "Tiro de Guerra",
-      "Comando de Policiamento",
-      "Destacamento Militar",
-      "Batalhão da PM",
-      "Delegacia de Polícia Civil",
-      "Base da Guarda Municipal",
-      "Comando Regional",
-    ];
-
-    const unidadesMilitares = [];
-    const escolasSelecionadas = escolasEncontradas.slice(0, 3); // Máximo 3 unidades
-
-    for (let i = 0; i < escolasSelecionadas.length; i++) {
-      const escola = escolasSelecionadas[i];
-      const tipoUnidade = tiposUnidades[i % tiposUnidades.length];
-
-      // Calcular distância simulada variada
-      const distanciaSimulada = 1.8 + i * 2.1 + Math.random() * 1.5; // Distâncias mais realistas
-
-      unidadesMilitares.push({
-        name: `${tipoUnidade} de ${escola.municipio}`,
-        address: escola.endereco || `${escola.municipio}, ${escola.uf}`,
-        distance: Math.round(distanciaSimulada * 100) / 100,
-        type: tipoUnidade.toLowerCase().replace(/\s+/g, "_"),
-        place_id: `fallback_${tipoUnidade.toLowerCase().replace(/\s+/g, "_")}_${escola.codigo_inep}`,
-        phone: escola.telefone || null,
-        rating: null,
-        coordinates: {
-          lat: escola.latitude || null,
-          lng: escola.longitude || null,
-        },
-        observacao: `Unidade alternativa baseada na região de ${escola.nome}`,
-        categoria_original: escola.categoria_administrativa,
+    const locaisReferencia = escolasEncontradas
+      .slice(0, 5)
+      .map((escola: EscolaCSV) => ({
+        place_id: escola.codigo_inep || "",
+        nome: escola.nome,
+        endereco: escola.endereco,
+        distancia_km: null,
+        latitude: escola.latitude || null,
+        longitude: escola.longitude || null,
+        tipos: [],
         municipio: escola.municipio,
         uf: escola.uf,
-      });
-    }
+        categoria_administrativa: escola.categoria_administrativa,
+        dependencia_administrativa: escola.dependencia_administrativa,
+        telefone: escola.telefone || null,
+        codigo_inep: escola.codigo_inep,
+        porte: escola.porte,
+        ensino_oferecido: escola.ensino_oferecido,
+      }));
 
-    console.log(`Geradas ${unidadesMilitares.length} unidades como fallback`);
+    console.log(
+      `[juntas] ✅ CSV fallback: ${locaisReferencia.length} locais de referência`,
+    );
 
     return res.json({
       success: true,
+      fonte: "csv",
       data: {
         cep_consultado: cep,
         municipio: cepData.localidade,
         uf: cepData.uf,
         coordinates: null,
         unidades_exercito_encontradas: false,
-        total_unidades_encontradas: unidadesMilitares.length,
-        unidades_militares_ex: unidadesMilitares,
+        total_unidades_encontradas: 0,
+        unidades_militares_ex: [],
+        total_locais_encontrados: locaisReferencia.length,
+        locais_referencia: locaisReferencia,
         observacao:
-          "Utilizando unidades alternativas da região. Sistema principal em manutenção.",
-        fonte_dados: "fallback_csv_regional",
+          "Não foi possível localizar delegacias/unidades policiais via busca automática nesta região. Exibindo escolas públicas de referência na região.",
+        fonte_dados: "csv_escolas",
         timestamp: new Date().toISOString(),
       },
     });

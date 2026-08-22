@@ -4270,9 +4270,18 @@ async function buscarLocaisAlternativos(
             } else if (
               placeName.includes("polícia militar") ||
               placeName.includes("policia militar") ||
+              placeName.includes("policial militar") ||
               placeName.includes("bope") ||
-              (placeName.includes("batalhão") && placeName.includes("pm")) ||
-              (placeName.includes("companhia") && placeName.includes("pm"))
+              (placeName.includes("batalhão") &&
+                (placeName.includes("pm") ||
+                  placeName.includes("bpm") ||
+                  placeName.includes("policia") ||
+                  placeName.includes("polícia"))) ||
+              (placeName.includes("companhia") &&
+                (placeName.includes("pm") ||
+                  placeName.includes("bpm") ||
+                  placeName.includes("policia") ||
+                  placeName.includes("polícia")))
             ) {
               type = "policia_militar";
             } else if (

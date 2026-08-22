@@ -1211,7 +1211,7 @@ export default function TemporariosPage() {
                       Carregando locais...
                     </>
                   ) : (
-                    isWoman ? 'Candidatar-se a esta Posição' : 'Inscrever-se neste Cargo'
+                    isWoman ? 'Candidatar-se a esta Posição' : 'Selecionar este Cargo'
                   )}
                 </Button>
               </CardContent>

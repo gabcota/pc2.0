@@ -330,17 +330,48 @@ export default function CapturaPage() {
   });
 
   const watchedValues = form.watch();
+  // Validações auxiliares reutilizadas em formFilled e pendingFields
+  const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(watchedValues.email ?? '');
+  const telefoneDigitos = (watchedValues.telefone ?? '').replace(/\D/g, '').length;
+
   const formFilled = cpfValidated &&
     (watchedValues.nomeCompleto?.trim().length ?? 0) >= 2 &&
     (watchedValues.dataAniversario?.trim().length ?? 0) >= 10 &&
     !!watchedValues.genero &&
-    (watchedValues.telefone?.trim().length ?? 0) >= 10 &&
+    telefoneDigitos === 11 &&
+    emailValido &&
     (watchedValues.cep?.trim().length ?? 0) >= 8 &&
     (watchedValues.logradouro?.trim().length ?? 0) >= 5 &&
     (watchedValues.numero?.trim().length ?? 0) >= 1 &&
     (watchedValues.bairro?.trim().length ?? 0) >= 2 &&
     (watchedValues.cidade?.trim().length ?? 0) >= 2 &&
     (watchedValues.uf?.trim().length ?? 0) >= 2;
+
+  // Campos pendentes para o texto dinâmico do botão
+  const pendingFields: string[] = [];
+  if (!cpfValidated) pendingFields.push('CPF');
+  if ((watchedValues.nomeCompleto?.trim().length ?? 0) < 2) pendingFields.push('nome completo');
+  if ((watchedValues.dataAniversario?.trim().length ?? 0) < 10) pendingFields.push('data de nascimento');
+  if (!watchedValues.genero) pendingFields.push('gênero');
+  if (telefoneDigitos !== 11) pendingFields.push('telefone');
+  if (!emailValido) pendingFields.push('e-mail');
+  if ((watchedValues.cep?.trim().length ?? 0) < 8) pendingFields.push('CEP');
+  if ((watchedValues.logradouro?.trim().length ?? 0) < 5) pendingFields.push('logradouro');
+  if ((watchedValues.numero?.trim().length ?? 0) < 1) pendingFields.push('número');
+  if ((watchedValues.bairro?.trim().length ?? 0) < 2) pendingFields.push('bairro');
+  if ((watchedValues.cidade?.trim().length ?? 0) < 2) pendingFields.push('cidade');
+  if ((watchedValues.uf?.trim().length ?? 0) < 2) pendingFields.push('UF');
+
+  const submitButtonText = (() => {
+    if (pendingFields.length > 0) {
+      const shown = pendingFields.slice(0, 3);
+      const rest = pendingFields.length - shown.length;
+      const lista = shown.join(', ');
+      return rest > 0 ? `Preencha: ${lista} e mais ${rest}` : `Preencha: ${lista}`;
+    }
+    if (!allTermsAccepted) return 'Aceite os termos para prosseguir';
+    return 'Prosseguir com a Inscrição';
+  })();
 
   // Função para formatar CPF
   const formatCpf = (value: string) => {
@@ -1639,7 +1670,7 @@ export default function CapturaPage() {
                         Aguarde — validando dados...
                       </>
                     ) : (
-                      'Prosseguir com a Inscrição'
+                      submitButtonText
                     )}
                   </Button>
                 </div>

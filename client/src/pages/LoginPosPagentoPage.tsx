@@ -608,9 +608,9 @@ export default function LoginPosPagamentoPage() {
         {/* Logo + identificação */}
         <div className="w-full max-w-sm mb-6 text-center">
           <img
-            src={orgLogo}
-            alt={sigla}
-            className="h-9 w-auto object-contain mx-auto mb-3"
+            src={brasaoUrl}
+            alt={`Brasão ${sigla}`}
+            className="h-14 w-auto object-contain mx-auto mb-3"
           />
           <span className="text-xs text-gray-400 font-mono tracking-widest uppercase">Concurso {sigla} 2026</span>
         </div>

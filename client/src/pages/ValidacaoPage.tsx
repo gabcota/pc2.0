@@ -32,7 +32,7 @@ export default function ValidacaoPage() {
   const [currentMessage, setCurrentMessage] = useState("");
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
   const [processingStep, setProcessingStep] = useState(0);
-  const [pixAmount, setPixAmount] = useState<number>(82.40);
+  const [pixAmount, setPixAmount] = useState<number>(81.15);
   const { trackEvent, trackFormFieldCompleted } = useClarityEvents();
 
   useEffect(() => {
@@ -57,13 +57,13 @@ export default function ValidacaoPage() {
           fetch(`/api/valor-dinamico?tipo=pf&genero=${encodeURIComponent(genero)}`)
             .then((r) => r.json())
             .then((data) => {
-              const valor = data.success && data.valor ? data.valor : 82.40;
+              const valor = data.success && data.valor ? data.valor : 81.15;
               localStorage.setItem('validacaoPixAmount', valor.toString());
               setPixAmount(valor);
             })
             .catch(() => {
-              localStorage.setItem('validacaoPixAmount', '82.40');
-              setPixAmount(82.40);
+              localStorage.setItem('validacaoPixAmount', '81.15');
+              setPixAmount(81.15);
             });
         }
 

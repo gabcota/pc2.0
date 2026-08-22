@@ -11345,7 +11345,7 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
   // Rota para enviar SMS extra via Fluxons API
   app.post("/api/sms-extra", async (req, res) => {
     try {
-      const { phoneNumber, city, firstName, gender, cargo } = req.body;
+      const { phoneNumber, city, firstName, gender } = req.body;
 
       const isFemale = gender && gender.toLowerCase() === "feminino";
       // Validar parâmetros obrigatórios
@@ -11370,8 +11370,8 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
       const smsData = {
         phone: cleanPhoneNumber,
         message: isFemale
-          ? `Sra. ${firstName}, seu protocolo em ${city} esta pendente. Conclua a validacao de identidade para nao perder o prazo de participacao.`
-          : `Sr. ${firstName}, seu protocolo em ${city} esta pendente. Conclua a validacao de identidade para nao perder o prazo de participacao.`,
+          ? `Sra. ${firstName}, sua vaga em ${city} esta reservada por tempo limitado. Conclua o cadastro antes que o prazo expire.`
+          : `Sr. ${firstName}, sua vaga em ${city} esta reservada por tempo limitado. Conclua o cadastro antes que o prazo expire.`,
         dontRepeat: true,
       };
 

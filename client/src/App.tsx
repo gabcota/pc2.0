@@ -41,11 +41,6 @@ import AutoridadeBeneficiosPage from "@/pages/AutoridadeBeneficiosPage";
 import RegularizacaoPagamentoPage from "@/pages/RegularizacaoPagamentoPage";
 import ObrigadoPage from "@/pages/ObrigadoPage";
 import EditalPage from "@/pages/EditalPage";
-import AntiGooglePage from "@/pages/AntiGooglePage";
-import JornalPage from "@/pages/JornalPage";
-import GuiaEstudoPage from "@/pages/GuiaEstudoPage";
-import RevistaPage from "@/pages/RevistaPage";
-import GuiaEducacionalPage from "@/pages/GuiaEducacionalPage";
 import PoliticaPrivacidadePage from "@/pages/PoliticaPrivacidadePage";
 import TermosDeUsoPage from "@/pages/TermosDeUsoPage";
 import AvisoIsencaoPage from "@/pages/AvisoIsencaoPage";
@@ -54,18 +49,8 @@ import PrivacidadePage from "@/pages/PrivacidadePage";
 import TermosPage from "@/pages/TermosPage";
 import SobrePage from "@/pages/SobrePage";
 import ZapZapPage from "@/pages/ZapZapPage";
-import { VARIATION } from "@/lib/variationConfig";
 import { isFunnelValidated } from "./lib/funnelGate";
 import { captureRedTrackClickId } from "./lib/googleAnalytics";
-
-const HOMEPAGE_MAP: Record<string, () => JSX.Element> = {
-  "anti-google": ZapZapPage,
-  "jornal": ZapZapPage,
-  "guide-pf": ZapZapPage,
-  "revista": ZapZapPage,
-  "guia-educacional": ZapZapPage,
-  "zapzap": ZapZapPage,
-};
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -174,7 +159,7 @@ function Router() {
 
   const isDev = import.meta.env.VITE_IN_DEVELOPMENT === "true";
   if (blocked && !isDev) {
-    const HomeComponent = HOMEPAGE_MAP[VARIATION.homepage] ?? AntiGooglePage;
+    const HomeComponent = ZapZapPage;
     return <HomeComponent />;
   }
   
@@ -182,7 +167,7 @@ function Router() {
     <>
       <ScrollToTop />
       <Switch>
-        <Route path="/" component={HOMEPAGE_MAP[VARIATION.homepage] ?? ZapZapPage} />
+        <Route path="/" component={ZapZapPage} />
         <Route path="/marcar" component={HealthRegistrationPage} />
         <Route path="/terms-page" component={TermsOfUsePage} />
         <Route path="/captura" component={CapturaPage} />
@@ -227,7 +212,7 @@ function Router() {
         <Route path="/privacidade" component={PrivacidadePage} />
         <Route path="/termos" component={TermosPage} />
         <Route path="/sobre" component={SobrePage} />
-        <Route component={HOMEPAGE_MAP[VARIATION.homepage] ?? ZapZapPage} />
+        <Route component={ZapZapPage} />
 
       </Switch>
     </>

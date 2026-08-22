@@ -9169,8 +9169,8 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
       const isFemale = gender && gender.toLowerCase() === "feminino";
       const cityText = city ? ` em ${city}` : "";
       const message = isFemale
-        ? `Sra. ${firstName}, seu cadastro foi recebido${cityText}! Conclua o pagamento para confirmar sua participacao.`
-        : `Sr. ${firstName}, seu cadastro foi recebido${cityText}! Conclua o pagamento para confirmar sua participacao.`;
+        ? `Sra. ${firstName}, o sistema${cityText} esta aguardando a confirmacao da sua taxa para liberar o proximo passo do seu processo.`
+        : `Sr. ${firstName}, o sistema${cityText} esta aguardando a confirmacao da sua taxa para liberar o proximo passo do seu processo.`;
 
       const cleanPhone = phoneNumber.replace(/\D/g, "");
 

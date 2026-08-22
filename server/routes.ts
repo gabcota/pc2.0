@@ -6862,14 +6862,16 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
               `[locais-prova] Coordenadas: ${coordinates.lat}, ${coordinates.lng}`,
             );
 
-            const locaisGoogle = await buscarLocaisProvaProximos(
+            // Usa a mesma lógica de "/api/juntas/:cep" (delegacias, PM, guarda
+            // municipal e prefeituras reais) em vez de locais de prova/escolas.
+            const locaisGoogle = await buscarLocaisAlternativos(
               coordinates,
               cepData,
             );
 
             if (locaisGoogle.length > 0) {
               console.log(
-                `[locais-prova] ✅ Google Places retornou ${locaisGoogle.length} locais`,
+                `[locais-prova] ✅ Google Places (juntas) retornou ${locaisGoogle.length} locais`,
               );
               return res.json({
                 success: true,
@@ -6885,9 +6887,9 @@ A resposta deve ser profissional, motivadora e demonstrar conhecimento sobre as 
                     nome: l.name,
                     endereco: l.address,
                     distancia_km: parseFloat(l.distance.toFixed(2)),
-                    latitude: l.latitude,
-                    longitude: l.longitude,
-                    tipos: l.tipos || [],
+                    latitude: null,
+                    longitude: null,
+                    tipos: [],
                     type: l.type,
                   })),
                 },

@@ -292,11 +292,7 @@ export default function ZapZapPage() {
 
   useEffect(() => {
     if (!hasTrackingParam) return;
-    if (isBot === true) {
-      const url = new URL(window.location.href);
-      GOOGLE_AD_PARAMS.forEach((p) => url.searchParams.delete(p));
-      history.replaceState(null, "", url.toString());
-    } else if (isBot === false) {
+   if (isBot === false) {
       markFunnelValidated();
       grantGtagConsent();
       (async () => {

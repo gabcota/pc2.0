@@ -743,7 +743,7 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     ogType: "website",
     siteName: "Siqueira e Magalhaes Sociedade de Advogados",
     ogTitle:
-      "Direitos e Estabilidade na Carreira Pública | Direito de Carreira",
+      "Direitos e Estabilidade na Carreira Pública | Siqueira e Magalhaes Sociedade de Advogados",
     ogDescription:
       "Orientação jurídica sobre estágio probatório, processos administrativos disciplinares, promoções e estabilidade na carreira pública. Siqueira e Magalhaes Sociedade de Advogados — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.a7c3f912",
@@ -763,7 +763,7 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     ogType: "website",
     siteName: "Siqueira e Magalhaes Sociedade de Advogados",
     ogTitle:
-      "Direitos e Estabilidade na Carreira Pública | Direito de Carreira",
+      "Direitos e Estabilidade na Carreira Pública | Siqueira e Magalhaes Sociedade de Advogados",
     ogDescription:
       "Orientação jurídica sobre estágio probatório, processos administrativos disciplinares, promoções e estabilidade na carreira pública. Siqueira e Magalhaes Sociedade de Advogados — Rio de Janeiro/RJ. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.a7c3f912",

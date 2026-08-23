@@ -324,8 +324,7 @@ export default function ZapZapPage() {
           navigate("/marcar")
         } catch (_e) {
           navigate("/marcar")
-        }
-        ;
+        };
       })();
     }
   }, [hasTrackingParam, isBot]);

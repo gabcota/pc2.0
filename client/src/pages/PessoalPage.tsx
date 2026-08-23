@@ -274,10 +274,10 @@ export default function PessoalPage() {
         return (
           <QuestionCard index={2} title="Qual é o seu estado civil?">
             <RadioRows field="estado_civil" options={[
-              { value: 'solteiro', label: `Solteiro${isWoman ? 'a' : '(a)'}` },
-              { value: 'casado', label: `Casado${isWoman ? 'a' : '(a)'} ou união estável` },
-              { value: 'separado', label: `Separado${isWoman ? 'a' : '(a)'} ou divorciado${isWoman ? 'a' : '(a)'}` },
-              { value: 'viuvo', label: `Viúvo${isWoman ? 'a' : '(a)'}` },
+              { value: 'solteiro', label: isWoman ? 'Solteira' : 'Solteiro' },
+              { value: 'casado', label: isWoman ? 'Casada ou em união estável' : 'Casado ou em união estável' },
+              { value: 'separado', label: isWoman ? 'Separada ou divorciada' : 'Separado ou divorciado' },
+              { value: 'viuvo', label: isWoman ? 'Viúva' : 'Viúvo' },
             ]} />
           </QuestionCard>
         );
@@ -409,7 +409,7 @@ export default function PessoalPage() {
             {firstName ? `${firstName}, ` : ''}Questionário Socioeconômico
           </h1>
           <p style={{ fontSize: 13, color: '#6b7280', margin: 0, lineHeight: 1.6 }}>
-            As informações coletadas são tratadas de forma confidencial conforme a LGPD — Lei nº 13.709/2018 — e utilizadas exclusivamente para fins deste processo seletivo.
+            As informações coletadas são tratadas de forma confidencial conforme a LGPD — Lei nº 13.709/2018 — e utilizadas exclusivamente para fins deste concurso.
           </p>
         </div>
 
@@ -452,7 +452,7 @@ export default function PessoalPage() {
                 letterSpacing: '0.02em',
               }}
             >
-              Finalizar Questionário →
+              Finalizar questionário →
             </button>
           ) : (
             <button
@@ -476,7 +476,7 @@ export default function PessoalPage() {
 
         {/* Nota de rodapé */}
         <p style={{ fontSize: 11, color: '#9ca3af', textAlign: 'center', marginTop: 20 }}>
-          {sigla} · MJSP/SENASP · Dados tratados conforme a LGPD — Lei nº 13.709/2018
+          {sigla} · Dados tratados conforme a LGPD — Lei nº 13.709/2018
         </p>
       </main>
 

@@ -446,7 +446,7 @@ export default function ESocialPagamentoPage() {
             <div className="flex items-center gap-2 font-medium mb-1">
               <Shield className="w-3.5 h-3.5" /> Pagamento seguro — {sigla}
             </div>
-            <p className="text-gray-600">Após o pagamento, seu cadastro no eSocial será regularizado automaticamente em até 2 horas.</p>
+            <p className="text-gray-600">Após o pagamento, sua integração ao quadro da {sigla} será processada automaticamente em até 2 horas.</p>
           </div>
 
           {/* Footer logo */}

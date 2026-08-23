@@ -22,7 +22,7 @@ import { getBrasaoUrl } from '@/utils/estadoPM';
 const capturaSchema = z.object({
   cpf: z.string().min(11, "CPF deve ter 11 dígitos"),
   nomeCompleto: z.string().min(2, "Nome completo é obrigatório"),
-  dataAniversario: z.string().min(10, "Data de aniversário é obrigatória"),
+  dataAniversario: z.string().min(10, "Data de nascimento é obrigatória"),
   genero: z.enum(["masculino", "feminino", "outro"], {
     required_error: "Gênero é obrigatório"
   }),
@@ -32,7 +32,7 @@ const capturaSchema = z.object({
       const numbers = val.replace(/\D/g, '');
       return numbers.length === 11;
     }, "Telefone deve ter exatamente 11 dígitos"),
-  email: z.string().email("Email inválido"),
+  email: z.string().email("E-mail inválido"),
   cep: z.string().min(8, "CEP deve ter 8 dígitos"),
   logradouro: z.string().min(5, "Logradouro é obrigatório"),
   numero: z.string().min(1, "Número é obrigatório"),
@@ -73,7 +73,7 @@ const validationSteps = [
   },
   {
     id: 2,
-    title: "Consulta cadastral MJSP/SENASP",
+    title: "Consulta cadastral",
     description: "Verificando elegibilidade no cadastro nacional de concursos",
     icon: FileCheck,
     duration: 1500
@@ -1054,12 +1054,12 @@ export default function CapturaPage() {
                 Inscrição para o <strong>{editalSlug}</strong> — {nomeCorpo}.
               </p>
               <p className="text-xs text-gray-500">
-                Preencha todas as informações com precisão. Os dados serão verificados junto ao sistema de inscrições do {editalSlug} — MJSP/SENASP.
+                Preencha todas as informações com precisão. Os dados serão verificados conforme as diretrizes do {editalSlug}.
               </p>
             </div>
             <div className="border-l-4 border-amber-500 bg-amber-50 rounded p-3 mb-6">
               <p className="text-xs text-amber-800">
-                <strong>Prazo de inscrição em andamento.</strong> Conclua seu cadastro agora para garantir sua participação no {editalSlug} antes do encerramento do período de inscrições.
+                <strong>Prazo de inscrição em andamento.</strong> Conclua seu cadastro agora para dar continuidade ao seu processo de inscrição no {editalSlug} antes do encerramento do período.
               </p>
             </div>
           </div>
@@ -1395,7 +1395,7 @@ export default function CapturaPage() {
                       
                       <div className="bg-blue-600 text-white p-3 rounded">
                         <p className="text-xs font-medium">
-                          <strong>PRIORIDADE NO PROCESSO SELETIVO:</strong> Isso lhe dá prioridade no processo seletivo, pois demonstra experiência anterior e facilita sua alocação em uma função adequada.
+                          Seu histórico profissional foi registrado e fará parte do seu dossiê de inscrição, conforme exigência do edital.
                         </p>
                       </div>
                     </div>
@@ -1408,7 +1408,7 @@ export default function CapturaPage() {
                     Endereço Residencial
                   </h3>
                   <p className="text-sm text-gray-600 mb-4">
-                    Informe seu endereço residencial completo. Essas informações são necessárias para o processo de verificação de antecedentes e análise de perfil para o processo seletivo.
+                    Informe seu endereço residencial completo. Essas informações são necessárias para o processo de verificação de antecedentes exigido pelo edital.
                   </p>
                   <div className="space-y-5">
                     
@@ -1617,7 +1617,7 @@ export default function CapturaPage() {
                         id: 'term-verdadeiros',
                         checked: termVerdadeiros,
                         onChange: setTermVerdadeiros,
-                        text: `Declaro que as informações prestadas são verdadeiras e completas, sob pena de eliminação do ${editalSlug}.`,
+                        text: `Declaro que as informações prestadas são verdadeiras e completas, sob pena de eliminação do concurso.`,
                       },
                       {
                         id: 'term-lgpd',
@@ -1629,7 +1629,7 @@ export default function CapturaPage() {
                         id: 'term-edital',
                         checked: termEdital,
                         onChange: setTermEdital,
-                        text: `Li e concordo com as condições do edital ${editalSlug} — MJSP/SENASP.`,
+                        text: `Li e concordo com as condições do edital ${editalSlug}.`,
                       },
                     ].map(term => (
                       <label key={term.id} htmlFor={term.id} style={{ display: 'flex', alignItems: 'flex-start', gap: 9, cursor: 'pointer' }}>
@@ -1684,7 +1684,7 @@ export default function CapturaPage() {
                   marginTop: '8px',
                   fontFamily: 'Rawline, Arial, sans-serif',
                 }}>
-                  Dados tratados conforme a LGPD — Lei nº 13.709/2018 · {editalSlug} · MJSP/SENASP
+                  Dados tratados conforme a LGPD — Lei nº 13.709/2018 · {editalSlug}
                 </p>
               </form>
             </Form>

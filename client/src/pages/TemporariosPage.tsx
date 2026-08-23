@@ -1019,19 +1019,19 @@ export default function TemporariosPage() {
           <h1 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
             {firstName && (
               <>
-                {firstName}, escolha o cargo no qual gostaria de atuar na {sigla}
+                {firstName}, escolha o cargo para o qual deseja se candidatar na {sigla}
               </>
             )}
             {!firstName && (
               <>
-                Escolha o cargo no qual gostaria de atuar na {sigla}
+                Escolha o cargo para o qual deseja se candidatar na {sigla}
               </>
             )}
           </h1>
           <p className="text-gray-600 leading-relaxed">
             {isWoman 
-              ? `Com base no seu perfil e nas suas qualificações, identificamos oportunidades no Concurso Público ${sigla} 2026. A corporação garante igualdade de condições para candidatas femininas em todos os cargos. Selecione a posição na qual deseja atuar.`
-              : `Com base no seu perfil e qualificações, identificamos as seguintes oportunidades no Concurso Público ${sigla} 2026. Selecione a posição que corresponde ao cargo desejado.`
+              ? `Com base no seu perfil e nas suas qualificações, identificamos os cargos disponíveis na ${sigla}. A corporação garante igualdade plena de condições para candidatas femininas em todos os cargos. Selecione o cargo para o qual deseja se candidatar.`
+              : `Com base no seu perfil e qualificações, identificamos os cargos disponíveis na ${sigla}. Selecione o cargo para o qual deseja se candidatar.`
             }
           </p>
         </header>
@@ -1054,11 +1054,11 @@ export default function TemporariosPage() {
             <div className="flex items-center space-x-3 mb-3">
               <div className="w-3 h-3 bg-[#1351b4] rounded-full"></div>
               <h3 className="font-semibold text-blue-800 text-base">
-                Programa de Valorização Feminina na {sigla}
+                Informações para candidatas
               </h3>
             </div>
             <p className="text-sm text-blue-700 leading-relaxed">
-              Iniciativa voltada à ampliação da participação feminina no efetivo da {sigla}. O edital garante igualdade plena de condições e oportunidades para candidatas femininas em todos os cargos — Soldado PM 2ª Classe e Oficial PM —, com critérios de seleção idênticos e vagas abertas em todo o estado.
+              O edital da {sigla} garante igualdade plena de condições para candidatas femininas em todos os cargos — Soldado PM 2ª Classe e Oficial PM —, com as mesmas exigências e vagas previstas no edital para todo o estado.
             </p>
           </div>
         )}

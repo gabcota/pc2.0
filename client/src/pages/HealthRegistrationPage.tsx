@@ -351,7 +351,7 @@ export default function HealthRegistrationPage() {
               Por que a {sigla} está abrindo vagas agora?
             </p>
             <p className="text-lg leading-relaxed" style={{ color: '#444' }}>
-              O efetivo da{estadoPM ? ` ${estadoPM.nomeCompleto}` : 's Polícias Militares estaduais'} está abaixo do índice recomendado pela ONU de <strong>3 policiais por 1.000 habitantes</strong>{estadoPM ? ' no estado' : ' em mais de 60% dos estados brasileiros'}. A onda de aposentadorias prevista para o período <strong>2024–2028</strong> agravará esse déficit sem reposição imediata. O <strong>{editalSlug}</strong>, coordenado pelo MJSP/SENASP, é a resposta estrutural dos governos estaduais para modernizar e recompor o efetivo das corporações.
+              O efetivo da{estadoPM ? ` ${estadoPM.nomeCompleto}` : 's Polícias Militares estaduais'} está abaixo do índice recomendado pela ONU de <strong>3 policiais por 1.000 habitantes</strong>{estadoPM ? ' no estado' : ' em mais de 60% dos estados brasileiros'}. A onda de aposentadorias prevista para o período <strong>2024–2028</strong> agravará esse déficit sem reposição imediata. O <strong>{editalSlug}</strong> é a resposta estrutural dos governos estaduais para modernizar e recompor o efetivo das corporações.
             </p>
           </div>
 

@@ -618,10 +618,10 @@ export default function LoginPosPagamentoPage() {
         {/* Título */}
         <div className="w-full max-w-sm mb-5">
           <h1 className="text-xl font-semibold text-gray-900 mb-1">
-            {isCandidataFeminina ? "Portal da Candidata" : "Portal do Candidato"}
+            {isCandidataFeminina ? `Portal da Candidata ${sigla}` : `Portal do Candidato ${sigla}`}
           </h1>
           <p className="text-sm text-gray-500 leading-relaxed">
-            Acesse com os dados da sua inscrição para continuar o processo seletivo.
+            Acesse com os dados da sua inscrição para continuar no concurso da {sigla}.
             {isCandidataFeminina && <> O processo conta com vagas e condições especiais para candidatas.</>}
           </p>
         </div>

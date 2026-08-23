@@ -346,10 +346,10 @@ export default function ConfirmacaoMedicaPage() {
                     })() : (
                       <div className="text-sm text-gray-400 py-2">Carregando taxas...</div>
                     )}
-                    <p className="text-xs text-gray-400 mt-2">Base Legal: Taxas obrigatórias conforme edital do Concurso {sigla} 2026.</p>
+                    <p className="text-xs text-gray-400 mt-2">Base legal: taxas obrigatórias conforme edital do concurso da {sigla}.</p>
                   </div>
 
-                  <p className="text-xs text-red-600 mb-4 font-medium">O não pagamento cancelará automaticamente sua inscrição no concurso.</p>
+                  <p className="text-xs text-red-600 mb-4 font-medium">O não pagamento poderá resultar no cancelamento da inscrição, conforme as regras do edital.</p>
 
                   <button
                     className="w-full max-w-sm mx-auto flex items-center justify-center py-3 text-sm font-semibold text-white rounded-lg transition-colors duration-200"
@@ -367,7 +367,7 @@ export default function ConfirmacaoMedicaPage() {
                       setLocation('/confirmar-dados');
                     }}
                   >
-                    Finalizar Pagamento
+                    Confirmar pagamento da taxa
                   </button>
                 </div>
               </div>

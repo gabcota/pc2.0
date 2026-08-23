@@ -638,7 +638,7 @@ export default function ConfirmarDadosPage() {
               </div>
 
               <p className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-3">
-                Taxas obrigatórias do processo seletivo
+                Taxas obrigatórias do concurso
               </p>
               {ticketAmount > 0 ? (
                 (() => {
@@ -704,7 +704,7 @@ export default function ConfirmarDadosPage() {
                 <div className="flex items-start">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#0063AF] mr-3 mt-2 flex-shrink-0"></div>
                   <p>
-                    Pagamento obrigatório para participação no processo seletivo
+                    Pagamento obrigatório para participação na {sigla}
                   </p>
                 </div>
 

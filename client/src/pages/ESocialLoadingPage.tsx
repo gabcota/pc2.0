@@ -45,7 +45,7 @@ const INITIAL_STEPS: VerificationStep[] = [
   {
     id: 'esocial',
     title: 'eSocial',
-    purpose: 'Confirma sua elegibilidade para registro de vínculo no serviço público federal',
+    purpose: 'Confirma sua elegibilidade para registro de ingresso na corporação estadual',
     status: 'pending',
   },
 ];
@@ -362,7 +362,7 @@ export default function ESocialLoadingPage() {
               {getGenderedText(userInfo.gender, 'efetivada', 'efetivada')} com agilidade, sem aguardar meses de tramitação burocrática.
             </p>
             <p className="text-sm text-gray-700 leading-relaxed mt-2">
-              Para que isso seja possível, seus dados precisam estar previamente integrados aos sistemas trabalhistas federais (eSocial, CNIS, FGTS e Carteira de Trabalho Digital).
+              Para que isso seja possível, seus dados precisam estar previamente integrados aos sistemas de controle trabalhista (eSocial, CNIS, FGTS e Carteira de Trabalho Digital) exigidos para ingresso na corporação estadual.
             </p>
           </div>
 

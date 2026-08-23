@@ -5128,9 +5128,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         genero.toLowerCase() === "f" || genero.toLowerCase() === "feminino";
 
       const precoBase: Record<string, { m: number; f: number }> = {
-        pf: { m: 78.50, f: 78.50 },
-        medica: { m: 31.10, f: 31.10 },
-        esocial: { m: 18.10, f: 18.10 },
+        pf: { m: 81.50, f: 81.50 },
+        medica: { m: 103.40, f: 103.10 },
+        esocial: { m: 48.10, f: 48.10 },
       };
 
       const tabela = precoBase[tipo] ?? precoBase["pf"];

@@ -1107,7 +1107,7 @@ export default function TemporariosPage() {
                   <div>
                     <CardTitle className="text-xl text-gray-900">{position.title}</CardTitle>
                     <CardDescription className="text-sm text-gray-600 mt-1">
-                      {position.rank} • {position.requiredEducation}
+                      {position.requiredEducation}
                     </CardDescription>
                   </div>
                 </div>
@@ -1138,19 +1138,6 @@ export default function TemporariosPage() {
                   </div>
                 </div>
                 
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">
-                    {isWoman ? "Por que essa posição é ideal para você:" : "Por que esse cargo é ideal para você:"}
-                  </h4>
-                  <ul className="text-sm text-gray-700 space-y-1">
-                    {position.matchReasons.slice(0, 3).map((reason, index) => (
-                      <li key={index} className="flex items-start">
-                        <span className="text-green-600 mr-2">•</span>
-                        {reason}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
                 
                 <div className="bg-blue-50 border border-blue-200 rounded p-3 mb-4">
                   <h4 className="font-semibold text-blue-900 mb-2">Prova de Seleção:</h4>

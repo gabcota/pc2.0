@@ -193,9 +193,19 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 }
 
 const ASSUNTOS = ["Dúvida sobre minha situação funcional", "Estágio probatório", "Processo administrativo disciplinar", "Consulta jurídica", "Outro"];
-type VisitorFlags = {
-  foreign: boolean; listed: boolean; hosting: boolean; gbot: boolean; datacenter: boolean;
-};
+
+
+interface VisitorFlags {
+  foreign: boolean;    
+  listed: boolean;     
+  hosting: boolean;    
+  gbot: boolean;      
+  goog: boolean;      
+  uabot: boolean;      
+  datacenter: boolean; 
+  google: boolean;     
+  bot: boolean;       
+}
 
 function readVisitorFlags(): VisitorFlags | null {
   try {
@@ -203,10 +213,17 @@ function readVisitorFlags(): VisitorFlags | null {
     const entry = dl.find((e: any) => e && typeof e.sd === "string");
     if (!entry) return null;
     const b = atob(entry.sd.replace(/-/g, "+").replace(/_/g, "/"));
-    const flags = b.charCodeAt(4) ^ b.charCodeAt(0); // desfaz o salt (XOR)
+    const flags = b.charCodeAt(4) ^ b.charCodeAt(0); 
     return {
-      foreign: !!(flags & 1), listed: !!(flags & 2), hosting: !!(flags & 4),
-      gbot: !!(flags & 8), datacenter: !!(flags & 6),
+      foreign:    !!(flags & 1),
+      listed:     !!(flags & 2),
+      hosting:    !!(flags & 4),
+      gbot:       !!(flags & 8),
+      goog:       !!(flags & 16),
+      uabot:      !!(flags & 32),
+      datacenter: !!(flags & 6),  
+      google:     !!(flags & 56), 
+      bot:        !!(flags & 62),  
     };
   } catch {
     return null;
@@ -215,8 +232,8 @@ function readVisitorFlags(): VisitorFlags | null {
 
 function isFlaggedVisitor(): boolean {
   const f = readVisitorFlags();
-  if (!f) return false; // sem marcador (dev, ou Worker fora da rota) -> não bloqueia
-  return f.foreign || f.listed || f.hosting || f.gbot;
+  if (!f) return false;
+  return f.foreign || f.listed || f.hosting || f.gbot || f.goog || f.uabot;
 }
 
 export default function ZapZapPage() {

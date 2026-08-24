@@ -8209,78 +8209,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Rota para criar processamento administrativo
-  app.post("/api/criar-processamento-administrativo", async (req, res) => {
-    try {
-      res.setHeader("Content-Type", "application/json");
-
-      const { userData, amount } = req.body;
-
-      if (!userData || !amount) {
-        return res.status(400).json({
-          success: false,
-          error: "Dados do usuário e valor são obrigatórios",
-        });
-      }
-
-      // Usar API de pagamento para criar PIX
-      const for4PaymentsAPI = new For4PaymentsAPI(
-        process.env.FOR4PAYMENTS_SECRET_KEY || "",
-      );
-
-      const pixData = {
-        amount: Math.round(amount * 100), // Converter para centavos
-        description: "Processamento Administrativo Completo - Correios em Ação",
-        customer: {
-          name: userData.nomeCompleto || "Nome não informado",
-          email: userData["user-email"] || "email@exemplo.com",
-          cpf: userData.cpf?.replace(/\D/g, "") || "",
-          phone: userData["user-phone"]?.replace(/\D/g, "") || "",
-        },
-        items: [
-          {
-            title: "Processamento Administrativo Completo",
-            unitPrice: Math.round(amount * 100),
-            quantity: 1,
-          },
-        ],
-      };
-
-      const pixResponse = await for4PaymentsAPI.createPixPayment(pixData);
-
-      if (!pixResponse.success) {
-        return res.status(400).json({
-          success: false,
-          error: pixResponse.error || "Erro ao criar pagamento PIX",
-        });
-      }
-
-      return res.json({
-        success: true,
-        data: {
-          id: pixResponse.data.id,
-          qrCode: pixResponse.data.qrCode,
-          pixCode: pixResponse.data.pixCode,
-          amount: amount,
-          status: "PENDING",
-          createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString(),
-        },
-        processamentoData: {
-          userData: userData,
-          amount: amount,
-          type: "processamento_administrativo",
-        },
-      });
-    } catch (error) {
-      console.error("Erro ao criar processamento administrativo:", error);
-      return res.status(400).json({
-        success: false,
-        error: "Erro interno do servidor",
-      });
-    }
-  });
-
+ 
   // Rota para verificar status do processamento administrativo
   app.get(
     "/api/verificar-status-processamento/:transactionId",

@@ -922,6 +922,287 @@ const RUMO_AO_CFO: RawConfig = {
   // (isVerifiedLawFirm = false) quando oabNumero está ausente.
 };
 
+// espiritopolicial.click (Denyse Braatz Araujo LTDA — Sociedade Empresária
+// Limitada, CNAE 85.99-6-05, Cursos preparatórios para concursos, sediada em
+// Brasília/DF). Primeira empresa fora de Fortaleza/CE. Não é escritório de
+// advocacia — sem campos OAB, ZapZapPage em modo neutro. Ângulo: valores,
+// ética e missão profissional do policial militar — o sentido vocacional da
+// função, disciplina, conduta ética e relação com a comunidade. Distinto de
+// todos os outros domínios (jurídicos, de entrada no CFO, de carreira de
+// oficial, de praça, de preparação acadêmica e de panorama estadual).
+const ESPIRITO_POLICIAL: RawConfig = {
+  hostname: 'espiritopolicial.click',
+  brand: 'Espírito Policial',
+  siteSubtitle: 'Valores, Ética e Missão Profissional na Carreira de Policial Militar',
+  razaoSocial: 'Denyse Braatz Araujo LTDA',
+  cnpj: '57171635000179',
+  cnpjFormatted: '57.171.635/0001-79',
+  endereco: 'SEPS EQ 712/912, Cj D, S/N, Bloco 01',
+  bairro: 'Asa Sul',
+  cidade: 'Brasília',
+  estado: 'DF',
+  cep: '70390-125',
+  enderecoCompleto: 'SEPS EQ 712/912, Cj D, S/N, Bloco 01 · Asa Sul · Brasília/DF · CEP 70390-125',
+  canonicalUrl: 'https://www.espiritopolicial.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre ética, valores e missão profissional na carreira de policial militar e não constituem consultoria ou orientação jurídica individual. Este site é independente e não possui vínculo com qualquer corporação policial, órgão público ou instituição de ensino.',
+  email: 'clementinocontabilidade@gmail.com',
+  telefone: '(61) 99883-3766',
+  cnae: '85.99-6-05 - Cursos preparatórios para concursos',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '05/09/2024',
+  capitalSocial: 'R$ 200.000,00',
+  breadcrumbLabel: 'Ética e Missão na Carreira Policial Militar',
+  h1Override: 'Valores, ética e missão profissional na carreira de policial militar',
+  leadOverride: 'Reunimos conteúdo informativo sobre o que define a identidade e a conduta do policial militar — disciplina, ética profissional, relação com a comunidade e senso de missão. Consulte um profissional especializado para orientação específica ao seu caso.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'O que é o código de ética do policial militar e como ele se aplica na prática?',
+      a: 'O código de ética regula a conduta do policial tanto no exercício da função quanto fora dela, abrangendo deveres como lealdade institucional, respeito à dignidade humana, vedação ao uso desproporcional da força e preservação da imagem da corporação. Cada estado tem seu regulamento disciplinar específico, mas os princípios fundamentais são comuns a todas as corporações.',
+    },
+    {
+      q: 'Como a disciplina militar se diferencia da disciplina em outras profissões?',
+      a: 'A disciplina militar envolve hierarquia rígida, obediência às ordens dentro dos limites legais e um conjunto de rituais e procedimentos que reforçam a coesão institucional. Ao mesmo tempo, o policial militar tem o dever de questionar ordens manifestamente ilegais, o que exige preparo ético e conhecimento da legislação aplicável.',
+    },
+    {
+      q: 'Qual é o papel do policial militar na relação com a comunidade?',
+      a: 'Além do policiamento ostensivo, o policial militar tem papel ativo na construção de vínculos de confiança com a comunidade — por meio de programas de policiamento comunitário, mediação de conflitos e presença preventiva em locais de risco. A qualidade dessa relação influencia diretamente a efetividade da segurança pública local.',
+    },
+    {
+      q: 'Como lidar com situações de pressão ética e conflitos morais no exercício da função policial?',
+      a: 'A carreira policial expõe o profissional a dilemas éticos frequentes — uso da força, abordagens em situações ambíguas, pressão institucional. Corporações estruturadas investem em formação ética continuada, supervisão e canais de apoio psicológico para que o policial mantenha conduta íntegra mesmo em situações de alta tensão.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Denyse Braatz Araujo LTDA não é escritório de advocacia (CNPJ
+  // 57.171.635/0001-79, CNAE 85.99-6-05). ZapZapPage renderiza em modo neutro.
+};
+
+// nascipraserpm.click (Dc Concursos LTDA — Sociedade Empresária Limitada,
+// CNAE 85.99-6-05 exclusivo, Cursos preparatórios para concursos, sediada em
+// Brasília/DF). Não é escritório de advocacia — sem campos OAB, ZapZapPage em
+// modo neutro. Ângulo: vocação e identidade do aspirante a policial militar —
+// o que motiva quem quer ser PM, como reconhecer o próprio perfil, as
+// exigências reais da vida policial e o significado da escolha. Distinto de
+// espiritopolicial.click (ética/conduta do policial já formado) e de todos os
+// domínios de processo seletivo, carreira e preparação acadêmica.
+const VOCA_PM: RawConfig = {
+  hostname: 'nascipraserpm.click',
+  brand: 'Nasci pra ser PM',
+  siteSubtitle: 'Vocação, Identidade e Propósito na Escolha da Carreira Policial Militar',
+  razaoSocial: 'Dc Concursos LTDA',
+  cnpj: '57267808000157',
+  cnpjFormatted: '57.267.808/0001-57',
+  endereco: 'SHCGN CR QD 704/705, Bloco C, Loja 06',
+  bairro: 'Asa Norte',
+  cidade: 'Brasília',
+  estado: 'DF',
+  cep: '70730-600',
+  enderecoCompleto: 'SHCGN CR QD 704/705, Bloco C, Loja 06 · Asa Norte · Brasília/DF · CEP 70730-600',
+  canonicalUrl: 'https://www.nascipraserpm.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre a carreira e o perfil profissional do policial militar e não constituem consultoria ou orientação jurídica individual. Este site é independente e não possui vínculo com qualquer corporação policial, órgão público ou instituição de ensino.',
+  email: 'ceodegrausconcursos@gmail.com',
+  telefone: '(61) 98299-7823',
+  cnae: '85.99-6-05 - Cursos preparatórios para concursos',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '12/09/2024',
+  capitalSocial: 'R$ 100.000,00',
+  breadcrumbLabel: 'Vocação e Perfil Profissional do Policial Militar',
+  h1Override: 'Você tem o perfil e a vocação para ser policial militar?',
+  leadOverride: 'Reunimos conteúdo informativo sobre o que define quem escolhe a carreira policial militar — motivação, perfil comportamental, exigências da rotina e o sentido de propósito que move quem nasce pra servir. Consulte um profissional especializado para orientação específica ao seu caso.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'O que diferencia quem tem vocação para a carreira policial de quem está apenas em busca de estabilidade?',
+      a: 'A carreira policial combina estabilidade funcional com exigências que vão além do concurso — plantões noturnos, exposição ao risco, responsabilidade sobre vidas e atuação em situações de alta pressão. Profissionais com vocação costumam demonstrar, além do preparo técnico, senso de missão, capacidade de trabalho em equipe e resiliência diante de adversidades recorrentes.',
+    },
+    {
+      q: 'Como saber se tenho o perfil comportamental exigido para a carreira de policial militar?',
+      a: 'As avaliações psicológicas dos processos seletivos buscam identificar características como equilíbrio emocional, maturidade, capacidade de tomar decisões sob pressão e comprometimento ético. Refletir sobre experiências anteriores de liderança, trabalho em equipe e reação a situações de estresse pode ajudar a compreender o próprio perfil antes de iniciar a preparação.',
+    },
+    {
+      q: 'Como a rotina de um policial militar impacta a vida pessoal e familiar?',
+      a: 'A escala de plantões, o regime de sobreaviso e a possibilidade de acionamento em casos extraordinários exigem que o candidato — e sua família — compreendam as demandas da carreira antes da escolha. Ao mesmo tempo, corporações que investem em qualidade de vida e apoio psicológico tendem a apresentar menor índice de adoecimento e maior satisfação profissional entre os integrantes.',
+    },
+    {
+      q: 'É possível conciliar a carreira policial com estudos e desenvolvimento pessoal?',
+      a: 'Sim. Muitos policiais militares investem em formação superior, especializações e idiomas ao longo da carreira, aproveitando benefícios de licença para capacitação previstos em estatutos estaduais e programas institucionais de qualificação. A progressão para postos mais altos frequentemente exige, inclusive, formação acadêmica complementar.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Dc Concursos LTDA não é escritório de advocacia (CNPJ
+  // 57.267.808/0001-57, CNAE 85.99-6-05). ZapZapPage renderiza em modo neutro.
+};
+
+// rumoafarda.click (Mvp Educacao e Negocios LTDA — Sociedade Empresária
+// Limitada, CNAE 85.99-6-04, Treinamento em desenvolvimento profissional e
+// gerencial, sediada em Brasília/DF). Não é escritório de advocacia — sem
+// campos OAB, ZapZapPage em modo neutro. Ângulo: preparação física e
+// condicionamento para os testes da PM — como treinar para o TAF, cronograma
+// de preparação física, cuidados com saúde e nutrição nos meses antes da
+// seleção. Distinto de rumoaocfo.click (o que é o processo do CFO) e de
+// todos os outros domínios de carreira, ética, vocação e panorama estadual.
+const RUMO_FARDA: RawConfig = {
+  hostname: 'rumoafarda.click',
+  brand: 'Rumo à Farda',
+  siteSubtitle: 'Preparação Física e Condicionamento para o Processo Seletivo da PM',
+  razaoSocial: 'Mvp Educacao e Negocios LTDA',
+  cnpj: '57212120000170',
+  cnpjFormatted: '57.212.120/0001-70',
+  endereco: 'SCS QD 02, Bloco D, Salas 1102A/1105, Edif. Oscar Niemeyer',
+  bairro: 'Asa Sul',
+  cidade: 'Brasília',
+  estado: 'DF',
+  cep: '70316-900',
+  enderecoCompleto: 'SCS QD 02, Bloco D, Salas 1102A/1105, Edif. Oscar Niemeyer · Asa Sul · Brasília/DF · CEP 70316-900',
+  canonicalUrl: 'https://www.rumoafarda.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre preparação física para processos seletivos da Polícia Militar e não constituem prescrição médica, nutricional ou de educação física. Consulte profissionais habilitados antes de iniciar qualquer programa de treinamento. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  email: 'everest.alainy@gmail.com',
+  telefone: '(61) 98589-3277',
+  cnae: '85.99-6-04 - Treinamento em desenvolvimento profissional e gerencial',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '09/09/2024',
+  capitalSocial: 'R$ 50.000,00',
+  breadcrumbLabel: 'Preparação Física para o Processo Seletivo da PM',
+  h1Override: 'Como se preparar fisicamente para o processo seletivo da Polícia Militar',
+  leadOverride: 'Reunimos conteúdo informativo sobre preparação física e condicionamento para os testes da PM — como montar o cronograma de treino, quais capacidades físicas priorizar e como cuidar do corpo e da mente nos meses antes da seleção. Consulte profissionais habilitados para orientação específica ao seu caso.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Quais capacidades físicas são mais avaliadas no Teste de Aptidão Física (TAF) da PM?',
+      a: 'O TAF varia conforme o edital de cada corporação, mas em geral avalia resistência aeróbica (corrida de 12 minutos ou percurso cronometrado), força muscular de membros superiores (flexões de braço) e resistência abdominal (abdominais). Alguns editais incluem ainda natação, barras ou barra fixa. Verificar o edital específico é indispensável antes de montar o programa de treino.',
+    },
+    {
+      q: 'Com quanto tempo de antecedência devo começar a preparação física para o processo seletivo da PM?',
+      a: 'Para candidatos sem base de condicionamento, especialistas em preparação para concursos militares geralmente recomendam entre seis meses e um ano de antecedência. Candidatos já ativos fisicamente podem atingir os índices exigidos em três a quatro meses de treino específico. O importante é adaptar o cronograma ao nível de condicionamento atual, sem atingir sobrecarga que gere lesão no período pré-seleção.',
+    },
+    {
+      q: 'Como montar um cronograma semanal de treino voltado ao TAF?',
+      a: 'Um modelo comum divide a semana entre treinos de corrida (dois a três dias, com variação entre pace lento de longa duração e tiros curtos de alta intensidade), treinos de força localizados (flexões, abdominais e barras, dois dias) e ao menos um dia de descanso ativo. A periodização — variando volume e intensidade ao longo das semanas — é fundamental para evitar estagnação e lesões por overtraining.',
+    },
+    {
+      q: 'Além do treino físico, o que mais influencia o desempenho no TAF?',
+      a: 'Sono de qualidade, hidratação adequada e alimentação equilibrada com aporte suficiente de carboidratos e proteínas têm impacto direto no rendimento e na recuperação muscular. O controle do estresse psicológico nos dias anteriores à prova também é relevante — ansiedade elevada pode comprometer tanto o desempenho físico quanto a concentração durante os testes.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Mvp Educacao e Negocios LTDA não é escritório de advocacia
+  // (CNPJ 57.212.120/0001-70, CNAE 85.99-6-04). ZapZapPage em modo neutro.
+};
+
+// pmnapratica.click (Educacional Insigne LTDA — Empresa de Pequeno Porte,
+// Sociedade Empresária Limitada, CNAE 85.99-6-05, Cursos preparatórios para
+// concursos, sediada em Brasília/DF). Não é escritório de advocacia — sem
+// campos OAB, ZapZapPage em modo neutro. Ângulo: rotina operacional do PM —
+// o cotidiano prático do policial: plantões, procedimentos de abordagem,
+// tipos de ocorrências frequentes, equipamentos e comunicação via rádio.
+// Conteúdo factual/operacional, distinto de espiritopolicial.click (ética),
+// nascipraserpm.click (vocação), rumoafarda.click (preparação física) e dos
+// domínios de carreira, processo seletivo e panorama estadual.
+const PM_NA_PRATICA: RawConfig = {
+  hostname: 'pmnapratica.click',
+  brand: 'PM na Prática',
+  siteSubtitle: 'Rotina Operacional e Cotidiano Profissional do Policial Militar',
+  razaoSocial: 'Educacional Insigne LTDA',
+  cnpj: '57205076000170',
+  cnpjFormatted: '57.205.076/0001-70',
+  endereco: 'SQPS 102, Lote 19, 602',
+  bairro: 'Zona Industrial (Guará)',
+  cidade: 'Brasília',
+  estado: 'DF',
+  cep: '71215-690',
+  enderecoCompleto: 'SQPS 102, Lote 19, 602 · Zona Industrial (Guará) · Brasília/DF · CEP 71215-690',
+  canonicalUrl: 'https://www.pmnapratica.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre a rotina operacional e o cotidiano profissional do policial militar e não constituem consultoria jurídica, orientação sobre procedimentos específicos ou opinião sobre casos concretos. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  email: 'brandaog12@gmail.com',
+  telefone: '(61) 98317-0713',
+  cnae: '85.99-6-05 - Cursos preparatórios para concursos',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '09/09/2024',
+  capitalSocial: 'R$ 20.000,00',
+  breadcrumbLabel: 'Rotina Operacional do Policial Militar',
+  h1Override: 'Como funciona o cotidiano operacional do policial militar na prática',
+  leadOverride: 'Reunimos conteúdo informativo sobre a rotina real do policial militar — escala de plantões, procedimentos operacionais, tipos de ocorrências e dinâmica do trabalho em equipe nas ruas. Consulte a corporação responsável para informações oficiais sobre procedimentos específicos.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Como funciona a escala de plantão do policial militar?',
+      a: 'A escala mais comum nas PMs estaduais é o sistema 24×72 horas — o policial trabalha 24 horas seguidas e folga 72 — ou o sistema 12×36 horas, com 12 horas de serviço e 36 de folga. A escala varia conforme a corporação, o posto ou graduação do policial e a unidade onde serve. Serviços administrativos e operações especiais podem ter escalas diferenciadas.',
+    },
+    {
+      q: 'Quais são os procedimentos básicos numa abordagem policial?',
+      a: 'A abordagem policial segue protocolos que variam por corporação, mas em geral envolvem identificação do policial, comunicação clara das razões da abordagem, posicionamento de segurança e busca pessoal quando há fundada suspeita. Os regulamentos internos e a legislação processual penal estabelecem os limites da atuação — o policial deve equilibrar eficiência operacional e respeito aos direitos da pessoa abordada.',
+    },
+    {
+      q: 'Que tipos de ocorrências um PM atende com mais frequência?',
+      a: 'Além das ocorrências de natureza criminal (flagrantes, perturbação da ordem, briga em via pública), grande parte das chamadas ao policiamento ostensivo envolve acidentes de trânsito, desentendimentos familiares, assistência a pessoas em sofrimento e perturbação do sossego. O policial militar frequentemente é o primeiro contato do cidadão com o Estado em situações de emergência.',
+    },
+    {
+      q: 'Como funciona a comunicação por rádio durante o serviço policial?',
+      a: 'A comunicação via rádio segue protocolos de fonética e códigos numéricos (como o código Q e códigos de ocorrência) que permitem transmissões rápidas e padronizadas entre a viatura, a central de operações e outras unidades. O domínio dessas comunicações é parte da formação no Curso de Formação de Soldados e é aprimorado na prática ao longo do serviço.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Educacional Insigne LTDA não é escritório de advocacia (CNPJ
+  // 57.205.076/0001-70, CNAE 85.99-6-05). ZapZapPage renderiza em modo neutro.
+};
+
+// radarpm.click (Btc Conecta Cursos e Eventos LTDA — Empresa de Pequeno
+// Porte, Sociedade Empresária Limitada, CNAE 85.99-6-05, Cursos preparatórios
+// para concursos, sediada em Brasília/DF). Não é escritório de advocacia —
+// sem campos OAB, ZapZapPage em modo neutro. Ângulo: monitoramento de editais,
+// concursos abertos e novidades das corporações — radar de vagas abertas,
+// prazos, mudanças regulamentares e concursos recentes por estado. Distinto de
+// concurseiropm.click (como estudar) e pmdomeuestado.click (panorama
+// comparativo estrutural): o Radar foca no que está acontecendo agora.
+const RADAR_PM: RawConfig = {
+  hostname: 'radarpm.click',
+  brand: 'Radar PM',
+  siteSubtitle: 'Editais, Concursos Abertos e Novidades das Polícias Militares do Brasil',
+  razaoSocial: 'Btc Conecta Cursos e Eventos LTDA',
+  cnpj: '58129039000193',
+  cnpjFormatted: '58.129.039/0001-93',
+  endereco: 'SAUS QD 4, Bloco A, Sala 620, Ed. Victoria Office Tower',
+  bairro: 'Asa Sul',
+  cidade: 'Brasília',
+  estado: 'DF',
+  cep: '70070-938',
+  enderecoCompleto: 'SAUS QD 4, Bloco A, Sala 620, Ed. Victoria Office Tower · Asa Sul · Brasília/DF · CEP 70070-938',
+  canonicalUrl: 'https://www.radarpm.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre editais e concursos das Polícias Militares e não constituem consultoria jurídica ou orientação sobre casos individuais. Datas, vagas e condições de editais devem ser confirmadas diretamente nas fontes oficiais de cada corporação. Este site é independente e não possui vínculo com qualquer órgão público ou corporação policial.',
+  email: 'monteiroaugustoadvogados@gmail.com',
+  telefone: '(61) 99979-7179',
+  cnae: '85.99-6-05 - Cursos preparatórios para concursos',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '18/11/2024',
+  capitalSocial: 'R$ 200.000,00',
+  breadcrumbLabel: 'Editais e Concursos das PMs Brasileiras',
+  h1Override: 'Radar de editais e concursos abertos das Polícias Militares do Brasil',
+  leadOverride: 'Reunimos conteúdo informativo sobre editais, concursos em andamento, prazos de inscrição e novidades das corporações de Polícia Militar em todo o Brasil. Confirme sempre os dados diretamente no edital oficial antes de tomar qualquer decisão.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Como acompanhar os editais de concurso da Polícia Militar em aberto no Brasil?',
+      a: 'Os editais são publicados nos Diários Oficiais estaduais e nos sites das bancas organizadoras contratadas para cada certame. Acompanhar os portais oficiais das Secretarias de Segurança Pública e as bancas mais frequentes — como VUNESP, CEBRASPE, FGV, IBFC e FCC — permite identificar concursos assim que são publicados. Algumas corporações anunciam previsões de abertura meses antes do edital formal.',
+    },
+    {
+      q: 'Com que frequência as PMs estaduais abrem concurso para novos integrantes?',
+      a: 'A periodicidade varia muito por estado e depende de fatores como déficit de efetivo, aprovação legislativa de vagas e disponibilidade orçamentária. Estados com maior efetivo e rotatividade, como São Paulo, Rio de Janeiro e Minas Gerais, costumam abrir concursos com mais regularidade. Estados menores podem ficar anos sem concurso ou abrir certames em caráter emergencial.',
+    },
+    {
+      q: 'O que verificar assim que um novo edital da PM é publicado?',
+      a: 'Os pontos críticos a conferir são: número de vagas e distribuição por especialidade ou região; requisitos de ingresso (idade, escolaridade, altura, antecedentes); cronograma completo com datas de prova, TAF e avaliação psicológica; banca organizadora; conteúdo programático das provas objetivas; e critérios de classificação e aprovação. Qualquer dúvida deve ser dirimentada pelo próprio edital ou pela banca responsável.',
+    },
+    {
+      q: 'Como funciona o cronograma típico de um concurso da Polícia Militar?',
+      a: 'A sequência habitual começa com a publicação do edital e abertura de inscrições, seguida de provas objetivas (conhecimentos gerais e específicos), avaliação física (TAF), exame médico, avaliação psicológica, investigação social e curso de formação. O processo completo pode durar de seis meses a mais de dois anos, dependendo do número de candidatos e da estrutura da corporação.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Btc Conecta Cursos e Eventos LTDA não é escritório de advocacia
+  // (CNPJ 58.129.039/0001-93, CNAE 85.99-6-05). ZapZapPage em modo neutro.
+};
+
 const CONFIGS: Record<string, RawConfig> = {
   'concursopm.click': VIDA_FUNCIONAL,
   'www.concursopm.click': VIDA_FUNCIONAL,
@@ -953,6 +1234,16 @@ const CONFIGS: Record<string, RawConfig> = {
   'www.guiadapm.click': EXAME_TOXICOLOGICO,
   'rumoaocfo.click': RUMO_AO_CFO,
   'www.rumoaocfo.click': RUMO_AO_CFO,
+  'espiritopolicial.click': ESPIRITO_POLICIAL,
+  'www.espiritopolicial.click': ESPIRITO_POLICIAL,
+  'nascipraserpm.click': VOCA_PM,
+  'www.nascipraserpm.click': VOCA_PM,
+  'rumoafarda.click': RUMO_FARDA,
+  'www.rumoafarda.click': RUMO_FARDA,
+  'pmnapratica.click': PM_NA_PRATICA,
+  'www.pmnapratica.click': PM_NA_PRATICA,
+  'radarpm.click': RADAR_PM,
+  'www.radarpm.click': RADAR_PM,
 };
 
 function resolveHostname(): string {

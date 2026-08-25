@@ -866,6 +866,62 @@ const EXAME_TOXICOLOGICO: RawConfig = {
   // claims (isVerifiedLawFirm) when BOTH advogadoNome and oabNumero are set.
 };
 
+// rumoaocfo.click (Espaco Amari LTDA — Sociedade Empresária Limitada, CNAE
+// 85.99-6-04 / 85.99-6-05, treinamento e cursos preparatórios para concursos,
+// sediada em Fortaleza/CE). Não é escritório de advocacia — sem campos OAB,
+// sem advogadoNome, ZapZapPage renderiza em modo neutro (isVerifiedLawFirm=false).
+// Ângulo: informação sobre o Curso de Formação de Oficiais (CFO) da Polícia
+// Militar — processo seletivo, TAF, avaliação psicológica, formação e carreira.
+// Distinto do ângulo jurídico/defesa de todos os outros domínios.
+const RUMO_AO_CFO: RawConfig = {
+  hostname: 'rumoaocfo.click',
+  brand: 'Rumo ao CFO',
+  siteSubtitle: 'Informações sobre a Formação e a Carreira de Oficial da Polícia Militar',
+  razaoSocial: 'Espaco Amari LTDA',
+  cnpj: '57528270000197',
+  cnpjFormatted: '57.528.270/0001-97',
+  endereco: 'Rua Joaquim SA, 405, Sala A',
+  bairro: 'Dionisio Torres',
+  cidade: 'Fortaleza',
+  estado: 'CE',
+  cep: '60135-218',
+  enderecoCompleto: 'Rua Joaquim SA, 405, Sala A · Dionisio Torres · Fortaleza/CE · CEP 60135-218',
+  canonicalUrl: 'https://www.rumoaocfo.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre o processo de formação e a carreira de oficial na Polícia Militar e não constituem consultoria ou orientação jurídica individual. Este site é independente e não possui vínculo com qualquer corporação policial, órgão público ou instituição de ensino.',
+  email: 'marimmoura@gmail.com',
+  telefone: '(85) 98699-8932',
+  cnae: '85.99-6-04 - Treinamento em desenvolvimento profissional e gerencial',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '02/10/2024',
+  capitalSocial: 'R$ 80.000,00',
+  breadcrumbLabel: 'Formação de Oficiais da Polícia Militar',
+  h1Override: 'Saiba como funciona o Curso de Formação de Oficiais (CFO) da Polícia Militar',
+  leadOverride: 'Reunimos conteúdo informativo sobre as etapas do CFO — processo seletivo, testes físicos, avaliação psicológica, curso de formação e progressão na carreira de oficial. Consulte a corporação responsável ou um profissional especializado para orientação específica ao seu caso.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Quais são as etapas do processo seletivo para o CFO da Polícia Militar?',
+      a: 'Em geral, o processo seletivo para o Curso de Formação de Oficiais (CFO) inclui prova objetiva de conhecimentos, teste de aptidão física (TAF), avaliação psicológica, exame médico, investigação social e, em alguns estados, avaliação de títulos. A ordem e as especificidades de cada etapa variam conforme o edital de cada corporação estadual.',
+    },
+    {
+      q: 'Qual é a duração e o conteúdo do Curso de Formação de Oficiais?',
+      a: 'A duração do CFO varia entre os estados, geralmente de um a dois anos, e combina formação acadêmica (disciplinas jurídicas, administrativas e de segurança pública), treinamento físico, instrução tática e estágios práticos. Ao término, o formando é promovido ao primeiro posto da carreira de oficial.',
+    },
+    {
+      q: 'Existe limite de idade para ingressar no CFO da Polícia Militar?',
+      a: 'Sim, cada edital estabelece um limite máximo de idade para inscrição, que costuma variar entre 30 e 35 anos dependendo do estado. Candidatos que já integram a corporação como praça podem ter limites diferenciados previstos em legislação específica. É fundamental verificar o edital vigente da corporação de interesse.',
+    },
+    {
+      q: 'Como é avaliada a aptidão física no processo seletivo para o CFO?',
+      a: 'O Teste de Aptidão Física (TAF) avalia capacidades como resistência aeróbica (corrida), força muscular (flexões, abdominais) e, em alguns estados, natação ou outras modalidades. Os critérios mínimos de aprovação costumam variar por sexo e faixa etária, conforme tabela publicada no edital.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Espaco Amari LTDA não é escritório de advocacia (CNPJ
+  // 57.528.270/0001-97, CNAE 85.99-6-04). ZapZapPage renderiza em modo neutro
+  // (isVerifiedLawFirm = false) quando oabNumero está ausente.
+};
+
 const CONFIGS: Record<string, RawConfig> = {
   'concursopm.click': VIDA_FUNCIONAL,
   'www.concursopm.click': VIDA_FUNCIONAL,
@@ -895,6 +951,8 @@ const CONFIGS: Record<string, RawConfig> = {
   'www.pmemfoco.click': TRANSPARENCIA_CONCURSO,
   'guiadapm.click': EXAME_TOXICOLOGICO,
   'www.guiadapm.click': EXAME_TOXICOLOGICO,
+  'rumoaocfo.click': RUMO_AO_CFO,
+  'www.rumoaocfo.click': RUMO_AO_CFO,
 };
 
 function resolveHostname(): string {

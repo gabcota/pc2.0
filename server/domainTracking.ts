@@ -297,6 +297,23 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
     stateCode: "ES",
     themeColor: "#3d5e6b",
   },
+  // rumoaocfo.click — Espaco Amari LTDA (Sociedade Empresária Limitada, CNAE
+  // 85.99-6-04, treinamento em desenvolvimento profissional e cursos
+  // preparatórios para concursos), sediada em Fortaleza/CE. Não é escritório
+  // de advocacia. Mantida em sincronia com client/src/lib/siteConfig.ts
+  // (RUMO_AO_CFO); atualizar ambos se os dados cadastrais mudarem.
+  "rumoaocfo.click": {
+    brand: "Rumo ao CFO",
+    razaoSocial: "Espaco Amari LTDA",
+    cnpj: "57.528.270/0001-97",
+    address: "Rua Joaquim SA, 405, Sala A, Dionisio Torres",
+    postalCode: "60135-218",
+    emailContato: "marimmoura@gmail.com",
+    phone: "(85) 98699-8932",
+    city: "Fortaleza",
+    stateCode: "CE",
+    themeColor: "#7a5c00",
+  },
 };
 
 interface FaqEntry {
@@ -575,6 +592,28 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
       a: "A recusa injustificada de acesso a informações relacionadas ao próprio processo seletivo pode ser contestada administrativamente e, se necessário, por meio de mandado de segurança ou outra medida judicial cabível, especialmente quando o prazo recursal está em curso.",
     },
     FAQ_WHATSAPP_NEUTRAL,
+  ],
+  "rumoaocfo.click": [
+    {
+      q: "Quais são as etapas do processo seletivo para o CFO da Polícia Militar?",
+      a: "Em geral, o processo seletivo para o Curso de Formação de Oficiais (CFO) inclui prova objetiva de conhecimentos, teste de aptidão física (TAF), avaliação psicológica, exame médico, investigação social e, em alguns estados, avaliação de títulos. A ordem e as especificidades de cada etapa variam conforme o edital de cada corporação estadual.",
+    },
+    {
+      q: "Qual é a duração e o conteúdo do Curso de Formação de Oficiais?",
+      a: "A duração do CFO varia entre os estados, geralmente de um a dois anos, e combina formação acadêmica (disciplinas jurídicas, administrativas e de segurança pública), treinamento físico, instrução tática e estágios práticos. Ao término, o formando é promovido ao primeiro posto da carreira de oficial.",
+    },
+    {
+      q: "Existe limite de idade para ingressar no CFO da Polícia Militar?",
+      a: "Sim, cada edital estabelece um limite máximo de idade para inscrição, que costuma variar entre 30 e 35 anos dependendo do estado. Candidatos que já integram a corporação como praça podem ter limites diferenciados previstos em legislação específica. É fundamental verificar o edital vigente da corporação de interesse.",
+    },
+    {
+      q: "Como é avaliada a aptidão física no processo seletivo para o CFO?",
+      a: "O Teste de Aptidão Física (TAF) avalia capacidades como resistência aeróbica (corrida), força muscular (flexões, abdominais) e, em alguns estados, natação ou outras modalidades. Os critérios mínimos de aprovação costumam variar por sexo e faixa etária, conforme tabela publicada no edital.",
+    },
+    {
+      q: "É possível tirar dúvidas sobre o CFO pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre o processo de formação e a carreira de oficial da Polícia Militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para questões específicas sobre o seu caso, recomendamos consultar diretamente a corporação responsável ou um profissional especializado.",
+    },
   ],
   "guiadapm.click": [
     {
@@ -1284,6 +1323,44 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Orientação jurídica sobre eliminação por exame toxicológico, contraprova e cadeia de custódia da amostra em concursos da Polícia Militar. Gobbette Marques & Barreto Advogados Associados — Serra/ES. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.b6f2a874",
     gtmId: "GTM-5SKD2W93",
+  },
+  "rumoaocfo.click": {
+    domain: "rumoaocfo.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Espaco Amari LTDA",
+    description:
+      "Conteúdo informativo sobre o percurso de formação e a carreira de oficial na Polícia Militar — etapas do CFO, processo seletivo, testes físicos e psicológicos, curso de formação e progressão na carreira. Espaco Amari LTDA · CNPJ 57.528.270/0001-97 · Fortaleza/CE.",
+    author: "Espaco Amari LTDA",
+    ogType: "website",
+    siteName: "Espaco Amari LTDA",
+    ogTitle:
+      "Curso de Formação de Oficiais da PM — Etapas, Requisitos e Carreira | Espaco Amari",
+    ogDescription:
+      "Conteúdo informativo sobre o CFO da Polícia Militar — processo seletivo, TAF, avaliação psicológica e progressão na carreira de oficial. Espaco Amari LTDA — Fortaleza/CE.",
+    analyticsCore: "signal.d8e1a945",
+    gtmId: "GTM-W9MLXKSZ",
+  },
+  "www.rumoaocfo.click": {
+    domain: "rumoaocfo.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Espaco Amari LTDA",
+    description:
+      "Conteúdo informativo sobre o percurso de formação e a carreira de oficial na Polícia Militar — etapas do CFO, processo seletivo, testes físicos e psicológicos, curso de formação e progressão na carreira. Espaco Amari LTDA · CNPJ 57.528.270/0001-97 · Fortaleza/CE.",
+    author: "Espaco Amari LTDA",
+    ogType: "website",
+    siteName: "Espaco Amari LTDA",
+    ogTitle:
+      "Curso de Formação de Oficiais da PM — Etapas, Requisitos e Carreira | Espaco Amari",
+    ogDescription:
+      "Conteúdo informativo sobre o CFO da Polícia Militar — processo seletivo, TAF, avaliação psicológica e progressão na carreira de oficial. Espaco Amari LTDA — Fortaleza/CE.",
+    analyticsCore: "signal.d8e1a945",
+    gtmId: "GTM-W9MLXKSZ",
   },
 };
 

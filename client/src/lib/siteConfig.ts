@@ -1375,6 +1375,62 @@ const CONCURSEIRO_PM: RawConfig = {
   // 69.20-6-01). ZapZapPage renderiza em modo neutro.
 };
 
+// pmdomeuestado.click (Muamba Filmes LTDA — Sociedade Empresária Limitada,
+// CNAE 59.11-1-99, Produção cinematográfica e de vídeos, sediada em
+// Fortaleza/CE). Não é escritório de advocacia — sem campos OAB, ZapZapPage
+// em modo neutro. Ângulo: panorama comparativo das Polícias Militares
+// estaduais — como as corporações se organizam por estado, variações na
+// estrutura de postos e graduações, diferenças salariais e frequência
+// histórica de concursos por região. Ângulo geográfico/comparativo, distinto
+// de todos os domínios de carreira, jurídicos e de preparação para provas.
+const PM_DO_MEU_ESTADO: RawConfig = {
+  hostname: 'pmdomeuestado.click',
+  brand: 'PM do Meu Estado',
+  siteSubtitle: 'Panorama Comparativo das Polícias Militares Estaduais do Brasil',
+  razaoSocial: 'Muamba Filmes LTDA',
+  cnpj: '57507866000100',
+  cnpjFormatted: '57.507.866/0001-00',
+  endereco: 'Rua Milagres, 24, Sala 10',
+  bairro: 'Aldeota',
+  cidade: 'Fortaleza',
+  estado: 'CE',
+  cep: '60110-430',
+  enderecoCompleto: 'Rua Milagres, 24, Sala 10 · Aldeota · Fortaleza/CE · CEP 60110-430',
+  canonicalUrl: 'https://www.pmdomeuestado.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre as Polícias Militares estaduais brasileiras e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  email: 'muambafilmes@gmail.com',
+  telefone: '(85) 99631-6323',
+  cnae: '59.11-1-99 - Atividades de produção cinematográfica, de vídeos e de programas de televisão não especificadas anteriormente',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '01/10/2024',
+  capitalSocial: 'R$ 3.000,00',
+  breadcrumbLabel: 'Panorama das Polícias Militares por Estado',
+  h1Override: 'Como funcionam as Polícias Militares nos diferentes estados brasileiros',
+  leadOverride: 'Reunimos conteúdo informativo sobre como cada corporação estadual se organiza — estrutura de postos e graduações, variações salariais entre estados, frequência histórica de seleções e diferenças regionais na carreira militar. Consulte a corporação do seu estado para informações oficiais e atualizadas.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'As Polícias Militares variam muito entre os estados brasileiros?',
+      a: 'Sim. Cada PM estadual é regulamentada por legislação própria e organizada de forma autônoma dentro do quadro federal. Há variações relevantes no quantitativo de efetivo, na estrutura de Batalhões e Companhias, nos critérios de promoção, no regime de trabalho (escala de plantão) e na remuneração dos profissionais. Estados maiores, como São Paulo e Minas Gerais, costumam ter corporações mais numerosas e orçamentos distintos das PMs de estados menores.',
+    },
+    {
+      q: 'As diferenças salariais entre PMs de estados diferentes são significativas?',
+      a: 'São expressivas. O vencimento base de um soldado recém-formado pode variar consideravelmente entre estados, refletindo diferenças no orçamento estadual, nas leis de carreira e nos planos de reestruturação remuneratória de cada governo. Além do salário base, benefícios como adicional de risco de vida, gratificação por habilitação e licenças especiais variam por corporação e influenciam a remuneração total do profissional.',
+    },
+    {
+      q: 'A estrutura de postos e graduações é igual em todas as PMs estaduais?',
+      a: 'A estrutura geral segue o modelo nacional — praças (soldado a subtenente) e oficiais (aspirante a coronel) — mas os detalhes variam por estado. Alguns estados possuem graduações ou denominações específicas, planos de cargos distintos e critérios diferentes para acesso aos cursos de especialização e promoção. O regulamento interno de cada corporação define os detalhes da progressão funcional.',
+    },
+    {
+      q: 'Alguns estados abrem mais concursos para a PM do que outros?',
+      a: 'Historicamente, sim. A frequência de seleções depende do orçamento estadual, da taxa de saída de profissionais (aposentadorias e desligamentos) e das políticas de segurança pública de cada governo. Estados com maior rotatividade ou expansão do efetivo costumam realizar seleções com maior regularidade. Acompanhe os diários oficiais e o site da PM do seu estado para informações oficiais sobre editais abertos.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Muamba Filmes LTDA não é escritório de advocacia (CNPJ
+  // 57.507.866/0001-00, CNAE 59.11-1-99). ZapZapPage renderiza em modo neutro.
+};
+
 const CONFIGS: Record<string, RawConfig> = {
   'concursopm.click': VIDA_FUNCIONAL,
   'www.concursopm.click': VIDA_FUNCIONAL,
@@ -1422,6 +1478,8 @@ const CONFIGS: Record<string, RawConfig> = {
   'www.futuropm.click': FUTURO_PM,
   'concurseiropm.click': CONCURSEIRO_PM,
   'www.concurseiropm.click': CONCURSEIRO_PM,
+  'pmdomeuestado.click': PM_DO_MEU_ESTADO,
+  'www.pmdomeuestado.click': PM_DO_MEU_ESTADO,
 };
 
 function resolveHostname(): string {

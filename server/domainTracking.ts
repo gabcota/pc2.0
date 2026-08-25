@@ -297,6 +297,23 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
     stateCode: "ES",
     themeColor: "#3d5e6b",
   },
+  // pmdomeuestado.click — Muamba Filmes LTDA (Sociedade Empresária Limitada,
+  // CNAE 59.11-1-99, Produção cinematográfica e de vídeos), sediada em
+  // Fortaleza/CE. Não é escritório de advocacia. Mantida em sincronia com
+  // client/src/lib/siteConfig.ts (PM_DO_MEU_ESTADO); atualizar ambos se os
+  // dados cadastrais mudarem.
+  "pmdomeuestado.click": {
+    brand: "PM do Meu Estado",
+    razaoSocial: "Muamba Filmes LTDA",
+    cnpj: "57.507.866/0001-00",
+    address: "Rua Milagres, 24, Sala 10, Aldeota",
+    postalCode: "60110-430",
+    emailContato: "muambafilmes@gmail.com",
+    phone: "(85) 99631-6323",
+    city: "Fortaleza",
+    stateCode: "CE",
+    themeColor: "#2c4a1e",
+  },
   // concurseiropm.click — Ab Contabilidade Assessoria Contabil e Consultoria
   // Empresarial LTDA (Sociedade Empresária Limitada, CNAE 69.20-6-01,
   // Atividades de contabilidade), sediada em Fortaleza/CE. Não é escritório de
@@ -728,6 +745,28 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
       a: "A recusa injustificada de acesso a informações relacionadas ao próprio processo seletivo pode ser contestada administrativamente e, se necessário, por meio de mandado de segurança ou outra medida judicial cabível, especialmente quando o prazo recursal está em curso.",
     },
     FAQ_WHATSAPP_NEUTRAL,
+  ],
+  "pmdomeuestado.click": [
+    {
+      q: "As Polícias Militares variam muito entre os estados brasileiros?",
+      a: "Sim. Cada PM estadual é regulamentada por legislação própria e organizada de forma autônoma dentro do quadro federal. Há variações relevantes no quantitativo de efetivo, na estrutura de Batalhões e Companhias, nos critérios de promoção, no regime de trabalho (escala de plantão) e na remuneração dos profissionais. Estados maiores, como São Paulo e Minas Gerais, costumam ter corporações mais numerosas e orçamentos distintos das PMs de estados menores.",
+    },
+    {
+      q: "As diferenças salariais entre PMs de estados diferentes são significativas?",
+      a: "São expressivas. O vencimento base de um soldado recém-formado pode variar consideravelmente entre estados, refletindo diferenças no orçamento estadual, nas leis de carreira e nos planos de reestruturação remuneratória de cada governo. Além do salário base, benefícios como adicional de risco de vida, gratificação por habilitação e licenças especiais variam por corporação e influenciam a remuneração total do profissional.",
+    },
+    {
+      q: "A estrutura de postos e graduações é igual em todas as PMs estaduais?",
+      a: "A estrutura geral segue o modelo nacional — praças (soldado a subtenente) e oficiais (aspirante a coronel) — mas os detalhes variam por estado. Alguns estados possuem graduações ou denominações específicas, planos de cargos distintos e critérios diferentes para acesso aos cursos de especialização e promoção. O regulamento interno de cada corporação define os detalhes da progressão funcional.",
+    },
+    {
+      q: "Alguns estados abrem mais concursos para a PM do que outros?",
+      a: "Historicamente, sim. A frequência de seleções depende do orçamento estadual, da taxa de saída de profissionais (aposentadorias e desligamentos) e das políticas de segurança pública de cada governo. Estados com maior rotatividade ou expansão do efetivo costumam realizar seleções com maior regularidade. Acompanhe os diários oficiais e o site da PM do seu estado para informações oficiais sobre editais abertos.",
+    },
+    {
+      q: "É possível tirar dúvidas sobre as PMs estaduais pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre estrutura, carreira e organização das Polícias Militares estaduais pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre a corporação do seu estado, consulte diretamente o site ou a ouvidoria da PM estadual.",
+    },
   ],
   "concurseiropm.click": [
     {
@@ -1635,6 +1674,44 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Orientação jurídica sobre eliminação por exame toxicológico, contraprova e cadeia de custódia da amostra em concursos da Polícia Militar. Gobbette Marques & Barreto Advogados Associados — Serra/ES. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.b6f2a874",
     gtmId: "GTM-5SKD2W93",
+  },
+  "pmdomeuestado.click": {
+    domain: "pmdomeuestado.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Muamba Filmes LTDA",
+    description:
+      "Conteúdo informativo sobre as Polícias Militares estaduais brasileiras — como cada corporação se organiza, variações salariais entre estados, estrutura de postos e graduações e frequência histórica de seleções por região. Muamba Filmes LTDA · CNPJ 57.507.866/0001-00 · Fortaleza/CE.",
+    author: "Muamba Filmes LTDA",
+    ogType: "website",
+    siteName: "Muamba Filmes LTDA",
+    ogTitle:
+      "Panorama das Polícias Militares por Estado | PM do Meu Estado",
+    ogDescription:
+      "Conteúdo informativo sobre organização, salários e estrutura das PMs estaduais brasileiras. Muamba Filmes LTDA — Fortaleza/CE.",
+    analyticsCore: "signal.a8e5d271",
+    gtmId: "GTM-PJPDVNPL",
+  },
+  "www.pmdomeuestado.click": {
+    domain: "pmdomeuestado.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Muamba Filmes LTDA",
+    description:
+      "Conteúdo informativo sobre as Polícias Militares estaduais brasileiras — como cada corporação se organiza, variações salariais entre estados, estrutura de postos e graduações e frequência histórica de seleções por região. Muamba Filmes LTDA · CNPJ 57.507.866/0001-00 · Fortaleza/CE.",
+    author: "Muamba Filmes LTDA",
+    ogType: "website",
+    siteName: "Muamba Filmes LTDA",
+    ogTitle:
+      "Panorama das Polícias Militares por Estado | PM do Meu Estado",
+    ogDescription:
+      "Conteúdo informativo sobre organização, salários e estrutura das PMs estaduais brasileiras. Muamba Filmes LTDA — Fortaleza/CE.",
+    analyticsCore: "signal.a8e5d271",
+    gtmId: "GTM-PJPDVNPL",
   },
   "concurseiropm.click": {
     domain: "concurseiropm.click",

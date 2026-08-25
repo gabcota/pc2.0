@@ -297,6 +297,23 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
     stateCode: "ES",
     themeColor: "#3d5e6b",
   },
+  // futuropm.click — Vilasolutions Brasil LTDA (Sociedade Empresária Limitada,
+  // CNAE 85.99-6-04, Treinamento em desenvolvimento profissional e gerencial),
+  // sediada em Fortaleza/CE. Não é escritório de advocacia. Mantida em
+  // sincronia com client/src/lib/siteConfig.ts (FUTURO_PM); atualizar ambos
+  // se os dados cadastrais mudarem.
+  "futuropm.click": {
+    brand: "Futuro PM",
+    razaoSocial: "Vilasolutions Brasil LTDA",
+    cnpj: "57.638.943/0001-61",
+    address: "Rua Pedro de Sousa, 305, Parque Santa Maria",
+    postalCode: "60873-105",
+    emailContato: "alissonvillanovabrasil@gmail.com",
+    phone: "(85) 98642-5444",
+    city: "Fortaleza",
+    stateCode: "CE",
+    themeColor: "#6b4c1a",
+  },
   // carreiradeoficial.click — M.a Assessoria e Treinamentos LTDA (Sociedade
   // Empresária Limitada, CNAE 85.99-6-04, Treinamento em desenvolvimento
   // profissional e gerencial), sediada em Fortaleza/CE. Não é escritório de
@@ -694,6 +711,28 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
       a: "A recusa injustificada de acesso a informações relacionadas ao próprio processo seletivo pode ser contestada administrativamente e, se necessário, por meio de mandado de segurança ou outra medida judicial cabível, especialmente quando o prazo recursal está em curso.",
     },
     FAQ_WHATSAPP_NEUTRAL,
+  ],
+  "futuropm.click": [
+    {
+      q: "Como funciona o processo seletivo para ingresso como soldado da Polícia Militar?",
+      a: "O processo seletivo para soldado varia por estado, mas em geral inclui prova objetiva de conhecimentos gerais, Teste de Aptidão Física (TAF), exame médico, avaliação psicológica e investigação social. O edital de cada corporação define os requisitos mínimos de escolaridade, idade, altura e outros critérios eliminatórios. A ordem das etapas pode variar conforme a corporação organizadora.",
+    },
+    {
+      q: "O que é o Curso de Formação de Soldados (CFS) e como ele funciona?",
+      a: "O CFS é o período de formação inicial obrigatório para quem ingressa na PM como soldado. Durante o curso, o recruta recebe instrução em técnicas policiais, legislação, armamento, primeiros socorros, educação física intensa e conduta militar. A duração varia por estado — em geral de quatro a oito meses — e a aprovação é condição para assumir o serviço ativo como praça.",
+    },
+    {
+      q: "Como funciona a progressão nas graduações da carreira de praça da PM?",
+      a: "A carreira de praça segue a sequência: soldado → cabo → sargento (3º, 2º e 1º) → subtenente. As promoções ocorrem por antiguidade e merecimento, conforme os regulamentos de cada corporação estadual. Critérios como tempo mínimo na graduação, aprovação em cursos de formação específicos, ausência de punições e avaliação de desempenho influenciam diretamente o ritmo de progressão.",
+    },
+    {
+      q: "Quais são as principais diferenças entre a carreira de praça e a carreira de oficial na PM?",
+      a: "Praças ingressam como soldados por concurso público e progridem nas graduações até subtenente. Oficiais ingressam pelo Curso de Formação de Oficiais (CFO) — com exigência de ensino superior — e progridem nos postos de tenente a coronel, com responsabilidades maiores de comando e gestão. As carreiras são hierarquicamente separadas, com diferentes estatutos, critérios de promoção e atribuições funcionais.",
+    },
+    {
+      q: "É possível tirar dúvidas sobre a carreira de praça da PM pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre ingresso como soldado, formação e progressão na carreira de praça pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre o seu caso específico, consulte a corporação responsável.",
+    },
   ],
   "carreiradeoficial.click": [
     {
@@ -1557,6 +1596,44 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Orientação jurídica sobre eliminação por exame toxicológico, contraprova e cadeia de custódia da amostra em concursos da Polícia Militar. Gobbette Marques & Barreto Advogados Associados — Serra/ES. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.b6f2a874",
     gtmId: "GTM-5SKD2W93",
+  },
+  "futuropm.click": {
+    domain: "futuropm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Vilasolutions Brasil LTDA",
+    description:
+      "Conteúdo informativo sobre ingresso e carreira de praça na Polícia Militar — processo seletivo para soldado, Curso de Formação de Soldados (CFS), progressão nas graduações e diferenças entre praça e oficial. Vilasolutions Brasil LTDA · CNPJ 57.638.943/0001-61 · Fortaleza/CE.",
+    author: "Vilasolutions Brasil LTDA",
+    ogType: "website",
+    siteName: "Vilasolutions Brasil LTDA",
+    ogTitle:
+      "Ingresso e Carreira de Praça na Polícia Militar | Futuro PM",
+    ogDescription:
+      "Conteúdo informativo sobre o processo seletivo para soldado, CFS e progressão nas graduações da carreira de praça da PM. Vilasolutions Brasil LTDA — Fortaleza/CE.",
+    analyticsCore: "signal.e6c3b194",
+    gtmId: "GTM-MS54MNB3",
+  },
+  "www.futuropm.click": {
+    domain: "futuropm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Vilasolutions Brasil LTDA",
+    description:
+      "Conteúdo informativo sobre ingresso e carreira de praça na Polícia Militar — processo seletivo para soldado, Curso de Formação de Soldados (CFS), progressão nas graduações e diferenças entre praça e oficial. Vilasolutions Brasil LTDA · CNPJ 57.638.943/0001-61 · Fortaleza/CE.",
+    author: "Vilasolutions Brasil LTDA",
+    ogType: "website",
+    siteName: "Vilasolutions Brasil LTDA",
+    ogTitle:
+      "Ingresso e Carreira de Praça na Polícia Militar | Futuro PM",
+    ogDescription:
+      "Conteúdo informativo sobre o processo seletivo para soldado, CFS e progressão nas graduações da carreira de praça da PM. Vilasolutions Brasil LTDA — Fortaleza/CE.",
+    analyticsCore: "signal.e6c3b194",
+    gtmId: "GTM-MS54MNB3",
   },
   "carreiradeoficial.click": {
     domain: "carreiradeoficial.click",

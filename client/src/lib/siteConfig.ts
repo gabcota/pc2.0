@@ -1260,6 +1260,63 @@ const CARREIRA_OFICIAL: RawConfig = {
   // (CNPJ 57.717.002/0001-13, CNAE 85.99-6-04). ZapZapPage em modo neutro.
 };
 
+// futuropm.click (Vilasolutions Brasil LTDA — Sociedade Empresária Limitada,
+// CNAE 85.99-6-04, Treinamento em desenvolvimento profissional e gerencial,
+// sediada em Fortaleza/CE). Não é escritório de advocacia — sem campos OAB,
+// ZapZapPage em modo neutro. Ângulo: carreira de praça na PM — processo
+// seletivo para ingresso como soldado, Curso de Formação de Soldados (CFS),
+// progressão nas graduações (soldado → cabo → sargento → subtenente) e
+// rotina profissional como praça. Distinto de rumoaocfo.click (track de
+// oficial/CFO) e carreiradeoficial.click (desenvolvimento pós-formação do
+// oficial) e de todos os domínios jurídicos.
+const FUTURO_PM: RawConfig = {
+  hostname: 'futuropm.click',
+  brand: 'Futuro PM',
+  siteSubtitle: 'Carreira de Praça na Polícia Militar: Ingresso, Formação e Progressão',
+  razaoSocial: 'Vilasolutions Brasil LTDA',
+  cnpj: '57638943000161',
+  cnpjFormatted: '57.638.943/0001-61',
+  endereco: 'Rua Pedro de Sousa, 305',
+  bairro: 'Parque Santa Maria',
+  cidade: 'Fortaleza',
+  estado: 'CE',
+  cep: '60873-105',
+  enderecoCompleto: 'Rua Pedro de Sousa, 305 · Parque Santa Maria · Fortaleza/CE · CEP 60873-105',
+  canonicalUrl: 'https://www.futuropm.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre a carreira de praça na Polícia Militar e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  email: 'alissonvillanovabrasil@gmail.com',
+  telefone: '(85) 98642-5444',
+  cnae: '85.99-6-04 - Treinamento em desenvolvimento profissional e gerencial',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '10/10/2024',
+  capitalSocial: 'R$ 15.000,00',
+  breadcrumbLabel: 'Ingresso e Carreira de Praça na Polícia Militar',
+  h1Override: 'Como funciona o ingresso e a carreira de praça na Polícia Militar',
+  leadOverride: 'Reunimos conteúdo informativo sobre a trajetória de quem ingressa na PM como soldado — processo seletivo, Curso de Formação de Soldados, progressão nas graduações e rotina profissional como praça. Consulte a corporação responsável para informações oficiais sobre o seu caso.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Como funciona o processo seletivo para ingresso como soldado da Polícia Militar?',
+      a: 'O processo seletivo para soldado varia por estado, mas em geral inclui prova objetiva de conhecimentos gerais, Teste de Aptidão Física (TAF), exame médico, avaliação psicológica e investigação social. O edital de cada corporação define os requisitos mínimos de escolaridade, idade, altura e outros critérios eliminatórios. A ordem das etapas pode variar conforme a corporação organizadora.',
+    },
+    {
+      q: 'O que é o Curso de Formação de Soldados (CFS) e como ele funciona?',
+      a: 'O CFS é o período de formação inicial obrigatório para quem ingressa na PM como soldado. Durante o curso, o recruta recebe instrução em técnicas policiais, legislação, armamento, primeiros socorros, educação física intensa e conduta militar. A duração varia por estado — em geral de quatro a oito meses — e a aprovação é condição para assumir o serviço ativo como praça.',
+    },
+    {
+      q: 'Como funciona a progressão nas graduações da carreira de praça da PM?',
+      a: 'A carreira de praça segue a sequência: soldado → cabo → sargento (3º, 2º e 1º) → subtenente. As promoções ocorrem por antiguidade e merecimento, conforme os regulamentos de cada corporação estadual. Critérios como tempo mínimo na graduação, aprovação em cursos de formação específicos, ausência de punições e avaliação de desempenho influenciam diretamente o ritmo de progressão.',
+    },
+    {
+      q: 'Quais são as principais diferenças entre a carreira de praça e a carreira de oficial na PM?',
+      a: 'Praças ingressam como soldados por concurso público e progridem nas graduações até subtenente. Oficiais ingressam pelo Curso de Formação de Oficiais (CFO) — com exigência de ensino superior — e progridem nos postos de tenente a coronel, com responsabilidades maiores de comando e gestão. As carreiras são hierarquicamente separadas, com diferentes estatutos, critérios de promoção e atribuições funcionais.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Vilasolutions Brasil LTDA não é escritório de advocacia (CNPJ
+  // 57.638.943/0001-61, CNAE 85.99-6-04). ZapZapPage renderiza em modo neutro.
+};
+
 const CONFIGS: Record<string, RawConfig> = {
   'concursopm.click': VIDA_FUNCIONAL,
   'www.concursopm.click': VIDA_FUNCIONAL,
@@ -1303,6 +1360,8 @@ const CONFIGS: Record<string, RawConfig> = {
   'www.radarpm.click': RADAR_PM,
   'carreiradeoficial.click': CARREIRA_OFICIAL,
   'www.carreiradeoficial.click': CARREIRA_OFICIAL,
+  'futuropm.click': FUTURO_PM,
+  'www.futuropm.click': FUTURO_PM,
 };
 
 function resolveHostname(): string {

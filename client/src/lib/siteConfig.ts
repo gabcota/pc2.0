@@ -1317,6 +1317,64 @@ const FUTURO_PM: RawConfig = {
   // 57.638.943/0001-61, CNAE 85.99-6-04). ZapZapPage renderiza em modo neutro.
 };
 
+// concurseiropm.click (Ab Contabilidade Assessoria Contabil e Consultoria
+// Empresarial LTDA — Sociedade Empresária Limitada, CNAE 69.20-6-01,
+// Atividades de contabilidade, sediada em Fortaleza/CE). Não é escritório de
+// advocacia — sem campos OAB, ZapZapPage em modo neutro. Ângulo: preparação
+// acadêmica para o concurso da PM — disciplinas cobradas nas provas objetivas,
+// cronograma de estudos, conteúdo programático frequente e organização da
+// preparação. Distinto de rumoaocfo.click (etapas do processo seletivo do
+// CFO), futuropm.click (carreira de praça) e carreiradeoficial.click
+// (desenvolvimento pós-formação do oficial) e de todos os domínios jurídicos.
+const CONCURSEIRO_PM: RawConfig = {
+  hostname: 'concurseiropm.click',
+  brand: 'Concurseiro PM',
+  siteSubtitle: 'Preparação Acadêmica para o Concurso da Polícia Militar',
+  razaoSocial: 'Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA',
+  cnpj: '58129437000100',
+  cnpjFormatted: '58.129.437/0001-00',
+  endereco: 'Avenida Washington Soares, 55, Sala 307',
+  bairro: 'Edson Queiroz',
+  cidade: 'Fortaleza',
+  estado: 'CE',
+  cep: '60811-341',
+  enderecoCompleto: 'Avenida Washington Soares, 55, Sala 307 · Edson Queiroz · Fortaleza/CE · CEP 60811-341',
+  canonicalUrl: 'https://www.concurseiropm.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre preparação acadêmica para concursos da Polícia Militar e não constituem consultoria jurídica ou pedagógica individual. Este site é independente e não possui vínculo com qualquer corporação policial, banca organizadora ou órgão público.',
+  email: 'ab_contabilidade@hotmail.com',
+  telefone: '(85) 98170-1976',
+  cnae: '69.20-6-01 - Atividades de contabilidade',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '18/11/2024',
+  capitalSocial: 'R$ 500.000,00',
+  breadcrumbLabel: 'Preparação para as Provas do Concurso da PM',
+  h1Override: 'Como se preparar academicamente para as provas do concurso da Polícia Militar',
+  leadOverride: 'Reunimos conteúdo informativo sobre as disciplinas cobradas, como organizar o cronograma de estudos e o que esperar das provas objetivas nos concursos da Polícia Militar. Consulte o edital oficial da corporação para o conteúdo programático específico do certame de seu interesse.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Quais são as disciplinas mais cobradas nas provas objetivas do concurso da PM?',
+      a: 'As disciplinas mais frequentes nos concursos da PM incluem Língua Portuguesa, Matemática e Raciocínio Lógico, Noções de Direito Constitucional, Direito Administrativo e Legislação Policial Estadual. Dependendo do edital, podem aparecer também Informática, Atualidades, Direito Penal e Ética no Serviço Público. O conteúdo programático exato varia por estado e por banca organizadora.',
+    },
+    {
+      q: 'Como montar um cronograma eficiente de estudos para o concurso da PM?',
+      a: 'Um cronograma eficiente parte do edital: identifique o número de questões por disciplina e o peso de cada uma na nota final. Dedique mais horas às disciplinas com maior incidência e às que representam maior dificuldade pessoal. Alterne dias de conteúdo novo com dias de revisão e resolução de questões anteriores, e inclua simulados periódicos para treinar o ritmo da prova real.',
+    },
+    {
+      q: 'Qual é a melhor estratégia para resolver questões de múltipla escolha nas provas da PM?',
+      a: 'Eliminar alternativas claramente erradas antes de escolher a resposta reduz o risco de marcação precipitada. Para questões de interpretação de texto e raciocínio lógico, ler o enunciado com atenção antes das alternativas ajuda a evitar armadilhas. Manter o ritmo e não gastar tempo excessivo em questões desconhecidas — deixando-as para revisitar ao final — é uma tática eficaz na maioria dos certames com limite de tempo rigoroso.',
+    },
+    {
+      q: 'As provas dos concursos da PM variam muito entre os estados?',
+      a: 'Sim. O conteúdo programático, o número de questões, o peso de cada disciplina e o nível de dificuldade das provas variam significativamente entre corporações estaduais e entre bancas organizadoras. Editais de estados como São Paulo (VUNESP), Minas Gerais e Rio de Janeiro têm perfis de prova distintos. Sempre consulte o edital específico do certame de seu interesse para organizar a preparação com precisão.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Ab Contabilidade Assessoria Contabil e Consultoria Empresarial
+  // LTDA não é escritório de advocacia (CNPJ 58.129.437/0001-00, CNAE
+  // 69.20-6-01). ZapZapPage renderiza em modo neutro.
+};
+
 const CONFIGS: Record<string, RawConfig> = {
   'concursopm.click': VIDA_FUNCIONAL,
   'www.concursopm.click': VIDA_FUNCIONAL,
@@ -1362,6 +1420,8 @@ const CONFIGS: Record<string, RawConfig> = {
   'www.carreiradeoficial.click': CARREIRA_OFICIAL,
   'futuropm.click': FUTURO_PM,
   'www.futuropm.click': FUTURO_PM,
+  'concurseiropm.click': CONCURSEIRO_PM,
+  'www.concurseiropm.click': CONCURSEIRO_PM,
 };
 
 function resolveHostname(): string {

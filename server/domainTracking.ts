@@ -297,6 +297,23 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
     stateCode: "ES",
     themeColor: "#3d5e6b",
   },
+  // concurseiropm.click — Ab Contabilidade Assessoria Contabil e Consultoria
+  // Empresarial LTDA (Sociedade Empresária Limitada, CNAE 69.20-6-01,
+  // Atividades de contabilidade), sediada em Fortaleza/CE. Não é escritório de
+  // advocacia. Mantida em sincronia com client/src/lib/siteConfig.ts
+  // (CONCURSEIRO_PM); atualizar ambos se os dados cadastrais mudarem.
+  "concurseiropm.click": {
+    brand: "Concurseiro PM",
+    razaoSocial: "Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA",
+    cnpj: "58.129.437/0001-00",
+    address: "Avenida Washington Soares, 55, Sala 307, Edson Queiroz",
+    postalCode: "60811-341",
+    emailContato: "ab_contabilidade@hotmail.com",
+    phone: "(85) 98170-1976",
+    city: "Fortaleza",
+    stateCode: "CE",
+    themeColor: "#1a4c5c",
+  },
   // futuropm.click — Vilasolutions Brasil LTDA (Sociedade Empresária Limitada,
   // CNAE 85.99-6-04, Treinamento em desenvolvimento profissional e gerencial),
   // sediada em Fortaleza/CE. Não é escritório de advocacia. Mantida em
@@ -711,6 +728,28 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
       a: "A recusa injustificada de acesso a informações relacionadas ao próprio processo seletivo pode ser contestada administrativamente e, se necessário, por meio de mandado de segurança ou outra medida judicial cabível, especialmente quando o prazo recursal está em curso.",
     },
     FAQ_WHATSAPP_NEUTRAL,
+  ],
+  "concurseiropm.click": [
+    {
+      q: "Quais são as disciplinas mais cobradas nas provas objetivas do concurso da PM?",
+      a: "As disciplinas mais frequentes nos concursos da PM incluem Língua Portuguesa, Matemática e Raciocínio Lógico, Noções de Direito Constitucional, Direito Administrativo e Legislação Policial Estadual. Dependendo do edital, podem aparecer também Informática, Atualidades, Direito Penal e Ética no Serviço Público. O conteúdo programático exato varia por estado e por banca organizadora.",
+    },
+    {
+      q: "Como montar um cronograma eficiente de estudos para o concurso da PM?",
+      a: "Um cronograma eficiente parte do edital: identifique o número de questões por disciplina e o peso de cada uma na nota final. Dedique mais horas às disciplinas com maior incidência e às que representam maior dificuldade pessoal. Alterne dias de conteúdo novo com dias de revisão e resolução de questões anteriores, e inclua simulados periódicos para treinar o ritmo da prova real.",
+    },
+    {
+      q: "Qual é a melhor estratégia para resolver questões de múltipla escolha nas provas da PM?",
+      a: "Eliminar alternativas claramente erradas antes de escolher a resposta reduz o risco de marcação precipitada. Para questões de interpretação de texto e raciocínio lógico, ler o enunciado com atenção antes das alternativas ajuda a evitar armadilhas. Manter o ritmo e não gastar tempo excessivo em questões desconhecidas — deixando-as para revisitar ao final — é uma tática eficaz na maioria dos certames com limite de tempo rigoroso.",
+    },
+    {
+      q: "As provas dos concursos da PM variam muito entre os estados?",
+      a: "Sim. O conteúdo programático, o número de questões, o peso de cada disciplina e o nível de dificuldade das provas variam significativamente entre corporações estaduais e entre bancas organizadoras. Editais de estados como São Paulo (VUNESP), Minas Gerais e Rio de Janeiro têm perfis de prova distintos. Sempre consulte o edital específico do certame de seu interesse para organizar a preparação com precisão.",
+    },
+    {
+      q: "É possível tirar dúvidas sobre preparação para o concurso da PM pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre disciplinas, cronograma e organização dos estudos para o concurso da PM pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações específicas sobre o edital de seu interesse, consulte sempre o documento oficial da banca organizadora.",
+    },
   ],
   "futuropm.click": [
     {
@@ -1596,6 +1635,44 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Orientação jurídica sobre eliminação por exame toxicológico, contraprova e cadeia de custódia da amostra em concursos da Polícia Militar. Gobbette Marques & Barreto Advogados Associados — Serra/ES. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.b6f2a874",
     gtmId: "GTM-5SKD2W93",
+  },
+  "concurseiropm.click": {
+    domain: "concurseiropm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA",
+    description:
+      "Conteúdo informativo sobre preparação acadêmica para o concurso da Polícia Militar — disciplinas mais cobradas, cronograma de estudos, estratégias para provas objetivas e variações entre corporações estaduais. Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA · CNPJ 58.129.437/0001-00 · Fortaleza/CE.",
+    author: "Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA",
+    ogType: "website",
+    siteName: "Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA",
+    ogTitle:
+      "Preparação Acadêmica para as Provas do Concurso da PM | Concurseiro PM",
+    ogDescription:
+      "Conteúdo informativo sobre disciplinas, cronograma e estratégias de estudo para o concurso da Polícia Militar. Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA — Fortaleza/CE.",
+    analyticsCore: "signal.f7d4a963",
+    gtmId: "GTM-M2FSLGWJ",
+  },
+  "www.concurseiropm.click": {
+    domain: "concurseiropm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA",
+    description:
+      "Conteúdo informativo sobre preparação acadêmica para o concurso da Polícia Militar — disciplinas mais cobradas, cronograma de estudos, estratégias para provas objetivas e variações entre corporações estaduais. Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA · CNPJ 58.129.437/0001-00 · Fortaleza/CE.",
+    author: "Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA",
+    ogType: "website",
+    siteName: "Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA",
+    ogTitle:
+      "Preparação Acadêmica para as Provas do Concurso da PM | Concurseiro PM",
+    ogDescription:
+      "Conteúdo informativo sobre disciplinas, cronograma e estratégias de estudo para o concurso da Polícia Militar. Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA — Fortaleza/CE.",
+    analyticsCore: "signal.f7d4a963",
+    gtmId: "GTM-M2FSLGWJ",
   },
   "futuropm.click": {
     domain: "futuropm.click",

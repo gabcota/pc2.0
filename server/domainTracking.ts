@@ -297,6 +297,23 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
     stateCode: "ES",
     themeColor: "#3d5e6b",
   },
+  // carreiradeoficial.click — M.a Assessoria e Treinamentos LTDA (Sociedade
+  // Empresária Limitada, CNAE 85.99-6-04, Treinamento em desenvolvimento
+  // profissional e gerencial), sediada em Fortaleza/CE. Não é escritório de
+  // advocacia. Mantida em sincronia com client/src/lib/siteConfig.ts
+  // (CARREIRA_OFICIAL); atualizar ambos se os dados cadastrais mudarem.
+  "carreiradeoficial.click": {
+    brand: "Carreira de Oficial",
+    razaoSocial: "M.a Assessoria e Treinamentos LTDA",
+    cnpj: "57.717.002/0001-13",
+    address: "Rua Monsenhor Otavio de Castro, 435, Sala 01, Fatima",
+    postalCode: "60050-150",
+    emailContato: "maassessoriaetreinamentos@outlook.com",
+    phone: "(88) 99765-0646",
+    city: "Fortaleza",
+    stateCode: "CE",
+    themeColor: "#4c2c7a",
+  },
   // radarpm.click — Btc Conecta Cursos e Eventos LTDA (Empresa de Pequeno
   // Porte, Sociedade Empresária Limitada, CNAE 85.99-6-05), sediada em
   // Brasília/DF. Não é escritório de advocacia. Mantida em sincronia com
@@ -677,6 +694,28 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
       a: "A recusa injustificada de acesso a informações relacionadas ao próprio processo seletivo pode ser contestada administrativamente e, se necessário, por meio de mandado de segurança ou outra medida judicial cabível, especialmente quando o prazo recursal está em curso.",
     },
     FAQ_WHATSAPP_NEUTRAL,
+  ],
+  "carreiradeoficial.click": [
+    {
+      q: "Como funciona o sistema de promoções na carreira de oficial da Polícia Militar?",
+      a: "As promoções na carreira de oficial seguem dois critérios principais previstos nos estatutos estaduais: antiguidade, que respeita a ordem de precedência entre oficiais do mesmo posto, e merecimento, baseado em avaliações de desempenho, cursos realizados e conduta funcional. A composição e o peso de cada critério variam conforme a corporação e o posto em questão.",
+    },
+    {
+      q: "Quais cursos de aperfeiçoamento são mais relevantes para a progressão do oficial?",
+      a: "Cursos como o Curso de Aperfeiçoamento de Oficiais (CAO), especializações em gestão de segurança pública, liderança organizacional e formação tática avançada costumam ser valorizados nos quadros de acesso e nas avaliações de merecimento. Cada corporação define quais formações têm peso nas promoções e quais são pré-requisitos para determinados postos.",
+    },
+    {
+      q: "Quais são as principais competências exigidas para um oficial exercer função de comando?",
+      a: "Funções de comando demandam capacidade de planejamento operacional, tomada de decisão sob pressão, gestão de equipes em ambientes hierárquicos, comunicação institucional e conhecimento técnico-jurídico para orientar a atuação dos subordinados dentro dos limites legais. Corporações que investem em liderança costumam associar essas competências a programas contínuos de capacitação.",
+    },
+    {
+      q: "É possível fazer especializações acadêmicas paralelas à carreira de oficial?",
+      a: "Sim. Muitos oficiais cursam pós-graduação, mestrado e especializações em áreas como Direito, Gestão Pública, Segurança Pública e Administração ao longo da carreira. Estatutos estaduais frequentemente preveem licenças para capacitação e pontuam a formação acadêmica nas avaliações de promoção por merecimento, incentivando o desenvolvimento contínuo.",
+    },
+    {
+      q: "É possível tirar dúvidas sobre desenvolvimento na carreira de oficial pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre progressão, especializações e competências na carreira de oficial da PM pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre o seu caso específico, consulte a corporação responsável.",
+    },
   ],
   "radarpm.click": [
     {
@@ -1518,6 +1557,44 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Orientação jurídica sobre eliminação por exame toxicológico, contraprova e cadeia de custódia da amostra em concursos da Polícia Militar. Gobbette Marques & Barreto Advogados Associados — Serra/ES. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.b6f2a874",
     gtmId: "GTM-5SKD2W93",
+  },
+  "carreiradeoficial.click": {
+    domain: "carreiradeoficial.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "M.a Assessoria e Treinamentos LTDA",
+    description:
+      "Conteúdo informativo sobre desenvolvimento profissional e progressão na carreira de oficial da Polícia Militar — sistema de promoções, cursos de aperfeiçoamento, competências de comando e especialização acadêmica. M.a Assessoria e Treinamentos LTDA · CNPJ 57.717.002/0001-13 · Fortaleza/CE.",
+    author: "M.a Assessoria e Treinamentos LTDA",
+    ogType: "website",
+    siteName: "M.a Assessoria e Treinamentos LTDA",
+    ogTitle:
+      "Desenvolvimento e Progressão na Carreira de Oficial da PM | Carreira de Oficial",
+    ogDescription:
+      "Conteúdo informativo sobre promoções, cursos de aperfeiçoamento e competências de liderança na carreira de oficial da Polícia Militar. M.a Assessoria e Treinamentos LTDA — Fortaleza/CE.",
+    analyticsCore: "signal.d5f7a821",
+    gtmId: "GTM-KSCL5MPL",
+  },
+  "www.carreiradeoficial.click": {
+    domain: "carreiradeoficial.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "M.a Assessoria e Treinamentos LTDA",
+    description:
+      "Conteúdo informativo sobre desenvolvimento profissional e progressão na carreira de oficial da Polícia Militar — sistema de promoções, cursos de aperfeiçoamento, competências de comando e especialização acadêmica. M.a Assessoria e Treinamentos LTDA · CNPJ 57.717.002/0001-13 · Fortaleza/CE.",
+    author: "M.a Assessoria e Treinamentos LTDA",
+    ogType: "website",
+    siteName: "M.a Assessoria e Treinamentos LTDA",
+    ogTitle:
+      "Desenvolvimento e Progressão na Carreira de Oficial da PM | Carreira de Oficial",
+    ogDescription:
+      "Conteúdo informativo sobre promoções, cursos de aperfeiçoamento e competências de liderança na carreira de oficial da Polícia Militar. M.a Assessoria e Treinamentos LTDA — Fortaleza/CE.",
+    analyticsCore: "signal.d5f7a821",
+    gtmId: "GTM-KSCL5MPL",
   },
   "radarpm.click": {
     domain: "radarpm.click",

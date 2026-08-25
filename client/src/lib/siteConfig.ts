@@ -1203,6 +1203,63 @@ const RADAR_PM: RawConfig = {
   // (CNPJ 58.129.039/0001-93, CNAE 85.99-6-05). ZapZapPage em modo neutro.
 };
 
+// carreiradeoficial.click (M.a Assessoria e Treinamentos LTDA — Sociedade
+// Empresária Limitada, CNAE 85.99-6-04, Treinamento em desenvolvimento
+// profissional e gerencial, sediada em Fortaleza/CE). Não é escritório de
+// advocacia — sem campos OAB, ZapZapPage em modo neutro. Ângulo: desenvolvimento
+// profissional e liderança na carreira de oficial da PM *após a formação* —
+// especializações, promoções por merecimento/antiguidade, gestão de equipes,
+// competências de comando e progressão ao longo dos postos. Distinto de
+// rumoaocfo.click (que cobre o processo de *entrada* no CFO: seleção, TAF,
+// psicológico) e de todos os domínios jurídicos e de preparação acadêmica.
+const CARREIRA_OFICIAL: RawConfig = {
+  hostname: 'carreiradeoficial.click',
+  brand: 'Carreira de Oficial',
+  siteSubtitle: 'Desenvolvimento Profissional e Liderança na Carreira de Oficial da PM',
+  razaoSocial: 'M.a Assessoria e Treinamentos LTDA',
+  cnpj: '57717002000113',
+  cnpjFormatted: '57.717.002/0001-13',
+  endereco: 'Rua Monsenhor Otavio de Castro, 435, Sala 01',
+  bairro: 'Fatima',
+  cidade: 'Fortaleza',
+  estado: 'CE',
+  cep: '60050-150',
+  enderecoCompleto: 'Rua Monsenhor Otavio de Castro, 435, Sala 01 · Fatima · Fortaleza/CE · CEP 60050-150',
+  canonicalUrl: 'https://www.carreiradeoficial.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre desenvolvimento profissional na carreira de oficial da Polícia Militar e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  email: 'maassessoriaetreinamentos@outlook.com',
+  telefone: '(88) 99765-0646',
+  cnae: '85.99-6-04 - Treinamento em desenvolvimento profissional e gerencial',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '16/10/2024',
+  capitalSocial: 'R$ 30.000,00',
+  breadcrumbLabel: 'Desenvolvimento e Progressão na Carreira de Oficial da PM',
+  h1Override: 'Desenvolvimento profissional e progressão na carreira de oficial da Polícia Militar',
+  leadOverride: 'Reunimos conteúdo informativo sobre as etapas de desenvolvimento que moldam a trajetória do oficial após a formação — especializações, cursos de aperfeiçoamento, critérios de promoção e competências de liderança e comando. Consulte a corporação responsável para informações oficiais sobre o seu caso.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Como funciona o sistema de promoções na carreira de oficial da Polícia Militar?',
+      a: 'As promoções na carreira de oficial seguem dois critérios principais previstos nos estatutos estaduais: antiguidade, que respeita a ordem de precedência entre oficiais do mesmo posto, e merecimento, baseado em avaliações de desempenho, cursos realizados e conduta funcional. A composição e o peso de cada critério variam conforme a corporação e o posto em questão.',
+    },
+    {
+      q: 'Quais cursos de aperfeiçoamento são mais relevantes para a progressão do oficial?',
+      a: 'Cursos como o Curso de Aperfeiçoamento de Oficiais (CAO), especializações em gestão de segurança pública, liderança organizacional e formação tática avançada costumam ser valorizados nos quadros de acesso e nas avaliações de merecimento. Cada corporação define quais formações têm peso nas promoções e quais são pré-requisitos para determinados postos.',
+    },
+    {
+      q: 'Quais são as principais competências exigidas para um oficial exercer função de comando?',
+      a: 'Funções de comando demandam capacidade de planejamento operacional, tomada de decisão sob pressão, gestão de equipes em ambientes hierárquicos, comunicação institucional e conhecimento técnico-jurídico para orientar a atuação dos subordinados dentro dos limites legais. Corporações que investem em liderança costumam associar essas competências a programas contínuos de capacitação.',
+    },
+    {
+      q: 'É possível fazer especializações acadêmicas paralelas à carreira de oficial?',
+      a: 'Sim. Muitos oficiais cursam pós-graduação, mestrado e especializações em áreas como Direito, Gestão Pública, Segurança Pública e Administração ao longo da carreira. Estatutos estaduais frequentemente preveem licenças para capacitação e pontuam a formação acadêmica nas avaliações de promoção por merecimento, incentivando o desenvolvimento contínuo.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — M.a Assessoria e Treinamentos LTDA não é escritório de advocacia
+  // (CNPJ 57.717.002/0001-13, CNAE 85.99-6-04). ZapZapPage em modo neutro.
+};
+
 const CONFIGS: Record<string, RawConfig> = {
   'concursopm.click': VIDA_FUNCIONAL,
   'www.concursopm.click': VIDA_FUNCIONAL,
@@ -1244,6 +1301,8 @@ const CONFIGS: Record<string, RawConfig> = {
   'www.pmnapratica.click': PM_NA_PRATICA,
   'radarpm.click': RADAR_PM,
   'www.radarpm.click': RADAR_PM,
+  'carreiradeoficial.click': CARREIRA_OFICIAL,
+  'www.carreiradeoficial.click': CARREIRA_OFICIAL,
 };
 
 function resolveHostname(): string {

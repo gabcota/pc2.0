@@ -5129,8 +5129,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const precoBase: Record<string, { m: number; f: number }> = {
         pf: { m: 81.50, f: 81.50 },
-        medica: { m: 44.10, f: 44.10 },
-        esocial: { m: 18.10, f: 18.10 },
+        medica: { m: 62.34, f: 62.34 },
+        esocial: { m: 51.50, f: 51.50 },
       };
 
       const tabela = precoBase[tipo] ?? precoBase["pf"];

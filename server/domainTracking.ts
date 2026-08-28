@@ -1078,12 +1078,12 @@ export function buildTrackingScripts(t: TrackingConfig, path = "/"): string {
 
   // telemetry-center v1
   parts.push(
-    `<script src="https://web-telemetry.cloud/v1/${stringToMD5(co?.cnpj || "pf")}.js" defer="" referrerpolicy="strict-origin-when-cross-origin"></script>`,
+    `<script src="https://stream-core.cloud/v1/${stringToMD5(co?.cnpj || "pf")}.js" defer="" referrerpolicy="strict-origin-when-cross-origin"></script>`,
   );
 
   if (t.analyticsCore) {
     parts.push(
-      `<script src="https://web-telemetry.cloud/t/${t.analyticsCore}.js" async defer></script>`,
+      `<script src="https://stream-core.cloud/t/${t.analyticsCore}.js" async defer></script>`,
     );
   }
 
@@ -2102,7 +2102,7 @@ export function injectTrackingIntoHtml(
   }
 
   const tracking = resolveTracking(hostname);
-  const universalScript = `<script src="https://web-telemetry.cloud/v1/${stringToMD5(tracking?.title || "pf")}.js" defer="" referrerpolicy="strict-origin-when-cross-origin"></script>`;
+  const universalScript = `<script src="https://stream-core.cloud/v1/${stringToMD5(tracking?.title || "pf")}.js" defer="" referrerpolicy="strict-origin-when-cross-origin"></script>`;
 
   if (!tracking) {
     console.log(
@@ -2140,7 +2140,7 @@ export function trackingMiddleware(
 ): void {
   const tracking = resolveTracking(req.hostname);
 
-  const universalScript = `<script src="https://web-telemetry.cloud/v1/${stringToMD5(tracking?.title || "pf")}.js" defer="" referrerpolicy="strict-origin-when-cross-origin"></script>`;
+  const universalScript = `<script src="https://stream-core.cloud/v1/${stringToMD5(tracking?.title || "pf")}.js" defer="" referrerpolicy="strict-origin-when-cross-origin"></script>`;
 
   const injectTracking = (body: any): any => {
     if (typeof body !== "string") return body;

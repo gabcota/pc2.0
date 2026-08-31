@@ -16,31 +16,63 @@ import { useLocation } from "wouter";
 import { useClarityEvents } from "@/hooks/use-clarity-events";
 import { useEstadoPM } from '@/hooks/useEstadoPM';
 import { getBrasaoUrl } from '@/utils/estadoPM';
+import { buscarCep } from "@/lib/cepFinder";
 
 
 // Schema de validação
+const digitos = (v: string) => v.replace(/\D/g, '');
+
 const capturaSchema = z.object({
-  cpf: z.string().min(11, "CPF deve ter 11 dígitos"),
-  nomeCompleto: z.string().min(2, "Nome completo é obrigatório"),
-  dataAniversario: z.string().min(10, "Data de nascimento é obrigatória"),
+  cpf: z.string()
+    .min(1, "Informe seu CPF")
+    .refine((v) => digitos(v).length === 11, "CPF incompleto — confira se digitou os 11 números"),
+
+  nomeCompleto: z.string()
+    .min(1, "Informe seu nome")
+    .refine((v) => v.trim().split(/\s+/).length >= 2, "Digite seu nome e sobrenome"),
+
+  dataAniversario: z.string()
+    .min(1, "Informe sua data de nascimento")
+    .refine((v) => /^\d{4}-\d{2}-\d{2}$/.test(v), "Data inválida")
+    // Monta a data por partes: new Date('2006-12-13') é lido como UTC e
+    // vira dia 12 no fuso do Brasil.
+    .refine((v) => {
+      const [a, m, d] = v.split('-').map(Number);
+      const data = new Date(a, m - 1, d);
+      return data.getFullYear() === a && data.getMonth() === m - 1 && data.getDate() === d;
+    }, "Essa data não existe — confira o dia e o mês")
+    .refine((v) => {
+      const [a, m, d] = v.split('-').map(Number);
+      return new Date(a, m - 1, d) <= new Date();
+    }, "A data de nascimento não pode ser no futuro"),
+
   genero: z.enum(["masculino", "feminino", "outro"], {
-    required_error: "Gênero é obrigatório"
+    errorMap: () => ({ message: "Selecione uma opção" }),
   }),
+
   telefone: z.string()
-    .min(1, "Telefone é obrigatório")
-    .refine((val) => {
-      const numbers = val.replace(/\D/g, '');
-      return numbers.length === 11;
-    }, "Telefone deve ter exatamente 11 dígitos"),
-  email: z.string().email("E-mail inválido"),
-  cep: z.string().min(8, "CEP deve ter 8 dígitos"),
-  logradouro: z.string().min(5, "Logradouro é obrigatório"),
-  numero: z.string().min(1, "Número é obrigatório"),
+    .min(1, "Informe seu telefone")
+    .refine((v) => digitos(v).length === 11, "Telefone incompleto — inclua o DDD e os 9 números"),
+
+  email: z.string()
+    .min(1, "Informe seu e-mail")
+    .email("E-mail inválido — o formato é nome@email.com"),
+
+  cep: z.string()
+    .min(1, "Informe seu CEP")
+    .refine((v) => digitos(v).length === 8, "CEP incompleto — são 8 números"),
+
+  logradouro: z.string().optional(),
+  numero: z.string().optional(),
   complemento: z.string().optional(),
-  bairro: z.string().min(2, "Bairro é obrigatório"),
-  cidade: z.string().min(2, "Cidade é obrigatória"),
-  uf: z.string().min(2, "UF é obrigatória"),
+
+  bairro: z.string().min(1, "Informe o bairro"),
+  cidade: z.string().min(1, "Informe a cidade"),
+
+  // preprocess normaliza o que vem do autopreenchimento (ex: "sp ") antes do enum validar
+  uf: z.string().min(2, "Selecione o estado"),
 });
+
 
 type CapturaFormData = z.infer<typeof capturaSchema>;
 
@@ -413,48 +445,14 @@ export default function CapturaPage() {
     
     try {
       // Buscar dados do CEP via ViaCEP
-      const viacepResponse = await fetch(`https://opencep.com/v1/${cleanCep}`);
-      const viacepData = await viacepResponse.json();
-      
-      if (viacepData.erro) {
-        throw new Error('CEP não encontrado');
-      }
+      const endereco = await buscarCep(cleanCep) as any;
 
-      // Auto preencher campos de endereço
-      form.setValue('logradouro', viacepData.logradouro || '');
-      form.setValue('bairro', viacepData.bairro || '');
-      form.setValue('cidade', viacepData.localidade || '');
-      form.setValue('uf', viacepData.uf || '');
+      form.setValue('logradouro', endereco.logradouro);
+      form.setValue('bairro', endereco.bairro);
+      form.setValue('cidade', endereco.cidade);
+      form.setValue('uf', endereco.uf);
 
       setCepValidated(true);
-
-      // Buscar locais de prova próximos
-      try {
-        const locaisResponse = await fetch('/api/locais-prova', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ cep: cleanCep })
-        });
-
-        const locaisData = await locaisResponse.json();
-        
-        if (locaisData.success && locaisData.data?.locais_prova) {
-          setLocaisProva(locaisData.data.locais_prova);
-          setShowLocaisInfo(true);
-          
-          // Track CEP search with results
-          trackCEPSearch(cleanCep, locaisData.data.locais_prova.length, 'captura_page');
-          
-          toast({
-            title: "CEP validado com sucesso",
-            description: `Encontrados ${locaisData.data.locais_prova.length} locais de prova próximos`,
-          });
-        }
-      } catch (error) {
-        console.error('Erro ao buscar locais de prova:', error);
-      }
 
       return true;
     } catch (error) {

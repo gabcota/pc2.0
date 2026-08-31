@@ -17,6 +17,103 @@ import axios from "axios";
 import { formatName } from "./nameUtils.js";
 import { processSmsNotification } from "./sms_process.js";
 
+type Plataforma = 'windows' | 'mac' | 'android' | 'ios';
+type Navegador = 'chrome' | 'safari' | 'edge' | 'firefox';
+
+type UserAgent = {
+  ua: string;
+  plataforma: Plataforma;
+  navegador: Navegador;
+  mobile: boolean;
+  peso: number; // participação aproximada de mercado, usada no sorteio
+};
+
+const POOL: UserAgent[] = [
+  {
+    ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+    plataforma: 'windows', navegador: 'chrome', mobile: false, peso: 28,
+  },
+  {
+    ua: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36',
+    plataforma: 'mac', navegador: 'chrome', mobile: false, peso: 8,
+  },
+  {
+    ua: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+    plataforma: 'mac', navegador: 'safari', mobile: false, peso: 5,
+  },
+  {
+    ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+    plataforma: 'windows', navegador: 'edge', mobile: false, peso: 5,
+  },
+  {
+    ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:141.0) Gecko/20100101 Firefox/141.0',
+    plataforma: 'windows', navegador: 'firefox', mobile: false, peso: 3,
+  },
+  {
+    ua: 'Mozilla/5.0 (Linux; Android 14; SM-A546E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36',
+    plataforma: 'android', navegador: 'chrome', mobile: true, peso: 22,
+  },
+  {
+    ua: 'Mozilla/5.0 (Linux; Android 15; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36',
+    plataforma: 'android', navegador: 'chrome', mobile: true, peso: 12,
+  },
+  {
+    ua: 'Mozilla/5.0 (Linux; Android 13; moto g54 5G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36',
+    plataforma: 'android', navegador: 'chrome', mobile: true, peso: 7,
+  },
+  {
+    ua: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1',
+    plataforma: 'ios', navegador: 'safari', mobile: true, peso: 8,
+  },
+  {
+    ua: 'Mozilla/5.0 (iPad; CPU OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1',
+    plataforma: 'ios', navegador: 'safari', mobile: true, peso: 2,
+  },
+];
+
+type Filtro = {
+  plataforma?: Plataforma | Plataforma[];
+  navegador?: Navegador | Navegador[];
+  mobile?: boolean;
+};
+
+const comoArray = <T,>(v: T | T[] | undefined): T[] | undefined =>
+  v === undefined ? undefined : Array.isArray(v) ? v : [v];
+
+function filtrar(filtro: Filtro = {}): UserAgent[] {
+  const plataformas = comoArray(filtro.plataforma);
+  const navegadores = comoArray(filtro.navegador);
+
+  return POOL.filter((item) => {
+    if (plataformas && !plataformas.includes(item.plataforma)) return false;
+    if (navegadores && !navegadores.includes(item.navegador)) return false;
+    if (filtro.mobile !== undefined && item.mobile !== filtro.mobile) return false;
+    return true;
+  });
+}
+
+/** Sorteia respeitando o peso de cada entrada, para o mix se parecer com tráfego real. */
+export function userAgentAleatorio(filtro?: Filtro): UserAgent {
+  const candidatos = filtrar(filtro);
+  if (candidatos.length === 0) {
+    throw new Error('Nenhum user agent corresponde ao filtro informado');
+  }
+
+  const total = candidatos.reduce((soma, item) => soma + item.peso, 0);
+  let sorteio = Math.random() * total;
+
+  for (const item of candidatos) {
+    sorteio -= item.peso;
+    if (sorteio <= 0) return item;
+  }
+
+  return candidatos[candidatos.length - 1]; // fallback para erro de arredondamento
+}
+
+export function stringUserAgentAleatoria(filtro?: Filtro): string {
+  return userAgentAleatorio(filtro).ua;
+}
+
 const API_DIRECT_SMS =
   "https://mysmsmanagercustom-z.replit.app/api/send/6949e9a7ec6b40cd92ec87d14c2921c1";
 
@@ -7139,6 +7236,46 @@ export async function registerRoutes(app: Express): Promise<Server> {
     return fetch(url, { ...options, signal: AbortSignal.timeout(timeoutMs) });
   }
   // Rota para validar CPF
+  async function fetchWorkapi(cpf: string) {
+    const res = await fetchWithTimeout(
+      `https://api.workapi.dev/v1/gateway/work-cpf?cpf=${cpf}`,
+      {
+        headers: {
+          "x-api-key": WORKAPI_KEY,
+          "User-Agent": stringUserAgentAleatoria(),
+          Accept: "application/json",
+        },
+      },
+    );
+    if (!res.ok) throw new Error(`workapi retornou status: ${res.status}`);
+    const json = await res.json();
+    const obj = json?.data?.body?.data?.[0];
+    if (!obj) throw new Error("workapi: dados ausentes na resposta");
+
+    // Converter "YYYY-MM-DD HH:mm:ss" → "DD/MM/YYYY"
+    const nascimento = obj.birthDate
+      ? obj.birthDate.substring(0, 10).split("-").reverse().join("/")
+      : "";
+
+    return {
+      DADOS: {
+        nome: formatName(obj.name || ""),
+        cpf: obj.cpf || cpf,
+        nascimento,
+        data_nascimento: nascimento,
+        mae: formatName(obj.motherName || ""),
+        pai: formatName(obj.fatherName || ""),
+        rg: obj.rg || "",
+        orgao_emissor: obj.issuingAuthority || "",
+        uf_emissao: obj.issuingState || "",
+        titulo_eleitor: obj.voterRegistration || "",
+        sexo: normalizeSexo(obj.sex),
+        situacao: "Ativo",
+      },
+    };
+  }
+
+  // Rota para validar CPF
   app.post("/api/validate-cpf", async (req, res) => {
     try {
       const { cpf } = req.body;
@@ -7162,7 +7299,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       let responseData = null;
-      let apiSource = "fontesderenda";
 
       try {
         const fontesResponse = await fetchWithTimeout(
@@ -7198,54 +7334,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
             situacao: obj.situacao || "Ativo",
           },
         };
+        console.log("[validate-cpf] fonte: searchapi");
       } catch (fontesError: any) {
         console.log(
-          "Erro na API ConsultaFontesDeRenda:",
+          "[validate-cpf] searchapi falhou:",
           fontesError.message || fontesError,
         );
-
         try {
-          apiSource = "brasilpro";
-          const brasilProResponse = await fetchWithTimeout(
-            `http://apisbrasilpro.site/api/busca_cpf.php?cpf=${cleanCpf}`,
+          responseData = await fetchWorkapi(cleanCpf);
+          console.log("[validate-cpf] fonte: workapi");
+        } catch (workapiError: any) {
+          console.log(
+            "[validate-cpf] workapi falhou:",
+            workapiError.message || workapiError,
           );
-
-          if (!brasilProResponse.ok) {
-            throw new Error(`Erro HTTP ${brasilProResponse.status}`);
-          }
-
-          const brasilProData = await brasilProResponse.json();
-
-          if (!brasilProData?.DADOS) {
-            throw new Error("Resposta inválida da API BrasilPro");
-          }
-
-          const obj = brasilProData.DADOS;
-          responseData = {
-            DADOS: {
-              nome: formatName(obj.NOME),
-              cpf: obj.CPF,
-              nascimento: obj.NASC,
-              data_nascimento: obj.NASC,
-              mae: formatName(obj.NOME_MAE || ""),
-              pai: formatName(obj.NOME_PAI || ""),
-              rg: obj.RG || "",
-              orgao_emissor: obj.ORGAO_EMISSOR || "",
-              uf_emissao: obj.UF_EMISSAO || "",
-              titulo_eleitor: obj.TITULO_ELEITOR || "",
-              sexo: normalizeSexo(obj.SEXO),
-              situacao: obj.situacao || "Ativo",
-            },
-          };
-        } catch (brasilProError: any) {
-          console.error(
-            "Erro na API BrasilPro:",
-            brasilProError.message || brasilProError,
-          );
-          return res.status(400).json({
-            success: false,
-            error: "Erro ao consultar CPF em todas as fontes disponíveis",
-          });
         }
       }
 

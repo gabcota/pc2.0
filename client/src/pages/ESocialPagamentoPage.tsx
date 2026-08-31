@@ -231,13 +231,14 @@ export default function ESocialPagamentoPage() {
       const res = await fetch(`/api/verificar-status-pagamento/${pixData.id}`);
       const json = await res.json();
       if (json.success) {
-        setPaymentStatus(json.status);
-        if (['paid', 'completed', 'approved'].includes((json.status || '').toLowerCase())) {
+        const status = json.data?.status ?? json.status;
+        setPaymentStatus(status);
+        if (['paid', 'completed', 'approved'].includes((status || '').toLowerCase())) {
           if (statusIntervalRef.current) { clearInterval(statusIntervalRef.current); statusIntervalRef.current = null; }
           fireGtmFirstUpsell({ transactionId: pixData.id, value: pixData.amount, frontTransactionId: pixData.id });
           localStorage.setItem('esocialPaymentConfirmed', JSON.stringify({
             transactionId: pixData.id,
-            status: json.status,
+            status,
             confirmedAt: new Date().toISOString(),
           }));
           navigate('/e-social/confirmado');

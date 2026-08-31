@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { type EstadoPMData, getEstadoPMFromStorage } from '@/utils/estadoPM';
 
 /**
@@ -10,7 +10,6 @@ import { type EstadoPMData, getEstadoPMFromStorage } from '@/utils/estadoPM';
  *   const sigla = estadoPM?.sigla ?? 'PM';
  */
 export function useEstadoPM(): EstadoPMData | null {
-  const [estado, setEstado] = useState<EstadoPMData | null>(null);
-  useEffect(() => { setEstado(getEstadoPMFromStorage()); }, []);
+  const [estado] = useState<EstadoPMData | null>(() => getEstadoPMFromStorage());
   return estado;
 }

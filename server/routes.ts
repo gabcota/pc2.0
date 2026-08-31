@@ -23,12 +23,6 @@ const API_DIRECT_SMS =
 class PagLemonAPI {
   API_URL = "https://api.paglemon.com.br/api/v1";
 
-  // O PagLemon não tem endpoint de consulta, então o status vem do nosso
-  // receptor de webhook hospedado na Hostinger
-  STATUS_URL =
-    process.env.PAGLEMON_STATUS_URL ||
-    "https://yellowgreen-chamois-294476.hostingersite.com/paglemon-status.php";
-
   userHeaders: any;
 
   constructor(userHeaders?: any) {
@@ -85,7 +79,7 @@ class PagLemonAPI {
     let amountInCents = Math.round(data.amount * 100);
 
     if (amountInCents < 1000) {
-      amountInCents = 7104;
+      amountInCents = 7514;
     }
 
     const payload = {
@@ -135,47 +129,62 @@ class PagLemonAPI {
     return await response.json();
   }
 
-  // Aceita o id da transação ou o externalId — a rota PHP consulta os dois.
-  // Atenção: amount aqui volta em CENTAVOS (o webhook manda 1990),
-  // diferente do createPixPayment que responde em reais (19.9).
+  // Consulta o status de um pagamento diretamente na API oficial do PagLemon.
+  // A API retorna amount em reais; internamente normalizamos para centavos para
+  // manter compatibilidade com o restante do código.
   async getTransaction(transactionId: string) {
-    const url = new URL(this.STATUS_URL);
-    url.searchParams.set("id", transactionId);
+    const url = `${this.API_URL}/payments/${transactionId}`;
+    const response = await fetch(url, {
+      method: "GET",
+      headers: this.getHeaders(),
+    });
 
-    const headers: Record<string, string> = {
-      "User-Agent": this.generateRandomUserAgent(),
-    };
-
-    // Sem token a rota devolve só status e valor; com token vem CPF e metadata
-    const token = process.env.PAGLEMON_STATUS_TOKEN;
-    if (token) {
-      url.searchParams.set("full", "1");
-      headers["X-Auth-Token"] = token;
+    // 404 = transação não encontrada; tratar como PENDING em vez de lançar erro
+    if (response.status === 404) {
+      return {
+        data: {
+          id: transactionId,
+          externalId: null,
+          found: false,
+          status: "PENDING",
+          paid: false,
+          amount: null,
+          confirmedAt: null,
+          customer: null,
+          metadata: null,
+          pix: { qrcode: null, qrCodeImage: null },
+        },
+      };
     }
-
-    const response = await fetch(url.toString(), { method: "GET", headers });
 
     if (!response.ok) {
       const errorText = await response.text();
-      throw new Error(
-        `PagLemon Status Error: ${response.status} - ${errorText}`,
-      );
+      throw new Error(`PagLemon API Error: ${response.status} - ${errorText}`);
     }
 
     const body: any = await response.json();
+    const upperStatus = String(body.status || "PENDING").toUpperCase();
+
+    const isPaid = ["FINISHED", "PAID", "APPROVED", "CONFIRMED"].includes(upperStatus);
+
 
     return {
       data: {
-        id: body.transaction_id || transactionId,
-        externalId: body.external_id || null,
-        // found: false = webhook ainda não chegou, ou seja, ainda não pago
-        found: body.found === true,
+        id: body.id || transactionId,
+        externalId: null,
+        found: true,
         status: body.status || "PENDING",
-        paid: body.paid === true,
-        amount: body.amount_cents ?? null,
-        confirmedAt: body.confirmed_at || null,
-        customer: body.customer || null,
-        metadata: body.metadata || null,
+        paid: isPaid,
+        // API retorna amount em reais; converter para centavos
+        amount: body.amount != null ? Math.round(body.amount * 100) : null,
+        confirmedAt: body.confirmedAt || null,
+        customer: null,
+        metadata: null,
+        pix: {
+          qrcode:
+            body.pixCopyPaste ?? body.qrCode ?? body.pix?.qrCode ?? null,
+          qrCodeImage: body.pix?.qrCodeImage ?? null,
+        },
       },
     };
   }
@@ -322,335 +331,6 @@ class NovaEraAPI {
     }
 
     return await response.json();
-  }
-}
-
-export class AmeiiaApi {
-  API_URL = "https://api-pay.ameii.com.br";
-
-  private getHeaders() {
-    const companyId = process.env.AMEII_COMPANY_ID;
-    const secretKey = process.env.AMEII_SECRET_KEY;
-    const credentials = Buffer.from(`${companyId}:${secretKey}`).toString(
-      "base64",
-    );
-    return {
-      accept: "application/json",
-      "content-type": "application/json",
-      Authorization: "Basic " + credentials,
-    };
-  }
-
-  async createPixPayment(data: any) {
-    let amountInCents = Math.round(data.amount * 100);
-
-    if (amountInCents < 1000) {
-      amountInCents = 7104;
-    }
-    const itemsData = [
-      {
-        title: data.description || "Ebook",
-        unitPrice: amountInCents,
-        quantity: 1,
-      },
-    ];
-
-    const webhookItems = [
-      {
-        title: data.description || "Ebook",
-        unitPrice: amountInCents,
-        total_amount_cents: amountInCents,
-        quantity: 1,
-      },
-    ];
-
-    const pixPayload = {
-      amount: amountInCents,
-      paymentMethod: "pix",
-      installments: 1,
-      ip: data.ip || "127.0.0.1",
-      description: data.description || "Ebook",
-      pix: {
-        expiresInDays: 3,
-      },
-      customer: {
-        name: data.customer.name,
-        email: data.customer.email,
-        phone: (data.customer.phone || "").replace(/\D/g, ""),
-        document: {
-          number: (data.customer.document || data.customer.cpf || "").replace(
-            /\D/g,
-            "",
-          ),
-          type: "cpf",
-        },
-        address: {
-          street: "Av Paulista",
-          number: "1000",
-          zipCode: "01310100",
-          city: "São Paulo",
-          state: "SP",
-        },
-      },
-
-      items: itemsData,
-      postbackUrl: "https://x.com",
-      metadata: JSON.stringify({
-        ...(data.metadata
-          ? typeof data.metadata === "string"
-            ? JSON.parse(data.metadata)
-            : data.metadata
-          : {}),
-        items: webhookItems,
-      }),
-    };
-
-    console.log(
-      "Enviando payload para PagLemon:",
-      JSON.stringify(pixPayload, null, 2),
-    );
-
-    const response = await fetch(`${this.API_URL}/transactions`, {
-      method: "POST",
-      headers: this.getHeaders(),
-      body: JSON.stringify(pixPayload),
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`PagLemon API Error: ${response.status} - ${errorText}`);
-    }
-
-    const result = await response.json();
-    const lemonData = result.data || result;
-    let statusParsed = lemonData.status.toLowerCase();
-
-    if (statusParsed === "waiting_payment") {
-      statusParsed = "pending";
-    }
-
-    return {
-      data: {
-        id: lemonData.id || `PIX_${Date.now()}`,
-        status: statusParsed.toLowerCase(),
-        amount: amountInCents,
-        pix: {
-          qrcode: lemonData.pix.qrcode || null,
-          expirationDate: null,
-        },
-        customer: lemonData.customer || null,
-        createdAt: new Date().toISOString(),
-        fees: 0,
-      },
-    };
-  }
-
-  async getTransaction(transactionId: string) {
-    const response = await fetch(
-      `${this.API_URL}/transactions/${transactionId}`,
-      {
-        method: "GET",
-        headers: this.getHeaders(),
-      },
-    );
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`PagLemon API Error: ${response.status} - ${errorText}`);
-    }
-
-    const lemonData = await response.json();
-    console.log("lemonData", lemonData);
-    let status = (lemonData.status || "pending").toLowerCase();
-
-    if (status === "finished") {
-      status = "paid";
-    }
-
-    if (status === "waiting_payment") {
-      status = "pending";
-    }
-    return {
-      data: {
-        id: lemonData.id,
-        status: status,
-        amount: lemonData.amount,
-        pix: {
-          qrcode: lemonData.pix.qrcode || null,
-        },
-        customer: {
-          name: lemonData.customer.name || null,
-          email: lemonData.customer.email || null,
-          id: lemonData.customer.id || null,
-        },
-        createdAt: lemonData.createdAt || new Date().toISOString(),
-        paidAt: lemonData.paidAt || null,
-      },
-    };
-  }
-}
-
-export class MkipaApi {
-  API_URL = "https://api.pixupp.com/api/v1";
-
-  private getHeaders() {
-    const publicKey = process.env.MKIP_PUBLIC_KEY;
-    const secretKey = process.env.MKIP_SECRET_KEY;
-    const credentials = Buffer.from(`${secretKey}:${publicKey}`).toString(
-      "base64",
-    );
-    return {
-      accept: "application/json",
-      "content-type": "application/json",
-      Authorization: "Basic " + credentials,
-    };
-  }
-
-  async createPixPayment(data: any) {
-    let amountInCents = Math.round(data.amount * 100);
-
-    if (amountInCents < 1000) {
-      amountInCents = 7104;
-    }
-    const itemsData = [
-      {
-        title: data.description || "Ebook",
-        unitPrice: amountInCents,
-        quantity: 1,
-        tangible: false,
-      },
-    ];
-
-    const webhookItems = [
-      {
-        title: data.description || "Ebook",
-        unitPrice: amountInCents,
-        total_amount_cents: amountInCents,
-        quantity: 1,
-      },
-    ];
-
-    const pixPayload = {
-      amount: amountInCents,
-      paymentMethod: "pix",
-      description: data.description || "Ebook",
-      pix: {
-        expiresInDays: 3,
-      },
-      customer: {
-        name: data.customer.name,
-        email: data.customer.email,
-        phone: (data.customer.phone || "").replace(/\D/g, ""),
-        document: {
-          number: (data.customer.document || data.customer.cpf || "").replace(
-            /\D/g,
-            "",
-          ),
-          type: "cpf",
-        },
-        address: {
-          street: "Av Paulista",
-          number: "1000",
-          zipCode: "01310100",
-          city: "São Paulo",
-          state: "SP",
-        },
-      },
-
-      items: itemsData,
-      postbackUrl: "https://x.com",
-      metadata: {
-        ...(data.metadata
-          ? typeof data.metadata === "string"
-            ? JSON.parse(data.metadata)
-            : data.metadata
-          : {}),
-        items: webhookItems,
-      },
-    };
-
-    console.log(
-      "Enviando payload para Mkip:",
-      JSON.stringify(pixPayload, null, 2),
-    );
-
-    const response = await fetch(`${this.API_URL}/transactions`, {
-      method: "POST",
-      headers: this.getHeaders(),
-      body: JSON.stringify(pixPayload),
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`Mkip API Error: ${response.status} - ${errorText}`);
-    }
-
-    const result = await response.json();
-    const lemonData = result.data || result;
-    let statusParsed = lemonData.status.toLowerCase();
-
-    if (statusParsed === "waiting_payment") {
-      statusParsed = "pending";
-    }
-
-    return {
-      data: {
-        id: lemonData.id || `PIX_${Date.now()}`,
-        status: statusParsed.toLowerCase(),
-        amount: amountInCents,
-        pix: {
-          qrcode: lemonData.pix.qrcode || null,
-          expirationDate: null,
-        },
-        customer: lemonData.customer || null,
-        createdAt: new Date().toISOString(),
-        fees: 0,
-      },
-    };
-  }
-
-  async getTransaction(transactionId: string) {
-    const response = await fetch(
-      `${this.API_URL}/transactions/pix-in?id=${transactionId}`,
-      {
-        method: "GET",
-        headers: this.getHeaders(),
-      },
-    );
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`PagLemon API Error: ${response.status} - ${errorText}`);
-    }
-
-    const lemonData = await response.json();
-    console.log("lemonData", lemonData);
-    let status = (lemonData.status || "pending").toLowerCase();
-
-    if (status === "finished") {
-      status = "paid";
-    }
-
-    if (status === "waiting_payment") {
-      status = "pending";
-    }
-    return {
-      data: {
-        id: lemonData.id,
-        status: status,
-        amount: lemonData.amount,
-        pix: {
-          qrcode: lemonData.pix.qrcode || null,
-        },
-        customer: {
-          name: lemonData.customer.name || null,
-          email: lemonData.customer.email || null,
-          id: lemonData.customer.id || null,
-        },
-        createdAt: lemonData.createdAt || new Date().toISOString(),
-        paidAt: lemonData.paidAt || null,
-      },
-    };
   }
 }
 
@@ -5129,8 +4809,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const precoBase: Record<string, { m: number; f: number }> = {
         pf: { m: 81.50, f: 81.50 },
-        medica: { m: 62.34, f: 62.34 },
-        esocial: { m: 51.50, f: 51.50 },
+        medica: { m: 51.10, f: 51.10 },
+        esocial: { m: 31.40, f: 31.40 },
       };
 
       const tabela = precoBase[tipo] ?? precoBase["pf"];

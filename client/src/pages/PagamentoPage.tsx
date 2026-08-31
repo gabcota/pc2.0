@@ -23,7 +23,7 @@ import { useClarityEvents } from "@/hooks/use-clarity-events";
 import { getExamDateFormatted } from "@/utils/examDate";
 import { useQuery } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
-import { fireGtmBeginCheckout, fireGtmPurchase } from "@/lib/gtm";
+import { fireGtmPurchase } from "@/lib/gtm";
 import { useEstadoPM } from "@/hooks/useEstadoPM";
 
 export default function PagamentoPage() {
@@ -145,9 +145,7 @@ export default function PagamentoPage() {
         );
         const txId = pixData.transactionId || pixData.id || ""
         setTransactionId(txId);
-
-        fireGtmBeginCheckout({ transactionId: txId, value: pixAmount })
-
+        
         setExamDate(getExamDateFormatted());
 
         const userData = JSON.parse(localStorage.getItem("userData") || "{}");

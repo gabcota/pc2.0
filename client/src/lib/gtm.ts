@@ -54,10 +54,14 @@ function buildUserPayload(): Record<string, any> {
  * Núcleo comum dos eventos de conversão do GTM.
  * Guards (dataLayer ausente, dedup por chave), montagem do payload e
  * ordem garantida do user_data via gtag antes do push.
+ *
+ * A chave de dedup vem PRONTA do chamador — permite dedupar pela
+ * transação do próprio evento (purchase) ou pelo pedido do front
+ * (first_upsell), conforme o caso.
  */
 function fireGtmEvent(
   eventName: string,
-  dedupePrefix: string,
+  dedupeKey: string,
   params: { transactionId: string; value: number },
 ): void {
   try {
@@ -68,9 +72,8 @@ function fireGtmEvent(
 
     const { transactionId, value } = params;
 
-    const dedupeKey = `${dedupePrefix}:${transactionId}`;
     if (localStorage.getItem(dedupeKey)) {
-      console.warn(`[GTM] ${eventName} já enviado para esta transação:`, transactionId);
+      console.warn(`[GTM] ${eventName} já enviado (${dedupeKey}):`, transactionId);
       return;
     }
 
@@ -101,43 +104,49 @@ function fireGtmEvent(
 /**
  * Empurra evento de compra confirmada para o window.dataLayer (GTM).
  *
+ * ⚠ MUDANÇA (30/08): chamar SOMENTE na confirmação da compra do FRONT.
+ * Upsells NÃO chamam mais esta função — usam fireGtmFirstUpsell.
+ * (Com contagem "Uma" isso não altera os números atuais: o upsell já
+ * colapsava na mesma conversão do clique.)
+ *
  * Variáveis disponíveis no painel GTM após este push:
  *   event          → "purchase_completed"
  *   transaction_id → ID da transação PIX
  *   value          → valor em BRL (número)
  *   currency       → "BRL"
- *   email          → e-mail do candidato (texto puro)
- *   phone          → telefone E.164 ex: +5511999999999
- *   name           → nome completo
- *   cep            → CEP apenas dígitos
- *   external_id    → CPF apenas dígitos (identity matching entre plataformas)
- *   gclid          → Google Click ID (se presente no utm_params do localStorage)
- *   gbraid         → Google BRAID (se presente no utm_params do localStorage)
+ *   email/phone/name/cep/external_id/gclid/gbraid → ver buildUserPayload
  *
- * Deduplicação: dispara apenas uma vez por transaction_id (chave gtm_purchase_sent:<id>).
- * No-op silencioso se window.dataLayer não existir (domínio sem GTM configurado).
- *
- * Deve ser chamado na CONFIRMAÇÃO do pagamento — de toda transação,
- * incluindo cada upsell (cada um com seu próprio transactionId/value).
+ * Deduplicação: uma vez por transaction_id (chave gtm_purchase_sent:<id>).
+ * No-op silencioso se window.dataLayer não existir (domínio sem GTM).
  */
 export function fireGtmPurchase(params: { transactionId: string; value: number }): void {
-  fireGtmEvent('purchase_completed', 'gtm_purchase_sent', params);
+  fireGtmEvent('purchase_completed', `gtm_purchase_sent:${params.transactionId}`, params);
 }
 
 /**
- * Empurra evento de início de checkout (geração do PIX) para o GTM.
- * Mesmo payload do purchase_completed, com event = "begin_checkout".
+ * Empurra evento de PRIMEIRO upsell confirmado (event = "first_upsell_completed").
  *
  * Regras de disparo:
- *   - Chamar na EXIBIÇÃO do QR code do FRONT (inscrição) — não no clique
- *     do botão que inicia a geração, e NUNCA nos upsells.
- *   - Usar o MESMO transactionId que irá no purchase_completed do front,
- *     para o Google Ads correlacionar as duas conversões.
+ *   - Chamar na confirmação de TODO upsell (1º, 2º, 3º…) — a função se
+ *     resolve sozinha: a dedup é pela transação do FRONT (o pedido), então
+ *     só o primeiro upsell do pedido emite de fato; os demais são ignorados.
+ *   - transactionId = transação do PRÓPRIO upsell (vira orderId da conversão).
+ *   - frontTransactionId = transação da compra do front (chave de dedup).
  *
- * Deduplicação independente da compra (chave gtm_begin_checkout_sent:<id>):
- * QR regenerado para a mesma transação não dispara de novo, e o disparo
- * do begin_checkout não impede o purchase_completed posterior.
+ * No Google Ads esta conversão é SECUNDÁRIA (observação): sinal de LTV por
+ * kw ("clique virou comprador de kit completo"), fora da coluna Conversões
+ * e do lance.
+ *
+ * Deduplicação: uma vez por pedido (chave gtm_first_upsell_sent:<frontId>).
  */
-export function fireGtmBeginCheckout(params: { transactionId: string; value: number }): void {
-  fireGtmEvent('begin_checkout', 'gtm_begin_checkout_sent', params);
+export function fireGtmFirstUpsell(params: {
+  transactionId: string;
+  value: number;
+  frontTransactionId: string;
+}): void {
+  fireGtmEvent(
+    'first_upsell_completed',
+    `gtm_first_upsell_sent:${params.frontTransactionId}`,
+    { transactionId: params.transactionId, value: params.value },
+  );
 }

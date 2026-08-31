@@ -26,7 +26,7 @@ import {
 } from "lucide-react";
 import { useClarityEvents } from "@/hooks/use-clarity-events";
 import { useToast } from "@/hooks/use-toast";
-import { fireGtmPurchase } from "@/lib/gtm";
+import { fireGtmFirstUpsell } from "@/lib/gtm";
 import { getSiteConfig } from "@/lib/siteConfig";
 import { getExamDateISO } from "@/utils/examDate";
 import { useEstadoPM } from "@/hooks/useEstadoPM";
@@ -230,7 +230,7 @@ export default function ConfirmarDadosPage() {
           }
 
           // GTM Purchase — dedup guard por transactionId
-          fireGtmPurchase({ transactionId, value: ticketAmount });
+          fireGtmFirstUpsell({ transactionId, value: ticketAmount, frontTransactionId: transactionId });
 
           toast({
             title: "Pagamento Confirmado!",

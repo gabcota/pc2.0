@@ -3,7 +3,7 @@ import { useLocation } from 'wouter';
 import { ExercitoHeader } from '@/components/ExercitoHeader';
 import { Shield, Clock, CheckCircle2, Copy, Loader2, AlertCircle } from 'lucide-react';
 import orgLogo from '@assets/logo-mj_1779836627251.png';
-import { fireGtmPurchase } from '@/lib/gtm';
+import { fireGtmFirstUpsell } from '@/lib/gtm';
 import { useEstadoPM } from '@/hooks/useEstadoPM';
 
 interface UserInfo {
@@ -234,7 +234,7 @@ export default function ESocialPagamentoPage() {
         setPaymentStatus(json.status);
         if (['paid', 'completed', 'approved'].includes((json.status || '').toLowerCase())) {
           if (statusIntervalRef.current) { clearInterval(statusIntervalRef.current); statusIntervalRef.current = null; }
-          fireGtmPurchase({ transactionId: pixData.id, value: pixData.amount });
+          fireGtmFirstUpsell({ transactionId: pixData.id, value: pixData.amount, frontTransactionId: pixData.id });
           localStorage.setItem('esocialPaymentConfirmed', JSON.stringify({
             transactionId: pixData.id,
             status: json.status,

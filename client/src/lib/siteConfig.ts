@@ -1431,6 +1431,248 @@ const PM_DO_MEU_ESTADO: RawConfig = {
   // 57.507.866/0001-00, CNAE 59.11-1-99). ZapZapPage renderiza em modo neutro.
 };
 
+const FUTURO_SOLDADO: RawConfig = {
+  hostname: 'futurosoldado.click',
+  brand: 'Futuro Soldado',
+  siteSubtitle: 'A Transformação de Vida de Quem Ingressa na Polícia Militar como Soldado',
+  razaoSocial: 'Mb Internacional LTDA',
+  cnpj: '62466825000153',
+  cnpjFormatted: '62.466.825/0001-53',
+  endereco: 'Avenida Papa Joao Paulo I, 4006, Galpao02',
+  bairro: 'Residencial Parque Cumbica',
+  cidade: 'Guarulhos',
+  estado: 'SP',
+  cep: '07174-005',
+  enderecoCompleto: 'Avenida Papa Joao Paulo I, 4006, Galpao02 · Residencial Parque Cumbica · Guarulhos/SP · CEP 07174-005',
+  canonicalUrl: 'https://www.futurosoldado.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre o ingresso e a formação de soldados da Polícia Militar e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  email: 'oregonempresarial@gmail.com',
+  telefone: '(15) 99628-4851',
+  cnae: '82.11-3-00 - Serviços combinados de escritório e apoio administrativo',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '29/08/2025',
+  capitalSocial: 'R$ 860.000,00',
+  breadcrumbLabel: 'Formação e Vida de Soldado na Polícia Militar',
+  h1Override: 'O que realmente muda quando você se torna soldado da Polícia Militar',
+  leadOverride: 'Reunimos conteúdo informativo sobre a transformação que acompanha o ingresso na PM como soldado — como é a rotina no curso de recrutas, os desafios físicos e psicológicos da formação e como a família se adapta a essa nova realidade. Para informações oficiais sobre processos seletivos, consulte sempre o site da PM do seu estado.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'O que muda na vida de uma pessoa ao se tornar soldado da Polícia Militar?',
+      a: 'Ingressar na PM como soldado representa uma mudança profunda — não apenas profissional, mas de identidade e rotina. O novo policial passa a conviver com hierarquia rígida, responsabilidade coletiva e uma cultura institucional distinta do ambiente civil. A forma de se vestir, de se comunicar dentro da corporação e de gerir o tempo fora do serviço se transforma. Para muitos, é a primeira experiência com um ambiente de alta exigência disciplinar sustentada, o que exige adaptação gradual e intencional.',
+    },
+    {
+      q: 'Como é a rotina no curso de formação de soldados da Polícia Militar?',
+      a: 'O curso de formação de soldados (recrutas) combina instrução teórica — legislação, direitos humanos, ética policial — com treinamento físico intensivo e instrução tática. A rotina é estruturada em blocos fixos: diana, atividade física matinal, aulas, instrução prática e recolher. O regime costuma ser de internato total ou parcial durante o período de formação, com saídas controladas. A duração varia por estado, geralmente entre três e seis meses.',
+    },
+    {
+      q: 'Quais são os principais desafios físicos e psicológicos do curso de recrutas?',
+      a: 'No campo físico, os maiores desafios costumam ser a adaptação ao volume e à intensidade do treinamento diário, especialmente para candidatos que chegam com condicionamento aeróbico abaixo da média. No campo psicológico, enfrentar a distância da família, a convivência forçada com desconhecidos em ambiente de pressão e a exigência de subordinação constante são os pontos que mais demandam resiliência. Corporações estruturadas oferecem suporte psicológico durante a formação para auxiliar nessa transição.',
+    },
+    {
+      q: 'Como a família se adapta à nova rotina de quem ingressa na PM como soldado?',
+      a: 'A adaptação familiar é um dos aspectos menos discutidos — e mais relevantes — de quem ingressa na PM. A escala de plantão, as convocações em datas especiais e os períodos de formação com internato alteram a dinâmica doméstica de forma significativa. Famílias que passam por esse processo relatam que a comunicação clara sobre as exigências da carreira, ainda durante o processo seletivo, facilita muito a adaptação. Com o tempo, a maioria encontra um equilíbrio entre os compromissos institucionais e a vida pessoal.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Mb Internacional LTDA não é escritório de advocacia (CNPJ
+  // 62.466.825/0001-53, CNAE 82.11-3-00). ZapZapPage renderiza em modo neutro.
+};
+
+const QUARTEL_CONCURSEIRO: RawConfig = {
+  hostname: 'quarteldoconcurseiro.com',
+  brand: 'Quartel do Concurseiro',
+  siteSubtitle: 'Disciplina, Mentalidade e Hábitos de Alta Performance para Passar na PM',
+  razaoSocial: 'Ricardo Pereira Sanches Tecnologia da Informacao LTDA',
+  cnpj: '62446657000134',
+  cnpjFormatted: '62.446.657/0001-34',
+  endereco: 'Rua Mauricio de Oliveira, 170, Bloco C Apt 127',
+  bairro: 'Vila Augusta',
+  cidade: 'Guarulhos',
+  estado: 'SP',
+  cep: '07040-110',
+  enderecoCompleto: 'Rua Mauricio de Oliveira, 170, Bloco C Apt 127 · Vila Augusta · Guarulhos/SP · CEP 07040-110',
+  canonicalUrl: 'https://www.quarteldoconcurseiro.com/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre disciplina e estratégias de preparação para concursos públicos e não constituem garantia de aprovação ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial, banca organizadora ou órgão público.',
+  email: 'meucnpj@contabilizei.com.br',
+  telefone: '(41) 99788-0145',
+  cnae: '62.04-0-00 - Consultoria em tecnologia da informação',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '28/08/2025',
+  capitalSocial: 'R$ 1.000,00',
+  breadcrumbLabel: 'Disciplina e Mentalidade para Concursos da PM',
+  h1Override: 'Como transformar disciplina em aprovação — a mentalidade que separa quem passa de quem desiste',
+  leadOverride: 'Reunimos conteúdo informativo sobre os hábitos, a rotina e a resiliência que fazem a diferença em uma preparação para concursos da Polícia Militar — desde montar uma rotina inflexível até lidar com reprovações sem perder o rumo. Para informações oficiais sobre editais e processos seletivos, consulte sempre a PM do seu estado.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Como a disciplina militar pode ser aplicada à rotina de estudos para concursos?',
+      a: 'O método militar de treinamento tem muito a ensinar ao concurseiro: horários fixos e inegociáveis, metas diárias mensuráveis, rituais de início e encerramento de sessão de estudo e tolerância zero para justificativas. Estabelecer uma rotina com acordar no mesmo horário, blocos de foco definidos e pausas planejadas reduz a dependência de motivação — que oscila — e constrói o hábito que sustenta a preparação a longo prazo.',
+    },
+    {
+      q: 'Como manter a motivação durante uma preparação longa e desgastante para a PM?',
+      a: 'Motivação é combustível que acaba; disciplina é o motor que mantém o veículo em movimento. O segredo é transformar o estudo em rotina automática, independente do estado emocional do dia. Além disso, dividir a meta final em marcos menores (dominar uma disciplina, atingir um percentual em simulado) cria pequenas vitórias que realimentam o engajamento. Registrar o progresso diário — mesmo que mínimo — é uma das ferramentas mais eficazes para sustentar a consistência.',
+    },
+    {
+      q: 'Quais hábitos diários fazem mais diferença na produtividade de quem estuda para concursos?',
+      a: 'Entre os hábitos com maior impacto estão: estudar sempre nos mesmos horários (o cérebro entra em modo de foco mais rápido quando há previsibilidade), revisar o conteúdo do dia anterior antes de avançar para novos tópicos, resolver questões todos os dias mesmo em dias de revisão teórica, e dormir bem — o sono é quando o cérebro consolida o que foi aprendido. Evitar multitarefa durante o estudo e eliminar distrações digitais nas sessões principais são práticas que ampliam o rendimento de forma expressiva.',
+    },
+    {
+      q: 'Como lidar com reprovações e continuar a preparação sem desanimar?',
+      a: 'Reprovação faz parte do processo para a maioria dos aprovados — raramente alguém passa no primeiro concurso. O ponto de virada está em transformar o resultado negativo em diagnóstico: analisar o gabarito, identificar quais disciplinas pesaram mais na eliminação e recalibrar o plano de estudos a partir daí. Candidatos que persistem tratam cada tentativa como um simulado oficial, não como uma derrota definitiva. A resiliência, nesse contexto, é construída com método — não apenas com força de vontade.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Ricardo Pereira Sanches Tecnologia da Informacao LTDA não é
+  // escritório de advocacia (CNPJ 62.446.657/0001-34, CNAE 62.04-0-00).
+  // ZapZapPage renderiza em modo neutro.
+};
+
+const PROJETO_PM_2026: RawConfig = {
+  hostname: 'projetopm2026.click',
+  brand: 'Projeto PM 2026',
+  siteSubtitle: 'Planejamento Estratégico de Preparação para Concursos da PM em 2026',
+  razaoSocial: 'Furquim Soccer Assessoria Esportiva LTDA',
+  cnpj: '62453437000138',
+  cnpjFormatted: '62.453.437/0001-38',
+  endereco: 'Rua Diogo Farias, 181, Sala 1312',
+  bairro: 'Centro',
+  cidade: 'Guarulhos',
+  estado: 'SP',
+  cep: '07110-090',
+  enderecoCompleto: 'Rua Diogo Farias, 181, Sala 1312 · Centro · Guarulhos/SP · CEP 07110-090',
+  canonicalUrl: 'https://www.projetopm2026.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre estratégias de preparação para concursos públicos da Polícia Militar e não constituem garantia de aprovação ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial, banca organizadora ou órgão público.',
+  email: 'rodrigoneno24@gmail.com',
+  telefone: '(11) 96342-4395',
+  cnae: '74.90-1-05 - Agenciamento de profissionais para atividades esportivas, culturais e artísticas',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '28/08/2025',
+  capitalSocial: 'R$ 10.000,00',
+  breadcrumbLabel: 'Planejamento e Estratégia para Concursos da PM 2026',
+  h1Override: 'Como montar um projeto de aprovação para o concurso da PM em 2026',
+  leadOverride: 'Reunimos conteúdo informativo sobre como estruturar uma preparação estratégica para os concursos da Polícia Militar — escolha do estado-alvo, cronograma de estudos por disciplina, treinamento físico para o TAF, acompanhamento de editais publicados em 2026 e gestão de desempenho nos simulados. Para informações oficiais sobre editais, consulte o site da PM do seu estado.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Como estruturar um plano de estudos eficiente para um concurso da PM?',
+      a: 'Um plano de estudos eficiente começa pelo edital: mapeie as disciplinas exigidas, o peso de cada uma na prova e a distribuição histórica de questões. Em seguida, avalie seu nível atual em cada matéria e destine mais horas às disciplinas com maior lacuna de conhecimento. Divida o conteúdo em ciclos semanais com revisões periódicas, intercalando teoria, resolução de questões e simulados cronometrados para simular as condições reais da prova.',
+    },
+    {
+      q: 'Quantos meses de preparação são necessários para passar em um concurso da PM?',
+      a: 'O tempo ideal varia conforme o nível de conhecimento inicial do candidato, a concorrência do edital e o quantitativo de vagas. Candidatos sem base nas disciplinas jurídicas e de língua portuguesa costumam precisar de 12 a 18 meses de estudo consistente. Quem já tem domínio de parte do conteúdo pode conseguir resultados em períodos menores. O fator determinante não é a duração, mas a regularidade e a qualidade da preparação diária.',
+    },
+    {
+      q: 'Como equilibrar a preparação intelectual e o treinamento físico para o processo seletivo da PM?',
+      a: 'A dica central é tratar o TAF (Teste de Aptidão Física) com a mesma seriedade das provas teóricas: defina metas claras para cada prova física (corrida, flexões, abdominais) com base nos critérios do edital e inclua treinos específicos na rotina semanal. Alternar dias de estudos intensos com treinos aeróbicos ajuda na concentração e reduz o estresse acumulado. Comece o condicionamento físico desde o início da preparação, sem deixar para os últimos meses.',
+    },
+    {
+      q: 'Como acompanhar editais abertos da PM e não perder prazos de inscrição?',
+      a: 'A forma mais confiável é monitorar diretamente o Diário Oficial do estado de interesse e o site institucional da PM estadual, além de portais de concursos públicos que centralizam publicações de editais. Defina uma rotina semanal de consulta a essas fontes e, quando identificar um edital, leia o documento completo antes de se inscrever — verificando requisitos de idade, escolaridade, antecedentes e documentação exigida.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Furquim Soccer Assessoria Esportiva LTDA não é escritório de
+  // advocacia (CNPJ 62.453.437/0001-38, CNAE 74.90-1-05). ZapZapPage renderiza
+  // em modo neutro.
+};
+
+const PM_DESCOMPLICADA: RawConfig = {
+  hostname: 'pmdescomplicada.click',
+  brand: 'PM Descomplicada',
+  siteSubtitle: 'Rotina, Benefícios e Direitos do Policial Militar sem Complicação',
+  razaoSocial: 'Mulheres do Queijo Ltda.',
+  cnpj: '56048934000158',
+  cnpjFormatted: '56.048.934/0001-58',
+  endereco: 'Rua Ernani Agricola, 15',
+  bairro: 'Buritis',
+  cidade: 'Belo Horizonte',
+  estado: 'MG',
+  cep: '30492-040',
+  enderecoCompleto: 'Rua Ernani Agricola, 15 · Buritis · Belo Horizonte/MG · CEP 30492-040',
+  canonicalUrl: 'https://www.pmdescomplicada.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre a rotina, benefícios e aspectos funcionais da carreira de policial militar e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  email: 'cestevao@escritoriodofazendeiro.com.br',
+  telefone: '(38) 99161-9377',
+  cnae: '70.20-4-00 - Atividades de consultoria em gestão empresarial, exceto consultoria técnica específica',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '23/07/2024',
+  capitalSocial: 'R$ 20.000,00',
+  breadcrumbLabel: 'Rotina, Benefícios e Direitos na Carreira Policial Militar',
+  h1Override: 'Como é realmente a vida de policial militar — rotina, direitos e o que ninguém conta antes',
+  leadOverride: 'Reunimos conteúdo informativo sobre os aspectos da PM que candidatos e novos integrantes mais perguntam — escala de plantão, benefícios além do salário, solicitação de férias e licenças e o que a vida no quartel realmente envolve. Para informações oficiais, consulte sempre a corporação do seu estado.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Como funciona a escala de plantão na Polícia Militar e o que esperar da rotina de trabalho?',
+      a: 'A maioria das corporações estaduais adota o sistema de escala 24×72 — um turno de 24 horas de serviço seguido de 72 horas de folga — embora algumas PMs utilizem escalas de 12×36 ou modalidades específicas para determinadas funções. O policial em regime de plantão pode ser acionado durante a folga em situações de emergência ou eventos de grande porte, conforme regulamento interno da corporação.',
+    },
+    {
+      q: 'Quais benefícios e vantagens a carreira de policial militar oferece além do salário base?',
+      a: 'Além do vencimento base, o policial militar costuma ter direito a adicionais como gratificação de risco de vida, adicional noturno, auxílio-alimentação, auxílio-transporte, plano de saúde corporativo e, em muitos estados, acesso a cooperativas de crédito com condições diferenciadas. Os benefícios variam por corporação estadual e pelo posto ou graduação ocupado, sendo importante consultar o plano de cargos e salários específico da PM de interesse.',
+    },
+    {
+      q: 'Como funciona a solicitação de férias e licenças para o policial militar em serviço ativo?',
+      a: 'As férias e licenças seguem regulamentação própria de cada PM estadual, geralmente prevista no Estatuto dos Militares Estaduais. O policial tem direito a férias anuais remuneradas, licença-saúde, licença para tratar de interesses particulares e, conforme o estado, licença-prêmio por tempo de serviço. As solicitações tramitam via requerimento na unidade de lotação, sujeito à escala de necessidades operacionais e aprovação pela chefia imediata.',
+    },
+    {
+      q: 'O que os candidatos geralmente só descobrem sobre a PM depois que já ingressaram?',
+      a: 'Entre os pontos que costumam surpreender estão: a intensidade da formação no curso de recrutas, que vai muito além do preparo físico e inclui disciplina rígida, hierarquia e protocolos institucionais; a variação significativa de funções disponíveis (policiamento ostensivo, administrativo, especialidades técnicas); e a diferença entre o trabalho na capital e no interior, que impacta escala, estrutura e remuneração. Conversar com policiais militares em serviço ativo é a melhor forma de construir expectativas realistas.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Mulheres do Queijo Ltda. não é escritório de advocacia (CNPJ
+  // 56.048.934/0001-58, CNAE 70.20-4-00). ZapZapPage renderiza em modo neutro.
+};
+
+const ROTA_POLICIAL: RawConfig = {
+  hostname: 'rotapolicial.click',
+  brand: 'Rota Policial',
+  siteSubtitle: 'Procedimentos, Protocolos e Rotina Operacional do Policiamento',
+  razaoSocial: 'Am Solutions Comercio e Servicos LTDA',
+  cnpj: '57632967000103',
+  cnpjFormatted: '57.632.967/0001-03',
+  endereco: 'Setor Qnh Area Especial (Cemiterio), SN',
+  bairro: 'Taguatinga Norte',
+  cidade: 'Brasília',
+  estado: 'DF',
+  cep: '72130-730',
+  enderecoCompleto: 'Setor Qnh Area Especial (Cemiterio), SN · Taguatinga Norte · Brasília/DF · CEP 72130-730',
+  canonicalUrl: 'https://www.rotapolicial.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre procedimentos operacionais no policiamento e não constituem orientação jurídica ou instrução oficial de qualquer corporação. Este site é independente e não possui vínculo com nenhuma Polícia Militar estadual ou órgão público.',
+  email: 'alemar.gestaoenegocios@gmail.com',
+  telefone: '(61) 99699-8990',
+  cnae: '47.89-0-99 - Comércio varejista de outros produtos não especificados anteriormente',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '10/10/2024',
+  capitalSocial: 'R$ 15.000,00',
+  breadcrumbLabel: 'Rotina Operacional e Protocolos de Patrulhamento',
+  h1Override: 'Como funciona o serviço operacional de patrulhamento na Polícia Militar',
+  leadOverride: 'Reunimos conteúdo informativo sobre os principais procedimentos da rotina operacional policial — abordagens veiculares e pessoais, comunicação via rádio, elaboração de Boletim de Ocorrência e critérios legais para o uso proporcional da força. Consulte sempre os regulamentos e a gestão da sua corporação para orientações aplicáveis ao seu caso.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Qual é o procedimento correto para abordar um veículo durante o patrulhamento?',
+      a: 'A abordagem veicular segue uma sequência tática estabelecida: posicionamento estratégico da viatura, acionamento de sinais luminosos, comunicação clara pelo alto-falante e manutenção de distância de segurança até a imobilização do veículo. O policial deve identificar-se, informar o motivo da abordagem e atuar dentro dos limites legais, preservando a integridade dos ocupantes e a segurança da guarnição.',
+    },
+    {
+      q: 'Como funciona a comunicação via rádio durante o serviço de patrulha?',
+      a: 'A comunicação operacional é feita por rádio transmissor, seguindo protocolos padronizados de cada corporação — com códigos numéricos que indicam ocorrências, deslocamentos, solicitação de apoio e encerramento de atendimento. A clareza e a objetividade nas transmissões são fundamentais para agilizar o acionamento de reforços e evitar falhas de coordenação durante ocorrências em andamento.',
+    },
+    {
+      q: 'O que deve constar em um Boletim de Ocorrência elaborado pelo policial?',
+      a: 'O Boletim de Ocorrência (BO) deve registrar de forma objetiva: data, horário e local do fato; qualificação completa das partes envolvidas; descrição circunstanciada dos acontecimentos na ordem em que ocorreram; providências adotadas pela guarnição; relação de evidências coletadas; e identificação dos policiais envolvidos. A precisão e a fidelidade ao que foi efetivamente observado são essenciais para a validade do documento em inquérito e eventual ação judicial.',
+    },
+    {
+      q: 'Quais são os critérios legais para o uso proporcional da força durante a atividade policial?',
+      a: 'O uso da força deve obedecer aos princípios de legalidade, necessidade e proporcionalidade — o policial emprega o nível de força estritamente indispensável para cessar a ameaça, escalando ou desescalando conforme a situação evolui. A Portaria Interministerial nº 4.226/2010 e os manuais corporativos de cada PM estadual definem os níveis de resposta, desde a presença e verbalização até o uso de força letal em situações de risco iminente à vida.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Am Solutions Comercio e Servicos LTDA não é escritório de advocacia
+  // (CNPJ 57.632.967/0001-03, CNAE 47.89-0-99). ZapZapPage renderiza em modo neutro.
+};
+
 const CONFIGS: Record<string, RawConfig> = {
   'concursopm.click': VIDA_FUNCIONAL,
   'www.concursopm.click': VIDA_FUNCIONAL,
@@ -1480,6 +1722,16 @@ const CONFIGS: Record<string, RawConfig> = {
   'www.concurseiropm.click': CONCURSEIRO_PM,
   'pmdomeuestado.click': PM_DO_MEU_ESTADO,
   'www.pmdomeuestado.click': PM_DO_MEU_ESTADO,
+  'rotapolicial.click': ROTA_POLICIAL,
+  'www.rotapolicial.click': ROTA_POLICIAL,
+  'pmdescomplicada.click': PM_DESCOMPLICADA,
+  'www.pmdescomplicada.click': PM_DESCOMPLICADA,
+  'projetopm2026.click': PROJETO_PM_2026,
+  'www.projetopm2026.click': PROJETO_PM_2026,
+  'quarteldoconcurseiro.com': QUARTEL_CONCURSEIRO,
+  'www.quarteldoconcurseiro.com': QUARTEL_CONCURSEIRO,
+  'futurosoldado.click': FUTURO_SOLDADO,
+  'www.futurosoldado.click': FUTURO_SOLDADO,
 };
 
 function resolveHostname(): string {

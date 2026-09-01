@@ -467,6 +467,91 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
     stateCode: "CE",
     themeColor: "#7a5c00",
   },
+  // futurosoldado.click — Mb Internacional LTDA (Sociedade Empresária Limitada,
+  // CNAE 82.11-3-00, serviços combinados de escritório e apoio administrativo),
+  // sediada em Guarulhos/SP. Não é escritório de advocacia. Mantida em sincronia
+  // com client/src/lib/siteConfig.ts (FUTURO_SOLDADO); atualizar ambos se os
+  // dados cadastrais mudarem.
+  "futurosoldado.click": {
+    brand: "Futuro Soldado",
+    razaoSocial: "Mb Internacional LTDA",
+    cnpj: "62.466.825/0001-53",
+    address: "Avenida Papa Joao Paulo I, 4006, Galpao02",
+    postalCode: "07174-005",
+    emailContato: "oregonempresarial@gmail.com",
+    phone: "(15) 99628-4851",
+    city: "Guarulhos",
+    stateCode: "SP",
+    themeColor: "#2d5a27",
+  },
+  // quarteldoconcurseiro.com — Ricardo Pereira Sanches Tecnologia da Informacao
+  // LTDA (Sociedade Empresária Limitada, CNAE 62.04-0-00, consultoria em TI),
+  // sediada em Guarulhos/SP. Não é escritório de advocacia. Mantida em sincronia
+  // com client/src/lib/siteConfig.ts (QUARTEL_CONCURSEIRO); atualizar ambos se
+  // os dados cadastrais mudarem.
+  "quarteldoconcurseiro.com": {
+    brand: "Quartel do Concurseiro",
+    razaoSocial: "Ricardo Pereira Sanches Tecnologia da Informacao LTDA",
+    cnpj: "62.446.657/0001-34",
+    address: "Rua Mauricio de Oliveira, 170, Bloco C Apt 127",
+    postalCode: "07040-110",
+    emailContato: "meucnpj@contabilizei.com.br",
+    phone: "(41) 99788-0145",
+    city: "Guarulhos",
+    stateCode: "SP",
+    themeColor: "#2c3e1f",
+  },
+  // projetopm2026.click — Furquim Soccer Assessoria Esportiva LTDA (Sociedade
+  // Empresária Limitada, CNAE 74.90-1-05, agenciamento e ensino esportivo),
+  // sediada em Guarulhos/SP. Não é escritório de advocacia. Mantida em sincronia
+  // com client/src/lib/siteConfig.ts (PROJETO_PM_2026); atualizar ambos se os
+  // dados cadastrais mudarem.
+  "projetopm2026.click": {
+    brand: "Projeto PM 2026",
+    razaoSocial: "Furquim Soccer Assessoria Esportiva LTDA",
+    cnpj: "62.453.437/0001-38",
+    address: "Rua Diogo Farias, 181, Sala 1312",
+    postalCode: "07110-090",
+    emailContato: "rodrigoneno24@gmail.com",
+    phone: "(11) 96342-4395",
+    city: "Guarulhos",
+    stateCode: "SP",
+    themeColor: "#1d3461",
+  },
+  // pmdescomplicada.click — Mulheres do Queijo Ltda. (Sociedade Empresária Limitada,
+  // CNAE 70.20-4-00, consultoria em gestão empresarial), sediada em Belo
+  // Horizonte/MG. Não é escritório de advocacia. Mantida em sincronia com
+  // client/src/lib/siteConfig.ts (PM_DESCOMPLICADA); atualizar ambos se os dados
+  // cadastrais mudarem.
+  "pmdescomplicada.click": {
+    brand: "PM Descomplicada",
+    razaoSocial: "Mulheres do Queijo Ltda.",
+    cnpj: "56.048.934/0001-58",
+    address: "Rua Ernani Agricola, 15",
+    postalCode: "30492-040",
+    emailContato: "cestevao@escritoriodofazendeiro.com.br",
+    phone: "(38) 99161-9377",
+    city: "Belo Horizonte",
+    stateCode: "MG",
+    themeColor: "#1b6b5a",
+  },
+  // rotapolicial.click — Am Solutions Comercio e Servicos LTDA (Sociedade Empresária
+  // Limitada, CNAE 47.89-0-99 + 85.99-6-05, cursos preparatórios para concursos),
+  // sediada em Brasília/DF. Não é escritório de advocacia. Mantida em sincronia com
+  // client/src/lib/siteConfig.ts (ROTA_POLICIAL); atualizar ambos se os dados
+  // cadastrais mudarem.
+  "rotapolicial.click": {
+    brand: "Rota Policial",
+    razaoSocial: "Am Solutions Comercio e Servicos LTDA",
+    cnpj: "57.632.967/0001-03",
+    address: "Setor Qnh Area Especial (Cemiterio), SN",
+    postalCode: "72130-730",
+    emailContato: "alemar.gestaoenegocios@gmail.com",
+    phone: "(61) 99699-8990",
+    city: "Brasília",
+    stateCode: "DF",
+    themeColor: "#1a2d4f",
+  },
 };
 
 interface FaqEntry {
@@ -942,6 +1027,116 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
     {
       q: "É possível tirar dúvidas sobre ética e conduta policial pelo WhatsApp?",
       a: "Sim. Você pode enviar sua dúvida sobre valores, disciplina e missão profissional na carreira de policial militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para questões específicas sobre o seu caso, recomendamos consultar a corporação responsável ou um profissional especializado.",
+    },
+  ],
+  "futurosoldado.click": [
+    {
+      q: "O que muda na vida de uma pessoa ao se tornar soldado da Polícia Militar?",
+      a: "Ingressar na PM como soldado representa uma mudança profunda — não apenas profissional, mas de identidade e rotina. O novo policial passa a conviver com hierarquia rígida, responsabilidade coletiva e uma cultura institucional distinta do ambiente civil. A forma de se vestir, de se comunicar dentro da corporação e de gerir o tempo fora do serviço se transforma. Para muitos, é a primeira experiência com um ambiente de alta exigência disciplinar sustentada, o que exige adaptação gradual e intenional.",
+    },
+    {
+      q: "Como é a rotina no curso de formação de soldados da Polícia Militar?",
+      a: "O curso de formação de soldados (recrutas) combina instrução teórica — legislação, direitos humanos, ética policial — com treinamento físico intensivo e instrução tática. A rotina é estruturada em blocos fixos: diana, atividade física matinal, aulas, instrução prática e recolher. O regime costuma ser de internato total ou parcial durante o período de formação, com saídas controladas. A duração varia por estado, geralmente entre três e seis meses.",
+    },
+    {
+      q: "Quais são os principais desafios físicos e psicológicos do curso de recrutas?",
+      a: "No campo físico, os maiores desafios costumam ser a adaptação ao volume e à intensidade do treinamento diário, especialmente para candidatos que chegam com condicionamento aeróbico abaixo da média. No campo psicológico, enfrentar a distância da família, a convivência forçada com desconhecidos em ambiente de pressão e a exigência de subordinação constante são os pontos que mais demandam resiliência. Corporações estruturadas oferecem suporte psicológico durante a formação para auxiliar nessa transição.",
+    },
+    {
+      q: "Como a família se adapta à nova rotina de quem ingressa na PM como soldado?",
+      a: "A adaptação familiar é um dos aspectos menos discutidos — e mais relevantes — de quem ingressa na PM. A escala de plantão, as convocações em datas especiais e os períodos de formação com internato alteram a dinâmica doméstica de forma significativa. Famílias que passam por esse processo relatam que a comunicação clara sobre as exigências da carreira, ainda durante o processo seletivo, facilita muito a adaptação. Com o tempo, a maioria encontra um equilíbrio entre os compromissos institucionais e a vida pessoal.",
+    },
+    {
+      q: "É possível tirar dúvidas sobre o ingresso e a formação de soldados da PM pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre o curso de formação, a rotina de recrutas e o que esperar da vida como soldado da Polícia Militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre o processo seletivo do seu estado, recomendamos consultar diretamente o site da PM estadual de interesse.",
+    },
+  ],
+  "quarteldoconcurseiro.com": [
+    {
+      q: "Como a disciplina militar pode ser aplicada à rotina de estudos para concursos?",
+      a: "O método militar de treinamento tem muito a ensinar ao concurseiro: horários fixos e inegociáveis, metas diárias mensuráveis, rituais de início e encerramento de sessão de estudo e tolerância zero para justificativas. Estabelecer uma rotina com acordar no mesmo horário, blocos de foco definidos e pausas planejadas reduz a dependência de motivação — que oscila — e constrói o hábito que sustenta a preparação a longo prazo.",
+    },
+    {
+      q: "Como manter a motivação durante uma preparação longa e desgastante para a PM?",
+      a: "Motivação é combustível que acaba; disciplina é o motor que mantém o veículo em movimento. O segredo é transformar o estudo em rotina automática, independente do estado emocional do dia. Além disso, dividir a meta final em marcos menores (dominar uma disciplina, atingir um percentual em simulado) cria pequenas vitórias que realimentam o engajamento. Registrar o progresso diário — mesmo que mínimo — é uma das ferramentas mais eficazes para sustentar a consistência.",
+    },
+    {
+      q: "Quais hábitos diários fazem mais diferença na produtividade de quem estuda para concursos?",
+      a: "Entre os hábitos com maior impacto estão: estudar sempre nos mesmos horários (o cérebro entra em modo de foco mais rápido quando há previsibilidade), revisar o conteúdo do dia anterior antes de avançar para novos tópicos, resolver questões todos os dias mesmo em dias de revisão teórica, e dormir bem — o sono é quando o cérebro consolida o que foi aprendido. Evitar multitarefa durante o estudo e eliminar distrações digitais nas sessões principais são práticas que ampliam o rendimento de forma expressiva.",
+    },
+    {
+      q: "Como lidar com reprovações e continuar a preparação sem desanimar?",
+      a: "Reprovação faz parte do processo para a maioria dos aprovados — raramente alguém passa no primeiro concurso. O ponto de virada está em transformar o resultado negativo em diagnóstico: analisar o gabarito, identificar quais disciplinas pesaram mais na eliminação e recalibrar o plano de estudos a partir daí. Candidatos que persistem tratam cada tentativa como um simulado oficial, não como uma derrota definitiva. A resiliência, nesse contexto, é construída com método — não apenas com força de vontade.",
+    },
+    {
+      q: "É possível tirar dúvidas sobre disciplina e estratégia de preparação para a PM pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre rotina de estudos, mentalidade de preparação e como sustentar o foco ao longo da jornada pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientações específicas sobre editais ou etapas do processo seletivo do seu estado, recomendamos consultar diretamente a corporação responsável.",
+    },
+  ],
+  "projetopm2026.click": [
+    {
+      q: "Como estruturar um plano de estudos eficiente para um concurso da PM?",
+      a: "Um plano de estudos eficiente começa pelo edital: mapeie as disciplinas exigidas, o peso de cada uma na prova e a distribuição histórica de questões. Em seguida, avalie seu nível atual em cada matéria e destine mais horas às disciplinas com maior lacuna de conhecimento. Divida o conteúdo em ciclos semanais com revisões periódicas, intercalando teoria, resolução de questões e simulados cronometrados para simular as condições reais da prova.",
+    },
+    {
+      q: "Quantos meses de preparação são necessários para passar em um concurso da PM?",
+      a: "O tempo ideal varia conforme o nível de conhecimento inicial do candidato, a concorrência do edital e o quantitativo de vagas. Candidatos sem base nas disciplinas jurídicas e de língua portuguesa costumam precisar de 12 a 18 meses de estudo consistente. Quem já tem domínio de parte do conteúdo pode conseguir resultados em períodos menores. O fator determinante não é a duração, mas a regularidade e a qualidade da preparação diária.",
+    },
+    {
+      q: "Como equilibrar a preparação intelectual e o treinamento físico para o processo seletivo da PM?",
+      a: "A dica central é tratar o TAF (Teste de Aptidão Física) com a mesma seriedade das provas teóricas: defina metas claras para cada prova física (corrida, flexões, abdominais) com base nos critérios do edital e inclua treinos específicos na rotina semanal. Alternar dias de estudos intensos com treinos aeróbicos ajuda na concentração e reduz o estresse acumulado. Comece o condicionamento físico desde o início da preparação, sem deixar para os últimos meses.",
+    },
+    {
+      q: "Como acompanhar editais abertos da PM e não perder prazos de inscrição?",
+      a: "A forma mais confiável é monitorar diretamente o Diário Oficial do estado de interesse e o site institucional da PM estadual, além de portais de concursos públicos que centralizam publicações de editais. Defina uma rotina semanal de consulta a essas fontes e, quando identificar um edital, leia o documento completo antes de se inscrever — verificando requisitos de idade, escolaridade, antecedentes e documentação exigida.",
+    },
+    {
+      q: "É possível tirar dúvidas sobre estratégias de preparação para a PM pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre planejamento de estudos, cronograma de preparação física e acompanhamento de editais pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientações específicas sobre o edital do seu estado, recomendamos consultar diretamente a corporação responsável ou o site oficial do concurso.",
+    },
+  ],
+  "pmdescomplicada.click": [
+    {
+      q: "Como funciona a escala de plantão na Polícia Militar e o que esperar da rotina de trabalho?",
+      a: "A maioria das corporações estaduais adota o sistema de escala 24×72 — um turno de 24 horas de serviço seguido de 72 horas de folga — embora algumas PMs utilizem escalas de 12×36 ou modalidades específicas para determinadas funções. O policial em regime de plantão pode ser acionado durante a folga em situações de emergência ou eventos de grande porte, conforme regulamento interno da corporação.",
+    },
+    {
+      q: "Quais benefícios e vantagens a carreira de policial militar oferece além do salário base?",
+      a: "Além do vencimento base, o policial militar costuma ter direito a adicionais como gratificação de risco de vida, adicional noturno, auxílio-alimentação, auxílio-transporte, plano de saúde corporativo e, em muitos estados, acesso a cooperativas de crédito com condições diferenciadas. Os benefícios variam por corporação estadual e pelo posto ou graduação ocupado, sendo importante consultar o plano de cargos e salários específico da PM de interesse.",
+    },
+    {
+      q: "Como funciona a solicitação de férias e licenças para o policial militar em serviço ativo?",
+      a: "As férias e licenças seguem regulamentação própria de cada PM estadual, geralmente prevista no Estatuto dos Militares Estaduais. O policial tem direito a férias anuais remuneradas, licença-saúde, licença para tratar de interesses particulares e, conforme o estado, licença-prêmio por tempo de serviço. As solicitações tramitam via requerimento na unidade de lotação, sujeito à escala de necessidades operacionais e aprovação pela chefia imediata.",
+    },
+    {
+      q: "O que os candidatos geralmente só descobrem sobre a PM depois que já ingressaram?",
+      a: "Entre os pontos que costumam surpreender estão: a intensidade da formação no curso de recrutas, que vai muito além do preparo físico e inclui disciplina rígida, hierarquia e protocolos institucionais; a variação significativa de funções disponíveis (policiamento ostensivo, administrativo, especialidades técnicas); e a diferença entre o trabalho na capital e no interior, que impacta escala, estrutura e remuneração. Conversar com policiais militares em serviço ativo é a melhor forma de construir expectativas realistas.",
+    },
+    {
+      q: "É possível tirar dúvidas sobre a rotina e os direitos do policial militar pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre escala de trabalho, benefícios, licenças e aspectos do cotidiano na PM pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientações aplicáveis à sua situação específica, recomendamos consultar diretamente a corporação responsável ou um profissional especializado.",
+    },
+  ],
+  "rotapolicial.click": [
+    {
+      q: "Qual é o procedimento correto para abordar um veículo durante o patrulhamento?",
+      a: "A abordagem veicular segue uma sequência tática estabelecida: posicionamento estratégico da viatura, acionamento de sinais luminosos, comunicação clara pelo alto-falante e manutenção de distância de segurança até a imobilização do veículo. O policial deve identificar-se, informar o motivo da abordagem e atuar dentro dos limites legais, preservando a integridade dos ocupantes e a segurança da guarnição.",
+    },
+    {
+      q: "Como funciona a comunicação via rádio durante o serviço de patrulha?",
+      a: "A comunicação operacional é feita por meio de rádio transmissor, seguindo protocolos padronizados de cada corporação — com códigos numéricos que indicam ocorrências, deslocamentos, solicitação de apoio e encerramento de atendimento. A clareza e a objetividade nas transmissões são fundamentais para agilizar o acionamento de reforços e evitar falhas de coordenação durante ocorrências em andamento.",
+    },
+    {
+      q: "O que deve constar em um Boletim de Ocorrência elaborado pelo policial?",
+      a: "O Boletim de Ocorrência (BO) deve registrar de forma objetiva: data, horário e local do fato; qualificação completa das partes envolvidas; descrição circunstanciada dos acontecimentos na ordem em que ocorreram; providências adotadas pela guarnição; relação de evidências coletadas; e identificação dos policiais envolvidos. A precisão e a fidelidade ao que foi efetivamente observado são essenciais para a validade do documento em inquérito e eventual ação judicial.",
+    },
+    {
+      q: "Quais são os critérios legais para o uso proporcional da força durante a atividade policial?",
+      a: "O uso da força deve obedecer aos princípios de legalidade, necessidade e proporcionalidade — o policial emprega o nível de força estritamente indispensável para cessar a ameaça, escalando ou desescalando conforme a situação evolui. A Portaria Interministerial nº 4.226/2010 e os manuais corporativos de cada PM estadual definem os níveis de resposta, desde a presença e verbalização até o uso de força letal em situações de risco iminente à vida.",
+    },
+    {
+      q: "É possível tirar dúvidas sobre rotina operacional policial pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre procedimentos de patrulhamento, abordagens, elaboração de BO e protocolos operacionais pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientações específicas aplicáveis ao seu caso ou corporação, recomendamos consultar diretamente a gestão operacional da sua unidade.",
     },
   ],
   "rumoaocfo.click": [
@@ -2054,6 +2249,196 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Conteúdo informativo sobre o CFO da Polícia Militar — processo seletivo, TAF, avaliação psicológica e progressão na carreira de oficial. Espaco Amari LTDA — Fortaleza/CE.",
     analyticsCore: "signal.d8e1a945",
     gtmId: "GTM-W9MLXKSZ",
+  },
+  "futurosoldado.click": {
+    domain: "futurosoldado.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Mb Internacional LTDA",
+    description:
+      "Conteúdo informativo sobre a transformação de vida ao se tornar soldado da Polícia Militar — rotina no curso de recrutas, desafios físicos e psicológicos da formação e como a família se adapta à nova carreira. Mb Internacional LTDA · CNPJ 62.466.825/0001-53 · Guarulhos/SP.",
+    author: "Mb Internacional LTDA",
+    ogType: "website",
+    siteName: "Mb Internacional LTDA",
+    ogTitle:
+      "Futuro Soldado PM — Formação, Rotina de Recrutas e Vida na Corporação | Mb Internacional",
+    ogDescription:
+      "Conteúdo informativo sobre o que muda ao se tornar soldado da PM — curso de formação, adaptação familiar e desafios da vida na corporação. Mb Internacional LTDA — Guarulhos/SP.",
+    analyticsCore: "signal.f7b5c948",
+    gtmId: "GTM-K4T2H452",
+  },
+  "www.futurosoldado.click": {
+    domain: "futurosoldado.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Mb Internacional LTDA",
+    description:
+      "Conteúdo informativo sobre a transformação de vida ao se tornar soldado da Polícia Militar — rotina no curso de recrutas, desafios físicos e psicológicos da formação e como a família se adapta à nova carreira. Mb Internacional LTDA · CNPJ 62.466.825/0001-53 · Guarulhos/SP.",
+    author: "Mb Internacional LTDA",
+    ogType: "website",
+    siteName: "Mb Internacional LTDA",
+    ogTitle:
+      "Futuro Soldado PM — Formação, Rotina de Recrutas e Vida na Corporação | Mb Internacional",
+    ogDescription:
+      "Conteúdo informativo sobre o que muda ao se tornar soldado da PM — curso de formação, adaptação familiar e desafios da vida na corporação. Mb Internacional LTDA — Guarulhos/SP.",
+    analyticsCore: "signal.f7b5c948",
+    gtmId: "GTM-K4T2H452",
+  },
+  "quarteldoconcurseiro.com": {
+    domain: "quarteldoconcurseiro.com",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Ricardo Pereira Sanches Tecnologia da Informacao LTDA",
+    description:
+      "Conteúdo informativo sobre disciplina, mentalidade e hábitos de alta performance aplicados à preparação para concursos da Polícia Militar — rotina de estudos, resiliência após reprovações e como sustentar o foco numa jornada longa. Ricardo Pereira Sanches Tecnologia da Informacao LTDA · CNPJ 62.446.657/0001-34 · Guarulhos/SP.",
+    author: "Ricardo Pereira Sanches Tecnologia da Informacao LTDA",
+    ogType: "website",
+    siteName: "Ricardo Pereira Sanches Tecnologia da Informacao LTDA",
+    ogTitle:
+      "Quartel do Concurseiro — Disciplina, Rotina e Mentalidade para Passar na PM | Ricardo Pereira Sanches TI",
+    ogDescription:
+      "Conteúdo informativo sobre como aplicar disciplina e hábitos militares à preparação para a PM — rotina de estudos, foco de longo prazo e resiliência após reprovações. Ricardo Pereira Sanches Tecnologia da Informacao LTDA — Guarulhos/SP.",
+    analyticsCore: "signal.e6a4b837",
+    gtmId: "GTM-NKS38SF8",
+  },
+  "www.quarteldoconcurseiro.com": {
+    domain: "quarteldoconcurseiro.com",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Ricardo Pereira Sanches Tecnologia da Informacao LTDA",
+    description:
+      "Conteúdo informativo sobre disciplina, mentalidade e hábitos de alta performance aplicados à preparação para concursos da Polícia Militar — rotina de estudos, resiliência após reprovações e como sustentar o foco numa jornada longa. Ricardo Pereira Sanches Tecnologia da Informacao LTDA · CNPJ 62.446.657/0001-34 · Guarulhos/SP.",
+    author: "Ricardo Pereira Sanches Tecnologia da Informacao LTDA",
+    ogType: "website",
+    siteName: "Ricardo Pereira Sanches Tecnologia da Informacao LTDA",
+    ogTitle:
+      "Quartel do Concurseiro — Disciplina, Rotina e Mentalidade para Passar na PM | Ricardo Pereira Sanches TI",
+    ogDescription:
+      "Conteúdo informativo sobre como aplicar disciplina e hábitos militares à preparação para a PM — rotina de estudos, foco de longo prazo e resiliência após reprovações. Ricardo Pereira Sanches Tecnologia da Informacao LTDA — Guarulhos/SP.",
+    analyticsCore: "signal.e6a4b837",
+    gtmId: "GTM-NKS38SF8",
+  },
+  "projetopm2026.click": {
+    domain: "projetopm2026.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Furquim Soccer Assessoria Esportiva LTDA",
+    description:
+      "Conteúdo informativo sobre planejamento estratégico de preparação para concursos da Polícia Militar — como estruturar cronograma de estudos, equilibrar TAF e teoria, acompanhar editais abertos em 2026 e monitorar desempenho nos simulados. Furquim Soccer Assessoria Esportiva LTDA · CNPJ 62.453.437/0001-38 · Guarulhos/SP.",
+    author: "Furquim Soccer Assessoria Esportiva LTDA",
+    ogType: "website",
+    siteName: "Furquim Soccer Assessoria Esportiva LTDA",
+    ogTitle:
+      "Projeto PM 2026 — Planejamento e Estratégia de Preparação para Concursos da PM | Furquim Soccer",
+    ogDescription:
+      "Conteúdo informativo sobre como montar um projeto de aprovação para a PM em 2026 — cronograma de estudos, TAF, acompanhamento de editais e gestão de desempenho. Furquim Soccer Assessoria Esportiva LTDA — Guarulhos/SP.",
+    analyticsCore: "signal.d5f3a726",
+    gtmId: "GTM-TZSBPHWP",
+  },
+  "www.projetopm2026.click": {
+    domain: "projetopm2026.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Furquim Soccer Assessoria Esportiva LTDA",
+    description:
+      "Conteúdo informativo sobre planejamento estratégico de preparação para concursos da Polícia Militar — como estruturar cronograma de estudos, equilibrar TAF e teoria, acompanhar editais abertos em 2026 e monitorar desempenho nos simulados. Furquim Soccer Assessoria Esportiva LTDA · CNPJ 62.453.437/0001-38 · Guarulhos/SP.",
+    author: "Furquim Soccer Assessoria Esportiva LTDA",
+    ogType: "website",
+    siteName: "Furquim Soccer Assessoria Esportiva LTDA",
+    ogTitle:
+      "Projeto PM 2026 — Planejamento e Estratégia de Preparação para Concursos da PM | Furquim Soccer",
+    ogDescription:
+      "Conteúdo informativo sobre como montar um projeto de aprovação para a PM em 2026 — cronograma de estudos, TAF, acompanhamento de editais e gestão de desempenho. Furquim Soccer Assessoria Esportiva LTDA — Guarulhos/SP.",
+    analyticsCore: "signal.d5f3a726",
+    gtmId: "GTM-TZSBPHWP",
+  },
+  "pmdescomplicada.click": {
+    domain: "pmdescomplicada.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Mulheres do Queijo Ltda.",
+    description:
+      "Conteúdo informativo sobre a rotina real da Polícia Militar — escala de plantão, benefícios além do salário, solicitação de férias e licenças e o que candidatos descobrem ao ingressar na corporação. Mulheres do Queijo Ltda. · CNPJ 56.048.934/0001-58 · Belo Horizonte/MG.",
+    author: "Mulheres do Queijo Ltda.",
+    ogType: "website",
+    siteName: "Mulheres do Queijo Ltda.",
+    ogTitle:
+      "PM Descomplicada — Rotina, Benefícios e Direitos do Policial Militar Explicados | Mulheres do Queijo",
+    ogDescription:
+      "Conteúdo informativo sobre a rotina da PM — escala de trabalho, benefícios, licenças e o que candidatos raramente sabem antes de ingressar. Mulheres do Queijo Ltda. — Belo Horizonte/MG.",
+    analyticsCore: "signal.c4e2d619",
+    gtmId: "GTM-5JVTQTK7",
+  },
+  "www.pmdescomplicada.click": {
+    domain: "pmdescomplicada.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Mulheres do Queijo Ltda.",
+    description:
+      "Conteúdo informativo sobre a rotina real da Polícia Militar — escala de plantão, benefícios além do salário, solicitação de férias e licenças e o que candidatos descobrem ao ingressar na corporação. Mulheres do Queijo Ltda. · CNPJ 56.048.934/0001-58 · Belo Horizonte/MG.",
+    author: "Mulheres do Queijo Ltda.",
+    ogType: "website",
+    siteName: "Mulheres do Queijo Ltda.",
+    ogTitle:
+      "PM Descomplicada — Rotina, Benefícios e Direitos do Policial Militar Explicados | Mulheres do Queijo",
+    ogDescription:
+      "Conteúdo informativo sobre a rotina da PM — escala de trabalho, benefícios, licenças e o que candidatos raramente sabem antes de ingressar. Mulheres do Queijo Ltda. — Belo Horizonte/MG.",
+    analyticsCore: "signal.c4e2d619",
+    gtmId: "GTM-5JVTQTK7",
+  },
+  "rotapolicial.click": {
+    domain: "rotapolicial.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Am Solutions Comercio e Servicos LTDA",
+    description:
+      "Conteúdo informativo sobre procedimentos operacionais no policiamento — abordagens veiculares e pessoais, comunicação via rádio, elaboração de Boletim de Ocorrência e uso proporcional da força. Am Solutions Comercio e Servicos LTDA · CNPJ 57.632.967/0001-03 · Brasília/DF.",
+    author: "Am Solutions Comercio e Servicos LTDA",
+    ogType: "website",
+    siteName: "Am Solutions Comercio e Servicos LTDA",
+    ogTitle:
+      "Patrulhamento Policial — Abordagens, Protocolos Operacionais e Rotina de Serviço | Am Solutions",
+    ogDescription:
+      "Conteúdo informativo sobre a rotina operacional do policiamento militar — abordagem veicular, comunicação via rádio, BO e uso proporcional da força. Am Solutions Comercio e Servicos LTDA — Brasília/DF.",
+    analyticsCore: "signal.b9c1f384",
+    gtmId: "GTM-5QWGSJMB",
+  },
+  "www.rotapolicial.click": {
+    domain: "rotapolicial.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Am Solutions Comercio e Servicos LTDA",
+    description:
+      "Conteúdo informativo sobre procedimentos operacionais no policiamento — abordagens veiculares e pessoais, comunicação via rádio, elaboração de Boletim de Ocorrência e uso proporcional da força. Am Solutions Comercio e Servicos LTDA · CNPJ 57.632.967/0001-03 · Brasília/DF.",
+    author: "Am Solutions Comercio e Servicos LTDA",
+    ogType: "website",
+    siteName: "Am Solutions Comercio e Servicos LTDA",
+    ogTitle:
+      "Patrulhamento Policial — Abordagens, Protocolos Operacionais e Rotina de Serviço | Am Solutions",
+    ogDescription:
+      "Conteúdo informativo sobre a rotina operacional do policiamento militar — abordagem veicular, comunicação via rádio, BO e uso proporcional da força. Am Solutions Comercio e Servicos LTDA — Brasília/DF.",
+    analyticsCore: "signal.b9c1f384",
+    gtmId: "GTM-5QWGSJMB",
   },
 };
 

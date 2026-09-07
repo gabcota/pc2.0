@@ -1431,6 +1431,584 @@ const PM_DO_MEU_ESTADO: RawConfig = {
   // 57.507.866/0001-00, CNAE 59.11-1-99). ZapZapPage renderiza em modo neutro.
 };
 
+const MODO_POLICIAL: RawConfig = {
+  hostname: 'modopolicial.click',
+  brand: 'Modo Policial',
+  siteSubtitle: 'Consciência Situacional, De-escalada e Tomada de Decisão Operacional na PM',
+  razaoSocial: 'Luiz Neto Transportes LTDA',
+  cnpj: '62535594000192',
+  cnpjFormatted: '62.535.594/0001-92',
+  endereco: 'Rua Porto das Magnolias, 850',
+  bairro: 'Papagaio',
+  cidade: 'Feira de Santana',
+  estado: 'BA',
+  cep: '44062-105',
+  enderecoCompleto: 'Rua Porto das Magnolias, 850 · Papagaio · Feira de Santana/BA · CEP 44062-105',
+  canonicalUrl: 'https://www.modopolicial.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre cognição operacional e tomada de decisão policial e não constituem treinamento oficial, orientação jurídica ou instrução para uso da força. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  email: 'a3gestaoetecnologia@gmail.com',
+  telefone: '(75) 99999-9901',
+  cnae: '49.30-2-02 - Transporte rodoviário de carga, exceto produtos perigosos e mudanças, intermunicipal, interestadual e internacional',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '03/09/2025',
+  capitalSocial: 'R$ 250.000,00',
+  breadcrumbLabel: 'Cognição e Tomada de Decisão Operacional do Policial Militar',
+  h1Override: 'Como o policial militar pensa e decide em campo — consciência situacional, de-escalada e uso progressivo da força',
+  leadOverride: 'Reunimos conteúdo informativo sobre o processo mental que guia a atuação do policial militar em situações operacionais — como se desenvolve a consciência situacional, quando e como aplicar técnicas de de-escalada, como funciona a tomada de decisão em alta pressão e quais são os princípios do uso progressivo da força. Para treinamentos oficiais, consulte os programas de qualificação da PM do seu estado.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Como o policial militar desenvolve a consciência situacional no serviço?',
+      a: 'A consciência situacional — a capacidade de perceber, compreender e antecipar o que está acontecendo ao redor — é uma das competências centrais do policiamento eficaz. Ela se desenvolve com a experiência de campo, mas também pode ser treinada. Policiais com alta consciência situacional notam inconsistências no ambiente antes de se tornarem ameaças: comportamentos fora do padrão, posicionamentos suspeitos, mudanças na dinâmica de um local. O patrulhamento ativo — em que o PM observa o ambiente com atenção deliberada em vez de apenas circular — é uma das formas mais eficazes de desenvolver essa capacidade.',
+    },
+    {
+      q: 'O que é de-escalada e quando ela é aplicada na atuação policial?',
+      a: 'De-escalada é o conjunto de técnicas e abordagens que buscam reduzir a tensão em situações potencialmente conflituosas antes de recorrer ao uso da força. Envolve comunicação verbal controlada, posicionamento físico não ameaçador, demonstração de controle emocional e oferta de alternativas ao sujeito abordado. A de-escalada é aplicável em situações onde o risco imediato à integridade física não é iminente — quando há tempo para negociar, clarificar a situação ou esperar reforços. Não é uma substituição universal ao uso da força, mas uma ferramenta que, quando aplicável, reduz riscos para todos os envolvidos, inclusive o policial.',
+    },
+    {
+      q: 'Como funciona o processo de tomada de decisão do PM em situações de alta pressão?',
+      a: 'Em situações de alta pressão, o processo decisório do PM precisa ser rápido e seguro ao mesmo tempo. Policiais bem treinados operam com modelos mentais já internalizados: padrões de situação e respostas associadas que foram praticados até se tornarem automáticos. O modelo OODA (Observar, Orientar, Decidir, Agir) é frequentemente referenciado no treinamento policial como estrutura para esse processo. O diferencial entre policiais experientes e iniciantes está na velocidade com que percorrem esse ciclo sem perder precisão.',
+    },
+    {
+      q: 'Quais são os princípios do uso progressivo da força na Polícia Militar?',
+      a: 'O uso da força pelo policial militar é regulado pelo princípio da progressividade: a resposta deve ser proporcional à resistência ou ameaça apresentada. A escala geralmente inclui, em ordem crescente: presença policial, verbalização, controle físico por contato, uso de instrumentos de menor potencial ofensivo e, em último caso, força letal. A passagem de um nível para outro deve ser justificada pela necessidade e pela proporcionalidade, e cada uso de força deve ser documentado no relatório de ocorrência.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Luiz Neto Transportes LTDA não é escritório de advocacia (CNPJ
+  // 62.535.594/0001-92, CNAE 49.30-2-02). ZapZapPage renderiza em modo neutro.
+};
+
+const PRIMEIRA_FARDA: RawConfig = {
+  hostname: 'primeirafarda.click',
+  brand: 'Primeira Farda',
+  siteSubtitle: 'Como é o Curso de Formação de Soldados da PM — Rotina, Desafios e Como se Preparar',
+  razaoSocial: 'Diesel Max Pecas e Servicos LTDA',
+  cnpj: '62545581000102',
+  cnpjFormatted: '62.545.581/0001-02',
+  endereco: 'Avenida Durval Alves de Faria, 738',
+  bairro: 'Tropical',
+  cidade: 'Contagem',
+  estado: 'MG',
+  cep: '32070-040',
+  enderecoCompleto: 'Avenida Durval Alves de Faria, 738 · Tropical · Contagem/MG · CEP 32070-040',
+  canonicalUrl: 'https://www.primeirafarda.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre o Curso de Formação de Soldados da Polícia Militar e não constituem orientação oficial sobre processos seletivos ou cursos específicos. Este site é independente e não possui vínculo com qualquer corporação policial, centro de formação ou órgão público.',
+  email: 'maxtone24@yahoo.com.br',
+  telefone: '(31) 98220-8438',
+  cnae: '45.20-0-01 - Serviços de manutenção e reparação mecânica de veículos automotores',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '03/09/2025',
+  capitalSocial: 'R$ 20.000,00',
+  breadcrumbLabel: 'Curso de Formação de Soldados da PM — Rotina e Preparação',
+  h1Override: 'Como é o Curso de Formação de Soldados da PM — rotina, desafios e o que esperar desde o primeiro dia',
+  leadOverride: 'Reunimos conteúdo informativo sobre a experiência do Curso de Formação de Soldados da Polícia Militar — como é a rotina diária, quais são os maiores desafios das primeiras semanas, o que mais surpreende quem ingressa e como se preparar física e mentalmente antes de iniciar. Para informações oficiais sobre o curso de formação do seu estado, consulte o site da PM estadual.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Como é a rotina diária dentro do Curso de Formação de Soldados da PM?',
+      a: 'A rotina do Curso de Formação de Soldados é marcada por estrutura rígida e horários fixos. O dia começa cedo — geralmente entre 5h e 6h — com formatura, atividade física e café da manhã antes do início das aulas. O período letivo combina disciplinas teóricas (legislação, direito penal, procedimentos operacionais) com treinamentos práticos (armamento, defesa pessoal, abordagem). O regime é semi-internato ou internato completo dependendo da corporação estadual. Além das atividades formais, há deveres e obrigações militares que se estendem ao tempo livre.',
+    },
+    {
+      q: 'Quais são os maiores desafios enfrentados pelos recrutas nas primeiras semanas do curso?',
+      a: 'As primeiras semanas do curso de formação representam o choque cultural mais intenso da carreira policial. Os maiores desafios relatados incluem: a adaptação ao regime de hierarquia e disciplina rígidos após anos de vida civil, o cansaço acumulado da combinação de atividade física intensa com carga horária teórica elevada, o convívio compulsório com um grupo grande de desconhecidos em ambiente fechado e a gestão emocional diante de cobranças que muitos recrutas nunca experimentaram antes. Recrutas que chegam com condicionamento físico e alguma familiaridade com rotina disciplinada tendem a ter uma adaptação mais suave.',
+    },
+    {
+      q: 'O que mais surpreende quem ingressa no Curso de Formação de Soldados da PM?',
+      a: 'O que mais surpreende não costuma ser a intensidade física — esperada por quem se preparou para o TAF — mas o volume e a complexidade do conteúdo teórico: legislação, procedimentos operacionais, uso da força, direitos humanos e ética profissional formam uma carga acadêmica que muitos recrutas subestimam. Outro ponto que surpreende é a dimensão coletiva da formação: avaliações e punições frequentemente recaem sobre o grupo, não apenas sobre o indivíduo, o que exige uma mentalidade de equipe que nem todos estão acostumados a desenvolver.',
+    },
+    {
+      q: 'Como se preparar mentalmente e fisicamente antes de iniciar o curso de formação da PM?',
+      a: 'A preparação física deve ir além do mínimo exigido no TAF — o recruta deve chegar ao curso com capacidade aeróbica e muscular acima do mínimo, pois as exigências físicas são contínuas e acumulativas. Mentalmente, familiarizar-se com a estrutura hierárquica e com os regulamentos disciplinares militares antes do início ajuda a reduzir o choque cultural. Recrutas que já leram o regulamento da corporação e entendem o que significa uma formatura chegam com vantagem real. O aspecto mais útil emocionalmente é estar preparado para abrir mão da autonomia do cotidiano civil por um período determinado.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Diesel Max Pecas e Servicos LTDA não é escritório de advocacia
+  // (CNPJ 62.545.581/0001-02, CNAE 45.20-0-01). ZapZapPage renderiza em modo neutro.
+};
+
+const PATENTE_MILITAR: RawConfig = {
+  hostname: 'patentemilitar.click',
+  brand: 'Patente Militar',
+  siteSubtitle: 'Postos, Graduações e Sistema de Promoções da Polícia Militar — de Soldado a Coronel',
+  razaoSocial: 'Fernandes Engenharia e Construcao LTDA',
+  cnpj: '62551644000125',
+  cnpjFormatted: '62.551.644/0001-25',
+  endereco: 'Rua Monsenhor Bicalho, 145, Andar 2 Sala 2',
+  bairro: 'Eldorado',
+  cidade: 'Contagem',
+  estado: 'MG',
+  cep: '32310-220',
+  enderecoCompleto: 'Rua Monsenhor Bicalho, 145, Andar 2 Sala 2 · Eldorado · Contagem/MG · CEP 32310-220',
+  canonicalUrl: 'https://www.patentemilitar.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre a estrutura hierárquica e o sistema de promoções das Polícias Militares brasileiras e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  email: 'processos@contajul.com',
+  telefone: '(31) 2115-8100',
+  cnae: '41.20-4-00 - Construção de edifícios',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '03/09/2025',
+  capitalSocial: 'R$ 30.000,00',
+  breadcrumbLabel: 'Postos, Graduações e Promoções na Polícia Militar',
+  h1Override: 'De soldado a coronel: guia completo de postos, graduações e promoções na Polícia Militar',
+  leadOverride: 'Reunimos conteúdo informativo sobre a hierarquia completa da Polícia Militar — o que cada posto e graduação representa, como funciona o sistema de promoções por merecimento e antiguidade, os critérios para progressão entre graduações de praça e o que diferencia oficiais de praças na estrutura da corporação. Para critérios específicos da PM do seu estado, consulte o Estatuto dos Policiais Militares estadual.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Quais são todos os postos e graduações da Polícia Militar, do soldado ao coronel?',
+      a: 'A estrutura hierárquica da PM divide-se em dois grandes grupos: praças e oficiais. As graduações de praça — em ordem crescente — são: Soldado, Cabo, 3º Sargento, 2º Sargento, 1º Sargento e Subtenente. Os postos de oficial são: 2º Tenente, 1º Tenente, Capitão, Major, Tenente-Coronel e Coronel. O Coronel PM é o posto mais elevado da carreira estadual. Cada corporação estadual pode ter variações de nomenclatura, e algumas possuem patentes intermediárias adicionais conforme o Estatuto próprio.',
+    },
+    {
+      q: 'Como funciona o sistema de promoções na PM — por merecimento, antiguidade ou vaga?',
+      a: 'As promoções na PM ocorrem geralmente por uma combinação de três critérios: antiguidade (tempo de serviço no posto ou graduação atual), merecimento (avaliação de desempenho, conduta disciplinar, cursos realizados e condecorações) e existência de vaga na graduação ou posto superior. Promoções entre as graduações de praça têm critérios mais objetivos, enquanto as promoções nos postos de oficial envolvem análise por Comissão de Promoções e maior peso do merecimento. Os critérios específicos são definidos pelo Estatuto dos Policiais Militares de cada estado.',
+    },
+    {
+      q: 'Quais são os critérios e prazos típicos para progressão entre as graduações de praça?',
+      a: 'Os prazos mínimos para promoção entre graduações de praça variam por estado, mas de forma geral o policial precisa cumprir um tempo mínimo em cada graduação — que costuma variar de 2 a 5 anos —, estar em situação disciplinar regular e, em alguns estados, concluir cursos de aperfeiçoamento específicos para cada nível. A promoção a Subtenente, a mais alta entre as praças, tende a exigir maior tempo de serviço e, frequentemente, conclusão do Curso de Formação de Sargentos ou equivalente.',
+    },
+    {
+      q: 'O que diferencia os oficiais dos praças na estrutura hierárquica da PM?',
+      a: 'A divisão entre praças e oficiais é a fronteira hierárquica mais significativa na PM. Os oficiais exercem funções de comando e direção — são responsáveis pelo planejamento operacional, pela gestão das unidades e pela representação institucional. Os praças executam as atividades operacionais diretas, como o policiamento ostensivo, sob supervisão dos oficiais. O ingresso nas duas carreiras ocorre por concursos distintos — um para soldado (início da carreira de praça) e outro para o Curso de Formação de Oficiais (CFO). A progressão de praça para oficial é possível, mas exige aprovação em processo seletivo específico e conclusão do CFO.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Fernandes Engenharia e Construcao LTDA não é escritório de
+  // advocacia (CNPJ 62.551.644/0001-25, CNAE 41.20-4-00). ZapZapPage renderiza
+  // em modo neutro.
+};
+
+const SONHO_DE_FARDA: RawConfig = {
+  hostname: 'sonhodefarda.click',
+  brand: 'Sonho de Farda',
+  siteSubtitle: 'Motivação, Resiliência e o Caminho Emocional até a Aprovação na PM',
+  razaoSocial: 'Pnzn Papeis Finos e Presentes LTDA',
+  cnpj: '62549874000150',
+  cnpjFormatted: '62.549.874/0001-50',
+  endereco: 'Avenida Do Batel, 1868, Quiosqq-301 Andar L-3',
+  bairro: 'Batel',
+  cidade: 'Curitiba',
+  estado: 'PR',
+  cep: '80420-090',
+  enderecoCompleto: 'Avenida Do Batel, 1868, Quiosqq-301 Andar L-3 · Batel · Curitiba/PR · CEP 80420-090',
+  canonicalUrl: 'https://www.sonhodefarda.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre motivação e preparação emocional para concursos da Polícia Militar e não constituem orientação psicológica ou aconselhamento individual. Este site é independente e não possui vínculo com qualquer corporação policial, banca organizadora ou órgão público.',
+  email: 'patiobatel.magnolia@gmail.com',
+  telefone: '(41) 99135-3002',
+  cnae: '47.61-0-03 - Comércio varejista de artigos de papelaria',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '03/09/2025',
+  capitalSocial: 'R$ 150.000,00',
+  breadcrumbLabel: 'Motivação e Resiliência na Preparação para a PM',
+  h1Override: 'Como manter o sonho da farda vivo — motivação, resiliência e o lado emocional da preparação',
+  leadOverride: 'Reunimos conteúdo informativo sobre o aspecto mais ignorado da preparação para a PM: a sustentabilidade emocional de uma jornada que pode durar anos. Como manter a motivação, o que fazer após uma reprovação, como lidar com a pressão de quem está à volta e o que muda concretamente na vida de quem conquista a aprovação.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Como manter a motivação durante uma preparação longa para o concurso da PM?',
+      a: 'Preparações que se estendem por um ou dois anos — ou mais — exigem estratégias de sustentabilidade emocional que vão além da disciplina de estudo. Dividir o objetivo final em marcos intermediários mensuráveis (dominar uma disciplina, melhorar o tempo no TAF, concluir um simulado) cria momentos de conquista que alimentam a motivação ao longo do caminho. Registrar o progresso — um diário de estudo, uma planilha de desempenho — torna o avanço visível mesmo quando ele parece lento. Manter ao menos uma atividade prazerosa fora dos estudos não é desperdício de tempo: é o que impede o esgotamento que faz candidatos abandonarem antes de chegar à reta final.',
+    },
+    {
+      q: 'O que fazer quando não se é aprovado em um ciclo do processo seletivo da PM?',
+      a: 'A não aprovação em um ciclo é uma informação, não uma sentença. O primeiro passo é identificar com precisão em qual etapa a eliminação ocorreu — prova escrita, TAF, psicológico — e o que o desempenho naquela fase diz sobre onde concentrar energia no próximo ciclo. Candidatos que repetem os mesmos erros de preparação entre ciclos tendem a obter os mesmos resultados; os que fazem uma análise honesta e ajustam a estratégia aumentam progressivamente suas chances. Dar um tempo curto para processar a frustração é saudável; transformar esse tempo em inação prolongada é o maior risco para quem quer tentar novamente.',
+    },
+    {
+      q: 'Como lidar com a pressão familiar e social durante a preparação para a PM?',
+      a: 'A pressão de quem está de fora — família, amigos, colegas — costuma vir de dois lugares: preocupação genuína com o futuro do candidato e dificuldade de compreender por que alguém investiria tanto tempo em algo sem retorno garantido. Comunicar de forma clara o que é a carreira, o que a aprovação significa concretamente e qual é o plano caso o objetivo não se concretize ajuda a transformar ceticismo em apoio. Estabelecer limites sobre quando o tema pode ser discutido em casa — evitando que cada conversa se torne uma avaliação da preparação — protege o foco e o equilíbrio emocional do candidato.',
+    },
+    {
+      q: 'O que muda na vida do candidato e da família com a aprovação na PM?',
+      a: 'A aprovação na PM representa uma mudança de vida que vai além do emprego. Para o aprovado, há a transformação identitária de tornar-se um profissional de segurança pública — com a responsabilidade, os valores e a rotina que esse papel implica. Para a família, há a estabilidade financeira que a carreira oferece, mas também a adaptação à escala de trabalho (incluindo plantões, fins de semana e feriados) e ao risco inerente à profissão. Quanto mais essa conversa acontecer antes da aprovação — com expectativas alinhadas e apoio mútuo construído —, mais suave tende a ser a transição.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Pnzn Papeis Finos e Presentes LTDA não é escritório de advocacia
+  // (CNPJ 62.549.874/0001-50, CNAE 47.61-0-03). ZapZapPage renderiza em modo neutro.
+};
+
+const HONRA_MILITAR: RawConfig = {
+  hostname: 'honramilitar.click',
+  brand: 'Honra Militar',
+  siteSubtitle: 'História, Tradições e Cultura Institucional das Polícias Militares Brasileiras',
+  razaoSocial: 'Chaveiro Auto Tecno LTDA',
+  cnpj: '62549317000139',
+  cnpjFormatted: '62.549.317/0001-39',
+  endereco: 'Avenida Alvarenga Peixoto, 508, Andar 01 Loja 03',
+  bairro: 'Amazonas',
+  cidade: 'Contagem',
+  estado: 'MG',
+  cep: '32223-450',
+  enderecoCompleto: 'Avenida Alvarenga Peixoto, 508, Andar 01 Loja 03 · Amazonas · Contagem/MG · CEP 32223-450',
+  canonicalUrl: 'https://www.honramilitar.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre a história e as tradições das Polícias Militares brasileiras e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  email: 'chaveiroautotecno@gmail.com',
+  telefone: '(31) 2565-1113',
+  cnae: '95.29-1-02 - Chaveiros',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '03/09/2025',
+  capitalSocial: 'R$ 30.000,00',
+  breadcrumbLabel: 'História e Tradições das Polícias Militares do Brasil',
+  h1Override: 'A história e as tradições que forjam a identidade da Polícia Militar brasileira',
+  leadOverride: 'Reunimos conteúdo informativo sobre a origem histórica, as cerimônias, o código de honra e o papel da hierarquia que constroem a cultura institucional das Polícias Militares brasileiras — do surgimento no século XIX até as tradições que marcam a carreira de quem veste a farda hoje. Para informações oficiais, consulte o site da PM do seu estado.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Qual é a origem histórica das Polícias Militares brasileiras?',
+      a: 'As Polícias Militares brasileiras têm origem no século XIX, com raízes que remontam às forças de segurança criadas durante o período imperial. A Guarda Real de Polícia, fundada em 1809 no Rio de Janeiro, é considerada um dos marcos fundadores da tradição policial militar no Brasil. Com a proclamação da República e a organização federativa do país, cada estado passou a estruturar sua própria corporação, herdando a tradição hierárquica e disciplinar das forças militares e incorporando progressivamente o modelo de policiamento ostensivo que permanece até hoje.',
+    },
+    {
+      q: 'Quais são as principais tradições e cerimônias que marcam a vida institucional da PM?',
+      a: 'A vida institucional da PM é pontuada por cerimônias que reforçam os vínculos de pertencimento e os valores da corporação. Entre as mais significativas estão a formatura dos novos policiais ao término do curso de formação — considerada um dos momentos mais marcantes da carreira —, a passagem de comando, que simboliza a continuidade institucional, as formaturas em datas comemorativas e as homenagens a policiais em missão. Cada corporação estadual tem suas tradições específicas, mas o caráter cerimonial e hierárquico é comum a todas.',
+    },
+    {
+      q: 'O que é o código de honra do policial militar e como ele se expressa na prática?',
+      a: 'O código de honra militar não é necessariamente um documento formal único, mas um conjunto de valores e princípios que orientam a conduta do policial dentro e fora do serviço — lealdade à corporação, cumprimento do dever mesmo sob adversidade, respeito à hierarquia, proteção dos mais vulneráveis e preservação da imagem institucional. Esses valores são transmitidos durante a formação e reforçados ao longo da carreira por meio de regulamentos disciplinares, cerimônias e da cultura interna da unidade onde o policial serve.',
+    },
+    {
+      q: 'Como a hierarquia contribui para a coesão e a eficiência operacional da Polícia Militar?',
+      a: 'A hierarquia militar garante previsibilidade na cadeia de decisão — em situações de alta pressão, saber quem decide e quem executa elimina ambiguidades que poderiam custar vidas. Ela também cria um sistema de responsabilidade vertical: cada nível responde pelos resultados de suas ações e das ações de quem está sob seu comando. Além da dimensão operacional, a hierarquia tem função simbólica — os rituais de respeito entre postos e graduações reforçam a coesão institucional e a identidade coletiva da corporação.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Chaveiro Auto Tecno LTDA não é escritório de advocacia (CNPJ
+  // 62.549.317/0001-39, CNAE 95.29-1-02). ZapZapPage renderiza em modo neutro.
+};
+
+const TRILHA_PM: RawConfig = {
+  hostname: 'trilhapm.click',
+  brand: 'Trilha PM',
+  siteSubtitle: 'Cada Etapa do Processo Seletivo da PM — Prova, TAF, Psicotécnico, Investigação e Exame Médico',
+  razaoSocial: 'Distribuidora Pecas Truck Mqn LTDA',
+  cnpj: '62549521000150',
+  cnpjFormatted: '62.549.521/0001-50',
+  endereco: 'Rua João David Perneta, 82',
+  bairro: 'Hugo Lange',
+  cidade: 'Curitiba',
+  estado: 'PR',
+  cep: '80040-330',
+  enderecoCompleto: 'Rua João David Perneta, 82 · Hugo Lange · Curitiba/PR · CEP 80040-330',
+  canonicalUrl: 'https://www.trilhapm.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre as etapas do processo seletivo da Polícia Militar e não constituem orientação jurídica ou psicológica sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial, banca organizadora ou órgão público.',
+  email: 'contapagamentos@gmail.com',
+  telefone: '(41) 3223-8875',
+  cnae: '45.30-7-01 - Comércio por atacado de peças e acessórios novos para veículos automotores',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '03/09/2025',
+  capitalSocial: 'R$ 130.000,00',
+  breadcrumbLabel: 'Etapas do Processo Seletivo da Polícia Militar',
+  h1Override: 'Da inscrição à aprovação: o que acontece em cada etapa do processo seletivo da PM',
+  leadOverride: 'Reunimos conteúdo informativo sobre todas as fases do processo seletivo da Polícia Militar — prova de conhecimentos, TAF, avaliação psicológica, investigação social e exame médico — explicando o que cada etapa avalia, como se preparar e quais fatores podem causar desclassificação. Para informações oficiais, consulte sempre o edital do estado de interesse.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Quais são todas as etapas do processo seletivo da PM e em que ordem costumam ocorrer?',
+      a: 'O processo seletivo da PM geralmente segue esta sequência: prova objetiva de conhecimentos, Teste de Aptidão Física (TAF), avaliação psicológica, exame médico, investigação social e, em alguns estados, avaliação de títulos ou entrevista. A ordem pode variar por edital — alguns estados realizam o exame médico antes da investigação social, outros invertem. Cada etapa é eliminatória; o candidato que não atinge o mínimo em qualquer fase é desclassificado independentemente do desempenho nas demais. Ler o edital do estado de interesse com atenção ao cronograma é indispensável.',
+    },
+    {
+      q: 'Como se preparar para a avaliação psicológica no processo seletivo da PM?',
+      a: 'A avaliação psicológica não tem gabarito certo ou errado — ela busca identificar características de personalidade compatíveis com o exercício da função policial, como estabilidade emocional, autocontrole, capacidade de lidar com pressão e ausência de traços que possam comprometer o julgamento em situações críticas. Candidatos que tentam manipular as respostas com base no que imaginam que os avaliadores querem ouvir costumam apresentar padrões inconsistentes, o que em si pode ser um indicativo de inadequação. A melhor preparação é estar descansado e responder com honestidade.',
+    },
+    {
+      q: 'O que é avaliado na investigação social e o que pode gerar desclassificação?',
+      a: 'A investigação social verifica a idoneidade moral e os antecedentes do candidato por meio de consulta a registros policiais, cartoriais e eleitorais, entrevistas com vizinhos e referências, e checagem de redes sociais. Podem gerar desclassificação: antecedentes criminais (mesmo sem condenação definitiva, em alguns estados), uso de substâncias ilícitas comprovado em entrevistas, vínculos com organizações criminosas, dívidas tributárias ou eleitorais não regularizadas e publicações em redes sociais incompatíveis com a conduta esperada de um agente de segurança pública.',
+    },
+    {
+      q: 'Como funciona o exame médico no processo seletivo da PM e quais condições podem causar eliminação?',
+      a: 'O exame médico avalia a aptidão física e clínica do candidato para o exercício das funções policiais. Inclui exames laboratoriais, avaliação cardiológica, oftalmológica, otorrinolaringológica e, em alguns estados, toxicológica. Condições que podem causar eliminação incluem: acuidade visual abaixo do mínimo exigido sem correção adequada, hipertensão arterial não controlada, uso de determinados medicamentos de uso contínuo, índice de massa corporal fora da faixa estabelecida em edital e resultado positivo no exame toxicológico. Os critérios variam por corporação estadual e são detalhados no edital.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Distribuidora Pecas Truck Mqn LTDA não é escritório de advocacia
+  // (CNPJ 62.549.521/0001-50, CNAE 45.30-7-01). ZapZapPage renderiza em modo neutro.
+};
+
+const FOCO_NA_FARDA: RawConfig = {
+  hostname: 'foconafarda.click',
+  brand: 'Foco na Farda',
+  siteSubtitle: 'Desempenho Mental, Concentração e Foco para o Dia da Prova da PM',
+  razaoSocial: "D' Martins Assessoria e Consultoria Unipessoal LTDA",
+  cnpj: '67588626000131',
+  cnpjFormatted: '67.588.626/0001-31',
+  endereco: 'Rua Paranaiguara, 50',
+  bairro: 'Lot Alphaville Flamboyant',
+  cidade: 'Goiânia',
+  estado: 'GO',
+  cep: '74884-667',
+  enderecoCompleto: "Rua Paranaiguara, 50 · Lot Alphaville Flamboyant · Goiânia/GO · CEP 74884-667",
+  canonicalUrl: 'https://www.foconafarda.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre desempenho mental e estratégias de foco para provas de concursos públicos e não constituem orientação psicológica ou médica individual. Este site é independente e não possui vínculo com qualquer corporação policial, banca organizadora ou órgão público.',
+  email: 'fiscalmmc@gmail.com',
+  telefone: '(61) 99253-5805',
+  cnae: '82.11-3-00 - Serviços combinados de escritório e apoio administrativo',
+  naturezaJuridica: 'Sociedade Simples Limitada',
+  dataAbertura: '19/12/2024',
+  capitalSocial: 'R$ 15.000,00',
+  breadcrumbLabel: 'Foco e Desempenho Mental para Provas da PM',
+  h1Override: 'Como chegar no estado mental ideal para a prova da PM — foco, ansiedade e desempenho',
+  leadOverride: 'Reunimos conteúdo informativo sobre as estratégias que fazem diferença no dia da prova da Polícia Militar — como controlar a ansiedade, manter o foco em provas objetivas longas, o que comer e como dormir na véspera e o que fazer nas 24 horas que antecedem o exame. Para informações sobre o conteúdo programático do seu concurso, consulte o edital oficial.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Como controlar a ansiedade na véspera e no dia da prova da PM?',
+      a: 'A ansiedade pré-prova é uma resposta fisiológica normal diante de situações de alta importância — o problema não é senti-la, mas deixar que ela comprometa o desempenho. Técnicas eficazes incluem respiração diafragmática (inspirar em 4 tempos, segurar em 4, expirar em 6), ancoragem em rotinas conhecidas (estudar no mesmo local, usar os mesmos materiais) e reduzir estímulos de alta intensidade nas 12 horas anteriores à prova — redes sociais, grupos de WhatsApp de concurseiros e revisões de última hora costumam amplificar a ansiedade sem agregar desempenho.',
+    },
+    {
+      q: 'Quais técnicas de concentração ajudam durante uma prova objetiva extensa?',
+      a: 'Em provas objetivas longas, a concentração tende a cair progressivamente. Estratégias que ajudam: responder primeiro as questões que você domina (gera confiança e economiza tempo), marcar as dúvidas para revisão posterior em vez de travar numa questão, e fazer microrrespiros de 10 segundos entre blocos de 10 questões — feche os olhos brevemente e respire fundo. Evite alterar respostas sem um motivo claro; a primeira leitura costuma ser mais confiável do que a revisão ansiosa.',
+    },
+    {
+      q: 'Como o sono e a alimentação afetam o desempenho no dia da prova da PM?',
+      a: 'O sono tem impacto direto na memória de trabalho, no tempo de reação e na capacidade de raciocínio — funções críticas em uma prova objetiva. Dormir menos de seis horas na noite anterior reduz significativamente o desempenho cognitivo, mesmo em candidatos bem preparados. Quanto à alimentação, prefira refeições de baixo índice glicêmico no dia da prova — carboidratos complexos e proteínas mantêm energia estável por mais tempo do que alimentos açucarados, que causam pico e queda rápidos de energia. Evite experimentar alimentos novos no dia; vá com o que seu organismo já conhece.',
+    },
+    {
+      q: 'O que fazer nas 24 horas anteriores à prova para chegar no estado mental ideal?',
+      a: 'As 24 horas antes da prova não são para aprender conteúdo novo — são para calibrar o estado mental. Revise apenas um resumo breve de pontos já consolidados, confirme logística (local de prova, documentos, horário de saída), prepare o material que levará (caneta, documento, água) e durma no horário habitual. Atividade física leve na manhã anterior ajuda a regular o cortisol. No dia da prova, chegue com antecedência suficiente para se acomodar sem pressa — chegar atrasado ou com pressa ativa o sistema de estresse de forma desnecessária.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — D' Martins Assessoria e Consultoria Unipessoal LTDA não é
+  // escritório de advocacia (CNPJ 67.588.626/0001-31, CNAE 82.11-3-00).
+  // ZapZapPage renderiza em modo neutro.
+};
+
+const GUIA_DO_PM: RawConfig = {
+  hostname: 'guiadopm.click',
+  brand: 'Guia do PM',
+  siteSubtitle: 'Benefícios, Assistência e Recursos Institucionais para o Policial Militar',
+  razaoSocial: 'Comex B2G LTDA',
+  cnpj: '62548749000125',
+  cnpjFormatted: '62.548.749/0001-25',
+  endereco: 'Rua Guararapes, 134',
+  bairro: 'Monte Castelo',
+  cidade: 'Contagem',
+  estado: 'MG',
+  cep: '32285-090',
+  enderecoCompleto: 'Rua Guararapes, 134 · Monte Castelo · Contagem/MG · CEP 32285-090',
+  canonicalUrl: 'https://www.guiadopm.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre recursos e benefícios institucionais disponíveis para policiais militares e não constituem consultoria jurídica ou financeira sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial, entidade de assistência ou órgão público.',
+  email: 'comexb2g@gmail.com',
+  telefone: '(31) 99138-0034',
+  cnae: '47.51-2-01 - Comércio varejista especializado de equipamentos e suprimentos de informática',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '03/09/2025',
+  capitalSocial: 'R$ 50.000,00',
+  breadcrumbLabel: 'Benefícios e Recursos Institucionais para Policiais Militares',
+  h1Override: 'Quais recursos e benefícios estão disponíveis para o policial militar durante a carreira',
+  leadOverride: 'Reunimos conteúdo informativo sobre os principais apoios institucionais acessíveis ao policial militar — caixas de assistência, associações de classe, plano de saúde corporativo, previdência complementar e cooperativas de crédito. Para informações oficiais sobre os benefícios da sua corporação, consulte o setor de recursos humanos da sua unidade ou a entidade de assistência do seu estado.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'O que é a Caixa de Assistência do Policial Militar (CAPM) e quais benefícios ela oferece?',
+      a: 'A CAPM — ou equivalente estadual, já que cada corporação tem sua própria entidade de assistência — é uma organização voltada ao suporte financeiro e social do policial militar e de seus dependentes. Em geral, oferece empréstimos em condições diferenciadas, auxílio funeral, assistência em casos de invalidez e, em alguns estados, auxílio educação para filhos de policiais. Os serviços variam por estado e exigem filiação formal; o policial deve consultar a entidade da sua corporação para conhecer os benefícios disponíveis e os critérios de acesso.',
+    },
+    {
+      q: 'Quais associações e entidades de classe existem para representar os policiais militares?',
+      a: 'As principais entidades de representação incluem associações de praças, associações de oficiais e, em alguns estados, sindicatos de servidores militares estaduais — embora a sindicalização de militares seja restrita juridicamente. Essas organizações atuam na defesa de interesses trabalhistas e previdenciários, na interlocução com o governo estadual em negociações salariais e na oferta de benefícios aos associados, como convênios com clínicas, farmácias e estabelecimentos comerciais. Cada estado possui suas próprias entidades; o policial deve verificar as opções disponíveis na corporação onde atua.',
+    },
+    {
+      q: 'Como funciona o plano de saúde disponível para o policial militar e seus dependentes?',
+      a: 'A maioria das corporações estaduais oferece alguma modalidade de assistência à saúde — seja por meio de sistema próprio (policlínicas e hospitais militares), convênios com operadoras de saúde ou fundo de assistência gerido pela própria PM. A cobertura, o custeio e as condições de inclusão de dependentes variam bastante entre os estados. Em algumas corporações, o benefício é parcialmente custeado pelo estado; em outras, o policial arca com parte da mensalidade. O policial deve consultar o setor de recursos humanos da sua unidade para entender as opções disponíveis.',
+    },
+    {
+      q: 'O policial militar tem acesso a previdência complementar ou cooperativas de crédito?',
+      a: 'Sim, em muitos estados. Cooperativas de crédito voltadas a servidores militares oferecem condições de empréstimo, financiamento e investimento mais favoráveis do que as instituições financeiras convencionais — com taxas de juros reduzidas e prazos diferenciados. Quanto à previdência complementar, alguns estados criaram fundos específicos para servidores públicos estaduais, incluindo policiais militares, especialmente após as reformas previdenciárias que alteraram o teto dos benefícios do RPPS. A adesão e as condições variam por estado e exigem consulta direta à entidade gestora.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Comex B2G LTDA não é escritório de advocacia (CNPJ
+  // 62.548.749/0001-25, CNAE 47.51-2-01). ZapZapPage renderiza em modo neutro.
+};
+
+const MISSAO_FARDA: RawConfig = {
+  hostname: 'missaofarda.click',
+  brand: 'Missão Farda',
+  siteSubtitle: 'Vocação, Propósito e o Significado de Servir na Polícia Militar',
+  razaoSocial: 'Jl Distribuidora Retiro Ltda.',
+  cnpj: '62539537000181',
+  cnpjFormatted: '62.539.537/0001-81',
+  endereco: 'Rua Ilha do Retiro, 92, Loja Lj',
+  bairro: 'Retiro',
+  cidade: 'Contagem',
+  estado: 'MG',
+  cep: '32050-510',
+  enderecoCompleto: 'Rua Ilha do Retiro, 92, Loja Lj · Retiro · Contagem/MG · CEP 32050-510',
+  canonicalUrl: 'https://www.missaofarda.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre vocação e carreira na Polícia Militar e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  email: 'jldistribuidoraretiro@gmail.com',
+  telefone: '(31) 97319-7498',
+  cnae: '47.23-7-00 - Comércio varejista de bebidas',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '03/09/2025',
+  capitalSocial: 'R$ 30.000,00',
+  breadcrumbLabel: 'Vocação e Propósito na Carreira de Policial Militar',
+  h1Override: 'O que significa vestir a farda — vocação, missão e propósito na carreira policial',
+  leadOverride: 'Reunimos conteúdo informativo sobre o que motiva quem escolhe a carreira de policial militar, como a missão de servir se manifesta no dia a dia profissional e como conciliar valores pessoais com as exigências de uma instituição hierárquica. Para informações sobre processos seletivos, consulte o site da PM do seu estado.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'O que motiva as pessoas a escolherem a carreira de policial militar?',
+      a: 'As motivações variam muito entre indivíduos, mas pesquisas com policiais militares apontam padrões comuns: o desejo de contribuir diretamente com a segurança da comunidade, a atração pela estrutura e pelos valores da vida militar, a estabilidade que a carreira oferece e, em muitos casos, a influência de familiares que também serviram. Para parte expressiva dos policiais, a escolha envolve uma dimensão vocacional genuína — uma identificação com o papel de proteger e servir que antecede a decisão de prestar o concurso.',
+    },
+    {
+      q: 'Como a vocação para servir se manifesta no cotidiano do policial militar?',
+      a: 'No dia a dia, a vocação se traduz em comprometimento com a missão mesmo em situações de alta pressão, na postura ativa diante de ocorrências que exigem iniciativa e na relação de respeito construída com a comunidade ao longo do tempo. Policiais que enxergam o serviço como missão tendem a manter conduta mais consistente, a buscar qualificação contínua e a enfrentar o desgaste da carreira com mais resiliência do que aqueles que ingressaram exclusivamente por estabilidade financeira.',
+    },
+    {
+      q: 'Qual é o papel da Polícia Militar na segurança pública da comunidade?',
+      a: 'A Polícia Militar é responsável pelo policiamento ostensivo e pela preservação da ordem pública — atua de forma visível, preventiva e reativa nas ruas, em eventos e em situações de emergência. Além do atendimento a ocorrências, a PM tem papel relevante no policiamento comunitário, na mediação de conflitos e na construção de vínculos de confiança com a população. A efetividade dessa missão depende tanto do preparo técnico quanto da postura ética e da qualidade da relação que cada policial estabelece com a comunidade em que atua.',
+    },
+    {
+      q: 'Como conciliar os valores pessoais com as exigências institucionais da carreira policial?',
+      a: 'A carreira policial impõe valores e normas institucionais — hierarquia, disciplina, obediência a regulamentos — que nem sempre coincidem de forma imediata com os valores individuais de cada profissional. A conciliação saudável passa por compreender que a estrutura institucional existe para garantir coesão e previsibilidade, enquanto o espaço para a expressão dos valores pessoais acontece dentro dos limites que essa estrutura permite. Corporações que investem em formação ética e em canais de escuta criam ambientes onde profissionais comprometidos conseguem manter integridade e pertencimento ao mesmo tempo.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Jl Distribuidora Retiro Ltda. não é escritório de advocacia
+  // (CNPJ 62.539.537/0001-81, CNAE 47.23-7-00). ZapZapPage renderiza em modo neutro.
+};
+
+const MINHA_FARDA: RawConfig = {
+  hostname: 'minhafarda.click',
+  brand: 'Minha Farda',
+  siteSubtitle: 'Composição, Cuidados e Regulamentos do Uniforme da Polícia Militar',
+  razaoSocial: 'Ink Grafica LTDA',
+  cnpj: '62550653000100',
+  cnpjFormatted: '62.550.653/0001-00',
+  endereco: 'Rua Cruzeiro do Sul, 953, Loja',
+  bairro: 'Novo Progresso',
+  cidade: 'Contagem',
+  estado: 'MG',
+  cep: '32115-170',
+  enderecoCompleto: 'Rua Cruzeiro do Sul, 953, Loja · Novo Progresso · Contagem/MG · CEP 32115-170',
+  canonicalUrl: 'https://www.minhafarda.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre o uniforme e o fardamento da Polícia Militar e não constituem orientação oficial de qualquer corporação. Este site é independente e não possui vínculo com nenhuma Polícia Militar estadual ou órgão público.',
+  email: 'contatograficaink@gmail.com',
+  telefone: '(31) 98384-9251',
+  cnae: '18.22-9-99 - Serviços de acabamentos gráficos, exceto encadernação e plastificação',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '03/09/2025',
+  capitalSocial: 'R$ 115.000,00',
+  breadcrumbLabel: 'Uniforme e Fardamento da Polícia Militar',
+  h1Override: 'Tudo sobre o uniforme da PM — composição, cuidados e o que diz o regulamento',
+  leadOverride: 'Reunimos conteúdo informativo sobre o fardamento da Polícia Militar — quais peças compõem cada modalidade de uniforme, como conservar corretamente cada item, as regras de uso fora do serviço e como funciona o fornecimento do fardamento ao ingressar na corporação. Para informações oficiais, consulte o regulamento de uniformes da PM do seu estado.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Quais são os principais itens que compõem o uniforme da Polícia Militar?',
+      a: 'O fardamento da PM é composto por diferentes modalidades conforme a ocasião: o uniforme de serviço (diário) inclui calça, camisa ou gandola, coturno, quepe ou boné e cinto de guarnição. O uniforme de gala é utilizado em cerimônias e conta com peças adicionais como dolmã, calça com vivo e dragonas. Cada corporação estadual tem seu regulamento de uniformes específico, que define cores, insígnias, posicionamento de distintivos e regras de uso para cada modalidade.',
+    },
+    {
+      q: 'Como cuidar e conservar adequadamente o uniforme da PM para mantê-lo em boas condições?',
+      a: 'A conservação do uniforme começa pela lavagem correta: peças de tecido resistente como a gandola devem ser lavadas em água fria com sabão neutro para preservar a cor e o caimento. O coturno exige limpeza regular com flanela e graxa própria, além de impermeabilização periódica. Quepes e bonés não devem ser lavados na máquina — prefira limpeza com escova seca e pano úmido. Guardar o uniforme em local arejado, pendurado em cabide adequado, evita amassados e o aparecimento de mofo em regiões úmidas.',
+    },
+    {
+      q: 'Existem regras sobre o uso do uniforme da PM fora do horário de serviço?',
+      a: 'Sim. O uso do uniforme fora do serviço é regulado por cada corporação estadual e, em geral, é permitido apenas em situações específicas previstas no regulamento interno — como deslocamento para o trabalho ou em eventos autorizados pela corporação. O uso indevido do uniforme em ambientes que possam comprometer a imagem institucional é vedado e pode sujeitar o policial a procedimento disciplinar. Alguns estados permitem o porte de arma fora do serviço, mas com regras específicas sobre identificação e uniforme.',
+    },
+    {
+      q: 'Como funciona o fornecimento do uniforme ao ingressar na PM como novo policial?',
+      a: 'Em geral, a corporação fornece o kit inicial de fardamento ao recruta durante o curso de formação — incluindo os itens essenciais para o período de instrução. A quantidade e as peças fornecidas variam por estado, e alguns itens podem exigir aquisição complementar pelo próprio policial ao longo da carreira. Após o ingresso, o policial tem direito a reposição periódica de itens do fardamento conforme regulamento interno, que define prazos e condições para substituição das peças desgastadas.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Ink Grafica LTDA não é escritório de advocacia (CNPJ
+  // 62.550.653/0001-00, CNAE 18.22-9-99). ZapZapPage renderiza em modo neutro.
+};
+
+const PROXIMO_EDITAL: RawConfig = {
+  hostname: 'proximoedital.click',
+  brand: 'Próximo Edital',
+  siteSubtitle: 'Como Monitorar e Antecipar Editais de Concursos da Polícia Militar',
+  razaoSocial: 'Br Motos LTDA',
+  cnpj: '62550094000120',
+  cnpjFormatted: '62.550.094/0001-20',
+  endereco: 'Avenida T9, 2840, Box 30',
+  bairro: 'Bro Jardim America',
+  cidade: 'Goiânia',
+  estado: 'GO',
+  cep: '74255-220',
+  enderecoCompleto: 'Avenida T9, 2840, Box 30 · Bro Jardim America · Goiânia/GO · CEP 74255-220',
+  canonicalUrl: 'https://www.proximoedital.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre o monitoramento de editais de concursos públicos e não constituem previsão oficial de abertura de seleções ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial, banca organizadora ou órgão público.',
+  email: 'rodrigotaioba@gmail.com',
+  telefone: '(19) 99819-9067',
+  cnae: '77.11-0-00 - Locação de automóveis sem condutor',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '03/09/2025',
+  capitalSocial: 'R$ 270.000,00',
+  breadcrumbLabel: 'Monitoramento de Editais e Previsões de Concursos da PM',
+  h1Override: 'Como acompanhar o próximo edital de concurso da PM e não perder nenhuma oportunidade',
+  leadOverride: 'Reunimos conteúdo informativo sobre como monitorar a publicação de novos editais de concursos da Polícia Militar — quais fontes acompanhar, quais estados abrem seleções com maior regularidade e como aproveitar o período de espera entre editais para chegar preparado. Para informações oficiais, consulte o Diário Oficial do seu estado e o site da PM estadual.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Como saber quando vai sair o próximo edital de concurso da PM do meu estado?',
+      a: 'Não existe um calendário oficial antecipado de concursos da PM — cada edital depende de autorização legislativa, dotação orçamentária e decisão do governo estadual. A forma mais confiável de se antecipar é acompanhar o Diário Oficial do estado, o site institucional da PM estadual e as sessões da Assembleia Legislativa, onde projetos de lei autorizando concursos costumam tramitar meses antes da publicação do edital. Portais especializados em concursos públicos também monitoram esses movimentos e publicam notícias sobre previsões e autorizações em andamento.',
+    },
+    {
+      q: 'Quais estados da PM costumam abrir concursos com maior regularidade?',
+      a: 'Estados com maior efetivo e maior taxa de saída por aposentadoria tendem a abrir concursos com mais frequência — São Paulo, Minas Gerais, Bahia e Rio Grande do Sul historicamente figuram entre as corporações que realizam seleções em intervalos menores. Estados com menor efetivo ou orçamento mais restrito podem passar vários anos sem abrir vagas. Acompanhar o histórico de editais publicados nos últimos cinco anos é uma boa forma de estimar a cadência de cada corporação.',
+    },
+    {
+      q: 'O que fazer no período de espera entre editais para não perder a preparação?',
+      a: 'O intervalo entre editais é um dos momentos mais estratégicos da preparação: sem a pressão imediata de uma data de prova, é possível consolidar conteúdos com mais profundidade, trabalhar disciplinas com menor percentual de acerto e construir o condicionamento físico de forma progressiva. Candidatos que aproveitam esse período chegam ao edital seguinte com base sólida e precisam apenas ajustar o foco ao conteúdo específico do certame. Abandonar os estudos durante a espera é o erro mais comum entre quem tenta repetidamente.',
+    },
+    {
+      q: 'Como se manter atualizado sobre novos editais de concursos militares sem depender de uma única fonte?',
+      a: 'A estratégia mais robusta combina múltiplas fontes: ativar alertas do Google para termos como "edital PM [estado]", assinar o Diário Oficial estadual por e-mail quando disponível, seguir os perfis oficiais da PM nas redes sociais e acompanhar grupos e comunidades de concurseiros do seu estado. Cada fonte tem velocidade e confiabilidade diferentes — o Diário Oficial é a fonte primária e definitiva, enquanto portais e redes sociais agilizam o acesso à informação, mas podem conter imprecisões antes da confirmação oficial.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Br Motos LTDA não é escritório de advocacia (CNPJ
+  // 62.550.094/0001-20, CNAE 77.11-0-00). ZapZapPage renderiza em modo neutro.
+};
+
+const PANORAMA_PM: RawConfig = {
+  hostname: 'panoramapm.click',
+  brand: 'Panorama PM',
+  siteSubtitle: 'Do Ingresso à Aposentadoria: a Carreira Completa do Policial Militar',
+  razaoSocial: 'Anacarlaperiodontia LTDA',
+  cnpj: '62523695000143',
+  cnpjFormatted: '62.523.695/0001-43',
+  endereco: 'Avenida Governador Joao Durval Carneiro, 3803, Edif Charmant Sala 913',
+  bairro: 'Sao Joao',
+  cidade: 'Feira de Santana',
+  estado: 'BA',
+  cep: '44051-335',
+  enderecoCompleto: 'Avenida Governador Joao Durval Carneiro, 3803, Edif Charmant Sala 913 · Sao Joao · Feira de Santana/BA · CEP 44051-335',
+  canonicalUrl: 'https://www.panoramapm.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre a estrutura de carreira da Polícia Militar e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  email: 'acmpperiodontia@gmail.com',
+  telefone: '(71) 98605-0042',
+  cnae: '86.30-5-04 - Atividade odontológica',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '02/09/2025',
+  capitalSocial: 'R$ 130.000,00',
+  breadcrumbLabel: 'Trajetória Completa da Carreira de Policial Militar',
+  h1Override: 'A carreira de policial militar do início ao fim — graduações, especialidades e aposentadoria',
+  leadOverride: 'Reunimos conteúdo informativo sobre toda a trajetória possível dentro da Polícia Militar — da formação como soldado à progressão de graduações, especialidades disponíveis, possibilidade de acesso ao CFO e como funciona a aposentadoria. Para informações oficiais, consulte sempre a PM do seu estado.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Qual é a progressão de carreira completa de um policial militar, do ingresso à aposentadoria?',
+      a: 'A carreira de praça começa no ingresso como soldado e pode progredir, via cursos internos e avaliações, pelas graduações de cabo, terceiro, segundo e primeiro sargentos, subtenente e aspirante. Praças com perfil e requisitos adequados podem acessar o Curso de Formação de Oficiais (CFO) e iniciar a carreira de oficial — de segundo-tenente a coronel. Em paralelo, é possível se especializar em áreas como inteligência, trânsito, policiamento ambiental ou montado. A aposentadoria voluntária ocorre após tempo de contribuição definido em lei estadual, geralmente entre 25 e 30 anos de serviço.',
+    },
+    {
+      q: 'Em quanto tempo um soldado recém-formado pode alcançar a graduação de sargento?',
+      a: 'O tempo varia por corporação estadual, mas em média um soldado pode chegar ao posto de terceiro-sargento em oito a doze anos de serviço, após cumprir os interstícios mínimos em cada graduação, concluir o Curso de Formação de Sargentos (CFS) e ser aprovado nas avaliações de desempenho. Estados com maior efetivo e rotatividade tendem a ter progressão mais rápida; corporações menores podem apresentar estagnação em determinadas graduações por ausência de vagas.',
+    },
+    {
+      q: 'Quais são as principais especialidades disponíveis dentro da Polícia Militar?',
+      a: 'As PMs estaduais oferecem diversas especialidades além do policiamento ostensivo convencional: policiamento de trânsito (BPTran), policiamento ambiental, policiamento montado (cavalaria), unidades de operações especiais (COE, BOPE, GATE), policiamento comunitário, inteligência policial e aviação. O acesso a cada especialidade depende de tempo de serviço, requisitos físicos específicos e aprovação em processo seletivo interno. Cada especialização abre um percurso diferente dentro da carreira.',
+    },
+    {
+      q: 'Como funciona a aposentadoria do policial militar e quais são os requisitos?',
+      a: 'A aposentadoria do policial militar é regida pelo Estatuto dos Militares Estaduais de cada estado. Em geral, a aposentadoria voluntária exige um mínimo de anos de serviço — frequentemente 25 anos para as praças e 30 para os oficiais — além de idade mínima definida pela legislação previdenciária estadual. A reforma compulsória ocorre ao atingir o limite de idade para o posto ou graduação. Os proventos variam conforme o tempo de serviço, o posto final e as regras de transição aplicáveis a cada corporação.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Anacarlaperiodontia LTDA não é escritório de advocacia (CNPJ
+  // 62.523.695/0001-43, CNAE 86.30-5-04). ZapZapPage renderiza em modo neutro.
+};
+
 const CRONOGRAMA_PM: RawConfig = {
   hostname: 'cronogramapm.click',
   brand: 'Cronograma PM',
@@ -1833,6 +2411,30 @@ const CONFIGS: Record<string, RawConfig> = {
   'www.editalmilitar.click': EDITAL_MILITAR,
   'cronogramapm.click': CRONOGRAMA_PM,
   'www.cronogramapm.click': CRONOGRAMA_PM,
+  'panoramapm.click': PANORAMA_PM,
+  'www.panoramapm.click': PANORAMA_PM,
+  'proximoedital.click': PROXIMO_EDITAL,
+  'www.proximoedital.click': PROXIMO_EDITAL,
+  'minhafarda.click': MINHA_FARDA,
+  'www.minhafarda.click': MINHA_FARDA,
+  'missaofarda.click': MISSAO_FARDA,
+  'www.missaofarda.click': MISSAO_FARDA,
+  'guiadopm.click': GUIA_DO_PM,
+  'www.guiadopm.click': GUIA_DO_PM,
+  'foconafarda.click': FOCO_NA_FARDA,
+  'www.foconafarda.click': FOCO_NA_FARDA,
+  'trilhapm.click': TRILHA_PM,
+  'www.trilhapm.click': TRILHA_PM,
+  'honramilitar.click': HONRA_MILITAR,
+  'www.honramilitar.click': HONRA_MILITAR,
+  'sonhodefarda.click': SONHO_DE_FARDA,
+  'www.sonhodefarda.click': SONHO_DE_FARDA,
+  'patentemilitar.click': PATENTE_MILITAR,
+  'www.patentemilitar.click': PATENTE_MILITAR,
+  'primeirafarda.click': PRIMEIRA_FARDA,
+  'www.primeirafarda.click': PRIMEIRA_FARDA,
+  'modopolicial.click': MODO_POLICIAL,
+  'www.modopolicial.click': MODO_POLICIAL,
 };
 
 function resolveHostname(): string {

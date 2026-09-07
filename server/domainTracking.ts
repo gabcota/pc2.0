@@ -467,6 +467,40 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
     stateCode: "CE",
     themeColor: "#7a5c00",
   },
+  // cronogramapm.click — Cop Odontologia Premium LTDA (Sociedade Empresária
+  // Limitada, CNAE 86.30-5-04, atividade odontológica), sediada em Feira de
+  // Santana/BA. Não é escritório de advocacia. Mantida em sincronia com
+  // client/src/lib/siteConfig.ts (CRONOGRAMA_PM); atualizar ambos se os dados
+  // cadastrais mudarem.
+  "cronogramapm.click": {
+    brand: "Cronograma PM",
+    razaoSocial: "Cop Odontologia Premium LTDA",
+    cnpj: "62.509.737/0001-91",
+    address: "Avenida Getulio Vargas, 456",
+    postalCode: "44001-192",
+    emailContato: "fiscal@sgcon.com.br",
+    phone: "(75) 3616-7471",
+    city: "Feira de Santana",
+    stateCode: "BA",
+    themeColor: "#1f4e79",
+  },
+  // editalmilitar.click — Bittencourt Berenguer Cesar Ativos LTDA (Sociedade
+  // Empresária Limitada, CNAE 74.90-1-04, intermediação e agenciamento de
+  // serviços e negócios), sediada em Feira de Santana/BA. Não é escritório de
+  // advocacia. Mantida em sincronia com client/src/lib/siteConfig.ts
+  // (EDITAL_MILITAR); atualizar ambos se os dados cadastrais mudarem.
+  "editalmilitar.click": {
+    brand: "Edital Militar",
+    razaoSocial: "Bittencourt Berenguer Cesar Ativos LTDA",
+    cnpj: "62.532.283/0001-70",
+    address: "Rua Fernando Ferrari, 614",
+    postalCode: "44088-066",
+    emailContato: "contato@bberenguercesarativos.com.br",
+    phone: "(71) 99686-0916",
+    city: "Feira de Santana",
+    stateCode: "BA",
+    themeColor: "#1e2d5e",
+  },
   // futurosoldado.click — Mb Internacional LTDA (Sociedade Empresária Limitada,
   // CNAE 82.11-3-00, serviços combinados de escritório e apoio administrativo),
   // sediada em Guarulhos/SP. Não é escritório de advocacia. Mantida em sincronia
@@ -1027,6 +1061,50 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
     {
       q: "É possível tirar dúvidas sobre ética e conduta policial pelo WhatsApp?",
       a: "Sim. Você pode enviar sua dúvida sobre valores, disciplina e missão profissional na carreira de policial militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para questões específicas sobre o seu caso, recomendamos consultar a corporação responsável ou um profissional especializado.",
+    },
+  ],
+  "cronogramapm.click": [
+    {
+      q: "Como montar um cronograma semanal de estudos para o concurso da PM?",
+      a: "Um cronograma semanal eficiente começa pelo mapeamento do tempo disponível: some as horas livres de segunda a domingo, desconte sono, alimentação, deslocamento e obrigações fixas. Com o tempo real em mãos, distribua as disciplinas do edital proporcionalmente ao seu peso na prova e à sua dificuldade atual. Reserve ao menos dois blocos semanais para revisão do conteúdo já estudado e um bloco para resolução de questões — sem isso, o cronograma vira acumulação de conteúdo sem fixação.",
+    },
+    {
+      q: "Como distribuir o tempo de estudo entre as disciplinas do concurso da PM?",
+      a: "A distribuição ideal parte da análise do edital: verifique quantas questões cada disciplina representa na prova objetiva e qual é seu percentual de acerto atual nessa matéria. Disciplinas com alto peso e baixo domínio recebem mais tempo; disciplinas já consolidadas entram em modo de manutenção com revisões espaçadas. Matemática e raciocínio lógico costumam exigir estudo diário para manter o ritmo, enquanto história e geografia permitem blocos alternados sem perda significativa de desempenho.",
+    },
+    {
+      q: "Como adaptar o cronograma de estudos para quem trabalha em tempo integral?",
+      a: "Quem trabalha precisa ser ainda mais estratégico: blocos curtos e frequentes funcionam melhor do que sessões longas e irregulares. Madrugadas ou manhãs antes do trabalho, horário de almoço e o período logo após o jantar são janelas que, somadas, podem render de duas a três horas diárias. Áudios e podcasts de conteúdo durante o deslocamento complementam sem substituir o estudo ativo. Nos finais de semana, períodos mais longos permitem avançar em conteúdos que exigem maior concentração.",
+    },
+    {
+      q: "Com que antecedência o cronograma deve ser intensificado antes da data da prova?",
+      a: "A fase de intensificação geralmente começa de quatro a seis semanas antes da prova, quando o foco se desloca do conteúdo novo para a revisão e a resolução intensiva de questões e simulados. Nessa fase, é recomendável reduzir o volume de novos tópicos e aumentar a proporção de questões comentadas e provas anteriores da mesma banca. A semana da prova deve ser de revisão leve, descanso ativo e preparação logística — sem conteúdo novo, que gera ansiedade sem benefício mensurável.",
+    },
+    {
+      q: "É possível tirar dúvidas sobre como montar um cronograma de estudos para a PM pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre organização de tempo, distribuição de disciplinas e gestão de cronograma para concursos da Polícia Militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientações específicas sobre o edital do seu estado, recomendamos consultar o site oficial da banca organizadora.",
+    },
+  ],
+  "editalmilitar.click": [
+    {
+      q: "Quais são as informações mais críticas para verificar imediatamente ao sair um edital da PM?",
+      a: "Ao abrir um edital de concurso da PM, priorize verificar: limite de idade na data da inscrição ou da posse (os critérios variam), escolaridade exigida, requisitos de idoneidade moral e antecedentes, número de vagas por cargo e localidade, e o cronograma completo — da inscrição até a nomeação estimada. Em seguida, leia atentamente as causas de eliminação sumária, que costumam incluir condições médicas, tatuagens visíveis em farda e antecedentes criminais específicos.",
+    },
+    {
+      q: "Quais critérios de eliminação candidatos frequentemente ignoram ao ler um edital militar?",
+      a: "Entre os critérios que mais surpreendem candidatos estão: restrições relacionadas a tatuagens em regiões visíveis com o uniforme, histórico de uso de substâncias ilícitas apurado na investigação social, pendências com a Justiça Eleitoral ou Militar, e incompatibilidade de acúmulo de cargo público. Alguns editais também vedam a participação de candidatos que tenham sido demitidos de cargo público por justa causa ou respondido a processo administrativo disciplinar. Ler o capítulo de requisitos de forma integral — não apenas os resumos — é indispensável.",
+    },
+    {
+      q: "Como interpretar a tabela de pontuação e os critérios de desempate em editais militares?",
+      a: "A tabela de pontuação define o peso de cada etapa (prova objetiva, TAF, avaliação psicológica, títulos, etc.) no cômputo final. É fundamental verificar quais etapas são eliminatórias e qual a nota mínima de corte em cada uma — pois uma nota abaixo do mínimo exclui o candidato independentemente do desempenho nas demais fases. Os critérios de desempate costumam seguir uma ordem definida: maior idade, maior pontuação na prova objetiva e, em alguns editais, tempo de serviço público anterior.",
+    },
+    {
+      q: "Qual é o prazo para recurso nas etapas eliminatórias e como acompanhá-lo?",
+      a: "Os prazos para interposição de recursos variam por edital, mas costumam ser de um a dois dias úteis após a divulgação do resultado de cada fase. É essencial acompanhar o cronograma publicado no site oficial da banca organizadora e no Diário Oficial do estado, pois atrasos na leitura dos resultados podem fazer o candidato perder o prazo recursal. Guarde prints do resultado, da publicação oficial e do protocolo do recurso como comprovação caso haja necessidade de contestação posterior.",
+    },
+    {
+      q: "É possível tirar dúvidas sobre editais militares pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre como interpretar requisitos, prazos e critérios de editais de concursos da Polícia Militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para esclarecimentos oficiais sobre um edital específico, recomendamos consultar diretamente a banca organizadora ou o site da corporação responsável pelo concurso.",
     },
   ],
   "futurosoldado.click": [
@@ -2249,6 +2327,82 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
       "Conteúdo informativo sobre o CFO da Polícia Militar — processo seletivo, TAF, avaliação psicológica e progressão na carreira de oficial. Espaco Amari LTDA — Fortaleza/CE.",
     analyticsCore: "signal.d8e1a945",
     gtmId: "GTM-W9MLXKSZ",
+  },
+  "cronogramapm.click": {
+    domain: "cronogramapm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Cop Odontologia Premium LTDA",
+    description:
+      "Conteúdo informativo sobre como montar e gerenciar cronogramas de estudo para concursos da Polícia Militar — distribuição de tempo por disciplina, adaptação para quem trabalha e quando intensificar a preparação antes da prova. Cop Odontologia Premium LTDA · CNPJ 62.509.737/0001-91 · Feira de Santana/BA.",
+    author: "Cop Odontologia Premium LTDA",
+    ogType: "website",
+    siteName: "Cop Odontologia Premium LTDA",
+    ogTitle:
+      "Cronograma PM — Como Organizar o Tempo de Estudos para o Concurso da Polícia Militar | Cop Odontologia",
+    ogDescription:
+      "Conteúdo informativo sobre cronogramas de estudo para concursos da PM — distribuição por disciplina, rotina para quem trabalha e fase de intensificação pré-prova. Cop Odontologia Premium LTDA — Feira de Santana/BA.",
+    analyticsCore: "signal.b3d7f619",
+    gtmId: "GTM-5W5HPHTP",
+  },
+  "www.cronogramapm.click": {
+    domain: "cronogramapm.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Cop Odontologia Premium LTDA",
+    description:
+      "Conteúdo informativo sobre como montar e gerenciar cronogramas de estudo para concursos da Polícia Militar — distribuição de tempo por disciplina, adaptação para quem trabalha e quando intensificar a preparação antes da prova. Cop Odontologia Premium LTDA · CNPJ 62.509.737/0001-91 · Feira de Santana/BA.",
+    author: "Cop Odontologia Premium LTDA",
+    ogType: "website",
+    siteName: "Cop Odontologia Premium LTDA",
+    ogTitle:
+      "Cronograma PM — Como Organizar o Tempo de Estudos para o Concurso da Polícia Militar | Cop Odontologia",
+    ogDescription:
+      "Conteúdo informativo sobre cronogramas de estudo para concursos da PM — distribuição por disciplina, rotina para quem trabalha e fase de intensificação pré-prova. Cop Odontologia Premium LTDA — Feira de Santana/BA.",
+    analyticsCore: "signal.b3d7f619",
+    gtmId: "GTM-5W5HPHTP",
+  },
+  "editalmilitar.click": {
+    domain: "editalmilitar.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Bittencourt Berenguer Cesar Ativos LTDA",
+    description:
+      "Conteúdo informativo sobre como ler e interpretar editais de concursos da Polícia Militar — quais informações verificar primeiro, critérios de eliminação ignorados, tabelas de pontuação e prazos de recurso por fase. Bittencourt Berenguer Cesar Ativos LTDA · CNPJ 62.532.283/0001-70 · Feira de Santana/BA.",
+    author: "Bittencourt Berenguer Cesar Ativos LTDA",
+    ogType: "website",
+    siteName: "Bittencourt Berenguer Cesar Ativos LTDA",
+    ogTitle:
+      "Edital Militar — Como Ler, Interpretar e Não Perder Nada em Concursos da PM | Bittencourt Ativos",
+    ogDescription:
+      "Conteúdo informativo sobre a anatomia de editais militares — requisitos, critérios de eliminação, pontuação e prazos de recurso. Bittencourt Berenguer Cesar Ativos LTDA — Feira de Santana/BA.",
+    analyticsCore: "signal.a2c8e531",
+    gtmId: "GTM-TMSV3TT3",
+  },
+  "www.editalmilitar.click": {
+    domain: "editalmilitar.click",
+    faviconPath: "/favicon.svg",
+    ogImage: "/favicon.svg",
+    clarityId: null,
+    homepageKey: "zapzap",
+    title: "Bittencourt Berenguer Cesar Ativos LTDA",
+    description:
+      "Conteúdo informativo sobre como ler e interpretar editais de concursos da Polícia Militar — quais informações verificar primeiro, critérios de eliminação ignorados, tabelas de pontuação e prazos de recurso por fase. Bittencourt Berenguer Cesar Ativos LTDA · CNPJ 62.532.283/0001-70 · Feira de Santana/BA.",
+    author: "Bittencourt Berenguer Cesar Ativos LTDA",
+    ogType: "website",
+    siteName: "Bittencourt Berenguer Cesar Ativos LTDA",
+    ogTitle:
+      "Edital Militar — Como Ler, Interpretar e Não Perder Nada em Concursos da PM | Bittencourt Ativos",
+    ogDescription:
+      "Conteúdo informativo sobre a anatomia de editais militares — requisitos, critérios de eliminação, pontuação e prazos de recurso. Bittencourt Berenguer Cesar Ativos LTDA — Feira de Santana/BA.",
+    analyticsCore: "signal.a2c8e531",
+    gtmId: "GTM-TMSV3TT3",
   },
   "futurosoldado.click": {
     domain: "futurosoldado.click",

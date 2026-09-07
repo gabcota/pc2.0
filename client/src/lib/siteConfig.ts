@@ -1431,6 +1431,103 @@ const PM_DO_MEU_ESTADO: RawConfig = {
   // 57.507.866/0001-00, CNAE 59.11-1-99). ZapZapPage renderiza em modo neutro.
 };
 
+const CRONOGRAMA_PM: RawConfig = {
+  hostname: 'cronogramapm.click',
+  brand: 'Cronograma PM',
+  siteSubtitle: 'Como Organizar e Gerenciar o Tempo de Estudos para o Concurso da PM',
+  razaoSocial: 'Cop Odontologia Premium LTDA',
+  cnpj: '62509737000191',
+  cnpjFormatted: '62.509.737/0001-91',
+  endereco: 'Avenida Getulio Vargas, 456',
+  bairro: 'Centro',
+  cidade: 'Feira de Santana',
+  estado: 'BA',
+  cep: '44001-192',
+  enderecoCompleto: 'Avenida Getulio Vargas, 456 · Centro · Feira de Santana/BA · CEP 44001-192',
+  canonicalUrl: 'https://www.cronogramapm.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre organização e gerenciamento de estudos para concursos públicos e não constituem garantia de aprovação ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial, banca organizadora ou órgão público.',
+  email: 'fiscal@sgcon.com.br',
+  telefone: '(75) 3616-7471',
+  cnae: '86.30-5-04 - Atividade odontológica',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '01/09/2025',
+  capitalSocial: 'R$ 200.000,00',
+  breadcrumbLabel: 'Cronograma e Gestão de Tempo para Concursos da PM',
+  h1Override: 'Como montar um cronograma de estudos que realmente funciona para o concurso da PM',
+  leadOverride: 'Reunimos conteúdo informativo sobre como estruturar e adaptar um cronograma de estudos para concursos da Polícia Militar — distribuição de horas por disciplina, estratégias para quem trabalha em tempo integral e como ajustar o ritmo nas semanas que antecedem a prova. Para informações oficiais sobre editais, consulte sempre a PM do seu estado.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Como montar um cronograma semanal de estudos para o concurso da PM?',
+      a: 'Um cronograma semanal eficiente começa pelo mapeamento do tempo disponível: some as horas livres de segunda a domingo, desconte sono, alimentação, deslocamento e obrigações fixas. Com o tempo real em mãos, distribua as disciplinas do edital proporcionalmente ao seu peso na prova e à sua dificuldade atual. Reserve ao menos dois blocos semanais para revisão do conteúdo já estudado e um bloco para resolução de questões — sem isso, o cronograma vira acumulação de conteúdo sem fixação.',
+    },
+    {
+      q: 'Como distribuir o tempo de estudo entre as disciplinas do concurso da PM?',
+      a: 'A distribuição ideal parte da análise do edital: verifique quantas questões cada disciplina representa na prova objetiva e qual é seu percentual de acerto atual nessa matéria. Disciplinas com alto peso e baixo domínio recebem mais tempo; disciplinas já consolidadas entram em modo de manutenção com revisões espaçadas. Matemática e raciocínio lógico costumam exigir estudo diário para manter o ritmo, enquanto história e geografia permitem blocos alternados sem perda significativa de desempenho.',
+    },
+    {
+      q: 'Como adaptar o cronograma de estudos para quem trabalha em tempo integral?',
+      a: 'Quem trabalha precisa ser ainda mais estratégico: blocos curtos e frequentes funcionam melhor do que sessões longas e irregulares. Madrugadas ou manhãs antes do trabalho, horário de almoço e o período logo após o jantar são janelas que, somadas, podem render de duas a três horas diárias. Áudios e podcasts de conteúdo durante o deslocamento complementam sem substituir o estudo ativo. Nos finais de semana, períodos mais longos permitem avançar em conteúdos que exigem maior concentração.',
+    },
+    {
+      q: 'Com que antecedência o cronograma deve ser intensificado antes da data da prova?',
+      a: 'A fase de intensificação geralmente começa de quatro a seis semanas antes da prova, quando o foco se desloca do conteúdo novo para a revisão e a resolução intensiva de questões e simulados. Nessa fase, é recomendável reduzir o volume de novos tópicos e aumentar a proporção de questões comentadas e provas anteriores da mesma banca. A semana da prova deve ser de revisão leve, descanso ativo e preparação logística — sem conteúdo novo, que gera ansiedade sem benefício mensurável.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Cop Odontologia Premium LTDA não é escritório de advocacia (CNPJ
+  // 62.509.737/0001-91, CNAE 86.30-5-04). ZapZapPage renderiza em modo neutro.
+};
+
+const EDITAL_MILITAR: RawConfig = {
+  hostname: 'editalmilitar.click',
+  brand: 'Edital Militar',
+  siteSubtitle: 'Como Ler, Interpretar e Não Perder Nada em Editais de Concursos da PM',
+  razaoSocial: 'Bittencourt Berenguer Cesar Ativos LTDA',
+  cnpj: '62532283000170',
+  cnpjFormatted: '62.532.283/0001-70',
+  endereco: 'Rua Fernando Ferrari, 614',
+  bairro: 'Brasilia',
+  cidade: 'Feira de Santana',
+  estado: 'BA',
+  cep: '44088-066',
+  enderecoCompleto: 'Rua Fernando Ferrari, 614 · Brasilia · Feira de Santana/BA · CEP 44088-066',
+  canonicalUrl: 'https://www.editalmilitar.click/',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre a interpretação de editais de concursos públicos e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer banca organizadora, corporação policial ou órgão público.',
+  email: 'contato@bberenguercesarativos.com.br',
+  telefone: '(71) 99686-0916',
+  cnae: '74.90-1-04 - Atividades de intermediação e agenciamento de serviços e negócios em geral, exceto imobiliários',
+  naturezaJuridica: 'Sociedade Empresária Limitada',
+  dataAbertura: '02/09/2025',
+  capitalSocial: 'R$ 1.000.000,00',
+  breadcrumbLabel: 'Leitura e Interpretação de Editais de Concursos Militares',
+  h1Override: 'Como ler um edital de concurso da PM sem deixar passar nenhum detalhe crítico',
+  leadOverride: 'Reunimos conteúdo informativo sobre como interpretar editais de concursos da Polícia Militar — quais informações verificar primeiro, critérios de eliminação que candidatos costumam ignorar, como entender tabelas de pontuação e como acompanhar prazos de recurso em cada fase. Para informações oficiais, consulte sempre a banca organizadora e o site da PM do seu estado.',
+  ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
+  faq: [
+    {
+      q: 'Quais são as informações mais críticas para verificar imediatamente ao sair um edital da PM?',
+      a: 'Ao abrir um edital de concurso da PM, priorize verificar: limite de idade na data da inscrição ou da posse (os critérios variam), escolaridade exigida, requisitos de idoneidade moral e antecedentes, número de vagas por cargo e localidade, e o cronograma completo — da inscrição até a nomeação estimada. Em seguida, leia atentamente as causas de eliminação sumária, que costumam incluir condições médicas, tatuagens visíveis em farda e antecedentes criminais específicos.',
+    },
+    {
+      q: 'Quais critérios de eliminação candidatos frequentemente ignoram ao ler um edital militar?',
+      a: 'Entre os critérios que mais surpreendem candidatos estão: restrições relacionadas a tatuagens em regiões visíveis com o uniforme, histórico de uso de substâncias ilícitas apurado na investigação social, pendências com a Justiça Eleitoral ou Militar, e incompatibilidade de acúmulo de cargo público. Alguns editais também vedam a participação de candidatos que tenham sido demitidos de cargo público por justa causa ou respondido a processo administrativo disciplinar. Ler o capítulo de requisitos de forma integral — não apenas resumos — é indispensável.',
+    },
+    {
+      q: 'Como interpretar a tabela de pontuação e os critérios de desempate em editais militares?',
+      a: 'A tabela de pontuação define o peso de cada etapa (prova objetiva, TAF, avaliação psicológica, títulos, etc.) no cômputo final. É fundamental verificar quais etapas são eliminatórias e qual a nota mínima de corte em cada uma — pois uma nota abaixo do mínimo exclui o candidato independentemente do desempenho nas demais fases. Os critérios de desempate costumam seguir uma ordem definida: maior idade, maior pontuação na prova objetiva e, em alguns editais, tempo de serviço público anterior.',
+    },
+    {
+      q: 'Qual é o prazo para recurso nas etapas eliminatórias e como acompanhá-lo?',
+      a: 'Os prazos para interposição de recursos variam por edital, mas costumam ser de um a dois dias úteis após a divulgação do resultado de cada fase. É essencial acompanhar o cronograma publicado no site oficial da banca organizadora e no Diário Oficial do estado, pois atrasos na leitura dos resultados podem fazer o candidato perder o prazo recursal. Guarde prints do resultado, da publicação oficial e do protocolo do recurso como comprovação caso haja necessidade de contestação posterior.',
+    },
+  ],
+  // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
+  // ausentes — Bittencourt Berenguer Cesar Ativos LTDA não é escritório de
+  // advocacia (CNPJ 62.532.283/0001-70, CNAE 74.90-1-04). ZapZapPage renderiza
+  // em modo neutro.
+};
+
 const FUTURO_SOLDADO: RawConfig = {
   hostname: 'futurosoldado.click',
   brand: 'Futuro Soldado',
@@ -1732,6 +1829,10 @@ const CONFIGS: Record<string, RawConfig> = {
   'www.quarteldoconcurseiro.com': QUARTEL_CONCURSEIRO,
   'futurosoldado.click': FUTURO_SOLDADO,
   'www.futurosoldado.click': FUTURO_SOLDADO,
+  'editalmilitar.click': EDITAL_MILITAR,
+  'www.editalmilitar.click': EDITAL_MILITAR,
+  'cronogramapm.click': CRONOGRAMA_PM,
+  'www.cronogramapm.click': CRONOGRAMA_PM,
 };
 
 function resolveHostname(): string {

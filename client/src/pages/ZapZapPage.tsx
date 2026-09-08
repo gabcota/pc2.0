@@ -54,23 +54,23 @@ const STEPS_LEGAL = [
 const STEPS_NEUTRAL = [
   {
     num: "01",
-    title: "Tire sua dúvida pelo WhatsApp",
-    desc: "Envie sua dúvida por WhatsApp e receba conteúdo informativo sobre direitos do servidor público — sem custo e sem compromisso.",
+    title: "Envie sua dúvida pelo WhatsApp",
+    desc: "Descreva sua dúvida por WhatsApp e receba conteúdo informativo especializado sobre o tema — sem custo e sem compromisso.",
   },
   {
     num: "02",
-    title: "Entenda seus direitos",
-    desc: "Esclarecemos as normas aplicáveis, os prazos de defesa e os direitos do servidor em cada situação — do estágio probatório à estabilidade.",
+    title: "Receba informação qualificada",
+    desc: "Esclarecemos o tema com base em informações atualizadas e organizadas, para que você entenda o contexto e as opções disponíveis.",
   },
   {
     num: "03",
-    title: "Conheça os caminhos possíveis",
-    desc: "Informamos sobre as vias administrativas e judiciais disponíveis, com base em precedentes de Direito Administrativo — para você tomar uma decisão informada.",
+    title: "Conheça os caminhos disponíveis",
+    desc: "Apresentamos o panorama geral do assunto — o que está em jogo, o que é possível e quais são os próximos passos mais comuns em cada situação.",
   },
   {
     num: "04",
-    title: "Acompanhe sua situação com suporte",
-    desc: "Mantenha-se atualizado sobre o andamento da sua situação funcional com orientação especializada.",
+    title: "Acompanhe com orientação de referência",
+    desc: "Continue tirando dúvidas pelo WhatsApp sempre que precisar — sem burocracia, sem agendamento e sem custo para o primeiro contato.",
   },
 ];
 
@@ -505,18 +505,30 @@ export default function ZapZapPage() {
                 borderRadius: 8, padding: "28px 24px",
               }}>
                 <p style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: "1.2px", color: NAVY, marginBottom: 16 }}>
-                  Situações mais buscadas
+                  {isVerifiedLawFirm ? "Situações mais buscadas" : "Temas abordados"}
                 </p>
                 <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 12 }}>
-                  {[
-                    "Exoneração no estágio probatório",
-                    "Processo Administrativo Disciplinar (PAD)",
-                    "Promoção negada",
-                    "Transferência ou remoção indeferida",
-                    "Incorporação de gratificações",
-                    "Reintegração ao cargo",
-                    "Prescrição da punição",
-                  ].map((item) => (
+                  {(isVerifiedLawFirm
+                    ? [
+                        "Exoneração no estágio probatório",
+                        "Processo Administrativo Disciplinar (PAD)",
+                        "Promoção negada",
+                        "Transferência ou remoção indeferida",
+                        "Incorporação de gratificações",
+                        "Reintegração ao cargo",
+                        "Prescrição da punição",
+                      ]
+                    : (cfg.faq ?? []).length > 0
+                      ? (cfg.faq!).slice(0, 6).map((f) => f.q.replace(/\?$/, ""))
+                      : [
+                          "Preparação para o concurso PM",
+                          "Etapas do processo seletivo",
+                          "Datas e edital",
+                          "Aprovação e matrícula",
+                          "Carreira e benefícios",
+                          "Tire dúvidas pelo WhatsApp",
+                        ]
+                  ).map((item) => (
                     <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
                       <span style={{
                         width: 6, height: 6, borderRadius: "50%", background: ACCENT,
@@ -544,7 +556,7 @@ export default function ZapZapPage() {
         {/* ── MAIN ── */}
         <main style={{ maxWidth: 1100, margin: "0 auto", padding: "52px 24px 72px" }}>
 
-          {/* ── SEÇÃO DE ATUAÇÃO ── */}
+          {/* ── SEÇÃO DE ATUAÇÃO / TEMAS ABORDADOS ── */}
           <section style={{ marginBottom: 64 }}>
             <div style={{ marginBottom: 32 }}>
               <p style={{ fontSize: 11.5, fontWeight: 700, textTransform: "uppercase", letterSpacing: "1.4px", color: ACCENT, marginBottom: 10 }}>
@@ -553,40 +565,91 @@ export default function ZapZapPage() {
               <h2 style={{ fontSize: "clamp(20px, 2.8vw, 28px)", fontWeight: 700, color: "#111827", margin: "0 0 14px", lineHeight: 1.3 }}>
                 {isVerifiedLawFirm
                   ? "Direito Administrativo — Defesa do Servidor em Todas as Fases da Carreira"
-                  : "Carreira Pública — Situações Jurídicas Mais Comuns"}
+                  : "Temas abordados — perguntas frequentes sobre o assunto"}
               </h2>
               <p style={{ fontSize: 15.5, color: "#4b5563", lineHeight: 1.75, maxWidth: 760 }}>
                 {isVerifiedLawFirm
                   ? "Prestamos auxílio e suporte durante toda a vida funcional do servidor público — de processos administrativos disciplinares a pedidos de promoção, transferência e reintegração, com atuação judicial quando necessário. Confira abaixo os temas mais comuns de nossa advocacia especializada:"
-                  : "Servidores públicos enfrentam situações jurídicas específicas ao longo da carreira. Conheça os cenários mais frequentes e os instrumentos disponíveis — e consulte um advogado para orientação ao seu caso concreto:"
+                  : "Confira abaixo os temas mais abordados neste site. Envie sua dúvida pelo WhatsApp para receber conteúdo informativo adicional sobre qualquer um deles — sem custo e sem compromisso."
                 }
               </p>
             </div>
 
-            <div className="zzlaw-atuacao-grid">
-              {ATUACOES.map(({ titulo, itens }) => (
-                <div key={titulo}>
-                  <h3 style={{
-                    fontSize: 14, fontWeight: 700, color: NAVY, textTransform: "uppercase",
-                    letterSpacing: "0.06em", margin: "0 0 14px", paddingBottom: 10,
-                    borderBottom: `2px solid ${NAVY}`,
+            {isVerifiedLawFirm ? (
+              <div className="zzlaw-atuacao-grid">
+                {ATUACOES.map(({ titulo, itens }) => (
+                  <div key={titulo}>
+                    <h3 style={{
+                      fontSize: 14, fontWeight: 700, color: NAVY, textTransform: "uppercase",
+                      letterSpacing: "0.06em", margin: "0 0 14px", paddingBottom: 10,
+                      borderBottom: `2px solid ${NAVY}`,
+                    }}>
+                      {titulo}
+                    </h3>
+                    <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8 }}>
+                      {itens.map((item) => (
+                        <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
+                          <span style={{
+                            width: 5, height: 5, borderRadius: "50%", background: ACCENT,
+                            flexShrink: 0, marginTop: 8,
+                          }} />
+                          <span style={{ fontSize: 14, color: "#374151", lineHeight: 1.65 }}>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            ) : (cfg.faq ?? []).length > 0 ? (
+              <div style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: 16,
+              }}>
+                {cfg.faq!.map(({ q, a }) => (
+                  <div key={q} style={{
+                    background: "#fff",
+                    border: "1px solid #e2e8f0",
+                    borderTop: `3px solid ${NAVY}`,
+                    borderRadius: 8,
+                    padding: "20px 22px",
                   }}>
-                    {titulo}
-                  </h3>
-                  <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 8 }}>
-                    {itens.map((item) => (
-                      <li key={item} style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
-                        <span style={{
-                          width: 5, height: 5, borderRadius: "50%", background: ACCENT,
-                          flexShrink: 0, marginTop: 8,
-                        }} />
-                        <span style={{ fontSize: 14, color: "#374151", lineHeight: 1.65 }}>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+                    <p style={{
+                      fontSize: 14, fontWeight: 700, color: NAVY,
+                      margin: "0 0 10px", lineHeight: 1.4,
+                    }}>{q}</p>
+                    <p style={{ fontSize: 13.5, color: "#4b5563", lineHeight: 1.7, margin: 0 }}>{a}</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: 16,
+              }}>
+                {[
+                  { q: "Quais são as etapas do processo seletivo?", a: "O processo seletivo da Polícia Militar geralmente inclui prova objetiva, teste de aptidão física, exame médico, avaliação psicológica e investigação social. As fases variam conforme o edital de cada estado." },
+                  { q: "Como se preparar para a prova objetiva?", a: "Estude o conteúdo programático definido no edital, resolva provas anteriores da mesma banca e mantenha uma rotina de estudos consistente. Disciplinas como português, matemática e conhecimentos gerais costumam ter maior peso." },
+                  { q: "O que é avaliado no exame físico?", a: "O TAF (Teste de Aptidão Física) avalia condicionamento cardiovascular e força muscular — geralmente inclui corrida, flexões e abdominais. Os índices mínimos são definidos no edital e podem variar por sexo e faixa etária." },
+                  { q: "Como funciona a investigação social?", a: "A investigação social apura antecedentes criminais, comportamento e idoneidade moral do candidato. Certidões de antecedentes, histórico de empregos e referências pessoais costumam ser solicitados nessa fase." },
+                ].map(({ q, a }) => (
+                  <div key={q} style={{
+                    background: "#fff",
+                    border: "1px solid #e2e8f0",
+                    borderTop: `3px solid ${NAVY}`,
+                    borderRadius: 8,
+                    padding: "20px 22px",
+                  }}>
+                    <p style={{
+                      fontSize: 14, fontWeight: 700, color: NAVY,
+                      margin: "0 0 10px", lineHeight: 1.4,
+                    }}>{q}</p>
+                    <p style={{ fontSize: 13.5, color: "#4b5563", lineHeight: 1.7, margin: 0 }}>{a}</p>
+                  </div>
+                ))}
+              </div>
+            )}
 
             {/* CTA inline */}
             <div style={{
@@ -596,12 +659,12 @@ export default function ZapZapPage() {
             }}>
               <div>
                 <p style={{ fontSize: 15, fontWeight: 700, color: "#111827", marginBottom: 4 }}>
-                  Sua situação não está listada acima?
+                  {isVerifiedLawFirm ? "Sua situação não está listada acima?" : "Tem mais dúvidas sobre o tema?"}
                 </p>
                 <p style={{ fontSize: 13.5, color: "#6b7280" }}>
                   {isVerifiedLawFirm
                     ? "Entre em contato. Analisamos seu caso e informamos se há fundamento jurídico para agir."
-                    : "Entre em contato pelo WhatsApp e tire suas dúvidas sobre direitos do servidor público."
+                    : "Entre em contato pelo WhatsApp e tire suas dúvidas com conteúdo informativo especializado."
                   }
                 </p>
               </div>
@@ -611,8 +674,8 @@ export default function ZapZapPage() {
             </div>
           </section>
 
-          {/* ── PAINEL DO CERTAME ── */}
-          <section style={{
+          {/* ── PAINEL DO CERTAME — visível apenas para escritórios jurídicos verificados ── */}
+          {isVerifiedLawFirm && <section style={{
             marginBottom: 64, background: "#fff", border: "1px solid #e2e8f0",
             borderTop: `3px solid ${ACCENT}`, borderRadius: 8, padding: "36px 32px",
           }}>
@@ -653,7 +716,7 @@ export default function ZapZapPage() {
                 significativa nessas fases.
               </p>
             </div>
-          </section>
+          </section>}
 
           {/* ── COMO FUNCIONA ── */}
           <section style={{ marginBottom: 64, background: "#f8fafc", borderRadius: 10, padding: "40px 32px" }}>
@@ -849,19 +912,19 @@ export default function ZapZapPage() {
                 <h2 style={{ fontSize: "clamp(18px, 2.5vw, 24px)", fontWeight: 700, color: "#fff", margin: "0 0 10px", lineHeight: 1.3 }}>
                   {isVerifiedLawFirm
                     ? "Conte com a segurança de um escritório especializado em Direito Administrativo."
-                    : "Entenda seus direitos como servidor público."
+                    : "Tire suas dúvidas pelo WhatsApp — sem custo e sem compromisso."
                   }
                 </h2>
                 <p style={{ fontSize: 14, color: "rgba(255,255,255,0.6)", margin: 0, lineHeight: 1.65, maxWidth: 520 }}>
                   {isVerifiedLawFirm
                     ? "Identificamos o fundamento jurídico do seu caso, elaboramos a estratégia e atuamos até a solução definitiva — com consulta inicial gratuita e sem compromisso."
-                    : "Tire suas dúvidas sobre estágio probatório, processos administrativos, promoções e estabilidade — fale com um especialista pelo WhatsApp, sem compromisso."
+                    : "Envie sua dúvida sobre o tema pelo WhatsApp e receba conteúdo informativo especializado — sem burocracia, sem agendamento e sem custo para o primeiro contato."
                   }
                 </p>
               </div>
               <div style={{ flexShrink: 0, display: "flex", flexDirection: "column", gap: 10, alignItems: "center" }}>
                 <a href={CTA_FOOTER} target="_blank" rel="noopener noreferrer" className="zzlaw-btn-gold" style={{ whiteSpace: "nowrap" }}>
-                  <WaIcon /> {isVerifiedLawFirm ? "Fale com um advogado" : "Fale com um especialista"}
+                  <WaIcon /> {isVerifiedLawFirm ? "Fale com um advogado" : "Tirar dúvidas pelo WhatsApp"}
                 </a>
                 {cfg.email && (
                   <a href={`mailto:${cfg.email}`} style={{

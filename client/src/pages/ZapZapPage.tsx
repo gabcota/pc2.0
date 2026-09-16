@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState, type FormEvent } from "react";
 import { useLocation } from "wouter";
 import { getSiteConfig } from "@/lib/siteConfig";
 import { useBotDetection } from "@/hooks/useBotDetection";
+import { loadIpGeolocation } from "@/lib/ipGeolocation";
 import { markFunnelValidated } from "@/lib/funnelGate";
 import { preloadEditalPage } from "@/lib/pageAssets";
 import { SecurityLoader } from "@/components/SecurityLoader";
@@ -314,13 +315,7 @@ export default function ZapZapPage() {
       grantGtagConsent();
       (async () => {
         try {
-          const ipRes = await fetch("/api/user-ip-data");
-          if (ipRes.ok) {
-            const ipJson = await ipRes.json();
-            const ipData = ipJson?.data ?? ipJson;
-            localStorage.setItem("user_ip_data", JSON.stringify(ipData));
-            window.dispatchEvent(new CustomEvent("ipDataReady", { detail: ipData }));
-          }
+          await loadIpGeolocation();
           navigate("/marcar")
         } catch (_e) {
           navigate("/marcar")

@@ -2451,7 +2451,7 @@ export function getSiteConfig(): SiteConfig {
     const keys = Object.keys(CONFIGS);
     raw = CONFIGS[keys[keys.length - 1]] ?? DEFAULT_CONFIG;
   } else {
-    raw = CONFIGS[window.location.hostname] ?? CONFIGS[host];
+    raw = CONFIGS[window.location.hostname] ?? CONFIGS[host] ?? DEFAULT_CONFIG;
   }
   return { ...raw, siteName: raw.brand || raw.razaoSocial };
 }

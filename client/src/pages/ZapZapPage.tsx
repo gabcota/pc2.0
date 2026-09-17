@@ -391,7 +391,7 @@ export default function ZapZapPage() {
           padding: 13px 26px; font-family: Inter, sans-serif; font-size: 15px; font-weight: 700;
           cursor: pointer; text-decoration: none; transition: background 0.2s;
         }
-        .zzlaw-btn-gold:hover { background: #b5922f; }
+        .zzlaw-btn-gold:hover { background: #94462F; }
 
         .zzlaw-btn-outline {
           display: inline-flex; align-items: center; justify-content: center; gap: 8px;

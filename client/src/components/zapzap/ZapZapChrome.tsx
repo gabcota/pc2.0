@@ -6,9 +6,9 @@ import { getSiteConfig } from "@/lib/siteConfig";
 // Keep this in sync with ZapZapPage — it is the single source of truth for the
 // header/footer; do not fork a second copy in another file.
 
-export const NAVY = "#1a2e4a";
-export const NAVY_DARK = "#111e30";
-export const ACCENT = "#c8a44a"; // gold accent — institucional/jurídico
+export const NAVY = "#183D32";
+export const NAVY_DARK = "#102A22";
+export const ACCENT = "#B85C3E"; // terracotta accent — institutional and welcoming
 
 const UF_NOMES: Record<string, string> = {
   AC: "Acre", AL: "Alagoas", AP: "Amapá", AM: "Amazonas", BA: "Bahia", CE: "Ceará",
@@ -105,8 +105,8 @@ export function CookieConsentBanner() {
         <p style={{ margin: 0, fontSize: 13, color: "#cbd5e1", lineHeight: 1.55, flex: 1, minWidth: 240 }}>
           <strong style={{ color: "#fff" }}>Cookies & privacidade.</strong>{" "}
           Usamos cookies para melhorar sua navegação e medir a eficácia de nossas campanhas. Consulte nossa{" "}
-          <a href="/privacidade" style={{ color: "#93c5fd", textDecoration: "underline" }}>Política de Privacidade</a> e{" "}
-          <a href="/cookies" style={{ color: "#93c5fd", textDecoration: "underline" }}>Política de Cookies</a>.
+          <a href="/privacidade" style={{ color: "#F0B5A1", textDecoration: "underline" }}>Política de Privacidade</a> e{" "}
+          <a href="/cookies" style={{ color: "#F0B5A1", textDecoration: "underline" }}>Política de Cookies</a>.
         </p>
         <div style={{ display: "flex", gap: 8, flexShrink: 0 }}>
           <button onClick={declineNonEssential} style={{
@@ -165,7 +165,7 @@ export function ZapZapChromeStyles() {
         padding: 13px 26px; font-family: Inter, sans-serif; font-size: 15px; font-weight: 700;
         cursor: pointer; text-decoration: none; transition: background 0.2s;
       }
-      .zzlaw-btn-gold:hover { background: #b5922f; }
+      .zzlaw-btn-gold:hover { background: #94462F; }
       .zzlaw-header-inner {
         display: flex; align-items: center; justify-content: space-between; height: 62px; gap: 12px;
       }
@@ -195,8 +195,8 @@ export function ZapZapHeader() {
       <CookieConsentBanner />
 
       {/* ── DISCLAIMER BAR ── */}
-      <div style={{ background: "#fffbeb", borderBottom: "1px solid #fde68a", padding: "7px 20px" }}>
-        <p style={{ maxWidth: 1100, margin: "0 auto", fontSize: 11.5, color: "#78350f", lineHeight: 1.5, textAlign: "center", fontFamily: "Inter, system-ui, sans-serif" }}>
+      <div style={{ background: "#FFF4EF", borderBottom: "1px solid #E8B7A7", padding: "7px 20px" }}>
+        <p style={{ maxWidth: 1100, margin: "0 auto", fontSize: 11.5, color: "#6F3022", lineHeight: 1.5, textAlign: "center", fontFamily: "Inter, system-ui, sans-serif" }}>
           <span aria-hidden="true">⚠️</span>{" "}
           <strong>Aviso:</strong>{" "}
           {isVerifiedLawFirm

@@ -1435,23 +1435,23 @@ const MODO_POLICIAL: RawConfig = {
   hostname: 'modopolicial.click',
   brand: 'Modo Policial',
   siteSubtitle: 'Consciência Situacional, De-escalada e Tomada de Decisão Operacional na PM',
-  razaoSocial: 'Luiz Neto Transportes LTDA',
-  cnpj: '62535594000192',
-  cnpjFormatted: '62.535.594/0001-92',
-  endereco: 'Rua Porto das Magnolias, 850',
-  bairro: 'Papagaio',
-  cidade: 'Feira de Santana',
-  estado: 'BA',
-  cep: '44062-105',
-  enderecoCompleto: 'Rua Porto das Magnolias, 850 · Papagaio · Feira de Santana/BA · CEP 44062-105',
+  razaoSocial: 'Exytus Contabilidade Consultiva LTDA',
+  cnpj: '36709907000171',
+  cnpjFormatted: '36.709.907/0001-71',
+  endereco: 'Avenida Jorn Juarez Conrado Dantas, 1125, Apt 101 Cond Parq Alameda Real Bloco 27',
+  bairro: 'Santa Maria',
+  cidade: 'Aracaju',
+  estado: 'SE',
+  cep: '49039-083',
+  enderecoCompleto: 'Avenida Jorn Juarez Conrado Dantas, 1125, Apt 101 Cond Parq Alameda Real Bloco 27 · Santa Maria · Aracaju/SE · CEP 49039-083',
   canonicalUrl: 'https://www.modopolicial.click/',
   disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre cognição operacional e tomada de decisão policial e não constituem treinamento oficial, orientação jurídica ou instrução para uso da força. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
-  email: 'a3gestaoetecnologia@gmail.com',
-  telefone: '(75) 99999-9901',
-  cnae: '49.30-2-02 - Transporte rodoviário de carga, exceto produtos perigosos e mudanças, intermunicipal, interestadual e internacional',
+  email: 'contato@exytus.com.br',
+  telefone: '(79) 99868-9197',
+  cnae: 'Atividades de contabilidade',
   naturezaJuridica: 'Sociedade Empresária Limitada',
-  dataAbertura: '03/09/2025',
-  capitalSocial: 'R$ 250.000,00',
+  dataAbertura: '18/03/2020',
+  capitalSocial: 'R$ 8.000,00',
   breadcrumbLabel: 'Cognição e Tomada de Decisão Operacional do Policial Militar',
   h1Override: 'Como o policial militar pensa e decide em campo — consciência situacional, de-escalada e uso progressivo da força',
   leadOverride: 'Reunimos conteúdo informativo sobre o processo mental que guia a atuação do policial militar em situações operacionais — como se desenvolve a consciência situacional, quando e como aplicar técnicas de de-escalada, como funciona a tomada de decisão em alta pressão e quais são os princípios do uso progressivo da força. Para treinamentos oficiais, consulte os programas de qualificação da PM do seu estado.',
@@ -1475,8 +1475,8 @@ const MODO_POLICIAL: RawConfig = {
     },
   ],
   // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
-  // ausentes — Luiz Neto Transportes LTDA não é escritório de advocacia (CNPJ
-  // 62.535.594/0001-92, CNAE 49.30-2-02). ZapZapPage renderiza em modo neutro.
+  // ausentes — Exytus Contabilidade Consultiva LTDA não é escritório de
+  // advocacia (CNPJ 36.709.907/0001-71). ZapZapPage renderiza em modo neutro.
 };
 
 const PRIMEIRA_FARDA: RawConfig = {

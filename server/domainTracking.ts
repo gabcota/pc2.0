@@ -467,21 +467,21 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
     stateCode: "CE",
     themeColor: "#7a5c00",
   },
-  // modopolicial.click — Luiz Neto Transportes LTDA (Sociedade Empresária
-  // Limitada, CNAE 49.30-2-02, transporte rodoviário de carga), sediada em
-  // Feira de Santana/BA. Não é escritório de advocacia. Mantida em sincronia
-  // com client/src/lib/siteConfig.ts (MODO_POLICIAL); atualizar ambos se os
-  // dados cadastrais mudarem.
+  // modopolicial.click — Exytus Contabilidade Consultiva LTDA (Sociedade
+  // Empresária Limitada, atividades de contabilidade), sediada em Aracaju/SE.
+  // Não é escritório de advocacia. Mantida em sincronia com
+  // client/src/lib/siteConfig.ts (MODO_POLICIAL); atualizar ambos se os dados
+  // cadastrais mudarem.
   "modopolicial.click": {
     brand: "Modo Policial",
-    razaoSocial: "Luiz Neto Transportes LTDA",
-    cnpj: "62.535.594/0001-92",
-    address: "Rua Porto das Magnolias, 850",
-    postalCode: "44062-105",
-    emailContato: "a3gestaoetecnologia@gmail.com",
-    phone: "(75) 99999-9901",
-    city: "Feira de Santana",
-    stateCode: "BA",
+    razaoSocial: "Exytus Contabilidade Consultiva LTDA",
+    cnpj: "36.709.907/0001-71",
+    address: "Avenida Jorn Juarez Conrado Dantas, 1125, Apt 101 Cond Parq Alameda Real Bloco 27, Santa Maria",
+    postalCode: "49039-083",
+    emailContato: "contato@exytus.com.br",
+    phone: "(79) 99868-9197",
+    city: "Aracaju",
+    stateCode: "SE",
     themeColor: "#1e3a52",
   },
   // primeirafarda.click — Diesel Max Pecas e Servicos LTDA (Sociedade Empresária
@@ -2801,16 +2801,16 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     ogImage: "/favicon.svg",
     clarityId: null,
     homepageKey: "zapzap",
-    title: "Luiz Neto Transportes LTDA",
+    title: "Exytus Contabilidade Consultiva LTDA",
     description:
-      "Conteúdo informativo sobre cognição e tomada de decisão operacional do policial militar — consciência situacional, de-escalada, uso progressivo da força e o processo mental que guia a atuação em situações de alta pressão. Luiz Neto Transportes LTDA · CNPJ 62.535.594/0001-92 · Feira de Santana/BA.",
-    author: "Luiz Neto Transportes LTDA",
+      "Conteúdo informativo sobre cognição e tomada de decisão operacional do policial militar — consciência situacional, de-escalada, uso progressivo da força e o processo mental que guia a atuação em situações de alta pressão. Exytus Contabilidade Consultiva LTDA · CNPJ 36.709.907/0001-71 · Aracaju/SE.",
+    author: "Exytus Contabilidade Consultiva LTDA",
     ogType: "website",
-    siteName: "Luiz Neto Transportes LTDA",
+    siteName: "Exytus Contabilidade Consultiva LTDA",
     ogTitle:
-      "Modo Policial — Consciência Situacional, De-escalada e Tomada de Decisão Operacional da PM | Luiz Neto Transportes",
+      "Modo Policial — Consciência Situacional, De-escalada e Tomada de Decisão Operacional da PM | Exytus",
     ogDescription:
-      "Conteúdo informativo sobre como o policial militar pensa e decide em campo: consciência situacional, de-escalada e uso progressivo da força. Luiz Neto Transportes LTDA — Feira de Santana/BA.",
+      "Conteúdo informativo sobre como o policial militar pensa e decide em campo: consciência situacional, de-escalada e uso progressivo da força. Exytus Contabilidade Consultiva LTDA — Aracaju/SE.",
     analyticsCore: "signal.b5e8f26a",
     gtmId: "GTM-P67WNW9K",
   },
@@ -2820,16 +2820,16 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     ogImage: "/favicon.svg",
     clarityId: null,
     homepageKey: "zapzap",
-    title: "Luiz Neto Transportes LTDA",
+    title: "Exytus Contabilidade Consultiva LTDA",
     description:
-      "Conteúdo informativo sobre cognição e tomada de decisão operacional do policial militar — consciência situacional, de-escalada, uso progressivo da força e o processo mental que guia a atuação em situações de alta pressão. Luiz Neto Transportes LTDA · CNPJ 62.535.594/0001-92 · Feira de Santana/BA.",
-    author: "Luiz Neto Transportes LTDA",
+      "Conteúdo informativo sobre cognição e tomada de decisão operacional do policial militar — consciência situacional, de-escalada, uso progressivo da força e o processo mental que guia a atuação em situações de alta pressão. Exytus Contabilidade Consultiva LTDA · CNPJ 36.709.907/0001-71 · Aracaju/SE.",
+    author: "Exytus Contabilidade Consultiva LTDA",
     ogType: "website",
-    siteName: "Luiz Neto Transportes LTDA",
+    siteName: "Exytus Contabilidade Consultiva LTDA",
     ogTitle:
-      "Modo Policial — Consciência Situacional, De-escalada e Tomada de Decisão Operacional da PM | Luiz Neto Transportes",
+      "Modo Policial — Consciência Situacional, De-escalada e Tomada de Decisão Operacional da PM | Exytus",
     ogDescription:
-      "Conteúdo informativo sobre como o policial militar pensa e decide em campo: consciência situacional, de-escalada e uso progressivo da força. Luiz Neto Transportes LTDA — Feira de Santana/BA.",
+      "Conteúdo informativo sobre como o policial militar pensa e decide em campo: consciência situacional, de-escalada e uso progressivo da força. Exytus Contabilidade Consultiva LTDA — Aracaju/SE.",
     analyticsCore: "signal.b5e8f26a",
     gtmId: "GTM-P67WNW9K",
   },

@@ -139,7 +139,10 @@ if (cluster.isPrimary && process.env.DEVELOPING !== "true") {
       console.error("[startup] Erro ao iniciar download do CSV de escolas:", err)
     );
 
-    const defaultWorkers = process.env.NODE_ENV === "production" ? "1" : "2";
+    // Vite's dependency optimizer writes to a shared cache. Running multiple
+    // development workers races those writes and can serve mismatched React
+    // chunks, causing invalid hook calls in the preview.
+    const defaultWorkers = "1";
     const numWorkers = parseInt(process.env.WEB_CONCURRENCY || defaultWorkers);
     log(`Primary ${process.pid} iniciando ${numWorkers} workers`);
 

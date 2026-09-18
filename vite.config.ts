@@ -20,6 +20,10 @@ function buildHtmlInputs(): Record<string, string> {
 }
 
 export default defineConfig({
+  // Keep optimized development modules in a versioned directory. Changing
+  // dependency layouts must not leave the Replit preview proxy serving chunks
+  // generated from an older optimizer graph.
+  cacheDir: path.resolve(import.meta.dirname, "node_modules/.vite-replit-v2"),
   plugins: [
     react(),
     runtimeErrorOverlay(),
@@ -33,11 +37,20 @@ export default defineConfig({
       : []),
   ],
   resolve: {
+    dedupe: ["react", "react-dom"],
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
       "@shared": path.resolve(import.meta.dirname, "shared"),
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
+  },
+  optimizeDeps: {
+    include: [
+      "react",
+      "react-dom",
+      "react/jsx-runtime",
+      "@tanstack/react-query",
+    ],
   },
   root: clientDir,
   build: {

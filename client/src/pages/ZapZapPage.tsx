@@ -516,11 +516,11 @@ export default function ZapZapPage() {
                     : (cfg.faq ?? []).length > 0
                       ? (cfg.faq!).slice(0, 6).map((f) => f.q.replace(/\?$/, ""))
                       : [
-                          "Preparação para o concurso PM",
+                          "Preparação para a carreira pública",
                           "Etapas do processo seletivo",
-                          "Datas e edital",
-                          "Aprovação e matrícula",
-                          "Carreira e benefícios",
+                          "Datas e informações oficiais",
+                          "Ingresso e documentação",
+                          "Desenvolvimento profissional",
                           "Tire dúvidas pelo WhatsApp",
                         ]
                   ).map((item) => (
@@ -624,7 +624,7 @@ export default function ZapZapPage() {
                 gap: 16,
               }}>
                 {[
-                  { q: "Quais são as etapas do processo seletivo?", a: "O processo seletivo da Polícia Militar geralmente inclui prova objetiva, teste de aptidão física, exame médico, avaliação psicológica e investigação social. As fases variam conforme o edital de cada estado." },
+                  { q: "Quais são as etapas do processo seletivo?", a: "As etapas de um processo seletivo público variam conforme o órgão e o edital. Podem incluir prova objetiva, avaliação de títulos, exames específicos, análise documental e outras fases definidas oficialmente para cada seleção." },
                   { q: "Como se preparar para a prova objetiva?", a: "Estude o conteúdo programático definido no edital, resolva provas anteriores da mesma banca e mantenha uma rotina de estudos consistente. Disciplinas como português, matemática e conhecimentos gerais costumam ter maior peso." },
                   { q: "O que é avaliado no exame físico?", a: "O TAF (Teste de Aptidão Física) avalia condicionamento cardiovascular e força muscular — geralmente inclui corrida, flexões e abdominais. Os índices mínimos são definidos no edital e podem variar por sexo e faixa etária." },
                   { q: "Como funciona a investigação social?", a: "A investigação social apura antecedentes criminais, comportamento e idoneidade moral do candidato. Certidões de antecedentes, histórico de empregos e referências pessoais costumam ser solicitados nessa fase." },

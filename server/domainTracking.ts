@@ -2803,14 +2803,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Exytus Contabilidade Consultiva LTDA",
     description:
-      "Conteúdo informativo sobre cognição e tomada de decisão operacional do policial militar — consciência situacional, de-escalada, uso progressivo da força e o processo mental que guia a atuação em situações de alta pressão. Exytus Contabilidade Consultiva LTDA · CNPJ 36.709.907/0001-71 · Aracaju/SE.",
+      "Conteúdo informativo sobre cognição investigativa e tomada de decisão do policial civil — consciência situacional, de-escalada, diligências e atuação responsável em situações de pressão. Exytus Contabilidade Consultiva LTDA · CNPJ 36.709.907/0001-71 · Aracaju/SE.",
     author: "Exytus Contabilidade Consultiva LTDA",
     ogType: "website",
     siteName: "Exytus Contabilidade Consultiva LTDA",
     ogTitle:
-      "Modo Policial — Consciência Situacional, De-escalada e Tomada de Decisão Operacional da PM | Exytus",
+      "Modo Policial — Consciência Situacional e Tomada de Decisão na Polícia Civil | Exytus",
     ogDescription:
-      "Conteúdo informativo sobre como o policial militar pensa e decide em campo: consciência situacional, de-escalada e uso progressivo da força. Exytus Contabilidade Consultiva LTDA — Aracaju/SE.",
+      "Conteúdo informativo sobre como o policial civil pensa e decide em investigações e diligências: consciência situacional, de-escalada e atuação responsável. Exytus Contabilidade Consultiva LTDA — Aracaju/SE.",
     analyticsCore: "signal.b5e8f26a",
     gtmId: "GTM-P67WNW9K",
   },
@@ -2822,14 +2822,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Exytus Contabilidade Consultiva LTDA",
     description:
-      "Conteúdo informativo sobre cognição e tomada de decisão operacional do policial militar — consciência situacional, de-escalada, uso progressivo da força e o processo mental que guia a atuação em situações de alta pressão. Exytus Contabilidade Consultiva LTDA · CNPJ 36.709.907/0001-71 · Aracaju/SE.",
+      "Conteúdo informativo sobre cognição investigativa e tomada de decisão do policial civil — consciência situacional, de-escalada, diligências e atuação responsável em situações de pressão. Exytus Contabilidade Consultiva LTDA · CNPJ 36.709.907/0001-71 · Aracaju/SE.",
     author: "Exytus Contabilidade Consultiva LTDA",
     ogType: "website",
     siteName: "Exytus Contabilidade Consultiva LTDA",
     ogTitle:
-      "Modo Policial — Consciência Situacional, De-escalada e Tomada de Decisão Operacional da PM | Exytus",
+      "Modo Policial — Consciência Situacional e Tomada de Decisão na Polícia Civil | Exytus",
     ogDescription:
-      "Conteúdo informativo sobre como o policial militar pensa e decide em campo: consciência situacional, de-escalada e uso progressivo da força. Exytus Contabilidade Consultiva LTDA — Aracaju/SE.",
+      "Conteúdo informativo sobre como o policial civil pensa e decide em investigações e diligências: consciência situacional, de-escalada e atuação responsável. Exytus Contabilidade Consultiva LTDA — Aracaju/SE.",
     analyticsCore: "signal.b5e8f26a",
     gtmId: "GTM-P67WNW9K",
   },

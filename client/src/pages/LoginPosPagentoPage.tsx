@@ -16,8 +16,8 @@ import orgLogo from '@assets/logo-mj_1779836627251.png';
 export default function LoginPosPagamentoPage() {
   const [, setLocation] = useLocation();
   const estadoPM = useEstadoPM();
-  const sigla = estadoPM?.sigla ?? 'PM';
-  const nomeCompleto = estadoPM?.nomeCompleto ?? 'Polícias Militares estaduais';
+  const sigla = estadoPM?.sigla ?? 'PP';
+  const nomeCompleto = estadoPM?.nomeCompleto ?? 'Polícias Penais estaduais';
   const brasaoUrl = getBrasaoUrl(estadoPM);
   const [email, setEmail] = useState('');
   const [cpfDigits, setCpfDigits] = useState('');

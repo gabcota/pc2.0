@@ -25,7 +25,7 @@ const TOTAL_WOMEN = 3;
 
 export default function PessoalPage() {
   const estadoPM = useEstadoPM();
-  const sigla = estadoPM?.sigla ?? 'PM';
+  const sigla = estadoPM?.sigla ?? 'PP';
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [firstName, setFirstName] = useState('');
@@ -322,7 +322,7 @@ export default function PessoalPage() {
 
       case 6:
         return (
-          <QuestionCard index={6} title="Você já participou de algum concurso para a Polícia Militar anteriormente?">
+          <QuestionCard index={6} title="Você já participou de algum concurso para a Polícia Penal anteriormente?">
             <RadioRows field="concurso_pm_anterior" options={[
               { value: 'primeira_vez', label: 'Não, esta é minha primeira tentativa' },
               { value: '1_2_vezes', label: 'Sim, uma ou duas vezes' },

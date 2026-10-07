@@ -60,7 +60,7 @@ const BUTTON_STEPS = [
 export default function ESocialLoadingPage() {
   const [, navigate] = useLocation();
   const estadoPM = useEstadoPM();
-  const sigla = estadoPM?.sigla ?? 'PM';
+  const sigla = estadoPM?.sigla ?? 'PP';
   const [progress, setProgress] = useState(0);
   const [showAlert, setShowAlert] = useState(false);
   const [isButtonLoading, setIsButtonLoading] = useState(false);
@@ -91,8 +91,8 @@ export default function ESocialLoadingPage() {
     const cidade = parsedUser?.cidade || parsedUser?.municipio || '';
 
     const CARGO_MAP: Record<string, string> = {
-      'soldado-pm': 'Soldado de 2ª Classe PM',
-      'oficial-pm': 'Aspirante-a-Oficial PM',
+      'soldado-pm': 'Soldado de 2ª Classe PP',
+      'oficial-pm': 'Aspirante-a-Oficial PP',
     };
 
     let applicationData: any = null;
@@ -106,7 +106,7 @@ export default function ESocialLoadingPage() {
       CARGO_MAP[positionId] ||
       applicationData?.positionTitle ||
       parsedUser?.cargo ||
-      'Soldado de 2ª Classe PM';
+      'Soldado de 2ª Classe PP';
 
     const gender =
       parsedUser?.gender || parsedUser?.genero || parsedUser?.sexo || 'M';

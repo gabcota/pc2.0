@@ -52,8 +52,8 @@ export default function ConfirmarDadosPage() {
   const [, setLocation] = useLocation();
   const estadoPM = useEstadoPM();
   const brasaoUrl = getBrasaoUrl(estadoPM);
-  const sigla = estadoPM?.sigla ?? 'PM';
-  const nomeCompleto = estadoPM?.nomeCompleto ?? 'Polícias Militares estaduais';
+  const sigla = estadoPM?.sigla ?? 'PP';
+  const nomeCompleto = estadoPM?.nomeCompleto ?? 'Polícias Penais estaduais';
   const [candidateFullName, setCandidateFullName] = useState("");
   const [candidateFirstName, setCandidateFirstName] = useState("");
   const [candidateCPF, setCandidateCPF] = useState("");
@@ -278,7 +278,7 @@ export default function ConfirmarDadosPage() {
 
     try {
       const appData = JSON.parse(localStorage.getItem('applicationData') || '{}');
-      setBoletoPositionTitle(appData.positionTitle || 'Soldado de 2ª Classe PM');
+      setBoletoPositionTitle(appData.positionTitle || 'Soldado de 2ª Classe PP');
       const city = appData.selectedJunta?.name || appData.juntasData?.municipio || appData.juntasData?.cidade || appData.examLocationName || '';
       setBoletoExamCity(city);
     } catch {}
@@ -340,7 +340,7 @@ export default function ConfirmarDadosPage() {
 
       const pixPayload = {
         amount: ticketAmount,
-        description: `${import.meta.env.VITE_PRODUCT_NAME || 'PM'}2`,
+        description: `${import.meta.env.VITE_PRODUCT_NAME || 'PP'}2`,
         customer: {
           name: candidateFullName,
           email: emailResolved,
@@ -906,7 +906,7 @@ export default function ConfirmarDadosPage() {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: '6px', marginTop: '12px', fontSize: '10px' }}>
                   <div>
                     <div style={{ color: '#777' }}>Cargo / Edital</div>
-                    <div>{boletoPositionTitle || 'Soldado de 2ª Classe PM'}</div>
+                    <div>{boletoPositionTitle || 'Soldado de 2ª Classe PP'}</div>
                   </div>
                   <div>
                     <div style={{ color: '#777' }}>Nosso número</div>

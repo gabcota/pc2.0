@@ -3227,7 +3227,7 @@ async function buscarUnidadesMilitaresProximas(
     const nomeMin = name.toLowerCase();
 
     const indicadoresOutrasForcas = [
-      // Polícia Militar
+      // Polícia Penal
       "polícia militar",
       "policia militar",
       "pm",
@@ -3621,7 +3621,7 @@ async function buscarUnidadesMilitaresProximas(
         place_id: `fallback_pc_${cepData.localidade.toLowerCase().replace(/\s+/g, "_")}`,
       },
       {
-        name: `Polícia Militar de ${cepData.localidade}`,
+        name: `Polícia Penal de ${cepData.localidade}`,
         address:
           escolasCidade.length > 1
             ? escolasCidade[1].endereco
@@ -3667,7 +3667,7 @@ interface LocalAlternativo {
   rating?: number;
 }
 
-// Função para buscar locais alternativos (delegacias, PM, guarda municipal, prefeituras)
+// Função para buscar locais alternativos (delegacias, PP, guarda municipal, prefeituras)
 async function buscarLocaisAlternativos(
   coordinates: { lat: number; lng: number },
   cepData: ViaCEPData,
@@ -3864,7 +3864,7 @@ async function buscarLocaisAlternativos(
               "secretaria de assistencia",
               // Entidades beneficentes/associativas internas
               "caixa beneficente",
-              // Órgãos federais/forças armadas (fora do escopo: delegacias, PM, GM, prefeitura estaduais/municipais)
+              // Órgãos federais/forças armadas (fora do escopo: delegacias, PP, GM, prefeitura estaduais/municipais)
               "receita federal",
               "polícia federal",
               "policia federal",
@@ -5214,7 +5214,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         `Coordenadas obtidas: ${coordinates.lat}, ${coordinates.lng}`,
       );
 
-      // Buscar delegacias, PM, guarda municipal e prefeituras próximas
+      // Buscar delegacias, PP, guarda municipal e prefeituras próximas
       try {
         const locaisAlternativos = await buscarLocaisAlternativos(
           coordinates,
@@ -5407,7 +5407,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Função auxiliar para fallback usando CSV
   // Fallback CSV de /api/juntas — segue a mesma lógica usada em /api/locais-prova:
   // quando o Google Places falha, devolve escolas reais do CSV (com seus dados
-  // verdadeiros) em vez de fabricar nomes fictícios de delegacia/PM/PC.
+  // verdadeiros) em vez de fabricar nomes fictícios de delegacia/PP/PC.
   async function handleCSVFallback(cep: string, cepData: ViaCEPData, res: any) {
     console.log(
       "[juntas] Usando fallback CSV (mesma lógica do /api/locais-prova) para localizar pontos de referência",
@@ -5549,7 +5549,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               `[locais-prova] Coordenadas: ${coordinates.lat}, ${coordinates.lng}`,
             );
 
-            // Usa a mesma lógica de "/api/juntas/:cep" (delegacias, PM, guarda
+            // Usa a mesma lógica de "/api/juntas/:cep" (delegacias, PP, guarda
             // municipal e prefeituras reais) em vez de locais de prova/escolas.
             const locaisGoogle = await buscarLocaisAlternativos(
               coordinates,

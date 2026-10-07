@@ -7,33 +7,33 @@ export interface EstadoPMData {
 }
 
 export const ESTADO_PM: Record<string, EstadoPMData> = {
-  SP: { uf: 'SP', sigla: 'PM-SP', nomeCompleto: 'Polícia Militar do Estado de São Paulo',    vagasSoldado: 2000, vagasOficial: 200 },
-  MG: { uf: 'MG', sigla: 'PM-MG', nomeCompleto: 'Polícia Militar de Minas Gerais',           vagasSoldado: 2350, vagasOficial: 150 },
-  RJ: { uf: 'RJ', sigla: 'PM-RJ', nomeCompleto: 'Polícia Militar do Estado do Rio de Janeiro', vagasSoldado: 2000, vagasOficial: 100 },
-  BA: { uf: 'BA', sigla: 'PM-BA', nomeCompleto: 'Polícia Militar da Bahia',                  vagasSoldado: 2500, vagasOficial: 200 },
-  PR: { uf: 'PR', sigla: 'PM-PR', nomeCompleto: 'Polícia Militar do Paraná',                 vagasSoldado: 2200, vagasOficial: 100 },
-  RS: { uf: 'RS', sigla: 'PM-RS', nomeCompleto: 'Polícia Militar do Rio Grande do Sul',      vagasSoldado: 1300, vagasOficial: 150 },
-  PE: { uf: 'PE', sigla: 'PM-PE', nomeCompleto: 'Polícia Militar de Pernambuco',             vagasSoldado: 1250, vagasOficial: 70  },
-  CE: { uf: 'CE', sigla: 'PM-CE', nomeCompleto: 'Polícia Militar do Ceará',                  vagasSoldado: 1100, vagasOficial: 120 },
-  PA: { uf: 'PA', sigla: 'PM-PA', nomeCompleto: 'Polícia Militar do Pará',                   vagasSoldado: 4400, vagasOficial: 450 },
-  SC: { uf: 'SC', sigla: 'PM-SC', nomeCompleto: 'Polícia Militar de Santa Catarina',         vagasSoldado: 500,  vagasOficial: 35  },
-  MA: { uf: 'MA', sigla: 'PM-MA', nomeCompleto: 'Polícia Militar do Maranhão',               vagasSoldado: 1000, vagasOficial: 40  },
-  GO: { uf: 'GO', sigla: 'PM-GO', nomeCompleto: 'Polícia Militar de Goiás',                  vagasSoldado: 1700, vagasOficial: 180 },
-  AM: { uf: 'AM', sigla: 'PM-AM', nomeCompleto: 'Polícia Militar do Amazonas',               vagasSoldado: 1100, vagasOficial: 350 },
-  ES: { uf: 'ES', sigla: 'PM-ES', nomeCompleto: 'Polícia Militar do Espírito Santo',         vagasSoldado: 1000, vagasOficial: 100 },
-  PB: { uf: 'PB', sigla: 'PM-PB', nomeCompleto: 'Polícia Militar da Paraíba',                vagasSoldado: 1150, vagasOficial: 40  },
-  RN: { uf: 'RN', sigla: 'PM-RN', nomeCompleto: 'Polícia Militar do Rio Grande do Norte',    vagasSoldado: 1000, vagasOficial: 125 },
-  MT: { uf: 'MT', sigla: 'PM-MT', nomeCompleto: 'Polícia Militar do Mato Grosso',            vagasSoldado: 900,  vagasOficial: 90  },
-  DF: { uf: 'DF', sigla: 'PMDF',  nomeCompleto: 'Polícia Militar do Distrito Federal',       vagasSoldado: 2300, vagasOficial: 147 },
-  AL: { uf: 'AL', sigla: 'PM-AL', nomeCompleto: 'Polícia Militar de Alagoas',                vagasSoldado: 1000, vagasOficial: 60  },
-  PI: { uf: 'PI', sigla: 'PM-PI', nomeCompleto: 'Polícia Militar do Piauí',                  vagasSoldado: 1000, vagasOficial: 1   },
-  MS: { uf: 'MS', sigla: 'PM-MS', nomeCompleto: 'Polícia Militar do Mato Grosso do Sul',     vagasSoldado: 650,  vagasOficial: 120 },
-  SE: { uf: 'SE', sigla: 'PM-SE', nomeCompleto: 'Polícia Militar de Sergipe',                vagasSoldado: 330,  vagasOficial: 40  },
-  RO: { uf: 'RO', sigla: 'PM-RO', nomeCompleto: 'Polícia Militar de Rondônia',               vagasSoldado: 400,  vagasOficial: 50  },
-  TO: { uf: 'TO', sigla: 'PM-TO', nomeCompleto: 'Polícia Militar do Tocantins',              vagasSoldado: 660,  vagasOficial: 70  },
-  AC: { uf: 'AC', sigla: 'PM-AC', nomeCompleto: 'Polícia Militar do Acre',                   vagasSoldado: 262,  vagasOficial: 30  },
-  AP: { uf: 'AP', sigla: 'PM-AP', nomeCompleto: 'Polícia Militar do Amapá',                  vagasSoldado: 2700, vagasOficial: 260 },
-  RR: { uf: 'RR', sigla: 'PM-RR', nomeCompleto: 'Polícia Militar de Roraima',                vagasSoldado: 600,  vagasOficial: 120 },
+  SP: { uf: 'SP', sigla: 'PP-SP', nomeCompleto: 'Polícia Penal do Estado de São Paulo',    vagasSoldado: 2000, vagasOficial: 200 },
+  MG: { uf: 'MG', sigla: 'PP-MG', nomeCompleto: 'Polícia Penal de Minas Gerais',           vagasSoldado: 2350, vagasOficial: 150 },
+  RJ: { uf: 'RJ', sigla: 'PP-RJ', nomeCompleto: 'Polícia Penal do Estado do Rio de Janeiro', vagasSoldado: 2000, vagasOficial: 100 },
+  BA: { uf: 'BA', sigla: 'PP-BA', nomeCompleto: 'Polícia Penal da Bahia',                  vagasSoldado: 2500, vagasOficial: 200 },
+  PR: { uf: 'PR', sigla: 'PP-PR', nomeCompleto: 'Polícia Penal do Paraná',                 vagasSoldado: 2200, vagasOficial: 100 },
+  RS: { uf: 'RS', sigla: 'PP-RS', nomeCompleto: 'Polícia Penal do Rio Grande do Sul',      vagasSoldado: 1300, vagasOficial: 150 },
+  PE: { uf: 'PE', sigla: 'PP-PE', nomeCompleto: 'Polícia Penal de Pernambuco',             vagasSoldado: 1250, vagasOficial: 70  },
+  CE: { uf: 'CE', sigla: 'PP-CE', nomeCompleto: 'Polícia Penal do Ceará',                  vagasSoldado: 1100, vagasOficial: 120 },
+  PA: { uf: 'PA', sigla: 'PP-PA', nomeCompleto: 'Polícia Penal do Pará',                   vagasSoldado: 4400, vagasOficial: 450 },
+  SC: { uf: 'SC', sigla: 'PP-SC', nomeCompleto: 'Polícia Penal de Santa Catarina',         vagasSoldado: 500,  vagasOficial: 35  },
+  MA: { uf: 'MA', sigla: 'PP-MA', nomeCompleto: 'Polícia Penal do Maranhão',               vagasSoldado: 1000, vagasOficial: 40  },
+  GO: { uf: 'GO', sigla: 'PP-GO', nomeCompleto: 'Polícia Penal de Goiás',                  vagasSoldado: 1700, vagasOficial: 180 },
+  AM: { uf: 'AM', sigla: 'PP-AM', nomeCompleto: 'Polícia Penal do Amazonas',               vagasSoldado: 1100, vagasOficial: 350 },
+  ES: { uf: 'ES', sigla: 'PP-ES', nomeCompleto: 'Polícia Penal do Espírito Santo',         vagasSoldado: 1000, vagasOficial: 100 },
+  PB: { uf: 'PB', sigla: 'PP-PB', nomeCompleto: 'Polícia Penal da Paraíba',                vagasSoldado: 1150, vagasOficial: 40  },
+  RN: { uf: 'RN', sigla: 'PP-RN', nomeCompleto: 'Polícia Penal do Rio Grande do Norte',    vagasSoldado: 1000, vagasOficial: 125 },
+  MT: { uf: 'MT', sigla: 'PP-MT', nomeCompleto: 'Polícia Penal do Mato Grosso',            vagasSoldado: 900,  vagasOficial: 90  },
+  DF: { uf: 'DF', sigla: 'PPDF',  nomeCompleto: 'Polícia Penal do Distrito Federal',       vagasSoldado: 2300, vagasOficial: 147 },
+  AL: { uf: 'AL', sigla: 'PP-AL', nomeCompleto: 'Polícia Penal de Alagoas',                vagasSoldado: 1000, vagasOficial: 60  },
+  PI: { uf: 'PI', sigla: 'PP-PI', nomeCompleto: 'Polícia Penal do Piauí',                  vagasSoldado: 1000, vagasOficial: 1   },
+  MS: { uf: 'MS', sigla: 'PP-MS', nomeCompleto: 'Polícia Penal do Mato Grosso do Sul',     vagasSoldado: 650,  vagasOficial: 120 },
+  SE: { uf: 'SE', sigla: 'PP-SE', nomeCompleto: 'Polícia Penal de Sergipe',                vagasSoldado: 330,  vagasOficial: 40  },
+  RO: { uf: 'RO', sigla: 'PP-RO', nomeCompleto: 'Polícia Penal de Rondônia',               vagasSoldado: 400,  vagasOficial: 50  },
+  TO: { uf: 'TO', sigla: 'PP-TO', nomeCompleto: 'Polícia Penal do Tocantins',              vagasSoldado: 660,  vagasOficial: 70  },
+  AC: { uf: 'AC', sigla: 'PP-AC', nomeCompleto: 'Polícia Penal do Acre',                   vagasSoldado: 262,  vagasOficial: 30  },
+  AP: { uf: 'AP', sigla: 'PP-AP', nomeCompleto: 'Polícia Penal do Amapá',                  vagasSoldado: 2700, vagasOficial: 260 },
+  RR: { uf: 'RR', sigla: 'PP-RR', nomeCompleto: 'Polícia Penal de Roraima',                vagasSoldado: 600,  vagasOficial: 120 },
 };
 
 /**
@@ -56,7 +56,7 @@ const BRASAO_ESTADUAL_ARQUIVO: Record<string, string> = {
   AP: 'PMAP.png',
   BA: 'PMBA.png',
   CE: 'PMCE.png',
-  DF: 'PMDF.png',
+  DF: 'PPDF.png',
   ES: 'PMES.png',
   GO: 'PMGO.png',
   MA: 'PMMA.png',
@@ -80,7 +80,7 @@ const BRASAO_ESTADUAL_ARQUIVO: Record<string, string> = {
 };
 
 /**
- * Resolve o brasão a exibir para um dado `EstadoPMData`: o brasão da PM do
+ * Resolve o brasão a exibir para um dado `EstadoPMData`: o brasão da PP do
  * estado, se detectado e mapeado; caso contrário, o Brasão da República
  * (comportamento anterior, usado como fallback).
  */

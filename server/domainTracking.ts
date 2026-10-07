@@ -268,7 +268,7 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
   // sync with client/src/lib/siteConfig.ts's TRANSPARENCIA_CONCURSO config;
   // update both if this firm's registration data changes.
   "pmemfoco.click": {
-    brand: "Direito à Transparência no Concurso da PM",
+    brand: "Direito à Transparência no Concurso da PP",
     razaoSocial: "Carlos Leme & Juliana Leme Advogados",
     cnpj: "43.542.532/0001-63",
     address: "Avenida Adolfo Pinheiro, 2054, Conj 408, Santo Amaro",
@@ -286,7 +286,7 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
   // sync with client/src/lib/siteConfig.ts's EXAME_TOXICOLOGICO config;
   // update both if this firm's registration data changes.
   "guiadapm.click": {
-    brand: "Direito no Exame Toxicológico do Concurso da PM",
+    brand: "Direito no Exame Toxicológico do Concurso da PP",
     razaoSocial: "Gobbette Marques & Barreto Advogados Associados",
     cnpj: "20.300.477/0001-08",
     address: "Avenida Getulio Vargas, 128, Edif. Gal. Dr. Naly da E. Mir, Sala 09/11",
@@ -303,7 +303,7 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
   // client/src/lib/siteConfig.ts (PM_DO_MEU_ESTADO); atualizar ambos se os
   // dados cadastrais mudarem.
   "pmdomeuestado.click": {
-    brand: "PM do Meu Estado",
+    brand: "PP do Meu Estado",
     razaoSocial: "Muamba Filmes LTDA",
     cnpj: "57.507.866/0001-00",
     address: "Rua Milagres, 24, Sala 10, Aldeota",
@@ -320,7 +320,7 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
   // advocacia. Mantida em sincronia com client/src/lib/siteConfig.ts
   // (CONCURSEIRO_PM); atualizar ambos se os dados cadastrais mudarem.
   "concurseiropm.click": {
-    brand: "Concurseiro PM",
+    brand: "Concurseiro PP",
     razaoSocial: "Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA",
     cnpj: "58.129.437/0001-00",
     address: "Avenida Washington Soares, 55, Sala 307, Edson Queiroz",
@@ -337,7 +337,7 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
   // sincronia com client/src/lib/siteConfig.ts (FUTURO_PM); atualizar ambos
   // se os dados cadastrais mudarem.
   "futuropm.click": {
-    brand: "Futuro PM",
+    brand: "Futuro PP",
     razaoSocial: "Vilasolutions Brasil LTDA",
     cnpj: "57.638.943/0001-61",
     address: "Rua Pedro de Sousa, 305, Parque Santa Maria",
@@ -371,7 +371,7 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
   // client/src/lib/siteConfig.ts (RADAR_PM); atualizar ambos se os dados
   // cadastrais mudarem.
   "radarpm.click": {
-    brand: "Radar PM",
+    brand: "Radar PP",
     razaoSocial: "Btc Conecta Cursos e Eventos LTDA",
     cnpj: "58.129.039/0001-93",
     address: "SAUS QD 4, Bloco A, Sala 620, Ed. Victoria Office Tower, Asa Sul",
@@ -388,7 +388,7 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
   // em sincronia com client/src/lib/siteConfig.ts (PM_NA_PRATICA); atualizar
   // ambos se os dados cadastrais mudarem.
   "pmnapratica.click": {
-    brand: "PM na Prática",
+    brand: "PP na Prática",
     razaoSocial: "Educacional Insigne LTDA",
     cnpj: "57.205.076/0001-70",
     address: "SQPS 102, Lote 19, 602, Zona Industrial (Guará)",
@@ -422,7 +422,7 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
   // client/src/lib/siteConfig.ts (VOCA_PM); atualizar ambos se os dados
   // cadastrais mudarem.
   "nascipraserpm.click": {
-    brand: "Nasci pra ser PM",
+    brand: "Nasci pra ser PP",
     razaoSocial: "Dc Concursos LTDA",
     cnpj: "57.267.808/0001-57",
     address: "SHCGN CR QD 704/705, Bloco C, Loja 06, Asa Norte",
@@ -557,7 +557,7 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
   // com client/src/lib/siteConfig.ts (TRILHA_PM); atualizar ambos se os dados
   // cadastrais mudarem.
   "trilhapm.click": {
-    brand: "Trilha PM",
+    brand: "Trilha PP",
     razaoSocial: "Distribuidora Pecas Truck Mqn LTDA",
     cnpj: "62.549.521/0001-50",
     address: "Rua João David Perneta, 82",
@@ -591,7 +591,7 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
   // client/src/lib/siteConfig.ts (GUIA_DO_PM); atualizar ambos se os dados
   // cadastrais mudarem.
   "guiadopm.click": {
-    brand: "Guia do PM",
+    brand: "Guia do PP",
     razaoSocial: "Comex B2G LTDA",
     cnpj: "62.548.749/0001-25",
     address: "Rua Guararapes, 134",
@@ -659,7 +659,7 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
   // client/src/lib/siteConfig.ts (PANORAMA_PM); atualizar ambos se os dados
   // cadastrais mudarem.
   "panoramapm.click": {
-    brand: "Panorama PM",
+    brand: "Panorama PP",
     razaoSocial: "Anacarlaperiodontia LTDA",
     cnpj: "62.523.695/0001-43",
     address: "Avenida Governador Joao Durval Carneiro, 3803, Edif Charmant Sala 913",
@@ -676,7 +676,7 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
   // client/src/lib/siteConfig.ts (CRONOGRAMA_PM); atualizar ambos se os dados
   // cadastrais mudarem.
   "cronogramapm.click": {
-    brand: "Cronograma PM",
+    brand: "Cronograma PP",
     razaoSocial: "Cop Odontologia Premium LTDA",
     cnpj: "62.509.737/0001-91",
     address: "Avenida Getulio Vargas, 456",
@@ -744,7 +744,7 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
   // com client/src/lib/siteConfig.ts (PROJETO_PM_2026); atualizar ambos se os
   // dados cadastrais mudarem.
   "projetopm2026.click": {
-    brand: "Projeto PM 2026",
+    brand: "Projeto PP 2026",
     razaoSocial: "Furquim Soccer Assessoria Esportiva LTDA",
     cnpj: "62.453.437/0001-38",
     address: "Rua Diogo Farias, 181, Sala 1312",
@@ -761,7 +761,7 @@ export const COMPANY_DATA: Record<string, CompanyData> = {
   // client/src/lib/siteConfig.ts (PM_DESCOMPLICADA); atualizar ambos se os dados
   // cadastrais mudarem.
   "pmdescomplicada.click": {
-    brand: "PM Descomplicada",
+    brand: "PP Descomplicada",
     razaoSocial: "Mulheres do Queijo Ltda.",
     cnpj: "56.048.934/0001-58",
     address: "Rua Ernani Agricola, 15",
@@ -1013,7 +1013,7 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
   ],
   "pmpelobrasil.click": [
     {
-      q: "O concurso da Polícia Militar em que me inscrevi foi suspenso por decisão judicial — o que acontece com a minha inscrição?",
+      q: "O concurso da Polícia Penal em que me inscrevi foi suspenso por decisão judicial — o que acontece com a minha inscrição?",
       a: "Em regra, a suspensão paralisa temporariamente as etapas do certame até a decisão final, preservando os direitos já adquiridos pelos inscritos. Após o restabelecimento do concurso, os candidatos devem ser reintegrados à mesma fase em que o processo foi interrompido, sem prejuízo de sua classificação.",
     },
     {
@@ -1070,73 +1070,73 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
   ],
   "pmdomeuestado.click": [
     {
-      q: "As Polícias Militares variam muito entre os estados brasileiros?",
-      a: "Sim. Cada PM estadual é regulamentada por legislação própria e organizada de forma autônoma dentro do quadro federal. Há variações relevantes no quantitativo de efetivo, na estrutura de Batalhões e Companhias, nos critérios de promoção, no regime de trabalho (escala de plantão) e na remuneração dos profissionais. Estados maiores, como São Paulo e Minas Gerais, costumam ter corporações mais numerosas e orçamentos distintos das PMs de estados menores.",
+      q: "As Polícias Penais variam muito entre os estados brasileiros?",
+      a: "Sim. Cada PP estadual é regulamentada por legislação própria e organizada de forma autônoma dentro do quadro federal. Há variações relevantes no quantitativo de efetivo, na estrutura de Batalhões e Companhias, nos critérios de promoção, no regime de trabalho (escala de plantão) e na remuneração dos profissionais. Estados maiores, como São Paulo e Minas Gerais, costumam ter corporações mais numerosas e orçamentos distintos das PPs de estados menores.",
     },
     {
-      q: "As diferenças salariais entre PMs de estados diferentes são significativas?",
+      q: "As diferenças salariais entre PPs de estados diferentes são significativas?",
       a: "São expressivas. O vencimento base de um soldado recém-formado pode variar consideravelmente entre estados, refletindo diferenças no orçamento estadual, nas leis de carreira e nos planos de reestruturação remuneratória de cada governo. Além do salário base, benefícios como adicional de risco de vida, gratificação por habilitação e licenças especiais variam por corporação e influenciam a remuneração total do profissional.",
     },
     {
-      q: "A estrutura de postos e graduações é igual em todas as PMs estaduais?",
+      q: "A estrutura de postos e graduações é igual em todas as PPs estaduais?",
       a: "A estrutura geral segue o modelo nacional — praças (soldado a subtenente) e oficiais (aspirante a coronel) — mas os detalhes variam por estado. Alguns estados possuem graduações ou denominações específicas, planos de cargos distintos e critérios diferentes para acesso aos cursos de especialização e promoção. O regulamento interno de cada corporação define os detalhes da progressão funcional.",
     },
     {
-      q: "Alguns estados abrem mais concursos para a PM do que outros?",
-      a: "Historicamente, sim. A frequência de seleções depende do orçamento estadual, da taxa de saída de profissionais (aposentadorias e desligamentos) e das políticas de segurança pública de cada governo. Estados com maior rotatividade ou expansão do efetivo costumam realizar seleções com maior regularidade. Acompanhe os diários oficiais e o site da PM do seu estado para informações oficiais sobre editais abertos.",
+      q: "Alguns estados abrem mais concursos para a PP do que outros?",
+      a: "Historicamente, sim. A frequência de seleções depende do orçamento estadual, da taxa de saída de profissionais (aposentadorias e desligamentos) e das políticas de segurança pública de cada governo. Estados com maior rotatividade ou expansão do efetivo costumam realizar seleções com maior regularidade. Acompanhe os diários oficiais e o site da PP do seu estado para informações oficiais sobre editais abertos.",
     },
     {
-      q: "É possível tirar dúvidas sobre as PMs estaduais pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre estrutura, carreira e organização das Polícias Militares estaduais pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre a corporação do seu estado, consulte diretamente o site ou a ouvidoria da PM estadual.",
+      q: "É possível tirar dúvidas sobre as PPs estaduais pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre estrutura, carreira e organização das Polícias Penais estaduais pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre a corporação do seu estado, consulte diretamente o site ou a ouvidoria da PP estadual.",
     },
   ],
   "concurseiropm.click": [
     {
-      q: "Quais são as disciplinas mais cobradas nas provas objetivas do concurso da PM?",
-      a: "As disciplinas mais frequentes nos concursos da PM incluem Língua Portuguesa, Matemática e Raciocínio Lógico, Noções de Direito Constitucional, Direito Administrativo e Legislação Policial Estadual. Dependendo do edital, podem aparecer também Informática, Atualidades, Direito Penal e Ética no Serviço Público. O conteúdo programático exato varia por estado e por banca organizadora.",
+      q: "Quais são as disciplinas mais cobradas nas provas objetivas do concurso da PP?",
+      a: "As disciplinas mais frequentes nos concursos da PP incluem Língua Portuguesa, Matemática e Raciocínio Lógico, Noções de Direito Constitucional, Direito Administrativo e Legislação Policial Estadual. Dependendo do edital, podem aparecer também Informática, Atualidades, Direito Penal e Ética no Serviço Público. O conteúdo programático exato varia por estado e por banca organizadora.",
     },
     {
-      q: "Como montar um cronograma eficiente de estudos para o concurso da PM?",
+      q: "Como montar um cronograma eficiente de estudos para o concurso da PP?",
       a: "Um cronograma eficiente parte do edital: identifique o número de questões por disciplina e o peso de cada uma na nota final. Dedique mais horas às disciplinas com maior incidência e às que representam maior dificuldade pessoal. Alterne dias de conteúdo novo com dias de revisão e resolução de questões anteriores, e inclua simulados periódicos para treinar o ritmo da prova real.",
     },
     {
-      q: "Qual é a melhor estratégia para resolver questões de múltipla escolha nas provas da PM?",
+      q: "Qual é a melhor estratégia para resolver questões de múltipla escolha nas provas da PP?",
       a: "Eliminar alternativas claramente erradas antes de escolher a resposta reduz o risco de marcação precipitada. Para questões de interpretação de texto e raciocínio lógico, ler o enunciado com atenção antes das alternativas ajuda a evitar armadilhas. Manter o ritmo e não gastar tempo excessivo em questões desconhecidas — deixando-as para revisitar ao final — é uma tática eficaz na maioria dos certames com limite de tempo rigoroso.",
     },
     {
-      q: "As provas dos concursos da PM variam muito entre os estados?",
+      q: "As provas dos concursos da PP variam muito entre os estados?",
       a: "Sim. O conteúdo programático, o número de questões, o peso de cada disciplina e o nível de dificuldade das provas variam significativamente entre corporações estaduais e entre bancas organizadoras. Editais de estados como São Paulo (VUNESP), Minas Gerais e Rio de Janeiro têm perfis de prova distintos. Sempre consulte o edital específico do certame de seu interesse para organizar a preparação com precisão.",
     },
     {
-      q: "É possível tirar dúvidas sobre preparação para o concurso da PM pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre disciplinas, cronograma e organização dos estudos para o concurso da PM pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações específicas sobre o edital de seu interesse, consulte sempre o documento oficial da banca organizadora.",
+      q: "É possível tirar dúvidas sobre preparação para o concurso da PP pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre disciplinas, cronograma e organização dos estudos para o concurso da PP pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações específicas sobre o edital de seu interesse, consulte sempre o documento oficial da banca organizadora.",
     },
   ],
   "futuropm.click": [
     {
-      q: "Como funciona o processo seletivo para ingresso como soldado da Polícia Militar?",
+      q: "Como funciona o processo seletivo para ingresso como soldado da Polícia Penal?",
       a: "O processo seletivo para soldado varia por estado, mas em geral inclui prova objetiva de conhecimentos gerais, Teste de Aptidão Física (TAF), exame médico, avaliação psicológica e investigação social. O edital de cada corporação define os requisitos mínimos de escolaridade, idade, altura e outros critérios eliminatórios. A ordem das etapas pode variar conforme a corporação organizadora.",
     },
     {
       q: "O que é o Curso de Formação de Soldados (CFS) e como ele funciona?",
-      a: "O CFS é o período de formação inicial obrigatório para quem ingressa na PM como soldado. Durante o curso, o recruta recebe instrução em técnicas policiais, legislação, armamento, primeiros socorros, educação física intensa e conduta militar. A duração varia por estado — em geral de quatro a oito meses — e a aprovação é condição para assumir o serviço ativo como praça.",
+      a: "O CFS é o período de formação inicial obrigatório para quem ingressa na PP como soldado. Durante o curso, o recruta recebe instrução em técnicas policiais, legislação, armamento, primeiros socorros, educação física intensa e conduta militar. A duração varia por estado — em geral de quatro a oito meses — e a aprovação é condição para assumir o serviço ativo como praça.",
     },
     {
-      q: "Como funciona a progressão nas graduações da carreira de praça da PM?",
+      q: "Como funciona a progressão nas graduações da carreira de praça da PP?",
       a: "A carreira de praça segue a sequência: soldado → cabo → sargento (3º, 2º e 1º) → subtenente. As promoções ocorrem por antiguidade e merecimento, conforme os regulamentos de cada corporação estadual. Critérios como tempo mínimo na graduação, aprovação em cursos de formação específicos, ausência de punições e avaliação de desempenho influenciam diretamente o ritmo de progressão.",
     },
     {
-      q: "Quais são as principais diferenças entre a carreira de praça e a carreira de oficial na PM?",
+      q: "Quais são as principais diferenças entre a carreira de praça e a carreira de oficial na PP?",
       a: "Praças ingressam como soldados por concurso público e progridem nas graduações até subtenente. Oficiais ingressam pelo Curso de Formação de Oficiais (CFO) — com exigência de ensino superior — e progridem nos postos de tenente a coronel, com responsabilidades maiores de comando e gestão. As carreiras são hierarquicamente separadas, com diferentes estatutos, critérios de promoção e atribuições funcionais.",
     },
     {
-      q: "É possível tirar dúvidas sobre a carreira de praça da PM pelo WhatsApp?",
+      q: "É possível tirar dúvidas sobre a carreira de praça da PP pelo WhatsApp?",
       a: "Sim. Você pode enviar sua dúvida sobre ingresso como soldado, formação e progressão na carreira de praça pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre o seu caso específico, consulte a corporação responsável.",
     },
   ],
   "carreiradeoficial.click": [
     {
-      q: "Como funciona o sistema de promoções na carreira de oficial da Polícia Militar?",
+      q: "Como funciona o sistema de promoções na carreira de oficial da Polícia Penal?",
       a: "As promoções na carreira de oficial seguem dois critérios principais previstos nos estatutos estaduais: antiguidade, que respeita a ordem de precedência entre oficiais do mesmo posto, e merecimento, baseado em avaliações de desempenho, cursos realizados e conduta funcional. A composição e o peso de cada critério variam conforme a corporação e o posto em questão.",
     },
     {
@@ -1153,42 +1153,42 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
     },
     {
       q: "É possível tirar dúvidas sobre desenvolvimento na carreira de oficial pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre progressão, especializações e competências na carreira de oficial da PM pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre o seu caso específico, consulte a corporação responsável.",
+      a: "Sim. Você pode enviar sua dúvida sobre progressão, especializações e competências na carreira de oficial da PP pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre o seu caso específico, consulte a corporação responsável.",
     },
   ],
   "radarpm.click": [
     {
-      q: "Como acompanhar os editais de concurso da Polícia Militar em aberto no Brasil?",
+      q: "Como acompanhar os editais de concurso da Polícia Penal em aberto no Brasil?",
       a: "Os editais são publicados nos Diários Oficiais estaduais e nos sites das bancas organizadoras contratadas para cada certame. Acompanhar os portais oficiais das Secretarias de Segurança Pública e as bancas mais frequentes — como VUNESP, CEBRASPE, FGV, IBFC e FCC — permite identificar concursos assim que são publicados. Algumas corporações anunciam previsões de abertura meses antes do edital formal.",
     },
     {
-      q: "Com que frequência as PMs estaduais abrem concurso para novos integrantes?",
+      q: "Com que frequência as PPs estaduais abrem concurso para novos integrantes?",
       a: "A periodicidade varia muito por estado e depende de fatores como déficit de efetivo, aprovação legislativa de vagas e disponibilidade orçamentária. Estados com maior efetivo e rotatividade, como São Paulo, Rio de Janeiro e Minas Gerais, costumam abrir concursos com mais regularidade. Estados menores podem ficar anos sem concurso ou abrir certames em caráter emergencial.",
     },
     {
-      q: "O que verificar assim que um novo edital da PM é publicado?",
+      q: "O que verificar assim que um novo edital da PP é publicado?",
       a: "Os pontos críticos a conferir são: número de vagas e distribuição por especialidade ou região; requisitos de ingresso (idade, escolaridade, altura, antecedentes); cronograma completo com datas de prova, TAF e avaliação psicológica; banca organizadora; conteúdo programático das provas objetivas; e critérios de classificação e aprovação. Qualquer dúvida deve ser dirimentada pelo próprio edital ou pela banca responsável.",
     },
     {
-      q: "Como funciona o cronograma típico de um concurso da Polícia Militar?",
+      q: "Como funciona o cronograma típico de um concurso da Polícia Penal?",
       a: "A sequência habitual começa com a publicação do edital e abertura de inscrições, seguida de provas objetivas (conhecimentos gerais e específicos), avaliação física (TAF), exame médico, avaliação psicológica, investigação social e curso de formação. O processo completo pode durar de seis meses a mais de dois anos, dependendo do número de candidatos e da estrutura da corporação.",
     },
     {
-      q: "É possível tirar dúvidas sobre editais e concursos da PM pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre editais, prazos, requisitos ou cronograma de concursos da Polícia Militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais e vinculantes, consulte sempre o edital publicado e os canais oficiais da banca organizadora ou da corporação.",
+      q: "É possível tirar dúvidas sobre editais e concursos da PP pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre editais, prazos, requisitos ou cronograma de concursos da Polícia Penal pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais e vinculantes, consulte sempre o edital publicado e os canais oficiais da banca organizadora ou da corporação.",
     },
   ],
   "pmnapratica.click": [
     {
       q: "Como funciona a escala de plantão do policial militar?",
-      a: "A escala mais comum nas PMs estaduais é o sistema 24×72 horas — o policial trabalha 24 horas seguidas e folga 72 — ou o sistema 12×36 horas, com 12 horas de serviço e 36 de folga. A escala varia conforme a corporação, o posto ou graduação do policial e a unidade onde serve. Serviços administrativos e operações especiais podem ter escalas diferenciadas.",
+      a: "A escala mais comum nas PPs estaduais é o sistema 24×72 horas — o policial trabalha 24 horas seguidas e folga 72 — ou o sistema 12×36 horas, com 12 horas de serviço e 36 de folga. A escala varia conforme a corporação, o posto ou graduação do policial e a unidade onde serve. Serviços administrativos e operações especiais podem ter escalas diferenciadas.",
     },
     {
       q: "Quais são os procedimentos básicos numa abordagem policial?",
       a: "A abordagem policial segue protocolos que variam por corporação, mas em geral envolvem identificação do policial, comunicação clara das razões da abordagem, posicionamento de segurança e busca pessoal quando há fundada suspeita. Os regulamentos internos e a legislação processual penal estabelecem os limites da atuação — o policial deve equilibrar eficiência operacional e respeito aos direitos da pessoa abordada.",
     },
     {
-      q: "Que tipos de ocorrências um PM atende com mais frequência?",
+      q: "Que tipos de ocorrências um PP atende com mais frequência?",
       a: "Além das ocorrências de natureza criminal (flagrantes, perturbação da ordem, briga em via pública), grande parte das chamadas ao policiamento ostensivo envolve acidentes de trânsito, desentendimentos familiares, assistência a pessoas em sofrimento e perturbação do sossego. O policial militar frequentemente é o primeiro contato do cidadão com o Estado em situações de emergência.",
     },
     {
@@ -1196,17 +1196,17 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
       a: "A comunicação via rádio segue protocolos de fonética e códigos numéricos (como o código Q e códigos de ocorrência) que permitem transmissões rápidas e padronizadas entre a viatura, a central de operações e outras unidades. O domínio dessas comunicações é parte da formação no Curso de Formação de Soldados e é aprimorado na prática ao longo do serviço.",
     },
     {
-      q: "É possível tirar dúvidas sobre a rotina operacional do PM pelo WhatsApp?",
+      q: "É possível tirar dúvidas sobre a rotina operacional do PP pelo WhatsApp?",
       a: "Sim. Você pode enviar sua dúvida sobre o cotidiano operacional do policial militar — plantões, procedimentos, ocorrências e comunicação — pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre procedimentos específicos, consulte a corporação policial responsável.",
     },
   ],
   "rumoafarda.click": [
     {
-      q: "Quais capacidades físicas são mais avaliadas no Teste de Aptidão Física (TAF) da PM?",
+      q: "Quais capacidades físicas são mais avaliadas no Teste de Aptidão Física (TAF) da PP?",
       a: "O TAF varia conforme o edital de cada corporação, mas em geral avalia resistência aeróbica (corrida de 12 minutos ou percurso cronometrado), força muscular de membros superiores (flexões de braço) e resistência abdominal (abdominais). Alguns editais incluem ainda natação, barras ou barra fixa. Verificar o edital específico é indispensável antes de montar o programa de treino.",
     },
     {
-      q: "Com quanto tempo de antecedência devo começar a preparação física para o processo seletivo da PM?",
+      q: "Com quanto tempo de antecedência devo começar a preparação física para o processo seletivo da PP?",
       a: "Para candidatos sem base de condicionamento, especialistas em preparação para concursos militares geralmente recomendam entre seis meses e um ano de antecedência. Candidatos já ativos fisicamente podem atingir os índices exigidos em três a quatro meses de treino específico. O importante é adaptar o cronograma ao nível de condicionamento atual, sem atingir sobrecarga que gere lesão no período pré-seleção.",
     },
     {
@@ -1219,7 +1219,7 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
     },
     {
       q: "É possível tirar dúvidas sobre preparação física para o TAF pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre condicionamento físico e preparação para os testes da PM pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientação específica sobre treino, nutrição ou saúde, recomendamos consultar profissionais habilitados de educação física, nutrição ou medicina esportiva.",
+      a: "Sim. Você pode enviar sua dúvida sobre condicionamento físico e preparação para os testes da PP pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientação específica sobre treino, nutrição ou saúde, recomendamos consultar profissionais habilitados de educação física, nutrição ou medicina esportiva.",
     },
   ],
   "nascipraserpm.click": [
@@ -1269,28 +1269,28 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
   "modopolicial.click": [
     {
       q: "Como o policial militar desenvolve a consciência situacional no serviço?",
-      a: "A consciência situacional — a capacidade de perceber, compreender e antecipar o que está acontecendo ao redor — é uma das competências centrais do policiamento eficaz. Ela se desenvolve com a experiência de campo, mas também pode ser treinada. Policiais com alta consciência situacional notam inconsistências no ambiente antes de se tornarem ameaças: comportamentos fora do padrão, posicionamentos suspeitos, mudanças na dinâmica de um local. O patrulhamento ativo — em que o PM observa o ambiente com atenção deliberada em vez de apenas circular — é uma das formas mais eficazes de desenvolver essa capacidade ao longo da carreira.",
+      a: "A consciência situacional — a capacidade de perceber, compreender e antecipar o que está acontecendo ao redor — é uma das competências centrais do policiamento eficaz. Ela se desenvolve com a experiência de campo, mas também pode ser treinada. Policiais com alta consciência situacional notam inconsistências no ambiente antes de se tornarem ameaças: comportamentos fora do padrão, posicionamentos suspeitos, mudanças na dinâmica de um local. O patrulhamento ativo — em que o PP observa o ambiente com atenção deliberada em vez de apenas circular — é uma das formas mais eficazes de desenvolver essa capacidade ao longo da carreira.",
     },
     {
       q: "O que é de-escalada e quando ela é aplicada na atuação policial?",
       a: "De-escalada é o conjunto de técnicas e abordagens que buscam reduzir a tensão em situações potencialmente conflituosas antes de recorrer ao uso da força. Envolve comunicação verbal controlada, posicionamento físico não ameaçador, demonstração de controle emocional e oferta de alternativas ao sujeito abordado. A de-escalada é aplicável em situações onde o risco imediato à integridade física não é iminente — quando há tempo para negociar, clarificar a situação ou esperar reforços. Não é uma substituição universal ao uso da força, mas uma ferramenta que, quando aplicável, reduz riscos para todos os envolvidos, inclusive o policial.",
     },
     {
-      q: "Como funciona o processo de tomada de decisão do PM em situações de alta pressão?",
-      a: "Em situações de alta pressão, o processo decisório do PM precisa ser rápido e seguro ao mesmo tempo — duas exigências que frequentemente entram em tensão. Policiais bem treinados operam com modelos mentais já internalizados: padrões de situação e respostas associadas que foram praticados até se tornarem automáticos. Isso reduz a carga cognitiva no momento crítico. O modelo OODA (Observar, Orientar, Decidir, Agir), desenvolvido no contexto militar, é frequentemente referenciado no treinamento policial como estrutura para esse processo. O diferencial entre policiais experientes e iniciantes está na velocidade com que percorrem esse ciclo sem perder precisão.",
+      q: "Como funciona o processo de tomada de decisão do PP em situações de alta pressão?",
+      a: "Em situações de alta pressão, o processo decisório do PP precisa ser rápido e seguro ao mesmo tempo — duas exigências que frequentemente entram em tensão. Policiais bem treinados operam com modelos mentais já internalizados: padrões de situação e respostas associadas que foram praticados até se tornarem automáticos. Isso reduz a carga cognitiva no momento crítico. O modelo OODA (Observar, Orientar, Decidir, Agir), desenvolvido no contexto militar, é frequentemente referenciado no treinamento policial como estrutura para esse processo. O diferencial entre policiais experientes e iniciantes está na velocidade com que percorrem esse ciclo sem perder precisão.",
     },
     {
-      q: "Quais são os princípios do uso progressivo da força na Polícia Militar?",
-      a: "O uso da força pelo policial militar é regulado pelo princípio da progressividade: a resposta deve ser proporcional à resistência ou ameaça apresentada, e o PM deve sempre começar pela presença policial e pela comunicação verbal antes de avançar para níveis mais elevados. A escala geralmente inclui, em ordem crescente: presença policial, verbalização, controle físico por contato, uso de instrumentos de menor potencial ofensivo e, em último caso, força letal. A passagem de um nível para outro deve ser justificada pela necessidade e pela proporcionalidade, e cada uso de força deve ser documentado no relatório de ocorrência.",
+      q: "Quais são os princípios do uso progressivo da força na Polícia Penal?",
+      a: "O uso da força pelo policial militar é regulado pelo princípio da progressividade: a resposta deve ser proporcional à resistência ou ameaça apresentada, e o PP deve sempre começar pela presença policial e pela comunicação verbal antes de avançar para níveis mais elevados. A escala geralmente inclui, em ordem crescente: presença policial, verbalização, controle físico por contato, uso de instrumentos de menor potencial ofensivo e, em último caso, força letal. A passagem de um nível para outro deve ser justificada pela necessidade e pela proporcionalidade, e cada uso de força deve ser documentado no relatório de ocorrência.",
     },
     {
-      q: "É possível tirar dúvidas sobre tomada de decisão e atuação operacional da PM pelo WhatsApp?",
+      q: "É possível tirar dúvidas sobre tomada de decisão e atuação operacional da PP pelo WhatsApp?",
       a: "Sim. Você pode enviar sua dúvida sobre consciência situacional, de-escalada, uso progressivo da força e o processo decisional do policial militar em campo pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para treinamentos e orientações operacionais oficiais, consulte diretamente os programas de qualificação da corporação do seu estado.",
     },
   ],
   "primeirafarda.click": [
     {
-      q: "Como é a rotina diária dentro do Curso de Formação de Soldados da PM?",
+      q: "Como é a rotina diária dentro do Curso de Formação de Soldados da PP?",
       a: "A rotina do Curso de Formação de Soldados é marcada por estrutura rígida e horários fixos. O dia começa cedo — geralmente entre 5h e 6h — com formatura, atividade física e café da manhã antes do início das aulas. O período letivo combina disciplinas teóricas (legislação, direito penal, procedimentos operacionais) com treinamentos práticos (armamento, defesa pessoal, abordagem). O regime é semi-internato ou internato completo dependendo da corporação estadual, o que significa que os recrutas passam a maior parte do tempo nas instalações do Centro de Formação. Além das atividades formais, há deveres e obrigações militares que se estendem ao tempo livre.",
     },
     {
@@ -1298,91 +1298,91 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
       a: "As primeiras semanas do curso de formação representam o choque cultural mais intenso da carreira policial. Os maiores desafios relatados por policiais que já passaram pelo processo incluem: a adaptação ao regime de hierarquia e disciplina rígidos após anos de vida civil, o cansaço acumulado da combinação de atividade física intensa com carga horária teórica elevada, o convívio compulsório com um grupo grande de desconhecidos em ambiente fechado e a gestão emocional diante de cobranças e pressões que muitos recrutas nunca experimentaram antes. Recrutas que chegam com condicionamento físico e alguma familiaridade com rotina disciplinada tendem a ter uma adaptação mais suave.",
     },
     {
-      q: "O que mais surpreende quem ingressa no Curso de Formação de Soldados da PM?",
+      q: "O que mais surpreende quem ingressa no Curso de Formação de Soldados da PP?",
       a: "Policiais que já completaram o curso frequentemente relatam que o que mais surpreendeu não foi a intensidade física — esperada por quem se preparou para o TAF — mas o volume e a complexidade do conteúdo teórico: legislação, procedimentos operacionais, uso da força, direitos humanos e ética profissional formam uma carga acadêmica que muitos recrutas subestimam. Outro ponto que surpreende é a dimensão coletiva da formação: avaliações e punições frequentemente recaem sobre o grupo, não apenas sobre o indivíduo, o que exige uma mentalidade de equipe que nem todos estão acostumados a desenvolver.",
     },
     {
-      q: "Como se preparar mentalmente e fisicamente antes de iniciar o curso de formação da PM?",
+      q: "Como se preparar mentalmente e fisicamente antes de iniciar o curso de formação da PP?",
       a: "A preparação física antes do curso deve ir além do mínimo exigido no TAF — idealmente o recruta deve chegar ao curso com capacidade aeróbica e muscular acima do mínimo, pois as exigências físicas durante a formação são contínuas e acumulativas. Do ponto de vista mental, familiarizar-se com a estrutura hierárquica e com os regulamentos disciplinares militares antes do início ajuda a reduzir o choque cultural. Recrutas que já leram o regulamento da corporação, entendem o que significa uma formatura e têm noção básica dos procedimentos de abordagem chegam com uma vantagem real. Quanto à gestão emocional, o aspecto mais útil é estar preparado para abrir mão da autonomia do cotidiano civil por um período determinado.",
     },
     {
-      q: "É possível tirar dúvidas sobre o Curso de Formação de Soldados da PM pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre como é a rotina do curso de formação, o que esperar das primeiras semanas e como se preparar antes de iniciar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações específicas sobre o curso de formação do seu estado — duração, regime de internato e conteúdo programático —, recomendamos consultar diretamente o site da Polícia Militar estadual.",
+      q: "É possível tirar dúvidas sobre o Curso de Formação de Soldados da PP pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre como é a rotina do curso de formação, o que esperar das primeiras semanas e como se preparar antes de iniciar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações específicas sobre o curso de formação do seu estado — duração, regime de internato e conteúdo programático —, recomendamos consultar diretamente o site da Polícia Penal estadual.",
     },
   ],
   "patentemilitar.click": [
     {
-      q: "Quais são todos os postos e graduações da Polícia Militar, do soldado ao coronel?",
-      a: "A estrutura hierárquica da PM divide-se em dois grandes grupos: praças e oficiais. As graduações de praça — em ordem crescente — são: Soldado, Cabo, 3º Sargento, 2º Sargento, 1º Sargento, Subtenente (ou Subtenenente/Aspirante a Oficial, dependendo do estado). Os postos de oficial são: 2º Tenente, 1º Tenente, Capitão, Major, Tenente-Coronel e Coronel. O Coronel PM é o posto mais elevado da carreira estadual. Cada corporação estadual pode ter variações de nomenclatura e algumas possuem patentes intermediárias adicionais, como o Estágio de Adaptação para ingresso no quadro de oficiais.",
+      q: "Quais são todos os postos e graduações da Polícia Penal, do soldado ao coronel?",
+      a: "A estrutura hierárquica da PP divide-se em dois grandes grupos: praças e oficiais. As graduações de praça — em ordem crescente — são: Soldado, Cabo, 3º Sargento, 2º Sargento, 1º Sargento, Subtenente (ou Subtenenente/Aspirante a Oficial, dependendo do estado). Os postos de oficial são: 2º Tenente, 1º Tenente, Capitão, Major, Tenente-Coronel e Coronel. O Coronel PP é o posto mais elevado da carreira estadual. Cada corporação estadual pode ter variações de nomenclatura e algumas possuem patentes intermediárias adicionais, como o Estágio de Adaptação para ingresso no quadro de oficiais.",
     },
     {
-      q: "Como funciona o sistema de promoções na PM — por merecimento, antiguidade ou vaga?",
-      a: "As promoções na PM ocorrem geralmente por uma combinação de três critérios: antiguidade (tempo de serviço no posto ou graduação atual), merecimento (avaliação de desempenho, conduta disciplinar, cursos realizados e condecorações) e existência de vaga na graduação ou posto superior. Em geral, promoções entre as graduações de praça têm critérios mais objetivos, enquanto as promoções nos postos de oficial envolvem análise por Comissão de Promoções e maior peso do merecimento. Os critérios específicos são definidos pelo Estatuto dos Policiais Militares de cada estado.",
+      q: "Como funciona o sistema de promoções na PP — por merecimento, antiguidade ou vaga?",
+      a: "As promoções na PP ocorrem geralmente por uma combinação de três critérios: antiguidade (tempo de serviço no posto ou graduação atual), merecimento (avaliação de desempenho, conduta disciplinar, cursos realizados e condecorações) e existência de vaga na graduação ou posto superior. Em geral, promoções entre as graduações de praça têm critérios mais objetivos, enquanto as promoções nos postos de oficial envolvem análise por Comissão de Promoções e maior peso do merecimento. Os critérios específicos são definidos pelo Estatuto dos Policiais Militares de cada estado.",
     },
     {
       q: "Quais são os critérios e prazos típicos para progressão entre as graduações de praça?",
       a: "Os prazos mínimos para promoção entre graduações de praça variam por estado, mas de forma geral o policial precisa cumprir um tempo mínimo em cada graduação — que costuma variar de 2 a 5 anos —, estar em situação disciplinar regular (sem punições que impeçam a promoção) e, em alguns estados, concluir cursos de aperfeiçoamento específicos para cada nível. A promoção a Subtenente, a mais alta entre as praças, tende a exigir maior tempo de serviço e, frequentemente, conclusão do Curso de Formação de Sargentos ou equivalente.",
     },
     {
-      q: "O que diferencia os oficiais dos praças na estrutura hierárquica da PM?",
-      a: "A divisão entre praças e oficiais é a fronteira hierárquica mais significativa na PM. Os oficiais exercem funções de comando e direção — são responsáveis pelo planejamento operacional, pela gestão das unidades e pela representação institucional. Os praças executam as atividades operacionais diretas, como o policiamento ostensivo, sob supervisão dos oficiais. O ingresso nas duas carreiras ocorre por concursos distintos — um para soldado (início da carreira de praça) e outro para o Curso de Formação de Oficiais (CFO). A progressão de praça para oficial é possível, mas exige aprovação em processo seletivo específico e conclusão do CFO.",
+      q: "O que diferencia os oficiais dos praças na estrutura hierárquica da PP?",
+      a: "A divisão entre praças e oficiais é a fronteira hierárquica mais significativa na PP. Os oficiais exercem funções de comando e direção — são responsáveis pelo planejamento operacional, pela gestão das unidades e pela representação institucional. Os praças executam as atividades operacionais diretas, como o policiamento ostensivo, sob supervisão dos oficiais. O ingresso nas duas carreiras ocorre por concursos distintos — um para soldado (início da carreira de praça) e outro para o Curso de Formação de Oficiais (CFO). A progressão de praça para oficial é possível, mas exige aprovação em processo seletivo específico e conclusão do CFO.",
     },
     {
-      q: "É possível tirar dúvidas sobre postos, graduações e promoções na PM pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre a estrutura de patentes, como funciona o sistema de promoções e o que diferencia cada nível hierárquico na Polícia Militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações específicas sobre critérios de promoção da corporação do seu estado, recomendamos consultar o Estatuto dos Policiais Militares estadual ou o setor de recursos humanos da corporação.",
+      q: "É possível tirar dúvidas sobre postos, graduações e promoções na PP pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre a estrutura de patentes, como funciona o sistema de promoções e o que diferencia cada nível hierárquico na Polícia Penal pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações específicas sobre critérios de promoção da corporação do seu estado, recomendamos consultar o Estatuto dos Policiais Militares estadual ou o setor de recursos humanos da corporação.",
     },
   ],
   "sonhodefarda.click": [
     {
-      q: "Como manter a motivação durante uma preparação longa para o concurso da PM?",
+      q: "Como manter a motivação durante uma preparação longa para o concurso da PP?",
       a: "Preparações que se estendem por um ou dois anos — ou mais — exigem estratégias de sustentabilidade emocional que vão além da disciplina de estudo. Dividir o objetivo final em marcos intermediários mensuráveis (dominar uma disciplina, melhorar o tempo no TAF, concluir um simulado) cria momentos de conquista que alimentam a motivação ao longo do caminho. Registrar o progresso — um diário de estudo, uma planilha de desempenho — torna o avanço visível mesmo quando ele parece lento. Manter ao menos uma atividade prazerosa fora dos estudos não é desperdício de tempo: é o que impede o esgotamento que faz candidatos abandonarem antes de chegar à reta final.",
     },
     {
-      q: "O que fazer quando não se é aprovado em um ciclo do processo seletivo da PM?",
+      q: "O que fazer quando não se é aprovado em um ciclo do processo seletivo da PP?",
       a: "A não aprovação em um ciclo é uma informação, não uma sentença. O primeiro passo é identificar com precisão em qual etapa a eliminação ocorreu — prova escrita, TAF, psicológico — e o que o desempenho naquela fase diz sobre onde concentrar energia no próximo ciclo. Candidatos que repetem os mesmos erros de preparação entre ciclos tendem a obter os mesmos resultados; os que fazem uma análise honesta e ajustam a estratégia aumentam progressivamente suas chances. Dar um tempo curto para processar a frustração é saudável; transformar esse tempo em inação prolongada é o maior risco para quem quer tentar novamente.",
     },
     {
-      q: "Como lidar com a pressão familiar e social durante a preparação para a PM?",
+      q: "Como lidar com a pressão familiar e social durante a preparação para a PP?",
       a: "A pressão de quem está de fora — família, amigos, colegas — costuma vir de dois lugares: preocupação genuína com o futuro do candidato e dificuldade de compreender por que alguém investiria tanto tempo em algo sem retorno garantido. Comunicar de forma clara o que é a carreira, o que a aprovação significa concretamente e qual é o plano caso o objetivo não se concretize ajuda a transformar ceticismo em apoio. Estabelecer limites sobre quando o tema pode ser discutido em casa — evitando que cada conversa se torne uma avaliação da preparação — protege o foco e o equilíbrio emocional do candidato.",
     },
     {
-      q: "O que muda na vida do candidato e da família com a aprovação na PM?",
-      a: "A aprovação na PM representa uma mudança de vida que vai além do emprego. Para o aprovado, há a transformação identitária de tornar-se um profissional de segurança pública — com a responsabilidade, os valores e a rotina que esse papel implica. Para a família, há a estabilidade financeira que a carreira oferece, mas também a adaptação à escala de trabalho (incluindo plantões, fins de semana e feriados) e ao risco inerente à profissão. Quanto mais essa conversa acontecer antes da aprovação — com expectativas alinhadas e apoio mútuo construído —, mais suave tende a ser a transição.",
+      q: "O que muda na vida do candidato e da família com a aprovação na PP?",
+      a: "A aprovação na PP representa uma mudança de vida que vai além do emprego. Para o aprovado, há a transformação identitária de tornar-se um profissional de segurança pública — com a responsabilidade, os valores e a rotina que esse papel implica. Para a família, há a estabilidade financeira que a carreira oferece, mas também a adaptação à escala de trabalho (incluindo plantões, fins de semana e feriados) e ao risco inerente à profissão. Quanto mais essa conversa acontecer antes da aprovação — com expectativas alinhadas e apoio mútuo construído —, mais suave tende a ser a transição.",
     },
     {
-      q: "É possível tirar dúvidas sobre motivação e preparação emocional para o concurso da PM pelo WhatsApp?",
+      q: "É possível tirar dúvidas sobre motivação e preparação emocional para o concurso da PP pelo WhatsApp?",
       a: "Sim. Você pode enviar sua dúvida sobre como manter o foco durante uma preparação longa, lidar com reprovação ou pressão familiar e o que esperar da vida após a aprovação pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientações específicas sobre o edital ou cronograma do seu concurso, recomendamos consultar o site oficial da corporação ou da banca organizadora.",
     },
   ],
   "honramilitar.click": [
     {
-      q: "Qual é a origem histórica das Polícias Militares brasileiras?",
-      a: "As Polícias Militares brasileiras têm origem no século XIX, com raízes que remontam às forças de segurança criadas durante o período imperial. A Guarda Real de Polícia, fundada em 1809 no Rio de Janeiro, é considerada um dos marcos fundadores da tradição policial militar no Brasil. Com a proclamação da República e a organização federativa do país, cada estado passou a estruturar sua própria corporação, herdando a tradição hierárquica e disciplinar das forças militares e incorporando progressivamente o modelo de policiamento ostensivo que permanece até hoje.",
+      q: "Qual é a origem histórica das Polícias Penais brasileiras?",
+      a: "As Polícias Penais brasileiras têm origem no século XIX, com raízes que remontam às forças de segurança criadas durante o período imperial. A Guarda Real de Polícia, fundada em 1809 no Rio de Janeiro, é considerada um dos marcos fundadores da tradição policial militar no Brasil. Com a proclamação da República e a organização federativa do país, cada estado passou a estruturar sua própria corporação, herdando a tradição hierárquica e disciplinar das forças militares e incorporando progressivamente o modelo de policiamento ostensivo que permanece até hoje.",
     },
     {
-      q: "Quais são as principais tradições e cerimônias que marcam a vida institucional da PM?",
-      a: "A vida institucional da PM é pontuada por cerimônias que reforçam os vínculos de pertencimento e os valores da corporação. Entre as mais significativas estão a formatura dos novos policiais ao término do curso de formação — considerada um dos momentos mais marcantes da carreira —, a passagem de comando, que simboliza a continuidade institucional, as formaturas em datas comemorativas e as homenagens a policiais em missão. Cada corporação estadual tem suas tradições específicas, mas o caráter cerimonial e hierárquico é comum a todas.",
+      q: "Quais são as principais tradições e cerimônias que marcam a vida institucional da PP?",
+      a: "A vida institucional da PP é pontuada por cerimônias que reforçam os vínculos de pertencimento e os valores da corporação. Entre as mais significativas estão a formatura dos novos policiais ao término do curso de formação — considerada um dos momentos mais marcantes da carreira —, a passagem de comando, que simboliza a continuidade institucional, as formaturas em datas comemorativas e as homenagens a policiais em missão. Cada corporação estadual tem suas tradições específicas, mas o caráter cerimonial e hierárquico é comum a todas.",
     },
     {
       q: "O que é o código de honra do policial militar e como ele se expressa na prática?",
       a: "O código de honra militar não é necessariamente um documento formal único, mas um conjunto de valores e princípios que orientam a conduta do policial dentro e fora do serviço — lealdade à corporação, cumprimento do dever mesmo sob adversidade, respeito à hierarquia, proteção dos mais vulneráveis e preservação da imagem institucional. Esses valores são transmitidos durante a formação e reforçados ao longo da carreira por meio de regulamentos disciplinares, cerimônias e da cultura interna da unidade onde o policial serve.",
     },
     {
-      q: "Como a hierarquia contribui para a coesão e a eficiência operacional da Polícia Militar?",
+      q: "Como a hierarquia contribui para a coesão e a eficiência operacional da Polícia Penal?",
       a: "A hierarquia militar garante previsibilidade na cadeia de decisão — em situações de alta pressão, saber quem decide e quem executa elimina ambiguidades que poderiam custar vidas. Ela também cria um sistema de responsabilidade vertical: cada nível responde pelos resultados de suas ações e das ações de quem está sob seu comando. Além da dimensão operacional, a hierarquia tem função simbólica — os rituais de respeito entre postos e graduações reforçam a coesão institucional e a identidade coletiva da corporação.",
     },
     {
-      q: "É possível tirar dúvidas sobre a história e as tradições da Polícia Militar pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre a origem, as tradições e a cultura institucional da Polícia Militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações específicas sobre a história da PM do seu estado, recomendamos consultar diretamente o site ou o museu histórico da corporação estadual de interesse.",
+      q: "É possível tirar dúvidas sobre a história e as tradições da Polícia Penal pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre a origem, as tradições e a cultura institucional da Polícia Penal pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações específicas sobre a história da PP do seu estado, recomendamos consultar diretamente o site ou o museu histórico da corporação estadual de interesse.",
     },
   ],
   "trilhapm.click": [
     {
-      q: "Quais são todas as etapas do processo seletivo da PM e em que ordem costumam ocorrer?",
-      a: "O processo seletivo da PM geralmente segue esta sequência: prova objetiva de conhecimentos, Teste de Aptidão Física (TAF), avaliação psicológica, exame médico, investigação social e, em alguns estados, avaliação de títulos ou entrevista. A ordem pode variar por edital — alguns estados realizam o exame médico antes da investigação social, outros invertem. Cada etapa é eliminatória; o candidato que não atinge o mínimo em qualquer fase é desclassificado independentemente do desempenho nas demais. Ler o edital do estado de interesse com atenção ao cronograma é indispensável.",
+      q: "Quais são todas as etapas do processo seletivo da PP e em que ordem costumam ocorrer?",
+      a: "O processo seletivo da PP geralmente segue esta sequência: prova objetiva de conhecimentos, Teste de Aptidão Física (TAF), avaliação psicológica, exame médico, investigação social e, em alguns estados, avaliação de títulos ou entrevista. A ordem pode variar por edital — alguns estados realizam o exame médico antes da investigação social, outros invertem. Cada etapa é eliminatória; o candidato que não atinge o mínimo em qualquer fase é desclassificado independentemente do desempenho nas demais. Ler o edital do estado de interesse com atenção ao cronograma é indispensável.",
     },
     {
-      q: "Como se preparar para a avaliação psicológica no processo seletivo da PM?",
+      q: "Como se preparar para a avaliação psicológica no processo seletivo da PP?",
       a: "A avaliação psicológica não tem gabarito certo ou errado — ela busca identificar características de personalidade compatíveis com o exercício da função policial, como estabilidade emocional, autocontrole, capacidade de lidar com pressão e ausência de traços que possam comprometer o julgamento em situações críticas. Candidatos que tentam 'acertar' as respostas com base no que imaginam que os avaliadores querem ouvir costumam apresentar padrões de resposta inconsistentes, o que em si pode ser um indicativo de inadequação. A melhor preparação é estar descansado, responder com honestidade e não tentar manipular os resultados.",
     },
     {
@@ -1390,17 +1390,17 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
       a: "A investigação social verifica a idoneidade moral e os antecedentes do candidato por meio de consulta a registros policiais, cartoriais e eleitorais, entrevistas com vizinhos e referências, e checagem de redes sociais. Podem gerar desclassificação: antecedentes criminais (mesmo sem condenação definitiva, em alguns estados), uso de substâncias ilícitas comprovado em entrevistas, vínculos com organizações criminosas, dívidas tributárias ou eleitorais não regularizadas e publicações em redes sociais incompatíveis com a conduta esperada de um agente de segurança pública.",
     },
     {
-      q: "Como funciona o exame médico no processo seletivo da PM e quais condições podem causar eliminação?",
+      q: "Como funciona o exame médico no processo seletivo da PP e quais condições podem causar eliminação?",
       a: "O exame médico avalia a aptidão física e clínica do candidato para o exercício das funções policiais. Inclui exames laboratoriais, avaliação cardiológica, oftalmológica, otorrinolaringológica e, em alguns estados, toxicológica. Condições que podem causar eliminação incluem: acuidade visual abaixo do mínimo exigido sem correção adequada, hipertensão arterial não controlada, uso de determinados medicamentos de uso contínuo, índice de massa corporal fora da faixa estabelecida em edital e resultado positivo no exame toxicológico. Os critérios variam por corporação estadual e são detalhados no edital.",
     },
     {
-      q: "É possível tirar dúvidas sobre as etapas do processo seletivo da PM pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre as fases do concurso da PM, como se preparar para cada etapa e o que esperar da avaliação psicológica, investigação social ou exame médico pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre os critérios específicos do edital do seu estado, recomendamos consultar diretamente o site da banca organizadora ou da corporação.",
+      q: "É possível tirar dúvidas sobre as etapas do processo seletivo da PP pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre as fases do concurso da PP, como se preparar para cada etapa e o que esperar da avaliação psicológica, investigação social ou exame médico pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre os critérios específicos do edital do seu estado, recomendamos consultar diretamente o site da banca organizadora ou da corporação.",
     },
   ],
   "foconafarda.click": [
     {
-      q: "Como controlar a ansiedade na véspera e no dia da prova da PM?",
+      q: "Como controlar a ansiedade na véspera e no dia da prova da PP?",
       a: "A ansiedade pré-prova é uma resposta fisiológica normal diante de situações de alta importância — o problema não é senti-la, mas deixar que ela comprometa o desempenho. Técnicas eficazes incluem respiração diafragmática (inspirar em 4 tempos, segurar em 4, expirar em 6), ancoragem em rotinas conhecidas (estudar no mesmo local, usar os mesmos materiais) e reduzir estímulos de alta intensidade nas 12 horas anteriores à prova — redes sociais, grupos de WhatsApp de concurseiros e revisões de última hora costumam amplificar a ansiedade sem agregar desempenho.",
     },
     {
@@ -1408,7 +1408,7 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
       a: "Em provas objetivas longas, a concentração tende a cair progressivamente. Estratégias que ajudam: responder primeiro as questões que você domina (gera confiança e economiza tempo), marcar as dúvidas para revisão posterior em vez de travar numa questão, e fazer microrrespiros de 10 segundos entre blocos de 10 questões — feche os olhos brevemente e respire fundo. Evite alterar respostas sem um motivo claro; a primeira leitura costuma ser mais confiável do que a revisão ansiosa.",
     },
     {
-      q: "Como o sono e a alimentação afetam o desempenho no dia da prova da PM?",
+      q: "Como o sono e a alimentação afetam o desempenho no dia da prova da PP?",
       a: "O sono tem impacto direto na memória de trabalho, no tempo de reação e na capacidade de raciocínio — funções críticas em uma prova objetiva. Dormir menos de seis horas na noite anterior reduz significativamente o desempenho cognitivo, mesmo em candidatos bem preparados. Quanto à alimentação, prefira refeições de baixo índice glicêmico no dia da prova — carboidratos complexos e proteínas mantêm energia estável por mais tempo do que alimentos açucarados, que causam pico e queda rápidos de energia. Evite experimentar alimentos novos no dia; vá com o que seu organismo já conhece.",
     },
     {
@@ -1416,8 +1416,8 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
       a: "As 24 horas antes da prova não são para aprender conteúdo novo — são para calibrar o estado mental. Revise apenas um resumo breve de pontos já consolidados, confirme logística (local de prova, documentos, horário de saída), prepare o material que levará (caneta, documento, água) e durma no horário habitual. Atividade física leve na manhã anterior ajuda a regular o cortisol. No dia da prova, chegue com antecedência suficiente para se acomodar sem pressa — chegar atrasado ou com pressa ativa o sistema de estresse de forma desnecessária.",
     },
     {
-      q: "É possível tirar dúvidas sobre desempenho mental e foco para provas da PM pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre controle de ansiedade, concentração, rotina pré-prova e estratégias de desempenho para concursos da Polícia Militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientações específicas sobre o edital ou conteúdo programático do seu concurso, recomendamos consultar o site oficial da banca organizadora.",
+      q: "É possível tirar dúvidas sobre desempenho mental e foco para provas da PP pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre controle de ansiedade, concentração, rotina pré-prova e estratégias de desempenho para concursos da Polícia Penal pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientações específicas sobre o edital ou conteúdo programático do seu concurso, recomendamos consultar o site oficial da banca organizadora.",
     },
   ],
   "guiadopm.click": [
@@ -1431,7 +1431,7 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
     },
     {
       q: "Como funciona o plano de saúde disponível para o policial militar e seus dependentes?",
-      a: "A maioria das corporações estaduais oferece alguma modalidade de assistência à saúde — seja por meio de sistema próprio (policlínicas e hospitais militares), convênios com operadoras de saúde ou fundo de assistência gerido pela própria PM. A cobertura, o custeio e as condições de inclusão de dependentes variam bastante entre os estados. Em algumas corporações, o benefício é parcialmente custeado pelo estado; em outras, o policial arca com parte da mensalidade. O policial deve consultar o setor de recursos humanos da sua unidade para entender as opções disponíveis.",
+      a: "A maioria das corporações estaduais oferece alguma modalidade de assistência à saúde — seja por meio de sistema próprio (policlínicas e hospitais militares), convênios com operadoras de saúde ou fundo de assistência gerido pela própria PP. A cobertura, o custeio e as condições de inclusão de dependentes variam bastante entre os estados. Em algumas corporações, o benefício é parcialmente custeado pelo estado; em outras, o policial arca com parte da mensalidade. O policial deve consultar o setor de recursos humanos da sua unidade para entender as opções disponíveis.",
     },
     {
       q: "O policial militar tem acesso a previdência complementar ou cooperativas de crédito?",
@@ -1452,47 +1452,47 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
       a: "No dia a dia, a vocação se traduz em comprometimento com a missão mesmo em situações de alta pressão, na postura ativa diante de ocorrências que exigem iniciativa e na relação de respeito construída com a comunidade ao longo do tempo. Policiais que enxergam o serviço como missão tendem a manter conduta mais consistente, a buscar qualificação contínua e a enfrentar o desgaste da carreira com mais resiliência do que aqueles que ingressaram exclusivamente por estabilidade financeira.",
     },
     {
-      q: "Qual é o papel da Polícia Militar na segurança pública da comunidade?",
-      a: "A Polícia Militar é responsável pelo policiamento ostensivo e pela preservação da ordem pública — atua de forma visível, preventiva e reativa nas ruas, em eventos e em situações de emergência. Além do atendimento a ocorrências, a PM tem papel relevante no policiamento comunitário, na mediação de conflitos e na construção de vínculos de confiança com a população. A efetividade dessa missão depende tanto do preparo técnico quanto da postura ética e da qualidade da relação que cada policial estabelece com a comunidade em que atua.",
+      q: "Qual é o papel da Polícia Penal na segurança pública da comunidade?",
+      a: "A Polícia Penal é responsável pelo policiamento ostensivo e pela preservação da ordem pública — atua de forma visível, preventiva e reativa nas ruas, em eventos e em situações de emergência. Além do atendimento a ocorrências, a PP tem papel relevante no policiamento comunitário, na mediação de conflitos e na construção de vínculos de confiança com a população. A efetividade dessa missão depende tanto do preparo técnico quanto da postura ética e da qualidade da relação que cada policial estabelece com a comunidade em que atua.",
     },
     {
       q: "Como conciliar os valores pessoais com as exigências institucionais da carreira policial?",
       a: "A carreira policial impõe valores e normas institucionais — hierarquia, disciplina, obediência a regulamentos — que nem sempre coincidem de forma imediata com os valores individuais de cada profissional. A conciliação saudável passa por compreender que a estrutura institucional existe para garantir coesão e previsibilidade, enquanto o espaço para a expressão dos valores pessoais acontece dentro dos limites que essa estrutura permite. Corporações que investem em formação ética e em canais de escuta criam ambientes onde profissionais comprometidos conseguem manter integridade e pertencimento ao mesmo tempo.",
     },
     {
-      q: "É possível tirar dúvidas sobre vocação e carreira na PM pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre o que significa servir na Polícia Militar, motivações para a carreira e como é a vida profissional no dia a dia policial pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre processos seletivos, consulte diretamente o site da PM do seu estado.",
+      q: "É possível tirar dúvidas sobre vocação e carreira na PP pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre o que significa servir na Polícia Penal, motivações para a carreira e como é a vida profissional no dia a dia policial pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre processos seletivos, consulte diretamente o site da PP do seu estado.",
     },
   ],
   "minhafarda.click": [
     {
-      q: "Quais são os principais itens que compõem o uniforme da Polícia Militar?",
-      a: "O fardamento da PM é composto por diferentes modalidades conforme a ocasião: o uniforme de serviço (diário) inclui calça, camisa ou gandola, coturno, quepe ou boné e cinto de guarnição. O uniforme de gala é utilizado em cerimônias e conta com peças adicionais como dolmã, calça com vivo e dragonas. Cada corporação estadual tem seu regulamento de uniformes específico, que define cores, insígnias, posicionamento de distintivos e regras de uso para cada modalidade.",
+      q: "Quais são os principais itens que compõem o uniforme da Polícia Penal?",
+      a: "O fardamento da PP é composto por diferentes modalidades conforme a ocasião: o uniforme de serviço (diário) inclui calça, camisa ou gandola, coturno, quepe ou boné e cinto de guarnição. O uniforme de gala é utilizado em cerimônias e conta com peças adicionais como dolmã, calça com vivo e dragonas. Cada corporação estadual tem seu regulamento de uniformes específico, que define cores, insígnias, posicionamento de distintivos e regras de uso para cada modalidade.",
     },
     {
-      q: "Como cuidar e conservar adequadamente o uniforme da PM para mantê-lo em boas condições?",
+      q: "Como cuidar e conservar adequadamente o uniforme da PP para mantê-lo em boas condições?",
       a: "A conservação do uniforme começa pela lavagem correta: peças de tecido resistente como a gandola devem ser lavadas em água fria com sabão neutro para preservar a cor e o caimento. O coturno exige limpeza regular com flanela e graxa própria, além de impermeabilização periódica. Quepes e bonés não devem ser lavados na máquina — prefira limpeza com escova seca e pano úmido. Guardar o uniforme em local arejado, pendurado em cabide adequado, evita amassados e o aparecimento de mofo em regiões úmidas.",
     },
     {
-      q: "Existem regras sobre o uso do uniforme da PM fora do horário de serviço?",
+      q: "Existem regras sobre o uso do uniforme da PP fora do horário de serviço?",
       a: "Sim. O uso do uniforme fora do serviço é regulado por cada corporação estadual e, em geral, é permitido apenas em situações específicas previstas no regulamento interno — como deslocamento para o trabalho ou em eventos autorizados pela corporação. O uso indevido do uniforme em ambientes que possam comprometer a imagem institucional é vedado e pode sujeitar o policial a procedimento disciplinar. Alguns estados permitem o porte de arma fora do serviço, mas com regras específicas sobre identificação e uniforme.",
     },
     {
-      q: "Como funciona o fornecimento do uniforme ao ingressar na PM como novo policial?",
+      q: "Como funciona o fornecimento do uniforme ao ingressar na PP como novo policial?",
       a: "Em geral, a corporação fornece o kit inicial de fardamento ao recruta durante o curso de formação — incluindo os itens essenciais para o período de instrução. A quantidade e as peças fornecidas variam por estado, e alguns itens podem exigir aquisição complementar pelo próprio policial ao longo da carreira. Após o ingresso, o policial tem direito a reposição periódica de itens do fardamento conforme regulamento interno, que define prazos e condições para substituição das peças desgastadas.",
     },
     {
-      q: "É possível tirar dúvidas sobre o uniforme e o fardamento da PM pelo WhatsApp?",
+      q: "É possível tirar dúvidas sobre o uniforme e o fardamento da PP pelo WhatsApp?",
       a: "Sim. Você pode enviar sua dúvida sobre composição do fardamento, cuidados com o uniforme e regulamentos de uso pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre o regulamento de uniformes da sua corporação, recomendamos consultar diretamente o manual interno ou a gestão de material da unidade.",
     },
   ],
   "proximoedital.click": [
     {
-      q: "Como saber quando vai sair o próximo edital de concurso da PM do meu estado?",
-      a: "Não existe um calendário oficial antecipado de concursos da PM — cada edital depende de autorização legislativa, dotação orçamentária e decisão do governo estadual. A forma mais confiável de se antecipar é acompanhar o Diário Oficial do estado, o site institucional da PM estadual e as sessões da Assembleia Legislativa, onde projetos de lei autorizando concursos costumam tramitar meses antes da publicação do edital. Portais especializados em concursos públicos também monitoram esses movimentos e publicam notícias sobre previsões e autorizações em andamento.",
+      q: "Como saber quando vai sair o próximo edital de concurso da PP do meu estado?",
+      a: "Não existe um calendário oficial antecipado de concursos da PP — cada edital depende de autorização legislativa, dotação orçamentária e decisão do governo estadual. A forma mais confiável de se antecipar é acompanhar o Diário Oficial do estado, o site institucional da PP estadual e as sessões da Assembleia Legislativa, onde projetos de lei autorizando concursos costumam tramitar meses antes da publicação do edital. Portais especializados em concursos públicos também monitoram esses movimentos e publicam notícias sobre previsões e autorizações em andamento.",
     },
     {
-      q: "Quais estados da PM costumam abrir concursos com maior regularidade?",
+      q: "Quais estados da PP costumam abrir concursos com maior regularidade?",
       a: "Estados com maior efetivo e maior taxa de saída por aposentadoria tendem a abrir concursos com mais frequência — São Paulo, Minas Gerais, Bahia e Rio Grande do Sul historicamente figuram entre as corporações que realizam seleções em intervalos menores. Estados com menor efetivo ou orçamento mais restrito podem passar vários anos sem abrir vagas. Acompanhar o histórico de editais publicados nos últimos cinco anos é uma boa forma de estimar a cadência de cada corporação.",
     },
     {
@@ -1501,11 +1501,11 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
     },
     {
       q: "Como se manter atualizado sobre novos editais de concursos militares sem depender de uma única fonte?",
-      a: "A estratégia mais robusta combina múltiplas fontes: ativar alertas do Google para termos como 'edital PM [estado]', assinar o Diário Oficial estadual por e-mail quando disponível, seguir os perfis oficiais da PM nas redes sociais e acompanhar grupos e comunidades de concurseiros do seu estado. Cada fonte tem velocidade e confiabilidade diferentes — o Diário Oficial é a fonte primária e definitiva, enquanto portais e redes sociais agilizam o acesso à informação, mas podem conter imprecisões antes da confirmação oficial.",
+      a: "A estratégia mais robusta combina múltiplas fontes: ativar alertas do Google para termos como 'edital PP [estado]', assinar o Diário Oficial estadual por e-mail quando disponível, seguir os perfis oficiais da PP nas redes sociais e acompanhar grupos e comunidades de concurseiros do seu estado. Cada fonte tem velocidade e confiabilidade diferentes — o Diário Oficial é a fonte primária e definitiva, enquanto portais e redes sociais agilizam o acesso à informação, mas podem conter imprecisões antes da confirmação oficial.",
     },
     {
-      q: "É possível tirar dúvidas sobre previsões de editais da PM pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre como monitorar próximos editais, o que fazer no período de espera e como se preparar para concursos da PM pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre editais abertos ou previstos, recomendamos consultar diretamente o site da PM do seu estado e o Diário Oficial estadual.",
+      q: "É possível tirar dúvidas sobre previsões de editais da PP pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre como monitorar próximos editais, o que fazer no período de espera e como se preparar para concursos da PP pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre editais abertos ou previstos, recomendamos consultar diretamente o site da PP do seu estado e o Diário Oficial estadual.",
     },
   ],
   "panoramapm.click": [
@@ -1518,25 +1518,25 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
       a: "O tempo varia por corporação estadual, mas em média um soldado pode chegar ao posto de terceiro-sargento em oito a doze anos de serviço, após cumprir os interstícios mínimos em cada graduação, concluir o Curso de Formação de Sargentos (CFS) e ser aprovado nas avaliações de desempenho. Estados com maior efetivo e rotatividade tendem a ter progressão mais rápida; corporações menores podem apresentar estagnação em determinadas graduações por ausência de vagas.",
     },
     {
-      q: "Quais são as principais especialidades disponíveis dentro da Polícia Militar?",
-      a: "As PMs estaduais oferecem diversas especialidades além do policiamento ostensivo convencional: policiamento de trânsito (BPTran), policiamento ambiental, policiamento montado (cavalaria), unidades de operações especiais (COE, BOPE, GATE), policiamento comunitário, inteligência policial e aviação. O acesso a cada especialidade depende de tempo de serviço, requisitos físicos específicos e aprovação em processo seletivo interno. Cada especialização abre um percurso diferente dentro da carreira.",
+      q: "Quais são as principais especialidades disponíveis dentro da Polícia Penal?",
+      a: "As PPs estaduais oferecem diversas especialidades além do policiamento ostensivo convencional: policiamento de trânsito (BPTran), policiamento ambiental, policiamento montado (cavalaria), unidades de operações especiais (COE, BOPE, GATE), policiamento comunitário, inteligência policial e aviação. O acesso a cada especialidade depende de tempo de serviço, requisitos físicos específicos e aprovação em processo seletivo interno. Cada especialização abre um percurso diferente dentro da carreira.",
     },
     {
       q: "Como funciona a aposentadoria do policial militar e quais são os requisitos?",
       a: "A aposentadoria do policial militar é regida pelo Estatuto dos Militares Estaduais de cada estado. Em geral, a aposentadoria voluntária exige um mínimo de anos de serviço — frequentemente 25 anos para as praças e 30 para os oficiais — além de idade mínima definida pela legislação previdenciária estadual. A reforma compulsória ocorre ao atingir o limite de idade para o posto ou graduação. Os proventos variam conforme o tempo de serviço, o posto final e as regras de transição aplicáveis a cada corporação.",
     },
     {
-      q: "É possível tirar dúvidas sobre progressão e carreira na PM pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre graduações, especialidades, cursos internos e perspectivas de longo prazo na carreira de policial militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações específicas sobre a corporação do seu estado, recomendamos consultar diretamente o site oficial da PM estadual.",
+      q: "É possível tirar dúvidas sobre progressão e carreira na PP pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre graduações, especialidades, cursos internos e perspectivas de longo prazo na carreira de policial militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações específicas sobre a corporação do seu estado, recomendamos consultar diretamente o site oficial da PP estadual.",
     },
   ],
   "cronogramapm.click": [
     {
-      q: "Como montar um cronograma semanal de estudos para o concurso da PM?",
+      q: "Como montar um cronograma semanal de estudos para o concurso da PP?",
       a: "Um cronograma semanal eficiente começa pelo mapeamento do tempo disponível: some as horas livres de segunda a domingo, desconte sono, alimentação, deslocamento e obrigações fixas. Com o tempo real em mãos, distribua as disciplinas do edital proporcionalmente ao seu peso na prova e à sua dificuldade atual. Reserve ao menos dois blocos semanais para revisão do conteúdo já estudado e um bloco para resolução de questões — sem isso, o cronograma vira acumulação de conteúdo sem fixação.",
     },
     {
-      q: "Como distribuir o tempo de estudo entre as disciplinas do concurso da PM?",
+      q: "Como distribuir o tempo de estudo entre as disciplinas do concurso da PP?",
       a: "A distribuição ideal parte da análise do edital: verifique quantas questões cada disciplina representa na prova objetiva e qual é seu percentual de acerto atual nessa matéria. Disciplinas com alto peso e baixo domínio recebem mais tempo; disciplinas já consolidadas entram em modo de manutenção com revisões espaçadas. Matemática e raciocínio lógico costumam exigir estudo diário para manter o ritmo, enquanto história e geografia permitem blocos alternados sem perda significativa de desempenho.",
     },
     {
@@ -1548,14 +1548,14 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
       a: "A fase de intensificação geralmente começa de quatro a seis semanas antes da prova, quando o foco se desloca do conteúdo novo para a revisão e a resolução intensiva de questões e simulados. Nessa fase, é recomendável reduzir o volume de novos tópicos e aumentar a proporção de questões comentadas e provas anteriores da mesma banca. A semana da prova deve ser de revisão leve, descanso ativo e preparação logística — sem conteúdo novo, que gera ansiedade sem benefício mensurável.",
     },
     {
-      q: "É possível tirar dúvidas sobre como montar um cronograma de estudos para a PM pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre organização de tempo, distribuição de disciplinas e gestão de cronograma para concursos da Polícia Militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientações específicas sobre o edital do seu estado, recomendamos consultar o site oficial da banca organizadora.",
+      q: "É possível tirar dúvidas sobre como montar um cronograma de estudos para a PP pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre organização de tempo, distribuição de disciplinas e gestão de cronograma para concursos da Polícia Penal pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientações específicas sobre o edital do seu estado, recomendamos consultar o site oficial da banca organizadora.",
     },
   ],
   "editalmilitar.click": [
     {
-      q: "Quais são as informações mais críticas para verificar imediatamente ao sair um edital da PM?",
-      a: "Ao abrir um edital de concurso da PM, priorize verificar: limite de idade na data da inscrição ou da posse (os critérios variam), escolaridade exigida, requisitos de idoneidade moral e antecedentes, número de vagas por cargo e localidade, e o cronograma completo — da inscrição até a nomeação estimada. Em seguida, leia atentamente as causas de eliminação sumária, que costumam incluir condições médicas, tatuagens visíveis em farda e antecedentes criminais específicos.",
+      q: "Quais são as informações mais críticas para verificar imediatamente ao sair um edital da PP?",
+      a: "Ao abrir um edital de concurso da PP, priorize verificar: limite de idade na data da inscrição ou da posse (os critérios variam), escolaridade exigida, requisitos de idoneidade moral e antecedentes, número de vagas por cargo e localidade, e o cronograma completo — da inscrição até a nomeação estimada. Em seguida, leia atentamente as causas de eliminação sumária, que costumam incluir condições médicas, tatuagens visíveis em farda e antecedentes criminais específicos.",
     },
     {
       q: "Quais critérios de eliminação candidatos frequentemente ignoram ao ler um edital militar?",
@@ -1571,16 +1571,16 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
     },
     {
       q: "É possível tirar dúvidas sobre editais militares pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre como interpretar requisitos, prazos e critérios de editais de concursos da Polícia Militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para esclarecimentos oficiais sobre um edital específico, recomendamos consultar diretamente a banca organizadora ou o site da corporação responsável pelo concurso.",
+      a: "Sim. Você pode enviar sua dúvida sobre como interpretar requisitos, prazos e critérios de editais de concursos da Polícia Penal pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para esclarecimentos oficiais sobre um edital específico, recomendamos consultar diretamente a banca organizadora ou o site da corporação responsável pelo concurso.",
     },
   ],
   "futurosoldado.click": [
     {
-      q: "O que muda na vida de uma pessoa ao se tornar soldado da Polícia Militar?",
-      a: "Ingressar na PM como soldado representa uma mudança profunda — não apenas profissional, mas de identidade e rotina. O novo policial passa a conviver com hierarquia rígida, responsabilidade coletiva e uma cultura institucional distinta do ambiente civil. A forma de se vestir, de se comunicar dentro da corporação e de gerir o tempo fora do serviço se transforma. Para muitos, é a primeira experiência com um ambiente de alta exigência disciplinar sustentada, o que exige adaptação gradual e intenional.",
+      q: "O que muda na vida de uma pessoa ao se tornar soldado da Polícia Penal?",
+      a: "Ingressar na PP como soldado representa uma mudança profunda — não apenas profissional, mas de identidade e rotina. O novo policial passa a conviver com hierarquia rígida, responsabilidade coletiva e uma cultura institucional distinta do ambiente civil. A forma de se vestir, de se comunicar dentro da corporação e de gerir o tempo fora do serviço se transforma. Para muitos, é a primeira experiência com um ambiente de alta exigência disciplinar sustentada, o que exige adaptação gradual e intenional.",
     },
     {
-      q: "Como é a rotina no curso de formação de soldados da Polícia Militar?",
+      q: "Como é a rotina no curso de formação de soldados da Polícia Penal?",
       a: "O curso de formação de soldados (recrutas) combina instrução teórica — legislação, direitos humanos, ética policial — com treinamento físico intensivo e instrução tática. A rotina é estruturada em blocos fixos: diana, atividade física matinal, aulas, instrução prática e recolher. O regime costuma ser de internato total ou parcial durante o período de formação, com saídas controladas. A duração varia por estado, geralmente entre três e seis meses.",
     },
     {
@@ -1588,12 +1588,12 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
       a: "No campo físico, os maiores desafios costumam ser a adaptação ao volume e à intensidade do treinamento diário, especialmente para candidatos que chegam com condicionamento aeróbico abaixo da média. No campo psicológico, enfrentar a distância da família, a convivência forçada com desconhecidos em ambiente de pressão e a exigência de subordinação constante são os pontos que mais demandam resiliência. Corporações estruturadas oferecem suporte psicológico durante a formação para auxiliar nessa transição.",
     },
     {
-      q: "Como a família se adapta à nova rotina de quem ingressa na PM como soldado?",
-      a: "A adaptação familiar é um dos aspectos menos discutidos — e mais relevantes — de quem ingressa na PM. A escala de plantão, as convocações em datas especiais e os períodos de formação com internato alteram a dinâmica doméstica de forma significativa. Famílias que passam por esse processo relatam que a comunicação clara sobre as exigências da carreira, ainda durante o processo seletivo, facilita muito a adaptação. Com o tempo, a maioria encontra um equilíbrio entre os compromissos institucionais e a vida pessoal.",
+      q: "Como a família se adapta à nova rotina de quem ingressa na PP como soldado?",
+      a: "A adaptação familiar é um dos aspectos menos discutidos — e mais relevantes — de quem ingressa na PP. A escala de plantão, as convocações em datas especiais e os períodos de formação com internato alteram a dinâmica doméstica de forma significativa. Famílias que passam por esse processo relatam que a comunicação clara sobre as exigências da carreira, ainda durante o processo seletivo, facilita muito a adaptação. Com o tempo, a maioria encontra um equilíbrio entre os compromissos institucionais e a vida pessoal.",
     },
     {
-      q: "É possível tirar dúvidas sobre o ingresso e a formação de soldados da PM pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre o curso de formação, a rotina de recrutas e o que esperar da vida como soldado da Polícia Militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre o processo seletivo do seu estado, recomendamos consultar diretamente o site da PM estadual de interesse.",
+      q: "É possível tirar dúvidas sobre o ingresso e a formação de soldados da PP pelo WhatsApp?",
+      a: "Sim. Você pode enviar sua dúvida sobre o curso de formação, a rotina de recrutas e o que esperar da vida como soldado da Polícia Penal pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para informações oficiais sobre o processo seletivo do seu estado, recomendamos consultar diretamente o site da PP estadual de interesse.",
     },
   ],
   "quarteldoconcurseiro.com": [
@@ -1602,7 +1602,7 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
       a: "O método militar de treinamento tem muito a ensinar ao concurseiro: horários fixos e inegociáveis, metas diárias mensuráveis, rituais de início e encerramento de sessão de estudo e tolerância zero para justificativas. Estabelecer uma rotina com acordar no mesmo horário, blocos de foco definidos e pausas planejadas reduz a dependência de motivação — que oscila — e constrói o hábito que sustenta a preparação a longo prazo.",
     },
     {
-      q: "Como manter a motivação durante uma preparação longa e desgastante para a PM?",
+      q: "Como manter a motivação durante uma preparação longa e desgastante para a PP?",
       a: "Motivação é combustível que acaba; disciplina é o motor que mantém o veículo em movimento. O segredo é transformar o estudo em rotina automática, independente do estado emocional do dia. Além disso, dividir a meta final em marcos menores (dominar uma disciplina, atingir um percentual em simulado) cria pequenas vitórias que realimentam o engajamento. Registrar o progresso diário — mesmo que mínimo — é uma das ferramentas mais eficazes para sustentar a consistência.",
     },
     {
@@ -1614,52 +1614,52 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
       a: "Reprovação faz parte do processo para a maioria dos aprovados — raramente alguém passa no primeiro concurso. O ponto de virada está em transformar o resultado negativo em diagnóstico: analisar o gabarito, identificar quais disciplinas pesaram mais na eliminação e recalibrar o plano de estudos a partir daí. Candidatos que persistem tratam cada tentativa como um simulado oficial, não como uma derrota definitiva. A resiliência, nesse contexto, é construída com método — não apenas com força de vontade.",
     },
     {
-      q: "É possível tirar dúvidas sobre disciplina e estratégia de preparação para a PM pelo WhatsApp?",
+      q: "É possível tirar dúvidas sobre disciplina e estratégia de preparação para a PP pelo WhatsApp?",
       a: "Sim. Você pode enviar sua dúvida sobre rotina de estudos, mentalidade de preparação e como sustentar o foco ao longo da jornada pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientações específicas sobre editais ou etapas do processo seletivo do seu estado, recomendamos consultar diretamente a corporação responsável.",
     },
   ],
   "projetopm2026.click": [
     {
-      q: "Como estruturar um plano de estudos eficiente para um concurso da PM?",
+      q: "Como estruturar um plano de estudos eficiente para um concurso da PP?",
       a: "Um plano de estudos eficiente começa pelo edital: mapeie as disciplinas exigidas, o peso de cada uma na prova e a distribuição histórica de questões. Em seguida, avalie seu nível atual em cada matéria e destine mais horas às disciplinas com maior lacuna de conhecimento. Divida o conteúdo em ciclos semanais com revisões periódicas, intercalando teoria, resolução de questões e simulados cronometrados para simular as condições reais da prova.",
     },
     {
-      q: "Quantos meses de preparação são necessários para passar em um concurso da PM?",
+      q: "Quantos meses de preparação são necessários para passar em um concurso da PP?",
       a: "O tempo ideal varia conforme o nível de conhecimento inicial do candidato, a concorrência do edital e o quantitativo de vagas. Candidatos sem base nas disciplinas jurídicas e de língua portuguesa costumam precisar de 12 a 18 meses de estudo consistente. Quem já tem domínio de parte do conteúdo pode conseguir resultados em períodos menores. O fator determinante não é a duração, mas a regularidade e a qualidade da preparação diária.",
     },
     {
-      q: "Como equilibrar a preparação intelectual e o treinamento físico para o processo seletivo da PM?",
+      q: "Como equilibrar a preparação intelectual e o treinamento físico para o processo seletivo da PP?",
       a: "A dica central é tratar o TAF (Teste de Aptidão Física) com a mesma seriedade das provas teóricas: defina metas claras para cada prova física (corrida, flexões, abdominais) com base nos critérios do edital e inclua treinos específicos na rotina semanal. Alternar dias de estudos intensos com treinos aeróbicos ajuda na concentração e reduz o estresse acumulado. Comece o condicionamento físico desde o início da preparação, sem deixar para os últimos meses.",
     },
     {
-      q: "Como acompanhar editais abertos da PM e não perder prazos de inscrição?",
-      a: "A forma mais confiável é monitorar diretamente o Diário Oficial do estado de interesse e o site institucional da PM estadual, além de portais de concursos públicos que centralizam publicações de editais. Defina uma rotina semanal de consulta a essas fontes e, quando identificar um edital, leia o documento completo antes de se inscrever — verificando requisitos de idade, escolaridade, antecedentes e documentação exigida.",
+      q: "Como acompanhar editais abertos da PP e não perder prazos de inscrição?",
+      a: "A forma mais confiável é monitorar diretamente o Diário Oficial do estado de interesse e o site institucional da PP estadual, além de portais de concursos públicos que centralizam publicações de editais. Defina uma rotina semanal de consulta a essas fontes e, quando identificar um edital, leia o documento completo antes de se inscrever — verificando requisitos de idade, escolaridade, antecedentes e documentação exigida.",
     },
     {
-      q: "É possível tirar dúvidas sobre estratégias de preparação para a PM pelo WhatsApp?",
+      q: "É possível tirar dúvidas sobre estratégias de preparação para a PP pelo WhatsApp?",
       a: "Sim. Você pode enviar sua dúvida sobre planejamento de estudos, cronograma de preparação física e acompanhamento de editais pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientações específicas sobre o edital do seu estado, recomendamos consultar diretamente a corporação responsável ou o site oficial do concurso.",
     },
   ],
   "pmdescomplicada.click": [
     {
-      q: "Como funciona a escala de plantão na Polícia Militar e o que esperar da rotina de trabalho?",
-      a: "A maioria das corporações estaduais adota o sistema de escala 24×72 — um turno de 24 horas de serviço seguido de 72 horas de folga — embora algumas PMs utilizem escalas de 12×36 ou modalidades específicas para determinadas funções. O policial em regime de plantão pode ser acionado durante a folga em situações de emergência ou eventos de grande porte, conforme regulamento interno da corporação.",
+      q: "Como funciona a escala de plantão na Polícia Penal e o que esperar da rotina de trabalho?",
+      a: "A maioria das corporações estaduais adota o sistema de escala 24×72 — um turno de 24 horas de serviço seguido de 72 horas de folga — embora algumas PPs utilizem escalas de 12×36 ou modalidades específicas para determinadas funções. O policial em regime de plantão pode ser acionado durante a folga em situações de emergência ou eventos de grande porte, conforme regulamento interno da corporação.",
     },
     {
       q: "Quais benefícios e vantagens a carreira de policial militar oferece além do salário base?",
-      a: "Além do vencimento base, o policial militar costuma ter direito a adicionais como gratificação de risco de vida, adicional noturno, auxílio-alimentação, auxílio-transporte, plano de saúde corporativo e, em muitos estados, acesso a cooperativas de crédito com condições diferenciadas. Os benefícios variam por corporação estadual e pelo posto ou graduação ocupado, sendo importante consultar o plano de cargos e salários específico da PM de interesse.",
+      a: "Além do vencimento base, o policial militar costuma ter direito a adicionais como gratificação de risco de vida, adicional noturno, auxílio-alimentação, auxílio-transporte, plano de saúde corporativo e, em muitos estados, acesso a cooperativas de crédito com condições diferenciadas. Os benefícios variam por corporação estadual e pelo posto ou graduação ocupado, sendo importante consultar o plano de cargos e salários específico da PP de interesse.",
     },
     {
       q: "Como funciona a solicitação de férias e licenças para o policial militar em serviço ativo?",
-      a: "As férias e licenças seguem regulamentação própria de cada PM estadual, geralmente prevista no Estatuto dos Militares Estaduais. O policial tem direito a férias anuais remuneradas, licença-saúde, licença para tratar de interesses particulares e, conforme o estado, licença-prêmio por tempo de serviço. As solicitações tramitam via requerimento na unidade de lotação, sujeito à escala de necessidades operacionais e aprovação pela chefia imediata.",
+      a: "As férias e licenças seguem regulamentação própria de cada PP estadual, geralmente prevista no Estatuto dos Militares Estaduais. O policial tem direito a férias anuais remuneradas, licença-saúde, licença para tratar de interesses particulares e, conforme o estado, licença-prêmio por tempo de serviço. As solicitações tramitam via requerimento na unidade de lotação, sujeito à escala de necessidades operacionais e aprovação pela chefia imediata.",
     },
     {
-      q: "O que os candidatos geralmente só descobrem sobre a PM depois que já ingressaram?",
+      q: "O que os candidatos geralmente só descobrem sobre a PP depois que já ingressaram?",
       a: "Entre os pontos que costumam surpreender estão: a intensidade da formação no curso de recrutas, que vai muito além do preparo físico e inclui disciplina rígida, hierarquia e protocolos institucionais; a variação significativa de funções disponíveis (policiamento ostensivo, administrativo, especialidades técnicas); e a diferença entre o trabalho na capital e no interior, que impacta escala, estrutura e remuneração. Conversar com policiais militares em serviço ativo é a melhor forma de construir expectativas realistas.",
     },
     {
       q: "É possível tirar dúvidas sobre a rotina e os direitos do policial militar pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre escala de trabalho, benefícios, licenças e aspectos do cotidiano na PM pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientações aplicáveis à sua situação específica, recomendamos consultar diretamente a corporação responsável ou um profissional especializado.",
+      a: "Sim. Você pode enviar sua dúvida sobre escala de trabalho, benefícios, licenças e aspectos do cotidiano na PP pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para orientações aplicáveis à sua situação específica, recomendamos consultar diretamente a corporação responsável ou um profissional especializado.",
     },
   ],
   "rotapolicial.click": [
@@ -1677,7 +1677,7 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
     },
     {
       q: "Quais são os critérios legais para o uso proporcional da força durante a atividade policial?",
-      a: "O uso da força deve obedecer aos princípios de legalidade, necessidade e proporcionalidade — o policial emprega o nível de força estritamente indispensável para cessar a ameaça, escalando ou desescalando conforme a situação evolui. A Portaria Interministerial nº 4.226/2010 e os manuais corporativos de cada PM estadual definem os níveis de resposta, desde a presença e verbalização até o uso de força letal em situações de risco iminente à vida.",
+      a: "O uso da força deve obedecer aos princípios de legalidade, necessidade e proporcionalidade — o policial emprega o nível de força estritamente indispensável para cessar a ameaça, escalando ou desescalando conforme a situação evolui. A Portaria Interministerial nº 4.226/2010 e os manuais corporativos de cada PP estadual definem os níveis de resposta, desde a presença e verbalização até o uso de força letal em situações de risco iminente à vida.",
     },
     {
       q: "É possível tirar dúvidas sobre rotina operacional policial pelo WhatsApp?",
@@ -1686,7 +1686,7 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
   ],
   "rumoaocfo.click": [
     {
-      q: "Quais são as etapas do processo seletivo para o CFO da Polícia Militar?",
+      q: "Quais são as etapas do processo seletivo para o CFO da Polícia Penal?",
       a: "Em geral, o processo seletivo para o Curso de Formação de Oficiais (CFO) inclui prova objetiva de conhecimentos, teste de aptidão física (TAF), avaliação psicológica, exame médico, investigação social e, em alguns estados, avaliação de títulos. A ordem e as especificidades de cada etapa variam conforme o edital de cada corporação estadual.",
     },
     {
@@ -1694,7 +1694,7 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
       a: "A duração do CFO varia entre os estados, geralmente de um a dois anos, e combina formação acadêmica (disciplinas jurídicas, administrativas e de segurança pública), treinamento físico, instrução tática e estágios práticos. Ao término, o formando é promovido ao primeiro posto da carreira de oficial.",
     },
     {
-      q: "Existe limite de idade para ingressar no CFO da Polícia Militar?",
+      q: "Existe limite de idade para ingressar no CFO da Polícia Penal?",
       a: "Sim, cada edital estabelece um limite máximo de idade para inscrição, que costuma variar entre 30 e 35 anos dependendo do estado. Candidatos que já integram a corporação como praça podem ter limites diferenciados previstos em legislação específica. É fundamental verificar o edital vigente da corporação de interesse.",
     },
     {
@@ -1703,7 +1703,7 @@ const DOMAIN_FAQS: Partial<Record<string, FaqEntry[]>> = {
     },
     {
       q: "É possível tirar dúvidas sobre o CFO pelo WhatsApp?",
-      a: "Sim. Você pode enviar sua dúvida sobre o processo de formação e a carreira de oficial da Polícia Militar pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para questões específicas sobre o seu caso, recomendamos consultar diretamente a corporação responsável ou um profissional especializado.",
+      a: "Sim. Você pode enviar sua dúvida sobre o processo de formação e a carreira de oficial da Polícia Penal pelo WhatsApp e receber conteúdo informativo geral sobre o tema. Para questões específicas sobre o seu caso, recomendamos consultar diretamente a corporação responsável ou um profissional especializado.",
     },
   ],
   "guiadapm.click": [
@@ -2264,14 +2264,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     title:
       "J. C. Peres Sociedade Individual de Advocacia",
     description:
-      "Orientação jurídica especializada sobre suspensão judicial, anulação por fraude e prorrogação de prazo de validade em concursos para ingresso na Polícia Militar em todo o Brasil. J. C. Peres Sociedade Individual de Advocacia · CNPJ 62.197.683/0001-76 · São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Orientação jurídica especializada sobre suspensão judicial, anulação por fraude e prorrogação de prazo de validade em concursos para ingresso na Polícia Penal em todo o Brasil. J. C. Peres Sociedade Individual de Advocacia · CNPJ 62.197.683/0001-76 · São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
     author: "J. C. Peres Sociedade Individual de Advocacia",
     ogType: "website",
     siteName: "J. C. Peres Sociedade Individual de Advocacia",
     ogTitle:
-      "Suspensão, Anulação e Prorrogação de Concursos para a Polícia Militar | J. C. Peres Advocacia",
+      "Suspensão, Anulação e Prorrogação de Concursos para a Polícia Penal | J. C. Peres Advocacia",
     ogDescription:
-      "Orientação jurídica sobre suspensão judicial, anulação por fraude e prorrogação de prazo em concursos para a Polícia Militar. J. C. Peres Sociedade Individual de Advocacia — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Orientação jurídica sobre suspensão judicial, anulação por fraude e prorrogação de prazo em concursos para a Polícia Penal. J. C. Peres Sociedade Individual de Advocacia — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.e8b3f6d2",
     gtmId: "GTM-M35R4H5N",
   },
@@ -2284,14 +2284,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     title:
       "J. C. Peres Sociedade Individual de Advocacia",
     description:
-      "Orientação jurídica especializada sobre suspensão judicial, anulação por fraude e prorrogação de prazo de validade em concursos para ingresso na Polícia Militar em todo o Brasil. J. C. Peres Sociedade Individual de Advocacia · CNPJ 62.197.683/0001-76 · São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Orientação jurídica especializada sobre suspensão judicial, anulação por fraude e prorrogação de prazo de validade em concursos para ingresso na Polícia Penal em todo o Brasil. J. C. Peres Sociedade Individual de Advocacia · CNPJ 62.197.683/0001-76 · São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
     author: "J. C. Peres Sociedade Individual de Advocacia",
     ogType: "website",
     siteName: "J. C. Peres Sociedade Individual de Advocacia",
     ogTitle:
-      "Suspensão, Anulação e Prorrogação de Concursos para a Polícia Militar | J. C. Peres Advocacia",
+      "Suspensão, Anulação e Prorrogação de Concursos para a Polícia Penal | J. C. Peres Advocacia",
     ogDescription:
-      "Orientação jurídica sobre suspensão judicial, anulação por fraude e prorrogação de prazo em concursos para a Polícia Militar. J. C. Peres Sociedade Individual de Advocacia — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Orientação jurídica sobre suspensão judicial, anulação por fraude e prorrogação de prazo em concursos para a Polícia Penal. J. C. Peres Sociedade Individual de Advocacia — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.e8b3f6d2",
     gtmId: "GTM-M35R4H5N",
   },
@@ -2344,14 +2344,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     title:
       "Carlos Leme & Juliana Leme Advogados",
     description:
-      "Orientação jurídica especializada sobre direito de acesso a atas, gabaritos, folhas de resposta e critérios de correção em concursos para ingresso na Polícia Militar. Carlos Leme & Juliana Leme Advogados · CNPJ 43.542.532/0001-63 · São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Orientação jurídica especializada sobre direito de acesso a atas, gabaritos, folhas de resposta e critérios de correção em concursos para ingresso na Polícia Penal. Carlos Leme & Juliana Leme Advogados · CNPJ 43.542.532/0001-63 · São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
     author: "Carlos Leme & Juliana Leme Advogados",
     ogType: "website",
     siteName: "Carlos Leme & Juliana Leme Advogados",
     ogTitle:
-      "Transparência e Acesso a Documentos em Concursos da Polícia Militar | Carlos Leme & Juliana Leme Advogados",
+      "Transparência e Acesso a Documentos em Concursos da Polícia Penal | Carlos Leme & Juliana Leme Advogados",
     ogDescription:
-      "Orientação jurídica sobre acesso a atas, gabaritos e critérios de correção em concursos da Polícia Militar. Carlos Leme & Juliana Leme Advogados — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Orientação jurídica sobre acesso a atas, gabaritos e critérios de correção em concursos da Polícia Penal. Carlos Leme & Juliana Leme Advogados — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.a3d7e219",
     gtmId: "GTM-PKS39LJP",
   },
@@ -2364,14 +2364,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     title:
       "Carlos Leme & Juliana Leme Advogados",
     description:
-      "Orientação jurídica especializada sobre direito de acesso a atas, gabaritos, folhas de resposta e critérios de correção em concursos para ingresso na Polícia Militar. Carlos Leme & Juliana Leme Advogados · CNPJ 43.542.532/0001-63 · São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Orientação jurídica especializada sobre direito de acesso a atas, gabaritos, folhas de resposta e critérios de correção em concursos para ingresso na Polícia Penal. Carlos Leme & Juliana Leme Advogados · CNPJ 43.542.532/0001-63 · São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
     author: "Carlos Leme & Juliana Leme Advogados",
     ogType: "website",
     siteName: "Carlos Leme & Juliana Leme Advogados",
     ogTitle:
-      "Transparência e Acesso a Documentos em Concursos da Polícia Militar | Carlos Leme & Juliana Leme Advogados",
+      "Transparência e Acesso a Documentos em Concursos da Polícia Penal | Carlos Leme & Juliana Leme Advogados",
     ogDescription:
-      "Orientação jurídica sobre acesso a atas, gabaritos e critérios de correção em concursos da Polícia Militar. Carlos Leme & Juliana Leme Advogados — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Orientação jurídica sobre acesso a atas, gabaritos e critérios de correção em concursos da Polícia Penal. Carlos Leme & Juliana Leme Advogados — São Paulo/SP. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.a3d7e219",
     gtmId: "GTM-PKS39LJP",
   },
@@ -2384,14 +2384,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     title:
       "Gobbette Marques & Barreto Advogados Associados",
     description:
-      "Orientação jurídica especializada sobre eliminação por resultado positivo em exame toxicológico, direito à contraprova e cadeia de custódia da amostra em concursos para ingresso na Polícia Militar. Gobbette Marques & Barreto Advogados Associados · CNPJ 20.300.477/0001-08 · Serra/ES. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Orientação jurídica especializada sobre eliminação por resultado positivo em exame toxicológico, direito à contraprova e cadeia de custódia da amostra em concursos para ingresso na Polícia Penal. Gobbette Marques & Barreto Advogados Associados · CNPJ 20.300.477/0001-08 · Serra/ES. Consulte um advogado habilitado para orientação específica ao seu caso.",
     author: "Gobbette Marques & Barreto Advogados Associados",
     ogType: "website",
     siteName: "Gobbette Marques & Barreto Advogados Associados",
     ogTitle:
-      "Exame Toxicológico em Concursos da Polícia Militar | Gobbette Marques & Barreto Advogados",
+      "Exame Toxicológico em Concursos da Polícia Penal | Gobbette Marques & Barreto Advogados",
     ogDescription:
-      "Orientação jurídica sobre eliminação por exame toxicológico, contraprova e cadeia de custódia da amostra em concursos da Polícia Militar. Gobbette Marques & Barreto Advogados Associados — Serra/ES. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Orientação jurídica sobre eliminação por exame toxicológico, contraprova e cadeia de custódia da amostra em concursos da Polícia Penal. Gobbette Marques & Barreto Advogados Associados — Serra/ES. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.b6f2a874",
     gtmId: "GTM-5SKD2W93",
   },
@@ -2404,14 +2404,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     title:
       "Gobbette Marques & Barreto Advogados Associados",
     description:
-      "Orientação jurídica especializada sobre eliminação por resultado positivo em exame toxicológico, direito à contraprova e cadeia de custódia da amostra em concursos para ingresso na Polícia Militar. Gobbette Marques & Barreto Advogados Associados · CNPJ 20.300.477/0001-08 · Serra/ES. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Orientação jurídica especializada sobre eliminação por resultado positivo em exame toxicológico, direito à contraprova e cadeia de custódia da amostra em concursos para ingresso na Polícia Penal. Gobbette Marques & Barreto Advogados Associados · CNPJ 20.300.477/0001-08 · Serra/ES. Consulte um advogado habilitado para orientação específica ao seu caso.",
     author: "Gobbette Marques & Barreto Advogados Associados",
     ogType: "website",
     siteName: "Gobbette Marques & Barreto Advogados Associados",
     ogTitle:
-      "Exame Toxicológico em Concursos da Polícia Militar | Gobbette Marques & Barreto Advogados",
+      "Exame Toxicológico em Concursos da Polícia Penal | Gobbette Marques & Barreto Advogados",
     ogDescription:
-      "Orientação jurídica sobre eliminação por exame toxicológico, contraprova e cadeia de custódia da amostra em concursos da Polícia Militar. Gobbette Marques & Barreto Advogados Associados — Serra/ES. Consulte um advogado habilitado para orientação específica ao seu caso.",
+      "Orientação jurídica sobre eliminação por exame toxicológico, contraprova e cadeia de custódia da amostra em concursos da Polícia Penal. Gobbette Marques & Barreto Advogados Associados — Serra/ES. Consulte um advogado habilitado para orientação específica ao seu caso.",
     analyticsCore: "signal.b6f2a874",
     gtmId: "GTM-5SKD2W93",
   },
@@ -2423,14 +2423,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Muamba Filmes LTDA",
     description:
-      "Conteúdo informativo sobre as Polícias Militares estaduais brasileiras — como cada corporação se organiza, variações salariais entre estados, estrutura de postos e graduações e frequência histórica de seleções por região. Muamba Filmes LTDA · CNPJ 57.507.866/0001-00 · Fortaleza/CE.",
+      "Conteúdo informativo sobre as Polícias Penais estaduais brasileiras — como cada corporação se organiza, variações salariais entre estados, estrutura de postos e graduações e frequência histórica de seleções por região. Muamba Filmes LTDA · CNPJ 57.507.866/0001-00 · Fortaleza/CE.",
     author: "Muamba Filmes LTDA",
     ogType: "website",
     siteName: "Muamba Filmes LTDA",
     ogTitle:
-      "Panorama das Polícias Militares por Estado | PM do Meu Estado",
+      "Panorama das Polícias Penais por Estado | PP do Meu Estado",
     ogDescription:
-      "Conteúdo informativo sobre organização, salários e estrutura das PMs estaduais brasileiras. Muamba Filmes LTDA — Fortaleza/CE.",
+      "Conteúdo informativo sobre organização, salários e estrutura das PPs estaduais brasileiras. Muamba Filmes LTDA — Fortaleza/CE.",
     analyticsCore: "signal.a8e5d271",
     gtmId: "GTM-PJPDVNPL",
   },
@@ -2442,14 +2442,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Muamba Filmes LTDA",
     description:
-      "Conteúdo informativo sobre as Polícias Militares estaduais brasileiras — como cada corporação se organiza, variações salariais entre estados, estrutura de postos e graduações e frequência histórica de seleções por região. Muamba Filmes LTDA · CNPJ 57.507.866/0001-00 · Fortaleza/CE.",
+      "Conteúdo informativo sobre as Polícias Penais estaduais brasileiras — como cada corporação se organiza, variações salariais entre estados, estrutura de postos e graduações e frequência histórica de seleções por região. Muamba Filmes LTDA · CNPJ 57.507.866/0001-00 · Fortaleza/CE.",
     author: "Muamba Filmes LTDA",
     ogType: "website",
     siteName: "Muamba Filmes LTDA",
     ogTitle:
-      "Panorama das Polícias Militares por Estado | PM do Meu Estado",
+      "Panorama das Polícias Penais por Estado | PP do Meu Estado",
     ogDescription:
-      "Conteúdo informativo sobre organização, salários e estrutura das PMs estaduais brasileiras. Muamba Filmes LTDA — Fortaleza/CE.",
+      "Conteúdo informativo sobre organização, salários e estrutura das PPs estaduais brasileiras. Muamba Filmes LTDA — Fortaleza/CE.",
     analyticsCore: "signal.a8e5d271",
     gtmId: "GTM-PJPDVNPL",
   },
@@ -2461,14 +2461,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA",
     description:
-      "Conteúdo informativo sobre preparação acadêmica para o concurso da Polícia Militar — disciplinas mais cobradas, cronograma de estudos, estratégias para provas objetivas e variações entre corporações estaduais. Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA · CNPJ 58.129.437/0001-00 · Fortaleza/CE.",
+      "Conteúdo informativo sobre preparação acadêmica para o concurso da Polícia Penal — disciplinas mais cobradas, cronograma de estudos, estratégias para provas objetivas e variações entre corporações estaduais. Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA · CNPJ 58.129.437/0001-00 · Fortaleza/CE.",
     author: "Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA",
     ogType: "website",
     siteName: "Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA",
     ogTitle:
-      "Preparação Acadêmica para as Provas do Concurso da PM | Concurseiro PM",
+      "Preparação Acadêmica para as Provas do Concurso da PP | Concurseiro PP",
     ogDescription:
-      "Conteúdo informativo sobre disciplinas, cronograma e estratégias de estudo para o concurso da Polícia Militar. Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA — Fortaleza/CE.",
+      "Conteúdo informativo sobre disciplinas, cronograma e estratégias de estudo para o concurso da Polícia Penal. Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA — Fortaleza/CE.",
     analyticsCore: "signal.f7d4a963",
     gtmId: "GTM-M2FSLGWJ",
   },
@@ -2480,14 +2480,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA",
     description:
-      "Conteúdo informativo sobre preparação acadêmica para o concurso da Polícia Militar — disciplinas mais cobradas, cronograma de estudos, estratégias para provas objetivas e variações entre corporações estaduais. Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA · CNPJ 58.129.437/0001-00 · Fortaleza/CE.",
+      "Conteúdo informativo sobre preparação acadêmica para o concurso da Polícia Penal — disciplinas mais cobradas, cronograma de estudos, estratégias para provas objetivas e variações entre corporações estaduais. Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA · CNPJ 58.129.437/0001-00 · Fortaleza/CE.",
     author: "Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA",
     ogType: "website",
     siteName: "Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA",
     ogTitle:
-      "Preparação Acadêmica para as Provas do Concurso da PM | Concurseiro PM",
+      "Preparação Acadêmica para as Provas do Concurso da PP | Concurseiro PP",
     ogDescription:
-      "Conteúdo informativo sobre disciplinas, cronograma e estratégias de estudo para o concurso da Polícia Militar. Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA — Fortaleza/CE.",
+      "Conteúdo informativo sobre disciplinas, cronograma e estratégias de estudo para o concurso da Polícia Penal. Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA — Fortaleza/CE.",
     analyticsCore: "signal.f7d4a963",
     gtmId: "GTM-M2FSLGWJ",
   },
@@ -2499,14 +2499,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Vilasolutions Brasil LTDA",
     description:
-      "Conteúdo informativo sobre ingresso e carreira de praça na Polícia Militar — processo seletivo para soldado, Curso de Formação de Soldados (CFS), progressão nas graduações e diferenças entre praça e oficial. Vilasolutions Brasil LTDA · CNPJ 57.638.943/0001-61 · Fortaleza/CE.",
+      "Conteúdo informativo sobre ingresso e carreira de praça na Polícia Penal — processo seletivo para soldado, Curso de Formação de Soldados (CFS), progressão nas graduações e diferenças entre praça e oficial. Vilasolutions Brasil LTDA · CNPJ 57.638.943/0001-61 · Fortaleza/CE.",
     author: "Vilasolutions Brasil LTDA",
     ogType: "website",
     siteName: "Vilasolutions Brasil LTDA",
     ogTitle:
-      "Ingresso e Carreira de Praça na Polícia Militar | Futuro PM",
+      "Ingresso e Carreira de Praça na Polícia Penal | Futuro PP",
     ogDescription:
-      "Conteúdo informativo sobre o processo seletivo para soldado, CFS e progressão nas graduações da carreira de praça da PM. Vilasolutions Brasil LTDA — Fortaleza/CE.",
+      "Conteúdo informativo sobre o processo seletivo para soldado, CFS e progressão nas graduações da carreira de praça da PP. Vilasolutions Brasil LTDA — Fortaleza/CE.",
     analyticsCore: "signal.e6c3b194",
     gtmId: "GTM-MS54MNB3",
   },
@@ -2518,14 +2518,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Vilasolutions Brasil LTDA",
     description:
-      "Conteúdo informativo sobre ingresso e carreira de praça na Polícia Militar — processo seletivo para soldado, Curso de Formação de Soldados (CFS), progressão nas graduações e diferenças entre praça e oficial. Vilasolutions Brasil LTDA · CNPJ 57.638.943/0001-61 · Fortaleza/CE.",
+      "Conteúdo informativo sobre ingresso e carreira de praça na Polícia Penal — processo seletivo para soldado, Curso de Formação de Soldados (CFS), progressão nas graduações e diferenças entre praça e oficial. Vilasolutions Brasil LTDA · CNPJ 57.638.943/0001-61 · Fortaleza/CE.",
     author: "Vilasolutions Brasil LTDA",
     ogType: "website",
     siteName: "Vilasolutions Brasil LTDA",
     ogTitle:
-      "Ingresso e Carreira de Praça na Polícia Militar | Futuro PM",
+      "Ingresso e Carreira de Praça na Polícia Penal | Futuro PP",
     ogDescription:
-      "Conteúdo informativo sobre o processo seletivo para soldado, CFS e progressão nas graduações da carreira de praça da PM. Vilasolutions Brasil LTDA — Fortaleza/CE.",
+      "Conteúdo informativo sobre o processo seletivo para soldado, CFS e progressão nas graduações da carreira de praça da PP. Vilasolutions Brasil LTDA — Fortaleza/CE.",
     analyticsCore: "signal.e6c3b194",
     gtmId: "GTM-MS54MNB3",
   },
@@ -2537,14 +2537,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "M.a Assessoria e Treinamentos LTDA",
     description:
-      "Conteúdo informativo sobre desenvolvimento profissional e progressão na carreira de oficial da Polícia Militar — sistema de promoções, cursos de aperfeiçoamento, competências de comando e especialização acadêmica. M.a Assessoria e Treinamentos LTDA · CNPJ 57.717.002/0001-13 · Fortaleza/CE.",
+      "Conteúdo informativo sobre desenvolvimento profissional e progressão na carreira de oficial da Polícia Penal — sistema de promoções, cursos de aperfeiçoamento, competências de comando e especialização acadêmica. M.a Assessoria e Treinamentos LTDA · CNPJ 57.717.002/0001-13 · Fortaleza/CE.",
     author: "M.a Assessoria e Treinamentos LTDA",
     ogType: "website",
     siteName: "M.a Assessoria e Treinamentos LTDA",
     ogTitle:
-      "Desenvolvimento e Progressão na Carreira de Oficial da PM | Carreira de Oficial",
+      "Desenvolvimento e Progressão na Carreira de Oficial da PP | Carreira de Oficial",
     ogDescription:
-      "Conteúdo informativo sobre promoções, cursos de aperfeiçoamento e competências de liderança na carreira de oficial da Polícia Militar. M.a Assessoria e Treinamentos LTDA — Fortaleza/CE.",
+      "Conteúdo informativo sobre promoções, cursos de aperfeiçoamento e competências de liderança na carreira de oficial da Polícia Penal. M.a Assessoria e Treinamentos LTDA — Fortaleza/CE.",
     analyticsCore: "signal.d5f7a821",
     gtmId: "GTM-KSCL5MPL",
   },
@@ -2556,14 +2556,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "M.a Assessoria e Treinamentos LTDA",
     description:
-      "Conteúdo informativo sobre desenvolvimento profissional e progressão na carreira de oficial da Polícia Militar — sistema de promoções, cursos de aperfeiçoamento, competências de comando e especialização acadêmica. M.a Assessoria e Treinamentos LTDA · CNPJ 57.717.002/0001-13 · Fortaleza/CE.",
+      "Conteúdo informativo sobre desenvolvimento profissional e progressão na carreira de oficial da Polícia Penal — sistema de promoções, cursos de aperfeiçoamento, competências de comando e especialização acadêmica. M.a Assessoria e Treinamentos LTDA · CNPJ 57.717.002/0001-13 · Fortaleza/CE.",
     author: "M.a Assessoria e Treinamentos LTDA",
     ogType: "website",
     siteName: "M.a Assessoria e Treinamentos LTDA",
     ogTitle:
-      "Desenvolvimento e Progressão na Carreira de Oficial da PM | Carreira de Oficial",
+      "Desenvolvimento e Progressão na Carreira de Oficial da PP | Carreira de Oficial",
     ogDescription:
-      "Conteúdo informativo sobre promoções, cursos de aperfeiçoamento e competências de liderança na carreira de oficial da Polícia Militar. M.a Assessoria e Treinamentos LTDA — Fortaleza/CE.",
+      "Conteúdo informativo sobre promoções, cursos de aperfeiçoamento e competências de liderança na carreira de oficial da Polícia Penal. M.a Assessoria e Treinamentos LTDA — Fortaleza/CE.",
     analyticsCore: "signal.d5f7a821",
     gtmId: "GTM-KSCL5MPL",
   },
@@ -2575,14 +2575,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Btc Conecta Cursos e Eventos LTDA",
     description:
-      "Conteúdo informativo sobre editais, concursos abertos e novidades das Polícias Militares do Brasil — como acompanhar vagas, prazos de inscrição, bancas organizadoras e cronograma dos certames. Btc Conecta Cursos e Eventos LTDA · CNPJ 58.129.039/0001-93 · Brasília/DF.",
+      "Conteúdo informativo sobre editais, concursos abertos e novidades das Polícias Penais do Brasil — como acompanhar vagas, prazos de inscrição, bancas organizadoras e cronograma dos certames. Btc Conecta Cursos e Eventos LTDA · CNPJ 58.129.039/0001-93 · Brasília/DF.",
     author: "Btc Conecta Cursos e Eventos LTDA",
     ogType: "website",
     siteName: "Btc Conecta Cursos e Eventos LTDA",
     ogTitle:
-      "Editais e Concursos Abertos das PMs do Brasil | Radar PM",
+      "Editais e Concursos Abertos das PPs do Brasil | Radar PP",
     ogDescription:
-      "Radar de editais, vagas abertas, prazos e cronogramas dos concursos das Polícias Militares brasileiras. Btc Conecta Cursos e Eventos LTDA — Brasília/DF.",
+      "Radar de editais, vagas abertas, prazos e cronogramas dos concursos das Polícias Penais brasileiras. Btc Conecta Cursos e Eventos LTDA — Brasília/DF.",
     analyticsCore: "signal.b2c9f458",
     gtmId: "GTM-PHN8QP8R",
   },
@@ -2594,14 +2594,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Btc Conecta Cursos e Eventos LTDA",
     description:
-      "Conteúdo informativo sobre editais, concursos abertos e novidades das Polícias Militares do Brasil — como acompanhar vagas, prazos de inscrição, bancas organizadoras e cronograma dos certames. Btc Conecta Cursos e Eventos LTDA · CNPJ 58.129.039/0001-93 · Brasília/DF.",
+      "Conteúdo informativo sobre editais, concursos abertos e novidades das Polícias Penais do Brasil — como acompanhar vagas, prazos de inscrição, bancas organizadoras e cronograma dos certames. Btc Conecta Cursos e Eventos LTDA · CNPJ 58.129.039/0001-93 · Brasília/DF.",
     author: "Btc Conecta Cursos e Eventos LTDA",
     ogType: "website",
     siteName: "Btc Conecta Cursos e Eventos LTDA",
     ogTitle:
-      "Editais e Concursos Abertos das PMs do Brasil | Radar PM",
+      "Editais e Concursos Abertos das PPs do Brasil | Radar PP",
     ogDescription:
-      "Radar de editais, vagas abertas, prazos e cronogramas dos concursos das Polícias Militares brasileiras. Btc Conecta Cursos e Eventos LTDA — Brasília/DF.",
+      "Radar de editais, vagas abertas, prazos e cronogramas dos concursos das Polícias Penais brasileiras. Btc Conecta Cursos e Eventos LTDA — Brasília/DF.",
     analyticsCore: "signal.b2c9f458",
     gtmId: "GTM-PHN8QP8R",
   },
@@ -2618,7 +2618,7 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     ogType: "website",
     siteName: "Educacional Insigne LTDA",
     ogTitle:
-      "Rotina Operacional e Cotidiano do Policial Militar | PM na Prática",
+      "Rotina Operacional e Cotidiano do Policial Militar | PP na Prática",
     ogDescription:
       "Conteúdo informativo sobre plantões, procedimentos, ocorrências e comunicação via rádio na prática do policial militar. Educacional Insigne LTDA — Brasília/DF.",
     analyticsCore: "signal.a1d8e347",
@@ -2637,7 +2637,7 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     ogType: "website",
     siteName: "Educacional Insigne LTDA",
     ogTitle:
-      "Rotina Operacional e Cotidiano do Policial Militar | PM na Prática",
+      "Rotina Operacional e Cotidiano do Policial Militar | PP na Prática",
     ogDescription:
       "Conteúdo informativo sobre plantões, procedimentos, ocorrências e comunicação via rádio na prática do policial militar. Educacional Insigne LTDA — Brasília/DF.",
     analyticsCore: "signal.a1d8e347",
@@ -2651,14 +2651,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Mvp Educacao e Negocios LTDA",
     description:
-      "Conteúdo informativo sobre preparação física e condicionamento para o processo seletivo da Polícia Militar — TAF, cronograma de treino, capacidades físicas exigidas e cuidados com saúde e nutrição na fase de preparação. Mvp Educacao e Negocios LTDA · CNPJ 57.212.120/0001-70 · Brasília/DF.",
+      "Conteúdo informativo sobre preparação física e condicionamento para o processo seletivo da Polícia Penal — TAF, cronograma de treino, capacidades físicas exigidas e cuidados com saúde e nutrição na fase de preparação. Mvp Educacao e Negocios LTDA · CNPJ 57.212.120/0001-70 · Brasília/DF.",
     author: "Mvp Educacao e Negocios LTDA",
     ogType: "website",
     siteName: "Mvp Educacao e Negocios LTDA",
     ogTitle:
-      "Preparação Física para o TAF e o Processo Seletivo da PM | Rumo à Farda",
+      "Preparação Física para o TAF e o Processo Seletivo da PP | Rumo à Farda",
     ogDescription:
-      "Conteúdo informativo sobre condicionamento físico, cronograma de treino e cuidados com saúde para o Teste de Aptidão Física da Polícia Militar. Mvp Educacao e Negocios LTDA — Brasília/DF.",
+      "Conteúdo informativo sobre condicionamento físico, cronograma de treino e cuidados com saúde para o Teste de Aptidão Física da Polícia Penal. Mvp Educacao e Negocios LTDA — Brasília/DF.",
     analyticsCore: "signal.f3a2c581",
     gtmId: "GTM-NT2GZWHN",
   },
@@ -2670,14 +2670,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Mvp Educacao e Negocios LTDA",
     description:
-      "Conteúdo informativo sobre preparação física e condicionamento para o processo seletivo da Polícia Militar — TAF, cronograma de treino, capacidades físicas exigidas e cuidados com saúde e nutrição na fase de preparação. Mvp Educacao e Negocios LTDA · CNPJ 57.212.120/0001-70 · Brasília/DF.",
+      "Conteúdo informativo sobre preparação física e condicionamento para o processo seletivo da Polícia Penal — TAF, cronograma de treino, capacidades físicas exigidas e cuidados com saúde e nutrição na fase de preparação. Mvp Educacao e Negocios LTDA · CNPJ 57.212.120/0001-70 · Brasília/DF.",
     author: "Mvp Educacao e Negocios LTDA",
     ogType: "website",
     siteName: "Mvp Educacao e Negocios LTDA",
     ogTitle:
-      "Preparação Física para o TAF e o Processo Seletivo da PM | Rumo à Farda",
+      "Preparação Física para o TAF e o Processo Seletivo da PP | Rumo à Farda",
     ogDescription:
-      "Conteúdo informativo sobre condicionamento físico, cronograma de treino e cuidados com saúde para o Teste de Aptidão Física da Polícia Militar. Mvp Educacao e Negocios LTDA — Brasília/DF.",
+      "Conteúdo informativo sobre condicionamento físico, cronograma de treino e cuidados com saúde para o Teste de Aptidão Física da Polícia Penal. Mvp Educacao e Negocios LTDA — Brasília/DF.",
     analyticsCore: "signal.f3a2c581",
     gtmId: "GTM-NT2GZWHN",
   },
@@ -2694,9 +2694,9 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     ogType: "website",
     siteName: "Dc Concursos LTDA",
     ogTitle:
-      "Vocação e Perfil Profissional para a Carreira de Policial Militar | Nasci pra ser PM",
+      "Vocação e Perfil Profissional para a Carreira de Policial Militar | Nasci pra ser PP",
     ogDescription:
-      "Conteúdo informativo sobre o que define quem tem vocação para ser PM — perfil comportamental, rotina policial e o propósito por trás da escolha. Dc Concursos LTDA — Brasília/DF.",
+      "Conteúdo informativo sobre o que define quem tem vocação para ser PP — perfil comportamental, rotina policial e o propósito por trás da escolha. Dc Concursos LTDA — Brasília/DF.",
     analyticsCore: "signal.e4b9f712",
     gtmId: "GTM-5KPDPJND",
   },
@@ -2713,9 +2713,9 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     ogType: "website",
     siteName: "Dc Concursos LTDA",
     ogTitle:
-      "Vocação e Perfil Profissional para a Carreira de Policial Militar | Nasci pra ser PM",
+      "Vocação e Perfil Profissional para a Carreira de Policial Militar | Nasci pra ser PP",
     ogDescription:
-      "Conteúdo informativo sobre o que define quem tem vocação para ser PM — perfil comportamental, rotina policial e o propósito por trás da escolha. Dc Concursos LTDA — Brasília/DF.",
+      "Conteúdo informativo sobre o que define quem tem vocação para ser PP — perfil comportamental, rotina policial e o propósito por trás da escolha. Dc Concursos LTDA — Brasília/DF.",
     analyticsCore: "signal.e4b9f712",
     gtmId: "GTM-5KPDPJND",
   },
@@ -2765,14 +2765,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Espaco Amari LTDA",
     description:
-      "Conteúdo informativo sobre o percurso de formação e a carreira de oficial na Polícia Militar — etapas do CFO, processo seletivo, testes físicos e psicológicos, curso de formação e progressão na carreira. Espaco Amari LTDA · CNPJ 57.528.270/0001-97 · Fortaleza/CE.",
+      "Conteúdo informativo sobre o percurso de formação e a carreira de oficial na Polícia Penal — etapas do CFO, processo seletivo, testes físicos e psicológicos, curso de formação e progressão na carreira. Espaco Amari LTDA · CNPJ 57.528.270/0001-97 · Fortaleza/CE.",
     author: "Espaco Amari LTDA",
     ogType: "website",
     siteName: "Espaco Amari LTDA",
     ogTitle:
-      "Curso de Formação de Oficiais da PM — Etapas, Requisitos e Carreira | Espaco Amari",
+      "Curso de Formação de Oficiais da PP — Etapas, Requisitos e Carreira | Espaco Amari",
     ogDescription:
-      "Conteúdo informativo sobre o CFO da Polícia Militar — processo seletivo, TAF, avaliação psicológica e progressão na carreira de oficial. Espaco Amari LTDA — Fortaleza/CE.",
+      "Conteúdo informativo sobre o CFO da Polícia Penal — processo seletivo, TAF, avaliação psicológica e progressão na carreira de oficial. Espaco Amari LTDA — Fortaleza/CE.",
     analyticsCore: "signal.d8e1a945",
     gtmId: "GTM-W9MLXKSZ",
   },
@@ -2784,14 +2784,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Espaco Amari LTDA",
     description:
-      "Conteúdo informativo sobre o percurso de formação e a carreira de oficial na Polícia Militar — etapas do CFO, processo seletivo, testes físicos e psicológicos, curso de formação e progressão na carreira. Espaco Amari LTDA · CNPJ 57.528.270/0001-97 · Fortaleza/CE.",
+      "Conteúdo informativo sobre o percurso de formação e a carreira de oficial na Polícia Penal — etapas do CFO, processo seletivo, testes físicos e psicológicos, curso de formação e progressão na carreira. Espaco Amari LTDA · CNPJ 57.528.270/0001-97 · Fortaleza/CE.",
     author: "Espaco Amari LTDA",
     ogType: "website",
     siteName: "Espaco Amari LTDA",
     ogTitle:
-      "Curso de Formação de Oficiais da PM — Etapas, Requisitos e Carreira | Espaco Amari",
+      "Curso de Formação de Oficiais da PP — Etapas, Requisitos e Carreira | Espaco Amari",
     ogDescription:
-      "Conteúdo informativo sobre o CFO da Polícia Militar — processo seletivo, TAF, avaliação psicológica e progressão na carreira de oficial. Espaco Amari LTDA — Fortaleza/CE.",
+      "Conteúdo informativo sobre o CFO da Polícia Penal — processo seletivo, TAF, avaliação psicológica e progressão na carreira de oficial. Espaco Amari LTDA — Fortaleza/CE.",
     analyticsCore: "signal.d8e1a945",
     gtmId: "GTM-W9MLXKSZ",
   },
@@ -2841,14 +2841,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Diesel Max Pecas e Servicos LTDA",
     description:
-      "Conteúdo informativo sobre o Curso de Formação de Soldados da PM — como é a rotina diária, os desafios das primeiras semanas, o que surpreende os recrutas e como se preparar antes de ingressar. Diesel Max Pecas e Servicos LTDA · CNPJ 62.545.581/0001-02 · Contagem/MG.",
+      "Conteúdo informativo sobre o Curso de Formação de Soldados da PP — como é a rotina diária, os desafios das primeiras semanas, o que surpreende os recrutas e como se preparar antes de ingressar. Diesel Max Pecas e Servicos LTDA · CNPJ 62.545.581/0001-02 · Contagem/MG.",
     author: "Diesel Max Pecas e Servicos LTDA",
     ogType: "website",
     siteName: "Diesel Max Pecas e Servicos LTDA",
     ogTitle:
-      "Primeira Farda — Como é o Curso de Formação de Soldados da PM e Como se Preparar | Diesel Max",
+      "Primeira Farda — Como é o Curso de Formação de Soldados da PP e Como se Preparar | Diesel Max",
     ogDescription:
-      "Conteúdo informativo sobre a rotina, os desafios e as surpresas do Curso de Formação de Soldados da PM, e como chegar preparado. Diesel Max Pecas e Servicos LTDA — Contagem/MG.",
+      "Conteúdo informativo sobre a rotina, os desafios e as surpresas do Curso de Formação de Soldados da PP, e como chegar preparado. Diesel Max Pecas e Servicos LTDA — Contagem/MG.",
     analyticsCore: "signal.a4d7e159",
     gtmId: "GTM-54P45G88",
   },
@@ -2860,14 +2860,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Diesel Max Pecas e Servicos LTDA",
     description:
-      "Conteúdo informativo sobre o Curso de Formação de Soldados da PM — como é a rotina diária, os desafios das primeiras semanas, o que surpreende os recrutas e como se preparar antes de ingressar. Diesel Max Pecas e Servicos LTDA · CNPJ 62.545.581/0001-02 · Contagem/MG.",
+      "Conteúdo informativo sobre o Curso de Formação de Soldados da PP — como é a rotina diária, os desafios das primeiras semanas, o que surpreende os recrutas e como se preparar antes de ingressar. Diesel Max Pecas e Servicos LTDA · CNPJ 62.545.581/0001-02 · Contagem/MG.",
     author: "Diesel Max Pecas e Servicos LTDA",
     ogType: "website",
     siteName: "Diesel Max Pecas e Servicos LTDA",
     ogTitle:
-      "Primeira Farda — Como é o Curso de Formação de Soldados da PM e Como se Preparar | Diesel Max",
+      "Primeira Farda — Como é o Curso de Formação de Soldados da PP e Como se Preparar | Diesel Max",
     ogDescription:
-      "Conteúdo informativo sobre a rotina, os desafios e as surpresas do Curso de Formação de Soldados da PM, e como chegar preparado. Diesel Max Pecas e Servicos LTDA — Contagem/MG.",
+      "Conteúdo informativo sobre a rotina, os desafios e as surpresas do Curso de Formação de Soldados da PP, e como chegar preparado. Diesel Max Pecas e Servicos LTDA — Contagem/MG.",
     analyticsCore: "signal.a4d7e159",
     gtmId: "GTM-54P45G88",
   },
@@ -2879,14 +2879,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Fernandes Engenharia e Construcao LTDA",
     description:
-      "Conteúdo informativo sobre postos e graduações da Polícia Militar — de soldado a coronel: o que cada patente significa, como funciona o sistema de promoções por merecimento e antiguidade, critérios para progressão entre graduações de praça e o que diferencia oficiais de praças. Fernandes Engenharia e Construcao LTDA · CNPJ 62.551.644/0001-25 · Contagem/MG.",
+      "Conteúdo informativo sobre postos e graduações da Polícia Penal — de soldado a coronel: o que cada patente significa, como funciona o sistema de promoções por merecimento e antiguidade, critérios para progressão entre graduações de praça e o que diferencia oficiais de praças. Fernandes Engenharia e Construcao LTDA · CNPJ 62.551.644/0001-25 · Contagem/MG.",
     author: "Fernandes Engenharia e Construcao LTDA",
     ogType: "website",
     siteName: "Fernandes Engenharia e Construcao LTDA",
     ogTitle:
-      "Patente Militar — Postos, Graduações e Sistema de Promoções da Polícia Militar | Fernandes Engenharia",
+      "Patente Militar — Postos, Graduações e Sistema de Promoções da Polícia Penal | Fernandes Engenharia",
     ogDescription:
-      "Conteúdo informativo sobre a hierarquia da PM: de soldado a coronel, como funcionam as promoções e o que diferencia praças de oficiais. Fernandes Engenharia e Construcao LTDA — Contagem/MG.",
+      "Conteúdo informativo sobre a hierarquia da PP: de soldado a coronel, como funcionam as promoções e o que diferencia praças de oficiais. Fernandes Engenharia e Construcao LTDA — Contagem/MG.",
     analyticsCore: "signal.f3c6d048",
     gtmId: "GTM-P5GLH5R5",
   },
@@ -2898,14 +2898,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Fernandes Engenharia e Construcao LTDA",
     description:
-      "Conteúdo informativo sobre postos e graduações da Polícia Militar — de soldado a coronel: o que cada patente significa, como funciona o sistema de promoções por merecimento e antiguidade, critérios para progressão entre graduações de praça e o que diferencia oficiais de praças. Fernandes Engenharia e Construcao LTDA · CNPJ 62.551.644/0001-25 · Contagem/MG.",
+      "Conteúdo informativo sobre postos e graduações da Polícia Penal — de soldado a coronel: o que cada patente significa, como funciona o sistema de promoções por merecimento e antiguidade, critérios para progressão entre graduações de praça e o que diferencia oficiais de praças. Fernandes Engenharia e Construcao LTDA · CNPJ 62.551.644/0001-25 · Contagem/MG.",
     author: "Fernandes Engenharia e Construcao LTDA",
     ogType: "website",
     siteName: "Fernandes Engenharia e Construcao LTDA",
     ogTitle:
-      "Patente Militar — Postos, Graduações e Sistema de Promoções da Polícia Militar | Fernandes Engenharia",
+      "Patente Militar — Postos, Graduações e Sistema de Promoções da Polícia Penal | Fernandes Engenharia",
     ogDescription:
-      "Conteúdo informativo sobre a hierarquia da PM: de soldado a coronel, como funcionam as promoções e o que diferencia praças de oficiais. Fernandes Engenharia e Construcao LTDA — Contagem/MG.",
+      "Conteúdo informativo sobre a hierarquia da PP: de soldado a coronel, como funcionam as promoções e o que diferencia praças de oficiais. Fernandes Engenharia e Construcao LTDA — Contagem/MG.",
     analyticsCore: "signal.f3c6d048",
     gtmId: "GTM-P5GLH5R5",
   },
@@ -2917,12 +2917,12 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Pnzn Papeis Finos e Presentes LTDA",
     description:
-      "Conteúdo informativo sobre a sustentabilidade emocional de uma preparação longa para a PM — como manter a motivação, lidar com reprovação em ciclos anteriores, gerenciar a pressão familiar e o que muda na vida do candidato e da família com a aprovação. Pnzn Papeis Finos e Presentes LTDA · CNPJ 62.549.874/0001-50 · Curitiba/PR.",
+      "Conteúdo informativo sobre a sustentabilidade emocional de uma preparação longa para a PP — como manter a motivação, lidar com reprovação em ciclos anteriores, gerenciar a pressão familiar e o que muda na vida do candidato e da família com a aprovação. Pnzn Papeis Finos e Presentes LTDA · CNPJ 62.549.874/0001-50 · Curitiba/PR.",
     author: "Pnzn Papeis Finos e Presentes LTDA",
     ogType: "website",
     siteName: "Pnzn Papeis Finos e Presentes LTDA",
     ogTitle:
-      "Sonho de Farda — Motivação, Resiliência e o Caminho Emocional até a Aprovação na PM | Pnzn Papeis",
+      "Sonho de Farda — Motivação, Resiliência e o Caminho Emocional até a Aprovação na PP | Pnzn Papeis",
     ogDescription:
       "Conteúdo informativo sobre como manter o sonho da farda vivo durante uma preparação longa: motivação, reprovação, pressão familiar e a transformação que a aprovação traz. Pnzn Papeis Finos e Presentes LTDA — Curitiba/PR.",
     analyticsCore: "signal.e2b5c937",
@@ -2936,12 +2936,12 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Pnzn Papeis Finos e Presentes LTDA",
     description:
-      "Conteúdo informativo sobre a sustentabilidade emocional de uma preparação longa para a PM — como manter a motivação, lidar com reprovação em ciclos anteriores, gerenciar a pressão familiar e o que muda na vida do candidato e da família com a aprovação. Pnzn Papeis Finos e Presentes LTDA · CNPJ 62.549.874/0001-50 · Curitiba/PR.",
+      "Conteúdo informativo sobre a sustentabilidade emocional de uma preparação longa para a PP — como manter a motivação, lidar com reprovação em ciclos anteriores, gerenciar a pressão familiar e o que muda na vida do candidato e da família com a aprovação. Pnzn Papeis Finos e Presentes LTDA · CNPJ 62.549.874/0001-50 · Curitiba/PR.",
     author: "Pnzn Papeis Finos e Presentes LTDA",
     ogType: "website",
     siteName: "Pnzn Papeis Finos e Presentes LTDA",
     ogTitle:
-      "Sonho de Farda — Motivação, Resiliência e o Caminho Emocional até a Aprovação na PM | Pnzn Papeis",
+      "Sonho de Farda — Motivação, Resiliência e o Caminho Emocional até a Aprovação na PP | Pnzn Papeis",
     ogDescription:
       "Conteúdo informativo sobre como manter o sonho da farda vivo durante uma preparação longa: motivação, reprovação, pressão familiar e a transformação que a aprovação traz. Pnzn Papeis Finos e Presentes LTDA — Curitiba/PR.",
     analyticsCore: "signal.e2b5c937",
@@ -2955,14 +2955,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Chaveiro Auto Tecno LTDA",
     description:
-      "Conteúdo informativo sobre a história, as tradições e a cultura institucional das Polícias Militares brasileiras — origem histórica, cerimônias de formatura e passagem de comando, código de honra e o papel da hierarquia na coesão corporativa. Chaveiro Auto Tecno LTDA · CNPJ 62.549.317/0001-39 · Contagem/MG.",
+      "Conteúdo informativo sobre a história, as tradições e a cultura institucional das Polícias Penais brasileiras — origem histórica, cerimônias de formatura e passagem de comando, código de honra e o papel da hierarquia na coesão corporativa. Chaveiro Auto Tecno LTDA · CNPJ 62.549.317/0001-39 · Contagem/MG.",
     author: "Chaveiro Auto Tecno LTDA",
     ogType: "website",
     siteName: "Chaveiro Auto Tecno LTDA",
     ogTitle:
-      "Honra Militar — História, Tradições e Cultura Institucional da Polícia Militar | Chaveiro Auto Tecno",
+      "Honra Militar — História, Tradições e Cultura Institucional da Polícia Penal | Chaveiro Auto Tecno",
     ogDescription:
-      "Conteúdo informativo sobre a origem histórica, cerimônias, código de honra e hierarquia que formam a identidade institucional das PMs brasileiras. Chaveiro Auto Tecno LTDA — Contagem/MG.",
+      "Conteúdo informativo sobre a origem histórica, cerimônias, código de honra e hierarquia que formam a identidade institucional das PPs brasileiras. Chaveiro Auto Tecno LTDA — Contagem/MG.",
     analyticsCore: "signal.d1a4b826",
     gtmId: "GTM-N272NBZG",
   },
@@ -2974,14 +2974,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Chaveiro Auto Tecno LTDA",
     description:
-      "Conteúdo informativo sobre a história, as tradições e a cultura institucional das Polícias Militares brasileiras — origem histórica, cerimônias de formatura e passagem de comando, código de honra e o papel da hierarquia na coesão corporativa. Chaveiro Auto Tecno LTDA · CNPJ 62.549.317/0001-39 · Contagem/MG.",
+      "Conteúdo informativo sobre a história, as tradições e a cultura institucional das Polícias Penais brasileiras — origem histórica, cerimônias de formatura e passagem de comando, código de honra e o papel da hierarquia na coesão corporativa. Chaveiro Auto Tecno LTDA · CNPJ 62.549.317/0001-39 · Contagem/MG.",
     author: "Chaveiro Auto Tecno LTDA",
     ogType: "website",
     siteName: "Chaveiro Auto Tecno LTDA",
     ogTitle:
-      "Honra Militar — História, Tradições e Cultura Institucional da Polícia Militar | Chaveiro Auto Tecno",
+      "Honra Militar — História, Tradições e Cultura Institucional da Polícia Penal | Chaveiro Auto Tecno",
     ogDescription:
-      "Conteúdo informativo sobre a origem histórica, cerimônias, código de honra e hierarquia que formam a identidade institucional das PMs brasileiras. Chaveiro Auto Tecno LTDA — Contagem/MG.",
+      "Conteúdo informativo sobre a origem histórica, cerimônias, código de honra e hierarquia que formam a identidade institucional das PPs brasileiras. Chaveiro Auto Tecno LTDA — Contagem/MG.",
     analyticsCore: "signal.d1a4b826",
     gtmId: "GTM-N272NBZG",
   },
@@ -2993,14 +2993,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Distribuidora Pecas Truck Mqn LTDA",
     description:
-      "Conteúdo informativo sobre as etapas do processo seletivo da Polícia Militar — prova escrita, TAF, avaliação psicológica, investigação social e exame médico: o que cada fase avalia, como se preparar e o que pode causar desclassificação. Distribuidora Pecas Truck Mqn LTDA · CNPJ 62.549.521/0001-50 · Curitiba/PR.",
+      "Conteúdo informativo sobre as etapas do processo seletivo da Polícia Penal — prova escrita, TAF, avaliação psicológica, investigação social e exame médico: o que cada fase avalia, como se preparar e o que pode causar desclassificação. Distribuidora Pecas Truck Mqn LTDA · CNPJ 62.549.521/0001-50 · Curitiba/PR.",
     author: "Distribuidora Pecas Truck Mqn LTDA",
     ogType: "website",
     siteName: "Distribuidora Pecas Truck Mqn LTDA",
     ogTitle:
-      "Trilha PM — Etapas do Processo Seletivo da Polícia Militar: Prova, TAF, Psicotécnico e Mais | Distribuidora Truck Mqn",
+      "Trilha PP — Etapas do Processo Seletivo da Polícia Penal: Prova, TAF, Psicotécnico e Mais | Distribuidora Truck Mqn",
     ogDescription:
-      "Conteúdo informativo sobre cada fase do processo seletivo da PM — o que avaliam e como se preparar para a prova, TAF, psicológico, investigação social e exame médico. Distribuidora Pecas Truck Mqn LTDA — Curitiba/PR.",
+      "Conteúdo informativo sobre cada fase do processo seletivo da PP — o que avaliam e como se preparar para a prova, TAF, psicológico, investigação social e exame médico. Distribuidora Pecas Truck Mqn LTDA — Curitiba/PR.",
     analyticsCore: "signal.c9f3a715",
     gtmId: "GTM-K35LR3X8",
   },
@@ -3012,14 +3012,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Distribuidora Pecas Truck Mqn LTDA",
     description:
-      "Conteúdo informativo sobre as etapas do processo seletivo da Polícia Militar — prova escrita, TAF, avaliação psicológica, investigação social e exame médico: o que cada fase avalia, como se preparar e o que pode causar desclassificação. Distribuidora Pecas Truck Mqn LTDA · CNPJ 62.549.521/0001-50 · Curitiba/PR.",
+      "Conteúdo informativo sobre as etapas do processo seletivo da Polícia Penal — prova escrita, TAF, avaliação psicológica, investigação social e exame médico: o que cada fase avalia, como se preparar e o que pode causar desclassificação. Distribuidora Pecas Truck Mqn LTDA · CNPJ 62.549.521/0001-50 · Curitiba/PR.",
     author: "Distribuidora Pecas Truck Mqn LTDA",
     ogType: "website",
     siteName: "Distribuidora Pecas Truck Mqn LTDA",
     ogTitle:
-      "Trilha PM — Etapas do Processo Seletivo da Polícia Militar: Prova, TAF, Psicotécnico e Mais | Distribuidora Truck Mqn",
+      "Trilha PP — Etapas do Processo Seletivo da Polícia Penal: Prova, TAF, Psicotécnico e Mais | Distribuidora Truck Mqn",
     ogDescription:
-      "Conteúdo informativo sobre cada fase do processo seletivo da PM — o que avaliam e como se preparar para a prova, TAF, psicológico, investigação social e exame médico. Distribuidora Pecas Truck Mqn LTDA — Curitiba/PR.",
+      "Conteúdo informativo sobre cada fase do processo seletivo da PP — o que avaliam e como se preparar para a prova, TAF, psicológico, investigação social e exame médico. Distribuidora Pecas Truck Mqn LTDA — Curitiba/PR.",
     analyticsCore: "signal.c9f3a715",
     gtmId: "GTM-K35LR3X8",
   },
@@ -3031,14 +3031,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "D' Martins Assessoria e Consultoria Unipessoal LTDA",
     description:
-      "Conteúdo informativo sobre desempenho mental e foco para o dia da prova da PM — como controlar ansiedade, técnicas de concentração em provas objetivas, impacto do sono e alimentação e o que fazer nas 24 horas anteriores ao exame. D' Martins Assessoria e Consultoria Unipessoal LTDA · CNPJ 67.588.626/0001-31 · Goiânia/GO.",
+      "Conteúdo informativo sobre desempenho mental e foco para o dia da prova da PP — como controlar ansiedade, técnicas de concentração em provas objetivas, impacto do sono e alimentação e o que fazer nas 24 horas anteriores ao exame. D' Martins Assessoria e Consultoria Unipessoal LTDA · CNPJ 67.588.626/0001-31 · Goiânia/GO.",
     author: "D' Martins Assessoria e Consultoria Unipessoal LTDA",
     ogType: "website",
     siteName: "D' Martins Assessoria e Consultoria Unipessoal LTDA",
     ogTitle:
-      "Foco na Farda — Desempenho Mental e Concentração para o Dia da Prova da PM | D' Martins Assessoria",
+      "Foco na Farda — Desempenho Mental e Concentração para o Dia da Prova da PP | D' Martins Assessoria",
     ogDescription:
-      "Conteúdo informativo sobre como controlar ansiedade, manter o foco e chegar no estado mental ideal para a prova da PM. D' Martins Assessoria e Consultoria Unipessoal LTDA — Goiânia/GO.",
+      "Conteúdo informativo sobre como controlar ansiedade, manter o foco e chegar no estado mental ideal para a prova da PP. D' Martins Assessoria e Consultoria Unipessoal LTDA — Goiânia/GO.",
     analyticsCore: "signal.b8e2f694",
     gtmId: "GTM-5L5JCGCR",
   },
@@ -3050,14 +3050,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "D' Martins Assessoria e Consultoria Unipessoal LTDA",
     description:
-      "Conteúdo informativo sobre desempenho mental e foco para o dia da prova da PM — como controlar ansiedade, técnicas de concentração em provas objetivas, impacto do sono e alimentação e o que fazer nas 24 horas anteriores ao exame. D' Martins Assessoria e Consultoria Unipessoal LTDA · CNPJ 67.588.626/0001-31 · Goiânia/GO.",
+      "Conteúdo informativo sobre desempenho mental e foco para o dia da prova da PP — como controlar ansiedade, técnicas de concentração em provas objetivas, impacto do sono e alimentação e o que fazer nas 24 horas anteriores ao exame. D' Martins Assessoria e Consultoria Unipessoal LTDA · CNPJ 67.588.626/0001-31 · Goiânia/GO.",
     author: "D' Martins Assessoria e Consultoria Unipessoal LTDA",
     ogType: "website",
     siteName: "D' Martins Assessoria e Consultoria Unipessoal LTDA",
     ogTitle:
-      "Foco na Farda — Desempenho Mental e Concentração para o Dia da Prova da PM | D' Martins Assessoria",
+      "Foco na Farda — Desempenho Mental e Concentração para o Dia da Prova da PP | D' Martins Assessoria",
     ogDescription:
-      "Conteúdo informativo sobre como controlar ansiedade, manter o foco e chegar no estado mental ideal para a prova da PM. D' Martins Assessoria e Consultoria Unipessoal LTDA — Goiânia/GO.",
+      "Conteúdo informativo sobre como controlar ansiedade, manter o foco e chegar no estado mental ideal para a prova da PP. D' Martins Assessoria e Consultoria Unipessoal LTDA — Goiânia/GO.",
     analyticsCore: "signal.b8e2f694",
     gtmId: "GTM-5L5JCGCR",
   },
@@ -3074,7 +3074,7 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     ogType: "website",
     siteName: "Comex B2G LTDA",
     ogTitle:
-      "Guia do PM — Benefícios, Assistência e Recursos Institucionais para o Policial Militar | Comex B2G",
+      "Guia do PP — Benefícios, Assistência e Recursos Institucionais para o Policial Militar | Comex B2G",
     ogDescription:
       "Conteúdo informativo sobre CAPM, associações, plano de saúde, previdência complementar e cooperativas de crédito disponíveis para policiais militares. Comex B2G LTDA — Contagem/MG.",
     analyticsCore: "signal.a7d1e583",
@@ -3093,7 +3093,7 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     ogType: "website",
     siteName: "Comex B2G LTDA",
     ogTitle:
-      "Guia do PM — Benefícios, Assistência e Recursos Institucionais para o Policial Militar | Comex B2G",
+      "Guia do PP — Benefícios, Assistência e Recursos Institucionais para o Policial Militar | Comex B2G",
     ogDescription:
       "Conteúdo informativo sobre CAPM, associações, plano de saúde, previdência complementar e cooperativas de crédito disponíveis para policiais militares. Comex B2G LTDA — Contagem/MG.",
     analyticsCore: "signal.a7d1e583",
@@ -3107,14 +3107,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Jl Distribuidora Retiro Ltda.",
     description:
-      "Conteúdo informativo sobre vocação e propósito na carreira de policial militar — o que motiva quem escolhe essa profissão, como a missão de servir se manifesta no cotidiano e como conciliar valores pessoais com as exigências institucionais da PM. Jl Distribuidora Retiro Ltda. · CNPJ 62.539.537/0001-81 · Contagem/MG.",
+      "Conteúdo informativo sobre vocação e propósito na carreira de policial militar — o que motiva quem escolhe essa profissão, como a missão de servir se manifesta no cotidiano e como conciliar valores pessoais com as exigências institucionais da PP. Jl Distribuidora Retiro Ltda. · CNPJ 62.539.537/0001-81 · Contagem/MG.",
     author: "Jl Distribuidora Retiro Ltda.",
     ogType: "website",
     siteName: "Jl Distribuidora Retiro Ltda.",
     ogTitle:
-      "Missão Farda — Vocação, Propósito e o Significado de Servir na Polícia Militar | Jl Distribuidora",
+      "Missão Farda — Vocação, Propósito e o Significado de Servir na Polícia Penal | Jl Distribuidora",
     ogDescription:
-      "Conteúdo informativo sobre o que motiva quem escolhe a carreira policial e como a missão de servir se traduz no cotidiano da PM. Jl Distribuidora Retiro Ltda. — Contagem/MG.",
+      "Conteúdo informativo sobre o que motiva quem escolhe a carreira policial e como a missão de servir se traduz no cotidiano da PP. Jl Distribuidora Retiro Ltda. — Contagem/MG.",
     analyticsCore: "signal.f6b3d975",
     gtmId: "GTM-T2PFJX77",
   },
@@ -3126,14 +3126,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Jl Distribuidora Retiro Ltda.",
     description:
-      "Conteúdo informativo sobre vocação e propósito na carreira de policial militar — o que motiva quem escolhe essa profissão, como a missão de servir se manifesta no cotidiano e como conciliar valores pessoais com as exigências institucionais da PM. Jl Distribuidora Retiro Ltda. · CNPJ 62.539.537/0001-81 · Contagem/MG.",
+      "Conteúdo informativo sobre vocação e propósito na carreira de policial militar — o que motiva quem escolhe essa profissão, como a missão de servir se manifesta no cotidiano e como conciliar valores pessoais com as exigências institucionais da PP. Jl Distribuidora Retiro Ltda. · CNPJ 62.539.537/0001-81 · Contagem/MG.",
     author: "Jl Distribuidora Retiro Ltda.",
     ogType: "website",
     siteName: "Jl Distribuidora Retiro Ltda.",
     ogTitle:
-      "Missão Farda — Vocação, Propósito e o Significado de Servir na Polícia Militar | Jl Distribuidora",
+      "Missão Farda — Vocação, Propósito e o Significado de Servir na Polícia Penal | Jl Distribuidora",
     ogDescription:
-      "Conteúdo informativo sobre o que motiva quem escolhe a carreira policial e como a missão de servir se traduz no cotidiano da PM. Jl Distribuidora Retiro Ltda. — Contagem/MG.",
+      "Conteúdo informativo sobre o que motiva quem escolhe a carreira policial e como a missão de servir se traduz no cotidiano da PP. Jl Distribuidora Retiro Ltda. — Contagem/MG.",
     analyticsCore: "signal.f6b3d975",
     gtmId: "GTM-T2PFJX77",
   },
@@ -3145,14 +3145,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Ink Grafica LTDA",
     description:
-      "Conteúdo informativo sobre o uniforme da Polícia Militar — composição do fardamento por modalidade, como cuidar e conservar cada peça, regulamentos de uso fora do serviço e como funciona o fornecimento ao ingressar na corporação. Ink Grafica LTDA · CNPJ 62.550.653/0001-00 · Contagem/MG.",
+      "Conteúdo informativo sobre o uniforme da Polícia Penal — composição do fardamento por modalidade, como cuidar e conservar cada peça, regulamentos de uso fora do serviço e como funciona o fornecimento ao ingressar na corporação. Ink Grafica LTDA · CNPJ 62.550.653/0001-00 · Contagem/MG.",
     author: "Ink Grafica LTDA",
     ogType: "website",
     siteName: "Ink Grafica LTDA",
     ogTitle:
-      "Minha Farda PM — Composição, Cuidados e Regulamentos do Uniforme da Polícia Militar | Ink Grafica",
+      "Minha Farda PP — Composição, Cuidados e Regulamentos do Uniforme da Polícia Penal | Ink Grafica",
     ogDescription:
-      "Conteúdo informativo sobre o fardamento da PM — peças do uniforme, como conservar, regras de uso fora do serviço e fornecimento ao recruta. Ink Grafica LTDA — Contagem/MG.",
+      "Conteúdo informativo sobre o fardamento da PP — peças do uniforme, como conservar, regras de uso fora do serviço e fornecimento ao recruta. Ink Grafica LTDA — Contagem/MG.",
     analyticsCore: "signal.e5a2c864",
     gtmId: "GTM-NF2TZDRB",
   },
@@ -3164,14 +3164,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Ink Grafica LTDA",
     description:
-      "Conteúdo informativo sobre o uniforme da Polícia Militar — composição do fardamento por modalidade, como cuidar e conservar cada peça, regulamentos de uso fora do serviço e como funciona o fornecimento ao ingressar na corporação. Ink Grafica LTDA · CNPJ 62.550.653/0001-00 · Contagem/MG.",
+      "Conteúdo informativo sobre o uniforme da Polícia Penal — composição do fardamento por modalidade, como cuidar e conservar cada peça, regulamentos de uso fora do serviço e como funciona o fornecimento ao ingressar na corporação. Ink Grafica LTDA · CNPJ 62.550.653/0001-00 · Contagem/MG.",
     author: "Ink Grafica LTDA",
     ogType: "website",
     siteName: "Ink Grafica LTDA",
     ogTitle:
-      "Minha Farda PM — Composição, Cuidados e Regulamentos do Uniforme da Polícia Militar | Ink Grafica",
+      "Minha Farda PP — Composição, Cuidados e Regulamentos do Uniforme da Polícia Penal | Ink Grafica",
     ogDescription:
-      "Conteúdo informativo sobre o fardamento da PM — peças do uniforme, como conservar, regras de uso fora do serviço e fornecimento ao recruta. Ink Grafica LTDA — Contagem/MG.",
+      "Conteúdo informativo sobre o fardamento da PP — peças do uniforme, como conservar, regras de uso fora do serviço e fornecimento ao recruta. Ink Grafica LTDA — Contagem/MG.",
     analyticsCore: "signal.e5a2c864",
     gtmId: "GTM-NF2TZDRB",
   },
@@ -3183,14 +3183,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Br Motos LTDA",
     description:
-      "Conteúdo informativo sobre como monitorar e antecipar editais de concursos da Polícia Militar — como acompanhar publicações oficiais, quais estados abrem seleções com maior frequência e o que fazer no período de espera entre editais. Br Motos LTDA · CNPJ 62.550.094/0001-20 · Goiânia/GO.",
+      "Conteúdo informativo sobre como monitorar e antecipar editais de concursos da Polícia Penal — como acompanhar publicações oficiais, quais estados abrem seleções com maior frequência e o que fazer no período de espera entre editais. Br Motos LTDA · CNPJ 62.550.094/0001-20 · Goiânia/GO.",
     author: "Br Motos LTDA",
     ogType: "website",
     siteName: "Br Motos LTDA",
     ogTitle:
-      "Próximo Edital PM — Como Monitorar e Antecipar Concursos da Polícia Militar | Br Motos",
+      "Próximo Edital PP — Como Monitorar e Antecipar Concursos da Polícia Penal | Br Motos",
     ogDescription:
-      "Conteúdo informativo sobre como acompanhar próximos editais da PM — fontes confiáveis, estados com mais frequência de seleções e o que fazer enquanto espera. Br Motos LTDA — Goiânia/GO.",
+      "Conteúdo informativo sobre como acompanhar próximos editais da PP — fontes confiáveis, estados com mais frequência de seleções e o que fazer enquanto espera. Br Motos LTDA — Goiânia/GO.",
     analyticsCore: "signal.d4f8a153",
     gtmId: "GTM-M69CT9M7",
   },
@@ -3202,14 +3202,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Br Motos LTDA",
     description:
-      "Conteúdo informativo sobre como monitorar e antecipar editais de concursos da Polícia Militar — como acompanhar publicações oficiais, quais estados abrem seleções com maior frequência e o que fazer no período de espera entre editais. Br Motos LTDA · CNPJ 62.550.094/0001-20 · Goiânia/GO.",
+      "Conteúdo informativo sobre como monitorar e antecipar editais de concursos da Polícia Penal — como acompanhar publicações oficiais, quais estados abrem seleções com maior frequência e o que fazer no período de espera entre editais. Br Motos LTDA · CNPJ 62.550.094/0001-20 · Goiânia/GO.",
     author: "Br Motos LTDA",
     ogType: "website",
     siteName: "Br Motos LTDA",
     ogTitle:
-      "Próximo Edital PM — Como Monitorar e Antecipar Concursos da Polícia Militar | Br Motos",
+      "Próximo Edital PP — Como Monitorar e Antecipar Concursos da Polícia Penal | Br Motos",
     ogDescription:
-      "Conteúdo informativo sobre como acompanhar próximos editais da PM — fontes confiáveis, estados com mais frequência de seleções e o que fazer enquanto espera. Br Motos LTDA — Goiânia/GO.",
+      "Conteúdo informativo sobre como acompanhar próximos editais da PP — fontes confiáveis, estados com mais frequência de seleções e o que fazer enquanto espera. Br Motos LTDA — Goiânia/GO.",
     analyticsCore: "signal.d4f8a153",
     gtmId: "GTM-M69CT9M7",
   },
@@ -3226,9 +3226,9 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     ogType: "website",
     siteName: "Anacarlaperiodontia LTDA",
     ogTitle:
-      "Panorama PM — Do Ingresso à Aposentadoria: a Carreira Completa do Policial Militar | Anacarlaperiodontia",
+      "Panorama PP — Do Ingresso à Aposentadoria: a Carreira Completa do Policial Militar | Anacarlaperiodontia",
     ogDescription:
-      "Conteúdo informativo sobre toda a trajetória na PM — graduações, CFS, especialidades, CFO e aposentadoria. Anacarlaperiodontia LTDA — Feira de Santana/BA.",
+      "Conteúdo informativo sobre toda a trajetória na PP — graduações, CFS, especialidades, CFO e aposentadoria. Anacarlaperiodontia LTDA — Feira de Santana/BA.",
     analyticsCore: "signal.c5e9d042",
     gtmId: "GTM-WR8BTGLP",
   },
@@ -3245,9 +3245,9 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     ogType: "website",
     siteName: "Anacarlaperiodontia LTDA",
     ogTitle:
-      "Panorama PM — Do Ingresso à Aposentadoria: a Carreira Completa do Policial Militar | Anacarlaperiodontia",
+      "Panorama PP — Do Ingresso à Aposentadoria: a Carreira Completa do Policial Militar | Anacarlaperiodontia",
     ogDescription:
-      "Conteúdo informativo sobre toda a trajetória na PM — graduações, CFS, especialidades, CFO e aposentadoria. Anacarlaperiodontia LTDA — Feira de Santana/BA.",
+      "Conteúdo informativo sobre toda a trajetória na PP — graduações, CFS, especialidades, CFO e aposentadoria. Anacarlaperiodontia LTDA — Feira de Santana/BA.",
     analyticsCore: "signal.c5e9d042",
     gtmId: "GTM-WR8BTGLP",
   },
@@ -3259,14 +3259,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Cop Odontologia Premium LTDA",
     description:
-      "Conteúdo informativo sobre como montar e gerenciar cronogramas de estudo para concursos da Polícia Militar — distribuição de tempo por disciplina, adaptação para quem trabalha e quando intensificar a preparação antes da prova. Cop Odontologia Premium LTDA · CNPJ 62.509.737/0001-91 · Feira de Santana/BA.",
+      "Conteúdo informativo sobre como montar e gerenciar cronogramas de estudo para concursos da Polícia Penal — distribuição de tempo por disciplina, adaptação para quem trabalha e quando intensificar a preparação antes da prova. Cop Odontologia Premium LTDA · CNPJ 62.509.737/0001-91 · Feira de Santana/BA.",
     author: "Cop Odontologia Premium LTDA",
     ogType: "website",
     siteName: "Cop Odontologia Premium LTDA",
     ogTitle:
-      "Cronograma PM — Como Organizar o Tempo de Estudos para o Concurso da Polícia Militar | Cop Odontologia",
+      "Cronograma PP — Como Organizar o Tempo de Estudos para o Concurso da Polícia Penal | Cop Odontologia",
     ogDescription:
-      "Conteúdo informativo sobre cronogramas de estudo para concursos da PM — distribuição por disciplina, rotina para quem trabalha e fase de intensificação pré-prova. Cop Odontologia Premium LTDA — Feira de Santana/BA.",
+      "Conteúdo informativo sobre cronogramas de estudo para concursos da PP — distribuição por disciplina, rotina para quem trabalha e fase de intensificação pré-prova. Cop Odontologia Premium LTDA — Feira de Santana/BA.",
     analyticsCore: "signal.b3d7f619",
     gtmId: "GTM-5W5HPHTP",
   },
@@ -3278,14 +3278,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Cop Odontologia Premium LTDA",
     description:
-      "Conteúdo informativo sobre como montar e gerenciar cronogramas de estudo para concursos da Polícia Militar — distribuição de tempo por disciplina, adaptação para quem trabalha e quando intensificar a preparação antes da prova. Cop Odontologia Premium LTDA · CNPJ 62.509.737/0001-91 · Feira de Santana/BA.",
+      "Conteúdo informativo sobre como montar e gerenciar cronogramas de estudo para concursos da Polícia Penal — distribuição de tempo por disciplina, adaptação para quem trabalha e quando intensificar a preparação antes da prova. Cop Odontologia Premium LTDA · CNPJ 62.509.737/0001-91 · Feira de Santana/BA.",
     author: "Cop Odontologia Premium LTDA",
     ogType: "website",
     siteName: "Cop Odontologia Premium LTDA",
     ogTitle:
-      "Cronograma PM — Como Organizar o Tempo de Estudos para o Concurso da Polícia Militar | Cop Odontologia",
+      "Cronograma PP — Como Organizar o Tempo de Estudos para o Concurso da Polícia Penal | Cop Odontologia",
     ogDescription:
-      "Conteúdo informativo sobre cronogramas de estudo para concursos da PM — distribuição por disciplina, rotina para quem trabalha e fase de intensificação pré-prova. Cop Odontologia Premium LTDA — Feira de Santana/BA.",
+      "Conteúdo informativo sobre cronogramas de estudo para concursos da PP — distribuição por disciplina, rotina para quem trabalha e fase de intensificação pré-prova. Cop Odontologia Premium LTDA — Feira de Santana/BA.",
     analyticsCore: "signal.b3d7f619",
     gtmId: "GTM-5W5HPHTP",
   },
@@ -3297,12 +3297,12 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Bittencourt Berenguer Cesar Ativos LTDA",
     description:
-      "Conteúdo informativo sobre como ler e interpretar editais de concursos da Polícia Militar — quais informações verificar primeiro, critérios de eliminação ignorados, tabelas de pontuação e prazos de recurso por fase. Bittencourt Berenguer Cesar Ativos LTDA · CNPJ 62.532.283/0001-70 · Feira de Santana/BA.",
+      "Conteúdo informativo sobre como ler e interpretar editais de concursos da Polícia Penal — quais informações verificar primeiro, critérios de eliminação ignorados, tabelas de pontuação e prazos de recurso por fase. Bittencourt Berenguer Cesar Ativos LTDA · CNPJ 62.532.283/0001-70 · Feira de Santana/BA.",
     author: "Bittencourt Berenguer Cesar Ativos LTDA",
     ogType: "website",
     siteName: "Bittencourt Berenguer Cesar Ativos LTDA",
     ogTitle:
-      "Edital Militar — Como Ler, Interpretar e Não Perder Nada em Concursos da PM | Bittencourt Ativos",
+      "Edital Militar — Como Ler, Interpretar e Não Perder Nada em Concursos da PP | Bittencourt Ativos",
     ogDescription:
       "Conteúdo informativo sobre a anatomia de editais militares — requisitos, critérios de eliminação, pontuação e prazos de recurso. Bittencourt Berenguer Cesar Ativos LTDA — Feira de Santana/BA.",
     analyticsCore: "signal.a2c8e531",
@@ -3316,12 +3316,12 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Bittencourt Berenguer Cesar Ativos LTDA",
     description:
-      "Conteúdo informativo sobre como ler e interpretar editais de concursos da Polícia Militar — quais informações verificar primeiro, critérios de eliminação ignorados, tabelas de pontuação e prazos de recurso por fase. Bittencourt Berenguer Cesar Ativos LTDA · CNPJ 62.532.283/0001-70 · Feira de Santana/BA.",
+      "Conteúdo informativo sobre como ler e interpretar editais de concursos da Polícia Penal — quais informações verificar primeiro, critérios de eliminação ignorados, tabelas de pontuação e prazos de recurso por fase. Bittencourt Berenguer Cesar Ativos LTDA · CNPJ 62.532.283/0001-70 · Feira de Santana/BA.",
     author: "Bittencourt Berenguer Cesar Ativos LTDA",
     ogType: "website",
     siteName: "Bittencourt Berenguer Cesar Ativos LTDA",
     ogTitle:
-      "Edital Militar — Como Ler, Interpretar e Não Perder Nada em Concursos da PM | Bittencourt Ativos",
+      "Edital Militar — Como Ler, Interpretar e Não Perder Nada em Concursos da PP | Bittencourt Ativos",
     ogDescription:
       "Conteúdo informativo sobre a anatomia de editais militares — requisitos, critérios de eliminação, pontuação e prazos de recurso. Bittencourt Berenguer Cesar Ativos LTDA — Feira de Santana/BA.",
     analyticsCore: "signal.a2c8e531",
@@ -3335,14 +3335,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Mb Internacional LTDA",
     description:
-      "Conteúdo informativo sobre a transformação de vida ao se tornar soldado da Polícia Militar — rotina no curso de recrutas, desafios físicos e psicológicos da formação e como a família se adapta à nova carreira. Mb Internacional LTDA · CNPJ 62.466.825/0001-53 · Guarulhos/SP.",
+      "Conteúdo informativo sobre a transformação de vida ao se tornar soldado da Polícia Penal — rotina no curso de recrutas, desafios físicos e psicológicos da formação e como a família se adapta à nova carreira. Mb Internacional LTDA · CNPJ 62.466.825/0001-53 · Guarulhos/SP.",
     author: "Mb Internacional LTDA",
     ogType: "website",
     siteName: "Mb Internacional LTDA",
     ogTitle:
-      "Futuro Soldado PM — Formação, Rotina de Recrutas e Vida na Corporação | Mb Internacional",
+      "Futuro Soldado PP — Formação, Rotina de Recrutas e Vida na Corporação | Mb Internacional",
     ogDescription:
-      "Conteúdo informativo sobre o que muda ao se tornar soldado da PM — curso de formação, adaptação familiar e desafios da vida na corporação. Mb Internacional LTDA — Guarulhos/SP.",
+      "Conteúdo informativo sobre o que muda ao se tornar soldado da PP — curso de formação, adaptação familiar e desafios da vida na corporação. Mb Internacional LTDA — Guarulhos/SP.",
     analyticsCore: "signal.f7b5c948",
     gtmId: "GTM-K4T2H452",
   },
@@ -3354,14 +3354,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Mb Internacional LTDA",
     description:
-      "Conteúdo informativo sobre a transformação de vida ao se tornar soldado da Polícia Militar — rotina no curso de recrutas, desafios físicos e psicológicos da formação e como a família se adapta à nova carreira. Mb Internacional LTDA · CNPJ 62.466.825/0001-53 · Guarulhos/SP.",
+      "Conteúdo informativo sobre a transformação de vida ao se tornar soldado da Polícia Penal — rotina no curso de recrutas, desafios físicos e psicológicos da formação e como a família se adapta à nova carreira. Mb Internacional LTDA · CNPJ 62.466.825/0001-53 · Guarulhos/SP.",
     author: "Mb Internacional LTDA",
     ogType: "website",
     siteName: "Mb Internacional LTDA",
     ogTitle:
-      "Futuro Soldado PM — Formação, Rotina de Recrutas e Vida na Corporação | Mb Internacional",
+      "Futuro Soldado PP — Formação, Rotina de Recrutas e Vida na Corporação | Mb Internacional",
     ogDescription:
-      "Conteúdo informativo sobre o que muda ao se tornar soldado da PM — curso de formação, adaptação familiar e desafios da vida na corporação. Mb Internacional LTDA — Guarulhos/SP.",
+      "Conteúdo informativo sobre o que muda ao se tornar soldado da PP — curso de formação, adaptação familiar e desafios da vida na corporação. Mb Internacional LTDA — Guarulhos/SP.",
     analyticsCore: "signal.f7b5c948",
     gtmId: "GTM-K4T2H452",
   },
@@ -3373,14 +3373,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Ricardo Pereira Sanches Tecnologia da Informacao LTDA",
     description:
-      "Conteúdo informativo sobre disciplina, mentalidade e hábitos de alta performance aplicados à preparação para concursos da Polícia Militar — rotina de estudos, resiliência após reprovações e como sustentar o foco numa jornada longa. Ricardo Pereira Sanches Tecnologia da Informacao LTDA · CNPJ 62.446.657/0001-34 · Guarulhos/SP.",
+      "Conteúdo informativo sobre disciplina, mentalidade e hábitos de alta performance aplicados à preparação para concursos da Polícia Penal — rotina de estudos, resiliência após reprovações e como sustentar o foco numa jornada longa. Ricardo Pereira Sanches Tecnologia da Informacao LTDA · CNPJ 62.446.657/0001-34 · Guarulhos/SP.",
     author: "Ricardo Pereira Sanches Tecnologia da Informacao LTDA",
     ogType: "website",
     siteName: "Ricardo Pereira Sanches Tecnologia da Informacao LTDA",
     ogTitle:
-      "Quartel do Concurseiro — Disciplina, Rotina e Mentalidade para Passar na PM | Ricardo Pereira Sanches TI",
+      "Quartel do Concurseiro — Disciplina, Rotina e Mentalidade para Passar na PP | Ricardo Pereira Sanches TI",
     ogDescription:
-      "Conteúdo informativo sobre como aplicar disciplina e hábitos militares à preparação para a PM — rotina de estudos, foco de longo prazo e resiliência após reprovações. Ricardo Pereira Sanches Tecnologia da Informacao LTDA — Guarulhos/SP.",
+      "Conteúdo informativo sobre como aplicar disciplina e hábitos militares à preparação para a PP — rotina de estudos, foco de longo prazo e resiliência após reprovações. Ricardo Pereira Sanches Tecnologia da Informacao LTDA — Guarulhos/SP.",
     analyticsCore: "signal.e6a4b837",
     gtmId: "GTM-NKS38SF8",
   },
@@ -3392,14 +3392,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Ricardo Pereira Sanches Tecnologia da Informacao LTDA",
     description:
-      "Conteúdo informativo sobre disciplina, mentalidade e hábitos de alta performance aplicados à preparação para concursos da Polícia Militar — rotina de estudos, resiliência após reprovações e como sustentar o foco numa jornada longa. Ricardo Pereira Sanches Tecnologia da Informacao LTDA · CNPJ 62.446.657/0001-34 · Guarulhos/SP.",
+      "Conteúdo informativo sobre disciplina, mentalidade e hábitos de alta performance aplicados à preparação para concursos da Polícia Penal — rotina de estudos, resiliência após reprovações e como sustentar o foco numa jornada longa. Ricardo Pereira Sanches Tecnologia da Informacao LTDA · CNPJ 62.446.657/0001-34 · Guarulhos/SP.",
     author: "Ricardo Pereira Sanches Tecnologia da Informacao LTDA",
     ogType: "website",
     siteName: "Ricardo Pereira Sanches Tecnologia da Informacao LTDA",
     ogTitle:
-      "Quartel do Concurseiro — Disciplina, Rotina e Mentalidade para Passar na PM | Ricardo Pereira Sanches TI",
+      "Quartel do Concurseiro — Disciplina, Rotina e Mentalidade para Passar na PP | Ricardo Pereira Sanches TI",
     ogDescription:
-      "Conteúdo informativo sobre como aplicar disciplina e hábitos militares à preparação para a PM — rotina de estudos, foco de longo prazo e resiliência após reprovações. Ricardo Pereira Sanches Tecnologia da Informacao LTDA — Guarulhos/SP.",
+      "Conteúdo informativo sobre como aplicar disciplina e hábitos militares à preparação para a PP — rotina de estudos, foco de longo prazo e resiliência após reprovações. Ricardo Pereira Sanches Tecnologia da Informacao LTDA — Guarulhos/SP.",
     analyticsCore: "signal.e6a4b837",
     gtmId: "GTM-NKS38SF8",
   },
@@ -3411,14 +3411,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Furquim Soccer Assessoria Esportiva LTDA",
     description:
-      "Conteúdo informativo sobre planejamento estratégico de preparação para concursos da Polícia Militar — como estruturar cronograma de estudos, equilibrar TAF e teoria, acompanhar editais abertos em 2026 e monitorar desempenho nos simulados. Furquim Soccer Assessoria Esportiva LTDA · CNPJ 62.453.437/0001-38 · Guarulhos/SP.",
+      "Conteúdo informativo sobre planejamento estratégico de preparação para concursos da Polícia Penal — como estruturar cronograma de estudos, equilibrar TAF e teoria, acompanhar editais abertos em 2026 e monitorar desempenho nos simulados. Furquim Soccer Assessoria Esportiva LTDA · CNPJ 62.453.437/0001-38 · Guarulhos/SP.",
     author: "Furquim Soccer Assessoria Esportiva LTDA",
     ogType: "website",
     siteName: "Furquim Soccer Assessoria Esportiva LTDA",
     ogTitle:
-      "Projeto PM 2026 — Planejamento e Estratégia de Preparação para Concursos da PM | Furquim Soccer",
+      "Projeto PP 2026 — Planejamento e Estratégia de Preparação para Concursos da PP | Furquim Soccer",
     ogDescription:
-      "Conteúdo informativo sobre como montar um projeto de aprovação para a PM em 2026 — cronograma de estudos, TAF, acompanhamento de editais e gestão de desempenho. Furquim Soccer Assessoria Esportiva LTDA — Guarulhos/SP.",
+      "Conteúdo informativo sobre como montar um projeto de aprovação para a PP em 2026 — cronograma de estudos, TAF, acompanhamento de editais e gestão de desempenho. Furquim Soccer Assessoria Esportiva LTDA — Guarulhos/SP.",
     analyticsCore: "signal.d5f3a726",
     gtmId: "GTM-TZSBPHWP",
   },
@@ -3430,14 +3430,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Furquim Soccer Assessoria Esportiva LTDA",
     description:
-      "Conteúdo informativo sobre planejamento estratégico de preparação para concursos da Polícia Militar — como estruturar cronograma de estudos, equilibrar TAF e teoria, acompanhar editais abertos em 2026 e monitorar desempenho nos simulados. Furquim Soccer Assessoria Esportiva LTDA · CNPJ 62.453.437/0001-38 · Guarulhos/SP.",
+      "Conteúdo informativo sobre planejamento estratégico de preparação para concursos da Polícia Penal — como estruturar cronograma de estudos, equilibrar TAF e teoria, acompanhar editais abertos em 2026 e monitorar desempenho nos simulados. Furquim Soccer Assessoria Esportiva LTDA · CNPJ 62.453.437/0001-38 · Guarulhos/SP.",
     author: "Furquim Soccer Assessoria Esportiva LTDA",
     ogType: "website",
     siteName: "Furquim Soccer Assessoria Esportiva LTDA",
     ogTitle:
-      "Projeto PM 2026 — Planejamento e Estratégia de Preparação para Concursos da PM | Furquim Soccer",
+      "Projeto PP 2026 — Planejamento e Estratégia de Preparação para Concursos da PP | Furquim Soccer",
     ogDescription:
-      "Conteúdo informativo sobre como montar um projeto de aprovação para a PM em 2026 — cronograma de estudos, TAF, acompanhamento de editais e gestão de desempenho. Furquim Soccer Assessoria Esportiva LTDA — Guarulhos/SP.",
+      "Conteúdo informativo sobre como montar um projeto de aprovação para a PP em 2026 — cronograma de estudos, TAF, acompanhamento de editais e gestão de desempenho. Furquim Soccer Assessoria Esportiva LTDA — Guarulhos/SP.",
     analyticsCore: "signal.d5f3a726",
     gtmId: "GTM-TZSBPHWP",
   },
@@ -3449,14 +3449,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Mulheres do Queijo Ltda.",
     description:
-      "Conteúdo informativo sobre a rotina real da Polícia Militar — escala de plantão, benefícios além do salário, solicitação de férias e licenças e o que candidatos descobrem ao ingressar na corporação. Mulheres do Queijo Ltda. · CNPJ 56.048.934/0001-58 · Belo Horizonte/MG.",
+      "Conteúdo informativo sobre a rotina real da Polícia Penal — escala de plantão, benefícios além do salário, solicitação de férias e licenças e o que candidatos descobrem ao ingressar na corporação. Mulheres do Queijo Ltda. · CNPJ 56.048.934/0001-58 · Belo Horizonte/MG.",
     author: "Mulheres do Queijo Ltda.",
     ogType: "website",
     siteName: "Mulheres do Queijo Ltda.",
     ogTitle:
-      "PM Descomplicada — Rotina, Benefícios e Direitos do Policial Militar Explicados | Mulheres do Queijo",
+      "PP Descomplicada — Rotina, Benefícios e Direitos do Policial Militar Explicados | Mulheres do Queijo",
     ogDescription:
-      "Conteúdo informativo sobre a rotina da PM — escala de trabalho, benefícios, licenças e o que candidatos raramente sabem antes de ingressar. Mulheres do Queijo Ltda. — Belo Horizonte/MG.",
+      "Conteúdo informativo sobre a rotina da PP — escala de trabalho, benefícios, licenças e o que candidatos raramente sabem antes de ingressar. Mulheres do Queijo Ltda. — Belo Horizonte/MG.",
     analyticsCore: "signal.c4e2d619",
     gtmId: "GTM-5JVTQTK7",
   },
@@ -3468,14 +3468,14 @@ export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
     homepageKey: "zapzap",
     title: "Mulheres do Queijo Ltda.",
     description:
-      "Conteúdo informativo sobre a rotina real da Polícia Militar — escala de plantão, benefícios além do salário, solicitação de férias e licenças e o que candidatos descobrem ao ingressar na corporação. Mulheres do Queijo Ltda. · CNPJ 56.048.934/0001-58 · Belo Horizonte/MG.",
+      "Conteúdo informativo sobre a rotina real da Polícia Penal — escala de plantão, benefícios além do salário, solicitação de férias e licenças e o que candidatos descobrem ao ingressar na corporação. Mulheres do Queijo Ltda. · CNPJ 56.048.934/0001-58 · Belo Horizonte/MG.",
     author: "Mulheres do Queijo Ltda.",
     ogType: "website",
     siteName: "Mulheres do Queijo Ltda.",
     ogTitle:
-      "PM Descomplicada — Rotina, Benefícios e Direitos do Policial Militar Explicados | Mulheres do Queijo",
+      "PP Descomplicada — Rotina, Benefícios e Direitos do Policial Militar Explicados | Mulheres do Queijo",
     ogDescription:
-      "Conteúdo informativo sobre a rotina da PM — escala de trabalho, benefícios, licenças e o que candidatos raramente sabem antes de ingressar. Mulheres do Queijo Ltda. — Belo Horizonte/MG.",
+      "Conteúdo informativo sobre a rotina da PP — escala de trabalho, benefícios, licenças e o que candidatos raramente sabem antes de ingressar. Mulheres do Queijo Ltda. — Belo Horizonte/MG.",
     analyticsCore: "signal.c4e2d619",
     gtmId: "GTM-5JVTQTK7",
   },

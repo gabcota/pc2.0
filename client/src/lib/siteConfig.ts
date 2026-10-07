@@ -631,7 +631,7 @@ const VOCACAO_POLICIAL: RawConfig = {
 
 // pmpelobrasil.click (J. C. Peres Sociedade Individual de Advocacia — sole
 // practitioner, eleventh distinct firm/CNPJ). Framed around mid-process
-// disruption of a Polícia Militar selection process (judicial suspension,
+// disruption of a Polícia Penal selection process (judicial suspension,
 // anulação por fraude, adiamento de prova, prorrogação de validade) — an
 // eleventh angle distinct from pre-inscription edital disputes
 // (DIREITO_EDITAL), exam-content disputes (DIREITOS_PROVA) and
@@ -639,7 +639,7 @@ const VOCACAO_POLICIAL: RawConfig = {
 const CONCURSO_SUSPENSO: RawConfig = {
   hostname: 'pmpelobrasil.click',
   brand: 'Direito em Concursos Suspensos ou Anulados',
-  siteSubtitle: 'Orientação Jurídica sobre Suspensão, Anulação e Prorrogação de Concursos para a Polícia Militar',
+  siteSubtitle: 'Orientação Jurídica sobre Suspensão, Anulação e Prorrogação de Concursos para a Polícia Penal',
   razaoSocial: 'J. C. Peres Sociedade Individual de Advocacia',
   cnpj: '62197683000176',
   cnpjFormatted: '62.197.683/0001-76',
@@ -650,7 +650,7 @@ const CONCURSO_SUSPENSO: RawConfig = {
   cep: '04079-908',
   enderecoCompleto: 'Avenida Jurema, 416, Apt 24 · Indianópolis · São Paulo/SP · CEP 04079-908',
   canonicalUrl: 'https://www.pmpelobrasil.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre suspensão, anulação e prorrogação de concursos públicos para a Polícia Militar e não constituem aconselhamento jurídico individual. Este site é independente e não possui vínculo com qualquer corporação, órgão, banca organizadora ou instituição pública.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre suspensão, anulação e prorrogação de concursos públicos para a Polícia Penal e não constituem aconselhamento jurídico individual. Este site é independente e não possui vínculo com qualquer corporação, órgão, banca organizadora ou instituição pública.',
   email: 'jcoelhoperes@gmail.com',
   telefone: '(11) 98707-0800',
   cnae: '69.11-7-01 - Serviços advocatícios',
@@ -659,14 +659,14 @@ const CONCURSO_SUSPENSO: RawConfig = {
   capitalSocial: 'R$ 1.000,00',
   horarioAtendimento: 'Segunda a Sexta, 08h às 17h',
   advogadoNome: 'Julia Coelho Peres',
-  advogadoAtuacao: 'Direito Administrativo e Suspensão/Anulação de Concursos para a Polícia Militar',
-  breadcrumbLabel: 'Suspensão e Anulação de Concursos PM',
-  h1Override: 'Orientação jurídica sobre suspensão, anulação e prorrogação de concursos para a Polícia Militar',
-  leadOverride: 'Reunimos orientação jurídica sobre suspensão judicial, anulação por fraude, adiamento de provas e prorrogação do prazo de validade em concursos para ingresso na Polícia Militar. Consulte um advogado habilitado para orientação específica ao seu caso.',
+  advogadoAtuacao: 'Direito Administrativo e Suspensão/Anulação de Concursos para a Polícia Penal',
+  breadcrumbLabel: 'Suspensão e Anulação de Concursos PP',
+  h1Override: 'Orientação jurídica sobre suspensão, anulação e prorrogação de concursos para a Polícia Penal',
+  leadOverride: 'Reunimos orientação jurídica sobre suspensão judicial, anulação por fraude, adiamento de provas e prorrogação do prazo de validade em concursos para ingresso na Polícia Penal. Consulte um advogado habilitado para orientação específica ao seu caso.',
   ctaHeroText: 'Falar com um advogado',
   faq: [
     {
-      q: 'O concurso da Polícia Militar em que me inscrevi foi suspenso por decisão judicial — o que acontece com a minha inscrição?',
+      q: 'O concurso da Polícia Penal em que me inscrevi foi suspenso por decisão judicial — o que acontece com a minha inscrição?',
       a: 'Em regra, a suspensão paralisa temporariamente as etapas do certame até a decisão final, preservando os direitos já adquiridos pelos inscritos. Após o restabelecimento do concurso, os candidatos devem ser reintegrados à mesma fase em que o processo foi interrompido, sem prejuízo de sua classificação.',
     },
     {
@@ -755,8 +755,8 @@ const APRESENTACAO_FARDA: RawConfig = {
 // DIREITO_EDITAL (pre-inscription impugnação).
 const TRANSPARENCIA_CONCURSO: RawConfig = {
   hostname: 'pmemfoco.click',
-  brand: 'Direito à Transparência no Concurso da PM',
-  siteSubtitle: 'Orientação Jurídica sobre Acesso a Documentos e Transparência em Concursos da Polícia Militar',
+  brand: 'Direito à Transparência no Concurso da PP',
+  siteSubtitle: 'Orientação Jurídica sobre Acesso a Documentos e Transparência em Concursos da Polícia Penal',
   razaoSocial: 'Carlos Leme & Juliana Leme Advogados',
   cnpj: '43542532000163',
   cnpjFormatted: '43.542.532/0001-63',
@@ -767,7 +767,7 @@ const TRANSPARENCIA_CONCURSO: RawConfig = {
   cep: '04734-003',
   enderecoCompleto: 'Avenida Adolfo Pinheiro, 2054, Conj 408 · Santo Amaro · São Paulo/SP · CEP 04734-003',
   canonicalUrl: 'https://www.pmemfoco.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre transparência e acesso a documentos em concursos públicos para a Polícia Militar e não constituem aconselhamento jurídico individual. Este site é independente e não possui vínculo com qualquer corporação, órgão, banca organizadora ou instituição pública.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre transparência e acesso a documentos em concursos públicos para a Polícia Penal e não constituem aconselhamento jurídico individual. Este site é independente e não possui vínculo com qualquer corporação, órgão, banca organizadora ou instituição pública.',
   email: 'ablancorocha@uol.com.br',
   telefone: '(11) 99844-3933',
   cnae: '69.11-7-01 - Serviços advocatícios',
@@ -776,10 +776,10 @@ const TRANSPARENCIA_CONCURSO: RawConfig = {
   capitalSocial: 'R$ 10.000,00',
   horarioAtendimento: 'Segunda a Sexta, 08h às 17h',
   advogadoNome: 'Carlos Leme & Juliana Leme Advogados',
-  advogadoAtuacao: 'Direito Administrativo e Transparência em Concursos Públicos para a Polícia Militar',
-  breadcrumbLabel: 'Transparência em Concursos da PM',
-  h1Override: 'Orientação jurídica sobre transparência e acesso a documentos em concursos da Polícia Militar',
-  leadOverride: 'Reunimos orientação jurídica sobre o direito de acesso a atas, gabaritos, folhas de resposta e critérios de correção em concursos para ingresso na Polícia Militar. Consulte um advogado habilitado para orientação específica ao seu caso.',
+  advogadoAtuacao: 'Direito Administrativo e Transparência em Concursos Públicos para a Polícia Penal',
+  breadcrumbLabel: 'Transparência em Concursos da PP',
+  h1Override: 'Orientação jurídica sobre transparência e acesso a documentos em concursos da Polícia Penal',
+  leadOverride: 'Reunimos orientação jurídica sobre o direito de acesso a atas, gabaritos, folhas de resposta e critérios de correção em concursos para ingresso na Polícia Penal. Consulte um advogado habilitado para orientação específica ao seu caso.',
   ctaHeroText: 'Falar com um advogado',
   faq: [
     {
@@ -809,14 +809,14 @@ const TRANSPARENCIA_CONCURSO: RawConfig = {
 // sócios-administradores, fourteenth distinct firm/CNPJ; no e-mail was
 // provided in this firm's registration data, so `email` is intentionally
 // omitted rather than fabricated). Framed around exame toxicológico
-// elimination in PM selection processes (contraprova, cadeia de custódia da
+// elimination in PP selection processes (contraprova, cadeia de custódia da
 // amostra) — a fourteenth angle distinct from MILITAR_CONCURSEIRO
 // (tattoo/height/health inspection) and VOCACAO_POLICIAL (psychological
 // exam/perfil profissiográfico).
 const EXAME_TOXICOLOGICO: RawConfig = {
   hostname: 'guiadapm.click',
-  brand: 'Direito no Exame Toxicológico do Concurso da PM',
-  siteSubtitle: 'Orientação Jurídica sobre Eliminação por Exame Toxicológico em Concursos da Polícia Militar',
+  brand: 'Direito no Exame Toxicológico do Concurso da PP',
+  siteSubtitle: 'Orientação Jurídica sobre Eliminação por Exame Toxicológico em Concursos da Polícia Penal',
   razaoSocial: 'Gobbette Marques & Barreto Advogados Associados',
   cnpj: '20300477000108',
   cnpjFormatted: '20.300.477/0001-08',
@@ -827,7 +827,7 @@ const EXAME_TOXICOLOGICO: RawConfig = {
   cep: '29176-090',
   enderecoCompleto: 'Avenida Getulio Vargas, 128, Edif. Gal. Dr. Naly da E. Mir, Sala 09/11 · Serra Centro · Serra/ES · CEP 29176-090',
   canonicalUrl: 'https://www.guiadapm.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre exame toxicológico em concursos públicos para a Polícia Militar e não constituem aconselhamento jurídico individual. Este site é independente e não possui vínculo com qualquer corporação, órgão, banca organizadora ou instituição pública.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre exame toxicológico em concursos públicos para a Polícia Penal e não constituem aconselhamento jurídico individual. Este site é independente e não possui vínculo com qualquer corporação, órgão, banca organizadora ou instituição pública.',
   telefone: '(27) 99244-3959',
   cnae: '69.11-7-01 - Serviços advocatícios',
   naturezaJuridica: 'Sociedade Simples Pura',
@@ -835,10 +835,10 @@ const EXAME_TOXICOLOGICO: RawConfig = {
   capitalSocial: 'R$ 10.000,00',
   horarioAtendimento: 'Segunda a Sexta, 08h às 17h',
   advogadoNome: 'Gobbette Marques & Barreto Advogados Associados',
-  advogadoAtuacao: 'Direito Administrativo e Exame Toxicológico em Concursos Públicos para a Polícia Militar',
-  breadcrumbLabel: 'Exame Toxicológico em Concursos da PM',
-  h1Override: 'Orientação jurídica sobre eliminação por exame toxicológico em concursos da Polícia Militar',
-  leadOverride: 'Reunimos orientação jurídica sobre eliminação por resultado de exame toxicológico, direito à contraprova e questionamento da cadeia de custódia da amostra em concursos para ingresso na Polícia Militar. Consulte um advogado habilitado para orientação específica ao seu caso.',
+  advogadoAtuacao: 'Direito Administrativo e Exame Toxicológico em Concursos Públicos para a Polícia Penal',
+  breadcrumbLabel: 'Exame Toxicológico em Concursos da PP',
+  h1Override: 'Orientação jurídica sobre eliminação por exame toxicológico em concursos da Polícia Penal',
+  leadOverride: 'Reunimos orientação jurídica sobre eliminação por resultado de exame toxicológico, direito à contraprova e questionamento da cadeia de custódia da amostra em concursos para ingresso na Polícia Penal. Consulte um advogado habilitado para orientação específica ao seu caso.',
   ctaHeroText: 'Falar com um advogado',
   faq: [
     {
@@ -876,7 +876,7 @@ const EXAME_TOXICOLOGICO: RawConfig = {
 const RUMO_AO_CFO: RawConfig = {
   hostname: 'rumoaocfo.click',
   brand: 'Rumo ao CFO',
-  siteSubtitle: 'Informações sobre a Formação e a Carreira de Oficial da Polícia Militar',
+  siteSubtitle: 'Informações sobre a Formação e a Carreira de Oficial da Polícia Penal',
   razaoSocial: 'Espaco Amari LTDA',
   cnpj: '57528270000197',
   cnpjFormatted: '57.528.270/0001-97',
@@ -887,20 +887,20 @@ const RUMO_AO_CFO: RawConfig = {
   cep: '60135-218',
   enderecoCompleto: 'Rua Joaquim SA, 405, Sala A · Dionisio Torres · Fortaleza/CE · CEP 60135-218',
   canonicalUrl: 'https://www.rumoaocfo.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre o processo de formação e a carreira de oficial na Polícia Militar e não constituem consultoria ou orientação jurídica individual. Este site é independente e não possui vínculo com qualquer corporação policial, órgão público ou instituição de ensino.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre o processo de formação e a carreira de oficial na Polícia Penal e não constituem consultoria ou orientação jurídica individual. Este site é independente e não possui vínculo com qualquer corporação policial, órgão público ou instituição de ensino.',
   email: 'marimmoura@gmail.com',
   telefone: '(85) 98699-8932',
   cnae: '85.99-6-04 - Treinamento em desenvolvimento profissional e gerencial',
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '02/10/2024',
   capitalSocial: 'R$ 80.000,00',
-  breadcrumbLabel: 'Formação de Oficiais da Polícia Militar',
-  h1Override: 'Saiba como funciona o Curso de Formação de Oficiais (CFO) da Polícia Militar',
+  breadcrumbLabel: 'Formação de Oficiais da Polícia Penal',
+  h1Override: 'Saiba como funciona o Curso de Formação de Oficiais (CFO) da Polícia Penal',
   leadOverride: 'Reunimos conteúdo informativo sobre as etapas do CFO — processo seletivo, testes físicos, avaliação psicológica, curso de formação e progressão na carreira de oficial. Consulte a corporação responsável ou um profissional especializado para orientação específica ao seu caso.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Quais são as etapas do processo seletivo para o CFO da Polícia Militar?',
+      q: 'Quais são as etapas do processo seletivo para o CFO da Polícia Penal?',
       a: 'Em geral, o processo seletivo para o Curso de Formação de Oficiais (CFO) inclui prova objetiva de conhecimentos, teste de aptidão física (TAF), avaliação psicológica, exame médico, investigação social e, em alguns estados, avaliação de títulos. A ordem e as especificidades de cada etapa variam conforme o edital de cada corporação estadual.',
     },
     {
@@ -908,7 +908,7 @@ const RUMO_AO_CFO: RawConfig = {
       a: 'A duração do CFO varia entre os estados, geralmente de um a dois anos, e combina formação acadêmica (disciplinas jurídicas, administrativas e de segurança pública), treinamento físico, instrução tática e estágios práticos. Ao término, o formando é promovido ao primeiro posto da carreira de oficial.',
     },
     {
-      q: 'Existe limite de idade para ingressar no CFO da Polícia Militar?',
+      q: 'Existe limite de idade para ingressar no CFO da Polícia Penal?',
       a: 'Sim, cada edital estabelece um limite máximo de idade para inscrição, que costuma variar entre 30 e 35 anos dependendo do estado. Candidatos que já integram a corporação como praça podem ter limites diferenciados previstos em legislação específica. É fundamental verificar o edital vigente da corporação de interesse.',
     },
     {
@@ -982,13 +982,13 @@ const ESPIRITO_POLICIAL: RawConfig = {
 // CNAE 85.99-6-05 exclusivo, Cursos preparatórios para concursos, sediada em
 // Brasília/DF). Não é escritório de advocacia — sem campos OAB, ZapZapPage em
 // modo neutro. Ângulo: vocação e identidade do aspirante a policial militar —
-// o que motiva quem quer ser PM, como reconhecer o próprio perfil, as
+// o que motiva quem quer ser PP, como reconhecer o próprio perfil, as
 // exigências reais da vida policial e o significado da escolha. Distinto de
 // espiritopolicial.click (ética/conduta do policial já formado) e de todos os
 // domínios de processo seletivo, carreira e preparação acadêmica.
 const VOCA_PM: RawConfig = {
   hostname: 'nascipraserpm.click',
-  brand: 'Nasci pra ser PM',
+  brand: 'Nasci pra ser PP',
   siteSubtitle: 'Vocação, Identidade e Propósito na Escolha da Carreira Policial Militar',
   razaoSocial: 'Dc Concursos LTDA',
   cnpj: '57267808000157',
@@ -1038,14 +1038,14 @@ const VOCA_PM: RawConfig = {
 // Limitada, CNAE 85.99-6-04, Treinamento em desenvolvimento profissional e
 // gerencial, sediada em Brasília/DF). Não é escritório de advocacia — sem
 // campos OAB, ZapZapPage em modo neutro. Ângulo: preparação física e
-// condicionamento para os testes da PM — como treinar para o TAF, cronograma
+// condicionamento para os testes da PP — como treinar para o TAF, cronograma
 // de preparação física, cuidados com saúde e nutrição nos meses antes da
 // seleção. Distinto de rumoaocfo.click (o que é o processo do CFO) e de
 // todos os outros domínios de carreira, ética, vocação e panorama estadual.
 const RUMO_FARDA: RawConfig = {
   hostname: 'rumoafarda.click',
   brand: 'Rumo à Farda',
-  siteSubtitle: 'Preparação Física e Condicionamento para o Processo Seletivo da PM',
+  siteSubtitle: 'Preparação Física e Condicionamento para o Processo Seletivo da PP',
   razaoSocial: 'Mvp Educacao e Negocios LTDA',
   cnpj: '57212120000170',
   cnpjFormatted: '57.212.120/0001-70',
@@ -1056,24 +1056,24 @@ const RUMO_FARDA: RawConfig = {
   cep: '70316-900',
   enderecoCompleto: 'SCS QD 02, Bloco D, Salas 1102A/1105, Edif. Oscar Niemeyer · Asa Sul · Brasília/DF · CEP 70316-900',
   canonicalUrl: 'https://www.rumoafarda.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre preparação física para processos seletivos da Polícia Militar e não constituem prescrição médica, nutricional ou de educação física. Consulte profissionais habilitados antes de iniciar qualquer programa de treinamento. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre preparação física para processos seletivos da Polícia Penal e não constituem prescrição médica, nutricional ou de educação física. Consulte profissionais habilitados antes de iniciar qualquer programa de treinamento. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
   email: 'everest.alainy@gmail.com',
   telefone: '(61) 98589-3277',
   cnae: '85.99-6-04 - Treinamento em desenvolvimento profissional e gerencial',
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '09/09/2024',
   capitalSocial: 'R$ 50.000,00',
-  breadcrumbLabel: 'Preparação Física para o Processo Seletivo da PM',
-  h1Override: 'Como se preparar fisicamente para o processo seletivo da Polícia Militar',
-  leadOverride: 'Reunimos conteúdo informativo sobre preparação física e condicionamento para os testes da PM — como montar o cronograma de treino, quais capacidades físicas priorizar e como cuidar do corpo e da mente nos meses antes da seleção. Consulte profissionais habilitados para orientação específica ao seu caso.',
+  breadcrumbLabel: 'Preparação Física para o Processo Seletivo da PP',
+  h1Override: 'Como se preparar fisicamente para o processo seletivo da Polícia Penal',
+  leadOverride: 'Reunimos conteúdo informativo sobre preparação física e condicionamento para os testes da PP — como montar o cronograma de treino, quais capacidades físicas priorizar e como cuidar do corpo e da mente nos meses antes da seleção. Consulte profissionais habilitados para orientação específica ao seu caso.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Quais capacidades físicas são mais avaliadas no Teste de Aptidão Física (TAF) da PM?',
+      q: 'Quais capacidades físicas são mais avaliadas no Teste de Aptidão Física (TAF) da PP?',
       a: 'O TAF varia conforme o edital de cada corporação, mas em geral avalia resistência aeróbica (corrida de 12 minutos ou percurso cronometrado), força muscular de membros superiores (flexões de braço) e resistência abdominal (abdominais). Alguns editais incluem ainda natação, barras ou barra fixa. Verificar o edital específico é indispensável antes de montar o programa de treino.',
     },
     {
-      q: 'Com quanto tempo de antecedência devo começar a preparação física para o processo seletivo da PM?',
+      q: 'Com quanto tempo de antecedência devo começar a preparação física para o processo seletivo da PP?',
       a: 'Para candidatos sem base de condicionamento, especialistas em preparação para concursos militares geralmente recomendam entre seis meses e um ano de antecedência. Candidatos já ativos fisicamente podem atingir os índices exigidos em três a quatro meses de treino específico. O importante é adaptar o cronograma ao nível de condicionamento atual, sem atingir sobrecarga que gere lesão no período pré-seleção.',
     },
     {
@@ -1093,7 +1093,7 @@ const RUMO_FARDA: RawConfig = {
 // pmnapratica.click (Educacional Insigne LTDA — Empresa de Pequeno Porte,
 // Sociedade Empresária Limitada, CNAE 85.99-6-05, Cursos preparatórios para
 // concursos, sediada em Brasília/DF). Não é escritório de advocacia — sem
-// campos OAB, ZapZapPage em modo neutro. Ângulo: rotina operacional do PM —
+// campos OAB, ZapZapPage em modo neutro. Ângulo: rotina operacional do PP —
 // o cotidiano prático do policial: plantões, procedimentos de abordagem,
 // tipos de ocorrências frequentes, equipamentos e comunicação via rádio.
 // Conteúdo factual/operacional, distinto de espiritopolicial.click (ética),
@@ -1101,7 +1101,7 @@ const RUMO_FARDA: RawConfig = {
 // domínios de carreira, processo seletivo e panorama estadual.
 const PM_NA_PRATICA: RawConfig = {
   hostname: 'pmnapratica.click',
-  brand: 'PM na Prática',
+  brand: 'PP na Prática',
   siteSubtitle: 'Rotina Operacional e Cotidiano Profissional do Policial Militar',
   razaoSocial: 'Educacional Insigne LTDA',
   cnpj: '57205076000170',
@@ -1127,14 +1127,14 @@ const PM_NA_PRATICA: RawConfig = {
   faq: [
     {
       q: 'Como funciona a escala de plantão do policial militar?',
-      a: 'A escala mais comum nas PMs estaduais é o sistema 24×72 horas — o policial trabalha 24 horas seguidas e folga 72 — ou o sistema 12×36 horas, com 12 horas de serviço e 36 de folga. A escala varia conforme a corporação, o posto ou graduação do policial e a unidade onde serve. Serviços administrativos e operações especiais podem ter escalas diferenciadas.',
+      a: 'A escala mais comum nas PPs estaduais é o sistema 24×72 horas — o policial trabalha 24 horas seguidas e folga 72 — ou o sistema 12×36 horas, com 12 horas de serviço e 36 de folga. A escala varia conforme a corporação, o posto ou graduação do policial e a unidade onde serve. Serviços administrativos e operações especiais podem ter escalas diferenciadas.',
     },
     {
       q: 'Quais são os procedimentos básicos numa abordagem policial?',
       a: 'A abordagem policial segue protocolos que variam por corporação, mas em geral envolvem identificação do policial, comunicação clara das razões da abordagem, posicionamento de segurança e busca pessoal quando há fundada suspeita. Os regulamentos internos e a legislação processual penal estabelecem os limites da atuação — o policial deve equilibrar eficiência operacional e respeito aos direitos da pessoa abordada.',
     },
     {
-      q: 'Que tipos de ocorrências um PM atende com mais frequência?',
+      q: 'Que tipos de ocorrências um PP atende com mais frequência?',
       a: 'Além das ocorrências de natureza criminal (flagrantes, perturbação da ordem, briga em via pública), grande parte das chamadas ao policiamento ostensivo envolve acidentes de trânsito, desentendimentos familiares, assistência a pessoas em sofrimento e perturbação do sossego. O policial militar frequentemente é o primeiro contato do cidadão com o Estado em situações de emergência.',
     },
     {
@@ -1157,8 +1157,8 @@ const PM_NA_PRATICA: RawConfig = {
 // comparativo estrutural): o Radar foca no que está acontecendo agora.
 const RADAR_PM: RawConfig = {
   hostname: 'radarpm.click',
-  brand: 'Radar PM',
-  siteSubtitle: 'Editais, Concursos Abertos e Novidades das Polícias Militares do Brasil',
+  brand: 'Radar PP',
+  siteSubtitle: 'Editais, Concursos Abertos e Novidades das Polícias Penais do Brasil',
   razaoSocial: 'Btc Conecta Cursos e Eventos LTDA',
   cnpj: '58129039000193',
   cnpjFormatted: '58.129.039/0001-93',
@@ -1169,32 +1169,32 @@ const RADAR_PM: RawConfig = {
   cep: '70070-938',
   enderecoCompleto: 'SAUS QD 4, Bloco A, Sala 620, Ed. Victoria Office Tower · Asa Sul · Brasília/DF · CEP 70070-938',
   canonicalUrl: 'https://www.radarpm.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre editais e concursos das Polícias Militares e não constituem consultoria jurídica ou orientação sobre casos individuais. Datas, vagas e condições de editais devem ser confirmadas diretamente nas fontes oficiais de cada corporação. Este site é independente e não possui vínculo com qualquer órgão público ou corporação policial.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre editais e concursos das Polícias Penais e não constituem consultoria jurídica ou orientação sobre casos individuais. Datas, vagas e condições de editais devem ser confirmadas diretamente nas fontes oficiais de cada corporação. Este site é independente e não possui vínculo com qualquer órgão público ou corporação policial.',
   email: 'monteiroaugustoadvogados@gmail.com',
   telefone: '(61) 99979-7179',
   cnae: '85.99-6-05 - Cursos preparatórios para concursos',
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '18/11/2024',
   capitalSocial: 'R$ 200.000,00',
-  breadcrumbLabel: 'Editais e Concursos das PMs Brasileiras',
-  h1Override: 'Radar de editais e concursos abertos das Polícias Militares do Brasil',
-  leadOverride: 'Reunimos conteúdo informativo sobre editais, concursos em andamento, prazos de inscrição e novidades das corporações de Polícia Militar em todo o Brasil. Confirme sempre os dados diretamente no edital oficial antes de tomar qualquer decisão.',
+  breadcrumbLabel: 'Editais e Concursos das PPs Brasileiras',
+  h1Override: 'Radar de editais e concursos abertos das Polícias Penais do Brasil',
+  leadOverride: 'Reunimos conteúdo informativo sobre editais, concursos em andamento, prazos de inscrição e novidades das corporações de Polícia Penal em todo o Brasil. Confirme sempre os dados diretamente no edital oficial antes de tomar qualquer decisão.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Como acompanhar os editais de concurso da Polícia Militar em aberto no Brasil?',
+      q: 'Como acompanhar os editais de concurso da Polícia Penal em aberto no Brasil?',
       a: 'Os editais são publicados nos Diários Oficiais estaduais e nos sites das bancas organizadoras contratadas para cada certame. Acompanhar os portais oficiais das Secretarias de Segurança Pública e as bancas mais frequentes — como VUNESP, CEBRASPE, FGV, IBFC e FCC — permite identificar concursos assim que são publicados. Algumas corporações anunciam previsões de abertura meses antes do edital formal.',
     },
     {
-      q: 'Com que frequência as PMs estaduais abrem concurso para novos integrantes?',
+      q: 'Com que frequência as PPs estaduais abrem concurso para novos integrantes?',
       a: 'A periodicidade varia muito por estado e depende de fatores como déficit de efetivo, aprovação legislativa de vagas e disponibilidade orçamentária. Estados com maior efetivo e rotatividade, como São Paulo, Rio de Janeiro e Minas Gerais, costumam abrir concursos com mais regularidade. Estados menores podem ficar anos sem concurso ou abrir certames em caráter emergencial.',
     },
     {
-      q: 'O que verificar assim que um novo edital da PM é publicado?',
+      q: 'O que verificar assim que um novo edital da PP é publicado?',
       a: 'Os pontos críticos a conferir são: número de vagas e distribuição por especialidade ou região; requisitos de ingresso (idade, escolaridade, altura, antecedentes); cronograma completo com datas de prova, TAF e avaliação psicológica; banca organizadora; conteúdo programático das provas objetivas; e critérios de classificação e aprovação. Qualquer dúvida deve ser dirimentada pelo próprio edital ou pela banca responsável.',
     },
     {
-      q: 'Como funciona o cronograma típico de um concurso da Polícia Militar?',
+      q: 'Como funciona o cronograma típico de um concurso da Polícia Penal?',
       a: 'A sequência habitual começa com a publicação do edital e abertura de inscrições, seguida de provas objetivas (conhecimentos gerais e específicos), avaliação física (TAF), exame médico, avaliação psicológica, investigação social e curso de formação. O processo completo pode durar de seis meses a mais de dois anos, dependendo do número de candidatos e da estrutura da corporação.',
     },
   ],
@@ -1207,7 +1207,7 @@ const RADAR_PM: RawConfig = {
 // Empresária Limitada, CNAE 85.99-6-04, Treinamento em desenvolvimento
 // profissional e gerencial, sediada em Fortaleza/CE). Não é escritório de
 // advocacia — sem campos OAB, ZapZapPage em modo neutro. Ângulo: desenvolvimento
-// profissional e liderança na carreira de oficial da PM *após a formação* —
+// profissional e liderança na carreira de oficial da PP *após a formação* —
 // especializações, promoções por merecimento/antiguidade, gestão de equipes,
 // competências de comando e progressão ao longo dos postos. Distinto de
 // rumoaocfo.click (que cobre o processo de *entrada* no CFO: seleção, TAF,
@@ -1215,7 +1215,7 @@ const RADAR_PM: RawConfig = {
 const CARREIRA_OFICIAL: RawConfig = {
   hostname: 'carreiradeoficial.click',
   brand: 'Carreira de Oficial',
-  siteSubtitle: 'Desenvolvimento Profissional e Liderança na Carreira de Oficial da PM',
+  siteSubtitle: 'Desenvolvimento Profissional e Liderança na Carreira de Oficial da PP',
   razaoSocial: 'M.a Assessoria e Treinamentos LTDA',
   cnpj: '57717002000113',
   cnpjFormatted: '57.717.002/0001-13',
@@ -1226,20 +1226,20 @@ const CARREIRA_OFICIAL: RawConfig = {
   cep: '60050-150',
   enderecoCompleto: 'Rua Monsenhor Otavio de Castro, 435, Sala 01 · Fatima · Fortaleza/CE · CEP 60050-150',
   canonicalUrl: 'https://www.carreiradeoficial.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre desenvolvimento profissional na carreira de oficial da Polícia Militar e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre desenvolvimento profissional na carreira de oficial da Polícia Penal e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
   email: 'maassessoriaetreinamentos@outlook.com',
   telefone: '(88) 99765-0646',
   cnae: '85.99-6-04 - Treinamento em desenvolvimento profissional e gerencial',
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '16/10/2024',
   capitalSocial: 'R$ 30.000,00',
-  breadcrumbLabel: 'Desenvolvimento e Progressão na Carreira de Oficial da PM',
-  h1Override: 'Desenvolvimento profissional e progressão na carreira de oficial da Polícia Militar',
+  breadcrumbLabel: 'Desenvolvimento e Progressão na Carreira de Oficial da PP',
+  h1Override: 'Desenvolvimento profissional e progressão na carreira de oficial da Polícia Penal',
   leadOverride: 'Reunimos conteúdo informativo sobre as etapas de desenvolvimento que moldam a trajetória do oficial após a formação — especializações, cursos de aperfeiçoamento, critérios de promoção e competências de liderança e comando. Consulte a corporação responsável para informações oficiais sobre o seu caso.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Como funciona o sistema de promoções na carreira de oficial da Polícia Militar?',
+      q: 'Como funciona o sistema de promoções na carreira de oficial da Polícia Penal?',
       a: 'As promoções na carreira de oficial seguem dois critérios principais previstos nos estatutos estaduais: antiguidade, que respeita a ordem de precedência entre oficiais do mesmo posto, e merecimento, baseado em avaliações de desempenho, cursos realizados e conduta funcional. A composição e o peso de cada critério variam conforme a corporação e o posto em questão.',
     },
     {
@@ -1263,7 +1263,7 @@ const CARREIRA_OFICIAL: RawConfig = {
 // futuropm.click (Vilasolutions Brasil LTDA — Sociedade Empresária Limitada,
 // CNAE 85.99-6-04, Treinamento em desenvolvimento profissional e gerencial,
 // sediada em Fortaleza/CE). Não é escritório de advocacia — sem campos OAB,
-// ZapZapPage em modo neutro. Ângulo: carreira de praça na PM — processo
+// ZapZapPage em modo neutro. Ângulo: carreira de praça na PP — processo
 // seletivo para ingresso como soldado, Curso de Formação de Soldados (CFS),
 // progressão nas graduações (soldado → cabo → sargento → subtenente) e
 // rotina profissional como praça. Distinto de rumoaocfo.click (track de
@@ -1271,8 +1271,8 @@ const CARREIRA_OFICIAL: RawConfig = {
 // oficial) e de todos os domínios jurídicos.
 const FUTURO_PM: RawConfig = {
   hostname: 'futuropm.click',
-  brand: 'Futuro PM',
-  siteSubtitle: 'Carreira de Praça na Polícia Militar: Ingresso, Formação e Progressão',
+  brand: 'Futuro PP',
+  siteSubtitle: 'Carreira de Praça na Polícia Penal: Ingresso, Formação e Progressão',
   razaoSocial: 'Vilasolutions Brasil LTDA',
   cnpj: '57638943000161',
   cnpjFormatted: '57.638.943/0001-61',
@@ -1283,32 +1283,32 @@ const FUTURO_PM: RawConfig = {
   cep: '60873-105',
   enderecoCompleto: 'Rua Pedro de Sousa, 305 · Parque Santa Maria · Fortaleza/CE · CEP 60873-105',
   canonicalUrl: 'https://www.futuropm.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre a carreira de praça na Polícia Militar e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre a carreira de praça na Polícia Penal e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
   email: 'alissonvillanovabrasil@gmail.com',
   telefone: '(85) 98642-5444',
   cnae: '85.99-6-04 - Treinamento em desenvolvimento profissional e gerencial',
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '10/10/2024',
   capitalSocial: 'R$ 15.000,00',
-  breadcrumbLabel: 'Ingresso e Carreira de Praça na Polícia Militar',
-  h1Override: 'Como funciona o ingresso e a carreira de praça na Polícia Militar',
-  leadOverride: 'Reunimos conteúdo informativo sobre a trajetória de quem ingressa na PM como soldado — processo seletivo, Curso de Formação de Soldados, progressão nas graduações e rotina profissional como praça. Consulte a corporação responsável para informações oficiais sobre o seu caso.',
+  breadcrumbLabel: 'Ingresso e Carreira de Praça na Polícia Penal',
+  h1Override: 'Como funciona o ingresso e a carreira de praça na Polícia Penal',
+  leadOverride: 'Reunimos conteúdo informativo sobre a trajetória de quem ingressa na PP como soldado — processo seletivo, Curso de Formação de Soldados, progressão nas graduações e rotina profissional como praça. Consulte a corporação responsável para informações oficiais sobre o seu caso.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Como funciona o processo seletivo para ingresso como soldado da Polícia Militar?',
+      q: 'Como funciona o processo seletivo para ingresso como soldado da Polícia Penal?',
       a: 'O processo seletivo para soldado varia por estado, mas em geral inclui prova objetiva de conhecimentos gerais, Teste de Aptidão Física (TAF), exame médico, avaliação psicológica e investigação social. O edital de cada corporação define os requisitos mínimos de escolaridade, idade, altura e outros critérios eliminatórios. A ordem das etapas pode variar conforme a corporação organizadora.',
     },
     {
       q: 'O que é o Curso de Formação de Soldados (CFS) e como ele funciona?',
-      a: 'O CFS é o período de formação inicial obrigatório para quem ingressa na PM como soldado. Durante o curso, o recruta recebe instrução em técnicas policiais, legislação, armamento, primeiros socorros, educação física intensa e conduta militar. A duração varia por estado — em geral de quatro a oito meses — e a aprovação é condição para assumir o serviço ativo como praça.',
+      a: 'O CFS é o período de formação inicial obrigatório para quem ingressa na PP como soldado. Durante o curso, o recruta recebe instrução em técnicas policiais, legislação, armamento, primeiros socorros, educação física intensa e conduta militar. A duração varia por estado — em geral de quatro a oito meses — e a aprovação é condição para assumir o serviço ativo como praça.',
     },
     {
-      q: 'Como funciona a progressão nas graduações da carreira de praça da PM?',
+      q: 'Como funciona a progressão nas graduações da carreira de praça da PP?',
       a: 'A carreira de praça segue a sequência: soldado → cabo → sargento (3º, 2º e 1º) → subtenente. As promoções ocorrem por antiguidade e merecimento, conforme os regulamentos de cada corporação estadual. Critérios como tempo mínimo na graduação, aprovação em cursos de formação específicos, ausência de punições e avaliação de desempenho influenciam diretamente o ritmo de progressão.',
     },
     {
-      q: 'Quais são as principais diferenças entre a carreira de praça e a carreira de oficial na PM?',
+      q: 'Quais são as principais diferenças entre a carreira de praça e a carreira de oficial na PP?',
       a: 'Praças ingressam como soldados por concurso público e progridem nas graduações até subtenente. Oficiais ingressam pelo Curso de Formação de Oficiais (CFO) — com exigência de ensino superior — e progridem nos postos de tenente a coronel, com responsabilidades maiores de comando e gestão. As carreiras são hierarquicamente separadas, com diferentes estatutos, critérios de promoção e atribuições funcionais.',
     },
   ],
@@ -1321,15 +1321,15 @@ const FUTURO_PM: RawConfig = {
 // Empresarial LTDA — Sociedade Empresária Limitada, CNAE 69.20-6-01,
 // Atividades de contabilidade, sediada em Fortaleza/CE). Não é escritório de
 // advocacia — sem campos OAB, ZapZapPage em modo neutro. Ângulo: preparação
-// acadêmica para o concurso da PM — disciplinas cobradas nas provas objetivas,
+// acadêmica para o concurso da PP — disciplinas cobradas nas provas objetivas,
 // cronograma de estudos, conteúdo programático frequente e organização da
 // preparação. Distinto de rumoaocfo.click (etapas do processo seletivo do
 // CFO), futuropm.click (carreira de praça) e carreiradeoficial.click
 // (desenvolvimento pós-formação do oficial) e de todos os domínios jurídicos.
 const CONCURSEIRO_PM: RawConfig = {
   hostname: 'concurseiropm.click',
-  brand: 'Concurseiro PM',
-  siteSubtitle: 'Preparação Acadêmica para o Concurso da Polícia Militar',
+  brand: 'Concurseiro PP',
+  siteSubtitle: 'Preparação Acadêmica para o Concurso da Polícia Penal',
   razaoSocial: 'Ab Contabilidade Assessoria Contabil e Consultoria Empresarial LTDA',
   cnpj: '58129437000100',
   cnpjFormatted: '58.129.437/0001-00',
@@ -1340,32 +1340,32 @@ const CONCURSEIRO_PM: RawConfig = {
   cep: '60811-341',
   enderecoCompleto: 'Avenida Washington Soares, 55, Sala 307 · Edson Queiroz · Fortaleza/CE · CEP 60811-341',
   canonicalUrl: 'https://www.concurseiropm.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre preparação acadêmica para concursos da Polícia Militar e não constituem consultoria jurídica ou pedagógica individual. Este site é independente e não possui vínculo com qualquer corporação policial, banca organizadora ou órgão público.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre preparação acadêmica para concursos da Polícia Penal e não constituem consultoria jurídica ou pedagógica individual. Este site é independente e não possui vínculo com qualquer corporação policial, banca organizadora ou órgão público.',
   email: 'ab_contabilidade@hotmail.com',
   telefone: '(85) 98170-1976',
   cnae: '69.20-6-01 - Atividades de contabilidade',
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '18/11/2024',
   capitalSocial: 'R$ 500.000,00',
-  breadcrumbLabel: 'Preparação para as Provas do Concurso da PM',
-  h1Override: 'Como se preparar academicamente para as provas do concurso da Polícia Militar',
-  leadOverride: 'Reunimos conteúdo informativo sobre as disciplinas cobradas, como organizar o cronograma de estudos e o que esperar das provas objetivas nos concursos da Polícia Militar. Consulte o edital oficial da corporação para o conteúdo programático específico do certame de seu interesse.',
+  breadcrumbLabel: 'Preparação para as Provas do Concurso da PP',
+  h1Override: 'Como se preparar academicamente para as provas do concurso da Polícia Penal',
+  leadOverride: 'Reunimos conteúdo informativo sobre as disciplinas cobradas, como organizar o cronograma de estudos e o que esperar das provas objetivas nos concursos da Polícia Penal. Consulte o edital oficial da corporação para o conteúdo programático específico do certame de seu interesse.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Quais são as disciplinas mais cobradas nas provas objetivas do concurso da PM?',
-      a: 'As disciplinas mais frequentes nos concursos da PM incluem Língua Portuguesa, Matemática e Raciocínio Lógico, Noções de Direito Constitucional, Direito Administrativo e Legislação Policial Estadual. Dependendo do edital, podem aparecer também Informática, Atualidades, Direito Penal e Ética no Serviço Público. O conteúdo programático exato varia por estado e por banca organizadora.',
+      q: 'Quais são as disciplinas mais cobradas nas provas objetivas do concurso da PP?',
+      a: 'As disciplinas mais frequentes nos concursos da PP incluem Língua Portuguesa, Matemática e Raciocínio Lógico, Noções de Direito Constitucional, Direito Administrativo e Legislação Policial Estadual. Dependendo do edital, podem aparecer também Informática, Atualidades, Direito Penal e Ética no Serviço Público. O conteúdo programático exato varia por estado e por banca organizadora.',
     },
     {
-      q: 'Como montar um cronograma eficiente de estudos para o concurso da PM?',
+      q: 'Como montar um cronograma eficiente de estudos para o concurso da PP?',
       a: 'Um cronograma eficiente parte do edital: identifique o número de questões por disciplina e o peso de cada uma na nota final. Dedique mais horas às disciplinas com maior incidência e às que representam maior dificuldade pessoal. Alterne dias de conteúdo novo com dias de revisão e resolução de questões anteriores, e inclua simulados periódicos para treinar o ritmo da prova real.',
     },
     {
-      q: 'Qual é a melhor estratégia para resolver questões de múltipla escolha nas provas da PM?',
+      q: 'Qual é a melhor estratégia para resolver questões de múltipla escolha nas provas da PP?',
       a: 'Eliminar alternativas claramente erradas antes de escolher a resposta reduz o risco de marcação precipitada. Para questões de interpretação de texto e raciocínio lógico, ler o enunciado com atenção antes das alternativas ajuda a evitar armadilhas. Manter o ritmo e não gastar tempo excessivo em questões desconhecidas — deixando-as para revisitar ao final — é uma tática eficaz na maioria dos certames com limite de tempo rigoroso.',
     },
     {
-      q: 'As provas dos concursos da PM variam muito entre os estados?',
+      q: 'As provas dos concursos da PP variam muito entre os estados?',
       a: 'Sim. O conteúdo programático, o número de questões, o peso de cada disciplina e o nível de dificuldade das provas variam significativamente entre corporações estaduais e entre bancas organizadoras. Editais de estados como São Paulo (VUNESP), Minas Gerais e Rio de Janeiro têm perfis de prova distintos. Sempre consulte o edital específico do certame de seu interesse para organizar a preparação com precisão.',
     },
   ],
@@ -1378,15 +1378,15 @@ const CONCURSEIRO_PM: RawConfig = {
 // pmdomeuestado.click (Muamba Filmes LTDA — Sociedade Empresária Limitada,
 // CNAE 59.11-1-99, Produção cinematográfica e de vídeos, sediada em
 // Fortaleza/CE). Não é escritório de advocacia — sem campos OAB, ZapZapPage
-// em modo neutro. Ângulo: panorama comparativo das Polícias Militares
+// em modo neutro. Ângulo: panorama comparativo das Polícias Penais
 // estaduais — como as corporações se organizam por estado, variações na
 // estrutura de postos e graduações, diferenças salariais e frequência
 // histórica de concursos por região. Ângulo geográfico/comparativo, distinto
 // de todos os domínios de carreira, jurídicos e de preparação para provas.
 const PM_DO_MEU_ESTADO: RawConfig = {
   hostname: 'pmdomeuestado.click',
-  brand: 'PM do Meu Estado',
-  siteSubtitle: 'Panorama Comparativo das Polícias Militares Estaduais do Brasil',
+  brand: 'PP do Meu Estado',
+  siteSubtitle: 'Panorama Comparativo das Polícias Penais Estaduais do Brasil',
   razaoSocial: 'Muamba Filmes LTDA',
   cnpj: '57507866000100',
   cnpjFormatted: '57.507.866/0001-00',
@@ -1397,33 +1397,33 @@ const PM_DO_MEU_ESTADO: RawConfig = {
   cep: '60110-430',
   enderecoCompleto: 'Rua Milagres, 24, Sala 10 · Aldeota · Fortaleza/CE · CEP 60110-430',
   canonicalUrl: 'https://www.pmdomeuestado.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre as Polícias Militares estaduais brasileiras e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre as Polícias Penais estaduais brasileiras e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
   email: 'muambafilmes@gmail.com',
   telefone: '(85) 99631-6323',
   cnae: '59.11-1-99 - Atividades de produção cinematográfica, de vídeos e de programas de televisão não especificadas anteriormente',
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '01/10/2024',
   capitalSocial: 'R$ 3.000,00',
-  breadcrumbLabel: 'Panorama das Polícias Militares por Estado',
-  h1Override: 'Como funcionam as Polícias Militares nos diferentes estados brasileiros',
+  breadcrumbLabel: 'Panorama das Polícias Penais por Estado',
+  h1Override: 'Como funcionam as Polícias Penais nos diferentes estados brasileiros',
   leadOverride: 'Reunimos conteúdo informativo sobre como cada corporação estadual se organiza — estrutura de postos e graduações, variações salariais entre estados, frequência histórica de seleções e diferenças regionais na carreira militar. Consulte a corporação do seu estado para informações oficiais e atualizadas.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'As Polícias Militares variam muito entre os estados brasileiros?',
-      a: 'Sim. Cada PM estadual é regulamentada por legislação própria e organizada de forma autônoma dentro do quadro federal. Há variações relevantes no quantitativo de efetivo, na estrutura de Batalhões e Companhias, nos critérios de promoção, no regime de trabalho (escala de plantão) e na remuneração dos profissionais. Estados maiores, como São Paulo e Minas Gerais, costumam ter corporações mais numerosas e orçamentos distintos das PMs de estados menores.',
+      q: 'As Polícias Penais variam muito entre os estados brasileiros?',
+      a: 'Sim. Cada PP estadual é regulamentada por legislação própria e organizada de forma autônoma dentro do quadro federal. Há variações relevantes no quantitativo de efetivo, na estrutura de Batalhões e Companhias, nos critérios de promoção, no regime de trabalho (escala de plantão) e na remuneração dos profissionais. Estados maiores, como São Paulo e Minas Gerais, costumam ter corporações mais numerosas e orçamentos distintos das PPs de estados menores.',
     },
     {
-      q: 'As diferenças salariais entre PMs de estados diferentes são significativas?',
+      q: 'As diferenças salariais entre PPs de estados diferentes são significativas?',
       a: 'São expressivas. O vencimento base de um soldado recém-formado pode variar consideravelmente entre estados, refletindo diferenças no orçamento estadual, nas leis de carreira e nos planos de reestruturação remuneratória de cada governo. Além do salário base, benefícios como adicional de risco de vida, gratificação por habilitação e licenças especiais variam por corporação e influenciam a remuneração total do profissional.',
     },
     {
-      q: 'A estrutura de postos e graduações é igual em todas as PMs estaduais?',
+      q: 'A estrutura de postos e graduações é igual em todas as PPs estaduais?',
       a: 'A estrutura geral segue o modelo nacional — praças (soldado a subtenente) e oficiais (aspirante a coronel) — mas os detalhes variam por estado. Alguns estados possuem graduações ou denominações específicas, planos de cargos distintos e critérios diferentes para acesso aos cursos de especialização e promoção. O regulamento interno de cada corporação define os detalhes da progressão funcional.',
     },
     {
-      q: 'Alguns estados abrem mais concursos para a PM do que outros?',
-      a: 'Historicamente, sim. A frequência de seleções depende do orçamento estadual, da taxa de saída de profissionais (aposentadorias e desligamentos) e das políticas de segurança pública de cada governo. Estados com maior rotatividade ou expansão do efetivo costumam realizar seleções com maior regularidade. Acompanhe os diários oficiais e o site da PM do seu estado para informações oficiais sobre editais abertos.',
+      q: 'Alguns estados abrem mais concursos para a PP do que outros?',
+      a: 'Historicamente, sim. A frequência de seleções depende do orçamento estadual, da taxa de saída de profissionais (aposentadorias e desligamentos) e das políticas de segurança pública de cada governo. Estados com maior rotatividade ou expansão do efetivo costumam realizar seleções com maior regularidade. Acompanhe os diários oficiais e o site da PP do seu estado para informações oficiais sobre editais abertos.',
     },
   ],
   // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
@@ -1482,7 +1482,7 @@ const MODO_POLICIAL: RawConfig = {
 const PRIMEIRA_FARDA: RawConfig = {
   hostname: 'primeirafarda.click',
   brand: 'Primeira Farda',
-  siteSubtitle: 'Como é o Curso de Formação de Soldados da PM — Rotina, Desafios e Como se Preparar',
+  siteSubtitle: 'Como é o Curso de Formação de Soldados da PP — Rotina, Desafios e Como se Preparar',
   razaoSocial: 'Diesel Max Pecas e Servicos LTDA',
   cnpj: '62545581000102',
   cnpjFormatted: '62.545.581/0001-02',
@@ -1493,20 +1493,20 @@ const PRIMEIRA_FARDA: RawConfig = {
   cep: '32070-040',
   enderecoCompleto: 'Avenida Durval Alves de Faria, 738 · Tropical · Contagem/MG · CEP 32070-040',
   canonicalUrl: 'https://www.primeirafarda.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre o Curso de Formação de Soldados da Polícia Militar e não constituem orientação oficial sobre processos seletivos ou cursos específicos. Este site é independente e não possui vínculo com qualquer corporação policial, centro de formação ou órgão público.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre o Curso de Formação de Soldados da Polícia Penal e não constituem orientação oficial sobre processos seletivos ou cursos específicos. Este site é independente e não possui vínculo com qualquer corporação policial, centro de formação ou órgão público.',
   email: 'maxtone24@yahoo.com.br',
   telefone: '(31) 98220-8438',
   cnae: '45.20-0-01 - Serviços de manutenção e reparação mecânica de veículos automotores',
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '03/09/2025',
   capitalSocial: 'R$ 20.000,00',
-  breadcrumbLabel: 'Curso de Formação de Soldados da PM — Rotina e Preparação',
-  h1Override: 'Como é o Curso de Formação de Soldados da PM — rotina, desafios e o que esperar desde o primeiro dia',
-  leadOverride: 'Reunimos conteúdo informativo sobre a experiência do Curso de Formação de Soldados da Polícia Militar — como é a rotina diária, quais são os maiores desafios das primeiras semanas, o que mais surpreende quem ingressa e como se preparar física e mentalmente antes de iniciar. Para informações oficiais sobre o curso de formação do seu estado, consulte o site da PM estadual.',
+  breadcrumbLabel: 'Curso de Formação de Soldados da PP — Rotina e Preparação',
+  h1Override: 'Como é o Curso de Formação de Soldados da PP — rotina, desafios e o que esperar desde o primeiro dia',
+  leadOverride: 'Reunimos conteúdo informativo sobre a experiência do Curso de Formação de Soldados da Polícia Penal — como é a rotina diária, quais são os maiores desafios das primeiras semanas, o que mais surpreende quem ingressa e como se preparar física e mentalmente antes de iniciar. Para informações oficiais sobre o curso de formação do seu estado, consulte o site da PP estadual.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Como é a rotina diária dentro do Curso de Formação de Soldados da PM?',
+      q: 'Como é a rotina diária dentro do Curso de Formação de Soldados da PP?',
       a: 'A rotina do Curso de Formação de Soldados é marcada por estrutura rígida e horários fixos. O dia começa cedo — geralmente entre 5h e 6h — com formatura, atividade física e café da manhã antes do início das aulas. O período letivo combina disciplinas teóricas (legislação, direito penal, procedimentos operacionais) com treinamentos práticos (armamento, defesa pessoal, abordagem). O regime é semi-internato ou internato completo dependendo da corporação estadual. Além das atividades formais, há deveres e obrigações militares que se estendem ao tempo livre.',
     },
     {
@@ -1514,11 +1514,11 @@ const PRIMEIRA_FARDA: RawConfig = {
       a: 'As primeiras semanas do curso de formação representam o choque cultural mais intenso da carreira policial. Os maiores desafios relatados incluem: a adaptação ao regime de hierarquia e disciplina rígidos após anos de vida civil, o cansaço acumulado da combinação de atividade física intensa com carga horária teórica elevada, o convívio compulsório com um grupo grande de desconhecidos em ambiente fechado e a gestão emocional diante de cobranças que muitos recrutas nunca experimentaram antes. Recrutas que chegam com condicionamento físico e alguma familiaridade com rotina disciplinada tendem a ter uma adaptação mais suave.',
     },
     {
-      q: 'O que mais surpreende quem ingressa no Curso de Formação de Soldados da PM?',
+      q: 'O que mais surpreende quem ingressa no Curso de Formação de Soldados da PP?',
       a: 'O que mais surpreende não costuma ser a intensidade física — esperada por quem se preparou para o TAF — mas o volume e a complexidade do conteúdo teórico: legislação, procedimentos operacionais, uso da força, direitos humanos e ética profissional formam uma carga acadêmica que muitos recrutas subestimam. Outro ponto que surpreende é a dimensão coletiva da formação: avaliações e punições frequentemente recaem sobre o grupo, não apenas sobre o indivíduo, o que exige uma mentalidade de equipe que nem todos estão acostumados a desenvolver.',
     },
     {
-      q: 'Como se preparar mentalmente e fisicamente antes de iniciar o curso de formação da PM?',
+      q: 'Como se preparar mentalmente e fisicamente antes de iniciar o curso de formação da PP?',
       a: 'A preparação física deve ir além do mínimo exigido no TAF — o recruta deve chegar ao curso com capacidade aeróbica e muscular acima do mínimo, pois as exigências físicas são contínuas e acumulativas. Mentalmente, familiarizar-se com a estrutura hierárquica e com os regulamentos disciplinares militares antes do início ajuda a reduzir o choque cultural. Recrutas que já leram o regulamento da corporação e entendem o que significa uma formatura chegam com vantagem real. O aspecto mais útil emocionalmente é estar preparado para abrir mão da autonomia do cotidiano civil por um período determinado.',
     },
   ],
@@ -1530,7 +1530,7 @@ const PRIMEIRA_FARDA: RawConfig = {
 const PATENTE_MILITAR: RawConfig = {
   hostname: 'patentemilitar.click',
   brand: 'Patente Militar',
-  siteSubtitle: 'Postos, Graduações e Sistema de Promoções da Polícia Militar — de Soldado a Coronel',
+  siteSubtitle: 'Postos, Graduações e Sistema de Promoções da Polícia Penal — de Soldado a Coronel',
   razaoSocial: 'Fernandes Engenharia e Construcao LTDA',
   cnpj: '62551644000125',
   cnpjFormatted: '62.551.644/0001-25',
@@ -1541,33 +1541,33 @@ const PATENTE_MILITAR: RawConfig = {
   cep: '32310-220',
   enderecoCompleto: 'Rua Monsenhor Bicalho, 145, Andar 2 Sala 2 · Eldorado · Contagem/MG · CEP 32310-220',
   canonicalUrl: 'https://www.patentemilitar.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre a estrutura hierárquica e o sistema de promoções das Polícias Militares brasileiras e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre a estrutura hierárquica e o sistema de promoções das Polícias Penais brasileiras e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
   email: 'processos@contajul.com',
   telefone: '(31) 2115-8100',
   cnae: '41.20-4-00 - Construção de edifícios',
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '03/09/2025',
   capitalSocial: 'R$ 30.000,00',
-  breadcrumbLabel: 'Postos, Graduações e Promoções na Polícia Militar',
-  h1Override: 'De soldado a coronel: guia completo de postos, graduações e promoções na Polícia Militar',
-  leadOverride: 'Reunimos conteúdo informativo sobre a hierarquia completa da Polícia Militar — o que cada posto e graduação representa, como funciona o sistema de promoções por merecimento e antiguidade, os critérios para progressão entre graduações de praça e o que diferencia oficiais de praças na estrutura da corporação. Para critérios específicos da PM do seu estado, consulte o Estatuto dos Policiais Militares estadual.',
+  breadcrumbLabel: 'Postos, Graduações e Promoções na Polícia Penal',
+  h1Override: 'De soldado a coronel: guia completo de postos, graduações e promoções na Polícia Penal',
+  leadOverride: 'Reunimos conteúdo informativo sobre a hierarquia completa da Polícia Penal — o que cada posto e graduação representa, como funciona o sistema de promoções por merecimento e antiguidade, os critérios para progressão entre graduações de praça e o que diferencia oficiais de praças na estrutura da corporação. Para critérios específicos da PP do seu estado, consulte o Estatuto dos Policiais Militares estadual.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Quais são todos os postos e graduações da Polícia Militar, do soldado ao coronel?',
-      a: 'A estrutura hierárquica da PM divide-se em dois grandes grupos: praças e oficiais. As graduações de praça — em ordem crescente — são: Soldado, Cabo, 3º Sargento, 2º Sargento, 1º Sargento e Subtenente. Os postos de oficial são: 2º Tenente, 1º Tenente, Capitão, Major, Tenente-Coronel e Coronel. O Coronel PM é o posto mais elevado da carreira estadual. Cada corporação estadual pode ter variações de nomenclatura, e algumas possuem patentes intermediárias adicionais conforme o Estatuto próprio.',
+      q: 'Quais são todos os postos e graduações da Polícia Penal, do soldado ao coronel?',
+      a: 'A estrutura hierárquica da PP divide-se em dois grandes grupos: praças e oficiais. As graduações de praça — em ordem crescente — são: Soldado, Cabo, 3º Sargento, 2º Sargento, 1º Sargento e Subtenente. Os postos de oficial são: 2º Tenente, 1º Tenente, Capitão, Major, Tenente-Coronel e Coronel. O Coronel PP é o posto mais elevado da carreira estadual. Cada corporação estadual pode ter variações de nomenclatura, e algumas possuem patentes intermediárias adicionais conforme o Estatuto próprio.',
     },
     {
-      q: 'Como funciona o sistema de promoções na PM — por merecimento, antiguidade ou vaga?',
-      a: 'As promoções na PM ocorrem geralmente por uma combinação de três critérios: antiguidade (tempo de serviço no posto ou graduação atual), merecimento (avaliação de desempenho, conduta disciplinar, cursos realizados e condecorações) e existência de vaga na graduação ou posto superior. Promoções entre as graduações de praça têm critérios mais objetivos, enquanto as promoções nos postos de oficial envolvem análise por Comissão de Promoções e maior peso do merecimento. Os critérios específicos são definidos pelo Estatuto dos Policiais Militares de cada estado.',
+      q: 'Como funciona o sistema de promoções na PP — por merecimento, antiguidade ou vaga?',
+      a: 'As promoções na PP ocorrem geralmente por uma combinação de três critérios: antiguidade (tempo de serviço no posto ou graduação atual), merecimento (avaliação de desempenho, conduta disciplinar, cursos realizados e condecorações) e existência de vaga na graduação ou posto superior. Promoções entre as graduações de praça têm critérios mais objetivos, enquanto as promoções nos postos de oficial envolvem análise por Comissão de Promoções e maior peso do merecimento. Os critérios específicos são definidos pelo Estatuto dos Policiais Militares de cada estado.',
     },
     {
       q: 'Quais são os critérios e prazos típicos para progressão entre as graduações de praça?',
       a: 'Os prazos mínimos para promoção entre graduações de praça variam por estado, mas de forma geral o policial precisa cumprir um tempo mínimo em cada graduação — que costuma variar de 2 a 5 anos —, estar em situação disciplinar regular e, em alguns estados, concluir cursos de aperfeiçoamento específicos para cada nível. A promoção a Subtenente, a mais alta entre as praças, tende a exigir maior tempo de serviço e, frequentemente, conclusão do Curso de Formação de Sargentos ou equivalente.',
     },
     {
-      q: 'O que diferencia os oficiais dos praças na estrutura hierárquica da PM?',
-      a: 'A divisão entre praças e oficiais é a fronteira hierárquica mais significativa na PM. Os oficiais exercem funções de comando e direção — são responsáveis pelo planejamento operacional, pela gestão das unidades e pela representação institucional. Os praças executam as atividades operacionais diretas, como o policiamento ostensivo, sob supervisão dos oficiais. O ingresso nas duas carreiras ocorre por concursos distintos — um para soldado (início da carreira de praça) e outro para o Curso de Formação de Oficiais (CFO). A progressão de praça para oficial é possível, mas exige aprovação em processo seletivo específico e conclusão do CFO.',
+      q: 'O que diferencia os oficiais dos praças na estrutura hierárquica da PP?',
+      a: 'A divisão entre praças e oficiais é a fronteira hierárquica mais significativa na PP. Os oficiais exercem funções de comando e direção — são responsáveis pelo planejamento operacional, pela gestão das unidades e pela representação institucional. Os praças executam as atividades operacionais diretas, como o policiamento ostensivo, sob supervisão dos oficiais. O ingresso nas duas carreiras ocorre por concursos distintos — um para soldado (início da carreira de praça) e outro para o Curso de Formação de Oficiais (CFO). A progressão de praça para oficial é possível, mas exige aprovação em processo seletivo específico e conclusão do CFO.',
     },
   ],
   // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
@@ -1579,7 +1579,7 @@ const PATENTE_MILITAR: RawConfig = {
 const SONHO_DE_FARDA: RawConfig = {
   hostname: 'sonhodefarda.click',
   brand: 'Sonho de Farda',
-  siteSubtitle: 'Motivação, Resiliência e o Caminho Emocional até a Aprovação na PM',
+  siteSubtitle: 'Motivação, Resiliência e o Caminho Emocional até a Aprovação na PP',
   razaoSocial: 'Pnzn Papeis Finos e Presentes LTDA',
   cnpj: '62549874000150',
   cnpjFormatted: '62.549.874/0001-50',
@@ -1590,33 +1590,33 @@ const SONHO_DE_FARDA: RawConfig = {
   cep: '80420-090',
   enderecoCompleto: 'Avenida Do Batel, 1868, Quiosqq-301 Andar L-3 · Batel · Curitiba/PR · CEP 80420-090',
   canonicalUrl: 'https://www.sonhodefarda.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre motivação e preparação emocional para concursos da Polícia Militar e não constituem orientação psicológica ou aconselhamento individual. Este site é independente e não possui vínculo com qualquer corporação policial, banca organizadora ou órgão público.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre motivação e preparação emocional para concursos da Polícia Penal e não constituem orientação psicológica ou aconselhamento individual. Este site é independente e não possui vínculo com qualquer corporação policial, banca organizadora ou órgão público.',
   email: 'patiobatel.magnolia@gmail.com',
   telefone: '(41) 99135-3002',
   cnae: '47.61-0-03 - Comércio varejista de artigos de papelaria',
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '03/09/2025',
   capitalSocial: 'R$ 150.000,00',
-  breadcrumbLabel: 'Motivação e Resiliência na Preparação para a PM',
+  breadcrumbLabel: 'Motivação e Resiliência na Preparação para a PP',
   h1Override: 'Como manter o sonho da farda vivo — motivação, resiliência e o lado emocional da preparação',
-  leadOverride: 'Reunimos conteúdo informativo sobre o aspecto mais ignorado da preparação para a PM: a sustentabilidade emocional de uma jornada que pode durar anos. Como manter a motivação, o que fazer após uma reprovação, como lidar com a pressão de quem está à volta e o que muda concretamente na vida de quem conquista a aprovação.',
+  leadOverride: 'Reunimos conteúdo informativo sobre o aspecto mais ignorado da preparação para a PP: a sustentabilidade emocional de uma jornada que pode durar anos. Como manter a motivação, o que fazer após uma reprovação, como lidar com a pressão de quem está à volta e o que muda concretamente na vida de quem conquista a aprovação.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Como manter a motivação durante uma preparação longa para o concurso da PM?',
+      q: 'Como manter a motivação durante uma preparação longa para o concurso da PP?',
       a: 'Preparações que se estendem por um ou dois anos — ou mais — exigem estratégias de sustentabilidade emocional que vão além da disciplina de estudo. Dividir o objetivo final em marcos intermediários mensuráveis (dominar uma disciplina, melhorar o tempo no TAF, concluir um simulado) cria momentos de conquista que alimentam a motivação ao longo do caminho. Registrar o progresso — um diário de estudo, uma planilha de desempenho — torna o avanço visível mesmo quando ele parece lento. Manter ao menos uma atividade prazerosa fora dos estudos não é desperdício de tempo: é o que impede o esgotamento que faz candidatos abandonarem antes de chegar à reta final.',
     },
     {
-      q: 'O que fazer quando não se é aprovado em um ciclo do processo seletivo da PM?',
+      q: 'O que fazer quando não se é aprovado em um ciclo do processo seletivo da PP?',
       a: 'A não aprovação em um ciclo é uma informação, não uma sentença. O primeiro passo é identificar com precisão em qual etapa a eliminação ocorreu — prova escrita, TAF, psicológico — e o que o desempenho naquela fase diz sobre onde concentrar energia no próximo ciclo. Candidatos que repetem os mesmos erros de preparação entre ciclos tendem a obter os mesmos resultados; os que fazem uma análise honesta e ajustam a estratégia aumentam progressivamente suas chances. Dar um tempo curto para processar a frustração é saudável; transformar esse tempo em inação prolongada é o maior risco para quem quer tentar novamente.',
     },
     {
-      q: 'Como lidar com a pressão familiar e social durante a preparação para a PM?',
+      q: 'Como lidar com a pressão familiar e social durante a preparação para a PP?',
       a: 'A pressão de quem está de fora — família, amigos, colegas — costuma vir de dois lugares: preocupação genuína com o futuro do candidato e dificuldade de compreender por que alguém investiria tanto tempo em algo sem retorno garantido. Comunicar de forma clara o que é a carreira, o que a aprovação significa concretamente e qual é o plano caso o objetivo não se concretize ajuda a transformar ceticismo em apoio. Estabelecer limites sobre quando o tema pode ser discutido em casa — evitando que cada conversa se torne uma avaliação da preparação — protege o foco e o equilíbrio emocional do candidato.',
     },
     {
-      q: 'O que muda na vida do candidato e da família com a aprovação na PM?',
-      a: 'A aprovação na PM representa uma mudança de vida que vai além do emprego. Para o aprovado, há a transformação identitária de tornar-se um profissional de segurança pública — com a responsabilidade, os valores e a rotina que esse papel implica. Para a família, há a estabilidade financeira que a carreira oferece, mas também a adaptação à escala de trabalho (incluindo plantões, fins de semana e feriados) e ao risco inerente à profissão. Quanto mais essa conversa acontecer antes da aprovação — com expectativas alinhadas e apoio mútuo construído —, mais suave tende a ser a transição.',
+      q: 'O que muda na vida do candidato e da família com a aprovação na PP?',
+      a: 'A aprovação na PP representa uma mudança de vida que vai além do emprego. Para o aprovado, há a transformação identitária de tornar-se um profissional de segurança pública — com a responsabilidade, os valores e a rotina que esse papel implica. Para a família, há a estabilidade financeira que a carreira oferece, mas também a adaptação à escala de trabalho (incluindo plantões, fins de semana e feriados) e ao risco inerente à profissão. Quanto mais essa conversa acontecer antes da aprovação — com expectativas alinhadas e apoio mútuo construído —, mais suave tende a ser a transição.',
     },
   ],
   // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
@@ -1627,7 +1627,7 @@ const SONHO_DE_FARDA: RawConfig = {
 const HONRA_MILITAR: RawConfig = {
   hostname: 'honramilitar.click',
   brand: 'Honra Militar',
-  siteSubtitle: 'História, Tradições e Cultura Institucional das Polícias Militares Brasileiras',
+  siteSubtitle: 'História, Tradições e Cultura Institucional das Polícias Penais Brasileiras',
   razaoSocial: 'Chaveiro Auto Tecno LTDA',
   cnpj: '62549317000139',
   cnpjFormatted: '62.549.317/0001-39',
@@ -1638,32 +1638,32 @@ const HONRA_MILITAR: RawConfig = {
   cep: '32223-450',
   enderecoCompleto: 'Avenida Alvarenga Peixoto, 508, Andar 01 Loja 03 · Amazonas · Contagem/MG · CEP 32223-450',
   canonicalUrl: 'https://www.honramilitar.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre a história e as tradições das Polícias Militares brasileiras e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre a história e as tradições das Polícias Penais brasileiras e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
   email: 'chaveiroautotecno@gmail.com',
   telefone: '(31) 2565-1113',
   cnae: '95.29-1-02 - Chaveiros',
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '03/09/2025',
   capitalSocial: 'R$ 30.000,00',
-  breadcrumbLabel: 'História e Tradições das Polícias Militares do Brasil',
-  h1Override: 'A história e as tradições que forjam a identidade da Polícia Militar brasileira',
-  leadOverride: 'Reunimos conteúdo informativo sobre a origem histórica, as cerimônias, o código de honra e o papel da hierarquia que constroem a cultura institucional das Polícias Militares brasileiras — do surgimento no século XIX até as tradições que marcam a carreira de quem veste a farda hoje. Para informações oficiais, consulte o site da PM do seu estado.',
+  breadcrumbLabel: 'História e Tradições das Polícias Penais do Brasil',
+  h1Override: 'A história e as tradições que forjam a identidade da Polícia Penal brasileira',
+  leadOverride: 'Reunimos conteúdo informativo sobre a origem histórica, as cerimônias, o código de honra e o papel da hierarquia que constroem a cultura institucional das Polícias Penais brasileiras — do surgimento no século XIX até as tradições que marcam a carreira de quem veste a farda hoje. Para informações oficiais, consulte o site da PP do seu estado.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Qual é a origem histórica das Polícias Militares brasileiras?',
-      a: 'As Polícias Militares brasileiras têm origem no século XIX, com raízes que remontam às forças de segurança criadas durante o período imperial. A Guarda Real de Polícia, fundada em 1809 no Rio de Janeiro, é considerada um dos marcos fundadores da tradição policial militar no Brasil. Com a proclamação da República e a organização federativa do país, cada estado passou a estruturar sua própria corporação, herdando a tradição hierárquica e disciplinar das forças militares e incorporando progressivamente o modelo de policiamento ostensivo que permanece até hoje.',
+      q: 'Qual é a origem histórica das Polícias Penais brasileiras?',
+      a: 'As Polícias Penais brasileiras têm origem no século XIX, com raízes que remontam às forças de segurança criadas durante o período imperial. A Guarda Real de Polícia, fundada em 1809 no Rio de Janeiro, é considerada um dos marcos fundadores da tradição policial militar no Brasil. Com a proclamação da República e a organização federativa do país, cada estado passou a estruturar sua própria corporação, herdando a tradição hierárquica e disciplinar das forças militares e incorporando progressivamente o modelo de policiamento ostensivo que permanece até hoje.',
     },
     {
-      q: 'Quais são as principais tradições e cerimônias que marcam a vida institucional da PM?',
-      a: 'A vida institucional da PM é pontuada por cerimônias que reforçam os vínculos de pertencimento e os valores da corporação. Entre as mais significativas estão a formatura dos novos policiais ao término do curso de formação — considerada um dos momentos mais marcantes da carreira —, a passagem de comando, que simboliza a continuidade institucional, as formaturas em datas comemorativas e as homenagens a policiais em missão. Cada corporação estadual tem suas tradições específicas, mas o caráter cerimonial e hierárquico é comum a todas.',
+      q: 'Quais são as principais tradições e cerimônias que marcam a vida institucional da PP?',
+      a: 'A vida institucional da PP é pontuada por cerimônias que reforçam os vínculos de pertencimento e os valores da corporação. Entre as mais significativas estão a formatura dos novos policiais ao término do curso de formação — considerada um dos momentos mais marcantes da carreira —, a passagem de comando, que simboliza a continuidade institucional, as formaturas em datas comemorativas e as homenagens a policiais em missão. Cada corporação estadual tem suas tradições específicas, mas o caráter cerimonial e hierárquico é comum a todas.',
     },
     {
       q: 'O que é o código de honra do policial militar e como ele se expressa na prática?',
       a: 'O código de honra militar não é necessariamente um documento formal único, mas um conjunto de valores e princípios que orientam a conduta do policial dentro e fora do serviço — lealdade à corporação, cumprimento do dever mesmo sob adversidade, respeito à hierarquia, proteção dos mais vulneráveis e preservação da imagem institucional. Esses valores são transmitidos durante a formação e reforçados ao longo da carreira por meio de regulamentos disciplinares, cerimônias e da cultura interna da unidade onde o policial serve.',
     },
     {
-      q: 'Como a hierarquia contribui para a coesão e a eficiência operacional da Polícia Militar?',
+      q: 'Como a hierarquia contribui para a coesão e a eficiência operacional da Polícia Penal?',
       a: 'A hierarquia militar garante previsibilidade na cadeia de decisão — em situações de alta pressão, saber quem decide e quem executa elimina ambiguidades que poderiam custar vidas. Ela também cria um sistema de responsabilidade vertical: cada nível responde pelos resultados de suas ações e das ações de quem está sob seu comando. Além da dimensão operacional, a hierarquia tem função simbólica — os rituais de respeito entre postos e graduações reforçam a coesão institucional e a identidade coletiva da corporação.',
     },
   ],
@@ -1674,8 +1674,8 @@ const HONRA_MILITAR: RawConfig = {
 
 const TRILHA_PM: RawConfig = {
   hostname: 'trilhapm.click',
-  brand: 'Trilha PM',
-  siteSubtitle: 'Cada Etapa do Processo Seletivo da PM — Prova, TAF, Psicotécnico, Investigação e Exame Médico',
+  brand: 'Trilha PP',
+  siteSubtitle: 'Cada Etapa do Processo Seletivo da PP — Prova, TAF, Psicotécnico, Investigação e Exame Médico',
   razaoSocial: 'Distribuidora Pecas Truck Mqn LTDA',
   cnpj: '62549521000150',
   cnpjFormatted: '62.549.521/0001-50',
@@ -1686,24 +1686,24 @@ const TRILHA_PM: RawConfig = {
   cep: '80040-330',
   enderecoCompleto: 'Rua João David Perneta, 82 · Hugo Lange · Curitiba/PR · CEP 80040-330',
   canonicalUrl: 'https://www.trilhapm.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre as etapas do processo seletivo da Polícia Militar e não constituem orientação jurídica ou psicológica sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial, banca organizadora ou órgão público.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre as etapas do processo seletivo da Polícia Penal e não constituem orientação jurídica ou psicológica sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial, banca organizadora ou órgão público.',
   email: 'contapagamentos@gmail.com',
   telefone: '(41) 3223-8875',
   cnae: '45.30-7-01 - Comércio por atacado de peças e acessórios novos para veículos automotores',
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '03/09/2025',
   capitalSocial: 'R$ 130.000,00',
-  breadcrumbLabel: 'Etapas do Processo Seletivo da Polícia Militar',
-  h1Override: 'Da inscrição à aprovação: o que acontece em cada etapa do processo seletivo da PM',
-  leadOverride: 'Reunimos conteúdo informativo sobre todas as fases do processo seletivo da Polícia Militar — prova de conhecimentos, TAF, avaliação psicológica, investigação social e exame médico — explicando o que cada etapa avalia, como se preparar e quais fatores podem causar desclassificação. Para informações oficiais, consulte sempre o edital do estado de interesse.',
+  breadcrumbLabel: 'Etapas do Processo Seletivo da Polícia Penal',
+  h1Override: 'Da inscrição à aprovação: o que acontece em cada etapa do processo seletivo da PP',
+  leadOverride: 'Reunimos conteúdo informativo sobre todas as fases do processo seletivo da Polícia Penal — prova de conhecimentos, TAF, avaliação psicológica, investigação social e exame médico — explicando o que cada etapa avalia, como se preparar e quais fatores podem causar desclassificação. Para informações oficiais, consulte sempre o edital do estado de interesse.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Quais são todas as etapas do processo seletivo da PM e em que ordem costumam ocorrer?',
-      a: 'O processo seletivo da PM geralmente segue esta sequência: prova objetiva de conhecimentos, Teste de Aptidão Física (TAF), avaliação psicológica, exame médico, investigação social e, em alguns estados, avaliação de títulos ou entrevista. A ordem pode variar por edital — alguns estados realizam o exame médico antes da investigação social, outros invertem. Cada etapa é eliminatória; o candidato que não atinge o mínimo em qualquer fase é desclassificado independentemente do desempenho nas demais. Ler o edital do estado de interesse com atenção ao cronograma é indispensável.',
+      q: 'Quais são todas as etapas do processo seletivo da PP e em que ordem costumam ocorrer?',
+      a: 'O processo seletivo da PP geralmente segue esta sequência: prova objetiva de conhecimentos, Teste de Aptidão Física (TAF), avaliação psicológica, exame médico, investigação social e, em alguns estados, avaliação de títulos ou entrevista. A ordem pode variar por edital — alguns estados realizam o exame médico antes da investigação social, outros invertem. Cada etapa é eliminatória; o candidato que não atinge o mínimo em qualquer fase é desclassificado independentemente do desempenho nas demais. Ler o edital do estado de interesse com atenção ao cronograma é indispensável.',
     },
     {
-      q: 'Como se preparar para a avaliação psicológica no processo seletivo da PM?',
+      q: 'Como se preparar para a avaliação psicológica no processo seletivo da PP?',
       a: 'A avaliação psicológica não tem gabarito certo ou errado — ela busca identificar características de personalidade compatíveis com o exercício da função policial, como estabilidade emocional, autocontrole, capacidade de lidar com pressão e ausência de traços que possam comprometer o julgamento em situações críticas. Candidatos que tentam manipular as respostas com base no que imaginam que os avaliadores querem ouvir costumam apresentar padrões inconsistentes, o que em si pode ser um indicativo de inadequação. A melhor preparação é estar descansado e responder com honestidade.',
     },
     {
@@ -1711,7 +1711,7 @@ const TRILHA_PM: RawConfig = {
       a: 'A investigação social verifica a idoneidade moral e os antecedentes do candidato por meio de consulta a registros policiais, cartoriais e eleitorais, entrevistas com vizinhos e referências, e checagem de redes sociais. Podem gerar desclassificação: antecedentes criminais (mesmo sem condenação definitiva, em alguns estados), uso de substâncias ilícitas comprovado em entrevistas, vínculos com organizações criminosas, dívidas tributárias ou eleitorais não regularizadas e publicações em redes sociais incompatíveis com a conduta esperada de um agente de segurança pública.',
     },
     {
-      q: 'Como funciona o exame médico no processo seletivo da PM e quais condições podem causar eliminação?',
+      q: 'Como funciona o exame médico no processo seletivo da PP e quais condições podem causar eliminação?',
       a: 'O exame médico avalia a aptidão física e clínica do candidato para o exercício das funções policiais. Inclui exames laboratoriais, avaliação cardiológica, oftalmológica, otorrinolaringológica e, em alguns estados, toxicológica. Condições que podem causar eliminação incluem: acuidade visual abaixo do mínimo exigido sem correção adequada, hipertensão arterial não controlada, uso de determinados medicamentos de uso contínuo, índice de massa corporal fora da faixa estabelecida em edital e resultado positivo no exame toxicológico. Os critérios variam por corporação estadual e são detalhados no edital.',
     },
   ],
@@ -1723,7 +1723,7 @@ const TRILHA_PM: RawConfig = {
 const FOCO_NA_FARDA: RawConfig = {
   hostname: 'foconafarda.click',
   brand: 'Foco na Farda',
-  siteSubtitle: 'Desempenho Mental, Concentração e Foco para o Dia da Prova da PM',
+  siteSubtitle: 'Desempenho Mental, Concentração e Foco para o Dia da Prova da PP',
   razaoSocial: "D' Martins Assessoria e Consultoria Unipessoal LTDA",
   cnpj: '67588626000131',
   cnpjFormatted: '67.588.626/0001-31',
@@ -1741,13 +1741,13 @@ const FOCO_NA_FARDA: RawConfig = {
   naturezaJuridica: 'Sociedade Simples Limitada',
   dataAbertura: '19/12/2024',
   capitalSocial: 'R$ 15.000,00',
-  breadcrumbLabel: 'Foco e Desempenho Mental para Provas da PM',
-  h1Override: 'Como chegar no estado mental ideal para a prova da PM — foco, ansiedade e desempenho',
-  leadOverride: 'Reunimos conteúdo informativo sobre as estratégias que fazem diferença no dia da prova da Polícia Militar — como controlar a ansiedade, manter o foco em provas objetivas longas, o que comer e como dormir na véspera e o que fazer nas 24 horas que antecedem o exame. Para informações sobre o conteúdo programático do seu concurso, consulte o edital oficial.',
+  breadcrumbLabel: 'Foco e Desempenho Mental para Provas da PP',
+  h1Override: 'Como chegar no estado mental ideal para a prova da PP — foco, ansiedade e desempenho',
+  leadOverride: 'Reunimos conteúdo informativo sobre as estratégias que fazem diferença no dia da prova da Polícia Penal — como controlar a ansiedade, manter o foco em provas objetivas longas, o que comer e como dormir na véspera e o que fazer nas 24 horas que antecedem o exame. Para informações sobre o conteúdo programático do seu concurso, consulte o edital oficial.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Como controlar a ansiedade na véspera e no dia da prova da PM?',
+      q: 'Como controlar a ansiedade na véspera e no dia da prova da PP?',
       a: 'A ansiedade pré-prova é uma resposta fisiológica normal diante de situações de alta importância — o problema não é senti-la, mas deixar que ela comprometa o desempenho. Técnicas eficazes incluem respiração diafragmática (inspirar em 4 tempos, segurar em 4, expirar em 6), ancoragem em rotinas conhecidas (estudar no mesmo local, usar os mesmos materiais) e reduzir estímulos de alta intensidade nas 12 horas anteriores à prova — redes sociais, grupos de WhatsApp de concurseiros e revisões de última hora costumam amplificar a ansiedade sem agregar desempenho.',
     },
     {
@@ -1755,7 +1755,7 @@ const FOCO_NA_FARDA: RawConfig = {
       a: 'Em provas objetivas longas, a concentração tende a cair progressivamente. Estratégias que ajudam: responder primeiro as questões que você domina (gera confiança e economiza tempo), marcar as dúvidas para revisão posterior em vez de travar numa questão, e fazer microrrespiros de 10 segundos entre blocos de 10 questões — feche os olhos brevemente e respire fundo. Evite alterar respostas sem um motivo claro; a primeira leitura costuma ser mais confiável do que a revisão ansiosa.',
     },
     {
-      q: 'Como o sono e a alimentação afetam o desempenho no dia da prova da PM?',
+      q: 'Como o sono e a alimentação afetam o desempenho no dia da prova da PP?',
       a: 'O sono tem impacto direto na memória de trabalho, no tempo de reação e na capacidade de raciocínio — funções críticas em uma prova objetiva. Dormir menos de seis horas na noite anterior reduz significativamente o desempenho cognitivo, mesmo em candidatos bem preparados. Quanto à alimentação, prefira refeições de baixo índice glicêmico no dia da prova — carboidratos complexos e proteínas mantêm energia estável por mais tempo do que alimentos açucarados, que causam pico e queda rápidos de energia. Evite experimentar alimentos novos no dia; vá com o que seu organismo já conhece.',
     },
     {
@@ -1771,7 +1771,7 @@ const FOCO_NA_FARDA: RawConfig = {
 
 const GUIA_DO_PM: RawConfig = {
   hostname: 'guiadopm.click',
-  brand: 'Guia do PM',
+  brand: 'Guia do PP',
   siteSubtitle: 'Benefícios, Assistência e Recursos Institucionais para o Policial Militar',
   razaoSocial: 'Comex B2G LTDA',
   cnpj: '62548749000125',
@@ -1805,7 +1805,7 @@ const GUIA_DO_PM: RawConfig = {
     },
     {
       q: 'Como funciona o plano de saúde disponível para o policial militar e seus dependentes?',
-      a: 'A maioria das corporações estaduais oferece alguma modalidade de assistência à saúde — seja por meio de sistema próprio (policlínicas e hospitais militares), convênios com operadoras de saúde ou fundo de assistência gerido pela própria PM. A cobertura, o custeio e as condições de inclusão de dependentes variam bastante entre os estados. Em algumas corporações, o benefício é parcialmente custeado pelo estado; em outras, o policial arca com parte da mensalidade. O policial deve consultar o setor de recursos humanos da sua unidade para entender as opções disponíveis.',
+      a: 'A maioria das corporações estaduais oferece alguma modalidade de assistência à saúde — seja por meio de sistema próprio (policlínicas e hospitais militares), convênios com operadoras de saúde ou fundo de assistência gerido pela própria PP. A cobertura, o custeio e as condições de inclusão de dependentes variam bastante entre os estados. Em algumas corporações, o benefício é parcialmente custeado pelo estado; em outras, o policial arca com parte da mensalidade. O policial deve consultar o setor de recursos humanos da sua unidade para entender as opções disponíveis.',
     },
     {
       q: 'O policial militar tem acesso a previdência complementar ou cooperativas de crédito?',
@@ -1820,7 +1820,7 @@ const GUIA_DO_PM: RawConfig = {
 const MISSAO_FARDA: RawConfig = {
   hostname: 'missaofarda.click',
   brand: 'Missão Farda',
-  siteSubtitle: 'Vocação, Propósito e o Significado de Servir na Polícia Militar',
+  siteSubtitle: 'Vocação, Propósito e o Significado de Servir na Polícia Penal',
   razaoSocial: 'Jl Distribuidora Retiro Ltda.',
   cnpj: '62539537000181',
   cnpjFormatted: '62.539.537/0001-81',
@@ -1831,7 +1831,7 @@ const MISSAO_FARDA: RawConfig = {
   cep: '32050-510',
   enderecoCompleto: 'Rua Ilha do Retiro, 92, Loja Lj · Retiro · Contagem/MG · CEP 32050-510',
   canonicalUrl: 'https://www.missaofarda.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre vocação e carreira na Polícia Militar e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre vocação e carreira na Polícia Penal e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
   email: 'jldistribuidoraretiro@gmail.com',
   telefone: '(31) 97319-7498',
   cnae: '47.23-7-00 - Comércio varejista de bebidas',
@@ -1840,7 +1840,7 @@ const MISSAO_FARDA: RawConfig = {
   capitalSocial: 'R$ 30.000,00',
   breadcrumbLabel: 'Vocação e Propósito na Carreira de Policial Militar',
   h1Override: 'O que significa vestir a farda — vocação, missão e propósito na carreira policial',
-  leadOverride: 'Reunimos conteúdo informativo sobre o que motiva quem escolhe a carreira de policial militar, como a missão de servir se manifesta no dia a dia profissional e como conciliar valores pessoais com as exigências de uma instituição hierárquica. Para informações sobre processos seletivos, consulte o site da PM do seu estado.',
+  leadOverride: 'Reunimos conteúdo informativo sobre o que motiva quem escolhe a carreira de policial militar, como a missão de servir se manifesta no dia a dia profissional e como conciliar valores pessoais com as exigências de uma instituição hierárquica. Para informações sobre processos seletivos, consulte o site da PP do seu estado.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
@@ -1852,8 +1852,8 @@ const MISSAO_FARDA: RawConfig = {
       a: 'No dia a dia, a vocação se traduz em comprometimento com a missão mesmo em situações de alta pressão, na postura ativa diante de ocorrências que exigem iniciativa e na relação de respeito construída com a comunidade ao longo do tempo. Policiais que enxergam o serviço como missão tendem a manter conduta mais consistente, a buscar qualificação contínua e a enfrentar o desgaste da carreira com mais resiliência do que aqueles que ingressaram exclusivamente por estabilidade financeira.',
     },
     {
-      q: 'Qual é o papel da Polícia Militar na segurança pública da comunidade?',
-      a: 'A Polícia Militar é responsável pelo policiamento ostensivo e pela preservação da ordem pública — atua de forma visível, preventiva e reativa nas ruas, em eventos e em situações de emergência. Além do atendimento a ocorrências, a PM tem papel relevante no policiamento comunitário, na mediação de conflitos e na construção de vínculos de confiança com a população. A efetividade dessa missão depende tanto do preparo técnico quanto da postura ética e da qualidade da relação que cada policial estabelece com a comunidade em que atua.',
+      q: 'Qual é o papel da Polícia Penal na segurança pública da comunidade?',
+      a: 'A Polícia Penal é responsável pelo policiamento ostensivo e pela preservação da ordem pública — atua de forma visível, preventiva e reativa nas ruas, em eventos e em situações de emergência. Além do atendimento a ocorrências, a PP tem papel relevante no policiamento comunitário, na mediação de conflitos e na construção de vínculos de confiança com a população. A efetividade dessa missão depende tanto do preparo técnico quanto da postura ética e da qualidade da relação que cada policial estabelece com a comunidade em que atua.',
     },
     {
       q: 'Como conciliar os valores pessoais com as exigências institucionais da carreira policial?',
@@ -1868,7 +1868,7 @@ const MISSAO_FARDA: RawConfig = {
 const MINHA_FARDA: RawConfig = {
   hostname: 'minhafarda.click',
   brand: 'Minha Farda',
-  siteSubtitle: 'Composição, Cuidados e Regulamentos do Uniforme da Polícia Militar',
+  siteSubtitle: 'Composição, Cuidados e Regulamentos do Uniforme da Polícia Penal',
   razaoSocial: 'Ink Grafica LTDA',
   cnpj: '62550653000100',
   cnpjFormatted: '62.550.653/0001-00',
@@ -1879,32 +1879,32 @@ const MINHA_FARDA: RawConfig = {
   cep: '32115-170',
   enderecoCompleto: 'Rua Cruzeiro do Sul, 953, Loja · Novo Progresso · Contagem/MG · CEP 32115-170',
   canonicalUrl: 'https://www.minhafarda.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre o uniforme e o fardamento da Polícia Militar e não constituem orientação oficial de qualquer corporação. Este site é independente e não possui vínculo com nenhuma Polícia Militar estadual ou órgão público.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre o uniforme e o fardamento da Polícia Penal e não constituem orientação oficial de qualquer corporação. Este site é independente e não possui vínculo com nenhuma Polícia Penal estadual ou órgão público.',
   email: 'contatograficaink@gmail.com',
   telefone: '(31) 98384-9251',
   cnae: '18.22-9-99 - Serviços de acabamentos gráficos, exceto encadernação e plastificação',
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '03/09/2025',
   capitalSocial: 'R$ 115.000,00',
-  breadcrumbLabel: 'Uniforme e Fardamento da Polícia Militar',
-  h1Override: 'Tudo sobre o uniforme da PM — composição, cuidados e o que diz o regulamento',
-  leadOverride: 'Reunimos conteúdo informativo sobre o fardamento da Polícia Militar — quais peças compõem cada modalidade de uniforme, como conservar corretamente cada item, as regras de uso fora do serviço e como funciona o fornecimento do fardamento ao ingressar na corporação. Para informações oficiais, consulte o regulamento de uniformes da PM do seu estado.',
+  breadcrumbLabel: 'Uniforme e Fardamento da Polícia Penal',
+  h1Override: 'Tudo sobre o uniforme da PP — composição, cuidados e o que diz o regulamento',
+  leadOverride: 'Reunimos conteúdo informativo sobre o fardamento da Polícia Penal — quais peças compõem cada modalidade de uniforme, como conservar corretamente cada item, as regras de uso fora do serviço e como funciona o fornecimento do fardamento ao ingressar na corporação. Para informações oficiais, consulte o regulamento de uniformes da PP do seu estado.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Quais são os principais itens que compõem o uniforme da Polícia Militar?',
-      a: 'O fardamento da PM é composto por diferentes modalidades conforme a ocasião: o uniforme de serviço (diário) inclui calça, camisa ou gandola, coturno, quepe ou boné e cinto de guarnição. O uniforme de gala é utilizado em cerimônias e conta com peças adicionais como dolmã, calça com vivo e dragonas. Cada corporação estadual tem seu regulamento de uniformes específico, que define cores, insígnias, posicionamento de distintivos e regras de uso para cada modalidade.',
+      q: 'Quais são os principais itens que compõem o uniforme da Polícia Penal?',
+      a: 'O fardamento da PP é composto por diferentes modalidades conforme a ocasião: o uniforme de serviço (diário) inclui calça, camisa ou gandola, coturno, quepe ou boné e cinto de guarnição. O uniforme de gala é utilizado em cerimônias e conta com peças adicionais como dolmã, calça com vivo e dragonas. Cada corporação estadual tem seu regulamento de uniformes específico, que define cores, insígnias, posicionamento de distintivos e regras de uso para cada modalidade.',
     },
     {
-      q: 'Como cuidar e conservar adequadamente o uniforme da PM para mantê-lo em boas condições?',
+      q: 'Como cuidar e conservar adequadamente o uniforme da PP para mantê-lo em boas condições?',
       a: 'A conservação do uniforme começa pela lavagem correta: peças de tecido resistente como a gandola devem ser lavadas em água fria com sabão neutro para preservar a cor e o caimento. O coturno exige limpeza regular com flanela e graxa própria, além de impermeabilização periódica. Quepes e bonés não devem ser lavados na máquina — prefira limpeza com escova seca e pano úmido. Guardar o uniforme em local arejado, pendurado em cabide adequado, evita amassados e o aparecimento de mofo em regiões úmidas.',
     },
     {
-      q: 'Existem regras sobre o uso do uniforme da PM fora do horário de serviço?',
+      q: 'Existem regras sobre o uso do uniforme da PP fora do horário de serviço?',
       a: 'Sim. O uso do uniforme fora do serviço é regulado por cada corporação estadual e, em geral, é permitido apenas em situações específicas previstas no regulamento interno — como deslocamento para o trabalho ou em eventos autorizados pela corporação. O uso indevido do uniforme em ambientes que possam comprometer a imagem institucional é vedado e pode sujeitar o policial a procedimento disciplinar. Alguns estados permitem o porte de arma fora do serviço, mas com regras específicas sobre identificação e uniforme.',
     },
     {
-      q: 'Como funciona o fornecimento do uniforme ao ingressar na PM como novo policial?',
+      q: 'Como funciona o fornecimento do uniforme ao ingressar na PP como novo policial?',
       a: 'Em geral, a corporação fornece o kit inicial de fardamento ao recruta durante o curso de formação — incluindo os itens essenciais para o período de instrução. A quantidade e as peças fornecidas variam por estado, e alguns itens podem exigir aquisição complementar pelo próprio policial ao longo da carreira. Após o ingresso, o policial tem direito a reposição periódica de itens do fardamento conforme regulamento interno, que define prazos e condições para substituição das peças desgastadas.',
     },
   ],
@@ -1916,7 +1916,7 @@ const MINHA_FARDA: RawConfig = {
 const PROXIMO_EDITAL: RawConfig = {
   hostname: 'proximoedital.click',
   brand: 'Próximo Edital',
-  siteSubtitle: 'Como Monitorar e Antecipar Editais de Concursos da Polícia Militar',
+  siteSubtitle: 'Como Monitorar e Antecipar Editais de Concursos da Polícia Penal',
   razaoSocial: 'Br Motos LTDA',
   cnpj: '62550094000120',
   cnpjFormatted: '62.550.094/0001-20',
@@ -1934,17 +1934,17 @@ const PROXIMO_EDITAL: RawConfig = {
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '03/09/2025',
   capitalSocial: 'R$ 270.000,00',
-  breadcrumbLabel: 'Monitoramento de Editais e Previsões de Concursos da PM',
-  h1Override: 'Como acompanhar o próximo edital de concurso da PM e não perder nenhuma oportunidade',
-  leadOverride: 'Reunimos conteúdo informativo sobre como monitorar a publicação de novos editais de concursos da Polícia Militar — quais fontes acompanhar, quais estados abrem seleções com maior regularidade e como aproveitar o período de espera entre editais para chegar preparado. Para informações oficiais, consulte o Diário Oficial do seu estado e o site da PM estadual.',
+  breadcrumbLabel: 'Monitoramento de Editais e Previsões de Concursos da PP',
+  h1Override: 'Como acompanhar o próximo edital de concurso da PP e não perder nenhuma oportunidade',
+  leadOverride: 'Reunimos conteúdo informativo sobre como monitorar a publicação de novos editais de concursos da Polícia Penal — quais fontes acompanhar, quais estados abrem seleções com maior regularidade e como aproveitar o período de espera entre editais para chegar preparado. Para informações oficiais, consulte o Diário Oficial do seu estado e o site da PP estadual.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Como saber quando vai sair o próximo edital de concurso da PM do meu estado?',
-      a: 'Não existe um calendário oficial antecipado de concursos da PM — cada edital depende de autorização legislativa, dotação orçamentária e decisão do governo estadual. A forma mais confiável de se antecipar é acompanhar o Diário Oficial do estado, o site institucional da PM estadual e as sessões da Assembleia Legislativa, onde projetos de lei autorizando concursos costumam tramitar meses antes da publicação do edital. Portais especializados em concursos públicos também monitoram esses movimentos e publicam notícias sobre previsões e autorizações em andamento.',
+      q: 'Como saber quando vai sair o próximo edital de concurso da PP do meu estado?',
+      a: 'Não existe um calendário oficial antecipado de concursos da PP — cada edital depende de autorização legislativa, dotação orçamentária e decisão do governo estadual. A forma mais confiável de se antecipar é acompanhar o Diário Oficial do estado, o site institucional da PP estadual e as sessões da Assembleia Legislativa, onde projetos de lei autorizando concursos costumam tramitar meses antes da publicação do edital. Portais especializados em concursos públicos também monitoram esses movimentos e publicam notícias sobre previsões e autorizações em andamento.',
     },
     {
-      q: 'Quais estados da PM costumam abrir concursos com maior regularidade?',
+      q: 'Quais estados da PP costumam abrir concursos com maior regularidade?',
       a: 'Estados com maior efetivo e maior taxa de saída por aposentadoria tendem a abrir concursos com mais frequência — São Paulo, Minas Gerais, Bahia e Rio Grande do Sul historicamente figuram entre as corporações que realizam seleções em intervalos menores. Estados com menor efetivo ou orçamento mais restrito podem passar vários anos sem abrir vagas. Acompanhar o histórico de editais publicados nos últimos cinco anos é uma boa forma de estimar a cadência de cada corporação.',
     },
     {
@@ -1953,7 +1953,7 @@ const PROXIMO_EDITAL: RawConfig = {
     },
     {
       q: 'Como se manter atualizado sobre novos editais de concursos militares sem depender de uma única fonte?',
-      a: 'A estratégia mais robusta combina múltiplas fontes: ativar alertas do Google para termos como "edital PM [estado]", assinar o Diário Oficial estadual por e-mail quando disponível, seguir os perfis oficiais da PM nas redes sociais e acompanhar grupos e comunidades de concurseiros do seu estado. Cada fonte tem velocidade e confiabilidade diferentes — o Diário Oficial é a fonte primária e definitiva, enquanto portais e redes sociais agilizam o acesso à informação, mas podem conter imprecisões antes da confirmação oficial.',
+      a: 'A estratégia mais robusta combina múltiplas fontes: ativar alertas do Google para termos como "edital PP [estado]", assinar o Diário Oficial estadual por e-mail quando disponível, seguir os perfis oficiais da PP nas redes sociais e acompanhar grupos e comunidades de concurseiros do seu estado. Cada fonte tem velocidade e confiabilidade diferentes — o Diário Oficial é a fonte primária e definitiva, enquanto portais e redes sociais agilizam o acesso à informação, mas podem conter imprecisões antes da confirmação oficial.',
     },
   ],
   // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
@@ -1963,7 +1963,7 @@ const PROXIMO_EDITAL: RawConfig = {
 
 const PANORAMA_PM: RawConfig = {
   hostname: 'panoramapm.click',
-  brand: 'Panorama PM',
+  brand: 'Panorama PP',
   siteSubtitle: 'Do Ingresso à Aposentadoria: a Carreira Completa do Policial Militar',
   razaoSocial: 'Anacarlaperiodontia LTDA',
   cnpj: '62523695000143',
@@ -1975,7 +1975,7 @@ const PANORAMA_PM: RawConfig = {
   cep: '44051-335',
   enderecoCompleto: 'Avenida Governador Joao Durval Carneiro, 3803, Edif Charmant Sala 913 · Sao Joao · Feira de Santana/BA · CEP 44051-335',
   canonicalUrl: 'https://www.panoramapm.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre a estrutura de carreira da Polícia Militar e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre a estrutura de carreira da Polícia Penal e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
   email: 'acmpperiodontia@gmail.com',
   telefone: '(71) 98605-0042',
   cnae: '86.30-5-04 - Atividade odontológica',
@@ -1984,7 +1984,7 @@ const PANORAMA_PM: RawConfig = {
   capitalSocial: 'R$ 130.000,00',
   breadcrumbLabel: 'Trajetória Completa da Carreira de Policial Militar',
   h1Override: 'A carreira de policial militar do início ao fim — graduações, especialidades e aposentadoria',
-  leadOverride: 'Reunimos conteúdo informativo sobre toda a trajetória possível dentro da Polícia Militar — da formação como soldado à progressão de graduações, especialidades disponíveis, possibilidade de acesso ao CFO e como funciona a aposentadoria. Para informações oficiais, consulte sempre a PM do seu estado.',
+  leadOverride: 'Reunimos conteúdo informativo sobre toda a trajetória possível dentro da Polícia Penal — da formação como soldado à progressão de graduações, especialidades disponíveis, possibilidade de acesso ao CFO e como funciona a aposentadoria. Para informações oficiais, consulte sempre a PP do seu estado.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
@@ -1996,8 +1996,8 @@ const PANORAMA_PM: RawConfig = {
       a: 'O tempo varia por corporação estadual, mas em média um soldado pode chegar ao posto de terceiro-sargento em oito a doze anos de serviço, após cumprir os interstícios mínimos em cada graduação, concluir o Curso de Formação de Sargentos (CFS) e ser aprovado nas avaliações de desempenho. Estados com maior efetivo e rotatividade tendem a ter progressão mais rápida; corporações menores podem apresentar estagnação em determinadas graduações por ausência de vagas.',
     },
     {
-      q: 'Quais são as principais especialidades disponíveis dentro da Polícia Militar?',
-      a: 'As PMs estaduais oferecem diversas especialidades além do policiamento ostensivo convencional: policiamento de trânsito (BPTran), policiamento ambiental, policiamento montado (cavalaria), unidades de operações especiais (COE, BOPE, GATE), policiamento comunitário, inteligência policial e aviação. O acesso a cada especialidade depende de tempo de serviço, requisitos físicos específicos e aprovação em processo seletivo interno. Cada especialização abre um percurso diferente dentro da carreira.',
+      q: 'Quais são as principais especialidades disponíveis dentro da Polícia Penal?',
+      a: 'As PPs estaduais oferecem diversas especialidades além do policiamento ostensivo convencional: policiamento de trânsito (BPTran), policiamento ambiental, policiamento montado (cavalaria), unidades de operações especiais (COE, BOPE, GATE), policiamento comunitário, inteligência policial e aviação. O acesso a cada especialidade depende de tempo de serviço, requisitos físicos específicos e aprovação em processo seletivo interno. Cada especialização abre um percurso diferente dentro da carreira.',
     },
     {
       q: 'Como funciona a aposentadoria do policial militar e quais são os requisitos?',
@@ -2011,8 +2011,8 @@ const PANORAMA_PM: RawConfig = {
 
 const CRONOGRAMA_PM: RawConfig = {
   hostname: 'cronogramapm.click',
-  brand: 'Cronograma PM',
-  siteSubtitle: 'Como Organizar e Gerenciar o Tempo de Estudos para o Concurso da PM',
+  brand: 'Cronograma PP',
+  siteSubtitle: 'Como Organizar e Gerenciar o Tempo de Estudos para o Concurso da PP',
   razaoSocial: 'Cop Odontologia Premium LTDA',
   cnpj: '62509737000191',
   cnpjFormatted: '62.509.737/0001-91',
@@ -2030,17 +2030,17 @@ const CRONOGRAMA_PM: RawConfig = {
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '01/09/2025',
   capitalSocial: 'R$ 200.000,00',
-  breadcrumbLabel: 'Cronograma e Gestão de Tempo para Concursos da PM',
-  h1Override: 'Como montar um cronograma de estudos que realmente funciona para o concurso da PM',
-  leadOverride: 'Reunimos conteúdo informativo sobre como estruturar e adaptar um cronograma de estudos para concursos da Polícia Militar — distribuição de horas por disciplina, estratégias para quem trabalha em tempo integral e como ajustar o ritmo nas semanas que antecedem a prova. Para informações oficiais sobre editais, consulte sempre a PM do seu estado.',
+  breadcrumbLabel: 'Cronograma e Gestão de Tempo para Concursos da PP',
+  h1Override: 'Como montar um cronograma de estudos que realmente funciona para o concurso da PP',
+  leadOverride: 'Reunimos conteúdo informativo sobre como estruturar e adaptar um cronograma de estudos para concursos da Polícia Penal — distribuição de horas por disciplina, estratégias para quem trabalha em tempo integral e como ajustar o ritmo nas semanas que antecedem a prova. Para informações oficiais sobre editais, consulte sempre a PP do seu estado.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Como montar um cronograma semanal de estudos para o concurso da PM?',
+      q: 'Como montar um cronograma semanal de estudos para o concurso da PP?',
       a: 'Um cronograma semanal eficiente começa pelo mapeamento do tempo disponível: some as horas livres de segunda a domingo, desconte sono, alimentação, deslocamento e obrigações fixas. Com o tempo real em mãos, distribua as disciplinas do edital proporcionalmente ao seu peso na prova e à sua dificuldade atual. Reserve ao menos dois blocos semanais para revisão do conteúdo já estudado e um bloco para resolução de questões — sem isso, o cronograma vira acumulação de conteúdo sem fixação.',
     },
     {
-      q: 'Como distribuir o tempo de estudo entre as disciplinas do concurso da PM?',
+      q: 'Como distribuir o tempo de estudo entre as disciplinas do concurso da PP?',
       a: 'A distribuição ideal parte da análise do edital: verifique quantas questões cada disciplina representa na prova objetiva e qual é seu percentual de acerto atual nessa matéria. Disciplinas com alto peso e baixo domínio recebem mais tempo; disciplinas já consolidadas entram em modo de manutenção com revisões espaçadas. Matemática e raciocínio lógico costumam exigir estudo diário para manter o ritmo, enquanto história e geografia permitem blocos alternados sem perda significativa de desempenho.',
     },
     {
@@ -2060,7 +2060,7 @@ const CRONOGRAMA_PM: RawConfig = {
 const EDITAL_MILITAR: RawConfig = {
   hostname: 'editalmilitar.click',
   brand: 'Edital Militar',
-  siteSubtitle: 'Como Ler, Interpretar e Não Perder Nada em Editais de Concursos da PM',
+  siteSubtitle: 'Como Ler, Interpretar e Não Perder Nada em Editais de Concursos da PP',
   razaoSocial: 'Bittencourt Berenguer Cesar Ativos LTDA',
   cnpj: '62532283000170',
   cnpjFormatted: '62.532.283/0001-70',
@@ -2079,13 +2079,13 @@ const EDITAL_MILITAR: RawConfig = {
   dataAbertura: '02/09/2025',
   capitalSocial: 'R$ 1.000.000,00',
   breadcrumbLabel: 'Leitura e Interpretação de Editais de Concursos Militares',
-  h1Override: 'Como ler um edital de concurso da PM sem deixar passar nenhum detalhe crítico',
-  leadOverride: 'Reunimos conteúdo informativo sobre como interpretar editais de concursos da Polícia Militar — quais informações verificar primeiro, critérios de eliminação que candidatos costumam ignorar, como entender tabelas de pontuação e como acompanhar prazos de recurso em cada fase. Para informações oficiais, consulte sempre a banca organizadora e o site da PM do seu estado.',
+  h1Override: 'Como ler um edital de concurso da PP sem deixar passar nenhum detalhe crítico',
+  leadOverride: 'Reunimos conteúdo informativo sobre como interpretar editais de concursos da Polícia Penal — quais informações verificar primeiro, critérios de eliminação que candidatos costumam ignorar, como entender tabelas de pontuação e como acompanhar prazos de recurso em cada fase. Para informações oficiais, consulte sempre a banca organizadora e o site da PP do seu estado.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Quais são as informações mais críticas para verificar imediatamente ao sair um edital da PM?',
-      a: 'Ao abrir um edital de concurso da PM, priorize verificar: limite de idade na data da inscrição ou da posse (os critérios variam), escolaridade exigida, requisitos de idoneidade moral e antecedentes, número de vagas por cargo e localidade, e o cronograma completo — da inscrição até a nomeação estimada. Em seguida, leia atentamente as causas de eliminação sumária, que costumam incluir condições médicas, tatuagens visíveis em farda e antecedentes criminais específicos.',
+      q: 'Quais são as informações mais críticas para verificar imediatamente ao sair um edital da PP?',
+      a: 'Ao abrir um edital de concurso da PP, priorize verificar: limite de idade na data da inscrição ou da posse (os critérios variam), escolaridade exigida, requisitos de idoneidade moral e antecedentes, número de vagas por cargo e localidade, e o cronograma completo — da inscrição até a nomeação estimada. Em seguida, leia atentamente as causas de eliminação sumária, que costumam incluir condições médicas, tatuagens visíveis em farda e antecedentes criminais específicos.',
     },
     {
       q: 'Quais critérios de eliminação candidatos frequentemente ignoram ao ler um edital militar?',
@@ -2109,7 +2109,7 @@ const EDITAL_MILITAR: RawConfig = {
 const FUTURO_SOLDADO: RawConfig = {
   hostname: 'futurosoldado.click',
   brand: 'Futuro Soldado',
-  siteSubtitle: 'A Transformação de Vida de Quem Ingressa na Polícia Militar como Soldado',
+  siteSubtitle: 'A Transformação de Vida de Quem Ingressa na Polícia Penal como Soldado',
   razaoSocial: 'Mb Internacional LTDA',
   cnpj: '62466825000153',
   cnpjFormatted: '62.466.825/0001-53',
@@ -2120,24 +2120,24 @@ const FUTURO_SOLDADO: RawConfig = {
   cep: '07174-005',
   enderecoCompleto: 'Avenida Papa Joao Paulo I, 4006, Galpao02 · Residencial Parque Cumbica · Guarulhos/SP · CEP 07174-005',
   canonicalUrl: 'https://www.futurosoldado.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre o ingresso e a formação de soldados da Polícia Militar e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre o ingresso e a formação de soldados da Polícia Penal e não constituem consultoria jurídica ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial ou órgão público.',
   email: 'oregonempresarial@gmail.com',
   telefone: '(15) 99628-4851',
   cnae: '82.11-3-00 - Serviços combinados de escritório e apoio administrativo',
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '29/08/2025',
   capitalSocial: 'R$ 860.000,00',
-  breadcrumbLabel: 'Formação e Vida de Soldado na Polícia Militar',
-  h1Override: 'O que realmente muda quando você se torna soldado da Polícia Militar',
-  leadOverride: 'Reunimos conteúdo informativo sobre a transformação que acompanha o ingresso na PM como soldado — como é a rotina no curso de recrutas, os desafios físicos e psicológicos da formação e como a família se adapta a essa nova realidade. Para informações oficiais sobre processos seletivos, consulte sempre o site da PM do seu estado.',
+  breadcrumbLabel: 'Formação e Vida de Soldado na Polícia Penal',
+  h1Override: 'O que realmente muda quando você se torna soldado da Polícia Penal',
+  leadOverride: 'Reunimos conteúdo informativo sobre a transformação que acompanha o ingresso na PP como soldado — como é a rotina no curso de recrutas, os desafios físicos e psicológicos da formação e como a família se adapta a essa nova realidade. Para informações oficiais sobre processos seletivos, consulte sempre o site da PP do seu estado.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'O que muda na vida de uma pessoa ao se tornar soldado da Polícia Militar?',
-      a: 'Ingressar na PM como soldado representa uma mudança profunda — não apenas profissional, mas de identidade e rotina. O novo policial passa a conviver com hierarquia rígida, responsabilidade coletiva e uma cultura institucional distinta do ambiente civil. A forma de se vestir, de se comunicar dentro da corporação e de gerir o tempo fora do serviço se transforma. Para muitos, é a primeira experiência com um ambiente de alta exigência disciplinar sustentada, o que exige adaptação gradual e intencional.',
+      q: 'O que muda na vida de uma pessoa ao se tornar soldado da Polícia Penal?',
+      a: 'Ingressar na PP como soldado representa uma mudança profunda — não apenas profissional, mas de identidade e rotina. O novo policial passa a conviver com hierarquia rígida, responsabilidade coletiva e uma cultura institucional distinta do ambiente civil. A forma de se vestir, de se comunicar dentro da corporação e de gerir o tempo fora do serviço se transforma. Para muitos, é a primeira experiência com um ambiente de alta exigência disciplinar sustentada, o que exige adaptação gradual e intencional.',
     },
     {
-      q: 'Como é a rotina no curso de formação de soldados da Polícia Militar?',
+      q: 'Como é a rotina no curso de formação de soldados da Polícia Penal?',
       a: 'O curso de formação de soldados (recrutas) combina instrução teórica — legislação, direitos humanos, ética policial — com treinamento físico intensivo e instrução tática. A rotina é estruturada em blocos fixos: diana, atividade física matinal, aulas, instrução prática e recolher. O regime costuma ser de internato total ou parcial durante o período de formação, com saídas controladas. A duração varia por estado, geralmente entre três e seis meses.',
     },
     {
@@ -2145,8 +2145,8 @@ const FUTURO_SOLDADO: RawConfig = {
       a: 'No campo físico, os maiores desafios costumam ser a adaptação ao volume e à intensidade do treinamento diário, especialmente para candidatos que chegam com condicionamento aeróbico abaixo da média. No campo psicológico, enfrentar a distância da família, a convivência forçada com desconhecidos em ambiente de pressão e a exigência de subordinação constante são os pontos que mais demandam resiliência. Corporações estruturadas oferecem suporte psicológico durante a formação para auxiliar nessa transição.',
     },
     {
-      q: 'Como a família se adapta à nova rotina de quem ingressa na PM como soldado?',
-      a: 'A adaptação familiar é um dos aspectos menos discutidos — e mais relevantes — de quem ingressa na PM. A escala de plantão, as convocações em datas especiais e os períodos de formação com internato alteram a dinâmica doméstica de forma significativa. Famílias que passam por esse processo relatam que a comunicação clara sobre as exigências da carreira, ainda durante o processo seletivo, facilita muito a adaptação. Com o tempo, a maioria encontra um equilíbrio entre os compromissos institucionais e a vida pessoal.',
+      q: 'Como a família se adapta à nova rotina de quem ingressa na PP como soldado?',
+      a: 'A adaptação familiar é um dos aspectos menos discutidos — e mais relevantes — de quem ingressa na PP. A escala de plantão, as convocações em datas especiais e os períodos de formação com internato alteram a dinâmica doméstica de forma significativa. Famílias que passam por esse processo relatam que a comunicação clara sobre as exigências da carreira, ainda durante o processo seletivo, facilita muito a adaptação. Com o tempo, a maioria encontra um equilíbrio entre os compromissos institucionais e a vida pessoal.',
     },
   ],
   // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
@@ -2157,7 +2157,7 @@ const FUTURO_SOLDADO: RawConfig = {
 const QUARTEL_CONCURSEIRO: RawConfig = {
   hostname: 'quarteldoconcurseiro.com',
   brand: 'Quartel do Concurseiro',
-  siteSubtitle: 'Disciplina, Mentalidade e Hábitos de Alta Performance para Passar na PM',
+  siteSubtitle: 'Disciplina, Mentalidade e Hábitos de Alta Performance para Passar na PP',
   razaoSocial: 'Ricardo Pereira Sanches Tecnologia da Informacao LTDA',
   cnpj: '62446657000134',
   cnpjFormatted: '62.446.657/0001-34',
@@ -2175,9 +2175,9 @@ const QUARTEL_CONCURSEIRO: RawConfig = {
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '28/08/2025',
   capitalSocial: 'R$ 1.000,00',
-  breadcrumbLabel: 'Disciplina e Mentalidade para Concursos da PM',
+  breadcrumbLabel: 'Disciplina e Mentalidade para Concursos da PP',
   h1Override: 'Como transformar disciplina em aprovação — a mentalidade que separa quem passa de quem desiste',
-  leadOverride: 'Reunimos conteúdo informativo sobre os hábitos, a rotina e a resiliência que fazem a diferença em uma preparação para concursos da Polícia Militar — desde montar uma rotina inflexível até lidar com reprovações sem perder o rumo. Para informações oficiais sobre editais e processos seletivos, consulte sempre a PM do seu estado.',
+  leadOverride: 'Reunimos conteúdo informativo sobre os hábitos, a rotina e a resiliência que fazem a diferença em uma preparação para concursos da Polícia Penal — desde montar uma rotina inflexível até lidar com reprovações sem perder o rumo. Para informações oficiais sobre editais e processos seletivos, consulte sempre a PP do seu estado.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
@@ -2185,7 +2185,7 @@ const QUARTEL_CONCURSEIRO: RawConfig = {
       a: 'O método militar de treinamento tem muito a ensinar ao concurseiro: horários fixos e inegociáveis, metas diárias mensuráveis, rituais de início e encerramento de sessão de estudo e tolerância zero para justificativas. Estabelecer uma rotina com acordar no mesmo horário, blocos de foco definidos e pausas planejadas reduz a dependência de motivação — que oscila — e constrói o hábito que sustenta a preparação a longo prazo.',
     },
     {
-      q: 'Como manter a motivação durante uma preparação longa e desgastante para a PM?',
+      q: 'Como manter a motivação durante uma preparação longa e desgastante para a PP?',
       a: 'Motivação é combustível que acaba; disciplina é o motor que mantém o veículo em movimento. O segredo é transformar o estudo em rotina automática, independente do estado emocional do dia. Além disso, dividir a meta final em marcos menores (dominar uma disciplina, atingir um percentual em simulado) cria pequenas vitórias que realimentam o engajamento. Registrar o progresso diário — mesmo que mínimo — é uma das ferramentas mais eficazes para sustentar a consistência.',
     },
     {
@@ -2205,8 +2205,8 @@ const QUARTEL_CONCURSEIRO: RawConfig = {
 
 const PROJETO_PM_2026: RawConfig = {
   hostname: 'projetopm2026.click',
-  brand: 'Projeto PM 2026',
-  siteSubtitle: 'Planejamento Estratégico de Preparação para Concursos da PM em 2026',
+  brand: 'Projeto PP 2026',
+  siteSubtitle: 'Planejamento Estratégico de Preparação para Concursos da PP em 2026',
   razaoSocial: 'Furquim Soccer Assessoria Esportiva LTDA',
   cnpj: '62453437000138',
   cnpjFormatted: '62.453.437/0001-38',
@@ -2217,33 +2217,33 @@ const PROJETO_PM_2026: RawConfig = {
   cep: '07110-090',
   enderecoCompleto: 'Rua Diogo Farias, 181, Sala 1312 · Centro · Guarulhos/SP · CEP 07110-090',
   canonicalUrl: 'https://www.projetopm2026.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre estratégias de preparação para concursos públicos da Polícia Militar e não constituem garantia de aprovação ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial, banca organizadora ou órgão público.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre estratégias de preparação para concursos públicos da Polícia Penal e não constituem garantia de aprovação ou orientação sobre casos individuais. Este site é independente e não possui vínculo com qualquer corporação policial, banca organizadora ou órgão público.',
   email: 'rodrigoneno24@gmail.com',
   telefone: '(11) 96342-4395',
   cnae: '74.90-1-05 - Agenciamento de profissionais para atividades esportivas, culturais e artísticas',
   naturezaJuridica: 'Sociedade Empresária Limitada',
   dataAbertura: '28/08/2025',
   capitalSocial: 'R$ 10.000,00',
-  breadcrumbLabel: 'Planejamento e Estratégia para Concursos da PM 2026',
-  h1Override: 'Como montar um projeto de aprovação para o concurso da PM em 2026',
-  leadOverride: 'Reunimos conteúdo informativo sobre como estruturar uma preparação estratégica para os concursos da Polícia Militar — escolha do estado-alvo, cronograma de estudos por disciplina, treinamento físico para o TAF, acompanhamento de editais publicados em 2026 e gestão de desempenho nos simulados. Para informações oficiais sobre editais, consulte o site da PM do seu estado.',
+  breadcrumbLabel: 'Planejamento e Estratégia para Concursos da PP 2026',
+  h1Override: 'Como montar um projeto de aprovação para o concurso da PP em 2026',
+  leadOverride: 'Reunimos conteúdo informativo sobre como estruturar uma preparação estratégica para os concursos da Polícia Penal — escolha do estado-alvo, cronograma de estudos por disciplina, treinamento físico para o TAF, acompanhamento de editais publicados em 2026 e gestão de desempenho nos simulados. Para informações oficiais sobre editais, consulte o site da PP do seu estado.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Como estruturar um plano de estudos eficiente para um concurso da PM?',
+      q: 'Como estruturar um plano de estudos eficiente para um concurso da PP?',
       a: 'Um plano de estudos eficiente começa pelo edital: mapeie as disciplinas exigidas, o peso de cada uma na prova e a distribuição histórica de questões. Em seguida, avalie seu nível atual em cada matéria e destine mais horas às disciplinas com maior lacuna de conhecimento. Divida o conteúdo em ciclos semanais com revisões periódicas, intercalando teoria, resolução de questões e simulados cronometrados para simular as condições reais da prova.',
     },
     {
-      q: 'Quantos meses de preparação são necessários para passar em um concurso da PM?',
+      q: 'Quantos meses de preparação são necessários para passar em um concurso da PP?',
       a: 'O tempo ideal varia conforme o nível de conhecimento inicial do candidato, a concorrência do edital e o quantitativo de vagas. Candidatos sem base nas disciplinas jurídicas e de língua portuguesa costumam precisar de 12 a 18 meses de estudo consistente. Quem já tem domínio de parte do conteúdo pode conseguir resultados em períodos menores. O fator determinante não é a duração, mas a regularidade e a qualidade da preparação diária.',
     },
     {
-      q: 'Como equilibrar a preparação intelectual e o treinamento físico para o processo seletivo da PM?',
+      q: 'Como equilibrar a preparação intelectual e o treinamento físico para o processo seletivo da PP?',
       a: 'A dica central é tratar o TAF (Teste de Aptidão Física) com a mesma seriedade das provas teóricas: defina metas claras para cada prova física (corrida, flexões, abdominais) com base nos critérios do edital e inclua treinos específicos na rotina semanal. Alternar dias de estudos intensos com treinos aeróbicos ajuda na concentração e reduz o estresse acumulado. Comece o condicionamento físico desde o início da preparação, sem deixar para os últimos meses.',
     },
     {
-      q: 'Como acompanhar editais abertos da PM e não perder prazos de inscrição?',
-      a: 'A forma mais confiável é monitorar diretamente o Diário Oficial do estado de interesse e o site institucional da PM estadual, além de portais de concursos públicos que centralizam publicações de editais. Defina uma rotina semanal de consulta a essas fontes e, quando identificar um edital, leia o documento completo antes de se inscrever — verificando requisitos de idade, escolaridade, antecedentes e documentação exigida.',
+      q: 'Como acompanhar editais abertos da PP e não perder prazos de inscrição?',
+      a: 'A forma mais confiável é monitorar diretamente o Diário Oficial do estado de interesse e o site institucional da PP estadual, além de portais de concursos públicos que centralizam publicações de editais. Defina uma rotina semanal de consulta a essas fontes e, quando identificar um edital, leia o documento completo antes de se inscrever — verificando requisitos de idade, escolaridade, antecedentes e documentação exigida.',
     },
   ],
   // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente
@@ -2254,7 +2254,7 @@ const PROJETO_PM_2026: RawConfig = {
 
 const PM_DESCOMPLICADA: RawConfig = {
   hostname: 'pmdescomplicada.click',
-  brand: 'PM Descomplicada',
+  brand: 'PP Descomplicada',
   siteSubtitle: 'Rotina, Benefícios e Direitos do Policial Militar sem Complicação',
   razaoSocial: 'Mulheres do Queijo Ltda.',
   cnpj: '56048934000158',
@@ -2275,23 +2275,23 @@ const PM_DESCOMPLICADA: RawConfig = {
   capitalSocial: 'R$ 20.000,00',
   breadcrumbLabel: 'Rotina, Benefícios e Direitos na Carreira Policial Militar',
   h1Override: 'Como é realmente a vida de policial militar — rotina, direitos e o que ninguém conta antes',
-  leadOverride: 'Reunimos conteúdo informativo sobre os aspectos da PM que candidatos e novos integrantes mais perguntam — escala de plantão, benefícios além do salário, solicitação de férias e licenças e o que a vida no quartel realmente envolve. Para informações oficiais, consulte sempre a corporação do seu estado.',
+  leadOverride: 'Reunimos conteúdo informativo sobre os aspectos da PP que candidatos e novos integrantes mais perguntam — escala de plantão, benefícios além do salário, solicitação de férias e licenças e o que a vida no quartel realmente envolve. Para informações oficiais, consulte sempre a corporação do seu estado.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
     {
-      q: 'Como funciona a escala de plantão na Polícia Militar e o que esperar da rotina de trabalho?',
-      a: 'A maioria das corporações estaduais adota o sistema de escala 24×72 — um turno de 24 horas de serviço seguido de 72 horas de folga — embora algumas PMs utilizem escalas de 12×36 ou modalidades específicas para determinadas funções. O policial em regime de plantão pode ser acionado durante a folga em situações de emergência ou eventos de grande porte, conforme regulamento interno da corporação.',
+      q: 'Como funciona a escala de plantão na Polícia Penal e o que esperar da rotina de trabalho?',
+      a: 'A maioria das corporações estaduais adota o sistema de escala 24×72 — um turno de 24 horas de serviço seguido de 72 horas de folga — embora algumas PPs utilizem escalas de 12×36 ou modalidades específicas para determinadas funções. O policial em regime de plantão pode ser acionado durante a folga em situações de emergência ou eventos de grande porte, conforme regulamento interno da corporação.',
     },
     {
       q: 'Quais benefícios e vantagens a carreira de policial militar oferece além do salário base?',
-      a: 'Além do vencimento base, o policial militar costuma ter direito a adicionais como gratificação de risco de vida, adicional noturno, auxílio-alimentação, auxílio-transporte, plano de saúde corporativo e, em muitos estados, acesso a cooperativas de crédito com condições diferenciadas. Os benefícios variam por corporação estadual e pelo posto ou graduação ocupado, sendo importante consultar o plano de cargos e salários específico da PM de interesse.',
+      a: 'Além do vencimento base, o policial militar costuma ter direito a adicionais como gratificação de risco de vida, adicional noturno, auxílio-alimentação, auxílio-transporte, plano de saúde corporativo e, em muitos estados, acesso a cooperativas de crédito com condições diferenciadas. Os benefícios variam por corporação estadual e pelo posto ou graduação ocupado, sendo importante consultar o plano de cargos e salários específico da PP de interesse.',
     },
     {
       q: 'Como funciona a solicitação de férias e licenças para o policial militar em serviço ativo?',
-      a: 'As férias e licenças seguem regulamentação própria de cada PM estadual, geralmente prevista no Estatuto dos Militares Estaduais. O policial tem direito a férias anuais remuneradas, licença-saúde, licença para tratar de interesses particulares e, conforme o estado, licença-prêmio por tempo de serviço. As solicitações tramitam via requerimento na unidade de lotação, sujeito à escala de necessidades operacionais e aprovação pela chefia imediata.',
+      a: 'As férias e licenças seguem regulamentação própria de cada PP estadual, geralmente prevista no Estatuto dos Militares Estaduais. O policial tem direito a férias anuais remuneradas, licença-saúde, licença para tratar de interesses particulares e, conforme o estado, licença-prêmio por tempo de serviço. As solicitações tramitam via requerimento na unidade de lotação, sujeito à escala de necessidades operacionais e aprovação pela chefia imediata.',
     },
     {
-      q: 'O que os candidatos geralmente só descobrem sobre a PM depois que já ingressaram?',
+      q: 'O que os candidatos geralmente só descobrem sobre a PP depois que já ingressaram?',
       a: 'Entre os pontos que costumam surpreender estão: a intensidade da formação no curso de recrutas, que vai muito além do preparo físico e inclui disciplina rígida, hierarquia e protocolos institucionais; a variação significativa de funções disponíveis (policiamento ostensivo, administrativo, especialidades técnicas); e a diferença entre o trabalho na capital e no interior, que impacta escala, estrutura e remuneração. Conversar com policiais militares em serviço ativo é a melhor forma de construir expectativas realistas.',
     },
   ],
@@ -2314,7 +2314,7 @@ const ROTA_POLICIAL: RawConfig = {
   cep: '72130-730',
   enderecoCompleto: 'Setor Qnh Area Especial (Cemiterio), SN · Taguatinga Norte · Brasília/DF · CEP 72130-730',
   canonicalUrl: 'https://www.rotapolicial.click/',
-  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre procedimentos operacionais no policiamento e não constituem orientação jurídica ou instrução oficial de qualquer corporação. Este site é independente e não possui vínculo com nenhuma Polícia Militar estadual ou órgão público.',
+  disclaimer: 'As informações veiculadas neste site têm caráter exclusivamente informativo sobre procedimentos operacionais no policiamento e não constituem orientação jurídica ou instrução oficial de qualquer corporação. Este site é independente e não possui vínculo com nenhuma Polícia Penal estadual ou órgão público.',
   email: 'alemar.gestaoenegocios@gmail.com',
   telefone: '(61) 99699-8990',
   cnae: '47.89-0-99 - Comércio varejista de outros produtos não especificados anteriormente',
@@ -2322,7 +2322,7 @@ const ROTA_POLICIAL: RawConfig = {
   dataAbertura: '10/10/2024',
   capitalSocial: 'R$ 15.000,00',
   breadcrumbLabel: 'Rotina Operacional e Protocolos de Patrulhamento',
-  h1Override: 'Como funciona o serviço operacional de patrulhamento na Polícia Militar',
+  h1Override: 'Como funciona o serviço operacional de patrulhamento na Polícia Penal',
   leadOverride: 'Reunimos conteúdo informativo sobre os principais procedimentos da rotina operacional policial — abordagens veiculares e pessoais, comunicação via rádio, elaboração de Boletim de Ocorrência e critérios legais para o uso proporcional da força. Consulte sempre os regulamentos e a gestão da sua corporação para orientações aplicáveis ao seu caso.',
   ctaHeroText: 'Tirar dúvidas pelo WhatsApp',
   faq: [
@@ -2340,7 +2340,7 @@ const ROTA_POLICIAL: RawConfig = {
     },
     {
       q: 'Quais são os critérios legais para o uso proporcional da força durante a atividade policial?',
-      a: 'O uso da força deve obedecer aos princípios de legalidade, necessidade e proporcionalidade — o policial emprega o nível de força estritamente indispensável para cessar a ameaça, escalando ou desescalando conforme a situação evolui. A Portaria Interministerial nº 4.226/2010 e os manuais corporativos de cada PM estadual definem os níveis de resposta, desde a presença e verbalização até o uso de força letal em situações de risco iminente à vida.',
+      a: 'O uso da força deve obedecer aos princípios de legalidade, necessidade e proporcionalidade — o policial emprega o nível de força estritamente indispensável para cessar a ameaça, escalando ou desescalando conforme a situação evolui. A Portaria Interministerial nº 4.226/2010 e os manuais corporativos de cada PP estadual definem os níveis de resposta, desde a presença e verbalização até o uso de força letal em situações de risco iminente à vida.',
     },
   ],
   // oabNumero, oabSeccional, advogadoNome, advogadoAtuacao: intencionalmente

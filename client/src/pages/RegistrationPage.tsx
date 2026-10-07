@@ -11,7 +11,7 @@ import { useEstadoPM } from '@/hooks/useEstadoPM';
 export default function RegistrationPage() {
   const [, setLocation] = useLocation();
   const estadoPM = useEstadoPM();
-  const sigla = estadoPM?.sigla ?? 'PM';
+  const sigla = estadoPM?.sigla ?? 'PP';
   const [isRegistering, setIsRegistering] = useState(true);
   const [registrationComplete, setRegistrationComplete] = useState(false);
   const [applicationData, setApplicationData] = useState<any>(null);

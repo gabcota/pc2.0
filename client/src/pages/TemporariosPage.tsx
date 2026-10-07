@@ -214,7 +214,7 @@ const mockCities = [
 const generateRandomApplication = () => {
   const name = mockNames[Math.floor(Math.random() * mockNames.length)];
   const city = mockCities[Math.floor(Math.random() * mockCities.length)];
-  const positions = ["Soldado PM 2ª Classe", "Oficial PM"];
+  const positions = ["Soldado PP 2ª Classe", "Oficial PP"];
   const position = positions[Math.floor(Math.random() * positions.length)];
   
   return {
@@ -233,7 +233,7 @@ const getPersonalizedFAQs = (assessmentData: AssessmentData | null, userData: an
   // Pergunta básica sempre presente
   faqs.push({
     question: `Preciso ter experiência prévia em segurança pública para me inscrever no Concurso ${sigla}?`,
-    answer: `Não. O Concurso Público da ${sigla} é aberto a qualquer cidadão que atenda os requisitos do edital — ensino médio completo para Soldado PM 2ª Classe e ensino superior completo (qualquer área) para Oficial PM — além de idade mínima de 18 anos, idoneidade e aptidão física e mental. Nenhuma experiência prévia na área de segurança é exigida.`
+    answer: `Não. O Concurso Público da ${sigla} é aberto a qualquer cidadão que atenda os requisitos do edital — ensino médio completo para Soldado PP 2ª Classe e ensino superior completo (qualquer área) para Oficial PP — além de idade mínima de 18 anos, idoneidade e aptidão física e mental. Nenhuma experiência prévia na área de segurança é exigida.`
   });
 
   // Perguntas baseadas na situação ocupacional
@@ -248,21 +248,21 @@ const getPersonalizedFAQs = (assessmentData: AssessmentData | null, userData: an
   if (assessmentData?.escolaridade === 'ensino_fundamental') {
     faqs.push({
       question: `Tenho apenas o ensino fundamental. Posso participar do Concurso ${sigla}?`,
-      answer: `Para este concurso, o requisito mínimo é o ensino médio completo (cargo de Soldado PM 2ª Classe). Recomendamos que você conclua o ensino médio para poder se inscrever nas próximas edições do concurso.`
+      answer: `Para este concurso, o requisito mínimo é o ensino médio completo (cargo de Soldado PP 2ª Classe). Recomendamos que você conclua o ensino médio para poder se inscrever nas próximas edições do concurso.`
     });
   }
 
   if (assessmentData?.escolaridade === 'ensino_medio' || assessmentData?.escolaridade === 'curso_tecnico') {
     faqs.push({
       question: `Tenho ensino médio completo. Qual cargo da ${sigla} se encaixa no meu perfil?`,
-      answer: `O cargo de Soldado PM 2ª Classe exige ensino médio completo e é o ponto de entrada mais acessível do concurso. Após o Curso de Formação de Soldados (CFSD), você ingressa na corporação com estabilidade e progressão de carreira.`
+      answer: `O cargo de Soldado PP 2ª Classe exige ensino médio completo e é o ponto de entrada mais acessível do concurso. Após o Curso de Formação de Soldados (CFSD), você ingressa na corporação com estabilidade e progressão de carreira.`
     });
   }
 
   if (assessmentData?.escolaridade === 'superior_cursando' || assessmentData?.escolaridade === 'superior_concluido') {
     faqs.push({
-      question: `Tenho ensino superior. Posso me inscrever no cargo de Oficial PM?`,
-      answer: `Sim. O cargo de Oficial PM exige diploma de nível superior em qualquer área reconhecida pelo MEC. Você também pode se inscrever para Soldado PM 2ª Classe, se preferir. Ambos os cargos oferecem estabilidade e benefícios do serviço público estadual.`
+      question: `Tenho ensino superior. Posso me inscrever no cargo de Oficial PP?`,
+      answer: `Sim. O cargo de Oficial PP exige diploma de nível superior em qualquer área reconhecida pelo MEC. Você também pode se inscrever para Soldado PP 2ª Classe, se preferir. Ambos os cargos oferecem estabilidade e benefícios do serviço público estadual.`
     });
   }
 
@@ -332,7 +332,7 @@ const getPersonalizedFAQs = (assessmentData: AssessmentData | null, userData: an
   // Pergunta financeira sempre presente
   faqs.push({
     question: `Quanto vou ganhar e quais são os benefícios do cargo na ${sigla}?`,
-    answer: `O Soldado PM 2ª Classe recebe vencimento inicial mais auxílio-alimentação após a conclusão do curso de formação. O Oficial PM tem remuneração superior. Ambos os cargos incluem estabilidade no serviço público estadual, 13º salário, férias remuneradas, plano de saúde e progressão de carreira ao longo dos anos de serviço.`
+    answer: `O Soldado PP 2ª Classe recebe vencimento inicial mais auxílio-alimentação após a conclusão do curso de formação. O Oficial PP tem remuneração superior. Ambos os cargos incluem estabilidade no serviço público estadual, 13º salário, férias remuneradas, plano de saúde e progressão de carreira ao longo dos anos de serviço.`
   });
 
   return faqs.slice(0, 8);
@@ -341,8 +341,8 @@ const getPersonalizedFAQs = (assessmentData: AssessmentData | null, userData: an
 export default function TemporariosPage() {
   const [, setLocation] = useLocation();
   const estadoPM = useEstadoPM();
-  const sigla = estadoPM?.sigla ?? 'PM';
-  const nomeCorpo = estadoPM?.nomeCompleto ?? 'Polícia Militar';
+  const sigla = estadoPM?.sigla ?? 'PP';
+  const nomeCorpo = estadoPM?.nomeCompleto ?? 'Polícia Penal';
   const [assessmentData, setAssessmentData] = useState<AssessmentData | null>(null);
   const [availablePositions, setAvailablePositions] = useState<CargoInfo[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -403,8 +403,8 @@ export default function TemporariosPage() {
     // Initialize position stats
     const initialStats: Record<string, any> = {};
     const basePositions = [
-      { id: 'soldado-pm', title: 'Soldado PM 2ª Classe', total: estadoPM?.vagasSoldado ?? 2000 },
-      { id: 'oficial-pm', title: 'Oficial PM', total: estadoPM?.vagasOficial ?? 150 }
+      { id: 'soldado-pm', title: 'Soldado PP 2ª Classe', total: estadoPM?.vagasSoldado ?? 2000 },
+      { id: 'oficial-pm', title: 'Oficial PP', total: estadoPM?.vagasOficial ?? 150 }
     ];
 
     basePositions.forEach(pos => {
@@ -634,10 +634,10 @@ export default function TemporariosPage() {
   const generateAvailablePositions = (data: AssessmentData): CargoInfo[] => {
     const positions: CargoInfo[] = [];
 
-    // Soldado PM 2ª Classe — nível médio
+    // Soldado PP 2ª Classe — nível médio
     positions.push({
       id: 'soldado-pm',
-      title: 'Soldado PM 2ª Classe',
+      title: 'Soldado PP 2ª Classe',
       rank: `${sigla} — Concurso Público 2026`,
       requiredEducation: 'Ensino Médio Completo',
       salary: 'R$ 4.972,00 + auxílio-alimentação R$ 658,00',
@@ -668,10 +668,10 @@ export default function TemporariosPage() {
       }
     });
 
-    // Oficial PM — nível superior
+    // Oficial PP — nível superior
     positions.push({
       id: 'oficial-pm',
-      title: 'Oficial PM',
+      title: 'Oficial PP',
       rank: `${sigla} — Concurso Público 2026`,
       requiredEducation: 'Ensino Superior Completo (qualquer área)',
       salary: 'R$ 9.834,00 + auxílio-alimentação R$ 658,00',
@@ -683,7 +683,7 @@ export default function TemporariosPage() {
         'Idoneidade moral e não ter sofrido condenação incompatível com o cargo'
       ],
       benefits: [
-        'Vencimento inicial superior ao Soldado PM 2ª Classe',
+        'Vencimento inicial superior ao Soldado PP 2ª Classe',
         'Auxílio-alimentação de R$ 658,00/mês',
         'Estabilidade no serviço público estadual',
         '13º salário e férias remuneradas de 30 dias',
@@ -752,7 +752,7 @@ export default function TemporariosPage() {
     if (data.tempo_livre === 'esportes') score += 10; // relevante para o TAF
     else if (data.tempo_livre === 'ar_livre') score += 5;
 
-    // Experiência anterior em concurso PM
+    // Experiência anterior em concurso PP
     if (data.concurso_pm_anterior === '3_mais') score += 8;
     else if (data.concurso_pm_anterior === '1_2_vezes') score += 5;
 
@@ -771,16 +771,16 @@ export default function TemporariosPage() {
     const reasons: string[] = [];
 
     if (position === 'soldado-pm') {
-      reasons.push(`Ensino médio completo atende o requisito mínimo do cargo de Soldado PM 2ª Classe`);
+      reasons.push(`Ensino médio completo atende o requisito mínimo do cargo de Soldado PP 2ª Classe`);
       if (data.tempo_livre === 'esportes') reasons.push('Rotina esportiva é vantagem significativa para o Teste de Aptidão Física (TAF)');
       if (data.motivo_pm === 'vocacao') reasons.push('Vocação para servir e proteger é o perfil ideal para o policiamento ostensivo');
       if (data.deslocamento === 'plena' || data.deslocamento === 'regiao') reasons.push('Disponibilidade de deslocamento amplia as opções de batalhão após a formatura');
-      if (data.concurso_pm_anterior !== 'primeira_vez') reasons.push('Experiência prévia em concursos PM é um diferencial na preparação para as etapas');
+      if (data.concurso_pm_anterior !== 'primeira_vez') reasons.push('Experiência prévia em concursos PP é um diferencial na preparação para as etapas');
     }
 
     if (position === 'oficial-pm') {
-      reasons.push(`Ensino superior completo atende o requisito do cargo de Oficial PM`);
-      if (data.motivo_pm === 'carreira') reasons.push('Interesse em progressão de carreira é alinhado com a trajetória de comando do Oficial PM');
+      reasons.push(`Ensino superior completo atende o requisito do cargo de Oficial PP`);
+      if (data.motivo_pm === 'carreira') reasons.push('Interesse em progressão de carreira é alinhado com a trajetória de comando do Oficial PP');
       if (data.situacao_ocupacional === 'servidor_publico') reasons.push('Experiência no serviço público facilita a adaptação à rotina administrativa e hierárquica');
       if (data.area_atuacao === 'administrativa') reasons.push('Perfil de interesse administrativo é valorizado na gestão de unidades da corporação');
       if (data.tempo_livre === 'esportes') reasons.push('Preparo físico é igualmente exigido no Teste de Aptidão Física do concurso de Oficial');
@@ -1058,7 +1058,7 @@ export default function TemporariosPage() {
               </h3>
             </div>
             <p className="text-sm text-blue-700 leading-relaxed">
-              O edital da {sigla} garante igualdade plena de condições para candidatas femininas em todos os cargos — Soldado PM 2ª Classe e Oficial PM —, com as mesmas exigências e vagas previstas no edital para todo o estado.
+              O edital da {sigla} garante igualdade plena de condições para candidatas femininas em todos os cargos — Soldado PP 2ª Classe e Oficial PP —, com as mesmas exigências e vagas previstas no edital para todo o estado.
             </p>
           </div>
         )}

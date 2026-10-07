@@ -23,7 +23,7 @@ interface MedicalCenter {
 export default function AgendamentoMedicoPage() {
   const [, setLocation] = useLocation();
   const estadoPM = useEstadoPM();
-  const sigla = estadoPM?.sigla ?? 'PM';
+  const sigla = estadoPM?.sigla ?? 'PP';
   const [candidateName, setCandidateName] = useState('');
   const [cityName, setCityName] = useState('');
   const [candidateGender, setCandidateGender] = useState('');

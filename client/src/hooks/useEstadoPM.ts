@@ -8,7 +8,7 @@ import { type EstadoPMData, getEstadoPMFromStorage } from '@/utils/estadoPM';
  *
  * Exemplo de uso:
  *   const estadoPM = useEstadoPM();
- *   const sigla = estadoPM?.sigla ?? 'PM';
+ *   const sigla = estadoPM?.sigla ?? 'PP';
  */
 export function useEstadoPM(): EstadoPMData | null {
   const [estado, setEstado] = useState<EstadoPMData | null>(() => getEstadoPMFromStorage());

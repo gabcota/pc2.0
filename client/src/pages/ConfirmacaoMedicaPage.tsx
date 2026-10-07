@@ -36,7 +36,7 @@ function fmt(v: number) {
 export default function ConfirmacaoMedicaPage() {
   const [, setLocation] = useLocation();
   const estadoPM = useEstadoPM();
-  const sigla = estadoPM?.sigla ?? 'PM';
+  const sigla = estadoPM?.sigla ?? 'PP';
   const [appointmentData, setAppointmentData] = useState<AppointmentData | null>(null);
   const [confirmationCode, setConfirmationCode] = useState('');
   const [candidateFullName, setCandidateFullName] = useState('');

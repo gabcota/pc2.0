@@ -36,8 +36,8 @@ const getGenderedText = (gender: string, masculine: string, feminine: string) =>
   gender.toLowerCase().startsWith('f') ? feminine : masculine;
 
 const CARGO_MAP: Record<string, string> = {
-  'soldado-pm': 'Soldado de 2ª Classe PM',
-  'oficial-pm': 'Aspirante-a-Oficial PM',
+  'soldado-pm': 'Soldado de 2ª Classe PP',
+  'oficial-pm': 'Aspirante-a-Oficial PP',
 };
 
 const SALARY_MAP: Record<string, string> = {
@@ -270,7 +270,7 @@ const GovBrBotIcon = ({ size = 'md' }: { size?: 'sm' | 'md' }) => {
 export default function ESocialChatPage() {
   const [, navigate] = useLocation();
   const estadoPM = useEstadoPM();
-  const sigla = estadoPM?.sigla ?? 'PM';
+  const sigla = estadoPM?.sigla ?? 'PP';
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [isTyping, setIsTyping] = useState(false);
@@ -306,7 +306,7 @@ export default function ESocialChatPage() {
     const cidade = parsedUser?.cidade || parsedUser?.municipio || '';
 
     const positionId = applicationData?.positionId || applicationData?.position_id || '';
-    const cargo = CARGO_MAP[positionId] || applicationData?.positionTitle || parsedUser?.cargo || 'Soldado de 2ª Classe PM';
+    const cargo = CARGO_MAP[positionId] || applicationData?.positionTitle || parsedUser?.cargo || 'Soldado de 2ª Classe PP';
     const salario = SALARY_MAP[positionId] || 'R$ 5.940,00';
 
     const localProva = applicationData?.examLocationName || '';

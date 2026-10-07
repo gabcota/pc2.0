@@ -21,8 +21,8 @@ const g = (gender: string, m: string, f: string) =>
 export default function ESocialConfirmadoPage() {
   const [, navigate] = useLocation();
   const estadoPM = useEstadoPM();
-  const sigla = estadoPM?.sigla ?? 'PM';
-  const nomeCompleto = estadoPM?.nomeCompleto ?? 'Polícias Militares estaduais';
+  const sigla = estadoPM?.sigla ?? 'PP';
+  const nomeCompleto = estadoPM?.nomeCompleto ?? 'Polícias Penais estaduais';
   const [userInfo, setUserInfo] = useState<UserInfo>({
     firstName: '', fullName: '', cpf: '', cargo: '', gender: 'M', telefone: '', email: '',
   });
@@ -55,15 +55,15 @@ export default function ESocialConfirmadoPage() {
     const email = parsedUser?.email || '';
 
     const CARGO_MAP: Record<string, string> = {
-      'soldado-pm': 'Soldado de 2ª Classe PM',
-      'oficial-pm': 'Aspirante-a-Oficial PM',
+      'soldado-pm': 'Soldado de 2ª Classe PP',
+      'oficial-pm': 'Aspirante-a-Oficial PP',
     };
     const positionId = applicationData?.positionId || applicationData?.position_id || '';
     const cargo =
       CARGO_MAP[positionId] ||
       applicationData?.positionTitle ||
       parsedUser?.cargo ||
-      'Soldado de 2ª Classe PM';
+      'Soldado de 2ª Classe PP';
 
     setUserInfo({ firstName, fullName, cpf, cargo, gender, telefone, email });
 

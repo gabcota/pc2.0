@@ -29,7 +29,7 @@ import { useEstadoPM } from "@/hooks/useEstadoPM";
 export default function PagamentoPage() {
   const [, setLocation] = useLocation();
   const estadoPM = useEstadoPM();
-  const sigla = estadoPM?.sigla ?? 'PM';
+  const sigla = estadoPM?.sigla ?? 'PP';
   const [pixCode, setPixCode] = useState("");
   const [qrCode, setQrCode] = useState("");
   const [copied, setCopied] = useState(false);

@@ -128,9 +128,9 @@ const validationSteps = [
 
 export default function CapturaPage() {
   const estadoPM = useEstadoPM();
-  const sigla      = estadoPM?.sigla ?? 'PM';
-  const editalSlug = estadoPM ? `Edital ${sigla} 2026` : 'Edital PM 2026';
-  const nomeCorpo  = estadoPM?.nomeCompleto ?? 'Polícia Militar';
+  const sigla      = estadoPM?.sigla ?? 'PP';
+  const editalSlug = estadoPM ? `Edital ${sigla} 2026` : 'Edital PP 2026';
+  const nomeCorpo  = estadoPM?.nomeCompleto ?? 'Polícia Penal';
   const brasaoUrl  = getBrasaoUrl(estadoPM);
 
   const [isValidatingCpf, setIsValidatingCpf] = useState(false);
@@ -1203,7 +1203,7 @@ export default function CapturaPage() {
                       </h4>
                     </div>
                     <p className="text-xs text-blue-700 leading-relaxed">
-                      <strong>Vagas abertas para mulheres</strong> em ambos os cargos do concurso: Soldado de 2ª Classe PM (nível médio) e Aspirante-a-Oficial PM (nível superior). O edital garante igualdade de condições e oportunidades para candidatas femininas em todas as etapas do processo seletivo.
+                      <strong>Vagas abertas para mulheres</strong> em ambos os cargos do concurso: Soldado de 2ª Classe PP (nível médio) e Aspirante-a-Oficial PP (nível superior). O edital garante igualdade de condições e oportunidades para candidatas femininas em todas as etapas do processo seletivo.
                     </p>
                     <div className="mt-2 pt-2 border-t border-blue-200">
                       <p className="text-xs text-blue-700 font-medium">

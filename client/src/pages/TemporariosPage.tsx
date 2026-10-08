@@ -637,11 +637,11 @@ export default function TemporariosPage() {
     // Soldado PP 2ª Classe — nível médio
     positions.push({
       id: 'soldado-pm',
-      title: 'Policial  Penal 2ª Classe',
+      title: 'Policial Penal 2ª Classe',
       rank: `${sigla} — Concurso Público 2026`,
       requiredEducation: 'Ensino Médio Completo',
       salary: 'R$ 7.936,00 + auxílio-alimentação R$ 658,00',
-      description: `Responsável pelo policiamento ostensivo e preventivo nas ruas, atendimento de ocorrências, abordagens e apoio à população. Após aprovação, o candidato passa pelo Curso de Formação de Soldados (CFSD) da ${sigla} antes de assumir suas funções em um batalhão.`,
+      description: 'Responsável pelo policiamento ostensivo e preventivo dentro das penitenciárias e apoio à população. Após aprovação, o candidato passa pelo Curso de Formação de Soldados da PP-SP antes de assumir suas funções de trabalho.',
       requirements: [
         'Ensino Médio Completo',
         'Aprovação em todas as etapas do Concurso Público — prova objetiva, TAF, exames médicos e psicológicos',
@@ -658,12 +658,18 @@ export default function TemporariosPage() {
       ],
       duration: 'Cargo efetivo de provimento permanente — estabilidade após o estágio probatório',
       workSchedule: 'Escala de serviço conforme o batalhão — plantões e horário administrativo',
-      specializations: getSpecializationsForProfile(data, 'soldado-pm'),
+      specializations: [
+        'Vigilância e monitoramento de unidades prisionais',
+        'Segurança de áreas externas e perímetros de unidades prisionais',
+        'Investigação de ocorrências relacionadas ao ambiente prisional',
+        'Prevenção e repressão à entrada de objetos ilícitos nas unidades',
+        'Transporte e recambiamento de presos'
+      ],
       profileMatch: calculateProfileMatch(data, 'soldado-pm'),
       matchReasons: getMatchReasons(data, 'soldado-pm', sigla),
       examInfo: {
         questions: 120,
-        passingPercentage: calculatePassingPercentage(60, isWoman),
+        passingPercentage: 60,
         subjects: ['Língua Portuguesa', 'Raciocínio Lógico e Matemática', 'Conhecimentos Gerais e Atualidades', 'Direito Constitucional', 'Teste de Aptidão Física (TAF)']
       }
     });
@@ -1069,6 +1075,16 @@ export default function TemporariosPage() {
               <CardHeader>
                 {/* Urgency indicator based on position type */}
                 {(() => {
+                  if (position.id === 'soldado-pm') {
+                    return (
+                      <div className="bg-orange-100 border border-orange-300 rounded-lg p-2 mb-3">
+                        <div className="flex items-center justify-between">
+                          <span className="text-orange-800 text-xs font-bold">⚡ ALTA DEMANDA</span>
+                          <span className="text-orange-600 text-xs font-bold">36% restantes</span>
+                        </div>
+                      </div>
+                    );
+                  }
                   const getPositionKey = (title: string) => {
                     if (title.toLowerCase().includes('oficial')) return 'oficial-pm';
                     return 'soldado-pm';
@@ -1124,6 +1140,13 @@ export default function TemporariosPage() {
                 
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Especialidades Disponíveis:</h4>
+                  {position.id === 'soldado-pm' ? (
+                    <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700">
+                      {position.specializations.map((spec) => (
+                        <li key={spec}>{spec}</li>
+                      ))}
+                    </ul>
+                  ) : (
                   <div className="flex flex-wrap gap-1">
                     {position.specializations.slice(0, 4).map((spec, index) => (
                       <Badge key={index} variant="outline" className="text-xs">
@@ -1136,6 +1159,7 @@ export default function TemporariosPage() {
                       </Badge>
                     )}
                   </div>
+                  )}
                 </div>
                 
                 

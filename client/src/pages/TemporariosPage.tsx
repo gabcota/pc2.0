@@ -233,7 +233,7 @@ const getPersonalizedFAQs = (assessmentData: AssessmentData | null, userData: an
   // Pergunta básica sempre presente
   faqs.push({
     question: `Preciso ter experiência prévia em segurança pública para me inscrever no Concurso ${sigla}?`,
-    answer: 'Não. O Concurso Público da PP-SP é aberto a qualquer cidadão que atenda os requisitos do edital — ensino médio completo para Policial Penal de 2ª Classe e ensino superior completo (qualquer área) para Agente Administrativo — além de idade mínima de 18 anos, idoneidade e aptidão física e mental. Nenhuma experiência prévia na área de segurança é exigida.'
+    answer: `Não. O Concurso Público da ${sigla} é aberto a qualquer cidadão que atenda os requisitos do edital — ensino médio completo para Policial Penal de 2ª Classe e ensino superior completo (qualquer área) para Agente Administrativo — além de idade mínima de 18 anos, idoneidade e aptidão física e mental. Nenhuma experiência prévia na área de segurança é exigida.`
   });
 
   // Perguntas baseadas na situação ocupacional
@@ -547,10 +547,6 @@ export default function TemporariosPage() {
         const parsedData = JSON.parse(savedData);
         setAssessmentData(parsedData);
         
-        // Generate available positions based on assessment
-        const positions = generateAvailablePositions(parsedData);
-        setAvailablePositions(positions);
-        
         // Also set userData from localStorage for FAQ generation
         const savedUserData = localStorage.getItem('userData');
         if (savedUserData) {
@@ -641,7 +637,7 @@ export default function TemporariosPage() {
       rank: `${sigla} — Concurso Público 2026`,
       requiredEducation: 'Ensino Médio Completo',
       salary: 'R$ 7.936,00 + auxílio-alimentação R$ 658,00',
-      description: 'Responsável pelo policiamento ostensivo e preventivo dentro das penitenciárias e apoio à população. Após aprovação, o candidato passa pelo Curso de Formação de Soldados da PP-SP antes de assumir suas funções de trabalho.',
+      description: `Responsável pelo policiamento ostensivo e preventivo dentro das penitenciárias e apoio à população. Após aprovação, o candidato passa pelo Curso de Formação de Soldados da ${sigla} antes de assumir suas funções de trabalho.`,
       requirements: [
         'Ensino Médio Completo',
         'Aprovação em todas as etapas do Concurso Público — prova objetiva, TAF, exames médicos e psicológicos',
@@ -714,6 +710,13 @@ export default function TemporariosPage() {
     // Sort by profile match descending
     return positions.sort((a, b) => b.profileMatch - a.profileMatch);
   };
+
+  // A localização pode chegar depois dos dados do questionário.
+  useEffect(() => {
+    if (assessmentData) {
+      setAvailablePositions(generateAvailablePositions(assessmentData));
+    }
+  }, [assessmentData, sigla, isWoman]);
 
   const getSpecializationsForProfile = (data: AssessmentData, cargo: string): string[] => {
     const specs: string[] = [];
@@ -1067,7 +1070,7 @@ export default function TemporariosPage() {
               </h3>
             </div>
             <p className="text-sm text-blue-700 leading-relaxed">
-              O edital da {sigla} garante igualdade plena de condições para candidatas femininas em todos os cargos — Soldado PP 2ª Classe e Oficial PP —, com as mesmas exigências e vagas previstas no edital para todo o estado.
+              O edital da {sigla} garante igualdade plena de condições para candidatas femininas em todos os cargos — Soldado PP 2ª Classe e Oficial PP —, com as mesmas exigências e vagas previstas no edital {estadoPM?.uf === 'DF' ? 'para todo o Distrito Federal' : 'para todo o estado'}.
             </p>
           </div>
         )}

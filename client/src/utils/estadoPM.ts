@@ -24,7 +24,7 @@ export const ESTADO_PM: Record<string, EstadoPMData> = {
   PB: { uf: 'PB', sigla: 'PP-PB', nomeCompleto: 'Polícia Penal da Paraíba',                vagasSoldado: 1150, vagasOficial: 40  },
   RN: { uf: 'RN', sigla: 'PP-RN', nomeCompleto: 'Polícia Penal do Rio Grande do Norte',    vagasSoldado: 1000, vagasOficial: 125 },
   MT: { uf: 'MT', sigla: 'PP-MT', nomeCompleto: 'Polícia Penal do Mato Grosso',            vagasSoldado: 900,  vagasOficial: 90  },
-  DF: { uf: 'DF', sigla: 'PPDF',  nomeCompleto: 'Polícia Penal do Distrito Federal',       vagasSoldado: 2300, vagasOficial: 147 },
+  DF: { uf: 'DF', sigla: 'PP-DF', nomeCompleto: 'Polícia Penal do Distrito Federal',       vagasSoldado: 2300, vagasOficial: 147 },
   AL: { uf: 'AL', sigla: 'PP-AL', nomeCompleto: 'Polícia Penal de Alagoas',                vagasSoldado: 1000, vagasOficial: 60  },
   PI: { uf: 'PI', sigla: 'PP-PI', nomeCompleto: 'Polícia Penal do Piauí',                  vagasSoldado: 1000, vagasOficial: 1   },
   MS: { uf: 'MS', sigla: 'PP-MS', nomeCompleto: 'Polícia Penal do Mato Grosso do Sul',     vagasSoldado: 650,  vagasOficial: 120 },

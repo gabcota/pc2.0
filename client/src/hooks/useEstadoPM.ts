@@ -21,6 +21,10 @@ export function useEstadoPM(): EstadoPMData | null {
     };
 
     window.addEventListener('ipDataReady', syncEstado);
+    const onStorage = (event: StorageEvent) => {
+      if (event.key === 'user_ip_data' || event.key === null) syncEstado();
+    };
+    window.addEventListener('storage', onStorage);
 
     // Também funciona quando o usuário abre /marcar ou qualquer etapa
     // personalizada diretamente, sem ter passado antes pela página inicial.
@@ -29,6 +33,7 @@ export function useEstadoPM(): EstadoPMData | null {
     return () => {
       active = false;
       window.removeEventListener('ipDataReady', syncEstado);
+      window.removeEventListener('storage', onStorage);
     };
   }, []);
 

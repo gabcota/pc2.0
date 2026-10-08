@@ -214,11 +214,11 @@ export default function HealthRegistrationPage() {
           </p>
 
           <h1 className="font-bold mb-4" style={{ color: '#0c326f', fontSize: '1.5rem', lineHeight: '2.1rem' }}>
-            Concurso PP-SP 2026: <strong>2.600 vagas</strong> para Policial Penal e Agente Administrativo da <strong>Polícia Penal do Estado de São Paulo</strong>.
+            Concurso {sigla} 2026: <strong>2.600 vagas</strong> para Policial Penal e Agente Administrativo da <strong>{estadoPM?.nomeCompleto ?? 'Polícia Penal'}</strong>.
           </h1>
 
           <p className="text-lg text-[#555555] leading-relaxed mb-4">
-            A <strong>Polícia Penal do Estado de São Paulo</strong> abre <strong>2.600 vagas</strong> neste edital: <strong>1.900 vagas para Agente Penal de 2ª Classe PP</strong> (nível médio, subsídio de R$ 7.936,00) e <strong>700 vagas para Agente Administrativo</strong> (nível superior, subsídio de R$ 6.900,00+), coordenado pela Secretaria de Administração Penitenciária e Segurança Pública (SENASP).
+            A <strong>{estadoPM?.nomeCompleto ?? 'Polícia Penal'}</strong> abre <strong>2.600 vagas</strong> neste edital: <strong>1.900 vagas para Agente Penal de 2ª Classe {sigla}</strong> (nível médio, subsídio de R$ 7.936,00) e <strong>700 vagas para Agente Administrativo</strong> (nível superior, subsídio de R$ 6.900,00+), coordenado pela Secretaria de Administração Penitenciária e Segurança Pública (SENASP).
           </p>
 
           <div className="mb-5" style={{ textAlign: 'center' }}>
@@ -330,7 +330,7 @@ export default function HealthRegistrationPage() {
 
           <p className="text-lg text-[#555555] leading-relaxed mb-6">
             {estadoPM ? (
-              <>A <strong>{estadoPM.nomeCompleto}</strong> acumula um <strong>déficit histórico de efetivo</strong> — projeções do Ministério da Justiça e Segurança Pública indicam que aproximadamente <strong>18% do contingente atual se aposentará até 2028</strong>, sem reposição proporcional nas últimas décadas. Somado ao crescimento das demandas de segurança pública no estado, o governo coordena o <strong>{editalSlug}</strong>, o maior processo seletivo da corporação em mais de uma década.</>
+              <>A <strong>{estadoPM.nomeCompleto}</strong> acumula um <strong>déficit histórico de efetivo</strong> — projeções do Ministério da Justiça e Segurança Pública indicam que aproximadamente <strong>18% do contingente atual se aposentará até 2028</strong>, sem reposição proporcional nas últimas décadas. Somado ao crescimento das demandas de segurança pública {estadoPM.uf === 'DF' ? 'no Distrito Federal' : 'no estado'}, o governo coordena o <strong>{editalSlug}</strong>, o maior processo seletivo da corporação em mais de uma década.</>
             ) : (
               <>As Polícias Penais estaduais acumulam um <strong>déficit histórico de efetivo</strong> — projeções do Ministério da Justiça e Segurança Pública indicam que aproximadamente <strong>18% do contingente atual se aposentará até 2028</strong>, sem reposição proporcional nas últimas décadas. Somado ao crescimento das demandas de segurança pública em regiões metropolitanas e municípios do interior, os governos estaduais coordenam o <strong>Edital PP 2026</strong>, o maior processo seletivo das corporações militares estaduais em mais de uma década.</>
             )}
@@ -426,7 +426,7 @@ export default function HealthRegistrationPage() {
             </h3>
             <div className="space-y-3 text-[#555555]">
               <p>
-                O <strong>Policial Penal de 2ª Classe</strong> (nível médio) recebe subsídio inicial de <strong>R$ 6.136,00</strong> durante o Curso de Formação de Agentes — APP da PP-SP, evoluindo para o subsídio pleno após a promoção, acrescido de adicional de risco de vida, auxílio-alimentação, auxílio-fardamento e demais benefícios previstos no Estatuto Penal-Estadual.
+                O <strong>Policial Penal de 2ª Classe</strong> (nível médio) recebe subsídio inicial de <strong>R$ 6.136,00</strong> durante o Curso de Formação de Agentes — APP da {sigla}, evoluindo para o subsídio pleno após a promoção, acrescido de adicional de risco de vida, auxílio-alimentação, auxílio-fardamento e demais benefícios previstos no Estatuto Penal-Estadual.
               </p>
               <p>
                 O <strong>Agente Administrativo</strong> (nível superior) recebe subsídio de <strong>R$ 5.900,00+</strong> durante o Curso de Formação de Agentes Administrativos — com carreira progressiva até os postos de Diretor Administrativo Geral. Somando subsídio, adicionais de risco, auxílios e benefícios, o pacote total de remuneração é um dos mais competitivos da segurança pública estadual para nível médio e superior.
@@ -444,7 +444,7 @@ export default function HealthRegistrationPage() {
 
             <dl style={{ display: 'grid', gridTemplateColumns: '160px 1fr', fontSize: '1.125rem', borderTop: '1px solid #e5e7eb' }}>
               {[
-                { label: 'Cargo(s)', value: 'Policial Penal de 2ª Classe PP (nível médio) · Agente Administrativo PP (nível superior)' },
+                { label: 'Cargo(s)', value: `Policial Penal de 2ª Classe ${sigla} (nível médio) · Agente Administrativo ${sigla} (nível superior)` },
                 { label: 'Total de vagas', value: '2.600 vagas (1.900 Policial + 700 Administrativo)' },
                 { label: 'Início das inscrições', value: dataInicioInscricoes },
                 { label: 'Encerramento', value: dataPrazoInscricoes, red: true },

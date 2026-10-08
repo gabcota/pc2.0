@@ -637,10 +637,10 @@ export default function TemporariosPage() {
     // Soldado PP 2ª Classe — nível médio
     positions.push({
       id: 'soldado-pm',
-      title: 'Soldado PP 2ª Classe',
+      title: 'Policial  Penal 2ª Classe',
       rank: `${sigla} — Concurso Público 2026`,
       requiredEducation: 'Ensino Médio Completo',
-      salary: 'R$ 4.972,00 + auxílio-alimentação R$ 658,00',
+      salary: 'R$ 7.936,00 + auxílio-alimentação R$ 658,00',
       description: `Responsável pelo policiamento ostensivo e preventivo nas ruas, atendimento de ocorrências, abordagens e apoio à população. Após aprovação, o candidato passa pelo Curso de Formação de Soldados (CFSD) da ${sigla} antes de assumir suas funções em um batalhão.`,
       requirements: [
         'Ensino Médio Completo',
@@ -671,10 +671,10 @@ export default function TemporariosPage() {
     // Oficial PP — nível superior
     positions.push({
       id: 'oficial-pm',
-      title: 'Oficial PP',
+      title: 'Agente Administrativo ',
       rank: `${sigla} — Concurso Público 2026`,
       requiredEducation: 'Ensino Superior Completo (qualquer área)',
-      salary: 'R$ 9.834,00 + auxílio-alimentação R$ 658,00',
+      salary: 'R$ 6.900,00 + auxílio-alimentação R$ 658,00',
       description: `Responsável pelo comando de tropa, planejamento operacional e gestão administrativa dentro da corporação. Após aprovação, o candidato ingressa no Curso de Formação de Oficiais (CFO) da ${sigla}, com duração de até 3 anos, antes de assumir o comando de uma unidade.`,
       requirements: [
         'Diploma de curso superior em qualquer área, reconhecido pelo MEC',

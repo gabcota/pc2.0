@@ -499,7 +499,7 @@ export default function HealthRegistrationPage() {
           <ol style={{ listStyle: 'none', padding: 0, margin: '0 0 12px', fontSize: '1.125rem', color: '#333' }}>
             {([
               <><strong>Prova Objetiva</strong> — conteúdo de nível médio ou superior, conforme o cargo. Data prevista: <strong>{dataProvaEdital}</strong>.</>,
-              <><strong>Teste de Aptidão Física (TAF)</strong> — corrida de 2.400 m, flexão de braço e abdominal. Índices variam por sexo e faixa etária.</>,
+              <><strong>Teste de Aptidão Física (TAF)</strong> — corrida de 1.000 m, flexão de braço e abdominal. Índices variam por sexo e faixa etária.</>,
               <><strong>Avaliação Psicológica</strong> — realizada por equipe técnica credenciada. Eliminatória.</>,
               <><strong>Investigação Social</strong> — verificação de antecedentes e conduta. Eliminatória.</>,
               <><strong>Exame de Saúde</strong> — avaliação médica e odontológica conforme padrões da corporação.</>,

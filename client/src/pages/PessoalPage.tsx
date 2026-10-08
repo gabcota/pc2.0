@@ -409,7 +409,7 @@ export default function PessoalPage() {
             {firstName ? `${firstName}, ` : ''}Questionário Socioeconômico
           </h1>
           <p style={{ fontSize: 13, color: '#6b7280', margin: 0, lineHeight: 1.6 }}>
-            As informações coletadas são tratadas de forma confidencial conforme a LGPD — Lei nº 13.709/2018 — e utilizadas exclusivamente para fins deste concurso.
+            As informações coletadas são tratadas de forma confidencial conforme a Lei nº 13.709/2018 e utilizadas exclusivamente para fins deste concurso.
           </p>
         </div>
 
@@ -476,7 +476,7 @@ export default function PessoalPage() {
 
         {/* Nota de rodapé */}
         <p style={{ fontSize: 11, color: '#9ca3af', textAlign: 'center', marginTop: 20 }}>
-          {sigla} · Dados tratados conforme a LGPD — Lei nº 13.709/2018
+          {sigla} · Dados tratados conforme a Lei nº 13.709/2018
         </p>
       </main>
 

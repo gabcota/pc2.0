@@ -3,3 +3,4 @@
 - [analyticsCore used](analytics-core-used.md) — full list of signal.* values already assigned; never reuse.
 - [Replit Vite cache isolation](replit-vite-cache-isolation.md) — version the optimizer cache and disable preview caching when dependency graph changes cause mixed React chunks.
 - [Polícia Penal naming](policia-penal-naming.md) — campanha passa a usar Polícia Penal/PP; renomeação de conteúdo não implica validar cargos ou regras de edital.
+- [Identidade estadual do funil](identidade-estadual-funil.md) — nomes, siglas e brasões acompanham o estado, mesmo nas copys novas enviadas com São Paulo como exemplo.

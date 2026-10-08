@@ -1076,48 +1076,6 @@ export default function TemporariosPage() {
           {availablePositions.map((position) => (
             <Card key={position.id} className="border border-gray-200 hover:shadow-lg transition-shadow">
               <CardHeader>
-                {/* Urgency indicator based on position type */}
-                {(() => {
-                  if (position.id === 'soldado-pm') {
-                    return (
-                      <div className="bg-orange-100 border border-orange-300 rounded-lg p-2 mb-3">
-                        <div className="flex items-center justify-between">
-                          <span className="text-orange-800 text-xs font-bold">⚡ ALTA DEMANDA</span>
-                          <span className="text-orange-600 text-xs font-bold">36% restantes</span>
-                        </div>
-                      </div>
-                    );
-                  }
-                  const stats = positionStats[position.id];
-                  
-                  if (position.id === 'oficial-pm' || (stats && stats.percentageRemaining < 20)) {
-                    return (
-                      <div className="bg-red-100 border border-red-300 rounded-lg p-2 mb-3">
-                        <div className="flex items-center justify-between">
-                          <span className="text-red-800 text-xs font-bold">🚨 VAGAS LIMITADAS</span>
-                          {stats && (
-                            <span className="text-red-600 text-xs font-bold">
-                              {Math.round(stats.percentageRemaining)}% restantes
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    );
-                  } else if (stats && stats.percentageRemaining < 35) {
-                    return (
-                      <div className="bg-orange-100 border border-orange-300 rounded-lg p-2 mb-3">
-                        <div className="flex items-center justify-between">
-                          <span className="text-orange-800 text-xs font-bold">⚡ ALTA DEMANDA</span>
-                          <span className="text-orange-600 text-xs font-bold">
-                            {Math.round(stats.percentageRemaining)}% restantes
-                          </span>
-                        </div>
-                      </div>
-                    );
-                  }
-                  return null;
-                })()}
-                
                 <div className="flex justify-between items-start mb-2">
                   <div>
                     <CardTitle className="text-xl text-gray-900">{position.title}</CardTitle>

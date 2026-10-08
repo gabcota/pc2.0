@@ -332,7 +332,7 @@ const getPersonalizedFAQs = (assessmentData: AssessmentData | null, userData: an
   // Pergunta financeira sempre presente
   faqs.push({
     question: `Quanto vou ganhar e quais são os benefícios do cargo na ${sigla}?`,
-    answer: `O Policial Penal de 2ª Classe recebe vencimento inicial mais auxílio-alimentação após a conclusão do curso de formação. O Agente Administrativo Penal tem remuneração superior. Ambos os cargos incluem estabilidade no serviço público estadual, 13º salário, férias remuneradas, plano de saúde e progressão de carreira ao longo dos anos de serviço.`
+    answer: `O Policial Penal de 2ª Classe recebe vencimento inicial mais auxílio-alimentação após a conclusão do curso de formação. O Agente Administrativo Penal tem plano de progressão superior. Ambos os cargos incluem estabilidade no serviço público estadual, 13º salário, férias remuneradas e plano de saúde.`
   });
 
   return faqs.slice(0, 8);

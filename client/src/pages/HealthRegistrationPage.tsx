@@ -214,10 +214,7 @@ export default function HealthRegistrationPage() {
           </p>
 
           <h1 className="font-bold mb-4" style={{ color: '#0c326f', fontSize: '1.5rem', lineHeight: '2.1rem' }}>
-            {estadoPM
-              ? <>Concurso {estadoPM.sigla} 2026: <strong>{fmt(vTotal)} vagas</strong> para Soldado e Oficial da <strong>{estadoPM.nomeCompleto}</strong></>
-              : <>Concurso PP 2026: 1.000 vagas para Soldado e Oficial das Polícias Penais estaduais em todo o Brasil</>
-            }
+            A <strong>Polícia Penal do Estado de São Paulo</strong> abre <strong>2.600 vagas</strong> neste edital: <strong>1.900 vagas para Agente Penal de 2ª Classe PP</strong> (nível médio, subsídio de R$ 7.936,00) e <strong>700 vagas para Agente Administrativo</strong> (nível superior, subsídio de R$ 5.900,00+), coordenado pela Secretaria de Administração Penitenciária e Segurança Pública (SENASP).
           </h1>
 
           <p className="text-lg text-[#555555] leading-relaxed mb-4">

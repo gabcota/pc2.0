@@ -1032,7 +1032,7 @@ export default function CapturaPage() {
           <CardHeader className="text-center px-4 sm:px-6 py-6">
             <div className="flex justify-center mb-4">
               <img
-                src={brasaoUrl}
+                src="/images/pp-sem-fundo.png"
                 alt="Brasão"
                 style={{ height: 88, objectFit: 'contain' }}
               />

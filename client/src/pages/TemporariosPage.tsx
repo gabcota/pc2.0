@@ -233,7 +233,7 @@ const getPersonalizedFAQs = (assessmentData: AssessmentData | null, userData: an
   // Pergunta básica sempre presente
   faqs.push({
     question: `Preciso ter experiência prévia em segurança pública para me inscrever no Concurso ${sigla}?`,
-    answer: `Não. O Concurso Público da ${sigla} é aberto a qualquer cidadão que atenda os requisitos do edital — ensino médio completo para Soldado PP 2ª Classe e ensino superior completo (qualquer área) para Oficial PP — além de idade mínima de 18 anos, idoneidade e aptidão física e mental. Nenhuma experiência prévia na área de segurança é exigida.`
+    answer: 'Não. O Concurso Público da PP-SP é aberto a qualquer cidadão que atenda os requisitos do edital — ensino médio completo para Policial Penal de 2ª Classe e ensino superior completo (qualquer área) para Agente Administrativo — além de idade mínima de 18 anos, idoneidade e aptidão física e mental. Nenhuma experiência prévia na área de segurança é exigida.'
   });
 
   // Perguntas baseadas na situação ocupacional

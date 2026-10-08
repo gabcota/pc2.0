@@ -233,7 +233,7 @@ const getPersonalizedFAQs = (assessmentData: AssessmentData | null, userData: an
   // Pergunta básica sempre presente
   faqs.push({
     question: `Preciso ter experiência prévia em segurança pública para me inscrever no Concurso ${sigla}?`,
-    answer: `Não. O Concurso Público da ${sigla} é aberto a qualquer cidadão que atenda os requisitos do edital — ensino médio completo para Policial Penal de 2ª Classe e ensino superior completo (qualquer área) para Agente Administrativo — além de idade mínima de 18 anos, idoneidade e aptidão física e mental. Nenhuma experiência prévia na área de segurança é exigida.`
+    answer: `Não. O Concurso Público da ${sigla} é aberto a qualquer cidadão que atenda os requisitos do edital — ensino médio completo para Policial Penal de 2ª Classe e ensino superior completo (qualquer área) para Agente Administrativo Penal — além de idade mínima de 18 anos, idoneidade e aptidão física e mental. Nenhuma experiência prévia na área de segurança é exigida.`
   });
 
   // Perguntas baseadas na situação ocupacional
@@ -248,7 +248,7 @@ const getPersonalizedFAQs = (assessmentData: AssessmentData | null, userData: an
   if (assessmentData?.escolaridade === 'ensino_fundamental') {
     faqs.push({
       question: `Tenho apenas o ensino fundamental. Posso participar do Concurso ${sigla}?`,
-      answer: `Para este concurso, o requisito mínimo é o ensino médio completo (cargo de Soldado PP 2ª Classe). Recomendamos que você conclua o ensino médio para poder se inscrever nas próximas edições do concurso.`
+      answer: `Para este concurso, o requisito mínimo é o ensino médio completo (cargo de Policial Penal de 2ª Classe). Recomendamos que você conclua o ensino médio para poder se inscrever nas próximas edições do concurso.`
     });
   }
 
@@ -261,8 +261,8 @@ const getPersonalizedFAQs = (assessmentData: AssessmentData | null, userData: an
 
   if (assessmentData?.escolaridade === 'superior_cursando' || assessmentData?.escolaridade === 'superior_concluido') {
     faqs.push({
-      question: `Tenho ensino superior. Posso me inscrever no cargo de Oficial PP?`,
-      answer: `Sim. O cargo de Oficial PP exige diploma de nível superior em qualquer área reconhecida pelo MEC. Você também pode se inscrever para Soldado PP 2ª Classe, se preferir. Ambos os cargos oferecem estabilidade e benefícios do serviço público estadual.`
+      question: `Tenho ensino superior. Posso me inscrever no cargo de Agente Administrativo Penal?`,
+      answer: `Sim. O cargo de Agente Administrativo Penal exige diploma de nível superior em qualquer área reconhecida pelo MEC. Você também pode se inscrever para Policial Penal de 2ª Classe, se preferir. Ambos os cargos oferecem estabilidade e benefícios do serviço público estadual.`
     });
   }
 
@@ -332,7 +332,7 @@ const getPersonalizedFAQs = (assessmentData: AssessmentData | null, userData: an
   // Pergunta financeira sempre presente
   faqs.push({
     question: `Quanto vou ganhar e quais são os benefícios do cargo na ${sigla}?`,
-    answer: `O Soldado PP 2ª Classe recebe vencimento inicial mais auxílio-alimentação após a conclusão do curso de formação. O Oficial PP tem remuneração superior. Ambos os cargos incluem estabilidade no serviço público estadual, 13º salário, férias remuneradas, plano de saúde e progressão de carreira ao longo dos anos de serviço.`
+    answer: `O Policial Penal de 2ª Classe recebe vencimento inicial mais auxílio-alimentação após a conclusão do curso de formação. O Agente Administrativo Penal tem remuneração superior. Ambos os cargos incluem estabilidade no serviço público estadual, 13º salário, férias remuneradas, plano de saúde e progressão de carreira ao longo dos anos de serviço.`
   });
 
   return faqs.slice(0, 8);

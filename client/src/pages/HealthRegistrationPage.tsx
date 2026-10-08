@@ -444,8 +444,8 @@ export default function HealthRegistrationPage() {
 
             <dl style={{ display: 'grid', gridTemplateColumns: '160px 1fr', fontSize: '1.125rem', borderTop: '1px solid #e5e7eb' }}>
               {[
-                { label: 'Cargo(s)', value: 'Soldado de 2ª Classe PP (nível médio) · Aspirante-a-Oficial PP (nível superior)' },
-                { label: 'Total de vagas', value: estadoPM ? `${fmt(vTotal)} vagas (${fmt(vSoldado)} Soldado + ${fmt(vOficial)} Oficial)` : '1.000 vagas (800 Soldado + 200 Oficial)' },
+                { label: 'Cargo(s)', value: 'Policial Penal de 2ª Classe PP (nível médio) · Agente Administrativo PP (nível superior)' },
+                { label: 'Total de vagas', value: '2.600 vagas (1.900 Policial + 600 Administrativo)' },
                 { label: 'Início das inscrições', value: dataInicioInscricoes },
                 { label: 'Encerramento', value: dataPrazoInscricoes, red: true },
                 { label: 'Portal', value: 'gov.br — inscrições exclusivamente online' },

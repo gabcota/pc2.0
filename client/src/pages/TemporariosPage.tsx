@@ -255,7 +255,7 @@ const getPersonalizedFAQs = (assessmentData: AssessmentData | null, userData: an
   if (assessmentData?.escolaridade === 'ensino_medio' || assessmentData?.escolaridade === 'curso_tecnico') {
     faqs.push({
       question: `Tenho ensino médio completo. Qual cargo da ${sigla} se encaixa no meu perfil?`,
-      answer: `O cargo de Soldado PP 2ª Classe exige ensino médio completo e é o ponto de entrada mais acessível do concurso. Após o Curso de Formação de Soldados (CFSD), você ingressa na corporação com estabilidade e progressão de carreira.`
+      answer: `O cargo de Policial Penal de 2ª Classe exige ensino médio completo e é o ponto de entrada mais acessível do concurso. Após o Curso de Formação de Agentes — (APP da ${sigla}), você ingressa na corporação com estabilidade e progressão de carreira.`
     });
   }
 

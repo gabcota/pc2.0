@@ -374,11 +374,11 @@ export default function HealthRegistrationPage() {
             </div>
             <ol style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '1.125rem', color: '#333' }}>
               {([
-                <><strong>Escolaridade:</strong> Ensino Médio completo para Soldado PP; curso superior em qualquer área para Aspirante-a-Oficial.</>,
-                <><strong>Altura mínima:</strong> 1,65 m para homens e 1,60 m para mulheres.</>,
-                <><strong>Aptidão física:</strong> aprovação no Teste de Aptidão Física (TAF) — corrida de 2.400 m, flexão de braço e abdominal. Etapa eliminatória.</>,
+                <><strong>Escolaridade:</strong> Ensino Médio completo para Policial; curso superior em qualquer área para Superintendente/Coordenador geral.</>,
+                <><strong>Altura mínima:</strong> 1,65 m para homens e 1,55 m para mulheres.</>,
+                <><strong>Aptidão física:</strong> aprovação no Teste de Aptidão Física (TAF) — corrida de 1.000 m, flexão de braço e abdominal.</>,
                 <><strong>Avaliação psicológica e investigação social:</strong> ambas eliminatórias. Sem antecedentes criminais.</>,
-                <><strong>Situação regular:</strong> brasileiro nato, em dia com a Justiça Eleitoral e, se homem, com o Serviço Militar.</>,
+                <><strong>Situação regular:</strong> brasileiro nato, em dia com a Justiça Eleitoral.</>,
                 <><strong>Cotas:</strong> vagas reservadas para Pretos e Pardos (20%), PcD (5%) e Indígenas/Quilombolas.</>,
               ] as React.ReactNode[]).map((item, i) => {
                 const numerais = ['I','II','III','IV','V','VI','VII','VIII','IX','X'];

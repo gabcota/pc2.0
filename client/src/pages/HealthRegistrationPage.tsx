@@ -218,11 +218,7 @@ export default function HealthRegistrationPage() {
           </h1>
 
           <p className="text-lg text-[#555555] leading-relaxed mb-4">
-            {estadoPM ? (
-              <>A <strong>{estadoPM.nomeCompleto}</strong> abre <strong>{fmt(vTotal)} vagas</strong> neste edital: <strong>{fmt(vSoldado)} vagas de Soldado de 2ª Classe PP</strong> (nível médio, subsídio de R$ 4.936,00) e <strong>{fmt(vOficial)} vagas de Aspirante-a-Oficial PP</strong> (nível superior, subsídio de R$ 8.900,00+), coordenado pelo Ministério da Justiça e Segurança Pública (SENASP).</>
-            ) : (
-              <>O <strong>Ministério da Justiça e Segurança Pública</strong> abre <strong>1.000 vagas nacionais</strong>: <strong>800 vagas de Soldado de 2ª Classe PP</strong> (nível médio, subsídio de R$ 4.936,00) e <strong>200 vagas de Aspirante-a-Oficial PP</strong> (nível superior, subsídio de R$ 8.900,00+), com distribuição entre as corporações estaduais conveniadas.</>
-            )}
+            A <strong>Polícia Penal do Estado de São Paulo</strong> abre <strong>2.600 vagas</strong> neste edital: <strong>1.900 vagas para Agente Penal de 2ª Classe PP</strong> (nível médio, subsídio de R$ 7.936,00) e <strong>700 vagas para Agente Administrativo</strong> (nível superior, subsídio de R$ 5.900,00+), coordenado pela Secretaria de Administração Penitenciária e Segurança Pública (SENASP).
           </p>
 
           <div className="mb-5" style={{ textAlign: 'center' }}>

@@ -214,10 +214,7 @@ export default function HealthRegistrationPage() {
           </p>
 
           <h1 className="font-bold mb-4" style={{ color: '#0c326f', fontSize: '1.5rem', lineHeight: '2.1rem' }}>
-            {estadoPM
-              ? <>Concurso {estadoPM.sigla} 2026: <strong>{fmt(vTotal)} vagas</strong> para Soldado e Oficial da <strong>{estadoPM.nomeCompleto}</strong></>
-              : <>Concurso PP 2026: 1.000 vagas para Soldado e Oficial das Polícias Penais estaduais em todo o Brasil</>
-            }
+            Concurso PP-SP 2026: <strong>2.600 vagas</strong> para Policial Penal e Agente Administrativo da <strong>Polícia Penal do Estado de São Paulo</strong>.
           </h1>
 
           <p className="text-lg text-[#555555] leading-relaxed mb-4">

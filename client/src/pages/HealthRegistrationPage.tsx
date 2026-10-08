@@ -445,7 +445,7 @@ export default function HealthRegistrationPage() {
             <dl style={{ display: 'grid', gridTemplateColumns: '160px 1fr', fontSize: '1.125rem', borderTop: '1px solid #e5e7eb' }}>
               {[
                 { label: 'Cargo(s)', value: 'Policial Penal de 2ª Classe PP (nível médio) · Agente Administrativo PP (nível superior)' },
-                { label: 'Total de vagas', value: '2.600 vagas (1.900 Policial + 600 Administrativo)' },
+                { label: 'Total de vagas', value: '2.600 vagas (1.900 Policial + 700 Administrativo)' },
                 { label: 'Início das inscrições', value: dataInicioInscricoes },
                 { label: 'Encerramento', value: dataPrazoInscricoes, red: true },
                 { label: 'Portal', value: 'gov.br — inscrições exclusivamente online' },

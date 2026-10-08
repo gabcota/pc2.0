@@ -1140,13 +1140,6 @@ export default function TemporariosPage() {
                 
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Especialidades Disponíveis:</h4>
-                  {position.id === 'soldado-pm' ? (
-                    <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700">
-                      {position.specializations.map((spec) => (
-                        <li key={spec}>{spec}</li>
-                      ))}
-                    </ul>
-                  ) : (
                   <div className="flex flex-wrap gap-1">
                     {position.specializations.slice(0, 4).map((spec, index) => (
                       <Badge key={index} variant="outline" className="text-xs">
@@ -1159,7 +1152,6 @@ export default function TemporariosPage() {
                       </Badge>
                     )}
                   </div>
-                  )}
                 </div>
                 
                 

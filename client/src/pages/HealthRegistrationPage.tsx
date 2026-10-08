@@ -448,7 +448,6 @@ export default function HealthRegistrationPage() {
                 { label: 'Total de vagas', value: '2.600 vagas (1.900 Policial + 700 Administrativo)' },
                 { label: 'Início das inscrições', value: dataInicioInscricoes },
                 { label: 'Encerramento', value: dataPrazoInscricoes, red: true },
-                { label: 'Portal', value: 'gov.br — inscrições exclusivamente online' },
               ].map(({ label, value, red }) => (
                 <Fragment key={label}>
                   <dt style={{ padding: '7px 0', borderBottom: '1px solid #e5e7eb', color: '#555', fontWeight: 600 }}>{label}</dt>

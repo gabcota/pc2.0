@@ -707,7 +707,7 @@ export default function TemporariosPage() {
       examInfo: {
         questions: 120,
         passingPercentage: calculatePassingPercentage(60, isWoman),
-        subjects: ['Língua Portuguesa', 'Raciocínio Lógico e Matemática', 'Direito Constitucional e Administrativo', 'Conhecimentos Gerais e Atualidades', 'Teste de Aptidão Física (TAF)']
+        subjects: ['Língua Portuguesa', 'Raciocínio Lógico e Matemática', 'Direito Constitucional e Administrativo', 'Conhecimentos Gerais e Atualidades']
       }
     });
 

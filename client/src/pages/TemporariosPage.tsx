@@ -1088,22 +1088,18 @@ export default function TemporariosPage() {
                       </div>
                     );
                   }
-                  const getPositionKey = (title: string) => {
-                    if (title.toLowerCase().includes('oficial')) return 'oficial-pm';
-                    return 'soldado-pm';
-                  };
+                  const stats = positionStats[position.id];
                   
-                  const posKey = getPositionKey(position.title);
-                  const stats = positionStats[posKey];
-                  
-                  if (stats && stats.percentageRemaining < 20) {
+                  if (position.id === 'oficial-pm' || (stats && stats.percentageRemaining < 20)) {
                     return (
                       <div className="bg-red-100 border border-red-300 rounded-lg p-2 mb-3">
                         <div className="flex items-center justify-between">
                           <span className="text-red-800 text-xs font-bold">🚨 VAGAS LIMITADAS</span>
-                          <span className="text-red-600 text-xs font-bold">
-                            {Math.round(stats.percentageRemaining)}% restantes
-                          </span>
+                          {stats && (
+                            <span className="text-red-600 text-xs font-bold">
+                              {Math.round(stats.percentageRemaining)}% restantes
+                            </span>
+                          )}
                         </div>
                       </div>
                     );

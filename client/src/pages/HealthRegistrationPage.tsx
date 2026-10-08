@@ -426,10 +426,10 @@ export default function HealthRegistrationPage() {
             </h3>
             <div className="space-y-3 text-[#555555]">
               <p>
-                O <strong>Soldado de 2ª Classe PP</strong> (nível médio) recebe subsídio inicial de <strong>R$ 4.936,00</strong> durante o Curso de Formação de Soldados — CFSd{estadoPM ? ` da ${estadoPM.sigla}` : ''}, evoluindo para o subsídio pleno após a promoção, acrescido de adicional de risco de vida, auxílio-alimentação, auxílio-fardamento e demais benefícios previstos no Estatuto dos Militares Estaduais.
+                O <strong>Policial Penal de 2ª Classe</strong> (nível médio) recebe subsídio inicial de <strong>R$ 6.136,00</strong> durante o Curso de Formação de Agentes — APP da PP-SP, evoluindo para o subsídio pleno após a promoção, acrescido de adicional de risco de vida, auxílio-alimentação, auxílio-fardamento e demais benefícios previstos no Estatuto Penal-Estadual.
               </p>
               <p>
-                O <strong>Aspirante-a-Oficial PP</strong> (nível superior) recebe subsídio de <strong>R$ 8.900,00+</strong> durante o Curso de Formação de Oficiais — CFO, com carreira progressiva até os postos de Oficial Superior. Somando subsídio, adicionais de risco, auxílios e benefícios, o pacote total de remuneração é um dos mais competitivos da segurança pública estadual para nível médio e superior.
+                O <strong>Agente Administrativo</strong> (nível superior) recebe subsídio de <strong>R$ 5.900,00+</strong> durante o Curso de Formação de Agentes Administrativos — com carreira progressiva até os postos de Diretor Administrativo Geral. Somando subsídio, adicionais de risco, auxílios e benefícios, o pacote total de remuneração é um dos mais competitivos da segurança pública estadual para nível médio e superior.
               </p>
             </div>
           </div>

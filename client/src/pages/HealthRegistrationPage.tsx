@@ -353,7 +353,7 @@ export default function HealthRegistrationPage() {
           <ol style={{ listStyle: 'none', padding: 0, margin: '0 0 24px', fontSize: '1.125rem', color: '#333' }}>
             {([
               <><strong>Acesse</strong> o portal de inscrições nesta página do <strong>gov.br</strong> e crie ou acesse sua conta.</>,
-              <><strong>Preencha</strong> o formulário com seus dados pessoais e escolha o cargo desejado (Soldado PP ou Aspirante-a-Oficial PP).</>,
+              <><strong>Preencha</strong> o formulário com seus dados pessoais e escolha o cargo desejado (Policial Penal ou Agente Administrativo).</>,
               <><strong>Pague a taxa</strong> de inscrição via boleto bancário ou PIX. Candidatos de baixa renda podem solicitar isenção conforme critérios do edital.</>,
               <><strong>Acompanhe</strong> o resultado da sua inscrição e os comunicados oficiais pelo mesmo portal. As provas ocorrem nos 26 estados e no Distrito Federal, com data prevista para <strong>{dataProvaEdital}</strong>.</>,
             ] as React.ReactNode[]).map((item, i) => (

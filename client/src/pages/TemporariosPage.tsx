@@ -660,9 +660,8 @@ export default function TemporariosPage() {
       workSchedule: 'Escala de serviço conforme o batalhão — plantões e horário administrativo',
       specializations: [
         'Vigilância e monitoramento de unidades prisionais',
-        'Segurança de áreas externas e perímetros de unidades prisionais',
-        'Investigação de ocorrências relacionadas ao ambiente prisional',
-        'Prevenção e repressão à entrada de objetos ilícitos nas unidades',
+        'Investigação de ocorrências no ambiente prisional',
+        'Prevenção à entrada de objetos ilícitos nas unidades',
         'Transporte e recambiamento de presos'
       ],
       profileMatch: calculateProfileMatch(data, 'soldado-pm'),

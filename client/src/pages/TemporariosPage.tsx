@@ -697,7 +697,11 @@ export default function TemporariosPage() {
       ],
       duration: 'Cargo efetivo de provimento permanente — estabilidade após o estágio probatório',
       workSchedule: 'Horário administrativo com disponibilidade para comando de tropa',
-      specializations: getSpecializationsForProfile(data, 'oficial-pm'),
+      specializations: [
+        'Cadastro e atualização de dados de internos',
+        'Planejamento Operacional',
+        'Gestão Administrativa da Unidade'
+      ],
       profileMatch: calculateProfileMatch(data, 'oficial-pm'),
       matchReasons: getMatchReasons(data, 'oficial-pm', sigla),
       examInfo: {

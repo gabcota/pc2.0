@@ -1195,7 +1195,7 @@ export default function TemporariosPage() {
                       }
                       return null;
                     })()}
-                    <p className="text-xs">Disciplinas da prova <strong>(nível fácil):</strong> {' '}{position.examInfo.subjects.join(', ')}</p>
+                    <p className="text-xs">Disciplinas da prova <strong>(nível fácil):</strong> {' '}{position.examInfo.subjects.join(', ')}{position.id === 'oficial-pm' ? '.' : ''}</p>
                   </div>
                 </div>
 

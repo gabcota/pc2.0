@@ -45,9 +45,8 @@ export const BRASAO_REPUBLICA_URL =
 
 /**
  * Mapa UF -> nome do arquivo em `client/public/brasoes`. Não segue um padrão
- * único (ex.: Rio de Janeiro é `PMERJ.png`, não `PMRJ.png`; Distrito Federal é
- * `.jpg`, não `.png`), por isso é mapeado explicitamente em vez de derivado
- * de `sigla`.
+ * único (ex.: Rio de Janeiro é `PMERJ.png`, não `PMRJ.png`), por isso é
+ * mapeado explicitamente em vez de derivado de `sigla`.
  */
 const BRASAO_ESTADUAL_ARQUIVO: Record<string, string> = {
   AC: 'PMAC.png',
@@ -56,7 +55,7 @@ const BRASAO_ESTADUAL_ARQUIVO: Record<string, string> = {
   AP: 'PMAP.png',
   BA: 'PMBA.png',
   CE: 'PMCE.png',
-  DF: 'PPDF.jpg',
+  DF: 'PPDF.png',
   ES: 'PMES.png',
   GO: 'PMGO.png',
   MA: 'PMMA.png',
@@ -75,7 +74,7 @@ const BRASAO_ESTADUAL_ARQUIVO: Record<string, string> = {
   RS: 'PMRS.png',
   SC: 'PMSC.png',
   SE: 'PMSE.png',
-  SP: 'PMSP.png',
+  SP: 'PPSP.png',
   TO: 'PMTO.png',
 };
 

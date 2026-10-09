@@ -11,7 +11,7 @@ import logoHeader from "@assets/logoheader_1772976087386.webp";
 
 import LULA_E_INS from "@assets/LULA_E_INS.png";
 
-import lula__1_ from "@assets/lula (1).jpeg";
+import fotoPoliciaPenal from "@assets/pp_1791515211569.jpg";
 
 export default function HealthRegistrationPage() {
   const [, setLocation] = useLocation();
@@ -279,8 +279,8 @@ export default function HealthRegistrationPage() {
           </div>
 
           <img 
-            src={lula__1_}
-            alt={`${editalSlug} — Concurso Público para Soldado e Oficial${estadoPM ? ` da ${estadoPM.nomeCompleto}` : ' das Polícias Penais Estaduais'}`}
+            src={fotoPoliciaPenal}
+            alt="Policiais penais reunidos em um plenário"
             className="w-full mb-6 rounded shadow-sm"
             onClick={handleRegistration}
             fetchPriority="high"

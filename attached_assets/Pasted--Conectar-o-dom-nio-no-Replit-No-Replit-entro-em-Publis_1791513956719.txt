@@ -1,0 +1,74 @@
+ Conectar o domínio no Replit
+No Replit, entro em Publishing → Domains e adiciono o domínio.
+
+O Replit informa os registros A e TXT necessários. Depois, coloco esses registros no painel de DNS de quem administra o domínio.
+
+Cuidados:
+
+Copiar os valores fornecidos pelo Replit, sem inventar IP ou registro.
+Configurar exemplo.com e www.exemplo.com separadamente, se os dois forem usados.
+Manter o registro TXT: ele é necessário para a validação e renovação do certificado HTTPS.
+Essa etapa faz o domínio apontar para o aplicativo publicado.
+
+2. Cadastrar a identidade do site no frontend
+Arquivo: client/src/lib/siteConfig.ts
+Local: objeto CONFIGS.
+
+Cada domínio tem uma configuração com:
+
+Domínio sem https:// e sem www.
+Logo e subtítulo.
+Razão social, CNPJ, endereço e contatos.
+URL principal, no campo canonicalUrl.
+Aviso sobre a natureza privada do serviço.
+Identificadores de rastreamento, quando aplicável.
+A estrutura é assim:
+
+const CONFIGS = {
+  'exemplo.com': {
+    hostname: 'exemplo.com',
+    siteSubtitle: 'Assessoria Educacional',
+    canonicalUrl: 'https://www.exemplo.com/',
+    // Demais campos obrigatórios da identidade da empresa.
+  },
+};
+A função getSiteConfig() identifica o domínio acessado pelo navegador e escolhe a configuração correspondente. Ela remove o prefixo www. antes de procurar.
+
+Essa etapa determina os dados e a identidade usados nas páginas.
+
+3. Cadastrar o domínio no backend
+Arquivo: server/domainTracking.ts
+
+Nesse arquivo existem dois cadastros importantes:
+
+Cadastro	O que colocar
+DOMAIN_TRACKING	Domínio, título, descrição, favicon, imagem de compartilhamento e identificadores de analytics/pixels.
+COMPANY_DATA	Marca, razão social, CNPJ, endereço e contatos usados pelo servidor.
+No DOMAIN_TRACKING, cadastro as entradas com e sem www, porque a procura do servidor usa o hostname recebido.
+
+O servidor utiliza essas configurações para montar o HTML com títulos, metadados, URL canônica e scripts de rastreamento.
+
+Importante: os dados do frontend e do backend precisam corresponder à mesma empresa e ao mesmo domínio.
+
+4. Conferir arquivos e integrações relacionados
+Logos, favicons e imagens: verificar se os arquivos indicados existem e estão acessíveis.
+server/routes.ts: conferir /robots.txt e /sitemap.xml, que usam o domínio da requisição e as configurações do servidor.
+Pixels e analytics: usar os identificadores corretos para aquele site, sem copiar os de outro domínio por engano.
+Links e redirecionamentos externos: revisar quando houver. Neste projeto existe o campo opcional redUrl, enviado como red_url nos dados do pagamento; ele não é o cadastro DNS do domínio.
+Não é necessário trocar cada chamada da API para o novo domínio. Chamadas relativas, como:
+
+fetch('/api/gerar-pix')
+continuam usando o próprio domínio acessado.
+
+5. Publicar e testar
+Depois de alterar o código, publicar a nova versão e conferir:
+
+Acesso com e sem www.
+HTTPS funcionando.
+Logo, dados da empresa e contatos corretos.
+Título, descrição e imagem de compartilhamento.
+Pixels e analytics.
+Links, redirecionamentos e fluxo de pagamento.
+Observação deste projeto: o preview .replit.dev usa a última configuração cadastrada como referência. Portanto, olhar apenas o preview não confirma que o domínio personalizado está configurado corretamente.
+
+Resumo: conexão em Publishing + DNS; identidade em siteConfig.ts; dados do servidor e rastreamento em domainTracking.ts; depois publicação e testes no domínio real.

@@ -37,55 +37,32 @@ export const ESTADO_PM: Record<string, EstadoPMData> = {
 };
 
 /**
- * URL do Brasão da República (usado como fallback quando o estado do
- * candidato não é detectado, ou não tem arquivo de brasão mapeado).
+ * Emblema padrão da Polícia Penal quando não há brasão estadual enviado
+ * ou quando o estado do candidato não é identificado.
  */
-export const BRASAO_REPUBLICA_URL =
-  'https://www.gov.br/planalto/pt-br/conheca-a-presidencia/biblioteca-da-pr/simbolos-nacionais/brasao-da-republica/brasaooficialcolorido.png';
+export const BRASAO_PADRAO_URL = '/brasoes/PP-padrao.png';
 
 /**
- * Mapa UF -> nome do arquivo em `client/public/brasoes`. Não segue um padrão
- * único (ex.: Rio de Janeiro é `PMERJ.png`, não `PMRJ.png`), por isso é
- * mapeado explicitamente em vez de derivado de `sigla`.
+ * Apenas brasões da Polícia Penal enviados pelo usuário.
+ * UFs ainda sem imagem própria usam o emblema padrão.
  */
 const BRASAO_ESTADUAL_ARQUIVO: Record<string, string> = {
-  AC: 'PMAC.png',
-  AL: 'PMAL.png',
-  AM: 'PMAM.png',
-  AP: 'PMAP.png',
   BA: 'PPBA.png',
-  CE: 'PMCE.png',
   DF: 'PPDF.png',
   ES: 'PPES.png',
-  GO: 'PMGO.png',
-  MA: 'PMMA.png',
   MG: 'PPMG.png',
-  MS: 'PMMS.png',
-  MT: 'PMMT.png',
-  PA: 'PMPA.png',
-  PB: 'PMPB.png',
-  PE: 'PMPE.png',
-  PI: 'PMPI.png',
-  PR: 'PMPR.png',
   RJ: 'PPRJ.png',
-  RN: 'PMRN.png',
-  RO: 'PMRO.png',
-  RR: 'PMRR.png',
   RS: 'PPRS.png',
-  SC: 'PMSC.png',
-  SE: 'PMSE.png',
   SP: 'PPSP.png',
-  TO: 'PMTO.png',
 };
 
 /**
  * Resolve o brasão a exibir para um dado `EstadoPMData`: o brasão da PP do
- * estado, se detectado e mapeado; caso contrário, o Brasão da República
- * (comportamento anterior, usado como fallback).
+ * estado, se detectado e mapeado; caso contrário, o emblema padrão da PP.
  */
 export function getBrasaoUrl(estadoPM: EstadoPMData | null | undefined): string {
   const arquivo = estadoPM?.uf ? BRASAO_ESTADUAL_ARQUIVO[estadoPM.uf] : undefined;
-  return arquivo ? `/brasoes/${arquivo}` : BRASAO_REPUBLICA_URL;
+  return arquivo ? `/brasoes/${arquivo}` : BRASAO_PADRAO_URL;
 }
 
 /**

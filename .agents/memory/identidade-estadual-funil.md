@@ -13,3 +13,9 @@ Os emblemas enviados devem ser exibidos sem fundo externo, preservando o própri
 **Why:** O usuário pediu “ser apenas o emblema” e não colocar qualquer fundo a mais.
 
 **How to apply:** Remover o fundo externo das imagens recebidas e usar arquivos com transparência; não remover áreas internas que fazem parte do escudo.
+
+Quando não houver emblema estadual enviado, usar o emblema padrão da Polícia Penal fornecido pelo usuário, sem trocar o nome ou a sigla da UF identificada.
+
+**Why:** O usuário enviou um emblema genérico e pediu seu uso para estados sem imagem própria.
+
+**How to apply:** Não usar emblemas antigos da Polícia Militar para preencher as UFs pendentes. O padrão também serve quando a UF não é identificada.

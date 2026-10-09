@@ -71,7 +71,7 @@ const BRASAO_ESTADUAL_ARQUIVO: Record<string, string> = {
   RN: 'PMRN.png',
   RO: 'PMRO.png',
   RR: 'PMRR.png',
-  RS: 'PMRS.png',
+  RS: 'PPRS.png',
   SC: 'PMSC.png',
   SE: 'PMSE.png',
   SP: 'PPSP.png',

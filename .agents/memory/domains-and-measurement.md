@@ -14,3 +14,9 @@ O cadastro de um domínio inclui duas partes distintas: identidade e dados corre
 **Why:** o usuário forneceu esse procedimento como referência para o cadastro de domínios.
 
 **How to apply:** distinguir no resultado o que foi cadastrado no código do que foi conectado e testado no domínio real; não anunciar a conexão pública como concluída apenas por cadastrar a identidade no aplicativo.
+
+Para os próximos domínios enviados neste projeto, seguir esse mesmo procedimento.
+
+**Why:** o usuário pediu: “e os próximos que eu mandar, faça dessa forma”.
+
+**How to apply:** conferir cadastro, identidade, conexão pública, arquivos, HTTPS e medição sem GTM a cada novo domínio, respeitando as autorizações necessárias para serviços externos.

@@ -1826,7 +1826,7 @@ export function buildTrackingScripts(t: TrackingConfig, path = "/"): string {
       `\n<meta property="og:title" content="${t.ogTitle}" />` +
       `\n<meta property="og:description" content="${t.ogDescription}" />` +
       `\n<meta property="og:url" content="${canonicalUrl}" />` +
-      `\n<meta property="og:image" content="${base}${t.faviconPath}" />` +
+      `\n<meta property="og:image" content="${base}${t.ogImage}" />` +
       `\n<meta property="og:site_name" content="${t.siteName}" />`,
   );
 
@@ -1874,8 +1874,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 // without touching the surrounding functions.
 const EDITAL_PENAL_TRACKING: TrackingConfig = {
   domain: EDITAL_PENAL_COMPANY.hostname,
-  faviconPath: "/favicon.svg",
-  ogImage: "/favicon.svg",
+  faviconPath: "/editalpenal/favicon.svg",
+  ogImage: "/editalpenal/share.png",
   clarityId: null,
   homepageKey: "zapzap",
   title: EDITAL_PENAL_COMPANY.razaoSocial,

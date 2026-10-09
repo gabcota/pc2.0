@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { PAYMENT_PRICES } from '@shared/paymentPrices';
 import { useLocation } from 'wouter';
 import { ArrowRight, Calendar, Clock, MapPin, Phone, AlertTriangle, CreditCard, Shield } from 'lucide-react';
 import { ExercitoHeader } from '@/components/ExercitoHeader';
@@ -44,8 +45,7 @@ export default function ConfirmacaoMedicaPage() {
   const [candidateGender, setCandidateGender] = useState('');
   const [positionTitle, setPositionTitle] = useState('');
   const [ticketAmount, setTicketAmount] = useState<number>(() => {
-    const saved = localStorage.getItem('confirmarDadosPixAmount');
-    return saved ? parseFloat(saved) : 0;
+    return PAYMENT_PRICES.medica;
   });
   const { trackEvent } = useClarityEvents();
 
@@ -129,18 +129,18 @@ export default function ConfirmacaoMedicaPage() {
         } catch { /* ignore */ }
         setPositionTitle(cargo);
 
-        // Fetch ticket amount unless already cached
-        if (!localStorage.getItem('confirmarDadosPixAmount')) {
+        // Resolver o preço vigente, sem reutilizar uma cotação antiga.
+        {
           fetch(`/api/valor-dinamico?tipo=medica&genero=${encodeURIComponent(gender)}`)
             .then((r) => r.json())
             .then((data) => {
-              const valor = data.success ? data.valor : 68.92;
+              const valor = data.success ? data.valor : PAYMENT_PRICES.medica;
               localStorage.setItem('confirmarDadosPixAmount', valor.toString());
               setTicketAmount(valor);
             })
             .catch(() => {
-              localStorage.setItem('confirmarDadosPixAmount', '68.92');
-              setTicketAmount(68.92);
+              localStorage.setItem('confirmarDadosPixAmount', String(PAYMENT_PRICES.medica));
+              setTicketAmount(PAYMENT_PRICES.medica);
             });
         }
       } catch (error) {

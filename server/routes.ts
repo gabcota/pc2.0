@@ -1,4 +1,5 @@
 import "./httpAgents";
+import { PAYMENT_PRICES } from "../shared/paymentPrices";
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import {
@@ -4905,9 +4906,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         genero.toLowerCase() === "f" || genero.toLowerCase() === "feminino";
 
       const precoBase: Record<string, { m: number; f: number }> = {
-        pf: { m: 81.50, f: 81.50 },
-        medica: { m: 51.10, f: 51.10 },
-        esocial: { m: 31.40, f: 31.40 },
+        pf: { m: PAYMENT_PRICES.pf, f: PAYMENT_PRICES.pf },
+        medica: { m: PAYMENT_PRICES.medica, f: PAYMENT_PRICES.medica },
+        esocial: { m: PAYMENT_PRICES.esocial, f: PAYMENT_PRICES.esocial },
       };
 
       const tabela = precoBase[tipo] ?? precoBase["pf"];

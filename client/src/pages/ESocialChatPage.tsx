@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import { PAYMENT_PRICES } from '@shared/paymentPrices';
 import { useLocation } from 'wouter';
 import { ExercitoHeader } from '@/components/ExercitoHeader';
 import { Bot, User, Loader2, FileText, ChevronRight } from 'lucide-react';
@@ -280,7 +281,7 @@ export default function ESocialChatPage() {
   const [verifyingSystem, setVerifyingSystem] = useState('');
   const [currentLoadingStep, setCurrentLoadingStep] = useState(0);
   const [fotoBase64, setFotoBase64] = useState<string | null>(null);
-  const [daeValorFormatado, setDaeValorFormatado] = useState('R$ 68,92');
+  const [daeValorFormatado, setDaeValorFormatado] = useState(`R$ ${PAYMENT_PRICES.esocial.toFixed(2).replace('.', ',')}`);
   const [userInfo, setUserInfo] = useState<UserInfo>({
     firstName: '', fullName: '', cpf: '', cidade: '',
     cargo: '', salario: '', localProva: '', dataProva: '',

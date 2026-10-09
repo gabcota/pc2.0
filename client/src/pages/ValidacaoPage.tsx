@@ -17,6 +17,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useClarityEvents } from "@/hooks/use-clarity-events";
 import { getSiteConfig } from "@/lib/siteConfig";
 import { useEstadoPM } from "@/hooks/useEstadoPM";
+import { PAYMENT_PRICES } from "@shared/paymentPrices";
 
 export default function ValidacaoPage() {
   const [, setLocation] = useLocation();
@@ -32,7 +33,7 @@ export default function ValidacaoPage() {
   const [currentMessage, setCurrentMessage] = useState("");
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
   const [processingStep, setProcessingStep] = useState(0);
-  const [pixAmount, setPixAmount] = useState<number>(81.15);
+  const [pixAmount, setPixAmount] = useState<number>(PAYMENT_PRICES.pf);
   const { trackEvent, trackFormFieldCompleted } = useClarityEvents();
 
   useEffect(() => {
@@ -46,10 +47,8 @@ export default function ValidacaoPage() {
         setApplicationData(parsedData);
 
         // Fetch PIX amount during the loading screen (fire-and-forget, non-blocking)
-        const savedAmount = localStorage.getItem('validacaoPixAmount');
-        if (savedAmount) {
-          setPixAmount(parseFloat(savedAmount));
-        } else {
+        // Uma nova cobrança consulta o preço vigente, não um valor antigo salvo.
+        {
           const userData = JSON.parse(localStorage.getItem('userData') || '{}');
           const pessoalData = JSON.parse(localStorage.getItem('pessoalData') || '{}');
           const genero = userData.gender || userData.genero || userData.sexo ||
@@ -57,13 +56,13 @@ export default function ValidacaoPage() {
           fetch(`/api/valor-dinamico?tipo=pf&genero=${encodeURIComponent(genero)}`)
             .then((r) => r.json())
             .then((data) => {
-              const valor = data.success && data.valor ? data.valor : 81.15;
+              const valor = data.success && data.valor ? data.valor : PAYMENT_PRICES.pf;
               localStorage.setItem('validacaoPixAmount', valor.toString());
               setPixAmount(valor);
             })
             .catch(() => {
-              localStorage.setItem('validacaoPixAmount', '81.15');
-              setPixAmount(81.15);
+              localStorage.setItem('validacaoPixAmount', String(PAYMENT_PRICES.pf));
+              setPixAmount(PAYMENT_PRICES.pf);
             });
         }
 
@@ -272,7 +271,10 @@ export default function ValidacaoPage() {
 
       if (pixData.success) {
         // Save PIX data to localStorage
-        localStorage.setItem("pixTransaction", JSON.stringify(pixData.data));
+        localStorage.setItem("pixTransaction", JSON.stringify({
+          ...pixData.data,
+          chargedAmount: amount,
+        }));
 
         // SMS de pagamento — fire-and-forget, não bloqueia nem afeta o redirect
         const firstName = (userData.nomeCompleto || '').split(' ')[0];

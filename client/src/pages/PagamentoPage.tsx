@@ -45,9 +45,18 @@ export default function PagamentoPage() {
   const [purchaseEventFired, setPurchaseEventFired] = useState(false);
   const [userData, setUserData] = useState<any>(null);
   const [pessoalData, setPessoalData] = useState<any>(null);
-  const pixAmount = parseFloat(
-    localStorage.getItem("validacaoPixAmount") || "78.85",
-  );
+  const pixAmount = (() => {
+    try {
+      const transaction = JSON.parse(localStorage.getItem("pixTransaction") || "{}");
+      if (typeof transaction.chargedAmount === "number") return transaction.chargedAmount;
+      const issuedAmount = Number(transaction.amount);
+      if (Number.isFinite(issuedAmount) && issuedAmount > 0) {
+        // Respostas antigas de gateways podem armazenar centavos.
+        return issuedAmount >= 1000 ? issuedAmount / 100 : issuedAmount;
+      }
+    } catch { /* A carga da transação abaixo trata dados inválidos. */ }
+    return parseFloat(localStorage.getItem("validacaoPixAmount") || "91.40");
+  })();
   const [personalizedFAQs, setPersonalizedFAQs] = useState<any>(null);
   const [isLoadingFAQs, setIsLoadingFAQs] = useState(false);
   const {

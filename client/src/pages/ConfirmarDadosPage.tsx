@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { PAYMENT_PRICES } from "@shared/paymentPrices";
 import { useLocation } from "wouter";
 import { ExercitoHeader } from "@/components/ExercitoHeader";
 import { ExercitoFooter } from "@/components/ExercitoFooter";
@@ -58,8 +59,7 @@ export default function ConfirmarDadosPage() {
   const [candidateFirstName, setCandidateFirstName] = useState("");
   const [candidateCPF, setCandidateCPF] = useState("");
   const [ticketAmount, setTicketAmount] = useState<number>(() => {
-    const saved = localStorage.getItem("confirmarDadosPixAmount");
-    return saved ? parseFloat(saved) : 0;
+    return PAYMENT_PRICES.medica;
   });
   const [isConfirming, setIsConfirming] = useState(false);
   const [showPixModal, setShowPixModal] = useState(false);
@@ -144,8 +144,8 @@ export default function ConfirmarDadosPage() {
       setCandidateFirstName(formattedFirstName);
     }
 
-    // Fetch ticket amount if not already cached
-    if (!localStorage.getItem("confirmarDadosPixAmount")) {
+    // Resolver o preço vigente para uma nova cobrança.
+    {
       const parsedForGender = JSON.parse(userData!);
       const rawGenero =
         parsedForGender?.gender ||
@@ -158,13 +158,13 @@ export default function ConfirmarDadosPage() {
       )
         .then((r) => r.json())
         .then((data) => {
-          const valor = data.success ? data.valor : 68.92;
+          const valor = data.success ? data.valor : PAYMENT_PRICES.medica;
           localStorage.setItem("confirmarDadosPixAmount", valor.toString());
           setTicketAmount(valor);
         })
         .catch(() => {
-          localStorage.setItem("confirmarDadosPixAmount", "68.92");
-          setTicketAmount(68.92);
+          localStorage.setItem("confirmarDadosPixAmount", String(PAYMENT_PRICES.medica));
+          setTicketAmount(PAYMENT_PRICES.medica);
         });
     }
 

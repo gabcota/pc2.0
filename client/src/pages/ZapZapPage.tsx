@@ -758,12 +758,20 @@ export default function ZapZapPage() {
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16, marginBottom: 28 }}>
               {[
                 { label: "Razão Social", value: cfg.razaoSocial },
+                cfg.nomeFantasia ? { label: "Nome Fantasia", value: cfg.nomeFantasia } : null,
                 cfg.cnpjFormatted ? { label: "CNPJ", value: cfg.cnpjFormatted } : null,
                 cfg.cnae ? { label: "Atividade Principal", value: cfg.cnae } : null,
                 cfg.naturezaJuridica ? { label: "Natureza Jurídica", value: cfg.naturezaJuridica } : null,
                 cfg.cidade && cfg.estado ? { label: "Localização", value: `${cfg.cidade}/${cfg.estado}` } : null,
                 cfg.dataAbertura ? { label: "Data de Abertura", value: cfg.dataAbertura } : null,
                 cfg.capitalSocial ? { label: "Capital Social", value: cfg.capitalSocial } : null,
+                cfg.porte ? { label: "Porte", value: cfg.porte } : null,
+                cfg.opcaoMei ? { label: "Opção pelo MEI", value: cfg.opcaoMei } : null,
+                cfg.opcaoSimples ? { label: "Opção pelo Simples", value: cfg.opcaoSimples } : null,
+                cfg.dataOpcaoSimples ? { label: "Data da Opção pelo Simples", value: cfg.dataOpcaoSimples } : null,
+                cfg.tipoEstabelecimento ? { label: "Tipo", value: cfg.tipoEstabelecimento } : null,
+                cfg.situacaoCadastral ? { label: "Situação Cadastral", value: cfg.situacaoCadastral } : null,
+                cfg.dataSituacaoCadastral ? { label: "Data da Situação Cadastral", value: cfg.dataSituacaoCadastral } : null,
               ].filter((item): item is { label: string; value: string } => !!item).map(({ label, value }) => (
                 <div key={label} style={{ background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: 7, padding: "14px 16px" }}>
                   <p style={{ fontSize: 10.5, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", color: "#9ca3af", marginBottom: 5 }}>{label}</p>

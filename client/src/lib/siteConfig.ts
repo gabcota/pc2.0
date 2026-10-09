@@ -1,3 +1,5 @@
+import { EDITAL_PENAL_COMPANY } from '@shared/editalPenalCompany';
+
 export interface SiteConfig {
   hostname: string;
   siteName: string;
@@ -21,6 +23,14 @@ export interface SiteConfig {
   naturezaJuridica?: string;
   dataAbertura?: string;
   capitalSocial?: string;
+  nomeFantasia?: string;
+  porte?: string;
+  opcaoMei?: string;
+  opcaoSimples?: string;
+  dataOpcaoSimples?: string;
+  tipoEstabelecimento?: string;
+  situacaoCadastral?: string;
+  dataSituacaoCadastral?: string;
   horarioAtendimento?: string;
   gadsConversionSendTo?: string;
   gtagId?: string;
@@ -2348,6 +2358,17 @@ const ROTA_POLICIAL: RawConfig = {
   // (CNPJ 57.632.967/0001-03, CNAE 47.89-0-99). ZapZapPage renderiza em modo neutro.
 };
 
+const EDITAL_PENAL: RawConfig = {
+  ...PROJETO_PM_2026,
+  ...EDITAL_PENAL_COMPANY,
+  // Sem CNAE ou identificadores de anúncios informados para este domínio.
+  cnae: undefined,
+  gadsConversionSendTo: undefined,
+  gtagId: undefined,
+  utmifyPixelId: undefined,
+  redUrl: undefined,
+};
+
 const CONFIGS: Record<string, RawConfig> = {
   'concursopm.click': VIDA_FUNCIONAL,
   'www.concursopm.click': VIDA_FUNCIONAL,
@@ -2435,6 +2456,8 @@ const CONFIGS: Record<string, RawConfig> = {
   'www.primeirafarda.click': PRIMEIRA_FARDA,
   'modopolicial.click': MODO_POLICIAL,
   'www.modopolicial.click': MODO_POLICIAL,
+  'editalpenal.click': EDITAL_PENAL,
+  'www.editalpenal.click': EDITAL_PENAL,
 };
 
 function resolveHostname(): string {

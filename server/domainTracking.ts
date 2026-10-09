@@ -1,4 +1,5 @@
 import { createHash } from "crypto";
+import { EDITAL_PENAL_COMPANY } from "../shared/editalPenalCompany";
 import type { Request, Response, NextFunction } from "express";
 
 function stringToMD5(text: string): string {
@@ -76,6 +77,18 @@ interface CompanyData {
 // COMPANY_DATA / DOMAIN_TRACKING stay keyed by hostname (Record<string, ...>)
 // so additional domains can be added here later without restructuring.
 export const COMPANY_DATA: Record<string, CompanyData> = {
+  "editalpenal.click": {
+    brand: EDITAL_PENAL_COMPANY.brand,
+    razaoSocial: EDITAL_PENAL_COMPANY.razaoSocial,
+    cnpj: EDITAL_PENAL_COMPANY.cnpjFormatted,
+    address: `${EDITAL_PENAL_COMPANY.endereco}, ${EDITAL_PENAL_COMPANY.bairro}`,
+    postalCode: EDITAL_PENAL_COMPANY.cep,
+    emailContato: EDITAL_PENAL_COMPANY.email,
+    phone: EDITAL_PENAL_COMPANY.telefone,
+    city: EDITAL_PENAL_COMPANY.cidade,
+    stateCode: EDITAL_PENAL_COMPANY.estado,
+    themeColor: "#1e3a52",
+  },
   "concursopm.click": {
     brand: "Direito de Carreira",
     razaoSocial: "Siqueira e Magalhaes Sociedade de Advogados",
@@ -1768,7 +1781,8 @@ function buildJsonLd(t: TrackingConfig, path: string): string {
     `<script type="application/ld+json">${JSON.stringify(website)}</script>`,
   ];
 
-  const faqs = DOMAIN_FAQS[t.domain] ?? PAGE_FAQS[t.homepageKey];
+  const faqDomain = t.domain === "editalpenal.click" ? "projetopm2026.click" : t.domain;
+  const faqs = DOMAIN_FAQS[faqDomain] ?? PAGE_FAQS[t.homepageKey];
   if (faqs) {
     const faqSchema = {
       "@context": "https://schema.org",
@@ -1858,7 +1872,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 // Same convention as COMPANY_DATA above: keep this Record<string, TrackingConfig>
 // keyed by hostname (bare domain + "www." variant) so new domains can be appended
 // without touching the surrounding functions.
+const EDITAL_PENAL_TRACKING: TrackingConfig = {
+  domain: EDITAL_PENAL_COMPANY.hostname,
+  faviconPath: "/favicon.svg",
+  ogImage: "/favicon.svg",
+  clarityId: null,
+  homepageKey: "zapzap",
+  title: EDITAL_PENAL_COMPANY.razaoSocial,
+  description: "Conteúdo informativo sobre preparação para concursos da Polícia Penal. Regnum Entretenimento · Konig Producoes LTDA · CNPJ 64.184.597/0001-54 · Brasília/DF. Portal privado e independente, sem vínculo com órgãos públicos.",
+  author: EDITAL_PENAL_COMPANY.razaoSocial,
+  ogType: "website",
+  siteName: EDITAL_PENAL_COMPANY.brand,
+  ogTitle: "Regnum Entretenimento — Preparação para Concursos da Polícia Penal",
+  ogDescription: "Conteúdo informativo sobre planejamento de estudos, preparação física e acompanhamento de editais da Polícia Penal. Konig Producoes LTDA — Brasília/DF.",
+  analyticsCore: "signal.c6f9a37b",
+};
+
 export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
+  "editalpenal.click": { ...EDITAL_PENAL_TRACKING },
+  "www.editalpenal.click": { ...EDITAL_PENAL_TRACKING },
   "concursopm.click": {
     domain: "concursopm.click",
     faviconPath: "/favicon.svg",

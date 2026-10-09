@@ -53,7 +53,7 @@ const BRASAO_ESTADUAL_ARQUIVO: Record<string, string> = {
   AL: 'PMAL.png',
   AM: 'PMAM.png',
   AP: 'PMAP.png',
-  BA: 'PMBA.png',
+  BA: 'PPBA.png',
   CE: 'PMCE.png',
   DF: 'PPDF.png',
   ES: 'PMES.png',

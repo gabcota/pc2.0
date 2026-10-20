@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { ESTADO_PM, getEstadoPMFromStorage, normalizeToUF } from '../client/src/utils/estadoPM';
+import { existsSync, readFileSync } from 'node:fs';
+import { ESTADO_PM, BRASAO_PADRAO_URL, getBrasaoUrl, getEstadoPMFromStorage, normalizeToUF } from '../client/src/utils/estadoPM';
 
 const estados: Record<string, string> = {
   AC: 'Acre', AL: 'Alagoas', AP: 'Amapá', AM: 'Amazonas',
@@ -61,4 +62,34 @@ test('localização ausente ou desconhecida não presume São Paulo', () => {
   assert.equal(estadoSalvo({}), null);
   assert.equal(estadoSalvo({ region: 'Unknown', regionCode: 'XX' }), null);
   assert.equal(normalizeToUF(''), null);
+});
+
+for (const uf of ['AC', 'AP']) {
+  test(`${uf}: usa o brasão estadual fornecido em PNG com transparência`, () => {
+    const url = getBrasaoUrl(ESTADO_PM[uf]);
+    assert.equal(url, `/brasoes/PP${uf}.png`);
+    const png = readFileSync(`client/public${url}`);
+    assert.equal(png.subarray(1, 4).toString(), 'PNG');
+    // PNG color type 6 (RGBA) or 4 (grayscale + alpha).
+    assert.ok([4, 6].includes(png[25]));
+  });
+}
+
+test('brasões de todas as UFs e o emblema genérico apontam para arquivos existentes', () => {
+  for (const estado of Object.values(ESTADO_PM)) {
+    assert.ok(existsSync(`client/public${getBrasaoUrl(estado)}`), `Brasão indisponível: ${estado.uf}`);
+  }
+  assert.equal(getBrasaoUrl(null), BRASAO_PADRAO_URL);
+  assert.equal(getBrasaoUrl(undefined), BRASAO_PADRAO_URL);
+  assert.equal(getBrasaoUrl(ESTADO_PM.AL), BRASAO_PADRAO_URL);
+  assert.ok(existsSync(`client/public${BRASAO_PADRAO_URL}`));
+});
+
+test('alternar estados não reutiliza o brasão de outra UF', () => {
+  for (const uf of ['SP', 'AC', 'AP', 'RJ', 'DF', 'AL', 'AC']) {
+    const estado = estadoSalvo({ regionCode: uf });
+    assert.equal(estado?.sigla, `PP-${uf}`);
+    assert.equal(getBrasaoUrl(estado), uf === 'AL' ? BRASAO_PADRAO_URL : `/brasoes/PP${uf}.png`);
+  }
+  assert.equal(getBrasaoUrl(estadoSalvo(null)), BRASAO_PADRAO_URL);
 });

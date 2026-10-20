@@ -889,7 +889,7 @@ export default function CapturaPage() {
         {/* Header institucional */}
         <div style={{ padding: '20px 24px 16px', borderBottom: '1px solid #e5e7eb' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-            <img src="/images/pp-sem-fundo.png?v=contorno-limpo" alt="Brasão" style={{ height: 36, objectFit: 'contain', flexShrink: 0 }} />
+            <img src={brasaoUrl} alt={`Brasão ${sigla}`} style={{ height: 36, objectFit: 'contain', flexShrink: 0 }} />
             <div>
               <div style={{ fontSize: 13, fontWeight: 700, color: '#1351b4', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
                 Ministério da Justiça e Segurança Pública
@@ -1032,8 +1032,8 @@ export default function CapturaPage() {
           <CardHeader className="text-center px-4 sm:px-6 py-6">
             <div className="flex justify-center mb-4">
               <img
-                src="/images/pp-sem-fundo.png?v=contorno-limpo"
-                alt="Brasão"
+                src={brasaoUrl}
+                alt={`Brasão ${sigla}`}
                 style={{ height: 88, objectFit: 'contain' }}
               />
             </div>

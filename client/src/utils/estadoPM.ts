@@ -47,6 +47,8 @@ export const BRASAO_PADRAO_URL = '/brasoes/PP-padrao.png';
  * UFs ainda sem imagem própria usam o emblema padrão.
  */
 const BRASAO_ESTADUAL_ARQUIVO: Record<string, string> = {
+  AC: 'PPAC.png',
+  AP: 'PPAP.png',
   BA: 'PPBA.png',
   DF: 'PPDF.png',
   ES: 'PPES.png',

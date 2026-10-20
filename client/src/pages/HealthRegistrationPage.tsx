@@ -292,9 +292,9 @@ export default function HealthRegistrationPage() {
           <p className="text-lg text-[#555555] leading-relaxed mb-6">
             <span style={{ float: 'left', fontSize: '3.8rem', lineHeight: '0.8', fontWeight: 700, color: '#155bcb', marginRight: '6px', marginTop: '6px', fontFamily: 'Georgia, serif' }}>A</span>
             {estadoPM ? (
-              <>carreira na <strong>{estadoPM.nomeCompleto}</strong> oferece o que poucos empregos garantem: <strong>estabilidade no serviço público estadual</strong>, remuneração competitiva desde o primeiro dia de formação, plano de saúde, progressão por patentes e uma carreira de longo prazo com reconhecimento institucional. O ingresso se dá por concurso público — sem indicação, sem exceções.</>
+              <>carreira na <strong>{estadoPM.nomeCompleto}</strong> oferece o que poucos empregos garantem: <strong>estabilidade no serviço público estadual</strong>, remuneração competitiva desde o primeiro dia de formação, plano de saúde, progressão por patentes e uma carreira de longo prazo com reconhecimento institucional. <strong>O ingresso se dá por concurso público — sem indicação, sem exceções.</strong></>
             ) : (
-              <>carreira nas <strong>Polícias Penais estaduais</strong> oferece o que poucos empregos garantem: <strong>estabilidade no serviço público</strong>, remuneração competitiva desde o primeiro dia de formação, plano de saúde, progressão por patentes e uma carreira de longo prazo com reconhecimento institucional. O ingresso se dá por concurso público — sem indicação, sem exceções.</>
+              <>carreira nas <strong>Polícias Penais estaduais</strong> oferece o que poucos empregos garantem: <strong>estabilidade no serviço público</strong>, remuneração competitiva desde o primeiro dia de formação, plano de saúde, progressão por patentes e uma carreira de longo prazo com reconhecimento institucional. <strong>O ingresso se dá por concurso público — sem indicação, sem exceções.</strong></>
             )}
           </p>
 

@@ -214,7 +214,7 @@ export default function HealthRegistrationPage() {
           </p>
 
           <h1 className="font-bold mb-4" style={{ color: '#0c326f', fontSize: '1.5rem', lineHeight: '2.1rem' }}>
-            Concurso aberto {sigla} 2026: <strong>2.600 vagas</strong> para Policial Penal e Agente Administrativo da <strong>{estadoPM?.nomeCompleto ?? 'Polícia Penal'}</strong>.
+            Concurso {sigla} 2026: <strong>2.600 vagas</strong> para Policial Penal e Agente Administrativo da <strong>{estadoPM?.nomeCompleto ?? 'Polícia Penal'}</strong>.
           </h1>
 
           <p className="text-lg text-[#555555] leading-relaxed mb-4">
@@ -352,7 +352,7 @@ export default function HealthRegistrationPage() {
 
           <ol style={{ listStyle: 'none', padding: 0, margin: '0 0 24px', fontSize: '1.125rem', color: '#333' }}>
             {([
-              <><strong>Acesse</strong> o portal de inscrições nesta página do <strong>gov</strong> e crie ou acesse sua conta.</>,
+              <><strong>Acesse</strong> o portal de inscrições nesta página do <strong>gov.br</strong> e crie ou acesse sua conta.</>,
               <><strong>Preencha</strong> o formulário com seus dados pessoais e escolha o cargo desejado (Policial Penal ou Agente Administrativo).</>,
               <><strong>Pague a taxa</strong> de inscrição via boleto bancário ou PIX. Candidatos de baixa renda podem solicitar isenção conforme critérios do edital.</>,
               <><strong>Acompanhe</strong> o resultado da sua inscrição e os comunicados oficiais pelo mesmo portal. As provas ocorrem nos 26 estados e no Distrito Federal, com data prevista para <strong>{dataProvaEdital}</strong>.</>,
@@ -376,7 +376,7 @@ export default function HealthRegistrationPage() {
               {([
                 <><strong>Escolaridade:</strong> Ensino Médio completo para Policial; curso superior em qualquer área para Superintendente/Coordenador geral.</>,
                 <><strong>Altura mínima:</strong> 1,65 m para homens e 1,55 m para mulheres.</>,
-                <><strong>Aptidão física:</strong> aprovação no Teste de Aptidão Física (TAF) — corrida de 1.000m.</>,
+                <><strong>Aptidão física:</strong> aprovação no Teste de Aptidão Física (TAF) — corrida de 1.000 m, flexão de braço e abdominal.</>,
                 <><strong>Avaliação psicológica e investigação social:</strong> ambas eliminatórias. Sem antecedentes criminais.</>,
                 <><strong>Situação regular:</strong> brasileiro nato, em dia com a Justiça Eleitoral.</>,
                 <><strong>Cotas:</strong> vagas reservadas para Pretos e Pardos (20%), PcD (5%) e Indígenas/Quilombolas.</>,

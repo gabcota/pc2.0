@@ -703,7 +703,7 @@ export default function ValidacaoPage() {
                 commitmentAccepted && (
                   <div className="space-y-4">
                     <div className="border border-gray-200 rounded p-6">
-                      <h5 className="font-medium text-gray-800 mb-6 text-center">
+                      <h5 className="font-medium text-amber-700 mb-6 text-center">
                         Finalização da Inscrição
                       </h5>
                       <p className="text-sm text-gray-600 mb-6">

@@ -8,3 +8,9 @@ O funil deve continuar mesmo quando o código SMS estiver incorreto ou o envio f
 **Why:** O usuário esclareceu que esse comportamento é proposital e que sua reclamação é sobre o código não chegar.
 
 **How to apply:** Em ajustes de SMS, preservar a continuidade do funil e limitar a correção ao envio, salvo nova solicitação explícita.
+
+A troca do Manager por envio direto deve preservar o funcionamento do funil e permitir voltar ao Manager se der errado.
+
+**Why:** O usuário perguntou se seria a mesma coisa e se depois seria possível mudar para como estava, e pediu deixar isso registrado.
+
+**How to apply:** Planejar uma alteração reversível apenas no transporte dos SMS. Preservar textos, etapas, momentos e condições de disparo; informar que retornar ao Manager não corrige sua credencial inválida.

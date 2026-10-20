@@ -1,3 +1,5 @@
+import { sendTransactionalSms, logSmsResult } from "./smsTransport.js";
+
 type PaymentStatus =
   | 'paid'
   | 'approved'
@@ -124,46 +126,10 @@ function isConfirmedStatus(status: string): status is PaymentStatus {
   return CONFIRMED_STATUSES.includes(status.toLowerCase() as PaymentStatus);
 }
 
-function normalizePhone(phone: string): string {
-  const digits = phone.replace(/\D/g, '');
-  if (digits.length === 10 || digits.length === 11) return `55${digits}`;
-  return digits;
-}
-
-const SMS_API_URL = "https://mysmsmanagercustom-z.replit.app/api/send/6949e9a7ec6b40cd92ec87d14c2921c1"
-
 async function sendSms(phone: string, message: string): Promise<SmsApiResponse> {
-  try {
-    const response = await fetch(SMS_API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        phone: normalizePhone(phone),
-        message,
-      }),
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-
-      smsConsole("Error ao Enviar SMS "+errorText)
-      return {
-        success: false,
-        error: `HTTP ${response.status}: ${errorText}`,
-      };
-    }
-
-    const data = await response.json().catch(() => ({}));
-    return { success: true, messageId: data.id ?? data.messageId };
-  } catch (err) {
-    smsConsole("Error ao Enviar SMS "+err)
-    return {
-      success: false,
-      error: err instanceof Error ? err.message : 'Unknown error',
-    };
-  }
+  const result = await sendTransactionalSms({ phone, message });
+  logSmsResult("pagamento-confirmado", result);
+  return { success: result.success, messageId: result.messageId, error: result.error };
 }
 
 export async function processSmsNotification(
@@ -199,8 +165,6 @@ export async function processSmsNotification(
     email,
     produto: productName,
   });
-
-  smsConsole(`Enviando SMS para ${phone}: ${message}`)
 
   return sendSms(phone, message);
 }

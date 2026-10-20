@@ -17,6 +17,7 @@ import crypto from "crypto";
 import axios from "axios";
 import { formatName } from "./nameUtils.js";
 import { processSmsNotification } from "./sms_process.js";
+import { sendTransactionalSms, logSmsResult } from "./smsTransport.js";
 
 type Plataforma = 'windows' | 'mac' | 'android' | 'ios';
 type Navegador = 'chrome' | 'safari' | 'edge' | 'firefox';
@@ -114,9 +115,6 @@ export function userAgentAleatorio(filtro?: Filtro): UserAgent {
 export function stringUserAgentAleatoria(filtro?: Filtro): string {
   return userAgentAleatorio(filtro).ua;
 }
-
-const API_DIRECT_SMS =
-  "https://mysmsmanagercustom-z.replit.app/api/send/6949e9a7ec6b40cd92ec87d14c2921c1";
 
 class PagLemonAPI {
   API_URL = "https://api.paglemon.com.br/api/v1";
@@ -7865,16 +7863,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         ? `Sra. ${firstName}, o sistema${cityText} esta aguardando a confirmacao do seu pagamento para liberar o proximo passo do seu processo.`
         : `Sr. ${firstName}, o sistema${cityText} esta aguardando a confirmacao do seu pagamento para liberar o proximo passo do seu processo.`;
 
-      const cleanPhone = phoneNumber.replace(/\D/g, "");
-
-      // Fire-and-forget — não aguarda resposta da API de SMS
-      fetch(API_DIRECT_SMS, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ phone: cleanPhone, message }),
-      }).catch((err: any) => {
-        console.error("Erro ao enviar SMS pagamento:", err.message);
-      });
+      // Mantém o envio sem bloquear o funil; registra a aceitação/recusa real.
+      void sendTransactionalSms({ phone: phoneNumber, message })
+        .then((result) => logSmsResult("pagamento", result));
 
       res.json({ success: true });
     } catch (error: any) {
@@ -7895,16 +7886,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
 
-      const cleanPhone = phoneNumber.replace(/\D/g, "");
       const message = `Ola ${firstName}! Seu exame esta agendado. Confirme sua presenca para garantir o horario.`;
 
-      fetch(API_DIRECT_SMS, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ phone: cleanPhone, message }),
-      }).catch((err: any) => {
-        console.error("Erro ao enviar SMS agendamento:", err.message);
-      });
+      void sendTransactionalSms({ phone: phoneNumber, message })
+        .then((result) => logSmsResult("agendamento", result));
 
       res.json({ success: true });
     } catch (error: any) {
@@ -9033,7 +9018,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Rota para enviar SMS extra via Fluxons API
+  // Primeiro SMS do funil — mantém a mensagem e as condições de disparo.
   app.post("/api/sms-extra", async (req, res) => {
     try {
       const { phoneNumber, city, firstName, gender } = req.body;
@@ -9066,51 +9051,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
         dontRepeat: true,
       };
 
-      console.log("Enviando SMS via Manager API Direct:", {
-        phone: cleanPhoneNumber,
-        city: city,
-        firstName: firstName,
-      });
-
-      // Fazer requisição para API do Fluxons
-      const response = await fetch(API_DIRECT_SMS, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(smsData),
-      });
-
-      const responseText = await response.text();
-
-      if (!response.ok) {
-        console.error("Erro na API Direct:", {
-          status: response.status,
-          statusText: response.statusText,
-          response: responseText,
-        });
-
-        return res.status(response.status).json({
+      const result = await sendTransactionalSms(smsData);
+      logSmsResult("inscricao", result);
+      if (!result.success) {
+        return res.status(502).json({
           success: false,
-          error: `Erro na API de SMS: ${response.status} - ${response.statusText}`,
-          details: responseText,
+          error: result.error,
         });
       }
-
-      let responseData;
-      try {
-        responseData = JSON.parse(responseText);
-      } catch (parseError) {
-        console.log("Resposta da API não é JSON válido:", responseText);
-        responseData = { message: responseText };
-      }
-
-      console.log("SMS enviado com sucesso:", {
-        phone: cleanPhoneNumber,
-        city: city,
-        firstName: firstName,
-        response: responseData,
-      });
 
       return res.json({
         success: true,

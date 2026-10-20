@@ -670,16 +670,6 @@ export default function ValidacaoPage() {
                     </div>
                   </div>
 
-                  {/* Dados do programa */}
-                  <div className="border border-orange-200 bg-orange-50 rounded p-4">
-                    <div className="flex items-start gap-2">
-                      <span className="text-orange-500 font-bold mt-0.5">⚠</span>
-                      <p className="text-sm font-medium text-orange-800">
-                        <strong>69% das vagas deste edital já foram preenchidas.</strong> Confirme sua inscrição antes que as vagas se esgotem.
-                      </p>
-                    </div>
-                  </div>
-
                   {/* Checkbox 3 */}
                   <div className="bg-gray-50 border border-gray-200 rounded p-4">
                     <label className="flex items-start space-x-3 cursor-pointer text-sm">

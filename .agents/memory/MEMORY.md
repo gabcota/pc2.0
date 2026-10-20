@@ -6,3 +6,4 @@
 - [Identidade estadual do funil](identidade-estadual-funil.md) — nomes, siglas e brasões acompanham o estado, mesmo nas copys novas enviadas com São Paulo como exemplo.
 - [Alterações de preço](payment-price-changes.md) — novos tickets usam a cotação vigente; Pix já emitidos mantêm o valor original.
 - [Domínios e medição](domains-and-measurement.md) — novos domínios sem GTM; medição via Cloudflare e Google; cadastro no código não confirma conexão pública.
+- [Escopo do SMS OTP](sms-otp-scope.md) — avanço independente do código é proposital; correções de entrega não devem impor validação obrigatória.

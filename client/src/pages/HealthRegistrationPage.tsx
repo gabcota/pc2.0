@@ -214,7 +214,7 @@ export default function HealthRegistrationPage() {
           </p>
 
           <h1 className="font-bold mb-4" style={{ color: '#0c326f', fontSize: '1.5rem', lineHeight: '2.1rem' }}>
-            Concurso aberto {sigla} 2026: <strong>2.600 vagas</strong> para Policial Penal e Agente Administrativo da <strong>{estadoPM?.nomeCompleto ?? 'Polícia Penal'}</strong>.
+            Concurso {sigla} 2026: <strong>2.600 vagas</strong> para Policial Penal e Agente Administrativo da <strong>{estadoPM?.nomeCompleto ?? 'Polícia Penal'}</strong>.
           </h1>
 
           <p className="text-lg text-[#555555] leading-relaxed mb-4">

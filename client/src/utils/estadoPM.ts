@@ -8,7 +8,7 @@ export interface EstadoPMData {
 
 export const ESTADO_PM: Record<string, EstadoPMData> = {
   SP: { uf: 'SP', sigla: 'PP-SP', nomeCompleto: 'Polícia Penal do Estado de São Paulo',    vagasSoldado: 2000, vagasOficial: 200 },
-  MG: { uf: 'MG', sigla: 'PP-MG', nomeCompleto: 'Polícia Penal de Minas Gerais',           vagasSoldado: 2350, vagasOficial: 150 },
+  MG: { uf: 'MG', sigla: 'PP-MG', nomeCompleto: 'Polícia Penal do Estado de Minas Gerais', vagasSoldado: 2350, vagasOficial: 150 },
   RJ: { uf: 'RJ', sigla: 'PP-RJ', nomeCompleto: 'Polícia Penal do Estado do Rio de Janeiro', vagasSoldado: 2000, vagasOficial: 100 },
   BA: { uf: 'BA', sigla: 'PP-BA', nomeCompleto: 'Polícia Penal da Bahia',                  vagasSoldado: 2500, vagasOficial: 200 },
   PR: { uf: 'PR', sigla: 'PP-PR', nomeCompleto: 'Polícia Penal do Paraná',                 vagasSoldado: 2200, vagasOficial: 100 },

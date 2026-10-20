@@ -2,6 +2,7 @@
 - [Ad content-risk reframing](ad-content-risk-reframing.md) — reframe funnel copy around an adjacent audience pain point (not find-replace) to reduce Google Ads policy-flag risk; touch chrome + legal pages + SEO metadata too.
 - [analyticsCore used](analytics-core-used.md) — full list of signal.* values already assigned; never reuse.
 - [Replit Vite cache isolation](replit-vite-cache-isolation.md) — version the optimizer cache and disable preview caching when dependency graph changes cause mixed React chunks.
+- [Processos antigos no preview](preview-workflow-orphans.md) — parar um workflow pode deixar um servidor antigo ocupando a porta; conferir o listener antes de mudar configuração.
 - [Polícia Penal naming](policia-penal-naming.md) — campanha passa a usar Polícia Penal/PP; renomeação de conteúdo não implica validar cargos ou regras de edital.
 - [Identidade estadual do funil](identidade-estadual-funil.md) — nomes, siglas e brasões acompanham o estado, mesmo nas copys novas enviadas com São Paulo como exemplo.
 - [Alterações de preço](payment-price-changes.md) — novos tickets usam a cotação vigente; Pix já emitidos mantêm o valor original.

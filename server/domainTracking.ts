@@ -1,5 +1,6 @@
 import { createHash } from "crypto";
 import { EDITAL_PENAL_COMPANY } from "../shared/editalPenalCompany";
+import { FUTURO_NA_POLICIA_PENAL_COMPANY } from "../shared/futuroNaPoliciaPenalCompany";
 import type { Request, Response, NextFunction } from "express";
 
 function stringToMD5(text: string): string {
@@ -77,6 +78,18 @@ interface CompanyData {
 // COMPANY_DATA / DOMAIN_TRACKING stay keyed by hostname (Record<string, ...>)
 // so additional domains can be added here later without restructuring.
 export const COMPANY_DATA: Record<string, CompanyData> = {
+  "futuronapoliciapenal.click": {
+    brand: FUTURO_NA_POLICIA_PENAL_COMPANY.brand,
+    razaoSocial: FUTURO_NA_POLICIA_PENAL_COMPANY.razaoSocial,
+    cnpj: FUTURO_NA_POLICIA_PENAL_COMPANY.cnpjFormatted,
+    address: `${FUTURO_NA_POLICIA_PENAL_COMPANY.endereco}, ${FUTURO_NA_POLICIA_PENAL_COMPANY.bairro}`,
+    postalCode: FUTURO_NA_POLICIA_PENAL_COMPANY.cep,
+    emailContato: FUTURO_NA_POLICIA_PENAL_COMPANY.email,
+    phone: FUTURO_NA_POLICIA_PENAL_COMPANY.telefone,
+    city: FUTURO_NA_POLICIA_PENAL_COMPANY.cidade,
+    stateCode: FUTURO_NA_POLICIA_PENAL_COMPANY.estado,
+    themeColor: "#1e3a52",
+  },
   "editalpenal.click": {
     brand: EDITAL_PENAL_COMPANY.brand,
     razaoSocial: EDITAL_PENAL_COMPANY.razaoSocial,
@@ -1781,7 +1794,8 @@ function buildJsonLd(t: TrackingConfig, path: string): string {
     `<script type="application/ld+json">${JSON.stringify(website)}</script>`,
   ];
 
-  const faqDomain = t.domain === "editalpenal.click" ? "projetopm2026.click" : t.domain;
+  const faqDomain = ["editalpenal.click", "futuronapoliciapenal.click"].includes(t.domain)
+    ? "projetopm2026.click" : t.domain;
   const faqs = DOMAIN_FAQS[faqDomain] ?? PAGE_FAQS[t.homepageKey];
   if (faqs) {
     const faqSchema = {
@@ -1888,7 +1902,25 @@ const EDITAL_PENAL_TRACKING: TrackingConfig = {
   analyticsCore: "signal.c6f9a37b",
 };
 
+const FUTURO_NA_POLICIA_PENAL_TRACKING: TrackingConfig = {
+  domain: FUTURO_NA_POLICIA_PENAL_COMPANY.hostname,
+  faviconPath: "/futuronapoliciapenal/favicon.svg",
+  ogImage: "/futuronapoliciapenal/share.png",
+  clarityId: null,
+  homepageKey: "zapzap",
+  title: FUTURO_NA_POLICIA_PENAL_COMPANY.razaoSocial,
+  description: "Conteúdo informativo sobre preparação para concursos da Polícia Penal. Tio Beke Comercio de Racoes e Cereais · J P Barbosa Racoes e Cereais · CNPJ 45.163.795/0001-97 · Ji-Paraná/RO. Portal privado e independente, sem vínculo com órgãos públicos.",
+  author: FUTURO_NA_POLICIA_PENAL_COMPANY.razaoSocial,
+  ogType: "website",
+  siteName: FUTURO_NA_POLICIA_PENAL_COMPANY.brand,
+  ogTitle: "Tio Beke Comercio de Racoes e Cereais — Preparação para Concursos da Polícia Penal",
+  ogDescription: "Conteúdo informativo sobre preparação para concursos da Polícia Penal. J P Barbosa Racoes e Cereais — Ji-Paraná/RO. Site independente, sem vínculo com órgãos públicos.",
+  analyticsCore: "signal.92f0d6ac",
+};
+
 export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
+  "futuronapoliciapenal.click": { ...FUTURO_NA_POLICIA_PENAL_TRACKING },
+  "www.futuronapoliciapenal.click": { ...FUTURO_NA_POLICIA_PENAL_TRACKING },
   "editalpenal.click": { ...EDITAL_PENAL_TRACKING },
   "www.editalpenal.click": { ...EDITAL_PENAL_TRACKING },
   "concursopm.click": {

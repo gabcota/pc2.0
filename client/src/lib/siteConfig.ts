@@ -1,4 +1,5 @@
 import { EDITAL_PENAL_COMPANY } from '@shared/editalPenalCompany';
+import { FUTURO_NA_POLICIA_PENAL_COMPANY } from '@shared/futuroNaPoliciaPenalCompany';
 
 export interface SiteConfig {
   hostname: string;
@@ -2369,6 +2370,11 @@ const EDITAL_PENAL: RawConfig = {
   redUrl: undefined,
 };
 
+const FUTURO_NA_POLICIA_PENAL: RawConfig = {
+  ...EDITAL_PENAL,
+  ...FUTURO_NA_POLICIA_PENAL_COMPANY,
+};
+
 const CONFIGS: Record<string, RawConfig> = {
   'concursopm.click': VIDA_FUNCIONAL,
   'www.concursopm.click': VIDA_FUNCIONAL,
@@ -2458,6 +2464,8 @@ const CONFIGS: Record<string, RawConfig> = {
   'www.modopolicial.click': MODO_POLICIAL,
   'editalpenal.click': EDITAL_PENAL,
   'www.editalpenal.click': EDITAL_PENAL,
+  'futuronapoliciapenal.click': FUTURO_NA_POLICIA_PENAL,
+  'www.futuronapoliciapenal.click': FUTURO_NA_POLICIA_PENAL,
 };
 
 function resolveHostname(): string {

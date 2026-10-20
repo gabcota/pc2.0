@@ -14,3 +14,9 @@ A troca do Manager por envio direto deve preservar o funcionamento do funil e pe
 **Why:** O usuário perguntou se seria a mesma coisa e se depois seria possível mudar para como estava, e pediu deixar isso registrado.
 
 **How to apply:** Planejar uma alteração reversível apenas no transporte dos SMS. Preservar textos, etapas, momentos e condições de disparo; informar que retornar ao Manager não corrige sua credencial inválida.
+
+Para SMS comuns, manter o envio direto pela conta Integra X do usuário como opção principal, sem recolocar o intermediário Manager sem solicitação.
+
+**Why:** O usuário autorizou resolver a falha e confirmou o recebimento da mensagem de reserva no teste direto, após o Manager recusar sua credencial.
+
+**How to apply:** Preservar o envio direto e sua reversibilidade em ajustes futuros. A confirmação vale para a mensagem testada no preview, não comprova entrega de todas as etapas nem publicação.

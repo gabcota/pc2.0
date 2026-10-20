@@ -19,3 +19,9 @@ Quando não houver emblema estadual enviado, usar o emblema padrão da Polícia 
 **Why:** O usuário enviou um emblema genérico e pediu seu uso para estados sem imagem própria.
 
 **How to apply:** Não usar emblemas antigos da Polícia Militar para preencher as UFs pendentes. O padrão também serve quando a UF não é identificada.
+
+O usuário confirmou a personalização das 27 UFs e pediu quantitativos diferentes por UF, usando São Paulo como referência de 1.900 para Policial Penal e 700 para Agente Administrativo, com reduções percentuais fornecidas por ele.
+
+**Why:** o usuário explicou que estados menores devem ter menos vagas e enviou uma referência própria para esse cálculo.
+
+**How to apply:** distinguir a referência fornecida de vagas verificadas em editais oficiais; não interpretar percentuais estimados como confirmação de vagas reais ou disponibilidade.

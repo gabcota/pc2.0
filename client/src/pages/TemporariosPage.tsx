@@ -34,7 +34,6 @@ interface CargoInfo {
   rank: string;
   requiredEducation: string;
   salary: string;
-  description: string;
   requirements: string[];
   benefits: string[];
   duration: string;
@@ -637,7 +636,6 @@ export default function TemporariosPage() {
       rank: `${sigla} — Concurso Público 2026`,
       requiredEducation: 'Ensino Médio Completo',
       salary: 'R$ 7.936,00 + auxílio-alimentação R$ 658,00',
-      description: `Responsável pelo policiamento ostensivo e preventivo dentro das penitenciárias e apoio à população. Após aprovação, o candidato passa pelo Curso de Formação de Soldados da ${sigla} antes de assumir suas funções de trabalho.`,
       requirements: [
         'Ensino Médio Completo',
         'Aprovação em todas as etapas do Concurso Público — prova objetiva, TAF, exames médicos e psicológicos',
@@ -676,7 +674,6 @@ export default function TemporariosPage() {
       rank: `${sigla} — Concurso Público 2026`,
       requiredEducation: 'Ensino Superior Completo (qualquer área)',
       salary: 'R$ 6.900,00 + auxílio-alimentação R$ 658,00',
-      description: `Responsável pelo comando de tropa, planejamento operacional e gestão administrativa dentro da corporação. Após aprovação, o candidato ingressa no Curso de Formação de Oficiais (CFO) da ${sigla}, com duração de até 3 anos, antes de assumir o comando de uma unidade.`,
       requirements: [
         'Diploma de curso superior em qualquer área, reconhecido pelo MEC',
         'Aprovação em todas as etapas do Concurso Público — prova objetiva, TAF, exames médicos e psicológicos',
@@ -1094,10 +1091,6 @@ export default function TemporariosPage() {
               </CardHeader>
               
               <CardContent className="space-y-4">
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {position.description}
-                </p>
-                
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Especialidades Disponíveis:</h4>
                   <div className="flex flex-wrap gap-1">

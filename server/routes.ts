@@ -1,5 +1,7 @@
 import "./httpAgents";
 import { PAYMENT_PRICES } from "../shared/paymentPrices";
+import { registerBoltRoutes } from "./payments/boltRoutes";
+import { paymentGateway } from "./payments/bolt";
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import {
@@ -4844,6 +4846,8 @@ function getNextAvailableDate(): string {
 }
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Bolt never enters the legacy creation, consultation or webhook paths.
+  registerBoltRoutes(app);
   // ── robots.txt dinâmico ──────────────────────────────────────────────────
   app.get("/robots.txt", (req, res) => {
     const host = req.hostname.replace(/^www\./, "");
@@ -6330,7 +6334,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.log("IP do usuário detectado:", clientIP);
 
       // Selecionar gateway de pagamento
-      const gateway = process.env.PAYMENT_GATEWAY || "novaera";
+      const gateway = paymentGateway();
       console.log("Gateway de pagamento selecionado:", gateway);
       const utmParamsObj = (() => {
         if (!utm_params) return {};
@@ -6360,11 +6364,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         },
       };
 
-      const allGateways = ["paglemon", "novaera"];
-      const orderedGateways = [
-        gateway,
-        ...allGateways.filter((g) => g !== gateway),
-      ];
+      const orderedGateways: string[] = [gateway];
 
       let pixPayment: any = null;
       let usedGateway = gateway;
@@ -7123,7 +7123,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
 
-      const novaEra = new NovaEraAPI();
+      const novaEra = new PagLemonAPI();
 
       const response = await novaEra.getTransaction(transactionId);
 
@@ -7623,11 +7623,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   function gatewaysParaTransacao(id: string): string[] {
-    const ehUuid =
-      /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(
-        id,
-      );
-    return ehUuid ? ["paglemon", "novaera"] : ["novaera", "paglemon"];
+    // Never discover a provider by attempting another merchant API.
+    return ["paglemon"];
   }
 
   app.get("/api/verificar-status-pagamento/:id", async (req, res) => {
@@ -9103,6 +9100,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
     paymentData: any,
     req: any,
   ): Promise<{ success: boolean; message: string }> {
+    if (paymentGateway() === "bolt") {
+      return { success: true, message: "Utmify gerenciada pela Bolt; envio local desativado" };
+    }
     console.log(
       `📥 Dados recebidos para processamento: ${JSON.stringify(paymentData, null, 2)}`,
     );

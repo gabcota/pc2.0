@@ -1,3 +1,4 @@
+import { paymentFetch } from "@/lib/paymentClient";
 import { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'wouter';
 import { ExercitoHeader } from '@/components/ExercitoHeader';
@@ -230,7 +231,7 @@ export default function RegularizacaoPagamentoPage() {
         }
       };
 
-      const response = await fetch('/api/gerar-pix', {
+      const response = await paymentFetch('/api/gerar-pix', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -263,7 +264,7 @@ export default function RegularizacaoPagamentoPage() {
         console.error('Error generating PIX:', result.error);
         toast({
           title: "Erro ao gerar PIX",
-          description: "Tente novamente em alguns instantes.",
+          description: "pagamento indisponível, tente novamente",
           variant: "destructive"
         });
       }

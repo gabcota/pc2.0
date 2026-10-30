@@ -3,8 +3,10 @@
 - [analyticsCore used](analytics-core-used.md) — full list of signal.* values already assigned; never reuse.
 - [Replit Vite cache isolation](replit-vite-cache-isolation.md) — version the optimizer cache and disable preview caching when dependency graph changes cause mixed React chunks.
 - [Processos antigos no preview](preview-workflow-orphans.md) — parar um workflow pode deixar um servidor antigo ocupando a porta; conferir o listener antes de mudar configuração.
+- [Disponibilidade de testes](browser-testing-availability.md) — um tipo de agente documentado pode não existir no runtime; usar a verificação disponível sem alterar o produto por isso.
 - [Polícia Penal naming](policia-penal-naming.md) — campanha passa a usar Polícia Penal/PP; renomeação de conteúdo não implica validar cargos ou regras de edital.
 - [Identidade estadual do funil](identidade-estadual-funil.md) — nomes, siglas e brasões acompanham o estado, mesmo nas copys novas enviadas com São Paulo como exemplo.
 - [Alterações de preço](payment-price-changes.md) — novos tickets usam a cotação vigente; Pix já emitidos mantêm o valor original.
+- [Restrições da Bolt](bolt-deployment-constraints.md) — priorizar JSON existente; migração exige aprovação separada; conta compartilhada e legado preservado para retorno manual.
 - [Domínios e medição](domains-and-measurement.md) — novos domínios sem GTM; medição via Cloudflare e Google; cadastro no código não confirma conexão pública.
 - [Escopo do SMS OTP](sms-otp-scope.md) — avanço independente do código é proposital; correções de entrega não devem impor validação obrigatória.

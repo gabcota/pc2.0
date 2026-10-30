@@ -67,7 +67,7 @@ export default function RemarketingPage() {
         const response = await fetch(`/api/verificar-status-pagamento/${params.transaction_id}`);
         const result = await response.json();
         console.log('Status do pagamento:', result.status)
-        if (result.status === 'PAID' || result.status === 'APPROVED' || result.status !== "PENDING") {
+        if (result.success && ["paid", "approved", "completed"].includes(String(result.data?.status ?? result.status ?? "").toLowerCase())) {
           setPaymentConfirmed(true);
           setLocation(`/login-pos-pagamento?protocol_id=${params.transaction_id}`);
         }

@@ -1,3 +1,4 @@
+import { paymentFetch, approvedPix, getPaymentMode } from "@/lib/paymentClient";
 import { useState, useEffect, useRef } from 'react';
 import { PAYMENT_PRICES } from '@shared/paymentPrices';
 import { useLocation } from 'wouter';
@@ -93,7 +94,9 @@ export default function ESocialPagamentoPage() {
       try {
         const cached = localStorage.getItem('esocialPixData');
         if (cached) {
-          const { data, createdAt } = JSON.parse(cached);
+          const cachedEntry = JSON.parse(cached);
+          const createdAt = cachedEntry.createdAt;
+          const data = await approvedPix(cachedEntry.data);
           const age = Date.now() - new Date(createdAt).getTime();
           if (age < 30 * 60 * 1000 && data?.id) {
             // Use daeValor (always in reais) for display; data.amount may be in centavos
@@ -157,7 +160,7 @@ export default function ESocialPagamentoPage() {
         try { return JSON.parse(localStorage.getItem('userData') || '{}'); } catch { return {}; }
       })();
 
-      const response = await fetch('/api/gerar-pix', {
+      const response = await paymentFetch('/api/gerar-pix', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -202,6 +205,10 @@ export default function ESocialPagamentoPage() {
       }
     } catch (_) {
       setApiError(true);
+      if (await getPaymentMode() === "bolt") {
+        setPixData(null);
+        return;
+      }
       setPixData({
         id: `fallback-${Date.now()}`,
         qrCode: FALLBACK_QR_CODE,
@@ -311,6 +318,12 @@ export default function ESocialPagamentoPage() {
   const vencimento = new Date(pixCreatedAt.getTime() + 30 * 60 * 1000);
   const fmt = (d: Date) => d.toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
 
+  if (apiError && !pixData) {
+    return <div className="p-8 text-center" role="alert">
+      <p>pagamento indisponível, tente novamente</p>
+      <button className="mt-4 underline" onClick={() => window.location.reload()}>Tentar novamente</button>
+    </div>;
+  }
   return (
     <div className="min-h-screen flex flex-col" style={{ fontFamily: "'Rawline','Open Sans',sans-serif" }}>
       <ExercitoHeader customTitle="Guia de Regularização DAE" customSubtitle="Atendimento de Integração Trabalhista" block_name={false} />

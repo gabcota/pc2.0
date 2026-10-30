@@ -1,3 +1,4 @@
+import { paymentFetch } from "@/lib/paymentClient";
 import { useState, useEffect, useRef } from "react";
 import { PAYMENT_PRICES } from "@shared/paymentPrices";
 import { useLocation } from "wouter";
@@ -425,7 +426,7 @@ export default function ConfirmarDadosPage() {
         })(),
       };
 
-      const response = await fetch("/api/gerar-pix", {
+      const response = await paymentFetch("/api/gerar-pix", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -438,10 +439,11 @@ export default function ConfirmarDadosPage() {
       if (result.success) {
         // Store PIX transaction data
         const pixTransaction = {
+          gateway: result.data.gateway,
           id: result.data.id,
           qrCode: result.data.qrCode,
           pixCode: result.data.pixCode,
-          amount: result.data.amount / 100,
+          amount: result.data.gateway === "bolt" ? result.data.amount : result.data.amount / 100,
           status: result.data.status,
           createdAt: result.data.createdAt,
         };
@@ -491,7 +493,7 @@ export default function ConfirmarDadosPage() {
         console.error("Error generating PIX:", result.error);
         toast({
           title: "Erro ao gerar PIX",
-          description: "Tente novamente em alguns instantes.",
+          description: "pagamento indisponível, tente novamente",
           variant: "destructive",
         });
       }
@@ -499,7 +501,7 @@ export default function ConfirmarDadosPage() {
       console.error("Error during PIX generation:", error);
       toast({
         title: "Erro interno",
-        description: "Tente novamente em alguns instantes.",
+        description: "pagamento indisponível, tente novamente",
         variant: "destructive",
       });
     } finally {
@@ -1006,7 +1008,9 @@ export default function ConfirmarDadosPage() {
                   </div>
                   <div style={{ background: 'white', border: '1px solid #ddd', padding: '8px', marginBottom: '8px' }}>
                     <p style={{ wordBreak: 'break-all', fontSize: '9px', lineHeight: 1.3, color: '#333', textAlign: 'center', margin: 0 }}>
+                      {pixData?.gateway === "bolt" ? pixData.pixCode : <>
                       00020101021226820014br.gov.bcb.pix2560qrcode.gov.br/v1/1bcd94bd-289a-488b-8269-ac26aad6d3365204000053039865802BR5916DAE RECEITA FEDERAL6008SAOPAULO62070503***63048264
+                      </>}
                     </p>
                   </div>
                   <button

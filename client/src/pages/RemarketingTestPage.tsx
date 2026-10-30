@@ -1,3 +1,4 @@
+import { paymentFetch } from "@/lib/paymentClient";
 import { useState } from 'react';
 import { ExercitoHeader } from '@/components/ExercitoHeader';
 import { ExercitoFooter } from '@/components/ExercitoFooter';
@@ -63,7 +64,7 @@ export default function RemarketingTestPage() {
         }
       };
 
-      const pixResponse = await fetch('/api/gerar-pix', {
+      const pixResponse = await paymentFetch('/api/gerar-pix', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

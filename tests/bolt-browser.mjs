@@ -117,8 +117,16 @@ try {
   assert.ok(await evaluate('Array.from(document.querySelectorAll("input,textarea")).every(el => !el.value.includes("DO-NOT-RENDER-CACHED-CODE"))'));
   assert.ok(!issuedBody.includes("R$ 999,00") && !issuedBody.includes("DO-NOT-RENDER-CACHED-CODE"));
   await writeFile("/tmp/bolt-issued-amount.png", Buffer.from((await send("Page.captureScreenshot")).data, "base64"));
+
+  await visit("/e-social/pagamento", {
+    userData: user, userMedicalLogin: user, applicationData: {},
+    esocialPixData: { data: { id: "simulated-local-id", amount: 999, chargedAmount: 999,
+      pixCode: "DO-NOT-RENDER-CACHED-CODE" }, createdAt: new Date().toISOString() },
+  });
+  await waitFor('document.body.innerText.includes("R$ 5,00")');
+  assert.ok(!(await evaluate("document.body.innerText")).includes("DO-NOT-RENDER-CACHED-CODE"));
   console.log(JSON.stringify({ result: "passed", creationRequestsMocked: creates.length, otherPostsBlocked: blockedPosts,
-    checks: ["creation failure shows no fixed Pix", "legacy fake cache rejected", "all six UTMs forwarded", "issued amount uses persisted 5 reais instead of cached 999"],
+    checks: ["creation failure shows no fixed Pix", "legacy fake cache rejected", "all six UTMs forwarded", "payment and e-Social use persisted 5 reais instead of cached 999"],
     screenshots: ["/tmp/bolt-esocial-error.png", "/tmp/bolt-issued-amount.png"] }));
 } finally {
   ws.close();

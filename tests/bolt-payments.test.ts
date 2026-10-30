@@ -21,7 +21,7 @@ class SharedMemoryStore implements BoltStore {
   now = 100000;
   async save(id: string, pix: string, state: BoltState) {
     if (this.rows.has(id)) throw new Error("duplicate");
-    const row = { transaction_id: id, amount: String(state.amountCents / 100), status: "pending",
+    const row = { transaction_id: id, amount: String(state.amountCents / 100), status: state.rawStatus.toLowerCase(),
       pix_code: pix, qr_code: "https://image.example/qr.png", control: structuredClone(state) };
     this.rows.set(id, row);
     return structuredClone(row);
@@ -74,7 +74,7 @@ test("Bolt amount in reais, including decimals; cents only if exact", () => {
   assert.ok(matchesBoltAmount("86.4", 8640));
   assert.ok(matchesBoltAmount(8640, 8640));
   assert.ok(!matchesBoltAmount(86.41, 8640));
-  for (const bad of [null, undefined, "", -1, NaN, {}, Infinity]) assert.ok(!matchesBoltAmount(bad, 500));
+  for (const bad of [null, undefined, "", "   ", -1, NaN, {}, Infinity]) assert.ok(!matchesBoltAmount(bad, 500));
 });
 test("phone normalization never blocks a Pix; fallback is only the approved phone", () => {
   for (const phone of [undefined, "", "x", "00000000000", "11999999999", "12345678901"]) {
@@ -82,6 +82,22 @@ test("phone normalization never blocks a Pix; fallback is only the approved phon
   }
   assert.deepEqual(boltPhone("+55 (11) 98765-4321"), { number: "11987654321" });
   assert.deepEqual(boltPhone("(69) 3424-4783"), { number: "6934244783" });
+  assert.deepEqual(boltPhone("(11) 98888-8888"), { number: "11988888888" });
+});
+test("creation preserves all non-paid statuses and independently verifies immediate PAID", async () => {
+  for (const status of ["PENDING", "REFUNDED", "REFUSED", "CHARGEBACK", "PRECHARGEBACK", "EXPIRED", "ERROR", "PAID"]) {
+    const f = fixture();
+    f.client.create = async () => ({ id: "bolt-test", status, pix: { qr_code: code } });
+    const created = await f.service.create(body, "");
+    assert.equal(created.status, status.toLowerCase());
+    assert.equal(f.calls(), status === "PAID" ? 1 : 0);
+    assert.equal(f.paid(), status === "PAID" ? 1 : 0);
+  }
+  const f = fixture(async () => ({ id: "another-project", status: "PAID", amount: 5 }));
+  f.client.create = async () => ({ id: "bolt-test", status: "PAID", pix: { qr_code: code } });
+  await assert.rejects(f.service.create(body, ""));
+  assert.equal(f.paid(), 0);
+  assert.equal((await f.service.find("bolt-test"))?.status, "pending");
 });
 test("payload, UTMs as JSON/object, cents and explicit webhook origin", () => {
   const { payload } = buildBoltPayload(body, "192.0.2.1", env);
@@ -158,20 +174,30 @@ test("mismatching IDs/amounts and fake Pix cannot confirm or return a successful
 });
 test("PostgreSQL store uses existing JSON and atomic conditional updates, no DDL", async () => {
   const queries: string[] = [];
+  const parameters: unknown[][] = [];
   const store = new PgBoltStore(async query => {
-    const text = new PgDialect().sqlToQuery(query).sql;
-    queries.push(text);
+    const compiled = new PgDialect().sqlToQuery(query);
+    queries.push(compiled.sql);
+    parameters.push(compiled.params);
     return [{ transaction_id: "id" }];
   });
   const f = fixture();
   await f.service.create(body, "");
-  await store.save("id", code, f.store.rows.get("bolt-test")!.control, body);
+  await store.save("id", code, f.store.rows.get("bolt-test")!.control, {
+    ...body, userData: { sexo: "F", nomeMae: "Synthetic" },
+    pessoalData: { test: "personal-state" }, applicationData: { existing: "preserved" },
+    comeFromRef: "test-origin",
+  });
   await store.get("id"); await store.claim("id", "lease"); await store.finish("id", "lease", "PAID");
   await store.defer("id", "lease", 30);
   assert.ok(queries.every(q => !/\b(CREATE|ALTER|DROP)\b/i.test(q)));
   assert.ok(queries[2].includes("leaseUntil") && queries[2].includes("nextCheckAt"));
   assert.ok(queries[2].includes("clock_timestamp"));
   assert.ok(queries[3].includes('AS "firstPaid"') && queries[3].includes("leaseToken"));
+  assert.match(queries[0], /pessoal_data, inscricao_data, come_from_ref/);
+  assert.ok(parameters[0].includes('{"test":"personal-state"}'));
+  assert.ok(parameters[0].some(value => typeof value === "string" && value.includes('"existing":"preserved"')));
+  assert.ok(parameters[0].includes("test-origin"));
 });
 test("HTTP: foreign IDs ignored without Bolt call; providers and webhooks isolated", async () => {
   const f = fixture();

@@ -102,7 +102,7 @@ export default function ESocialPagamentoPage() {
             // Use daeValor (always in reais) for display; data.amount may be in centavos
             const savedDae = localStorage.getItem('daeValor');
             const issuedAmount = Number(data.amount);
-            const displayAmount = data.chargedAmount ?? (
+            const displayAmount = data.gateway === "bolt" ? issuedAmount : data.chargedAmount ?? (
               Number.isFinite(issuedAmount) && issuedAmount > 0
                 ? (issuedAmount >= 1000 ? issuedAmount / 100 : issuedAmount)
                 : (savedDae ? parseFloat(savedDae) : PAYMENT_PRICES.esocial)
@@ -191,13 +191,13 @@ export default function ESocialPagamentoPage() {
           id: String(d.id),
           qrCode: d.qrCode,
           pixCode: d.pixCode,
-          amount,
+          amount: d.gateway === "bolt" ? d.amount : amount,
           status: d.status,
           createdAt: d.createdAt,
         };
         setPixData(pix);
         localStorage.setItem('esocialPixData', JSON.stringify({
-          data: { ...d, chargedAmount: amount },
+          data: { ...d, chargedAmount: d.gateway === "bolt" ? d.amount : amount },
           createdAt: new Date().toISOString(),
         }));
       } else {
@@ -205,7 +205,7 @@ export default function ESocialPagamentoPage() {
       }
     } catch (_) {
       setApiError(true);
-      if (await getPaymentMode() === "bolt") {
+      if (await getPaymentMode() !== "paglemon") {
         setPixData(null);
         return;
       }

@@ -47,27 +47,35 @@ export class PgBoltStore implements BoltStore {
     const application = { ...(body.applicationData ?? {}), _bolt: state };
     const vaga = body.inscricaoData?.vaga ?? {};
     const local = body.inscricaoData?.localProva ?? {};
+    const user = body.userData ?? body.applicationData?.userData ?? {};
     const qr = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(code)}`;
     const cpf = String(state.customer.document?.number ?? "");
     const rows = await this.rows(sql`
       WITH candidate AS (
-        INSERT INTO candidates(cpf, nome_completo, email, telefone)
-          VALUES (${cpf}, ${state.customer.name}, ${state.customer.email}, ${state.customer.phone})
+        INSERT INTO candidates(cpf, nome_completo, email, telefone, nome_mae, sexo)
+          VALUES (${cpf}, ${state.customer.name}, ${state.customer.email}, ${state.customer.phone},
+            ${user.nomeMae ?? null}, ${user.sexo ?? user.genero ?? user.gender ?? null})
           ON CONFLICT (cpf) DO UPDATE SET nome_completo=EXCLUDED.nome_completo,
-            email=EXCLUDED.email, telefone=EXCLUDED.telefone, updated_at=now()
+            email=EXCLUDED.email, telefone=EXCLUDED.telefone,
+            nome_mae=COALESCE(EXCLUDED.nome_mae, candidates.nome_mae),
+            sexo=COALESCE(EXCLUDED.sexo, candidates.sexo), updated_at=now()
           RETURNING id
       )
       INSERT INTO pix_transactions
         (transaction_id, candidate_id, amount, status, vaga_id, vaga_title, vaga_company,
          vaga_location, local_prova_name, local_prova_address, pix_code, qr_code, application_data,
-         user_data, inscricao_data, data_prova, hora_prova)
-      VALUES (${id}, (SELECT id FROM candidate), ${(state.amountCents / 100).toFixed(2)}, 'pending',
+         user_data, pessoal_data, inscricao_data, come_from_ref, coordinates, junta_data, data_prova, hora_prova)
+      VALUES (${id}, (SELECT id FROM candidate), ${(state.amountCents / 100).toFixed(2)}, ${state.rawStatus.toLowerCase()},
         ${String(vaga.id || "bolt")}, ${String(vaga.title || state.productName)},
         ${String(vaga.company || "")}, ${String(vaga.location || "")},
         ${String(local.name || "")}, ${String(local.address || "")},
         ${code}, ${qr}, ${JSON.stringify(application)}::jsonb,
-        ${JSON.stringify(body.userData ?? body.applicationData?.userData ?? {})}::jsonb,
+        ${JSON.stringify(user)}::jsonb,
+        ${JSON.stringify(body.pessoalData ?? body.applicationData?.pessoalData ?? {})}::jsonb,
         ${JSON.stringify(body.inscricaoData ?? {})}::jsonb,
+        ${body.comeFromRef ?? body.applicationData?.comeFromRef ?? null},
+        ${JSON.stringify(body.coordinates ?? null)}::jsonb,
+        ${JSON.stringify(body.juntaData ?? null)}::jsonb,
         ${body.inscricaoData?.dataProva ?? null}, ${body.inscricaoData?.horaProva ?? null})
       RETURNING ${columns}`);
     if (!rows[0]) throw new Error("BOLT_PERSIST_FAILED");

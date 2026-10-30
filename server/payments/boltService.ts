@@ -33,17 +33,19 @@ export class BoltService {
     const code = data?.pix?.qr_code;
     if (!/^[a-zA-Z0-9_-]{1,128}$/.test(id) || typeof code !== "string" ||
         !code.startsWith("000201") || code.length < 30) throw new Error("INVALID_BOLT_PIX");
-    boltStatus(data.status);
+    const initialStatus = boltStatus(data.status);
     const createdAt = new Date().toISOString();
     const state: BoltState = {
-      provider: "bolt", amountCents: payload.amount, rawStatus: "PENDING",
+      // Even an immediate PAID response must pass the independent info check.
+      provider: "bolt", amountCents: payload.amount,
+      rawStatus: initialStatus === "PAID" ? "PENDING" : initialStatus,
       createdAt, expiresAt: new Date(Date.now() + 86400000).toISOString(),
       nextCheckAt: 0, leaseUntil: 0, leaseToken: "",
       customer: payload.customer, productName: payload.items[0].title,
     };
     const row = await this.store.save(id, code, state, body);
-    logBolt("created", id, "PENDING");
-    return publicPayment(row);
+    logBolt("created", id, initialStatus);
+    return publicPayment(initialStatus === "PAID" ? (await this.verify(id, true) ?? row) : row);
   }
   async find(id: string) { return this.store.get(id); }
   async verify(id: string, webhook = false): Promise<BoltRecord | null> {

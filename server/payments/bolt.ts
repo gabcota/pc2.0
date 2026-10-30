@@ -17,7 +17,7 @@ export function boltStatus(value: unknown): string {
 }
 export function amountInCents(value: unknown): number {
   if ((typeof value !== "number" && typeof value !== "string") ||
-      value === "" || !Number.isFinite(Number(value)) || Number(value) <= 0) {
+      String(value).trim() === "" || !Number.isFinite(Number(value)) || Number(value) <= 0) {
     throw new Error("INVALID_AMOUNT");
   }
   const cents = Math.round(Number(value) * 100);
@@ -45,7 +45,7 @@ export function boltPhone(value: unknown): { number: string; reason?: string } {
   const ddds = /^(?:1[1-9]|2[12478]|3[1-578]|4[1-9]|5[1345]|6[1-9]|7[134579]|8[1-9]|9[1-9])$/;
   const valid = ddds.test(phone.slice(0, 2)) &&
     (/^[1-9]\d[2-5]\d{7}$/.test(phone) || /^[1-9]\d9\d{8}$/.test(phone));
-  const substitute = /(\d)\1{6,}$/.test(phone) || phone === "11999999999" ||
+  const substitute = /^(\d)\1+$/.test(phone) || phone === "11999999999" ||
     phone === "00000000000" || phone === "12345678901";
   return valid && !substitute ? { number: phone } :
     { number: "11999999999", reason: !phone ? "missing" : substitute ? "substitute" : "malformed" };

@@ -45,6 +45,10 @@ no modo Bolt; o envio fica a cargo da configuração do painel Bolt.
 - Consultas compartilham o próximo instante permitido e um lease com expiração
   para recuperar processos interrompidos. A API tem timeout de 10 segundos.
   Respostas 429 respeitam Retry-After e nunca revertem pagamento confirmado.
+- O status inicial da criação é preservado. Se a criação já responder PAID,
+  ainda é obrigatória a consulta independente de ID e valor antes da confirmação.
+- Falha ou configuração inválida no navegador não seleciona um gateway nem
+  habilita os códigos fixos do legado; uma nova tentativa pode reler a configuração.
 - Cache do navegador no modo Bolt só é exibido após encontrar a cobrança
   persistida pelo endpoint local; códigos e valores do cache não são confiáveis.
 - Códigos legados fixos/simulados foram preservados, não removidos: e-Social,

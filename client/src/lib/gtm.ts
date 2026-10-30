@@ -149,7 +149,7 @@ export function fireGtmFirstUpsell(params: {
     `gtm_first_upsell_sent:${params.frontTransactionId}`,
     { transactionId: params.transactionId, value: params.value },
   );
-}import { getUtmParams, setGoogleUserData } from '@/lib/googleAnalytics';
+}
 
 /**
  * Campos de usuário normalizados + identificadores de clique, prontos

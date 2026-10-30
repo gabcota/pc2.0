@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { collectPaymentUtms, paymentFetch, approvedPix } from "../client/src/lib/paymentClient";
+import { collectPaymentUtms, paymentFetch, approvedPix, getPaymentMode } from "../client/src/lib/paymentClient";
 
 test("all six real UTMs survive JSON/string input, stored attribution, and missing fields", async () => {
   const originalWindow = Object.getOwnPropertyDescriptor(globalThis, "window");
@@ -25,6 +25,14 @@ test("all six real UTMs survive JSON/string input, stored attribution, and missi
       return Response.json({ success: true });
     };
     await paymentFetch("/api/gerar-pix", { method: "POST", body: JSON.stringify({ utm_params: '{"utm_source":"given-source"}' }) });
+    for (const response of [
+      () => Response.json({ gateway: "paglemon" }, { status: 503 }),
+      () => Response.json({ gateway: "unknown" }),
+    ]) {
+      globalThis.fetch = async () => response();
+      assert.equal(await getPaymentMode(), "unavailable");
+      assert.equal(await approvedPix({ id: "old-record", pixCode: "legacy-fixed-code" }), null);
+    }
     let localReads = 0;
     globalThis.fetch = async (url) => {
       if (url === "/api/payment-config") return Response.json({ gateway: "bolt" });
@@ -36,6 +44,7 @@ test("all six real UTMs survive JSON/string input, stored attribution, and missi
     const approved = await approvedPix({ id: "real-local-record", pixCode: "fake-cache", amount: 91.4 });
     assert.equal(approved.amount, 5);
     assert.equal(approved.pixCode, "000201-only-server-code");
+    assert.equal(await approvedPix({ id: "mismatched-id" }), null);
     globalThis.fetch = async () => Response.json({ success: false }, { status: 404 });
     assert.equal(await approvedPix({ id: "foreign-or-legacy-record" }), null);
   } finally {

@@ -3,9 +3,9 @@ name: Restrições da integração Bolt
 description: Preferência por JSON existente, autorização separada para migrações e conta Bolt compartilhada.
 ---
 
-Na integração Bolt, primeiro reutilizar estruturas e campos JSON existentes sem alterar o schema. Só se isso for realmente impossível, apresentar a estrutura e o SQL e aguardar aprovação separada.
+O escopo aprovado para a integração Bolt é **sem migração**: reutilizar estruturas e campos JSON existentes sem alterar o schema. Se isso for impossível, interromper e apresentar o impedimento; não criar migração executável sem nova autorização específica.
 
-**Why:** o usuário exigiu evitar migração e lembrou que o release executa migrações automaticamente no deploy; aprovar a integração não autoriza uma mudança de schema.
+**Why:** ao aprovar o plano, o usuário reafirmou “Sem migração”; o release executa migrações automaticamente no deploy, e aprovar a integração não autoriza uma mudança de schema.
 
 **How to apply:** preservar essa restrição em futuras alterações de cache, idempotência e status. Não incluir migração executável junto de mudanças comuns antes da autorização específica.
 

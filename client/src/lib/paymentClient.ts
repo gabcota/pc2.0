@@ -19,23 +19,36 @@ export async function paymentFetch(url: string, init: RequestInit): Promise<Resp
   body.utm_params = { ...object(body.utm_params), ...collectPaymentUtms(body.utm_params) };
   return fetch(url, { ...init, body: JSON.stringify(body) });
 }
-let mode: Promise<"bolt" | "paglemon"> | undefined;
+type PaymentMode = "bolt" | "paglemon" | "unavailable";
+let mode: Promise<PaymentMode> | undefined;
 export function getPaymentMode() {
   return mode ??= fetch("/api/payment-config", { cache: "no-store" })
-    .then(response => response.json())
-    .then(data => data.gateway === "paglemon" ? "paglemon" as const : "bolt" as const)
-    .catch(() => "bolt" as const);
+    .then(async response => {
+      if (!response.ok) throw new Error("PAYMENT_CONFIG_UNAVAILABLE");
+      const data = await response.json();
+      if (data.gateway !== "bolt" && data.gateway !== "paglemon")
+        throw new Error("INVALID_PAYMENT_GATEWAY");
+      return data.gateway as "bolt" | "paglemon";
+    })
+    .catch(() => {
+      // Do not enable a provider or legacy fallback on a configuration failure.
+      mode = undefined;
+      return "unavailable" as const;
+    });
 }
 // Browser storage is not proof that a Pix exists. In Bolt mode only the
 // server's persisted record may supply its code and original issued amount.
 export async function approvedPix(candidate: any): Promise<any | null> {
-  if (await getPaymentMode() === "paglemon") return candidate;
+  const gateway = await getPaymentMode();
+  if (gateway === "paglemon") return candidate;
+  if (gateway !== "bolt") return null;
   const id = candidate?.id ?? candidate?.transactionId;
   if (!id || String(id).startsWith("fallback-")) return null;
   try {
     const response = await fetch(`/api/pix-local/${encodeURIComponent(id)}`, { cache: "no-store" });
     const result = await response.json();
     return response.ok && result.success && result.data?.gateway === "bolt" &&
+      String(result.data.id) === String(id) &&
       result.data.pixCode?.startsWith("000201") ? result.data : null;
   } catch { return null; }
 }

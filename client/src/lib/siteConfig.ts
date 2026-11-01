@@ -1,5 +1,6 @@
 import { EDITAL_PENAL_COMPANY } from '@shared/editalPenalCompany';
 import { FUTURO_NA_POLICIA_PENAL_COMPANY } from '@shared/futuroNaPoliciaPenalCompany';
+import { GUIA_SERVIDOR_PENAL_COMPANY } from '@shared/guiaServidorPenalCompany';
 
 export interface SiteConfig {
   hostname: string;
@@ -2375,6 +2376,19 @@ const FUTURO_NA_POLICIA_PENAL: RawConfig = {
   ...FUTURO_NA_POLICIA_PENAL_COMPANY,
 };
 
+const GUIA_SERVIDOR_PENAL: RawConfig = {
+  ...GUIA_SERVIDOR_PENAL_COMPANY,
+  // Reuse only the informational presentation, never another company's records.
+  siteSubtitle: EDITAL_PENAL.siteSubtitle,
+  disclaimer: EDITAL_PENAL.disclaimer,
+  breadcrumbLabel: EDITAL_PENAL.breadcrumbLabel,
+  h1Override: EDITAL_PENAL.h1Override,
+  leadOverride: EDITAL_PENAL.leadOverride,
+  ctaHeroText: EDITAL_PENAL.ctaHeroText,
+  themeSection: EDITAL_PENAL.themeSection,
+  faq: EDITAL_PENAL.faq,
+};
+
 const CONFIGS: Record<string, RawConfig> = {
   'concursopm.click': VIDA_FUNCIONAL,
   'www.concursopm.click': VIDA_FUNCIONAL,
@@ -2466,6 +2480,8 @@ const CONFIGS: Record<string, RawConfig> = {
   'www.editalpenal.click': EDITAL_PENAL,
   'futuronapoliciapenal.click': FUTURO_NA_POLICIA_PENAL,
   'www.futuronapoliciapenal.click': FUTURO_NA_POLICIA_PENAL,
+  'guiaservidorpenal.click': GUIA_SERVIDOR_PENAL,
+  'www.guiaservidorpenal.click': GUIA_SERVIDOR_PENAL,
 };
 
 function resolveHostname(): string {

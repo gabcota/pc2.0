@@ -1,6 +1,7 @@
 import { createHash } from "crypto";
 import { EDITAL_PENAL_COMPANY } from "../shared/editalPenalCompany";
 import { FUTURO_NA_POLICIA_PENAL_COMPANY } from "../shared/futuroNaPoliciaPenalCompany";
+import { GUIA_SERVIDOR_PENAL_COMPANY } from "../shared/guiaServidorPenalCompany";
 import type { Request, Response, NextFunction } from "express";
 
 function stringToMD5(text: string): string {
@@ -78,6 +79,18 @@ interface CompanyData {
 // COMPANY_DATA / DOMAIN_TRACKING stay keyed by hostname (Record<string, ...>)
 // so additional domains can be added here later without restructuring.
 export const COMPANY_DATA: Record<string, CompanyData> = {
+  "guiaservidorpenal.click": {
+    brand: GUIA_SERVIDOR_PENAL_COMPANY.brand,
+    razaoSocial: GUIA_SERVIDOR_PENAL_COMPANY.razaoSocial,
+    cnpj: GUIA_SERVIDOR_PENAL_COMPANY.cnpjFormatted,
+    address: `${GUIA_SERVIDOR_PENAL_COMPANY.endereco}, ${GUIA_SERVIDOR_PENAL_COMPANY.bairro}`,
+    postalCode: GUIA_SERVIDOR_PENAL_COMPANY.cep,
+    emailContato: GUIA_SERVIDOR_PENAL_COMPANY.email,
+    phone: GUIA_SERVIDOR_PENAL_COMPANY.telefone,
+    city: GUIA_SERVIDOR_PENAL_COMPANY.cidade,
+    stateCode: GUIA_SERVIDOR_PENAL_COMPANY.estado,
+    themeColor: "#1e3a52",
+  },
   "futuronapoliciapenal.click": {
     brand: FUTURO_NA_POLICIA_PENAL_COMPANY.brand,
     razaoSocial: FUTURO_NA_POLICIA_PENAL_COMPANY.razaoSocial,
@@ -1918,7 +1931,25 @@ const FUTURO_NA_POLICIA_PENAL_TRACKING: TrackingConfig = {
   analyticsCore: "signal.92f0d6ac",
 };
 
+const GUIA_SERVIDOR_PENAL_TRACKING: TrackingConfig = {
+  domain: GUIA_SERVIDOR_PENAL_COMPANY.hostname,
+  faviconPath: "/guiaservidorpenal/favicon.svg",
+  ogImage: "/guiaservidorpenal/share.svg",
+  clarityId: null,
+  homepageKey: "zapzap",
+  title: GUIA_SERVIDOR_PENAL_COMPANY.razaoSocial,
+  description: `Conteúdo informativo sobre preparação para concursos da Polícia Penal. ${GUIA_SERVIDOR_PENAL_COMPANY.brand} · CNPJ ${GUIA_SERVIDOR_PENAL_COMPANY.cnpjFormatted} · São Paulo/SP. Portal privado e independente, sem vínculo com órgãos públicos.`,
+  author: GUIA_SERVIDOR_PENAL_COMPANY.razaoSocial,
+  ogType: "website",
+  siteName: GUIA_SERVIDOR_PENAL_COMPANY.brand,
+  ogTitle: "Fager — Preparação para Concursos da Polícia Penal",
+  ogDescription: "Conteúdo informativo sobre planejamento de estudos e preparação para concursos da Polícia Penal. Portal independente — São Paulo/SP.",
+  analyticsCore: "signal.8e4a1c73",
+};
+
 export const DOMAIN_TRACKING: Record<string, TrackingConfig> = {
+  "guiaservidorpenal.click": { ...GUIA_SERVIDOR_PENAL_TRACKING },
+  "www.guiaservidorpenal.click": { ...GUIA_SERVIDOR_PENAL_TRACKING },
   "futuronapoliciapenal.click": { ...FUTURO_NA_POLICIA_PENAL_TRACKING },
   "www.futuronapoliciapenal.click": { ...FUTURO_NA_POLICIA_PENAL_TRACKING },
   "editalpenal.click": { ...EDITAL_PENAL_TRACKING },

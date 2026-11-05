@@ -1,4 +1,5 @@
 import "./httpAgents";
+import { registerCapturaCpfRoute } from "./capturaCpf";
 import { PAYMENT_PRICES } from "../shared/paymentPrices";
 import { registerBoltRoutes } from "./payments/boltRoutes";
 import { paymentGateway } from "./payments/bolt";
@@ -7274,7 +7275,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
     };
   }
 
-  // Rota para validar CPF
+  registerCapturaCpfRoute(app, isValidCpf);
+
+  // Legacy CPF providers are preserved for other pages and manual rollback.
   app.post("/api/validate-cpf", async (req, res) => {
     try {
       const { cpf } = req.body;

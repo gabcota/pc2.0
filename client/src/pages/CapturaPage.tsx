@@ -632,7 +632,8 @@ export default function CapturaPage() {
     setIsValidatingCpf(true);
     
     try {
-      const response = await fetch('/api/validate-cpf', {
+      // Exclusive captura lookup. Legacy /api/validate-cpf is kept for rollback.
+      const response = await fetch('/api/captura/validate-cpf', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

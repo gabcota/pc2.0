@@ -12,3 +12,4 @@
 - [Domínios e medição](domains-and-measurement.md) — novos domínios sem GTM; medição via Cloudflare e Google; cadastro no código não confirma conexão pública.
 - [Escopo do SMS OTP](sms-otp-scope.md) — avanço independente do código é proposital; correções de entrega não devem impor validação obrigatória.
 - [Escopo da troca de CPF](cpf-captura-scope.md) — somente captura; preservar API antiga, Google, demais consultas e salvamento dos dados no funil.
+- [Escopo da API de locais](maps-temporarios-scope.md) — nova fonte só na temporarios; preservar API anterior e manter agendamento médico inalterado.

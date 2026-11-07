@@ -48,6 +48,16 @@ test("distance is real great-circle distance, not a fabricated zero", () => {
   assert.ok(distanceKm(center, unit.coordenadas) > 1);
 });
 
+test("DP abbreviations and full Distrito Policial names are never filtered out", async () => {
+  const names = ["6 DP Cambuci", "16 ° DP - V Clementino", "5° Distrito Policial de São Paulo"];
+  const result = await lookupTemporariosLocations(cep, token, info, async url =>
+    String(url).includes("/v1/cep?") ? json(center) : json({
+      resultados: names.map((nome, index) => ({ ...unit, id: `dp-${index}`, nome })),
+    }));
+  assert.deepEqual(result.data.locais_prova.map(location => location.nome), names);
+  assert.ok(result.data.locais_prova.every(location => location.type === "delegacia"));
+});
+
 test("missing token stops before any external call", async () => {
   let called = false;
   await assert.rejects(() => lookupTemporariosLocations(cep, undefined, info, async () => {

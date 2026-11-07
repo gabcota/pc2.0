@@ -1,5 +1,6 @@
 import "./httpAgents";
 import { registerCapturaCpfRoute } from "./capturaCpf";
+import { registerTemporariosLocationsRoute } from "./temporariosLocations";
 import { PAYMENT_PRICES } from "../shared/paymentPrices";
 import { registerBoltRoutes } from "./payments/boltRoutes";
 import { paymentGateway } from "./payments/bolt";
@@ -5529,6 +5530,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  registerTemporariosLocationsRoute(app, buscarDadosCEP);
+
+  // Legacy Google/CSV path preserved for explicit rollback; medical route unchanged.
   // API para buscar locais de prova baseado no CEP
   app.get("/api/locais-prova/:cep", async (req, res) => {
     try {

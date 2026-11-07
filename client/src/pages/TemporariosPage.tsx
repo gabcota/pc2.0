@@ -60,7 +60,7 @@ interface ExamLocation {
 
 interface LocaisProvaResponse {
   success: boolean;
-  fonte?: 'google_places' | 'csv';
+  fonte?: 'google_places' | 'csv' | 'api_maps';
   error?: string;
   data: {
     cep_consultado: string;
@@ -351,6 +351,7 @@ export default function TemporariosPage() {
   const [selectedLocation, setSelectedLocation] = useState<string>('');
   const [selectedTime, setSelectedTime] = useState<string>('14:00');
   const [isLoadingLocations, setIsLoadingLocations] = useState(false);
+  const [locationsError, setLocationsError] = useState<string | null>(null);
   const [locaisProvaData, setLocaisProvaData] = useState<LocaisProvaResponse['data'] | null>(null);
   const [isApplying, setIsApplying] = useState<string | null>(null);
   const [loadingStep, setLoadingStep] = useState(0);
@@ -804,11 +805,16 @@ export default function TemporariosPage() {
 
   const fetchExamLocations = async (cep: string) => {
     setIsLoadingLocations(true);
+    setLocationsError(null);
+    setExamLocations([]);
+    setLocaisProvaData(null);
+    setSelectedLocation('');
     try {
-      const response = await fetch(`/api/locais-prova/${cep}`);
+      // Isolated provider. Legacy /api/locais-prova remains available for manual rollback.
+      const response = await fetch(`/api/temporarios/locais-prova/${encodeURIComponent(cep)}`);
       const result: LocaisProvaResponse = await response.json();
 
-      if (result.success && result.data) {
+      if (response.ok && result.success && result.data) {
         setLocaisProvaData(result.data);
 
         // Normaliza para o formato ExamLocation usado no dialog
@@ -822,11 +828,11 @@ export default function TemporariosPage() {
 
         setExamLocations(locais);
       } else {
-        console.error('Erro ao buscar locais de prova:', result.error);
+        setLocationsError(result.error || 'Não foi possível buscar as unidades. Tente novamente mais tarde.');
         setExamLocations([]);
       }
     } catch (error) {
-      console.error('Erro na requisição:', error);
+      setLocationsError('Não foi possível buscar as unidades. Tente novamente mais tarde.');
       setExamLocations([]);
     } finally {
       setIsLoadingLocations(false);
@@ -1271,6 +1277,11 @@ export default function TemporariosPage() {
                 <p className="text-[11px] font-semibold tracking-wider uppercase text-gray-400 mb-2 sticky top-0 bg-white pt-1">
                   Unidades disponíveis
                 </p>
+                {locationsError ? (
+                  <p role="alert" className="text-sm text-red-700 py-3">{locationsError}</p>
+                ) : examLocations.length === 0 ? (
+                  <p role="status" className="text-sm text-gray-500 py-3">Nenhuma unidade encontrada para este CEP.</p>
+                ) : null}
                 <RadioGroup value={selectedLocation} onValueChange={setSelectedLocation}>
                   <div className="space-y-2 pb-3">
                     {examLocations.map((location) => {
